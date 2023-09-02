@@ -1,0 +1,42 @@
+\begin{table}[H]
+
+\caption{Self-Reported Hispanic identity and Bias Among Second Generation Hispanic Immigrants: Both Parents Born in a Spanish Speaking Country \label{regtab-byparent-specifications}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccc}
+\toprule
+  & \specialcell{(1) \\ $H^2$} & \specialcell{(2) \\ $H^2$} & \specialcell{(3) \\ $H^2$} & \specialcell{(4) \\ $H^2$} & \specialcell{(5) \\ $H^2$} & \specialcell{(6) \\ $H^2$}\\
+\midrule
+Bias & \num{-0.01} & \num{-0.02} & \num{-0.03} & \num{-0.04} & \num{-0.02} & \num{-0.15}**\\
+ & (\num{0.03}) & (\num{0.06}) & (\num{0.02}) & (\num{0.03}) & (\num{0.02}) & (\num{0.07})\\
+Female & \num{0.00} & \num{0.00} & \num{0.00} & \num{0.00} & \num{0.00} & \num{0.00}\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00})\\
+College Graduate: Mother & \num{-0.05}*** & \num{-0.05}*** & \num{-0.03}*** & \num{-0.03}*** & \num{-0.03}*** & \num{-0.04}***\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & \vphantom{1} (\num{0.01})\\
+College Graduate: Father & \num{-0.05}*** & \num{-0.05}*** & \num{-0.04}*** & \num{-0.04}*** & \num{-0.04}*** & \num{-0.04}***\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01})\\
+\midrule
+N & \num{405116} & \num{405116} & \num{405116} & \num{405116} & \num{405116} & \num{405116}\\
+Linear Trend & No & No & No & No & Yes & No\\
+Mean & 0.96 & 0.96 & 0.96 & 0.96 & 0.96 & 0.96\\
+Year FE &  & X &  & X &  & \\
+State FE &  &  & X & X &  & \\
+Year $\times$ Region FE &  &  &  &  &  & X\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of a heterogeneous effect of regression (\ref{eq:identity_reg_bias}) on
+                      second generation children of parents born in a Spanish speaking country (HH) with different specifications. 
+                      I include controls for sex, quartic age, parental education.
+                      Standard errors are clustered on the state level}
+\item[2] \footnotesize{The samples include second-generation Hispanic children ages 17 and below who live in intact families. 
+                      Native born second-generation Hispanic 
+                      immigrant children with at least one parent born in a Spanish speaking 
+                      country.}
+\item[3] \footnotesize{Data source is the 2004-2020 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

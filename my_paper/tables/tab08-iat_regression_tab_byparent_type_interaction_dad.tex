@@ -1,0 +1,66 @@
+
+\begin{longtable}[t]{lcccc}
+\caption{Hispanic identity and Skin Tone Implicit Bias\label{regtab-interaction-02}}\\
+\toprule
+\multicolumn{1}{c}{Sample:} & \multicolumn{2}{c}{Second Generation} & \multicolumn{2}{c}{Third Generation} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-5}
+  & \specialcell{(1) \\ Dad $H^2$} & \specialcell{(2) \\ Dad $H^2$} & \specialcell{(3) \\ Dad $H^3$} & \specialcell{(4) \\ Dad $H^3$}\\
+\midrule
+\endfirsthead
+\caption[]{Hispanic identity and Skin Tone Implicit Bias \textit{(continued)}}\\
+\toprule
+  & \specialcell{(1) \\ Dad $H^2$} & \specialcell{(2) \\ Dad $H^2$} & \specialcell{(3) \\ Dad $H^3$} & \specialcell{(4) \\ Dad $H^3$}\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textsuperscript{1} I include controls for sex, quartic age, parental education and total family income.}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}\textsuperscript{2} Standard errors are clustered on the state level}\\
+\endlastfoot
+Bias x Hispanic-White Parent & \num{0.16}*** & \num{0.16}*** &  & \\
+ & (\num{0.01}) & (\num{0.01}) &  & \\
+Bias x White-Hispanic Parent & \num{0.18}*** & \num{0.17}*** &  & \\
+ & (\num{0.02}) & (\num{0.02}) &  & \\
+Bias x HHHW &  &  & \num{0.16}*** & \num{0.15}***\\
+ &  &  & (\num{0.04}) & \vphantom{3} (\num{0.04})\\
+Bias x HHWH &  &  & \num{0.11}** & \num{0.13}***\\
+ &  &  & (\num{0.05}) & \vphantom{1} (\num{0.05})\\
+Bias x HHWW &  &  & \num{0.28}*** & \num{0.28}***\\
+ &  &  & (\num{0.02}) & (\num{0.02})\\
+Bias x HWHH &  &  & \num{0.06} & \num{0.07}\\
+ &  &  & (\num{0.07}) & \vphantom{1} (\num{0.07})\\
+Bias x HWHW &  &  & \num{-0.01} & \num{0.01}\\
+ &  &  & (\num{0.07}) & (\num{0.07})\\
+Bias x HWWH &  &  & \num{0.64}*** & \num{0.62}***\\
+ &  &  & (\num{0.13}) & (\num{0.14})\\
+Bias x HWWW &  &  & \num{0.13}*** & \num{0.11}**\\
+ &  &  & (\num{0.04}) & \vphantom{2} (\num{0.04})\\
+Bias x WHHH &  &  & \num{0.06} & \num{0.06}\\
+ &  &  & (\num{0.06}) & \vphantom{1} (\num{0.06})\\
+Bias x WHHW &  &  & \num{0.27}** & \num{0.31}***\\
+ &  &  & (\num{0.12}) & (\num{0.11})\\
+Bias x WHWH &  &  & \num{0.86}*** & \num{0.88}***\\
+ &  &  & (\num{0.14}) & (\num{0.14})\\
+Bias x WHWW &  &  & \num{-0.10}* & \num{-0.10}*\\
+ &  &  & (\num{0.06}) & (\num{0.06})\\
+Bias x WWHH &  &  & \num{0.37}*** & \num{0.36}***\\
+ &  &  & (\num{0.04}) & \vphantom{1} (\num{0.04})\\
+Bias x WWHW &  &  & \num{0.38}*** & \num{0.37}***\\
+ &  &  & (\num{0.04}) & (\num{0.04})\\
+Bias x WWWH &  &  & \num{0.00} & \num{0.01}\\
+ &  &  & (\num{0.05}) & (\num{0.05})\\
+Implicit Skin Tone Bias & \num{-0.04}*** & \num{-0.03}*** & \num{-0.11}*** & \num{-0.06}***\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.02}) & (\num{0.02})\\
+Hispanic-White Parent & \num{-0.05}*** & \num{-0.05}*** &  & \\
+ & (\num{0.00}) & (\num{0.00}) &  \vphantom{1} & \\
+White-Hispanic Parent & \num{-0.32}*** & \num{-0.32}*** &  & \\
+ & (\num{0.00}) & (\num{0.00}) &  & \\
+\midrule
+N & \num{560100} & \num{560100} & \num{198991} & \num{198991}\\
+Mean & \num{0.91} & \num{0.91} & \num{0.74} & \num{0.74}\\
+Region FE &  & X &  & X\\
+Year FE &  & X &  & X\\
+Year-Region FE & X &  & X & \\*
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{longtable}

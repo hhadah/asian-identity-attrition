@@ -1,0 +1,43 @@
+\begin{table}[H]
+
+\caption{Self-Reported Hispanic identity and Charles and Guryan (2012) Prejeduice Measure Among Third Generation Hispanic Immigrants: By Grandparents Type (State) \label{regtab-bygrandparent-cg-02}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{4}{c}{Numer of Hispanic Grandparents} \\
+\cmidrule(l{3pt}r{3pt}){2-5}
+  & \specialcell{(1) \\ One} & \specialcell{(2) \\ Two} & \specialcell{(3) \\ Three} & \specialcell{(4) \\ Four}\\
+\midrule
+Bias & \num{-0.22}* & \num{-0.34}** & \num{-0.57}** & \num{0.16}\\
+ & (\num{0.11}) & (\num{0.13}) & (\num{0.21}) & (\num{0.10})\\
+Female & \num{-0.04}*** & \num{-0.05}** & \num{0.04} & \num{0.00}\\
+ & (\num{0.01}) & (\num{0.02}) & (\num{0.04}) & (\num{0.02})\\
+College Graduate: Mother & \num{-0.10}** & \num{-0.10} & \num{-0.04} & \num{-0.19}***\\
+ & (\num{0.04}) & (\num{0.07}) & (\num{0.23}) & (\num{0.06})\\
+College Graduate: Father & \num{-0.14}*** & \num{-0.15}*** & \num{-0.08} & \num{-0.06}\\
+ & (\num{0.02}) & (\num{0.04}) & (\num{0.16}) & (\num{0.08})\\
+\midrule
+N & \num{14931} & \num{10126} & \num{1848} & \num{3567}\\
+Year $\times$ Region FE & X & X & X & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of equation (\ref{eq:identity_reg_bias}) by 
+                      parents' type with Charles and Guryan (2012) Prejeduice measure. 
+                      Charles and Guryan (2012) use the General Security Survey of the most common racial questions between 1970-2000 for their measure of prejeduice.
+                      To use Charles and Guryan (2012) prejeduice measure, I merge the GSS index in 1996 with CPS 1995-1999 years. 
+                      In other words, I merge CPS data with the residual prejeduice measure from 20 years before the survey.
+                      I include controls for sex, quartic age, parental education.
+                      Standard errors are clustered on the state level}
+\item[2] \footnotesize{The samples include third-generation Hispanic children ages 17 and below who live in intact families. 
+                      Native born Third-generation Hispanic 
+                      immigrant children with at least one grandparent born in a Spanish speaking 
+                      country.}
+\item[3] \footnotesize{Data source is the 2004-2020 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

@@ -1,0 +1,44 @@
+\begin{table}[!h]
+
+\caption{Relationship Between Bias and Self-Reported Hispanic Identity: By Generation \label{regtab-bygen-01}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+  & \specialcell{(1) \\ All Gens \\ $H_{ist}$} & \specialcell{(2) \\  First Gen \\ $H^1_{ist}$} & \specialcell{(3) \\  Second Gen \\ $H^2_{ist}$} & \specialcell{(4) \\  Third Gen \\ $H^3_{ist}$}\\
+\midrule
+Bias & -0.10** & -0.07* & -0.13** & -0.02\\
+ & (0.04) & (0.04) & (0.05) & (0.07)\\
+Female & 0.00 & 0.00 & 0.00 & 0.00\\
+ & (0.00) & (0.00) & (0.00) & (0.00)\\
+College Graduate: Mother & -0.05*** & -0.03*** & -0.06*** & -0.07***\\
+ & (0.01) & (0.01) & (0.01) & \vphantom{1} (0.01)\\
+College Graduate: Father & -0.06*** & -0.06*** & -0.08*** & -0.08***\\
+ & (0.01) & (0.01) & (0.01) & (0.01)\\
+\midrule
+Observations & 844,481 & 85,390 & 560,100 & 198,991\\
+Mean & 0.91 & 0.96 & 0.94 & 0.82\\
+Year $\times$ Region FE & X & X & X & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of a heterogeneous effect of regression (\ref{eq:identity_reg_bias}) by 
+                      generation with region × year fixed effects. 
+                      I include controls for sex, quartic age, fraction of Hispanics in a state, and parental education.
+                      I also added parents' (HH, HW, and WH) and grandparents' (HHHH, HHHW, HHWH, etc.) type dummy variables to the regression
+                      on second and third generation immigrants, where H is objectively Hispanic (born in a Spanish-Speaking Country) and W is objectively White (native-born). 
+                      Standard errors are clustered on the state level.}
+\item[2] \footnotesize{The samples include children ages 17 and below who live in intact families. 
+                      First-generation Hispanic immigrant children that were born in a 
+                      Spanish-speaking county. Native-born second-generation Hispanic 
+                      immigrant children with at least one parent born in a Spanish-speaking 
+                      country. Finally, native-born third-generation Hispanic immigrant children 
+                      with native-born parents and at least one grandparent born in a Spanish-
+                      speaking country.}
+\item[3] \footnotesize{Data source is the 2004-2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

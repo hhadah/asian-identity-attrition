@@ -1,0 +1,46 @@
+\begin{table}[H]
+
+\caption{Relationship Between Self-Reported Hispanic Identity and \citet{charlesPrejudiceWagesEmpirical2008} Prejudice  Measure Among Second Generation Hispanic Immigrants: By Parental Type\label{regtab-byparent-cg}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+\multicolumn{1}{c}{Parents Type} & \multicolumn{1}{c}{All} & \multicolumn{1}{c}{HH} & \multicolumn{1}{c}{HW} & \multicolumn{1}{c}{WH} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4} \cmidrule(l{3pt}r{3pt}){5-5}
+  & \specialcell{(1) \\ $H^2_{ist}$} & \specialcell{(2) \\ $H^2_{ist}$} & \specialcell{(3) \\ $H^2_{ist}$} & \specialcell{(4) \\ $H^2_{ist}$}\\
+\midrule
+Bias & \num{-0.01} & \num{0.02} & \num{-0.01} & \num{-0.15}**\\
+ & (\num{0.02}) & (\num{0.02}) & (\num{0.08}) & (\num{0.07})\\
+Female & \num{0.00} & \num{0.00} & \num{-0.01} & \num{0.02}\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.01}) & (\num{0.01})\\
+College Graduate: Mother & \num{-0.08}*** & \num{-0.04}*** & \num{-0.10}*** & \num{-0.11}***\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.02})\\
+College Graduate: Father & \num{-0.10}*** & \num{-0.04}*** & \num{-0.15}*** & \num{-0.15}***\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.02}) & (\num{0.01})\\
+\midrule
+N & \num{605316} & \num{433135} & \num{97699} & \num{74482}\\
+Year $\times$ Region FE & X & X & X & X\\
+Mean & \num{0.92} & \num{0.96} & \num{0.83} & \num{0.77}\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of equation (\ref{eq:identity_reg_bias}) by 
+                      parents' type with region × year fixed effects with \citet{charlesPrejudiceWagesEmpirical2008} Prejudice measure. 
+                      \citet{charlesPrejudiceWagesEmpirical2008} use the General Security Survey of the most common racial questions between 1970-2000 for their measure of prejudice.
+                      To use the prejudice measure, I take the average of the GSS questions by year groups. The groups I use are as follows:
+                      (1) 1977 and 1982, (2) 1985 and 1988, and 1989, (3) 1990, 1991, and 1993, and (4) 1994 and 1996. I link these groups to the following
+                      grouped Current Population Survey (CPS) years: (1) 1994-1999, (2) 2000-2005, (3) 2006-2010, and (4) 2011-2016.
+                      In other words, I merge CPS data with the residual prejudice  measure from 20 years before the survey.
+                      I include controls for sex, quartic age, parental education.
+                      Standard errors are clustered on the state level}
+\item[2] \footnotesize{The samples include second-generation Hispanic children ages 17 and below who live in intact families. 
+                      Native born second-generation Hispanic 
+                      immigrant children with at least one parent born in a Spanish speaking 
+                      country.}
+\item[3] \footnotesize{Data source is the 1994-2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

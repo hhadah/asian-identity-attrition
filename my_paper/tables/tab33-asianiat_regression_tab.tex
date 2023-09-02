@@ -1,0 +1,36 @@
+\begin{table}[!h]
+
+\caption{Asian Child Identity and Implicit Asian Bias Score  (State) \label{regtab-04}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{lccccc}
+\toprule
+  & \specialcell{(1) \\ $H_i$} & \specialcell{(2) \\ $H_i$} & \specialcell{(3) \\ $H_i$} & \specialcell{(4) \\ $H_i$} & \specialcell{(5) \\ $H_i$}\\
+\midrule
+Implicit Bias & \num{-0.45}*** & \num{-0.62}*** & \num{-0.32}*** & \num{-0.56}*** & \num{-0.62}***\\
+ & (\num{0.06}) & (\num{0.10}) & (\num{0.05}) & (\num{0.09}) & (\num{0.09})\\
+Female & \num{-0.01}** & \num{-0.01}* & \num{-0.01}** & \num{-0.01}* & \num{-0.01}*\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & \vphantom{1} (\num{0.00})\\
+College Graduate: Mother & \num{0.00} & \num{0.00} & \num{0.00} & \num{0.00} & \num{0.00}\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & \vphantom{2} (\num{0.01})\\
+College Graduate: Father & \num{0.02}*** & \num{0.02}*** & \num{0.02}*** & \num{0.02}*** & \num{0.02}***\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00})\\
+Both parents AsianChild & \num{0.62}*** & \num{0.61}*** & \num{0.62}*** & \num{0.62}*** & \num{0.61}***\\
+ & (\num{0.04}) & (\num{0.04}) & (\num{0.04}) & (\num{0.04}) & (\num{0.04})\\
+First Gen & \num{0.03}*** & \num{0.03}*** & \num{0.03}*** & \num{0.03}*** & \num{0.03}***\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & \vphantom{1} (\num{0.01})\\
+Second Gen & \num{0.03}** & \num{0.03}** & \num{0.02}** & \num{0.02}** & \num{0.03}**\\
+ & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01}) & (\num{0.01})\\
+\midrule
+N & \num{268845} & \num{268845} & \num{268845} & \num{268845} & \num{268845}\\
+Mean & \num{0.65} & \num{0.65} & \num{0.65} & \num{0.65} & \num{0.65}\\
+Region FE &  &  & X & X & \\
+Year FE &  & X &  & X & \\
+Year-Region FE &  &  &  &  & X\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{1} I include controls for sex, quartic age, parental education.}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{2} Standard errors are clustered on the state level}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{3} Data source is the current population survey.}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}}
+\end{table}

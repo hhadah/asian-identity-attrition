@@ -1,0 +1,38 @@
+\begin{table}[!h]
+
+\caption{Effect of Hispanic on Bias: By Generation \label{regtab-reverse-causality}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+  & \specialcell{(1) \\ All Gens \\ $Bias_{st}$} & \specialcell{(2) \\  First Gen \\ $Bias_{st}$} & \specialcell{(3) \\  Second Gen \\ $Bias_{st}$} & \specialcell{(4) \\  Third Gen \\ $Bias_{st}$}\\
+\midrule
+Hispanic & \num{0.00} & \num{0.00}** & \num{0.00}* & \num{0.00}\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & \vphantom{3} (\num{0.00})\\
+Female & \num{0.00}* & \num{0.00} & \num{0.00}* & \num{0.00}\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & \vphantom{2} (\num{0.00})\\
+College Graduate: Mother & \num{0.00} & \num{0.01}** & \num{0.00} & \num{0.00}\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & \vphantom{1} (\num{0.00})\\
+College Graduate: Father & \num{0.00} & \num{0.00}* & \num{0.00}** & \num{0.00}\\
+ & (\num{0.00}) & (\num{0.00}) & (\num{0.00}) & (\num{0.00})\\
+\midrule
+N & \num{844481} & \num{85390} & \num{560100} & \num{198991}\\
+Mean & \num{0.91} & \num{0.96} & \num{0.94} & \num{0.82}\\
+Year $\times$ Region FE & X & X & X & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{The samples include children ages 17 and below who live in intact families. 
+                      First-generation Hispanic immigrant children that were born in a 
+                      Spanish speaking county. Native born second-generation Hispanic 
+                      immigrant children with at least one parent born in a Spanish speaking 
+                      country. Finally, native born third generation Hispanic immigrant children 
+                      with native born parents and at least one grand parent born in a Spanish 
+                      speaking country.}
+\item[2] \footnotesize{Data source is the 2004-2020 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
