@@ -17,14 +17,15 @@ Asian_IAT <- read_csv(file.path(datasets,"Asia_IAT_Clean.csv"))
 CPS <- fread(CPS_asian)
 CPS <- as.data.frame(CPS)
 CPS <- CPS |> 
+  filter(age<18) |>
   filter(Type_Asian == "First Generation Asian"  | 
          Type_Asian == "Second Generation Asian" | 
          Type_Asian == "Third Generation Asian") |> 
-  mutate(Proxy = case_when(AArespln ==lineno ~ "Self",
-                           AArespln ==lineno_mom ~ "Mother",
-                           AArespln ==lineno_mom2 ~ "Mother",
-                           AArespln ==lineno_pop  ~ "Father",
-                           AArespln ==lineno_pop2 ~ "Father",
+  mutate(Proxy = case_when(hhrespln ==lineno ~ "Self",
+                           hhrespln ==lineno_mom ~ "Mother",
+                           hhrespln ==lineno_mom2 ~ "Mother",
+                           hhrespln ==lineno_pop  ~ "Father",
+                           hhrespln ==lineno_pop2 ~ "Father",
                            TRUE ~ "Other"))
 
 ### Merge Skin IAT and state
@@ -57,10 +58,12 @@ skin_grouped_bystate <- Asian_IAT %>%
   group_by(state.no, year#, 
            #month
            ) %>% 
-  summarise(value = mean(Implicit, na.rm = TRUE)) %>% 
+  summarise(value = mean(Implicit, na.rm = TRUE),
+            Explicit_value = mean(Explicit, na.rm = TRUE)) %>% 
   select(state.no,
          #month,
          year,
+         Explicit_value,
          value) |> 
   rename("statefip" = "state.no")
 
@@ -73,7 +76,6 @@ CPS_IAT <- left_join(CPS,
                             )) |> 
   mutate(Female = case_when(sex == 2 ~ 1,
                             sex == 1 ~ 0)) |> 
-  filter(age<18) |> 
   filter(!is.na(value))
 
 
@@ -86,6 +88,10 @@ CPS_IAT <- CPS_IAT |>
          Age_sq = age^2,
          Age_cube = age^3,
          Age_quad = age^4,
+         AA = ifelse(Asian_Dad == 1 & Asian_Mom == 1, 1, 0),
+         AW = ifelse(Asian_Dad == 1 & Asian_Mom == 0, 1, 0),
+         WA = ifelse(Asian_Dad == 0 & Asian_Mom == 1, 1, 0),
+         WW = ifelse(Asian_Dad == 0 & Asian_Mom == 0, 1, 0),
          AA_0bj = ifelse((AsianPOB_Father == 1 & AsianPOB_Mother == 1), 1, 0),
          AW_0bj = ifelse((AsianPOB_Father == 1 & AsianPOB_Mother == 0), 1, 0),
          WA_0bj = ifelse((AsianPOB_Father == 0 & AsianPOB_Mother == 1), 1, 0),
@@ -142,8 +148,18 @@ CPS_IAT <- CPS_IAT |>
          weight = case_when(!is.na(hwtfinl) ~ hwtfinl,
                             !is.na(asecfwt) ~ asecfwt,
                             !is.na(asecwt04) ~ asecwt04))
+# Open fraction Asian data
+
+CPS_frac <- fread(CPS_asian_mean)
+CPS_frac <- as.data.frame(CPS_frac)
+
+CPS_IAT <- left_join(CPS_IAT,
+                     CPS_frac,
+                     na_matches = "never",
+                     by = c("statefip", "year"#, 
+                            #"month"
+                     )) |> 
+  rename(frac_asian = MeanAsian)
+
 # save
 write_csv(CPS_IAT, file.path(datasets,"CPS_IAT_asian.csv"))
-
-
-

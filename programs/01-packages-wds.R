@@ -22,14 +22,14 @@ pacman::p_load(tictoc, parallel, pbapply, future,
                #textme, lodown,
                BiocManager, Polychrome, effects,
                maps, sf, multcomp, cdlTools,
-               finalfit, ggtext, glue, scales, tigris,
+               finalfit, ggtext, glue, scales, 
                gganimate, ggrepel, MetBrewer, fs,
                marginaleffects, gghighlight, ggview,
-               camcorder, rnatura,learth, rnaturalearthdata,
-               latex2exp, janitor, ggspatial, ggmap)
+               camcorder, rnaturalearth, rnaturalearthdata,
+               latex2exp, igraph, httpgd, scales, lemon)
 options("RStata.StataPath" = "/Applications/Stata/StataSE.app/Contents/MacOS/stata-se")
 options("RStata.StataVersion" = 17)
-            
+
 # devtools::install_github("thomasp85/patchwork")
 # devtools::install_github("ajdamico/lodown")
 ## My preferred ggplot2 plotting theme (optional)
@@ -40,7 +40,7 @@ font_add_google("Fira Sans", "firasans")
 font_add_google("Fira Code", "firasans")
 
 showtext_auto()
-
+options(modelsummary_format_numeric_latex = "mathmode")
 showtext_opts(dpi = 300)
 camcorder::gg_record(
   dir = figures_wd,
@@ -51,14 +51,24 @@ camcorder::gg_record(
   dpi = 300
 )
 theme_customs <- function() {
-  theme_minimal(base_family = "IBM Plex Sans Condensed") +
+  theme_minimal(base_family = "serif") +
     theme(panel.grid.minor = element_blank(),
+          panel.grid.major = element_blank(),
           plot.background = element_rect(fill = "white", color = NA),
-          plot.title = element_text(face = "bold"),
+          # plot.title = element_text(face = "bold", size = rel(2)),
           axis.title = element_text(face = "bold"),
           strip.text = element_text(face = "bold"),
-          strip.background = element_rect(fill = "grey80", color = NA),
+          strip.background = element_rect(
+          color="black", fill="white", size=1.5
+          ),
           legend.title = element_text(face = "bold", size = rel(1)),
+          axis.text.y  = element_text(size = 18),
+          axis.text.x  = element_text(size = 24),
+          axis.title.x = element_text(size = 28),
+          axis.title.y = element_text(size = 28),
+          panel.grid.major.x = element_blank(),
+          panel.grid.minor.x = element_blank(),
+          axis.line = element_line(colour = "black"),
           legend.text = element_text(size = rel(1)))
 }
 
@@ -124,3 +134,9 @@ scale_color_paletteer_d("colorBlindness::Blue2Orange12Steps")
 
 # To use for line and point colors, add
 scale_colour_manual(values="colorBlindness::Blue2Orange12Steps")
+
+# Wrapper function
+wrapper <- function(x, ...) 
+{
+  paste(strwrap(x, ...), collapse = "\n")
+}
