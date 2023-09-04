@@ -2,11 +2,11 @@ library(ggspatial) # scale bars and north arrows
 library(ggmap)
 
 # Import data with geographic variables from Github
-Skin_IAT <- read.csv(file.path(datasets,"Skin_IAT_Clean.csv")) |> 
+Skin_IAT <- read.csv(file.path(datasets,"Asia_IAT_Clean.csv")) |> 
   mutate(Implicit=(Implicit-mean(Implicit, na.rm = T))/SD(Implicit, na.rm = T))
 
 # this .csv contains all state abbrevs, state nos., and lowercase state names
-state_info <- read.csv(file.path(datasets,"state_info.csv"))
+state_info <- read.csv(file.path(Implicit_Race_Harvard,"state_info.csv"))
 
 # Remove people who don't report their state 
 Skin_IAT <- Skin_IAT[Skin_IAT$state != "",]
@@ -51,7 +51,28 @@ DIVISION <- sts %>%
   summarize()
 
 # use for loop to plot all maps
-
+map <- ggplot() + geom_sf(data = skin_grouped_bystate |> filter(year == 2004), 
+                            aes(fill = value), 
+                            color = "white")+
+    geom_sf(data = skin_grouped_bystate, 
+            color = 'white', 
+            fill = NA,
+            size = 0.01) +
+    geom_sf(data = DIVISION, 
+            color = 'red', 
+            fill = NA,
+            size = 0.9) +
+    scale_fill_viridis_c(option = "D", direction = -1, name = "Bias"#,
+                         #breaks = seq(-0.4,0.4,0.2)
+                         ) +
+    theme_customs_map()  +
+    # annotation_scale(location = "bl", width_hint = 0.4) +
+    # annotation_north_arrow(location = "bl", which_north = "true", 
+    #                        pad_x = unit(0.0, "in"), pad_y = unit(0.2, "in"),
+    #                        style = north_arrow_fancy_orienteering) +
+    theme(legend.position = "bottom",
+          legend.text = element_text(size = 8))
+  map
 for (year_map in seq(2004,2021)) {
   map <- ggplot() + geom_sf(data = skin_grouped_bystate |> filter(year == year_map), 
                             aes(fill = value), 
@@ -76,7 +97,7 @@ for (year_map in seq(2004,2021)) {
           legend.text = element_text(size = 8))
   map
   ggsave(path = figures_wd, filename = paste0(year_map,"skinmap.png"))
-  ggsave(path = "~/Documents/GiT/Attitudes-and-Identity/my_paper/figure", 
+  ggsave(path = thesis_plots, 
          filename = paste0(year_map,"skinmap.png"), width = 8, height = 5, 
          units = c("in"))
   
@@ -104,7 +125,7 @@ map <- ggplot() + geom_sf(data = skin_grouped_bystate,
   theme(legend.position = "bottom") +  scale_size_area()
 map
 ggsave(path = figures_wd, filename = paste0(year_map,"skinmap.png"))
-ggsave(path = "~/Documents/GiT/Attitudes-and-Identity/my_paper/figure", 
+ggsave(path = thesis_plots, 
        filename = paste0(year_map,"skinmap.png"), width = 8, height = 5, 
        units = c("in"))
 
@@ -119,7 +140,7 @@ map_facet <- ggplot() + geom_sf(data = skin_grouped_bystate |> filter(year %in% 
   scale_fill_viridis_c(option = "D", direction = -1) +
   theme_customs_map() +
   theme(legend.position = "bottom") +
-  labs(title = paste0("Implicit Skin Tone Prejeduice 
+  labs(title = paste0("Asian Prejeduice 
        Scores: by State ", year_map))
 map_facet
 ggsave(path = figures_wd, filename = "skinmap_facet.png")

@@ -9,33 +9,33 @@
 # table with different FE
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
 
 
-feols(Hispanic ~ 1 + value + Female 
-                                + MomGradCollege + DadGradCollege + frac_hispanic +
+feols(Asian ~ 1 + value + Female 
+                                + MomGradCollege + DadGradCollege + frac_asian +
                                 Age + Age_sq + Age_cube + Age_quad  + factor(ParentType2) + factor(Grandparent_Type)
                                 + FirstGen + SecondGen| serial, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip)                         
 # By generation
 reg1 <- list(
-  "\\specialcell{(1) \\\\ All Gens \\\\ $H_{ist}$}" = feols(Hispanic ~ 1 + value + Female 
-                                + MomGradCollege + DadGradCollege + frac_hispanic +
+  "\\specialcell{(1) \\\\ All Gens \\\\ $H_{ist}$}" = feols(Asian ~ 1 + value + Female 
+                                + MomGradCollege + DadGradCollege + frac_asian +
                                 Age + Age_sq + Age_cube + Age_quad  + factor(ParentType2) + factor(Grandparent_Type)
                                 + FirstGen + SecondGen| region:year, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(2) \\\\  First Gen \\\\ $H^1_{ist}$}" = feols(Hispanic ~ 1 + value + Female 
-                               + MomGradCollege + DadGradCollege + frac_hispanic +
+  "\\specialcell{(2) \\\\  First Gen \\\\ $H^1_{ist}$}" = feols(Asian ~ 1 + value + Female 
+                               + MomGradCollege + DadGradCollege + frac_asian +
                                Age + Age_sq + Age_cube + Age_quad| region:year, 
-                               data = CPS_IAT |> filter(FirstGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(3) \\\\  Second Gen \\\\ $H^2_{ist}$}" = feols(Hispanic ~ 1 + value + Female 
-                               + MomGradCollege + DadGradCollege + frac_hispanic +
+                               data = CPS_IAT |> filter(FirstGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(3) \\\\  Second Gen \\\\ $H^2_{ist}$}" = feols(Asian ~ 1 + value + Female 
+                               + MomGradCollege + DadGradCollege + frac_asian +
                                Age + Age_sq + Age_cube + Age_quad + factor(ParentType2)| region:year, 
-                               data = CPS_IAT |> filter(SecondGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(4) \\\\  Third Gen \\\\ $H^3_{ist}$}" = feols(Hispanic ~ 1 + value + Female 
-                               + MomGradCollege + DadGradCollege + frac_hispanic +
+                               data = CPS_IAT |> filter(SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(4) \\\\  Third Gen \\\\ $H^3_{ist}$}" = feols(Asian ~ 1 + value + Female 
+                               + MomGradCollege + DadGradCollege + frac_asian +
                                Age + Age_sq + Age_cube + Age_quad + factor(Grandparent_Type)| region:year, 
-                               data = CPS_IAT |> filter(ThirdGen == 1), weights = ~weight, vcov = ~statefip)
+                               data = CPS_IAT |> filter(ThirdGen_Asian == 1), weights = ~weight, vcov = ~statefip)
   
 )
 
@@ -43,10 +43,10 @@ reg1 <- list(
 # as a row
 means_gen <- CPS_IAT |> 
   group_by(Type) |> 
-  summarise(hispanic = mean(Hispanic, na.rm = T))
+  summarise(Asian = mean(Asian, na.rm = T))
 
 means_all <- CPS_IAT |> 
-  summarise(hispanic = mean(Hispanic, na.rm = T))
+  summarise(Asian = mean(Asian, na.rm = T))
 
 mean_row <-  data.frame(Coefficients = c('Mean', round(means_all[1], digits = 2), round(means_gen[1,2], digits = 2), round(means_gen[2,2], digits = 2), round(means_gen[3,2], digits = 2)))
 
@@ -58,10 +58,10 @@ cm <- c("value" = "Bias",
         "Female" = "Female",
         "MomGradCollege" = "College Graduate: Mother",
         "DadGradCollege" = "College Graduate: Father"#,
-        #"frac_hispanic"  = "Fraction Hispanic"
+        #"frac_asian"  = "Fraction Asian"
         #"lnftotval_mom" = "Log Total Family Income"#,
         #"age" = "Age",
-        #"HH" = "Both parents Hispanic",
+        #"HH" = "Both parents Asian",
         # "FirstGen" = "First Gen",
         # "SecondGen" = "Second Gen",
         # "ThirdGen" = "Third Generation"
@@ -87,7 +87,7 @@ modelsummary(reg1, fmt = f1,
              escape = F,
              #gof_omit = 'DF|Deviance|R2|AIC|BIC|Log.Lik.|F|Std.Errors',
              stars= c('***' = 0.01, '**' = 0.05, '*' = 0.1),
-             title = "Self-Reported Hispanic Identity and Bias: By Generation \\label{regtab-bygen-01}") %>%
+             title = "Self-Reported Asian Identity and Bias: By Generation \\label{regtab-bygen-01}") %>%
   kable_styling(bootstrap_options = c("hover", "condensed"), 
                 latex_options = c("scale_down", "hold_position")
   ) %>%
@@ -105,21 +105,21 @@ regression_tab <- modelsummary(reg1, fmt = f1,
                                escape = F,
                                #gof_omit = 'DF|Deviance|R2|AIC|BIC|Log.Lik.|F|Std.Errors',
                                stars= c('***' = 0.01, '**' = 0.05, '*' = 0.1),
-                               title = "Relationship Between Bias and Self-Reported Hispanic Identity: By Generation \\label{regtab-bygen-01}") %>%
+                               title = "Relationship Between Bias and Self-Reported Asian Identity: By Generation \\label{regtab-bygen-01}") %>%
   kable_styling(bootstrap_options = c("hover", "condensed"), 
                 latex_options = c("scale_down", "hold_position")
   ) %>%
   footnote(number = c("\\\\footnotesize{Each column is an estimation of a heterogeneous effect of regression (\\\\ref{eq:identity_reg_bias}) by 
                       generation with region × year fixed effects. 
-                      I include controls for sex, quartic age, fraction of Hispanics in a state, and parental education.
+                      I include controls for sex, quartic age, fraction of Asians in a state, and parental education.
                       I also added parents' (HH, HW, and WH) and grandparents' (HHHH, HHHW, HHWH, etc.) type dummy variables to the regression
-                      on second and third generation immigrants, where H is objectively Hispanic (born in a Spanish-Speaking Country) and W is objectively White (native-born). 
+                      on second and third generation immigrants, where H is objectively Asian (born in a Asian country) and W is objectively White (native-born). 
                       Standard errors are clustered on the state level.}",
                       "\\\\footnotesize{The samples include children ages 17 and below who live in intact families. 
-                      First-generation Hispanic immigrant children that were born in a 
-                      Spanish-speaking county. Native-born second-generation Hispanic 
+                      First-generation Asian immigrant children that were born in a 
+                      Asian country. Native-born second-generation Asian 
                       immigrant children with at least one parent born in a Spanish-speaking 
-                      country. Finally, native-born third-generation Hispanic immigrant children 
+                      country. Finally, native-born third-generation Asian immigrant children 
                       with native-born parents and at least one grandparent born in a Spanish-
                       speaking country.}",
                       "\\\\footnotesize{Data source is the 2004-2021 Current Population Survey.}"),
@@ -133,34 +133,3 @@ regression_tab %>%
 
 regression_tab %>%
   save_kable(file.path(thesis_tabs,"tab04-regression_tab_bygen_skin.tex"))
-regression_tab %>%
-  save_kable(file.path(Identity_paper_tab,"tab51-regression_tab_bygen_skin.tex"))
-
-gm <- tibble::tribble(
-  ~raw,        ~clean,          ~fmt,
-  "nobs",      "N",             0,
-  # "FE: region", "Region FE", 0,
-  # "FE: year", "Year FE", 0,
-  "FE: region:year", "Year\\timesRegion FE", 0,
-  # "std.error.type", "Standard Errors", 0,
-  #"r.squared", "R squared", 3
-)
-regression_tab <- modelsummary(reg1, fmt = f1,  
-                               output = "latex", 
-                               coef_map = cm,
-                               add_rows = mean_row,
-                               escape = F,
-                               gof_map = gm,
-                               #gof_omit = 'DF|Deviance|R2|AIC|BIC|Log.Lik.|F|Std.Errors',
-                               stars= c('***' = 0.01, '**' = 0.05, '*' = 0.1)) %>%
-  kable_styling(bootstrap_options = c("hover", "condensed"), 
-                latex_options = c("hold_position"),
-                full_width = F, font_size = 10
-  ) |>
-  row_spec(c(1,2), bold = T, color = "black", background = "yellow")
-
-
-regression_tab %>%
-  save_kable(file.path(pres_tabs,"tab04-regression_tab_bygen_skin.tex"))
-
-rm(CPS_IAT)

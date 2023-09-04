@@ -9,27 +9,27 @@
 # table with different FE
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
 
 
 # By generation
 reg1 <- list(
-  "\\specialcell{(1) \\\\ $H_i$}" = feols(Hispanic ~ 1 + value + Female 
-                                + MomGradCollege + DadGradCollege + frac_hispanic +
-                                Age + Age_sq + Age_cube + Age_quad  + HH_0bj  + FirstGen + SecondGen| region:year, 
+  "\\specialcell{(1) \\\\ $A_i$}" = feols(Asian ~ 1 + value + Female 
+                                + MomGradCollege + DadGradCollege + frac_asian +
+                                Age + Age_sq + Age_cube + Age_quad  + AA_0bj  + FirstGen + SecondGen| region:year, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(2) \\\\ $H^1_i$}" = feols(Hispanic ~ 1 + value + Female 
-                               + MomGradCollege + DadGradCollege + frac_hispanic +
+  "\\specialcell{(2) \\\\ $A^1_i$}" = feols(Asian ~ 1 + value + Female 
+                               + MomGradCollege + DadGradCollege + frac_asian +
                                Age + Age_sq + Age_cube + Age_quad| region:year, 
-                               data = CPS_IAT |> filter(FirstGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(3) \\\\ $H^2_i$}" = feols(Hispanic ~ 1 + value + Female 
-                               + MomGradCollege + DadGradCollege + frac_hispanic +
-                               Age + Age_sq + Age_cube + Age_quad + HH_0bj| region:year, 
-                               data = CPS_IAT |> filter(SecondGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(4) \\\\ $H^3_i$}" = feols(Hispanic ~ 1 + value + Female 
-                               + MomGradCollege + DadGradCollege + frac_hispanic +
+                               data = CPS_IAT |> filter(FirstGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(3) \\\\ $A^2_i$}" = feols(Asian ~ 1 + value + Female 
+                               + MomGradCollege + DadGradCollege + frac_asian +
+                               Age + Age_sq + Age_cube + Age_quad + AA_0bj| region:year, 
+                               data = CPS_IAT |> filter(SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(4) \\\\ $A^3_i$}" = feols(Asian ~ 1 + value + Female 
+                               + MomGradCollege + DadGradCollege + frac_asian +
                                Age + Age_sq + Age_cube + Age_quad + Grandparent_Type| region:year, 
-                               data = CPS_IAT |> filter(ThirdGen == 1), weights = ~weight, vcov = ~statefip)
+                               data = CPS_IAT |> filter(ThirdGen_Asian == 1), weights = ~weight, vcov = ~statefip)
   
 )
 
@@ -41,7 +41,7 @@ cm <- c("value" = "Bias",
         "DadGradCollege" = "College Graduate: Father"#,
         #"lnftotval_mom" = "Log Total Family Income"#,
         #"age" = "Age",
-        #"HH" = "Both parents Hispanic",
+        #"HH" = "Both parents Asian",
         # "FirstGen" = "First Gen",
         # "SecondGen" = "Second Gen",
         # "ThirdGen" = "Third Generation"
@@ -59,9 +59,9 @@ row.names(text_data)[4] = "College Graduate: Father"
 
 p1 <- modelplot(reg1[[1]],
           coef_map = cm, color = "#E69F00",
-          conf_level = 0.9) +
+          conf_level = 0.95) +
   # facet_grid(~model) +
-  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
+  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', linewidth = 1) +
   theme_customs() +
   geom_text_repel(aes(x = estimate, y = row.names(text_data),
                 label = round(estimate, digits = 2)), data = text_data,
@@ -78,9 +78,6 @@ p1 <- modelplot(reg1[[1]],
 p1
 ggsave(paste0(figures_wd,"/skin-iat-regression-all-gens.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-all-gens.png"), width = 10, height = 4, units = "in")
-p1 + labs(title = "All Generations") + theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/skin-iat-regression-all-gens.png"), width = 12, height = 6, units = "in")
-
 
 # first-generation
 text_data <- subset(tidy(reg1[[2]]), term %in% c("value", "Female", 
@@ -94,9 +91,9 @@ row.names(text_data)[4] = "College Graduate: Father"
 
 p2 <-modelplot(reg1[[2]],
           coef_map = cm, color = "#CC79A7",
-          conf_level = 0.9) +
+          conf_level = 0.95) +
   # facet_grid(~model) +
-  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
+  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', linewidth = 1) +
   geom_text_repel(aes(x = estimate, y = row.names(text_data),
                       label = round(estimate, digits = 2)), data = text_data,
                   size = 6) +
@@ -113,8 +110,6 @@ p2 <-modelplot(reg1[[2]],
 p2
 ggsave(paste0(figures_wd,"/skin-iat-regression-first-gen.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-first-gen.png"), width = 10, height = 4, units = "in")
-p2 + labs(title = "First Generation")+ theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/skin-iat-regression-first-gen.png"), width = 12, height = 6, units = "in")
 
 # second-generation
 text_data <- subset(tidy(reg1[[3]]), term %in% c("value", "Female", 
@@ -127,13 +122,13 @@ row.names(text_data)[3] = "College Graduate: Mother"
 row.names(text_data)[4] = "College Graduate: Father"
 p3 <-modelplot(reg1[[3]],
           coef_map = cm, color = "#009E73",
-          conf_level = 0.9) +
+          conf_level = 0.95) +
   # facet_grid(~model) +
-  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
+  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', linewidth = 1) +
   geom_text_repel(aes(x = estimate, y = row.names(text_data),
                       label = round(estimate, digits = 2)), data = text_data,
                   size = 6) +
-  labs(x = "Coefficient estimates and 90% CI") +
+  labs(x = "Coefficient estimates and 95% CI") +
   theme_customs() +
   theme(
     strip.background = element_rect(
@@ -147,8 +142,6 @@ p3 <-modelplot(reg1[[3]],
 p3
 ggsave(paste0(figures_wd,"/skin-iat-regression-second-gen.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-second-gen.png"), width = 10, height = 4, units = "in")
-p3 + labs(title = "Second Generation")+ theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/skin-iat-regression-second-gen.png"), width = 12, height = 6, units = "in")
 
 # third-generation
 text_data <- subset(tidy(reg1[[4]]), term %in% c("value", "Female", 
@@ -162,14 +155,14 @@ row.names(text_data)[4] = "College Graduate: Father"
 
 p4 <-modelplot(reg1[[4]],
           coef_map = cm, color = "#CC79A7",
-          conf_level = 0.9) +
+          conf_level = 0.95) +
   # facet_grid(~model) +
-  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
+  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', linewidth = 1) +
   geom_text_repel(aes(x = estimate, y = row.names(text_data),
                       label = round(estimate, digits = 2)), data = text_data,
                   size = 6) +
   theme_customs() +
-  labs(x = "Coefficient estimates and 90% CI") +
+  labs(x = "Coefficient estimates and 95% CI") +
   theme(
     strip.background = element_rect(
       color="black", fill="white", size=1.5
@@ -183,8 +176,6 @@ p4 <-modelplot(reg1[[4]],
 p4
 ggsave(paste0(figures_wd,"/skin-iat-regression-third-gen.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-third-gen.png"), width = 10, height = 4, units = "in")
-p4 + labs(title = "Third Generation")+ theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/skin-iat-regression-third-gen.png"), width = 12, height = 6, units = "in")
 
 # plots together
 p1 <- p1 + labs(title = "Pooled")
@@ -198,10 +189,6 @@ ggsave(paste0(figures_wd,"/skin-iat-regression-together.png"), width = 16, heigh
 ggsave(paste0(thesis_plots,"/skin-iat-regression-together.png"), width = 16, height = 4, units = "in")
 
 together <- ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2)
-annotate_figure(together, top = text_grob("Relationship Between Bias and Self-reported Hispanic Identity", 
+annotate_figure(together, top = text_grob("Relationship Between Bias and Self-reported Asian Identity", 
                                       color = "red", face = "bold", size = 14))
 ggsave(paste0(thesis_plots,"/skin-iat-regression-together.png"), width = 16, height = 4, units = "in")
-ggsave(paste0("/Users/hhadah/Documents/GiT/website/content/publication/AttitudesAndIdentity","/featured.png"), width = 16, height = 4, units = "in")
-# ggsave(paste0(figures_wd,"/skin-iat-regression-together2.png"), width = 10, height = 4, units = "in")
-# ggsave(paste0(thesis_plots,"/skin-iat-regression-together2.png"), width = 10, height = 4, units = "in")
-# ggsave(paste0(pres_plots,"/skin-iat-regression-together2.png"), width = 12, height = 6, units = "in")

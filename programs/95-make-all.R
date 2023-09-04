@@ -31,11 +31,16 @@ thesis_plots <- paste0(git_mdir,"/my_paper/figure")
 
 # main scripts
 source(file.path(programs,"01-packages-wds.r")) # set up package
-source(file.path(programs,"02-clean-implicit-project-asian.r")) # set up package
-source(file.path(programs,"03-merge-asian-iat-cps.r")) # set up package
-source(file.path(programs,"04-table-one-summary-stats.r")) # set up package
-source(file.path(programs,"05-table-two-observations-by-gen.r")) # set up package
-source(file.path(programs,"06-figure-two-skin-iat-plots.r")) # set up package
+source(file.path(programs,"02-clean-implicit-project-asian.r")) # clean asian implicit data
+source(file.path(programs,"03-merge-asian-iat-cps.r")) # merge iat and cps
+source(file.path(programs,"04-table-one-summary-stats.r")) # summary stats of sample
+source(file.path(programs,"05-table-two-observations-by-gen.r")) # ethnic attrition of sample
+source(file.path(programs,"06-figure-two-skin-iat-plots.r")) # figure of iat and asian identity
+source(file.path(programs,"07-figure-three-skin-map.r")) # asian iat maps
+source(file.path(programs,"08-table-three-summary-stats-iat-and-cps.r")) # asian iat maps
+source(file.path(programs,"09-figure-five-skin-iat-regression-by-gen-plot.r")) # asian iat maps
+source(file.path(programs,"10-figure-six-regressions-skin-iat-byparent-plot.r")) # asian iat maps
+source(file.path(programs,"11-table-four-skin-iat-regression-by-gen.r")) # asian iat maps
 
 ### summary stats
 

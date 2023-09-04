@@ -7,28 +7,28 @@
 # Date: July 30th, 2022
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
 
 
 # fixed effects regression
 
 reg1 <- list(
-  "\\specialcell{(1) \\\\ $H^2$}" = feols(Hispanic ~ 1 + value + Female 
-                     + MomGradCollege + DadGradCollege + frac_hispanic +
-                       Age + Age_sq + Age_cube + Age_quad + HH_0bj| region:year, 
-                     data = CPS_IAT |> filter(SecondGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(2) \\\\ $H^2$}" = feols(Hispanic ~ 1 + value + Female 
-                     + MomGradCollege + DadGradCollege + frac_hispanic +
+  "\\specialcell{(1) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
+                     + MomGradCollege + DadGradCollege + frac_asian +
+                       Age + Age_sq + Age_cube + Age_quad + AA_0bj| region:year, 
+                     data = CPS_IAT |> filter(SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(2) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
+                     + MomGradCollege + DadGradCollege + frac_asian +
                        Age + Age_sq + Age_cube + Age_quad| region:year, 
-                     data = CPS_IAT |> filter(HH_0bj == 1 & SecondGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(3) \\\\ $H^2$}" = feols(Hispanic ~ 1 + value + Female 
-                     + MomGradCollege + DadGradCollege + frac_hispanic +
+                     data = CPS_IAT |> filter(AA_0bj == 1 & SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(3) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
+                     + MomGradCollege + DadGradCollege + frac_asian +
                        Age + Age_sq + Age_cube + Age_quad | region:year, 
-                     data = CPS_IAT |> filter(HW_0bj == 1 & SecondGen == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(4) \\\\ $H^2$}" = feols(Hispanic ~ 1 + value + Female 
-                     + MomGradCollege + DadGradCollege + frac_hispanic +
+                     data = CPS_IAT |> filter(AW_0bj == 1 & SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
+  "\\specialcell{(4) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
+                     + MomGradCollege + DadGradCollege + frac_asian +
                        Age + Age_sq + Age_cube + Age_quad | region:year, 
-                     data = CPS_IAT |> filter(WH_0bj == 1 & SecondGen == 1), weights = ~weight, vcov = ~statefip)
+                     data = CPS_IAT |> filter(WA_0bj == 1 & SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip)
 )
 
 
@@ -38,7 +38,7 @@ cm <- c("value" = "Bias",
         "DadGradCollege" = "College Graduate: Father",
         "lnftotval_mom" = "Log Total Family Income"
         #"age" = "Age",
-        #"HH" = "Both parents Hispanic",
+        #"HH" = "Both parents Asian",
         # "FirstGen" = "First Gen",
         # "SecondGen" = "Second Gen",
         # "ThirdGen" = "Third Generation"
@@ -75,9 +75,6 @@ p1 <- modelplot(reg1[[1]],
 p1
 ggsave(paste0(figures_wd,"/by-parents-regs-all.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/by-parents-regs-all.png"), width = 10, height = 4, units = "in")
-p1 + labs(title = "Second-Generation (All Parental Types)") + theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/by-parents-regs-all.png"), width = 12, height = 6, units = "in")
-
 
 # HH parents
 text_data <- subset(tidy(reg1[[2]]), term %in% c("value", "Female", 
@@ -110,8 +107,6 @@ p2 <- modelplot(reg1[[2]],
 p2
 ggsave(paste0(figures_wd,"/by-parents-regs-hh.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/by-parents-regs-hh.png"), width = 10, height = 4, units = "in")
-p2 + labs(title = "Hispanic Fathers-Hispanic Mothers") + theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/by-parents-regs-hh.png"), width = 12, height = 6, units = "in")
 
 # HW parents
 text_data <- subset(tidy(reg1[[3]]), term %in% c("value", "Female", 
@@ -145,8 +140,6 @@ p3 <- modelplot(reg1[[3]],
 p3
 ggsave(paste0(figures_wd,"/by-parents-regs-hw.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/by-parents-regs-hw.png"), width = 10, height = 4, units = "in")
-p3 + labs(title = "Hispanic Fathers-White Mothers") + theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/by-parents-regs-hw.png"), width = 12, height = 6, units = "in")
 
 # WH parents
 text_data <- subset(tidy(reg1[[4]]), term %in% c("value", "Female", 
@@ -181,35 +174,28 @@ p4 <- modelplot(reg1[[4]],
 p4
 ggsave(paste0(figures_wd,"/by-parents-regs-wh.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/by-parents-regs-wh.png"), width = 10, height = 4, units = "in")
-p4 + labs(title = "White Fathers-Hispanic Mothers") + theme(plot.title = element_text(size = 20))
-ggsave(paste0(pres_plots,"/by-parents-regs-wh.png"), width = 12, height = 6, units = "in")
 
 
 # plots together
 # (p1 + p2) / (p3 + p4)
-# ggsave(paste0(figures_wd,"/by-parents-regs-together.png"), width = 10, height = 4, units = "in")
-# ggsave(paste0(thesis_plots,"/by-parents-regs-together.png"), width = 10, height = 4, units = "in")
-# ggsave(paste0(pres_plots,"/by-parents-regs-together.png"), width = 12, height = 6, units = "in")
-# 
 p1 <- p1 + labs(title = "Second-Generation: All Parents")   + theme_customs() +
   theme(
     axis.title.x = element_blank()
   )
-p2 <- p2 + labs(title = "Hispanic Father-Hispanic Mother")  + theme_customs()+
+p2 <- p2 + labs(title = "Asian Father-Asian Mother")  + theme_customs()+
   theme(
     axis.title.x = element_blank(),
     axis.text.y = element_blank()
   )
-p3 <- p3 + labs(title = "Hispanic Father-White Mother")     + theme_customs()
-p4 <- p4 + labs(title = "White Father-Hispanic Mother")     + theme_customs() +
+p3 <- p3 + labs(title = "Asian Father-White Mother")     + theme_customs()
+p4 <- p4 + labs(title = "White Father-Asian Mother")     + theme_customs() +
   theme(
     axis.text.y = element_blank()
   )
 
 plot<-ggarrange(p1, p2, p3, p4,
           ncol = 2, nrow = 2)
-annotate_figure(plot, top = text_grob("Relationship Between Self-Reported Hispanic Identity And Bias: By Parental Types", 
+annotate_figure(plot, top = text_grob("Relationship Between Self-Reported Asian Identity And Bias: By Parental Types", 
                                       color = "red", face = "bold", size = 14))
 ggsave(paste0(figures_wd,"/by-parents-regs-together2.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/by-parents-regs-together2.png"), width = 10, height = 4, units = "in")
-# ggsave(paste0(pres_plots,"/by-parents-regs-together2.png"), width = 12, height = 6, units = "in")
