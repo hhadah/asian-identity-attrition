@@ -16,7 +16,7 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
 reg1 <- list(
   "\\specialcell{(1) \\\\ $A_i$}" = feols(Asian ~ 1 + value + Female 
                                 + MomGradCollege + DadGradCollege + frac_asian +
-                                Age + Age_sq + Age_cube + Age_quad  + AA_0bj  + FirstGen + SecondGen| region:year, 
+                                Age + Age_sq + Age_cube + Age_quad  + AA_0bj  + FirstGen_Asian + SecondGen_Asian| region:year, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip),
   "\\specialcell{(2) \\\\ $A^1_i$}" = feols(Asian ~ 1 + value + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +

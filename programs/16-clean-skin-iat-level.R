@@ -6,7 +6,7 @@
 
 # Date: Oct 25th, 2022
 
-Skin_Iat <- read_csv(file.path(datasets,"Skin_IAT_Clean.csv"))
+Skin_Iat <- read_csv(file.path(datasets,"Asia_IAT_Clean.csv"))
 
 ### Open ACS data
 ### of 17 year olds
@@ -30,7 +30,7 @@ state_info <- left_join(state_info,
                         st.reg,
                      na_matches = "never",
                      by = c("state"
-                     ))
+                     )) 
 
 # Remove people who don't report their state 
 Skin_Iat <- Skin_Iat[Skin_Iat$state != "",]
@@ -44,7 +44,8 @@ Skin_Iat <- left_join(Skin_Iat,
 
 # rename state name variable
 Skin_Iat <- Skin_Iat %>% 
-  rename(state = state.name)
+  rename(state = state.name,
+         statefip = state.no)
 
 # calculate average skin
 # iat score by state by
@@ -53,19 +54,18 @@ Skin_Iat <- Skin_Iat %>%
 
 skin_grouped_bystate <- Skin_Iat %>% 
   # filter(White == 1) |> 
-  group_by(state.no, year#, 
+  group_by(statefip, year#, 
            #month
   ) %>% 
   summarise(value = mean(Implicit, na.rm = TRUE),
             Explicit_value = mean(Explicit, na.rm = TRUE),
             division = first(division)) %>% 
-  select(state.no,
+  select(statefip,
          #month,
          division,
          year,
          Explicit_value,
-         value) |> 
-  rename("statefip" = "state.no")
+         value)
 
 # merge wit ACS data at year of survey
 ACS_IAT <- left_join(ACS,
@@ -116,35 +116,35 @@ ACS_IAT <- left_join(ACS_IAT,
                             sex == 1 ~ 0))
 # data cleaning
 ACS_IAT <- ACS_IAT |>
-  filter(Type != "Fourth Generation+ Hispanic") |> 
+  filter(Type != "Fourth Generation+ Asian") |> 
   filter(Type != "") |> 
   mutate(
          Age = age,
          Age_sq = age^2,
          Age_cube = age^3,
          Age_quad = age^4,
-         HH = ifelse(Hispanic_Dad == 1 & Hispanic_Mom == 1, 1, 0),
-         HW = ifelse(Hispanic_Dad == 1 & Hispanic_Mom == 0, 1, 0),
-         WH = ifelse(Hispanic_Dad == 0 & Hispanic_Mom == 1, 1, 0),
-         WW = ifelse(Hispanic_Dad == 0 & Hispanic_Mom == 0, 1, 0),
-         HH_0bj = ifelse((SpanishSpeakingPOB_Father == 1 & SpanishSpeakingPOB_Mother == 1), 1, 0),
-         HW_0bj = ifelse((SpanishSpeakingPOB_Father == 1 & SpanishSpeakingPOB_Mother == 0), 1, 0),
-         WH_0bj = ifelse((SpanishSpeakingPOB_Father == 0 & SpanishSpeakingPOB_Mother == 1), 1, 0),
-         WW_0bj = ifelse((SpanishSpeakingPOB_Father == 0 & SpanishSpeakingPOB_Mother == 0), 1, 0),
-         ParentType = case_when(HH == 1 ~ "Hispanic-Hispanic",
-                                HW == 1 ~ "Hispanic-White",
-                                WH == 1 ~ "White-Hispanic",
+         AA = ifelse(Asian_Dad == 1 & Asian_Mom == 1, 1, 0),
+         AW = ifelse(Asian_Dad == 1 & Asian_Mom == 0, 1, 0),
+         WA = ifelse(Asian_Dad == 0 & Asian_Mom == 1, 1, 0),
+         WW = ifelse(Asian_Dad == 0 & Asian_Mom == 0, 1, 0),
+         AA_0bj = ifelse((AsianPOB_Father == 1 & AsianPOB_Mother == 1), 1, 0),
+         AW_0bj = ifelse((AsianPOB_Father == 1 & AsianPOB_Mother == 0), 1, 0),
+         WA_0bj = ifelse((AsianPOB_Father == 0 & AsianPOB_Mother == 1), 1, 0),
+         WW_0bj = ifelse((AsianPOB_Father == 0 & AsianPOB_Mother == 0), 1, 0),
+         ParentType = case_when(AA == 1 ~ "Asian-Asian",
+                                AW == 1 ~ "Asian-White",
+                                WA == 1 ~ "White-Asian",
                                 WW == 1 ~ "White-White"),
          ParentType = as.factor(ParentType),
-         ParentType2 = case_when(HH_0bj == 1 ~ "Hispanic-Hispanic",
-                                 HW_0bj == 1 ~ "Hispanic-White",
-                                 WH_0bj == 1 ~ "White-Hispanic",
+         ParentType2 = case_when(AA_0bj == 1 ~ "Asian-Asian",
+                                 AW_0bj == 1 ~ "Asian-White",
+                                 WA_0bj == 1 ~ "White-Asian",
                                  WW_0bj == 1 ~ "White-White"),
          ParentType2 = as.factor(ParentType2),
          weight = case_when(!is.na(hhwt) ~ hhwt))
-# Open fraction Hispanic data
+# Open fraction Asian data
 
-CPS_frac <- fread(CPS_hispanic_mean)
+CPS_frac <- fread(CPS_asian_mean)
 CPS_frac <- as.data.frame(CPS_frac)
 
 ACS_IAT <- left_join(ACS_IAT,
@@ -153,7 +153,7 @@ ACS_IAT <- left_join(ACS_IAT,
                      by = c("statefip", "year"#, 
                             #"month"
                      )) |> 
-  rename(frac_hispanic = MeanHispanic)
+  rename(frac_asian = MeanAsian)
 
 # save
 write_csv(ACS_IAT, file.path(datasets,"ACS_IAT.csv"))

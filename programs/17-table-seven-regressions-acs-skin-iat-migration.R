@@ -12,7 +12,7 @@
 
 # open data
 ACS_IAT <- read_csv(file.path(datasets,"ACS_IAT.csv")) |> 
-  filter(SecondGen == 1 & HH_0bj == 1) |> 
+  filter(SecondGen_Asian == 1 & AA_0bj == 1) |> 
   mutate(m = year - 1,
          bplregion = case_when(bplregion == "East North Central" ~ 1,
                                bplregion == "East South Central" ~ 2,
@@ -53,22 +53,22 @@ attr(mean_row, 'position') <- c(14)
 
 reg1 <- list(
              "\\specialcell{(1) \\\\ Migrated from \\\\ Birth Place}" = feols(bpl_mover ~ 1 + value + Female 
-                                                                              + MomGradCollege + DadGradCollege+ frac_hispanic+
+                                                                              + MomGradCollege + DadGradCollege+ frac_asian+
                                                                                 Age + Age_sq + Age_cube + Age_quad| year:region, 
                                                                               weights = ~weight, vcov = ~statefip,
                                                                               data = ACS_IAT),
              "\\specialcell{(2) \\\\ Migrated from \\\\ Birth Place}" = feols(bpl_mover ~ 1 + bplvalue + Female 
-                                                                              + MomGradCollege + DadGradCollege+ frac_hispanic+
+                                                                              + MomGradCollege + DadGradCollege+ frac_asian+
                                                                                 Age + Age_sq + Age_cube + Age_quad| birthyr:bplregion, 
                                                                               weights = ~weight, vcov = ~statefip,
                                                                               data = ACS_IAT),
-             "\\specialcell{(3) \\\\ $Bias_{ist} - Bias_{ilb}$}" = feols(bias_diff ~ Hispanic + Female 
-                                                                              + MomGradCollege + DadGradCollege+ frac_hispanic+
+             "\\specialcell{(3) \\\\ $Bias_{ist} - Bias_{ilb}$}" = feols(bias_diff ~ Asian + Female 
+                                                                              + MomGradCollege + DadGradCollege+ frac_asian+
                                                                                 Age + Age_sq + Age_cube + Age_quad, 
                                                                               weights = ~weight, vcov = ~statefip,
                                                                               data = ACS_IAT |> filter(bpl_mover == 1))#,
              # "\\specialcell{(4) \\\\ $Bias_{ist} - Bias_{ilb}$}" = feols(bias_diff ~ Female 
-             #                                                             + MomGradCollege + DadGradCollege+ frac_hispanic+
+             #                                                             + MomGradCollege + DadGradCollege+ frac_asian+
              #                                                               Age + Age_sq + Age_cube + Age_quad, 
              #                                                             weights = ~weight, vcov = ~statefip,
              #                                                             data = ACS_IAT |> filter(bpl_mover == 1))
@@ -80,14 +80,14 @@ cm <- c(
         "value"          = "$Bias_{st}$",
         "migvalue"       = "$Bias_{sm}$",
         "bplvalue"       = "$Bias_{lb}$",
-        "Hispanic"       = "Hispanic",
+        "Asian"       = "Asian",
         "bpl_mover"      = "Migrated from State of Birth",
         "Female"         = "Female",
         "MomGradCollege" = "College Graduate: Mother",
         "DadGradCollege" = "College Graduate: Father",
         "lnftotval_mom"  = "Log Total Family Income",
         #"age" = "Age",
-        "HH_0bj" = "Both parents Hispanic",
+        "HH_0bj" = "Both parents Asian",
         "FirstGen" = "First Gen") 
 
 f1 <- function(x) format(round(x, 2), big.mark=".")
@@ -149,17 +149,16 @@ regression_tab <- modelsummary(reg1, fmt = f1,
                       Column (3) is a regression where the left hand side variable is 
                       the difference between state-level bias during the year of the survey in the current state the 
                       respondent is living in, and state-level bias during the year of birth in the state of birth 
-                      and the right hand side variable is self-reported Hispanic identity. This regression captures
-                      the selection of those that self-reported Hispanic identity into states with different levels of bias.
-                      I include controls for sex, quartic age, parental education, fraction of Hispanics in a state, and region × year fixed effects.
+                      and the right hand side variable is self-reported Asian identity. This regression captures
+                      the selection of those that self-reported Asian identity into states with different levels of bias.
+                      I include controls for sex, quartic age, parental education, fraction of Asians in a state, and region × year fixed effects.
                       Standard errors are clustered on the state level.}",
                       "\\\\footnotesize{The samples include children ages 17 and below who live in intact families. 
-                      Native-born second-generation Hispanic immigrant children with both
-                      parents born in a Spanish-speaking country. The sample in the column (3) regression is further restricted to only those that migrated from their birth state.}",
+                      Native-born second-generation Asian immigrant children with both
+                      parents born in a Asian country. The sample in the column (3) regression is further restricted to only those that migrated from their birth state.}",
                       "\\\\footnotesize{Data source is the 2004-2021 Census Data.}"),
            footnote_as_chunk = F, title_format = c("italic"),
            escape = F, threeparttable = T, fixed_small_size = T)
-
 
 regression_tab %>%
   #save_kable(file = "Objective_Subjective.html", self_contained = T)
@@ -168,22 +167,3 @@ regression_tab %>%
 regression_tab %>%
   #save_kable(file = "Objective_Subjective.html", self_contained = T)
   save_kable(file.path(thesis_tabs,"tab40-iat-migration-tab.tex"))
-
-regression_tab <- modelsummary(reg1, fmt = 2, 
-                               output = "latex", 
-                               coef_map = cm,
-                               add_rows = mean_row,
-                               gof_map = gm,
-                               escape = F,
-                               #gof_omit = 'DF|Deviance|R2|AIC|BIC|Log.Lik.|F|Std.Errors',
-                               stars= c('***' = 0.01, '**' = 0.05, '*' = 0.1)
-                               ) %>%
-  kable_styling(bootstrap_options = c("hover", "condensed"), 
-                latex_options = c("scale_down", "HOLD_position")
-  ) 
-
-
-regression_tab %>%
-  #save_kable(file = "Objective_Subjective.html", self_contained = T)
-  save_kable(file.path(pres_tabs,"tab40-iat-migration-tab.tex"))
-

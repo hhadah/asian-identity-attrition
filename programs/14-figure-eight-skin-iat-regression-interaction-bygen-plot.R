@@ -7,24 +7,24 @@
 # Date: Aug 30th, 2022
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
 
 # fixed effects regression
 
 CPS_IAT_secondgen <- CPS_IAT |> 
-  filter(SecondGen == 1)
+  filter(SecondGen_Asian == 1)
 
 CPS_IAT_thirddgen <- CPS_IAT |> 
-  filter(ThirdGen == 1)
+  filter(ThirdGen_Asian == 1)
 
 reg1 <- list(
-  "Second Generation" = feols(Hispanic ~ value*ParentType2 + Female 
-                              + MomGradCollege + DadGradCollege + frac_hispanic +
+  "Second Generation" = feols(Asian ~ value*ParentType2 + Female 
+                              + MomGradCollege + DadGradCollege + frac_asian +
                                 Age| region:year, 
                               data = CPS_IAT_secondgen |> filter(ParentType2 != "White-White"), weights = ~weight, vcov = "HC1"),
   
-  "Third Generation" = feols(Hispanic ~ value*Grandparent_Type + Female 
-                             + MomGradCollege + DadGradCollege + frac_hispanic +
+  "Third Generation" = feols(Asian ~ value*Grandparent_Type + Female 
+                             + MomGradCollege + DadGradCollege + frac_asian +
                                Age| region:year, 
                              data = CPS_IAT_thirddgen, weights = ~weight, vcov = "HC1")
 )
@@ -36,18 +36,18 @@ reg1 <- list(
 #################
 
 cm <- c(
-  "value:Grandparent_TypeWWHH"      = "Bias x WWHH",
-  "value:Grandparent_TypeWWHW"      = "Bias x WWHW",
-  "value:Grandparent_TypeWWWH"      = "Bias x WWWH"
+  "value:Grandparent_TypeWWAA"      = "Bias x WWAA",
+  "value:Grandparent_TypeWWAW"      = "Bias x WWAW",
+  "value:Grandparent_TypeWWWA"      = "Bias x WWWA"
 ) 
 
-text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeWWHH",
-                                                 "value:Grandparent_TypeWWHW",
-                                                 "value:Grandparent_TypeWWWH"))
+text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeWWAA",
+                                                 "value:Grandparent_TypeWWAW",
+                                                 "value:Grandparent_TypeWWWA"))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Bias x WWHH"
-row.names(text_data)[2] = "Bias x WWHW"
-row.names(text_data)[3] = "Bias x WWWH"
+row.names(text_data)[1] = "Bias x WWAA"
+row.names(text_data)[2] = "Bias x WWAW"
+row.names(text_data)[3] = "Bias x WWWA"
 
 P2 = unname(createPalette(2,  c("#ff0000", "#00ff00", "#0000ff")))
 
@@ -69,28 +69,27 @@ modelplot(reg1[[2]],
   theme(axis.text = element_text(size = 20)) 
 ggsave(paste0(figures_wd,"/skin-iat-regression-interaction-bygen-plot-WW.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-interaction-bygen-plot-WW.png"), width = 10, height = 4, units = "in")
-ggsave(paste0(pres_plots,"/skin-iat-regression-interaction-bygen-plot-WW.png"), width = 12, height = 6, units = "in")
 
 #################
 # WH grandparents
 #################
 
 cm <- c(
-  "value:Grandparent_TypeWHHH"      = "Bias x WHHH",
-  "value:Grandparent_TypeWHHW"      = "Bias x WHHW",
-  "value:Grandparent_TypeWHWH"      = "Bias x WHWH",
-  "value:Grandparent_TypeWHWW"      = "Bias x WHWW"
+  "value:Grandparent_TypeWAAA"      = "Bias x WAAA",
+  "value:Grandparent_TypeWAAW"      = "Bias x WAAW",
+  "value:Grandparent_TypeWAWA"      = "Bias x WAWA",
+  "value:Grandparent_TypeWAWW"      = "Bias x WAWW"
 ) 
-text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeWHHH",
-                                                 "value:Grandparent_TypeWHHW",
-                                                 "value:Grandparent_TypeWHWH",
-                                                 "value:Grandparent_TypeWHWW"
+text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeWAAA",
+                                                 "value:Grandparent_TypeWAAW",
+                                                 "value:Grandparent_TypeWAWA",
+                                                 "value:Grandparent_TypeWAWW"
 ))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Bias x WHHH"
-row.names(text_data)[2] = "Bias x WHHW"
-row.names(text_data)[3] = "Bias x WHWH"
-row.names(text_data)[4] = "Bias x WHWW"
+row.names(text_data)[1] = "Bias x WAAA"
+row.names(text_data)[2] = "Bias x WAAW"
+row.names(text_data)[3] = "Bias x WAWA"
+row.names(text_data)[4] = "Bias x WAWW"
 
 P2 = unname(createPalette(2,  c("#ff0000", "#00ff00", "#0000ff")))
 
@@ -99,7 +98,7 @@ modelplot(reg1[[2]],
   geom_text_repel(aes(x = estimate, y = row.names(text_data),
                       label = round(estimate, digits = 2)), data = text_data,
                   size = 6) +
-  labs(title = "White Paternal Grandfather and Hispanic Paternal Grandmother") +
+  labs(title = "White Paternal Grandfather and Asian Paternal Grandmother") +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   theme_customs() +
   theme(
@@ -107,33 +106,30 @@ modelplot(reg1[[2]],
       color="black", fill="white", size=1.5
     )
   ) +
-  # scale_x_continuous(limits = c(1994, 2022), breaks = seq(1995, 2020, 5))
-  # labs(title = "White Paternal Grandfather and Hispanic Paternal Grandmother") +
   theme(axis.text = element_text(size = 20)) 
 ggsave(paste0(figures_wd,"/skin-iat-regression-interaction-bygen-plot-WH.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-interaction-bygen-plot-WH.png"), width = 10, height = 4, units = "in")
-ggsave(paste0(pres_plots,"/skin-iat-regression-interaction-bygen-plot-WH.png"), width = 12, height = 6, units = "in")
 
 #################
 # HW grandparents
 #################
 
 cm <- c(
-  "value:Grandparent_TypeHWHH"      = "Bias x HWHH",
-  "value:Grandparent_TypeHWHW"      = "Bias x HWHW",
-  "value:Grandparent_TypeHWWH"      = "Bias x HWWH",
-  "value:Grandparent_TypeHWWW"      = "Bias x HWWW"
+  "value:Grandparent_TypeAWAA"      = "Bias x AWAA",
+  "value:Grandparent_TypeAWAW"      = "Bias x AWAW",
+  "value:Grandparent_TypeAWWA"      = "Bias x AWWA",
+  "value:Grandparent_TypeAWWW"      = "Bias x AWWW"
 ) 
-text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeHWHH",
-                                                 "value:Grandparent_TypeHWHW",
-                                                 "value:Grandparent_TypeHWWH",
-                                                 "value:Grandparent_TypeHWWW"
+text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeAWAA",
+                                                 "value:Grandparent_TypeAWAW",
+                                                 "value:Grandparent_TypeAWWA",
+                                                 "value:Grandparent_TypeAWWW"
 ))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Bias x HWHH"
-row.names(text_data)[2] = "Bias x HWHW"
-row.names(text_data)[3] = "Bias x HWWH"
-row.names(text_data)[4] = "Bias x HWWW"
+row.names(text_data)[1] = "Bias x AWAA"
+row.names(text_data)[2] = "Bias x AWAW"
+row.names(text_data)[3] = "Bias x AWWA"
+row.names(text_data)[4] = "Bias x AWWW"
 P2 = unname(createPalette(2,  c("#ff0000", "#00ff00", "#0000ff")))
 
 modelplot(reg1[[2]],
@@ -142,7 +138,7 @@ modelplot(reg1[[2]],
                       label = round(estimate, digits = 2)), data = text_data,
                   size = 6) +
   # facet_grid(~model) +
-  labs(title = "Hispanic Paternal Grandfather and White Paternal GrandMother") +
+  labs(title = "Asian Paternal Grandfather and White Paternal GrandMother") +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   theme_customs() +
   theme(
@@ -151,28 +147,27 @@ modelplot(reg1[[2]],
     )
   ) +
   # scale_x_continuous(limits = c(1994, 2022), breaks = seq(1995, 2020, 5))
-  # labs(title = "Hispanic Paternal Grandfather and White Paternal Grandmother") +
+  # labs(title = "Asian Paternal Grandfather and White Paternal Grandmother") +
   theme(axis.text = element_text(size = 20)) 
 ggsave(paste0(figures_wd,"/skin-iat-regression-interaction-bygen-plot-HW.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-interaction-bygen-plot-HW.png"), width = 10, height = 4, units = "in")
-ggsave(paste0(pres_plots,"/skin-iat-regression-interaction-bygen-plot-HW.png"), width = 12, height = 6, units = "in")
 
 #################
 # HH grandparents
 #################
 
 cm <- c(
-  "value:Grandparent_TypeHHHW"      = "Bias x HHHW",
-  "value:Grandparent_TypeHHWH"      = "Bias x HHWH",
-  "value:Grandparent_TypeHHWW"      = "Bias x HHWW"
+  "value:Grandparent_TypeAAAW"      = "Bias x AAAW",
+  "value:Grandparent_TypeAAWA"      = "Bias x AAWA",
+  "value:Grandparent_TypeAAWW"      = "Bias x AAWW"
 ) 
-text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeHHHW",
-                                                 "value:Grandparent_TypeHHWH",
-                                                 "value:Grandparent_TypeHHWW"))
+text_data <- subset(tidy(reg1[[2]]), term %in% c("value:Grandparent_TypeAAAW",
+                                                 "value:Grandparent_TypeAAWA",
+                                                 "value:Grandparent_TypeAAWW"))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Bias x HHHW"
-row.names(text_data)[2] = "Bias x HHWH"
-row.names(text_data)[3] = "Bias x HHWW"
+row.names(text_data)[1] = "Bias x AAAW"
+row.names(text_data)[2] = "Bias x AAWA"
+row.names(text_data)[3] = "Bias x AAWW"
 P2 = unname(createPalette(2,  c("#ff0000", "#00ff00", "#0000ff")))
 
 modelplot(reg1[[2]],
@@ -180,7 +175,7 @@ modelplot(reg1[[2]],
   geom_text_repel(aes(x = estimate, y = row.names(text_data),
                       label = round(estimate, digits = 2)), data = text_data,
                   size = 6) +
-  labs(title = "Hispanic Paternal Grandfather and Hispanic Paternal GrandMother") +
+  labs(title = "Asian Paternal Grandfather and Asian Paternal GrandMother") +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   theme_customs() +
   theme(
@@ -189,9 +184,8 @@ modelplot(reg1[[2]],
     )
   ) +
   # scale_x_continuous(limits = c(1994, 2022), breaks = seq(1995, 2020, 5))
-  # labs(title = "Hispanic Paternal Grandfather and Hispanic Paternal Grandmother") +
+  # labs(title = "Asian Paternal Grandfather and Asian Paternal Grandmother") +
   theme(axis.text = element_text(size = 20)) 
 ggsave(paste0(figures_wd,"/skin-iat-regression-interaction-bygen-plot-HH.png"), width = 10, height = 4, units = "in")
 ggsave(paste0(thesis_plots,"/skin-iat-regression-interaction-bygen-plot-HH.png"), width = 10, height = 4, units = "in")
-ggsave(paste0(pres_plots,"/skin-iat-regression-interaction-bygen-plot-HH.png"), width = 12, height = 6, units = "in")
 

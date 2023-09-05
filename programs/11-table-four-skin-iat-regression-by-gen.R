@@ -15,14 +15,14 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
 feols(Asian ~ 1 + value + Female 
                                 + MomGradCollege + DadGradCollege + frac_asian +
                                 Age + Age_sq + Age_cube + Age_quad  + factor(ParentType2) + factor(Grandparent_Type)
-                                + FirstGen + SecondGen| serial, 
+                                + FirstGen_Asian + SecondGen_Asian| serial, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip)                         
 # By generation
 reg1 <- list(
   "\\specialcell{(1) \\\\ All Gens \\\\ $H_{ist}$}" = feols(Asian ~ 1 + value + Female 
                                 + MomGradCollege + DadGradCollege + frac_asian +
                                 Age + Age_sq + Age_cube + Age_quad  + factor(ParentType2) + factor(Grandparent_Type)
-                                + FirstGen + SecondGen| region:year, 
+                                + FirstGen_Asian + SecondGen_Asian| region:year, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip),
   "\\specialcell{(2) \\\\  First Gen \\\\ $H^1_{ist}$}" = feols(Asian ~ 1 + value + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
