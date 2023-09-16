@@ -37,11 +37,17 @@ source(file.path(programs,"04-table-one-summary-stats.r")) # summary stats of sa
 source(file.path(programs,"05-table-two-observations-by-gen.r")) # ethnic attrition of sample
 source(file.path(programs,"06-figure-two-skin-iat-plots.r")) # figure of iat and asian identity
 source(file.path(programs,"07-figure-three-skin-map.r")) # asian iat maps
-source(file.path(programs,"08-table-three-summary-stats-iat-and-cps.r")) # asian iat maps
-source(file.path(programs,"09-figure-five-skin-iat-regression-by-gen-plot.r")) # asian iat maps
-source(file.path(programs,"10-figure-six-regressions-skin-iat-byparent-plot.r")) # asian iat maps
-source(file.path(programs,"11-table-four-skin-iat-regression-by-gen.r")) # asian iat maps
-
+source(file.path(programs,"08-figure-five-skin-iat-regression-by-gen-plot.r")) # asian iat maps
+source(file.path(programs,"09-figure-six-regressions-skin-iat-byparent-plot.r")) # asian iat maps
+source(file.path(programs,"10-table-four-skin-iat-regression-by-gen.r")) # asian iat maps
+source(file.path(programs,"11-table-five-regressions-skin-iat-byparent.r")) # asian iat by parent regression
+source(file.path(programs,"12-figure-eight-skin-iat-regression-interaction-bygen-plot.r")) # interaction regression
+source(file.path(programs,"13-table-six-regressions-skin-iat-thirdgens-grandparents.r")) # regression by grandparents type
+source(file.path(programs,"14-regressions-cps-asian-iat.r")) # iat regression on asian identity
+source(file.path(programs,"15-asian-iat-regression-by-gen.r")) # iat regression table by gen
+source(file.path(programs,"16-regressions-asian-iat-byparent.r")) # iat regression table by parent
+source(file.path(programs,"17-table-eight-endo-interethnic-reg.r")) # interethnic regression table
+source(file.path(programs,"18-table-nine-proxy-main-effect-table.r")) # main effect table
 ### summary stats
 
 # Send Message
