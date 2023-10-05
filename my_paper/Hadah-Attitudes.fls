@@ -1953,6 +1953,19 @@ INPUT tables/maineffect-proxy.tex
 INPUT ./tables/maineffect-proxy.tex
 INPUT ./tables/maineffect-proxy.tex
 INPUT tables/maineffect-proxy.tex
+INPUT ./tables/tab46-iat-migration-tab.tex
+INPUT ./tables/tab46-iat-migration-tab.tex
+INPUT ./tables/tab46-iat-migration-tab.tex
+INPUT tables/tab46-iat-migration-tab.tex
+INPUT ./tables/tab46-iat-migration-tab.tex
+INPUT ./tables/tab46-iat-migration-tab.tex
+INPUT tables/tab46-iat-migration-tab.tex
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/eulervm/zeurm10.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/palatino/pplbc8t.tfm
@@ -1966,6 +1979,7 @@ INPUT Hadah-Attitudes.run.xml
 OUTPUT Hadah-Attitudes.run.xml
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb

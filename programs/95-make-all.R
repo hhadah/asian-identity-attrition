@@ -10,7 +10,7 @@ rm(list = ls())
 CPS_path <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_DataTable.csv"
 CPS_all_path <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_DataTable_All.csv"
 CPS_asian <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_DataTable_Asians.csv"
-ACS_path <- "~/Dropbox/Research/My Research Data and Ideas/ACS-migration/ACS_DataTable.csv"
+ACS_path <- "/Users/hhadah/Library/CloudStorage/Dropbox/Research/My Research Data and Ideas/ACS-migration/ACS_DataTable_asians.csv"
 CPS_asian_mean  <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_Objective_Asian_Percentage_bystate_DataTable.csv"
 Implicit_asian_Harvard <- "~/Dropbox/Research/My Research Data and Ideas/ProjectImplicit/asian_iat/Asian_IAT.public.2004-2021.csv"
 Implicit_Race_Harvard <- "~/Documents/GiT/Project-Implicit-Data/data/datasets"

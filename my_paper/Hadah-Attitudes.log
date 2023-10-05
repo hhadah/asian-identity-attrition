@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.2.3)  15 SEP 2023 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.2.3)  4 OCT 2023 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1731,11 +1731,24 @@ ne 39.
 LaTeX Warning: Reference `eq:inter-interethnic' on page 7 undefined on input li
 ne 26.
 
-) [7] (./tables/maineffect-proxy.tex) [8]
+) [7] (./tables/maineffect-proxy.tex) (./tables/tab46-iat-migration-tab.tex
 
-LaTeX Warning: Empty bibliography on input line 226.
+LaTeX Warning: Reference `eq:migration-3' on page 8 undefined on input line 54.
 
-[9] (./Hadah-Attitudes.aux)
+
+
+LaTeX Warning: Reference `eq:migration-4' on page 8 undefined on input line 54.
+
+
+
+LaTeX Warning: Reference `eq:migration-5' on page 8 undefined on input line 54.
+
+
+) [8] [9]
+
+LaTeX Warning: Empty bibliography on input line 227.
+
+[10] (./Hadah-Attitudes.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1746,22 +1759,23 @@ Package logreq Info: Writing requests to 'Hadah-Attitudes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47950 strings out of 478287
- 997514 string characters out of 5846751
- 1849396 words of memory out of 5000000
- 65322 multiletter control sequences out of 15000+600000
- 516727 words of font info for 133 fonts, out of 8000000 for 9000
+ 47968 strings out of 478287
+ 997860 string characters out of 5846751
+ 1852472 words of memory out of 5000000
+ 65329 multiletter control sequences out of 15000+600000
+ 518234 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,22n,99p,1892b,3909s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Hadah-Attitudes.pdf (9 pages, 2194329 bytes).
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/
+texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Hadah-Attitudes.pdf (10 pages, 2200710 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
  271 words of extra memory for PDF output out of 10000 (max. 10000000)
 

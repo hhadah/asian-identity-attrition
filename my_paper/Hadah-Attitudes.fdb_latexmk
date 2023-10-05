@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Hadah-Attitudes"] 1694830957 "Hadah-Attitudes.aux" "Hadah-Attitudes.bbl" "Hadah-Attitudes" 1694830963
+["bibtex Hadah-Attitudes"] 1696467537 "Hadah-Attitudes.aux" "Hadah-Attitudes.bbl" "Hadah-Attitudes" 1696467542
   "/usr/local/texlive/2021/texmf-dist/bibtex/bst/biblatex/biblatex.bst" 1609451401 65407 88927b81d8f6cedfef1300ccf61cbd6b ""
-  "Hadah-Attitudes-blx.bib" 1694830963 341 fecd4a4556941415f97a235e32c99d99 "pdflatex"
-  "Hadah-Attitudes.aux" 1694830963 7415 3eaad0a648d5cfbbebf80eb004b0433b "pdflatex"
+  "Hadah-Attitudes-blx.bib" 1696467542 341 fecd4a4556941415f97a235e32c99d99 "pdflatex"
+  "Hadah-Attitudes.aux" 1696467542 7741 0c0aa16a69a54840d5f7ac1a13bb864d "pdflatex"
   "bib/AttitudesPaper.bib" 1692142066 237844 5b2ba1bbe6b5b35610b69f6a5d16b322 ""
   (generated)
   "Hadah-Attitudes.bbl"
   "Hadah-Attitudes.blg"
-["pdflatex"] 1694830957 "Hadah-Attitudes.tex" "Hadah-Attitudes.pdf" "Hadah-Attitudes" 1694830963
+["pdflatex"] 1696467538 "Hadah-Attitudes.tex" "Hadah-Attitudes.pdf" "Hadah-Attitudes" 1696467542
   "/Users/hhadah/Library/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1643922251 2796795 9b37e65f83922863af74fc947fc5804c ""
   "/Users/hhadah/Library/texmf/tex/latex/setspace.sty" 1130857036 22518 969fcbccb9feb6c080f52825bb5fe1e1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -40,6 +40,7 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm" 1136768653 1032 7fa31d93ecd4cbdfac02c7a1ebc6facc ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm" 1136768653 1828 bb8add3bd19426549f9267c88b0cb8bd ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb" 1336858727 21098 d4aee7c0aac232caac5688b586b9363c ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb" 1336858727 22644 de44b1031364c5f57164f2249f1302c5 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb" 1136849748 52406 dad2f72863a03727d5f536c64a69c452 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb" 1136849748 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
@@ -288,11 +289,11 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1621028613 40042 fe981136cbb5f3715ab1b0e46e3d3892 ""
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1643922253 4379201 718a59215bccc89d4f89ee72c554b0e8 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Hadah-Attitudes.aux" 1694830963 7415 3eaad0a648d5cfbbebf80eb004b0433b "pdflatex"
-  "Hadah-Attitudes.bbl" 1694830957 512 61b8edbafb0cff417a61773720bd5b7f "bibtex Hadah-Attitudes"
-  "Hadah-Attitudes.out" 1694830963 223 7c4b302cead41ad63baa6b55e288cbe4 "pdflatex"
-  "Hadah-Attitudes.run.xml" 1694830963 2731 f32283d3f7b4bbd99266b7fe12fb7889 "pdflatex"
-  "Hadah-Attitudes.tex" 1694830942 9644 a3c53d4e811406573ea5d5402115b0fa ""
+  "Hadah-Attitudes.aux" 1696467542 7741 0c0aa16a69a54840d5f7ac1a13bb864d "pdflatex"
+  "Hadah-Attitudes.bbl" 1696467538 512 61b8edbafb0cff417a61773720bd5b7f "bibtex Hadah-Attitudes"
+  "Hadah-Attitudes.out" 1696467542 223 7c4b302cead41ad63baa6b55e288cbe4 "pdflatex"
+  "Hadah-Attitudes.run.xml" 1696467542 2731 f32283d3f7b4bbd99266b7fe12fb7889 "pdflatex"
+  "Hadah-Attitudes.tex" 1696467530 9683 c70e3070cbb20deb06408ef27d21ef94 ""
   "figure/2004skinmap.png" 1694829980 210434 78e8b0e40f226a90d0a7bf1e51623590 ""
   "figure/2006skinmap.png" 1694829983 211488 3201ee9bc545b972908da611247022e0 ""
   "figure/2008skinmap.png" 1694829987 210965 dac4a0449be04629bfa6c52426f8ca91 ""
@@ -319,6 +320,7 @@
   "tables/tab02-observations-by-gen.tex" 1694829948 1503 98ce6a45f713adf070af894b03dac362 ""
   "tables/tab41a-marriage.tex" 1694830602 1408 d4a81172e3180b3c7c52c6263ecc4fbd ""
   "tables/tab45-iat_regression_tab_bygrandparent_type.tex" 1694830118 1954 93d797eb43969c10592a07eca28ed35a ""
+  "tables/tab46-iat-migration-tab.tex" 1696467500 3079 df8dc30c9bc2d7ef58f00de0fff6df91 ""
   (generated)
   "Hadah-Attitudes-blx.bib"
   "Hadah-Attitudes.aux"
