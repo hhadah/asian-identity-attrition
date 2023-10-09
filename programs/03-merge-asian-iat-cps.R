@@ -26,8 +26,13 @@ CPS <- CPS |>
                            hhrespln ==lineno_mom2 ~ "Mother",
                            hhrespln ==lineno_pop  ~ "Father",
                            hhrespln ==lineno_pop2 ~ "Father",
-                           TRUE ~ "Other"))
-
+                           TRUE ~ "Other"),
+        year_group = case_when(year >= 2004 & year <= 2006 ~ 1,
+                        year >= 2007 & year <= 2009 ~ 2,
+                        year >= 2010 & year <= 2012 ~ 3,
+                        year >= 2013 & year <= 2015 ~ 4,
+                        year >= 2016 & year <= 2018 ~ 5,
+                        year >= 2019 & year <= 2021 ~ 6))
 ### Merge Skin IAT and state
 ### information
 
@@ -52,26 +57,43 @@ Asian_IAT <- Asian_IAT %>%
 # iat score by state by
 # year for only white
 # respondents
+# Clean IAT test data
+# by creating 3 years
+# intervals to avoid
+# small samples in
+# CPS data
+# and only keep tests
+# taken by White people
+
+Asian_IAT  <- Asian_IAT |> 
+  mutate(year_group = case_when(year >= 2004 & year <= 2006 ~ 1,
+                          year >= 2007 & year <= 2009 ~ 2,
+                          year >= 2010 & year <= 2012 ~ 3,
+                          year >= 2013 & year <= 2015 ~ 4,
+                          year >= 2016 & year <= 2018 ~ 5,
+                          year >= 2019 & year <= 2021 ~ 6)) |> 
+  filter(White == 1)
 
 skin_grouped_bystate <- Asian_IAT %>% 
   # filter(White == 1) |> 
-  group_by(state.no, year#, 
+  group_by(state.no, year_group#, 
            #month
            ) %>% 
   summarise(value = mean(Implicit, na.rm = TRUE),
             Explicit_value = mean(Explicit, na.rm = TRUE)) %>% 
   select(state.no,
          #month,
-         year,
+         year_group,
          Explicit_value,
          value) |> 
   rename("statefip" = "state.no")
+
 
 # merge wit CPS data
 CPS_IAT <- left_join(CPS,
                      skin_grouped_bystate,
                      na_matches = "never",
-                     by = c("statefip", "year"#, 
+                     by = c("statefip", "year_group"#, 
                             #"month"
                             )) |> 
   mutate(Female = case_when(sex == 2 ~ 1,

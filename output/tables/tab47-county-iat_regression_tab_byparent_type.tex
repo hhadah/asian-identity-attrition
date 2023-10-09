@@ -1,0 +1,46 @@
+\begin{table}[H]
+
+\caption{Relationship Between Bias and Self-Reported Asian identity Among Second-Generation Asian Immigrants: By Parental Type \label{regtab-byparent-01}}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+\multicolumn{1}{c}{Parents Type} & \multicolumn{1}{c}{All} & \multicolumn{1}{c}{\makecell[c]{Both Parents \\ from Spanish \\ Speaking Country \\ (HH)}} & \multicolumn{1}{c}{\makecell[c]{Father \\ from Spanish \\ Speaking Country \\ (HW)}} & \multicolumn{1}{c}{\makecell[c]{Mother  \\ from Spanish \\ Speaking Country \\ (WH)}} \\
+\cmidrule(l{3pt}r{3pt}){1-1} \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4} \cmidrule(l{3pt}r{3pt}){5-5}
+  & \specialcell{(1) \\ $A^2_{ist}$} & \specialcell{(2) \\ $A^2_{ist}$} & \specialcell{(3) \\ $A^2_{ist}$} & \specialcell{(4) \\ $A^2_{ist}$}\\
+\midrule
+Bias & 0.06 & 0.05 & 0.05 & 0.18\\
+ & (0.14) & (0.13) & (0.68) & (0.33)\\
+Female & 0.00 & 0.00 & 0.00 & 0.02\\
+ & (0.00) & (0.00) & (0.01) & (0.01)\\
+College Graduate: Mother & 0.01 & -0.01 & 0.06** & 0.01\\
+ & (0.01) & (0.01) & (0.03) & (0.02)\\
+College Graduate: Father & 0.00 & 0.01* & -0.03 & 0.01\\
+ & (0.01) & (0.01) & (0.03) & (0.03)\\
+\midrule
+Observations & 167,733 & 103,709 & 19,982 & 44,042\\
+State FE & X & X & X & X\\
+Year FE & X & X & X & X\\
+Mean & 0.72 & 0.96 & 0.38 & 0.32\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of a heterogeneous effect of regression (\ref{eq:identity_reg_bias}) by 
+                      type of parents with region × year fixed effects. 
+                      I include controls for sex, quartic age, fraction of Asians in a state, and parental education.
+                      Standard errors are clustered on the state level.}
+\item[2] \footnotesize{The samples include second-generation Asian children ages 17 and below who live in intact families. 
+                      Native-born second-generation Asian 
+                      immigrant children with at least one parent born in a Asian 
+                      country.}
+\item[3] \footnotesize{Column (1) includes the results to regression (\ref{eq:identity_reg_bias}) on all second-generation immigrants, 
+                                        column (2) includes the results to regression (\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a father and mother that were born in a Asian country (HH),
+                                        column (3) includes the results to regression (\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a father that was born in a Asian country and a native-born mother (HW), and
+                                        column (4) includes the results to regression (\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a native-born father and a mother that was born in a Asian country (WH).}
+\item[4] \footnotesize{Data source is the 2004-2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

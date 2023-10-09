@@ -48,6 +48,22 @@ source(file.path(programs,"15-asian-iat-regression-by-gen.r")) # iat regression 
 source(file.path(programs,"16-regressions-asian-iat-byparent.r")) # iat regression table by parent
 source(file.path(programs,"17-table-eight-endo-interethnic-reg.r")) # interethnic regression table
 source(file.path(programs,"18-table-nine-proxy-main-effect-table.r")) # main effect table
+source(file.path(programs,"19-prep-data-for-acs.R")) # 
+source(file.path(programs,"20-acs-skin-iat-migration.R")) # 
+source(file.path(programs,"21-cps-iat-county.R")) # 
+source(file.path(programs,"22-cps-iat-msa.R")) # 
+source(file.path(programs,"23-county-figure-five-skin-iat-regression-by-gen-plot.R")) # 
+source(file.path(programs,"24-county-figure-six-regressions-skin-iat-byparent-plot.R")) # 
+source(file.path(programs,"25-county-table-four-skin-iat-regression-by-gen.R")) # 
+source(file.path(programs,"26-county-table-five-regressions-skin-iat-byparent.R")) # 
+source(file.path(programs,"27-county-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # 
+source(file.path(programs,"28-msa-figure-five-skin-iat-regression-by-gen-plot.R")) # 
+source(file.path(programs,"29-msa-figure-six-regressions-skin-iat-byparent-plot.R")) # 
+source(file.path(programs,"30-msa-table-four-skin-iat-regression-by-gen.R")) # 
+source(file.path(programs,"31-msa-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # 
+source(file.path(programs,"32-msa-table-five-regressions-skin-iat-byparent.R")) # 
+
+
 ### summary stats
 
 # Send Message

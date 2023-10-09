@@ -68,7 +68,7 @@ p1 <- modelplot(reg1[[1]],
                 size = 6) +
   theme(
     strip.background = element_rect(
-      color="black", fill="white", size=1.5
+      color="black", fill="white", linewidth=1.5
     ),
     axis.title.x = element_blank()
   )+
@@ -100,7 +100,7 @@ p2 <-modelplot(reg1[[2]],
   theme_customs() +
   theme(
     strip.background = element_rect(
-      color="black", fill="white", size=1.5
+      color="black", fill="white", linewidth=1.5
     ),
     axis.text.y = element_blank(),
     axis.title.x = element_blank()
@@ -132,7 +132,7 @@ p3 <-modelplot(reg1[[3]],
   theme_customs() +
   theme(
     strip.background = element_rect(
-      color="black", fill="white", size=1.5
+      color="black", fill="white", linewidth=1.5
     )
   )+
   # scale_x_continuous(limits = c(1994, 2022), breaks = seq(1995, 2020, 5))
@@ -165,7 +165,7 @@ p4 <-modelplot(reg1[[4]],
   labs(x = "Coefficient estimates and 95% CI") +
   theme(
     strip.background = element_rect(
-      color="black", fill="white", size=1.5
+      color="black", fill="white", linewidth=1.5
     ),
     axis.text.y = element_blank()
   )+

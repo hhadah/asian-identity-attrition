@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.2.3)  4 OCT 2023 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.2.3)  9 OCT 2023 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1403,7 +1403,20 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./Hadah-Attitudes.aux)
+ (./Hadah-Attitudes.aux
+
+LaTeX Warning: Label `plot01-regression-gen' multiply defined.
+
+
+LaTeX Warning: Label `plot01-regression-gen' multiply defined.
+
+
+LaTeX Warning: Label `plot01-regression-byparent' multiply defined.
+
+
+LaTeX Warning: Label `plot01-regression-byparent' multiply defined.
+
+)
 \openout1 = `Hadah-Attitudes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -1424,8 +1437,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
-
-(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count504
 \scratchdimen=\dimen338
@@ -1684,29 +1696,29 @@ ne 170.
 [5 <./figure/2004skinmap.png> <./figure/2006skinmap.png> <./figure/2008skinmap.
 png> <./figure/2010skinmap.png> <./figure/2012skinmap.png> <./figure/2014skinma
 p.png> <./figure/2016skinmap.png> <./figure/2018skinmap.png>]
-<figure/by-parents-regs-all.png, id=101, 722.7pt x 289.08pt>
-File: figure/by-parents-regs-all.png Graphic file (type png)
-<use figure/by-parents-regs-all.png>
-Package pdftex.def Info: figure/by-parents-regs-all.png  used on input line 186
-.
+<figure/county-skin-iat-regression-all-gens.png, id=101, 722.7pt x 289.08pt>
+File: figure/county-skin-iat-regression-all-gens.png Graphic file (type png)
+<use figure/county-skin-iat-regression-all-gens.png>
+Package pdftex.def Info: figure/county-skin-iat-regression-all-gens.png  used o
+n input line 186.
 (pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
-<figure/by-parents-regs-hh.png, id=102, 722.7pt x 289.08pt>
-File: figure/by-parents-regs-hh.png Graphic file (type png)
-<use figure/by-parents-regs-hh.png>
-Package pdftex.def Info: figure/by-parents-regs-hh.png  used on input line 193.
-
+<figure/county-skin-iat-regression-first-gen.png, id=102, 722.7pt x 289.08pt>
+File: figure/county-skin-iat-regression-first-gen.png Graphic file (type png)
+<use figure/county-skin-iat-regression-first-gen.png>
+Package pdftex.def Info: figure/county-skin-iat-regression-first-gen.png  used 
+on input line 193.
 (pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
-<figure/by-parents-regs-hw.png, id=103, 722.7pt x 289.08pt>
-File: figure/by-parents-regs-hw.png Graphic file (type png)
-<use figure/by-parents-regs-hw.png>
-Package pdftex.def Info: figure/by-parents-regs-hw.png  used on input line 199.
-
+<figure/county-skin-iat-regression-second-gen.png, id=103, 722.7pt x 289.08pt>
+File: figure/county-skin-iat-regression-second-gen.png Graphic file (type png)
+<use figure/county-skin-iat-regression-second-gen.png>
+Package pdftex.def Info: figure/county-skin-iat-regression-second-gen.png  used
+ on input line 199.
 (pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
-<figure/by-parents-regs-wh.png, id=104, 722.7pt x 289.08pt>
-File: figure/by-parents-regs-wh.png Graphic file (type png)
-<use figure/by-parents-regs-wh.png>
-Package pdftex.def Info: figure/by-parents-regs-wh.png  used on input line 205.
-
+<figure/county-skin-iat-regression-third-gen.png, id=104, 722.7pt x 289.08pt>
+File: figure/county-skin-iat-regression-third-gen.png Graphic file (type png)
+<use figure/county-skin-iat-regression-third-gen.png>
+Package pdftex.def Info: figure/county-skin-iat-regression-third-gen.png  used 
+on input line 205.
 (pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
 
 
@@ -1719,38 +1731,218 @@ ne 207.
 
 [6 <./figure/skin-iat-regression-all-gens.png> <./figure/skin-iat-regression-fi
 rst-gen.png> <./figure/skin-iat-regression-second-gen.png> <./figure/skin-iat-r
-egression-third-gen.png> <./figure/by-parents-regs-all.png> <./figure/by-parent
-s-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-parents-regs-wh.p
-ng>] (./tables/tab45-iat_regression_tab_bygrandparent_type.tex
+egression-third-gen.png>]
+<figure/msa-skin-iat-regression-all-gens.png, id=111, 722.7pt x 289.08pt>
+File: figure/msa-skin-iat-regression-all-gens.png Graphic file (type png)
+<use figure/msa-skin-iat-regression-all-gens.png>
+Package pdftex.def Info: figure/msa-skin-iat-regression-all-gens.png  used on i
+nput line 223.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/msa-skin-iat-regression-first-gen.png, id=112, 722.7pt x 289.08pt>
+File: figure/msa-skin-iat-regression-first-gen.png Graphic file (type png)
+<use figure/msa-skin-iat-regression-first-gen.png>
+Package pdftex.def Info: figure/msa-skin-iat-regression-first-gen.png  used on 
+input line 230.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/msa-skin-iat-regression-second-gen.png, id=113, 722.7pt x 289.08pt>
+File: figure/msa-skin-iat-regression-second-gen.png Graphic file (type png)
+<use figure/msa-skin-iat-regression-second-gen.png>
+Package pdftex.def Info: figure/msa-skin-iat-regression-second-gen.png  used on
+ input line 236.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/msa-skin-iat-regression-third-gen.png, id=114, 722.7pt x 289.08pt>
+File: figure/msa-skin-iat-regression-third-gen.png Graphic file (type png)
+<use figure/msa-skin-iat-regression-third-gen.png>
+Package pdftex.def Info: figure/msa-skin-iat-regression-third-gen.png  used on 
+input line 242.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+
 
 LaTeX Warning: Reference `eq:identity_reg_bias' on page 7 undefined on input li
-ne 39.
-
-) (./tables/tab41a-marriage.tex
-
-LaTeX Warning: Reference `eq:inter-interethnic' on page 7 undefined on input li
-ne 26.
-
-) [7] (./tables/maineffect-proxy.tex) (./tables/tab46-iat-migration-tab.tex
-
-LaTeX Warning: Reference `eq:migration-3' on page 8 undefined on input line 54.
+ne 244.
 
 
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 7 undefined on input li
+ne 244.
 
-LaTeX Warning: Reference `eq:migration-4' on page 8 undefined on input line 54.
+[7 <./figure/county-skin-iat-regression-all-gens.png> <./figure/county-skin-iat
+-regression-first-gen.png> <./figure/county-skin-iat-regression-second-gen.png>
+ <./figure/county-skin-iat-regression-third-gen.png>]
+<figure/by-parents-regs-all.png, id=121, 722.7pt x 289.08pt>
+File: figure/by-parents-regs-all.png Graphic file (type png)
+<use figure/by-parents-regs-all.png>
+Package pdftex.def Info: figure/by-parents-regs-all.png  used on input line 260
+.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/by-parents-regs-hh.png, id=122, 722.7pt x 289.08pt>
+File: figure/by-parents-regs-hh.png Graphic file (type png)
+<use figure/by-parents-regs-hh.png>
+Package pdftex.def Info: figure/by-parents-regs-hh.png  used on input line 267.
+
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/by-parents-regs-hw.png, id=123, 722.7pt x 289.08pt>
+File: figure/by-parents-regs-hw.png Graphic file (type png)
+<use figure/by-parents-regs-hw.png>
+Package pdftex.def Info: figure/by-parents-regs-hw.png  used on input line 273.
+
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/by-parents-regs-wh.png, id=124, 722.7pt x 289.08pt>
+File: figure/by-parents-regs-wh.png Graphic file (type png)
+<use figure/by-parents-regs-wh.png>
+Package pdftex.def Info: figure/by-parents-regs-wh.png  used on input line 279.
+
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
 
 
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 8 undefined on input li
+ne 281.
 
-LaTeX Warning: Reference `eq:migration-5' on page 8 undefined on input line 54.
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 8 undefined on input li
+ne 281.
+
+[8 <./figure/msa-skin-iat-regression-all-gens.png> <./figure/msa-skin-iat-regre
+ssion-first-gen.png> <./figure/msa-skin-iat-regression-second-gen.png> <./figur
+e/msa-skin-iat-regression-third-gen.png> <./figure/by-parents-regs-all.png> <./
+figure/by-parents-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-p
+arents-regs-wh.png>]
+<figure/county-by-parents-regs-all.png, id=131, 722.7pt x 289.08pt>
+File: figure/county-by-parents-regs-all.png Graphic file (type png)
+<use figure/county-by-parents-regs-all.png>
+Package pdftex.def Info: figure/county-by-parents-regs-all.png  used on input l
+ine 297.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/county-by-parents-regs-hh.png, id=132, 722.7pt x 289.08pt>
+File: figure/county-by-parents-regs-hh.png Graphic file (type png)
+<use figure/county-by-parents-regs-hh.png>
+Package pdftex.def Info: figure/county-by-parents-regs-hh.png  used on input li
+ne 304.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/county-by-parents-regs-hw.png, id=133, 722.7pt x 289.08pt>
+File: figure/county-by-parents-regs-hw.png Graphic file (type png)
+<use figure/county-by-parents-regs-hw.png>
+Package pdftex.def Info: figure/county-by-parents-regs-hw.png  used on input li
+ne 310.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/county-by-parents-regs-wh.png, id=134, 722.7pt x 289.08pt>
+File: figure/county-by-parents-regs-wh.png Graphic file (type png)
+<use figure/county-by-parents-regs-wh.png>
+Package pdftex.def Info: figure/county-by-parents-regs-wh.png  used on input li
+ne 316.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
 
 
-) [8] [9]
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 9 undefined on input li
+ne 318.
 
-LaTeX Warning: Empty bibliography on input line 227.
 
-[10] (./Hadah-Attitudes.aux)
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 9 undefined on input li
+ne 318.
+
+[9 <./figure/county-by-parents-regs-all.png> <./figure/county-by-parents-regs-h
+h.png> <./figure/county-by-parents-regs-hw.png> <./figure/county-by-parents-reg
+s-wh.png>]
+<figure/msa-by-parents-regs-all.png, id=140, 722.7pt x 289.08pt>
+File: figure/msa-by-parents-regs-all.png Graphic file (type png)
+<use figure/msa-by-parents-regs-all.png>
+Package pdftex.def Info: figure/msa-by-parents-regs-all.png  used on input line
+ 334.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/msa-by-parents-regs-hh.png, id=141, 722.7pt x 289.08pt>
+File: figure/msa-by-parents-regs-hh.png Graphic file (type png)
+<use figure/msa-by-parents-regs-hh.png>
+Package pdftex.def Info: figure/msa-by-parents-regs-hh.png  used on input line 
+341.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/msa-by-parents-regs-hw.png, id=142, 722.7pt x 289.08pt>
+File: figure/msa-by-parents-regs-hw.png Graphic file (type png)
+<use figure/msa-by-parents-regs-hw.png>
+Package pdftex.def Info: figure/msa-by-parents-regs-hw.png  used on input line 
+347.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+<figure/msa-by-parents-regs-wh.png, id=143, 722.7pt x 289.08pt>
+File: figure/msa-by-parents-regs-wh.png Graphic file (type png)
+<use figure/msa-by-parents-regs-wh.png>
+Package pdftex.def Info: figure/msa-by-parents-regs-wh.png  used on input line 
+353.
+(pdftex.def)             Requested size: 195.67905pt x 78.26877pt.
+
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 10 undefined on input l
+ine 355.
+
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 10 undefined on input l
+ine 355.
+
+[10 <./figure/msa-by-parents-regs-all.png> <./figure/msa-by-parents-regs-hh.png
+> <./figure/msa-by-parents-regs-hw.png> <./figure/msa-by-parents-regs-wh.png>]
+(./tables/tab45-iat_regression_tab_bygrandparent_type.tex
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 39.
+
+) (./tables/tab47-county-regression_tab_bygen_skin.tex
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 43.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./tables/tab48-msa-iat_regression_tab_byparent_type.tex
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 45.
+
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 45.
+
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 45.
+
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 45.
+
+
+LaTeX Warning: Reference `eq:identity_reg_bias' on page 11 undefined on input l
+ine 45.
+
+) [11]
+Overfull \vbox (270.4456pt too high) has occurred while \output is active []
+
+
+[12] (./tables/tab41a-marriage.tex
+
+LaTeX Warning: Reference `eq:inter-interethnic' on page 13 undefined on input l
+ine 26.
+
+) (./tables/maineffect-proxy.tex) (./tables/tab46-iat-migration-tab.tex
+
+LaTeX Warning: Reference `eq:migration-3' on page 13 undefined on input line 54
+.
+
+
+LaTeX Warning: Reference `eq:migration-4' on page 13 undefined on input line 54
+.
+
+
+LaTeX Warning: Reference `eq:migration-5' on page 13 undefined on input line 54
+.
+
+) [13] [14]
+
+LaTeX Warning: Empty bibliography on input line 379.
+
+[15] (./Hadah-Attitudes.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Hadah-Attitudes.out' has not changed.
 (rerunfilecheck)             Checksum: 7C4B302CEAD41AD63BAA6B55E288CBE4;223.
@@ -1759,10 +1951,10 @@ Package logreq Info: Writing requests to 'Hadah-Attitudes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47968 strings out of 478287
- 997860 string characters out of 5846751
- 1852472 words of memory out of 5000000
- 65329 multiletter control sequences out of 15000+600000
+ 48105 strings out of 478287
+ 1003458 string characters out of 5846751
+ 1862782 words of memory out of 5000000
+ 65431 multiletter control sequences out of 15000+600000
  518234 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,22n,99p,1892b,3909s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1772,10 +1964,10 @@ xlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/loca
 l/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texli
 ve/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Hadah-Attitudes.pdf (10 pages, 2200710 bytes).
+Output written on Hadah-Attitudes.pdf (15 pages, 3060645 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
