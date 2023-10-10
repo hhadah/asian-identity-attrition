@@ -16,7 +16,7 @@ Implicit_asian_Harvard <- "~/Dropbox/Research/My Research Data and Ideas/Project
 Implicit_Race_Harvard <- "~/Documents/GiT/Project-Implicit-Data/data/datasets"
 
 ANES_dir <- "/Users/hhadah/Dropbox/ANES/anes_timeseries_cdf_csv_20220916/anes_timeseries_cdf_csv_20220916.csv"
-
+hate_crime <- "/Users/hhadah/Dropbox/Research/My Research Data and Ideas/hate_crime/hate_crime.csv"
 ### GiT directories
 git_mdir <- here::here()
 datasets <- paste0(git_mdir,"/data/datasets")
