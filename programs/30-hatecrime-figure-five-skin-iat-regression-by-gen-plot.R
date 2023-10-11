@@ -16,19 +16,19 @@ CPS_hatecrime <- read_csv(file.path(datasets,"CPS_hatecrime_asian.csv"))
 reg1 <- list(
   "\\specialcell{(1) \\\\ $A_i$}" = feols(Asian ~ 1 + hate_crimes_per_100000 + Female 
                                 + MomGradCollege + DadGradCollege + frac_asian +
-                                Age + Age_sq + Age_cube + Age_quad  + AA_0bj  + FirstGen_Asian + SecondGen_Asian| region:year, 
+                                Age + Age_sq + Age_cube + Age_quad  + AA_0bj  + FirstGen_Asian + SecondGen_Asian| statefip + year, 
                                 data = CPS_hatecrime, weights = ~weight, vcov = ~statefip),
   "\\specialcell{(2) \\\\ $A^1_i$}" = feols(Asian ~ 1 + hate_crimes_per_100000 + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
-                               Age + Age_sq + Age_cube + Age_quad| region:year, 
+                               Age + Age_sq + Age_cube + Age_quad| statefip + year, 
                                data = CPS_hatecrime |> filter(FirstGen_Asian == 1), weights = ~weight, vcov = ~statefip),
   "\\specialcell{(3) \\\\ $A^2_i$}" = feols(Asian ~ 1 + hate_crimes_per_100000 + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
-                               Age + Age_sq + Age_cube + Age_quad + AA_0bj| region:year, 
+                               Age + Age_sq + Age_cube + Age_quad + AA_0bj| statefip + year, 
                                data = CPS_hatecrime |> filter(SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
   "\\specialcell{(4) \\\\ $A^3_i$}" = feols(Asian ~ 1 + hate_crimes_per_100000 + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
-                               Age + Age_sq + Age_cube + Age_quad + Grandparent_Type| region:year, 
+                               Age + Age_sq + Age_cube + Age_quad + Grandparent_Type| statefip + year, 
                                data = CPS_hatecrime |> filter(ThirdGen_Asian == 1), weights = ~weight, vcov = ~statefip)
   
 )
