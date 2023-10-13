@@ -137,6 +137,9 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \end{figure}
 \end{center}
 
+\pagebreak
+\newpage
+
 \begin{center}
 \begin{figure}[!htb]
 \centering
@@ -251,7 +254,44 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Relationship Between Self-Reported Hispanic Identity and Bias: By Parental Types}
+\caption{Relationship Between Self-Reported Asian Identity and Hate Crimes: By Generation}
+\label{plot01-regression-gen}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{All Generations}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hate-crime-regression-all-gens.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{First-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hate-crime-regression-first-gen.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hate-crime-regression-second-gen.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Third-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hate-crime-regression-third-gen.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel is the results from the same regression but on different samples that are divided by generation. Standard errors are clustered on the state level. The samples include first-, second-, and third-generation Asian children ages 17 and below who live in intact families. First-generation Asian immigrants are children that were born in a Asian country. Native-born second-generation Asian immigrants are children with at least one parent born in a Asian country. Finally, native-born third-generation Asian immigrants are children with native-born parents and at least one grandparent born in a Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types}
 \label{plot01-regression-byparent}
 %First graph
 \begin{subfigure}{.48\textwidth}
@@ -262,23 +302,23 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \centering
 %Second graph
 \begin{subfigure}{.48\textwidth}
-\caption{Hispanic Fathers-Hispanic Mothers}
+\caption{Asian Fathers-Asian Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/by-parents-regs-hh.png}
 \end{subfigure}
 %Third Graph
 \begin{subfigure}{.48\textwidth}
-\caption{Hispanic Fathers-White Mothers}
+\caption{Asian Fathers-White Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/by-parents-regs-hw.png}
 \end{subfigure}
 %Fourth Graph
 \begin{subfigure}{.48\textwidth}
-\caption{White Fathers-Hispanic Mothers}
+\caption{White Fathers-Asian Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/by-parents-regs-wh.png}
 \end{subfigure}
-\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Hispanic identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Hispanic children ages 17 and below who live in intact families. Native-born second-generation Hispanic immigrant children with at least one parent born in a Spanish-speaking country.}}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in a Spanish-speaking country.}}
 \end{figure}
 \end{center}
 
@@ -288,7 +328,7 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Relationship Between Self-Reported Hispanic Identity and Bias: By Parental Types County}
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types County}
 \label{plot01-regression-byparent}
 %First graph
 \begin{subfigure}{.48\textwidth}
@@ -299,23 +339,23 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \centering
 %Second graph
 \begin{subfigure}{.48\textwidth}
-\caption{Hispanic Fathers-Hispanic Mothers}
+\caption{Asian Fathers-Asian Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/county-by-parents-regs-hh.png}
 \end{subfigure}
 %Third Graph
 \begin{subfigure}{.48\textwidth}
-\caption{Hispanic Fathers-White Mothers}
+\caption{Asian Fathers-White Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/county-by-parents-regs-hw.png}
 \end{subfigure}
 %Fourth Graph
 \begin{subfigure}{.48\textwidth}
-\caption{White Fathers-Hispanic Mothers}
+\caption{White Fathers-Asian Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/county-by-parents-regs-wh.png}
 \end{subfigure}
-\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Hispanic identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Hispanic children ages 17 and below who live in intact families. Native-born second-generation Hispanic immigrant children with at least one parent born in a Spanish-speaking country.}}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in a Spanish-speaking country.}}
 \end{figure}
 \end{center}
 
@@ -325,7 +365,7 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Relationship Between Self-Reported Hispanic Identity and Bias: By Parental Types MSA}
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types MSA}
 \label{plot01-regression-byparent}
 %First graph
 \begin{subfigure}{.48\textwidth}
@@ -336,23 +376,61 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \centering
 %Second graph
 \begin{subfigure}{.48\textwidth}
-\caption{Hispanic Fathers-Hispanic Mothers}
+\caption{Asian Fathers-Asian Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/msa-by-parents-regs-hh.png}
 \end{subfigure}
 %Third Graph
 \begin{subfigure}{.48\textwidth}
-\caption{Hispanic Fathers-White Mothers}
+\caption{Asian Fathers-White Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/msa-by-parents-regs-hw.png}
 \end{subfigure}
 %Fourth Graph
 \begin{subfigure}{.48\textwidth}
-\caption{White Fathers-Hispanic Mothers}
+\caption{White Fathers-Asian Mothers}
 \centering
 \includegraphics[width=.9\linewidth]{figure/msa-by-parents-regs-wh.png}
 \end{subfigure}
-\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Hispanic identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Hispanic children ages 17 and below who live in intact families. Native-born second-generation Hispanic immigrant children with at least one parent born in a Spanish-speaking country.}}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in a Spanish-speaking country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Hate Crimes: By Parental Types}
+\label{plot01-regression-byparent}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation (All Parental Types)}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hatecrime-by-parents-regs-all.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hatecrime-by-parents-regs-hh.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hatecrime-by-parents-regs-hw.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{figure/hatecrime-by-parents-regs-wh.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in a Spanish-speaking country.}}
 \end{figure}
 \end{center}
 
@@ -361,12 +439,28 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 
 \input{tables/tab45-iat_regression_tab_bygrandparent_type}
 
+\pagebreak
+\newpage
 
 \input{tables/tab41a-marriage}
 
+\pagebreak
+\newpage
+
 \input{tables/maineffect-proxy}
 
+\pagebreak
+\newpage
+
 \input{tables/tab46-iat-migration-tab}
+
+\pagebreak
+\newpage
+
+\input{tables/maineffect-proxy}
+
+\pagebreak
+\newpage
 
 \pagebreak
 \begingroup

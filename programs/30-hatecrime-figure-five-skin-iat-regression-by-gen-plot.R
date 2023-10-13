@@ -35,7 +35,7 @@ reg1 <- list(
 
 
 
-cm <- c("hate_crimes_per_100000" = "Anti-Asian Hate Crime",
+cm <- c("hate_crimes_per_100000" = "Anti-Asian Hate Crimes",
         "Female" = "Female",
         "MomGradCollege" = "College Graduate: Mother",
         "DadGradCollege" = "College Graduate: Father"#,
@@ -52,7 +52,7 @@ text_data <- subset(tidy(reg1[[1]]), term %in% c("hate_crimes_per_100000", "Fema
                                                 "MomGradCollege", 
                                                 "DadGradCollege"))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Hate Crime"
+row.names(text_data)[1] = "Anti-Asian Hate Crimes"
 row.names(text_data)[2] = "Female"
 row.names(text_data)[3] = "College Graduate: Mother"
 row.names(text_data)[4] = "College Graduate: Father"
@@ -84,7 +84,7 @@ text_data <- subset(tidy(reg1[[2]]), term %in% c("hate_crimes_per_100000", "Fema
                                                  "MomGradCollege", 
                                                  "DadGradCollege"))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Hate Crime"
+row.names(text_data)[1] = "Anti-Asian Hate Crimes"
 row.names(text_data)[2] = "Female"
 row.names(text_data)[3] = "College Graduate: Mother"
 row.names(text_data)[4] = "College Graduate: Father"
@@ -116,7 +116,7 @@ text_data <- subset(tidy(reg1[[3]]), term %in% c("hate_crimes_per_100000", "Fema
                                                  "MomGradCollege", 
                                                  "DadGradCollege"))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Hate Crime"
+row.names(text_data)[1] = "Anti-Asian Hate Crimes"
 row.names(text_data)[2] = "Female"
 row.names(text_data)[3] = "College Graduate: Mother"
 row.names(text_data)[4] = "College Graduate: Father"
@@ -148,7 +148,7 @@ text_data <- subset(tidy(reg1[[4]]), term %in% c("hate_crimes_per_100000", "Fema
                                                  "MomGradCollege", 
                                                  "DadGradCollege"))
 row.names(text_data) = text_data$term
-row.names(text_data)[1] = "Hate Crime"
+row.names(text_data)[1] = "Anti-Asian Hate Crimes"
 row.names(text_data)[2] = "Female"
 row.names(text_data)[3] = "College Graduate: Mother"
 row.names(text_data)[4] = "College Graduate: Father"
