@@ -14,9 +14,10 @@ ACS_path <- "/Users/hhadah/Library/CloudStorage/Dropbox/Research/My Research Dat
 CPS_asian_mean  <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_Objective_Asian_Percentage_bystate_DataTable.csv"
 Implicit_asian_Harvard <- "~/Dropbox/Research/My Research Data and Ideas/ProjectImplicit/asian_iat/Asian_IAT.public.2004-2021.csv"
 Implicit_Race_Harvard <- "~/Documents/GiT/Project-Implicit-Data/data/datasets"
+GSS_bystate_new_path <- "~/Dropbox/Research/GSS/Data/Datasets/Prejeduice_index_by_stateyear_new.csv"
 
 ANES_dir <- "/Users/hhadah/Dropbox/ANES/anes_timeseries_cdf_csv_20220916/anes_timeseries_cdf_csv_20220916.csv"
-hate_crime <- "/Users/hhadah/Dropbox/Research/My Research Data and Ideas/hate_crime/hate_crime.csv"
+hate_crime <- "/Users/hhadah/Documents/GiT/hate-crime-data/data/datasets/hate_crime_data_per_thousands.csv"
 ### GiT directories
 git_mdir <- here::here()
 datasets <- paste0(git_mdir,"/data/datasets")
