@@ -1,123 +1,103 @@
-# This a script to 
-# merge the skin IAT
-# and the Current
-# Population Survey (ACS)
-# State level
-
-# Date: Oct 25th, 2022
-
-Skin_Iat <- read_csv(file.path(datasets,"Asia_IAT_Clean.csv"))
-
 ### Open ACS data
 ### of 17 year olds
 ### living with their
 ### parents
+Skin_Iat <- read_csv(file.path(datasets,"ANES_GSS_Skin.csv")) |> 
+  rename(mean_skin = value
+         )
 
 ACS <- fread(ACS_path)
 ACS <- as.data.frame(ACS)
-CrossTable(ACS$Type_Asian)
-CrossTable(ACS$FirstGen_Asian)
-CrossTable(ACS$SecondGen_Asian)
-
+table(ACS$year)
+table(ACS$birthyr)
+table(Skin_Iat$Join_year)
 ACS <- ACS |> 
-  filter(age<18)
+  filter(age<18) |> 
+  mutate(birthyr_join =  case_when(birthyr == 2005 ~ 2004,
+                                birthyr == 2006 ~ 2006,
+                                birthyr == 2007 | birthyr == 2008 ~ 2008,
+                                birthyr == 2009 | birthyr == 2010 ~ 2010,
+                                birthyr == 2011 | birthyr == 2012 ~ 2012,
+                                birthyr == 2013 | birthyr == 2014 ~ 2014,
+                                birthyr == 2015 | birthyr == 2016 ~ 2016,
+                                birthyr == 2017 | birthyr == 2018 ~ 2018,
+                                birthyr == 2019 | birthyr == 2020 ~ 2020
+                                ),
+        Join_year = case_when(year == 2005 ~ 2004,
+                                year == 2006 ~ 2006,
+                                year == 2007 | year == 2008 ~ 2008,
+                                year == 2009 | year == 2010 ~ 2010,
+                                year == 2011 | year == 2012 ~ 2012,
+                                year == 2013 | year == 2014 ~ 2014,
+                                year == 2015 | year == 2016 ~ 2016,
+                                year == 2017 | year == 2018 ~ 2018,
+                                year == 2019 | year == 2020 ~ 2020                        
+                                ))
 
-### Merge Skin IAT and state
-### information
-
-# this .csv contains all state abbrevs, state nos., and lowercase state names
-state_info <- read.csv(file.path(Implicit_Race_Harvard,"state_info.csv"))
-st.reg <- data.frame(state = state.abb, division = state.division)
-st.reg <- rbind(st.reg , data.frame(state="DC", division="South Atlantic") )
-
-state_info <- left_join(state_info,
-                        st.reg,
-                     na_matches = "never",
-                     by = c("state"
-                     )) 
-
-# Remove people who don't report their state 
-Skin_Iat <- Skin_Iat[Skin_Iat$state != "",]
-
-# merge state info with iat data
-Skin_Iat <- left_join(Skin_Iat,
-                      state_info,
-                      na_matches = "never",
-                      by = c("state")) |> 
-  rename(state_abr = state)
-
-# rename state name variable
 Skin_Iat <- Skin_Iat %>% 
-  rename(state = state.name,
-         statefip = state.no)
-
-# calculate average skin
-# iat score by state by
-# year for only white
-# respondents
-
-skin_grouped_bystate <- Skin_Iat %>% 
   # filter(White == 1) |> 
-  group_by(statefip, year#, 
-           #month
+  group_by(statefip, Join_year
   ) %>% 
-  summarise(value = mean(Implicit, na.rm = TRUE),
-            Explicit_value = mean(Explicit, na.rm = TRUE),
-            division = first(division)) %>% 
-  select(statefip,
-         #month,
-         division,
-         year,
-         Explicit_value,
-         value)
+  summarise(mean_skin = mean(mean_skin, na.rm = TRUE),
+            Mean_Index = mean(Mean_Index, na.rm = TRUE))
 
 # merge wit ACS data at year of survey
 ACS_IAT <- left_join(ACS,
-                     skin_grouped_bystate,
+                     Skin_Iat,
                      na_matches = "never",
-                     by = c("statefip", "year"#, 
+                     by = c("statefip", "Join_year"#, 
                             #"month"
                      )) |> 
   mutate(Female = case_when(sex == 2 ~ 1,
-                            sex == 1 ~ 0)) |> 
-  filter(!is.na(value))
+                            sex == 1 ~ 0))
 
 # merge wit ACS data at year of birth
-skin_grouped_bystate <- skin_grouped_bystate |> 
-  rename(birthyr = year,
-         bplregion = division,
+Skin_Iat <- Skin_Iat |> 
+  rename(birthyr_join = Join_year,
          bpl=statefip,
-         bplvalue = value,
-         bplExplicit_value = Explicit_value)
+         bplMean_Index = Mean_Index,
+         bplmean_skin = mean_skin)
 
 ACS_IAT <- left_join(ACS_IAT,
-                     skin_grouped_bystate,
+                     Skin_Iat,
                      na_matches = "never",
-                     by = c("bpl", "birthyr"#, 
+                     by = c("bpl", "birthyr_join"#, 
                             #"month"
                      )) |> 
   mutate(Female = case_when(sex == 2 ~ 1,
                             sex == 1 ~ 0))
 
 # merge wit ACS data at year -1 of survey
-skin_grouped_bystate <- skin_grouped_bystate |>
-  select(birthyr, bpl, bplvalue, bplExplicit_value) |> 
-  rename(migyr = birthyr,
+Skin_Iat <- Skin_Iat |>
+  select(birthyr_join, bpl, bplMean_Index, bplmean_skin) |> 
+  rename(migyr = birthyr_join,
          statefip=bpl,
-         migvalue = bplvalue,
-         migExplicit_value = bplExplicit_value)
+         migMean_Index = bplMean_Index,
+         migmean_skin = bplmean_skin)
 
 ACS_IAT <- ACS_IAT |> 
-  mutate(migyr = case_when(year > 2004 ~ year - 1))
+  mutate(migyr = 
+                      case_when(year == 2005 ~ 2004,
+                                year == 2006 ~ 2005,
+                                year == 2007 | year == 2008 ~ 2006,
+                                year == 2009 | year == 2010 ~ 2008,
+                                year == 2011 | year == 2012 ~ 2010,
+                                year == 2013 | year == 2014 ~ 2012,
+                                year == 2015 | year == 2016 ~ 2014,
+                                year == 2017 | year == 2018 ~ 2016,
+                                year == 2019 | year == 2020 ~ 2018
+                                )
+  )
 
 ACS_IAT <- left_join(ACS_IAT,
-                     skin_grouped_bystate,
+                     Skin_Iat,
                      na_matches = "never",
                      by = c("statefip", "migyr"#, 
                             #"month"
                      )) |> 
   mutate(Female = case_when(sex == 2 ~ 1,
                             sex == 1 ~ 0))
+
 # data cleaning
 ACS_IAT <- ACS_IAT |>
   filter(Type_Asian != "") |> 

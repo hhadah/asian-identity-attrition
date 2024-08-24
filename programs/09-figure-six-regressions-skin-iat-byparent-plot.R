@@ -7,7 +7,8 @@
 # Date: July 30th, 2022
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |> 
+  rename(value = lw_index)
 
 
 # fixed effects regression

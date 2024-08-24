@@ -5,8 +5,8 @@
 # date: Aug 26th, 2022
 
 CPS <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
-
-
+names(CPS)
+table(CPS$Type_Asian)
 ### Generate generations vairables and table
 
 #### First Generation Calculations
@@ -185,56 +185,6 @@ Asians_ThirdGen_MotherSides <- CPS %>%
   summarise(n())
 ThirdGen_MotherSides <- CPS %>%
   filter(ThirdGen_Asian == 1 &
-           Asian_Mom == 1) |> 
-  summarise(n())
-
-# Calculate number of Fourth generation Asians
-Asians_FourthGen <- CPS %>%
-  filter(FourthGen_Asian == 1 & Asian == 1) %>%
-  summarise(n())
-NonAsians_FourthGen <- CPS %>%
-  filter(FourthGen_Asian == 1 & Asian == 0) %>%
-  summarise(n())
-FourthGen <- CPS %>%
-  filter(FourthGen_Asian == 1) %>%
-  summarise(n())
-
-# Asians, Father and Mother are Hisapnics (Both Sides)
-Asians_FourthGen_BothSides <- CPS %>%
-  filter(FourthGen_Asian == 1 & Asian == 1 & 
-           ((Asian_Dad == 1 & Asian_Mom == 1))) %>%
-  summarise(n())
-FourthGen_BothSides <- CPS %>%
-  filter(FourthGen_Asian == 1 &
-           ((Asian_Dad == 1 & Asian_Mom == 1))) %>%
-  summarise(n())
-
-# Asians, Father or Mother are Hisapnics (One Sides)
-Asians_FourthGen_OneSides <- CPS %>%
-  filter(FourthGen_Asian == 1 & Asian == 1 & 
-           ((Asian_Dad == 1 & Asian_Mom == 0) | (Asian_Dad == 0 & Asian_Mom == 1))) %>%
-  summarise(n())
-FourthGen_OneSides <- CPS %>%
-  filter(FourthGen_Asian == 1 &
-           ((Asian_Dad == 1 & Asian_Mom == 0) | (Asian_Dad == 0 & Asian_Mom == 1))) %>%
-  summarise(n())
-
-# Asians, Father Hisapnic (One Sides)
-Asians_FourthGen_FatherSides <- CPS %>%
-  filter(FourthGen_Asian == 1 & Asian == 1 & 
-           Asian_Dad == 1) |> 
-  summarise(n())
-FourthGen_FatherSides <- CPS %>%
-  filter(FourthGen_Asian == 1 &
-           Asian_Dad == 1) |> 
-  summarise(n())
-# Asians, Mother Hisapnic (One Sides)
-Asians_FourthGen_MotherSides <- CPS %>%
-  filter(FourthGen_Asian == 1 & Asian == 1 & 
-           Asian_Mom == 1) |> 
-  summarise(n())
-FourthGen_MotherSides <- CPS %>%
-  filter(FourthGen_Asian == 1 &
            Asian_Mom == 1) |> 
   summarise(n())
 

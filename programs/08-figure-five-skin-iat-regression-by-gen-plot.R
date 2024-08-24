@@ -9,7 +9,8 @@
 # table with different FE
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |> 
+  rename(value = lw_index)
 
 
 # By generation
@@ -51,6 +52,7 @@ cm <- c("value" = "Bias",
 text_data <- subset(tidy(reg1[[1]]), term %in% c("value", "Female", 
                                                 "MomGradCollege", 
                                                 "DadGradCollege"))
+text_data <- as.data.frame(text_data)
 row.names(text_data) = text_data$term
 row.names(text_data)[1] = "Bias"
 row.names(text_data)[2] = "Female"

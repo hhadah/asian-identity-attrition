@@ -7,7 +7,8 @@
 
 # open data
 CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |> 
-  filter(SecondGen_Asian == 1)
+  filter(SecondGen_Asian == 1) |> 
+  rename("Bias" = "lw_index")
 
 # mean Asian for 
 # mother as proxy

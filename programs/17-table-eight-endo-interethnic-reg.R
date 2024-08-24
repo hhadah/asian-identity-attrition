@@ -17,7 +17,7 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |>
          Interethnic = case_when(ParentType2 == "Asian-Asian" ~ 0,
                                  ParentType2 == "Asian-White" ~ 1,
                                  ParentType2 == "White-Asian" ~ 1)) |> 
-  rename("Bias" = "value")
+  rename("Bias" = "lw_index")
 reg <- list(
   "\\specialcell{(1) \\\\ Interethnic}" = feols(Interethnic ~ Bias + 
                                                   MomGradCollege + DadGradCollege + age_mom + age_pop +
@@ -113,8 +113,4 @@ regression_tab <- modelsummary(reg, #exponentiate = c(F, T, F, F),
                 latex_options = c("HOLD_position")
   ) |> 
   add_header_above(c(" " = 2, "Asian Men" = 1, "Asian Women" = 1))
-
-regression_tab %>%
-  #save_kable(file = "Objective_Subjective.html", self_contained = T)
-  save_kable(file.path(pres_tabs,"tab41a-marriage.tex"))
 

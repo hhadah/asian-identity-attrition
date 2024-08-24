@@ -8,8 +8,7 @@
 ### prejeduice index
 
 ANES_GSS_Skin <- read_csv(file.path(datasets,"ANES_GSS_Skin.csv")) |> 
-  rename(mean_skin = value,
-         anes_year = year
+  rename(mean_skin = value
          )
 
 ### Open CPS data
@@ -19,7 +18,8 @@ ANES_GSS_Skin <- read_csv(file.path(datasets,"ANES_GSS_Skin.csv")) |>
 
 CPS <- fread(CPS_asian)
 CPS <- as.data.frame(CPS)
-CPS <- CPS[, !duplicated(as.list(CPS))]
+CPS <- CPS[, !duplicated(names(CPS))]
+CPS$FirstGen_Asian
 
 CPS <- CPS |> 
   filter(age<18) |>
@@ -158,8 +158,10 @@ relevant_columns <- c("Asian", "mean_skin", "Mean_Index", "hate_crimes_per_10000
                       "Type_Asian")
 
 # Remove rows with any missing values
+names(CPS_IAT)
 CPS_IAT <- CPS_IAT[complete.cases(CPS_IAT[, relevant_columns]), ]
-
+names(CPS_IAT)
+CPS_IAT$FirstGen_Asian
 # Estimate Your Primary Model with feols
 lw_model <- feols(Asian ~ mean_skin + Mean_Index + hate_crimes_per_100000 + Female 
                   + MomGradCollege + DadGradCollege + frac_asian

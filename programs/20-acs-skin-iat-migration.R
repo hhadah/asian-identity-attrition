@@ -1,35 +1,136 @@
-# This a script to
-# run a regression
-# with ACS and
-# project implicit
-# data
-# check if IAT is
-# correlated with
-# migration
-
-# Date: Oct 26th, 2022
-
-
 # open data
 ACS_IAT <- read_csv(file.path(datasets,"ACS_IAT.csv")) |> 
-  mutate(m = year - 1,
-         bplregion = case_when(bplregion == "East North Central" ~ 1,
-                               bplregion == "East South Central" ~ 2,
-                               bplregion == "Middle Atlantic"    ~ 3,
-                               bplregion == "Mountain"           ~ 4,
-                               bplregion == "New England"        ~ 5,
-                               bplregion == "Pacific"            ~ 6,
-                               bplregion == "South Atlantic"     ~ 7,
-                               bplregion == "West North Central" ~ 8,
-                               bplregion == "West South Central" ~ 9
-                               ))
-ACS_IAT <- ACS_IAT |> 
-  filter(SecondGen_Asian == 1 & AA_0bj == 1)
-table(ACS_IAT$SecondGen_Asian, ACS_IAT$AA_0bj)
-table(ACS_IAT$AsianChild)
+  filter(SecondGen == 1 & HH_0bj == 1) |> 
+  mutate(m = year - 1)
+
+# Function to map state FIPS codes to Census divisions
+map_to_census_division <- function(fips_code) {
+  case_when(
+    fips_code %in% c(9, 23, 25, 33, 44, 50) ~ 1,  # New England
+    fips_code %in% c(34, 36, 42) ~ 2,            # Middle Atlantic
+    fips_code %in% c(17, 18, 26, 39, 55) ~ 3,    # East North Central
+    fips_code %in% c(19, 20, 27, 29, 31, 38, 46) ~ 4,  # West North Central
+    fips_code %in% c(10, 11, 12, 13, 24, 37, 45, 51, 54) ~ 5,  # South Atlantic
+    fips_code %in% c(1, 21, 28, 47) ~ 6,         # East South Central
+    fips_code %in% c(5, 22, 40, 48) ~ 7,         # West South Central
+    fips_code %in% c(4, 8, 16, 30, 32, 35, 49, 56) ~ 8,  # Mountain
+    fips_code %in% c(2, 6, 15, 41, 53) ~ 9,      # Pacific
+    TRUE ~ NA_real_  # Handle other cases
+  )
+}
+
+# Apply the function to create the `bplregion` variable
+ACS_IAT <- ACS_IAT %>%
+  mutate(bplregion = map_to_census_division(bpl))
+
+# Select relevant columns for Asian variables
+relevant_columns <- c("Asian", "mean_skin", "Mean_Index", "bplmean_skin", "bplMean_Index", "Female", 
+                      "MomGradCollege", "DadGradCollege", "frac_asian",
+                      "Age", "Age_sq", "Age_cube", "Age_quad", "HH_0bj", "year")
+
+# Remove rows with any missing values
+ACS_IAT <- ACS_IAT[complete.cases(ACS_IAT[, relevant_columns]), ]
+
+# Estimate Your Primary Model with feols
+lw_model_1 <- feols(Asian ~ mean_skin + Mean_Index + Female 
+                    + MomGradCollege + DadGradCollege + frac_asian
+                    + Age + Age_sq + Age_cube + Age_quad + HH_0bj 
+                    | region:year, 
+                    data = ACS_IAT, weights = ~weight, vcov = ~statefip)
+
+lw_model_2 <- feols(Asian ~ bplmean_skin + bplMean_Index + Female 
+                    + MomGradCollege + DadGradCollege + frac_asian
+                    + Age + Age_sq + Age_cube + Age_quad + HH_0bj 
+                    | region:year, 
+                    data = ACS_IAT, weights = ~weight, vcov = ~statefip)
+
+# Residualize Proxies and Dependent Variable
+control_vars <- c("Female", "MomGradCollege", "DadGradCollege", "frac_asian", "Age", "Age_sq", "Age_cube", "Age_quad", "HH_0bj")
+X <- model.matrix(~ Female + MomGradCollege + DadGradCollege + frac_asian + Age + Age_sq + Age_cube + Age_quad + HH_0bj, data = ACS_IAT)
+
+residuals <- list()
+for (var in c("Asian", "mean_skin", "Mean_Index", "bplmean_skin", "bplMean_Index")) {
+  residuals[[var]] <- resid(lm(as.formula(paste(var, "~", paste(control_vars, collapse = "+"))), data = ACS_IAT))
+}
+
+names(residuals) <- c("r_Asian", "r_mean_skin", "r_Mean_Index", "r_bplmean_skin", "r_bplMean_Index")
+
+# Calculate Covariances
+covs_1 <- sapply(c("r_mean_skin", "r_Mean_Index"), function(var) {
+  cov(residuals$r_Asian, residuals[[var]])
+})
+names(covs_1) <- paste0("rho_", sub("r_", "", names(covs_1)))
+
+covs_2 <- sapply(c("r_bplmean_skin", "r_bplMean_Index"), function(var) {
+  cov(residuals$r_Asian, residuals[[var]])
+})
+names(covs_2) <- paste0("rho_", sub("r_", "", names(covs_2)))
+
+# Construct LW Equations
+lw_part <- function(index, proxy) {
+  paste0(proxy, "*rho_", proxy, "/rho_", index)
+}
+
+lw_string <- function(index, proxies) {
+  paste(lapply(proxies, function(proxy) lw_part(index, proxy)), collapse = " + ")
+}
+
+# Construct LW Equations for both sets of proxies
+lw_strings_1 <- lapply(c("mean_skin", "Mean_Index"), function(var) {
+  lw_string("mean_skin", c("mean_skin", "Mean_Index"))
+})
+
+lw_strings_2 <- lapply(c("bplmean_skin", "bplMean_Index"), function(var) {
+  lw_string("bplmean_skin", c("bplmean_skin", "bplMean_Index"))
+})
+
+# Calculate LW Coefficients Using Delta Method for both sets of proxies
+lw_results_1 <- lapply(lw_strings_1, function(eq) {
+  deltaMethod(lw_model_1, eq, vcov. = vcov(lw_model_1), constants = covs_1)
+})
+
+lw_results_2 <- lapply(lw_strings_2, function(eq) {
+  deltaMethod(lw_model_2, eq, vcov. = vcov(lw_model_2), constants = covs_2)
+})
+
+coef_estimates_1 <- sapply(lw_results_1, function(res) res[["Estimate"]])
+coef_estimates_2 <- sapply(lw_results_2, function(res) res[["Estimate"]])
+
+se_estimates_1 <- sapply(lw_results_1, function(res) res[["SE"]])
+se_estimates_2 <- sapply(lw_results_2, function(res) res[["SE"]])
+
+lw_summary_1 <- list(coef = coef_estimates_1, se = se_estimates_1)
+lw_summary_2 <- list(coef = coef_estimates_2, se = se_estimates_2)
+
+# Print LW Summary
+print(lw_summary_1)
+print(lw_summary_2)
+
+# Extract Coefficients
+coef_mean_skin <- coef(lw_model_1)["mean_skin"]
+coef_Mean_Index <- coef(lw_model_1)["Mean_Index"]
+coef_bplmean_skin <- coef(lw_model_2)["bplmean_skin"]
+coef_bplMean_Index <- coef(lw_model_2)["bplMean_Index"]
+
+# Calculate LW Indices
+# LW Index 1
+lw_coef_mean_skin <- coef_estimates_1[1]
+lw_coef_Mean_Index <- coef_estimates_1[2]
+
+ACS_IAT$lw_index_1 <- with(ACS_IAT, (mean_skin * lw_coef_mean_skin + Mean_Index * lw_coef_Mean_Index) / lw_coef_mean_skin)
+
+# LW Index 2
+lw_coef_bplmean_skin <- coef_estimates_2[1]
+lw_coef_bplMean_Index <- coef_estimates_2[2]
+
+ACS_IAT$lw_index_2 <- with(ACS_IAT, (bplmean_skin * lw_coef_bplmean_skin + bplMean_Index * lw_coef_bplMean_Index) / lw_coef_bplmean_skin)
+
+# Inspect Calculated LW Indices
+print(head(ACS_IAT$lw_index_1))
+print(head(ACS_IAT$lw_index_2))
 
 ACS_IAT <- ACS_IAT |> 
-  mutate(bias_diff = value - bplvalue)
+  mutate(bias_diff = lw_index_1 - lw_index_2)
 
 # as a row
 mean_row <- data.frame(x1 = character(),
@@ -56,12 +157,12 @@ attr(mean_row, 'position') <- c(14)
 CrossTable(ACS_IAT$AA_0bj, ACS_IAT$AsianChild)
 
 reg1 <- list(
-             "\\specialcell{(1) \\\\ Migrated from \\\\ Birth Place}" = feols(bpl_mover ~ 1 + value + Female 
+             "\\specialcell{(1) \\\\ Migrated from \\\\ Birth Place}" = feols(bpl_mover ~ 1 + lw_index_1 + Female 
                                                                               + MomGradCollege + DadGradCollege+ frac_asian+
                                                                                 Age + Age_sq + Age_cube + Age_quad| year:region, 
                                                                               weights = ~weight, vcov = ~statefip,
                                                                               data = ACS_IAT),
-             "\\specialcell{(2) \\\\ Migrated from \\\\ Birth Place}" = feols(bpl_mover ~ 1 + bplvalue + Female 
+             "\\specialcell{(2) \\\\ Migrated from \\\\ Birth Place}" = feols(bpl_mover ~ 1 + lw_index_2 + Female 
                                                                               + MomGradCollege + DadGradCollege+ frac_asian+
                                                                                 Age + Age_sq + Age_cube + Age_quad| birthyr:bplregion, 
                                                                               weights = ~weight, vcov = ~statefip,
@@ -81,18 +182,18 @@ reg1 <- list(
 
 cm <- c(
         # "(Intercept)"    = "Constant",
-        "value"          = "$Bias_{st}$",
-        "migvalue"       = "$Bias_{sm}$",
-        "bplvalue"       = "$Bias_{lb}$",
-        "AsianChild"       = "Asian",
-        "bpl_mover"      = "Migrated from State of Birth",
-        "Female"         = "Female",
-        "MomGradCollege" = "College Graduate: Mother",
-        "DadGradCollege" = "College Graduate: Father",
-        "lnftotval_mom"  = "Log Total Family Income",
-        #"age" = "Age",
-        "HH_0bj" = "Both parents Asian",
-        "FirstGen" = "First Gen") 
+        "lw_index_1"          = "$Bias_{st}$",
+        "migvalue"            = "$Bias_{sm}$",
+        "lw_index_2"          = "$Bias_{lb}$",
+        "AsianChild"          = "Asian",
+        "bpl_mover"           = "Migrated from State of Birth",
+        "Female"              = "Female",
+        "MomGradCollege"      = "College Graduate: Mother",
+        "DadGradCollege"      = "College Graduate: Father",
+        "lnftotval_mom"       = "Log Total Family Income",
+        #"age"                = "Age",
+        "HH_0bj"              = "Both parents Asian",
+        "FirstGen"            = "First Gen") 
 
 f1 <- function(x) format(round(x, 2), big.mark=".")
 f2 <- function(x) format(round(x, 0), big.mark=",")

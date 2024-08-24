@@ -26,7 +26,8 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |>
                                    Grandparent_Type == "WAAA" ~ 1,
                                  TRUE ~ 0),
          FourAsian = case_when(Grandparent_Type == "AAAA" ~ 1,
-                                 TRUE ~ 0))
+                                 TRUE ~ 0)) |> 
+  rename(value = lw_index)
 
 
 # fixed effects regression

@@ -9,7 +9,8 @@
 # table with different FE
 
 # open data
-CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv"))
+CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |> 
+  rename(value = lw_index)
 
 
 feols(Asian ~ 1 + value + Female 

@@ -29,6 +29,7 @@ thesis_tabs <- paste0(git_mdir,"/my_paper/tables")
 thesis_plots <- paste0(git_mdir,"/my_paper/figure")
 
 ### run do files and scripts
+options(modelsummary_factory_latex = "kableExtra")
 
 # main scripts
 source(file.path(programs,"01-packages-wds.r")) # set up package
