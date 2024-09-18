@@ -1,7 +1,9 @@
 # open data
 ACS_IAT <- read_csv(file.path(datasets,"ACS_IAT.csv")) |> 
-  filter(SecondGen == 1 & HH_0bj == 1) |> 
-  mutate(m = year - 1)
+  mutate(m = year - 1
+  )
+ACS_IAT <- ACS_IAT |>
+  filter(SecondGen_Asian == 1 & AA_0bj == 1)
 
 # Function to map state FIPS codes to Census divisions
 map_to_census_division <- function(fips_code) {
@@ -24,17 +26,14 @@ ACS_IAT <- ACS_IAT %>%
   mutate(bplregion = map_to_census_division(bpl))
 
 # Select relevant columns for Asian variables
-relevant_columns <- c("Asian", "mean_skin", "Mean_Index", "bplmean_skin", "bplMean_Index", "Female", 
-                      "MomGradCollege", "DadGradCollege", "frac_asian",
-                      "Age", "Age_sq", "Age_cube", "Age_quad", "HH_0bj", "year")
-
+relevant_columns <- c("Female", "MomGradCollege", "DadGradCollege", "frac_asian", "Age", "Age_sq", "Age_cube", "Age_quad", "AA_0bj", "Type_Asian")
 # Remove rows with any missing values
 ACS_IAT <- ACS_IAT[complete.cases(ACS_IAT[, relevant_columns]), ]
 
 # Estimate Your Primary Model with feols
-lw_model_1 <- feols(Asian ~ mean_skin + Mean_Index + Female 
+lw_model_1 <- feols(Asian ~ mean_skin + Mean_Index + + hate_crimes_per_100000 + Female 
                     + MomGradCollege + DadGradCollege + frac_asian
-                    + Age + Age_sq + Age_cube + Age_quad + HH_0bj 
+                    + Age + Age_sq + Age_cube + Age_quad + AA_0bj 
                     | region:year, 
                     data = ACS_IAT, weights = ~weight, vcov = ~statefip)
 

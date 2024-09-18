@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2021)
+This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Hadah-Attitudes.aux
 The style file: biblatex.bst
@@ -17,49 +17,56 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 12140 items from 5000.
 Database file #1: Hadah-Attitudes-blx.bib
 Database file #2: bib/AttitudesPaper.bib
-Biblatex version: 3.16
+Warning--entry type for "floodsarahIntegratedPublicUse2021" isn't style-file defined
+--line 1547 of file bib/AttitudesPaper.bib
+Warning--entry type for "floodsarahIntegratedPublicUse2021a" isn't style-file defined
+--line 1562 of file bib/AttitudesPaper.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Biblatex version: 3.20
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 1 entry,
-            6393 wiz_defined-function locations,
-            1201 strings with 8992 characters,
-and the built_in function-call counts, 1550 in all, are:
-= -- 73
-> -- 73
-< -- 1
-+ -- 52
-- -- 30
-* -- 32
-:= -- 373
+You've used 51 entries,
+            6402 wiz_defined-function locations,
+            1826 strings with 67720 characters,
+and the built_in function-call counts, 689887 in all, are:
+= -- 42826
+> -- 43180
+< -- 4092
++ -- 45924
+- -- 34926
+* -- 42123
+:= -- 90179
 add.period$ -- 0
-call.type$ -- 1
-change.case$ -- 0
-chr.to.int$ -- 44
-cite$ -- 0
-duplicate$ -- 11
-empty$ -- 104
-format.name$ -- 0
-if$ -- 326
+call.type$ -- 51
+change.case$ -- 1490
+chr.to.int$ -- 2804
+cite$ -- 100
+duplicate$ -- 56690
+empty$ -- 49211
+format.name$ -- 3910
+if$ -- 114576
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 164
 missing$ -- 0
-newline$ -- 20
-num.names$ -- 0
-pop$ -- 47
+newline$ -- 2681
+num.names$ -- 3142
+pop$ -- 19234
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 1798
 quote$ -- 0
-skip$ -- 78
+skip$ -- 13601
 stack$ -- 0
-substring$ -- 155
-swap$ -- 1
-text.length$ -- 20
-text.prefix$ -- 0
+substring$ -- 87560
+swap$ -- 14411
+text.length$ -- 2780
+text.prefix$ -- 50
 top$ -- 1
-type$ -- 22
+type$ -- 1708
 warning$ -- 0
-while$ -- 65
+while$ -- 8043
 width$ -- 0
-write$ -- 20
+write$ -- 2631
+(There were 2 warnings)
