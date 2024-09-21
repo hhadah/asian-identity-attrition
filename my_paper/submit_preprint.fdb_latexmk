@@ -1,12 +1,13 @@
 # Fdb version 4
-["biber submit_preprint"] 1726779265.2881 "submit_preprint.bcf" "submit_preprint.bbl" "submit_preprint" 1726779276.17872 0
+["biber submit_preprint"] 1726779265.2881 "submit_preprint.bcf" "submit_preprint.bbl" "submit_preprint" 1726845642.24524 0
   "bib/references.bib" 1726778962.22769 271047 fe632f1045c2c949be6743de464d8854 ""
-  "submit_preprint.bcf" 1726779276.05136 215309 9c1a00a3f77be37254dec08eb79862d0 "pdflatex"
+  "submit_preprint.bcf" 1726845642.09885 215309 9c1a00a3f77be37254dec08eb79862d0 "pdflatex"
   (generated)
   "submit_preprint.bbl"
   "submit_preprint.blg"
   (rewritten before read)
-["pdflatex"] 1726779271.31938 "submit_preprint.tex" "submit_preprint.pdf" "submit_preprint" 1726779276.17919 0
+["pdflatex"] 1726845637.31613 "/Users/hhadah/Documents/GiT/asian-identity-attrition/my_paper/submit_preprint.tex" "submit_preprint.pdf" "submit_preprint" 1726845642.24582 0
+  "/Users/hhadah/Documents/GiT/asian-identity-attrition/my_paper/submit_preprint.tex" 1726779252.62585 1956 e7dfda9d243effbd202e65963cdaba4a ""
   "/Users/hhadah/Library/texmf/tex/latex/setspace.sty" 1130857036 22518 969fcbccb9feb6c080f52825bb5fe1e1 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -291,14 +292,14 @@
   "figure/skin-iat-regression-third-gen.png" 1724530763.41003 52840 5d13baf602c3b9cb89d1a715f0c01bee ""
   "fragment/preamble_citation.tex" 1652994811 688 559c28fd56a2c7182b9d5455d33c0fa4 ""
   "fragment/preamble_package.tex" 1725558259.9759 4427 df36e6e31bc4b950fa0c22ec3a576839 ""
-  "manuscript_main.tex" 1726779150.82413 44805 fc42d05b6e4cbc937ded742bf6b4e2f3 ""
+  "manuscript_main.tex" 1726845630.70569 45221 42bf96fb4985bf2feebf1f32bebeb3de ""
   "manuscript_online_appendix.tex" 1726692011.8623 3104 a131f17b361cf0aa3a36bf6b66502591 ""
   "manuscript_tab_fig.tex" 1726691932.10261 6472 5ac87bc2ffa0d4caa4fa4a6677a01b6c ""
   "manuscript_title_etc.tex" 1726692148.14306 2750 cd13a1b84b551569aaa2b85916d1dc52 ""
-  "submit_preprint.aux" 1726779276.03272 30734 96e6c0e09d4dcfef1c12d9296a15eea9 "pdflatex"
+  "submit_preprint.aux" 1726845642.07861 30734 0dff5d404bb5bf6993daa341ebce7edb "pdflatex"
   "submit_preprint.bbl" 1726779266.41266 160480 6b037e5ad30bbb7488f6d135882dcf54 "biber submit_preprint"
-  "submit_preprint.out" 1726779276.04856 1801 3f7d727faf9c454c7390c6a35c96ab7c "pdflatex"
-  "submit_preprint.run.xml" 1726779276.05207 2488 eb644f6e53ef06653c3bb4ae04c548c6 "pdflatex"
+  "submit_preprint.out" 1726845642.09555 1801 3f7d727faf9c454c7390c6a35c96ab7c "pdflatex"
+  "submit_preprint.run.xml" 1726845642.09967 2488 eb644f6e53ef06653c3bb4ae04c548c6 "pdflatex"
   "submit_preprint.tex" 1726779252.62585 1956 e7dfda9d243effbd202e65963cdaba4a ""
   "tables/maineffect-proxy.tex" 1724531055.64768 588 2a5e444c08ce47941b0663f748e2ed81 ""
   "tables/tab01-SumStat.tex" 1724529547.94132 1549 09215c234228ec5e1090ed2e04df0110 ""

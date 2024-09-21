@@ -2,7 +2,7 @@ PWD /Users/hhadah/Documents/GiT/asian-identity-attrition/my_paper
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT submit_preprint.tex
+INPUT /Users/hhadah/Documents/GiT/asian-identity-attrition/my_paper/submit_preprint.tex
 OUTPUT submit_preprint.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -715,7 +715,10 @@ INPUT ./tables/tab41a-marriage.tex
 INPUT ./tables/tab41a-marriage.tex
 INPUT ./tables/tab41a-marriage.tex
 INPUT tables/tab41a-marriage.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT ./tables/maineffect-proxy.tex
 INPUT ./tables/maineffect-proxy.tex
 INPUT ./tables/maineffect-proxy.tex

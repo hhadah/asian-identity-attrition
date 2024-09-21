@@ -21,49 +21,76 @@ map_to_census_division <- function(fips_code) {
   )
 }
 
+library(dplyr)
+library(fixest)
+
 # Apply the function to create the `bplregion` variable
 ACS_IAT <- ACS_IAT %>%
   mutate(bplregion = map_to_census_division(bpl))
 
-# Select relevant columns for Asian variables
-relevant_columns <- c("Female", "MomGradCollege", "DadGradCollege", "frac_asian", "Age", "Age_sq", "Age_cube", "Age_quad", "AA_0bj", "Type_Asian")
-# Remove rows with any missing values
-ACS_IAT <- ACS_IAT[complete.cases(ACS_IAT[, relevant_columns]), ]
+# Ensure complete cases and restrict dataset to these cases
+# Include all relevant variables needed for the analysis
+relevant_vars <- c("Asian", "migmean_skin", "migMean_Index", "mighate_crimes_per_100000", 
+                   "bplmean_skin", "bplMean_Index", "bplhate_crimes_per_100000", 
+                   "Female", "MomGradCollege", "DadGradCollege", "frac_asian", 
+                   "Age", "Age_sq", "Age_cube", "Age_quad", "AA_0bj")
 
-# Estimate Your Primary Model with feols
-lw_model_1 <- feols(Asian ~ mean_skin + Mean_Index + + hate_crimes_per_100000 + Female 
+complete_cases <- complete.cases(ACS_IAT[, relevant_vars])
+
+# Use the restricted dataset with complete cases
+ACS_IAT_complete <- ACS_IAT[complete_cases, ]
+
+# Estimate Your Primary Model with feols using the complete dataset
+lw_model_1 <- feols(Asian ~ migmean_skin + migMean_Index + mighate_crimes_per_100000 + Female 
                     + MomGradCollege + DadGradCollege + frac_asian
                     + Age + Age_sq + Age_cube + Age_quad + AA_0bj 
                     | region:year, 
-                    data = ACS_IAT, weights = ~weight, vcov = ~statefip)
+                    data = ACS_IAT_complete, weights = ~weight, vcov = ~statefip)
 
-lw_model_2 <- feols(Asian ~ bplmean_skin + bplMean_Index + Female 
+lw_model_2 <- feols(Asian ~ bplmean_skin + bplMean_Index + bplhate_crimes_per_100000 + Female 
                     + MomGradCollege + DadGradCollege + frac_asian
-                    + Age + Age_sq + Age_cube + Age_quad + HH_0bj 
+                    + Age + Age_sq + Age_cube + Age_quad + AA_0bj 
                     | region:year, 
-                    data = ACS_IAT, weights = ~weight, vcov = ~statefip)
+                    data = ACS_IAT_complete, weights = ~weight, vcov = ~statefip)
 
 # Residualize Proxies and Dependent Variable
-control_vars <- c("Female", "MomGradCollege", "DadGradCollege", "frac_asian", "Age", "Age_sq", "Age_cube", "Age_quad", "HH_0bj")
-X <- model.matrix(~ Female + MomGradCollege + DadGradCollege + frac_asian + Age + Age_sq + Age_cube + Age_quad + HH_0bj, data = ACS_IAT)
+control_vars <- c("Female", "MomGradCollege", "DadGradCollege", "frac_asian", "Age", "Age_sq", "Age_cube", "Age_quad", "AA_0bj")
 
+# Create residuals using the complete dataset
 residuals <- list()
-for (var in c("Asian", "mean_skin", "Mean_Index", "bplmean_skin", "bplMean_Index")) {
-  residuals[[var]] <- resid(lm(as.formula(paste(var, "~", paste(control_vars, collapse = "+"))), data = ACS_IAT))
+for (var in c("Asian", "migmean_skin", "migMean_Index", "mighate_crimes_per_100000", 
+              "bplmean_skin", "bplMean_Index", "bplhate_crimes_per_100000")) {
+  residuals[[var]] <- resid(lm(as.formula(paste(var, "~", paste(control_vars, collapse = "+"))), data = ACS_IAT_complete))
 }
 
-names(residuals) <- c("r_Asian", "r_mean_skin", "r_Mean_Index", "r_bplmean_skin", "r_bplMean_Index")
+# Name the residuals
+names(residuals) <- c("r_Asian", "r_migmean_skin", "r_migMean_Index", "r_mighate_crimes_per_100000", 
+                      "r_bplmean_skin", "r_bplMean_Index", "r_bplhate_crimes_per_100000")
 
-# Calculate Covariances
-covs_1 <- sapply(c("r_mean_skin", "r_Mean_Index"), function(var) {
+# Check if the residuals have consistent dimensions
+sapply(residuals, length)
+
+# Calculate Covariances using the consistent dataset
+covs_1 <- sapply(c("r_migmean_skin", "r_migMean_Index", "r_mighate_crimes_per_100000"), function(var) {
   cov(residuals$r_Asian, residuals[[var]])
 })
+
+# Name the covariance results
 names(covs_1) <- paste0("rho_", sub("r_", "", names(covs_1)))
 
-covs_2 <- sapply(c("r_bplmean_skin", "r_bplMean_Index"), function(var) {
+# Covariance results
+covs_1
+
+# Calculate Covariances for the second model
+covs_2 <- sapply(c("r_bplmean_skin", "r_bplMean_Index", "r_bplhate_crimes_per_100000"), function(var) {
   cov(residuals$r_Asian, residuals[[var]])
 })
+
+# Name the covariance results for the second model
 names(covs_2) <- paste0("rho_", sub("r_", "", names(covs_2)))
+
+# Covariance results for the second model
+covs_2
 
 # Construct LW Equations
 lw_part <- function(index, proxy) {
@@ -75,12 +102,12 @@ lw_string <- function(index, proxies) {
 }
 
 # Construct LW Equations for both sets of proxies
-lw_strings_1 <- lapply(c("mean_skin", "Mean_Index"), function(var) {
-  lw_string("mean_skin", c("mean_skin", "Mean_Index"))
+lw_strings_1 <- lapply(c("migmean_skin", "migMean_Index", "mighate_crimes_per_100000"), function(var) {
+  lw_string("migmean_skin", c("migmean_skin", "migMean_Index", "mighate_crimes_per_100000"))
 })
 
-lw_strings_2 <- lapply(c("bplmean_skin", "bplMean_Index"), function(var) {
-  lw_string("bplmean_skin", c("bplmean_skin", "bplMean_Index"))
+lw_strings_2 <- lapply(c("bplmean_skin", "bplMean_Index", "bplhate_crimes_per_100000"), function(var) {
+  lw_string("bplmean_skin", c("bplmean_skin", "bplMean_Index", "bplhate_crimes_per_100000"))
 })
 
 # Calculate LW Coefficients Using Delta Method for both sets of proxies
@@ -106,23 +133,27 @@ print(lw_summary_1)
 print(lw_summary_2)
 
 # Extract Coefficients
-coef_mean_skin <- coef(lw_model_1)["mean_skin"]
-coef_Mean_Index <- coef(lw_model_1)["Mean_Index"]
+coef_migmean_skin <- coef(lw_model_1)["migmean_skin"]
+coef_migMean_Index <- coef(lw_model_1)["migMean_Index"]
+coef_mighate_crimes <- coef(lw_model_1)["mighate_crimes_per_100000"]
 coef_bplmean_skin <- coef(lw_model_2)["bplmean_skin"]
 coef_bplMean_Index <- coef(lw_model_2)["bplMean_Index"]
+coef_bplhate_crimes <- coef(lw_model_2)["bplhate_crimes_per_100000"]
 
 # Calculate LW Indices
 # LW Index 1
-lw_coef_mean_skin <- coef_estimates_1[1]
-lw_coef_Mean_Index <- coef_estimates_1[2]
+lw_coef_migmean_skin <- coef_estimates_1[1]
+lw_coef_migMean_Index <- coef_estimates_1[2]
+lw_coef_mighate_crimes <- coef_estimates_1[3]
 
-ACS_IAT$lw_index_1 <- with(ACS_IAT, (mean_skin * lw_coef_mean_skin + Mean_Index * lw_coef_Mean_Index) / lw_coef_mean_skin)
+ACS_IAT$lw_index_1 <- with(ACS_IAT, (migmean_skin * lw_coef_migmean_skin + migMean_Index * lw_coef_migMean_Index + mighate_crimes_per_100000 * lw_coef_mighate_crimes) / lw_coef_migmean_skin)
 
 # LW Index 2
 lw_coef_bplmean_skin <- coef_estimates_2[1]
 lw_coef_bplMean_Index <- coef_estimates_2[2]
+lw_coef_bplhate_crimes <- coef_estimates_2[3]
 
-ACS_IAT$lw_index_2 <- with(ACS_IAT, (bplmean_skin * lw_coef_bplmean_skin + bplMean_Index * lw_coef_bplMean_Index) / lw_coef_bplmean_skin)
+ACS_IAT$lw_index_2 <- with(ACS_IAT, (bplmean_skin * lw_coef_bplmean_skin + bplMean_Index * lw_coef_bplMean_Index + bplhate_crimes_per_100000 * lw_coef_bplhate_crimes) / lw_coef_bplmean_skin)
 
 # Inspect Calculated LW Indices
 print(head(ACS_IAT$lw_index_1))

@@ -2,9 +2,7 @@
 ### of 17 year olds
 ### living with their
 ### parents
-Skin_Iat <- read_csv(file.path(datasets,"ANES_GSS_Skin.csv")) |> 
-  rename(mean_skin = value
-         )
+Skin_Iat <- read_csv(file.path(datasets,"ANES_GSS_Skin.csv"))
 
 ACS <- fread(ACS_path)
 ACS <- as.data.frame(ACS)
@@ -38,8 +36,9 @@ Skin_Iat <- Skin_Iat %>%
   # filter(White == 1) |> 
   group_by(statefip, Join_year
   ) %>% 
-  summarise(mean_skin = mean(mean_skin, na.rm = TRUE),
-            Mean_Index = mean(Mean_Index, na.rm = TRUE))
+  summarise(mean_skin = mean(value, na.rm = TRUE),
+            Mean_Index = mean(Mean_Index, na.rm = TRUE),
+            hate_crimes_per_100000 = mean(hate_crimes_per_100000, na.rm = TRUE))
 
 # merge wit ACS data at year of survey
 ACS_IAT <- left_join(ACS,
@@ -56,7 +55,8 @@ Skin_Iat <- Skin_Iat |>
   rename(birthyr_join = Join_year,
          bpl=statefip,
          bplMean_Index = Mean_Index,
-         bplmean_skin = mean_skin)
+         bplmean_skin = mean_skin,
+         bplhate_crimes_per_100000 = hate_crimes_per_100000)
 
 ACS_IAT <- left_join(ACS_IAT,
                      Skin_Iat,
@@ -69,11 +69,12 @@ ACS_IAT <- left_join(ACS_IAT,
 
 # merge wit ACS data at year -1 of survey
 Skin_Iat <- Skin_Iat |>
-  select(birthyr_join, bpl, bplMean_Index, bplmean_skin) |> 
+  select(birthyr_join, bpl, bplMean_Index, bplmean_skin, bplhate_crimes_per_100000) |> 
   rename(migyr = birthyr_join,
          statefip=bpl,
          migMean_Index = bplMean_Index,
-         migmean_skin = bplmean_skin)
+         migmean_skin = bplmean_skin,
+         mighate_crimes_per_100000 = bplhate_crimes_per_100000)
 
 ACS_IAT <- ACS_IAT |> 
   mutate(migyr = 
