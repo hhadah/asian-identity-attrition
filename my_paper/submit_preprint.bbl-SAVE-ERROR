@@ -2518,7 +2518,7 @@
       \endverb
       \keyw{Associative Processes,Attitude Measures,Individual Differences,Judgment,Test Construction}
     \endentry
-    \entry{hadahforthcominghispanicidentity}{article}{}{}
+    \entry{hadahforthcominghispanicidentity}{inproceedings}{}{}
       \name{author}{1}{}{%
         {{hash=091f3b21f21a72f28da7c6db491e1522}{%
            family={Hadah},
@@ -2536,13 +2536,12 @@
       \strng{authorfullhashraw}{091f3b21f21a72f28da7c6db491e1522}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
+      \field{labeltitlesource}{title}
       \field{journaltitle}{Southern Economic Journal}
+      \field{pubstate}{Forthcoming}
       \field{title}{The Effect of Racial and Ethnic Attitudes on Hispanic Identity in the U.S.}
-      \field{year}{2024}
     \endentry
     \entry{hamiltonSheddingLightMarriage2009}{article}{}{}
       \name{author}{3}{}{%

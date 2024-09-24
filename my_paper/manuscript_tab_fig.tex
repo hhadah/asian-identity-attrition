@@ -2,8 +2,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
 \input{tables/tab01-SumStat}
+\end{landscape}
 
+\newpage
+\pagebreak
 
 \input{tables/tab02-observations-by-gen}
 
@@ -33,6 +37,18 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 
 \newpage
 \pagebreak
+
+\begin{center}
+\begin{figure}[H]
+\caption{Diagram of the Three Different Generations of Asian Immigrants.}
+\includegraphics[width=\textwidth, height=9cm]{figure/diag.png} 
+\label{fig:diag}
+\end{figure}
+\hfill%
+\end{center}
+
+\pagebreak
+\newpage
 
 \begin{center}
 \begin{figure}[H]
@@ -70,7 +86,19 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \label{fig:skiniat-map-2010}
 \end{subfigure}
 
-\caption*{\footnotesize{In this figure, I show the state-level implicit bias in different years in the sample. Each panel presents state-level bias during a certain year. The boundaries in red represent the different Census divisions in the United States. Notice how there is a variation across states with-in a region.}}
+\caption*{\footnotesize{This figure shows the state-level bias index in different years in the sample. The bias units are in standard deviations and ranges from low to high bias. Bias index is constructed following \textcite{lubotskyInterpretationRegressionsMultiple2006}. The data is from the 2004-2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. Each panel presents state-level bias during a certain year. The boundaries in black represent the different Census divisions in the United States. Notice how there is a variation across states within a region.}}
+\end{figure}
+\end{center}
+
+\newpage
+\pagebreak
+
+\begin{center}
+\begin{figure}[H]
+\caption{Maps of State-level Bias 2004-2021 Measure with Census Division Regional Boundaries}
+\includegraphics[width=\textwidth]{figure/Average_Skinmap.png} 
+\label{fig:iat-map-all}
+\caption*{\footnotesize{This figure shows the state-level bias index in the sample from 2004 to 2021. The bias units are in standard deviations and ranges from low to high bias. Bias index is constructed following \textcite{lubotskyInterpretationRegressionsMultiple2006}. The data is from the 2004-2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. The boundaries in black represent the different Census divisions in the United States. Notice how there is a variation across states within a region.}}
 \end{figure}
 \end{center}
 
@@ -161,12 +189,13 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \pagebreak
 \newpage
 
-\input{tables/maineffect-proxy}
+\input{tables/tab46-iat-migration-tab.tex}
 
 \pagebreak
 \newpage
 
-
 \input{tables/maineffect-proxy}
+\pagebreak
+\newpage
 
 \clearpage

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  19 SEP 2024 15:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  24 SEP 2024 10:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1025,11 +1025,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./submit_journal.aux
-
-LaTeX Warning: Label `tab:hispbyproxy' multiply defined.
-
-)
+ (./submit_journal.aux)
 \openout1 = `submit_journal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -1172,11 +1168,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
-Overfull \hbox (14.74716pt too wide) in paragraph at lines 88--90
-\T1/ppl/m/n/12 could^^Vthose whose par-ents, grand-par-ents, or selves were born in an Asian-speaking
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1315,10 +1306,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
-LaTeX Warning: Reference `fig:diag' on page 9 undefined on input line 62.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1346,9 +1333,6 @@ Overfull \hbox (21.60994pt too wide) in paragraph at lines 77--78
  []
 
 
-LaTeX Warning: Reference `fig:iatexamples' on page 11 undefined on input line 81.
-
-
 Overfull \hbox (14.62701pt too wide) in paragraph at lines 81--82
 \T1/ppl/m/n/12 sures how peo-ple as-so-ciate concepts---for ex-am-ple, Black and dark-skinned people---
  []
@@ -1372,10 +1356,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12]
-
-LaTeX Warning: Reference `fig:iat-map-all' on page 13 undefined on input line 91.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1417,11 +1397,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [16]
-Overfull \hbox (0.92133pt too wide) in paragraph at lines 121--122
-[]\T1/ppl/m/n/12 I in-ves-ti-gate the re-la-tion-ship be-tween state-level bias and in-tereth-nic mar-riages.
- []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1451,10 +1426,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 
-LaTeX Warning: Reference `regtab-mig-01' on page 19 undefined on input line 157.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1473,13 +1444,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 
-LaTeX Warning: Reference `regtab-proxy-01' on page 21 undefined on input line 163.
-
-
-LaTeX Warning: Reference `regtab-proxy-01' on page 21 undefined on input line 163.
-
-
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1488,31 +1452,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21]
-
-LaTeX Warning: Reference `scatter-plot-1' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `scatter-plot-black-1' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `scatter-plot-4' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `scatter-plot-1' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `scatter-plot-black-1' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `scatter-plot-4' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `regtab-horserace' on page 22 undefined on input line 167.
-
-
-LaTeX Warning: Reference `regtab-mig-01' on page 22 undefined on input line 169.
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1627,17 +1566,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[31] (./manuscript_tab_fig.tex (./tables/tab01-SumStat.tex
-Overfull \hbox (124.03337pt too wide) in paragraph at lines 6--26
- [] 
- []
-
-) (./tables/tab02-observations-by-gen.tex
-Overfull \hbox (22.87082pt too wide) in paragraph at lines 6--27
- [] 
- []
-
-)
+[31] (./manuscript_tab_fig.tex (./tables/tab01-SumStat.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1646,19 +1575,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[32]
-<figure/Bias_twostates.png, id=529, 722.7pt x 289.08pt>
+[32
+
+] (./tables/tab02-observations-by-gen.tex
+Overfull \hbox (22.87082pt too wide) in paragraph at lines 6--27
+ [] 
+ []
+
+)
+<figure/Bias_twostates.png, id=542, 722.7pt x 289.08pt>
 File: figure/Bias_twostates.png Graphic file (type png)
 <use figure/Bias_twostates.png>
-Package pdftex.def Info: figure/Bias_twostates.png  used on input line 18.
+Package pdftex.def Info: figure/Bias_twostates.png  used on input line 22.
 (pdftex.def)             Requested size: 348.299pt x 139.32143pt.
-<figure/Bias_twostates-asian.png, id=530, 722.7pt x 289.08pt>
+<figure/Bias_twostates-asian.png, id=543, 722.7pt x 289.08pt>
 File: figure/Bias_twostates-asian.png Graphic file (type png)
 <use figure/Bias_twostates-asian.png>
-Package pdftex.def Info: figure/Bias_twostates-asian.png  used on input line 25.
+Package pdftex.def Info: figure/Bias_twostates-asian.png  used on input line 29.
 (pdftex.def)             Requested size: 348.299pt x 139.32143pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--29
+Underfull \hbox (badness 10000) in paragraph at lines 19--33
 [][]
  []
 
@@ -1671,7 +1607,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33]
+[33
+
+]
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1681,25 +1619,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [34 <./figure/Bias_twostates.png> <./figure/Bias_twostates-asian.png>]
-<figure/2004skinmap.png, id=541, 722.7pt x 361.35pt>
+<figure/diag.png, id=554, 673.51625pt x 492.84125pt>
+File: figure/diag.png Graphic file (type png)
+<use figure/diag.png>
+Package pdftex.def Info: figure/diag.png  used on input line 44.
+(pdftex.def)             Requested size: 430.01096pt x 256.08339pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[35 <./figure/diag.png>]
+<figure/2004skinmap.png, id=561, 722.7pt x 361.35pt>
 File: figure/2004skinmap.png Graphic file (type png)
 <use figure/2004skinmap.png>
-Package pdftex.def Info: figure/2004skinmap.png  used on input line 45.
+Package pdftex.def Info: figure/2004skinmap.png  used on input line 61.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<figure/2008skinmap.png, id=542, 722.7pt x 361.35pt>
+<figure/2008skinmap.png, id=562, 722.7pt x 361.35pt>
 File: figure/2008skinmap.png Graphic file (type png)
 <use figure/2008skinmap.png>
-Package pdftex.def Info: figure/2008skinmap.png  used on input line 53.
+Package pdftex.def Info: figure/2008skinmap.png  used on input line 69.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<figure/2012skinmap.png, id=543, 722.7pt x 361.35pt>
+<figure/2012skinmap.png, id=563, 722.7pt x 361.35pt>
 File: figure/2012skinmap.png Graphic file (type png)
 <use figure/2012skinmap.png>
-Package pdftex.def Info: figure/2012skinmap.png  used on input line 61.
+Package pdftex.def Info: figure/2012skinmap.png  used on input line 77.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<figure/2016skinmap.png, id=544, 722.7pt x 361.35pt>
+<figure/2016skinmap.png, id=564, 722.7pt x 361.35pt>
 File: figure/2016skinmap.png Graphic file (type png)
 <use figure/2016skinmap.png>
-Package pdftex.def Info: figure/2016skinmap.png  used on input line 69.
+Package pdftex.def Info: figure/2016skinmap.png  used on input line 85.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
 
 
@@ -1710,26 +1663,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[35 <./figure/2004skinmap.png> <./figure/2008skinmap.png> <./figure/2012skinmap.png> <./figure/2016skinmap.png>]
-<figure/skin-iat-regression-all-gens.png, id=549, 722.7pt x 289.08pt>
+[36 <./figure/2004skinmap.png> <./figure/2008skinmap.png> <./figure/2012skinmap.png> <./figure/2016skinmap.png>]
+<figure/Average_Skinmap.png, id=571, 722.7pt x 361.35pt>
+File: figure/Average_Skinmap.png Graphic file (type png)
+<use figure/Average_Skinmap.png>
+Package pdftex.def Info: figure/Average_Skinmap.png  used on input line 99.
+(pdftex.def)             Requested size: 430.00462pt x 215.00316pt.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[37 <./figure/Average_Skinmap.png>]
+<figure/skin-iat-regression-all-gens.png, id=578, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-all-gens.png Graphic file (type png)
 <use figure/skin-iat-regression-all-gens.png>
-Package pdftex.def Info: figure/skin-iat-regression-all-gens.png  used on input line 89.
+Package pdftex.def Info: figure/skin-iat-regression-all-gens.png  used on input line 117.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/skin-iat-regression-first-gen.png, id=550, 722.7pt x 289.08pt>
+<figure/skin-iat-regression-first-gen.png, id=579, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-first-gen.png Graphic file (type png)
 <use figure/skin-iat-regression-first-gen.png>
-Package pdftex.def Info: figure/skin-iat-regression-first-gen.png  used on input line 96.
+Package pdftex.def Info: figure/skin-iat-regression-first-gen.png  used on input line 124.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/skin-iat-regression-second-gen.png, id=551, 722.7pt x 289.08pt>
+<figure/skin-iat-regression-second-gen.png, id=580, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-second-gen.png Graphic file (type png)
 <use figure/skin-iat-regression-second-gen.png>
-Package pdftex.def Info: figure/skin-iat-regression-second-gen.png  used on input line 102.
+Package pdftex.def Info: figure/skin-iat-regression-second-gen.png  used on input line 130.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/skin-iat-regression-third-gen.png, id=552, 722.7pt x 289.08pt>
+<figure/skin-iat-regression-third-gen.png, id=581, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-third-gen.png Graphic file (type png)
 <use figure/skin-iat-regression-third-gen.png>
-Package pdftex.def Info: figure/skin-iat-regression-third-gen.png  used on input line 108.
+Package pdftex.def Info: figure/skin-iat-regression-third-gen.png  used on input line 136.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
@@ -1740,26 +1708,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[36 <./figure/skin-iat-regression-all-gens.png> <./figure/skin-iat-regression-first-gen.png> <./figure/skin-iat-regression-second-gen.png> <./figure/skin-iat-regression-third-gen.png>]
-<figure/by-parents-regs-all.png, id=559, 722.7pt x 289.08pt>
+[38 <./figure/skin-iat-regression-all-gens.png> <./figure/skin-iat-regression-first-gen.png> <./figure/skin-iat-regression-second-gen.png> <./figure/skin-iat-regression-third-gen.png>]
+<figure/by-parents-regs-all.png, id=588, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-all.png Graphic file (type png)
 <use figure/by-parents-regs-all.png>
-Package pdftex.def Info: figure/by-parents-regs-all.png  used on input line 126.
+Package pdftex.def Info: figure/by-parents-regs-all.png  used on input line 154.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/by-parents-regs-hh.png, id=560, 722.7pt x 289.08pt>
+<figure/by-parents-regs-hh.png, id=589, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-hh.png Graphic file (type png)
 <use figure/by-parents-regs-hh.png>
-Package pdftex.def Info: figure/by-parents-regs-hh.png  used on input line 133.
+Package pdftex.def Info: figure/by-parents-regs-hh.png  used on input line 161.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/by-parents-regs-hw.png, id=561, 722.7pt x 289.08pt>
+<figure/by-parents-regs-hw.png, id=590, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-hw.png Graphic file (type png)
 <use figure/by-parents-regs-hw.png>
-Package pdftex.def Info: figure/by-parents-regs-hw.png  used on input line 139.
+Package pdftex.def Info: figure/by-parents-regs-hw.png  used on input line 167.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/by-parents-regs-wh.png, id=562, 722.7pt x 289.08pt>
+<figure/by-parents-regs-wh.png, id=591, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-wh.png Graphic file (type png)
 <use figure/by-parents-regs-wh.png>
-Package pdftex.def Info: figure/by-parents-regs-wh.png  used on input line 145.
+Package pdftex.def Info: figure/by-parents-regs-wh.png  used on input line 173.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
@@ -1770,7 +1738,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[37 <./figure/by-parents-regs-all.png> <./figure/by-parents-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-parents-regs-wh.png>] (./tables/tab45-iat_regression_tab_bygrandparent_type.tex
+[39 <./figure/by-parents-regs-all.png> <./figure/by-parents-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-parents-regs-wh.png>] (./tables/tab45-iat_regression_tab_bygrandparent_type.tex
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 39.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
@@ -1786,7 +1754,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[38] (./tables/tab41a-marriage.tex)
+[40] (./tables/tab41a-marriage.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1795,7 +1763,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[39] (./tables/maineffect-proxy.tex)
+[41] (./tables/tab46-iat-migration-tab.tex)
+Overfull \vbox (263.67154pt too high) has occurred while \output is active []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1804,7 +1775,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40] (./tables/maineffect-proxy.tex)
+[42] (./tables/maineffect-proxy.tex)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1813,7 +1784,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41])
+[43])
 \blx@maxsegment@1=\count519
 \blx@sectionciteorder@1=\count520
 Package biblatex Info: Reference section=1 on input line 141.
@@ -1840,10 +1811,31 @@ l.200 \clearpage
                  [1
 
 ] (./manuscript_online_appendix.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textcite' on input line 20.
-
+<figure/iatexample1.png, id=631, 1170.3725pt x 560.0925pt>
+File: figure/iatexample1.png Graphic file (type png)
+<use figure/iatexample1.png>
+Package pdftex.def Info: figure/iatexample1.png  used on input line 24.
+(pdftex.def)             Requested size: 185.75906pt x 88.89018pt.
+<figure/iatexample2.png, id=632, 730.73pt x 502.87875pt>
+File: figure/iatexample2.png Graphic file (type png)
+<use figure/iatexample2.png>
+Package pdftex.def Info: figure/iatexample2.png  used on input line 30.
+(pdftex.def)             Requested size: 185.75906pt x 127.8372pt.
+<figure/iatexample3.png, id=633, 739.76375pt x 500.87125pt>
+File: figure/iatexample3.png Graphic file (type png)
+<use figure/iatexample3.png>
+Package pdftex.def Info: figure/iatexample3.png  used on input line 35.
+(pdftex.def)             Requested size: 185.75906pt x 125.76776pt.
+<figure/iatexample4.png, id=634, 733.74126pt x 503.8825pt>
+File: figure/iatexample4.png Graphic file (type png)
+<use figure/iatexample4.png>
+Package pdftex.def Info: figure/iatexample4.png  used on input line 40.
+(pdftex.def)             Requested size: 185.75906pt x 127.56186pt.
+<figure/iatexample5.png, id=635, 732.7375pt x 504.88625pt>
+File: figure/iatexample5.png Graphic file (type png)
+<use figure/iatexample5.png>
+Package pdftex.def Info: figure/iatexample5.png  used on input line 45.
+(pdftex.def)             Requested size: 185.75906pt x 127.99315pt.
 
 
 
@@ -1857,14 +1849,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 \]
-        [2
+l.50 \newpage
+              [2
 
-]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 45.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
+ <./figure/iatexample1.png> <./figure/iatexample2.png> <./figure/iatexample3.png> <./figure/iatexample4.png> <./figure/iatexample5.png>]
+<figure/scatter-plot-bias-Asian-less2015.png, id=645, 722.7pt x 433.62pt>
+File: figure/scatter-plot-bias-Asian-less2015.png Graphic file (type png)
+<use figure/scatter-plot-bias-Asian-less2015.png>
+Package pdftex.def Info: figure/scatter-plot-bias-Asian-less2015.png  used on input line 62.
+(pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+<figure/scatter-plot-bias-Asian-great2015.png, id=646, 722.7pt x 433.62pt>
+File: figure/scatter-plot-bias-Asian-great2015.png Graphic file (type png)
+<use figure/scatter-plot-bias-Asian-great2015.png>
+Package pdftex.def Info: figure/scatter-plot-bias-Asian-great2015.png  used on input line 69.
+(pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1877,11 +1876,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 \]
-        [3])
-Overfull \hbox (9.6826pt too wide) in paragraph at lines 68--204
-[]\T1/ppl/m/n/12 Thus, OLS pro-duces an es-ti-mate of $\U/zeur/m/n/12 ^^L$ \T1/ppl/m/n/12 with the least bias by op-ti-mally com-bin-ing
- []
+l.74 
+      [3]
+Overfull \vbox (4.33467pt too high) has occurred while \output is active []
 
 
 
@@ -1896,8 +1893,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.205 \newpage
-               [4]
+l.74 
+      [4 <./figure/scatter-plot-bias-Asian-less2015.png> <./figure/scatter-plot-bias-Asian-great2015.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textcite' on input line 75.
+
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 100.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1910,40 +1915,66 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
+l.101 \]
+         [5])
+Overfull \hbox (9.6826pt too wide) in paragraph at lines 123--204
+[]\T1/ppl/m/n/12 Thus, OLS pro-duces an es-ti-mate of $\U/zeur/m/n/12 ^^L$ \T1/ppl/m/n/12 with the least bias by op-ti-mally com-bin-ing
+ []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.205 \newpage
+               [6]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
 l.215 \end
-          {refsection} [5]
+          {refsection} [7]
 Package biblatex Info: Reference section=0 on input line 215.
  (./submit_journal.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `submit_journal.out' has not changed.
-(rerunfilecheck)             Checksum: 3F7D727FAF9C454C7390C6A35C96AB7C;1801.
+(rerunfilecheck)             Checksum: A3AF8367B9B232EACF860908552D2CBF;1791.
 Package logreq Info: Writing requests to 'submit_journal.run.xml'.
 \openout1 = `submit_journal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42726 strings out of 473579
- 873227 string characters out of 5728228
- 2044096 words of memory out of 5000000
- 64759 multiletter control sequences out of 15000+600000
- 611287 words of font info for 168 fonts, out of 8000000 for 9000
+ 42811 strings out of 473579
+ 875901 string characters out of 5728228
+ 2042585 words of memory out of 5000000
+ 64831 multiletter control sequences out of 15000+600000
+ 614464 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,21n,98p,2258b,4043s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on submit_journal.pdf (50 pages, 1604962 bytes).
+Output written on submit_journal.pdf (54 pages, 2314573 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
- 614 compressed objects within 7 object streams
- 163 named destinations out of 1000 (max. 500000)
- 179 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 644 compressed objects within 7 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 224 words of extra memory for PDF output out of 10000 (max. 10000000)
 

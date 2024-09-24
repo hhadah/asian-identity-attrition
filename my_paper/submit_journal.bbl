@@ -2518,6 +2518,32 @@
       \endverb
       \keyw{Associative Processes,Attitude Measures,Individual Differences,Judgment,Test Construction}
     \endentry
+    \entry{hadahforthcominghispanicidentity}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=091f3b21f21a72f28da7c6db491e1522}{%
+           family={Hadah},
+           familyi={H\bibinitperiod},
+           given={Hussain},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{fullhash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{fullhashraw}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{bibnamehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authorbibnamehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authornamehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authorfullhash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authorfullhashraw}{091f3b21f21a72f28da7c6db491e1522}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Southern Economic Journal}
+      \field{title}{The Effect of Racial and Ethnic Attitudes on Hispanic Identity in the U.S.}
+      \field{year}{2024}
+    \endentry
     \entry{hamiltonSheddingLightMarriage2009}{article}{}{}
       \name{author}{3}{}{%
         {{hash=abcc1b0725052d57ee5e43dc5aec73de}{%
