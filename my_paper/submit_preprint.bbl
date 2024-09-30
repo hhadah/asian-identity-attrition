@@ -2518,7 +2518,7 @@
       \endverb
       \keyw{Associative Processes,Attitude Measures,Individual Differences,Judgment,Test Construction}
     \endentry
-    \entry{hadahforthcominghispanicidentity}{article}{}{}
+    \entry{hadah2024hispanicidentity}{article}{}{}
       \name{author}{1}{}{%
         {{hash=091f3b21f21a72f28da7c6db491e1522}{%
            family={Hadah},
@@ -2540,9 +2540,10 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{author}
-      \field{journaltitle}{Southern Economic Journal}
+      \field{journaltitle}{Journal Name}
+      \field{note}{Forthcoming}
       \field{title}{The Effect of Racial and Ethnic Attitudes on Hispanic Identity in the U.S.}
-      \field{year}{2024}
+      \field{year}{forthcoming}
     \endentry
     \entry{hamiltonSheddingLightMarriage2009}{article}{}{}
       \name{author}{3}{}{%
