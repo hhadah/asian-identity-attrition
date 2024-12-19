@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  30 SEP 2024 10:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  5 OCT 2024 21:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -684,6 +684,22 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen259
 \Gm@layoutvoffset=\dimen260
 \Gm@dimlist=\toks33
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip84
+\RaggedLeftLeftskip=\skip85
+\RaggedRightLeftskip=\skip86
+\CenteringRightskip=\skip87
+\RaggedLeftRightskip=\skip88
+\RaggedRightRightskip=\skip89
+\CenteringParfillskip=\skip90
+\RaggedLeftParfillskip=\skip91
+\RaggedRightParfillskip=\skip92
+\JustifyingParfillskip=\skip93
+\CenteringParindent=\skip94
+\RaggedLeftParindent=\skip95
+\RaggedRightParindent=\skip96
+\JustifyingParindent=\skip97
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count449
@@ -732,14 +748,16 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 \l__siunitx_unit_tmp_int=\count466
 \l__siunitx_unit_position_int=\count467
 \l__siunitx_unit_total_int=\count468
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
-\LTleft=\skip84
-\LTright=\skip85
-\LTpre=\skip86
-\LTpost=\skip87
+\LTleft=\skip98
+\LTright=\skip99
+\LTpre=\skip100
+\LTpost=\skip101
 \LTchunksize=\count469
 \LTcapwidth=\dimen267
 \LT@head=\box70
@@ -762,7 +780,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
  (/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip88
+\TPTL@width=\skip102
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -779,35 +797,6 @@ Package footmisc Info: Declaring symbol style wiley on input line 713.
 Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
 Package footmisc Info: Declaring symbol style lamport* on input line 744.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 765.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip89
-\f@nch@O@elh=\skip90
-\f@nch@O@erh=\skip91
-\f@nch@O@olh=\skip92
-\f@nch@O@orh=\skip93
-\f@nch@O@elf=\skip94
-\f@nch@O@erf=\skip95
-\f@nch@O@olf=\skip96
-\f@nch@O@orf=\skip97
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2023/06/22 v3.6 ragged2e Package
-\CenteringLeftskip=\skip98
-\RaggedLeftLeftskip=\skip99
-\RaggedRightLeftskip=\skip100
-\CenteringRightskip=\skip101
-\RaggedLeftRightskip=\skip102
-\RaggedRightRightskip=\skip103
-\CenteringParfillskip=\skip104
-\RaggedLeftParfillskip=\skip105
-\RaggedRightParfillskip=\skip106
-\JustifyingParfillskip=\skip107
-\CenteringParindent=\skip108
-\RaggedLeftParindent=\skip109
-\RaggedRightParindent=\skip110
-\JustifyingParindent=\skip111
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
-Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks37
 \pgfutil@tempdima=\dimen270
@@ -1151,18 +1140,11 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./manuscript_main.tex
-Overfull \hbox (6.71786pt too wide) in paragraph at lines 7--8
-[]\T1/ppl/m/n/10.95 The Asian pop-u-la-tion in the United States has al-most dou-bles over the last two decades.[][][][][]
+Overfull \hbox (11.39034pt too wide) in paragraph at lines 7--8
+[]\T1/ppl/m/n/10.95 The Asian pop-u-la-tion in the United States has al-most dou-bled over the last two decades.[][][][][]
  []
 
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1172,7 +1154,7 @@ l.14
       [1
 
 ]
-Overfull \hbox (12.02864pt too wide) in paragraph at lines 15--16
+Overfull \hbox (14.65346pt too wide) in paragraph at lines 15--16
 []\T1/ppl/m/n/10.95 Among in-di-vid-u-als of Asian an-ces-try, I find that higher state-level bias---against Asians---
  []
 
@@ -1183,151 +1165,36 @@ Overfull \hbox (3.35793pt too wide) in paragraph at lines 15--16
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [2]
-Overfull \hbox (0.19359pt too wide) in paragraph at lines 21--22
-\T1/ppl/m/n/10.95 ([][]2006[][]) doc-u-mented an in-ter-est-ing puz-zle where non-native-born Asians have bet-ter health
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [3]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [4]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [5]
-Overfull \hbox (3.34665pt too wide) in paragraph at lines 68--70
-\T1/ppl/m/n/10.95 grand-par-ents. Us-ing the place of birth of par-ents, I can di-vide par-ents of second-generation
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [7]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [9]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [11]
 
+[12])
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
-Overfull \hbox (1.11191pt too wide) in paragraph at lines 177--178
-[]\T1/ppl/m/n/10.95 The re-sults are im-por-tant be-cause of the con-se-quences on the cor-rect count-ing of Asians
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13])
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
+[13]
 Overfull \hbox (0.71536pt too wide) in paragraph at lines 66--66
 \T1/ppl/m/n/12 and the Ob-served Health of Later-Generation Mex-i-can Amer-i-cans.^^Q \T1/ppl/m/it/12 The Amer-
  []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15
+[14
 
 ]
 Overfull \hbox (19.1463pt too wide) in paragraph at lines 66--66
@@ -1336,64 +1203,20 @@ Overfull \hbox (19.1463pt too wide) in paragraph at lines 66--66
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+[15]
 
 [16]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
 Overfull \hbox (8.07208pt too wide) in paragraph at lines 66--66
 \T1/ppl/m/n/12 2016. ^^P  Racial Bias Is As-so-ci-ated with In-group Death Rate for Blacks and Whites:
  []
 
 
 
+[17]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+[18] (./manuscript_tab_fig.tex (./tables/tab01-SumStat.tex)
 
-[19]
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20] (./manuscript_tab_fig.tex (./tables/tab01-SumStat.tex)
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[21
+[19
 
 ] (./tables/tab02-observations-by-gen.tex
 Overfull \hbox (22.87082pt too wide) in paragraph at lines 6--27
@@ -1401,12 +1224,12 @@ Overfull \hbox (22.87082pt too wide) in paragraph at lines 6--27
  []
 
 )
-<figure/Bias_twostates.png, id=482, 722.7pt x 289.08pt>
+<figure/Bias_twostates.png, id=425, 722.7pt x 289.08pt>
 File: figure/Bias_twostates.png Graphic file (type png)
 <use figure/Bias_twostates.png>
 Package pdftex.def Info: figure/Bias_twostates.png  used on input line 22.
 (pdftex.def)             Requested size: 348.299pt x 139.32143pt.
-<figure/Bias_twostates-asian.png, id=483, 722.7pt x 289.08pt>
+<figure/Bias_twostates-asian.png, id=426, 722.7pt x 289.08pt>
 File: figure/Bias_twostates-asian.png Graphic file (type png)
 <use figure/Bias_twostates-asian.png>
 Package pdftex.def Info: figure/Bias_twostates-asian.png  used on input line 29.
@@ -1418,290 +1241,166 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--33
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[22
+[20
 
 ]
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[23 <./figure/Bias_twostates.png> <./figure/Bias_twostates-asian.png>]
-<figure/diag.png, id=493, 673.51625pt x 492.84125pt>
+[21 <./figure/Bias_twostates.png> <./figure/Bias_twostates-asian.png>]
+<figure/diag.png, id=436, 673.51625pt x 492.84125pt>
 File: figure/diag.png Graphic file (type png)
 <use figure/diag.png>
 Package pdftex.def Info: figure/diag.png  used on input line 44.
 (pdftex.def)             Requested size: 430.01096pt x 256.08339pt.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24 <./figure/diag.png>]
-<figure/2004skinmap.png, id=501, 722.7pt x 361.35pt>
+[22 <./figure/diag.png>]
+<figure/2004skinmap.png, id=443, 722.7pt x 361.35pt>
 File: figure/2004skinmap.png Graphic file (type png)
 <use figure/2004skinmap.png>
 Package pdftex.def Info: figure/2004skinmap.png  used on input line 61.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<figure/2008skinmap.png, id=502, 722.7pt x 361.35pt>
+<figure/2008skinmap.png, id=444, 722.7pt x 361.35pt>
 File: figure/2008skinmap.png Graphic file (type png)
 <use figure/2008skinmap.png>
 Package pdftex.def Info: figure/2008skinmap.png  used on input line 69.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<figure/2012skinmap.png, id=503, 722.7pt x 361.35pt>
+<figure/2012skinmap.png, id=445, 722.7pt x 361.35pt>
 File: figure/2012skinmap.png Graphic file (type png)
 <use figure/2012skinmap.png>
 Package pdftex.def Info: figure/2012skinmap.png  used on input line 77.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<figure/2016skinmap.png, id=504, 722.7pt x 361.35pt>
+<figure/2016skinmap.png, id=446, 722.7pt x 361.35pt>
 File: figure/2016skinmap.png Graphic file (type png)
 <use figure/2016skinmap.png>
 Package pdftex.def Info: figure/2016skinmap.png  used on input line 85.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[25 <./figure/2004skinmap.png> <./figure/2008skinmap.png> <./figure/2012skinmap.png> <./figure/2016skinmap.png>]
-<figure/Average_Skinmap.png, id=511, 722.7pt x 361.35pt>
+[23 <./figure/2004skinmap.png> <./figure/2008skinmap.png> <./figure/2012skinmap.png> <./figure/2016skinmap.png>]
+<figure/Average_Skinmap.png, id=453, 722.7pt x 361.35pt>
 File: figure/Average_Skinmap.png Graphic file (type png)
 <use figure/Average_Skinmap.png>
 Package pdftex.def Info: figure/Average_Skinmap.png  used on input line 99.
 (pdftex.def)             Requested size: 430.00462pt x 215.00316pt.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[26 <./figure/Average_Skinmap.png>]
-<figure/skin-iat-regression-all-gens.png, id=518, 722.7pt x 289.08pt>
+[24 <./figure/Average_Skinmap.png>]
+<figure/skin-iat-regression-all-gens.png, id=461, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-all-gens.png Graphic file (type png)
 <use figure/skin-iat-regression-all-gens.png>
 Package pdftex.def Info: figure/skin-iat-regression-all-gens.png  used on input line 117.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/skin-iat-regression-first-gen.png, id=519, 722.7pt x 289.08pt>
+<figure/skin-iat-regression-first-gen.png, id=462, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-first-gen.png Graphic file (type png)
 <use figure/skin-iat-regression-first-gen.png>
 Package pdftex.def Info: figure/skin-iat-regression-first-gen.png  used on input line 124.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/skin-iat-regression-second-gen.png, id=520, 722.7pt x 289.08pt>
+<figure/skin-iat-regression-second-gen.png, id=463, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-second-gen.png Graphic file (type png)
 <use figure/skin-iat-regression-second-gen.png>
 Package pdftex.def Info: figure/skin-iat-regression-second-gen.png  used on input line 130.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/skin-iat-regression-third-gen.png, id=521, 722.7pt x 289.08pt>
+<figure/skin-iat-regression-third-gen.png, id=464, 722.7pt x 289.08pt>
 File: figure/skin-iat-regression-third-gen.png Graphic file (type png)
 <use figure/skin-iat-regression-third-gen.png>
 Package pdftex.def Info: figure/skin-iat-regression-third-gen.png  used on input line 136.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[27 <./figure/skin-iat-regression-all-gens.png> <./figure/skin-iat-regression-first-gen.png> <./figure/skin-iat-regression-second-gen.png> <./figure/skin-iat-regression-third-gen.png>]
-<figure/by-parents-regs-all.png, id=528, 722.7pt x 289.08pt>
+[25 <./figure/skin-iat-regression-all-gens.png> <./figure/skin-iat-regression-first-gen.png> <./figure/skin-iat-regression-second-gen.png> <./figure/skin-iat-regression-third-gen.png>]
+<figure/by-parents-regs-all.png, id=471, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-all.png Graphic file (type png)
 <use figure/by-parents-regs-all.png>
 Package pdftex.def Info: figure/by-parents-regs-all.png  used on input line 154.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/by-parents-regs-hh.png, id=529, 722.7pt x 289.08pt>
+<figure/by-parents-regs-hh.png, id=472, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-hh.png Graphic file (type png)
 <use figure/by-parents-regs-hh.png>
 Package pdftex.def Info: figure/by-parents-regs-hh.png  used on input line 161.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/by-parents-regs-hw.png, id=530, 722.7pt x 289.08pt>
+<figure/by-parents-regs-hw.png, id=473, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-hw.png Graphic file (type png)
 <use figure/by-parents-regs-hw.png>
 Package pdftex.def Info: figure/by-parents-regs-hw.png  used on input line 167.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<figure/by-parents-regs-wh.png, id=531, 722.7pt x 289.08pt>
+<figure/by-parents-regs-wh.png, id=474, 722.7pt x 289.08pt>
 File: figure/by-parents-regs-wh.png Graphic file (type png)
 <use figure/by-parents-regs-wh.png>
 Package pdftex.def Info: figure/by-parents-regs-wh.png  used on input line 173.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
+[26 <./figure/by-parents-regs-all.png> <./figure/by-parents-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-parents-regs-wh.png>] (./tables/tab45-iat_regression_tab_bygrandparent_type.tex)
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+[27] (./tables/tab41a-marriage.tex)
 
-[28 <./figure/by-parents-regs-all.png> <./figure/by-parents-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-parents-regs-wh.png>] (./tables/tab45-iat_regression_tab_bygrandparent_type.tex)
+[28] (./tables/tab46-iat-migration-tab.tex)
 
+[29] (./tables/maineffect-proxy.tex)
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+[30])
 
-[29] (./tables/tab41a-marriage.tex)
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[30] (./tables/tab46-iat-migration-tab.tex)
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[31] (./tables/maineffect-proxy.tex)
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[32])
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[33
+[31
 
 ] (./manuscript_online_appendix.tex
-<figure/iatexample1.png, id=568, 1170.3725pt x 560.0925pt>
+<figure/iatexample1.png, id=513, 1170.3725pt x 560.0925pt>
 File: figure/iatexample1.png Graphic file (type png)
 <use figure/iatexample1.png>
 Package pdftex.def Info: figure/iatexample1.png  used on input line 24.
 (pdftex.def)             Requested size: 185.75906pt x 88.89018pt.
-<figure/iatexample2.png, id=569, 730.73pt x 502.87875pt>
+<figure/iatexample2.png, id=514, 730.73pt x 502.87875pt>
 File: figure/iatexample2.png Graphic file (type png)
 <use figure/iatexample2.png>
 Package pdftex.def Info: figure/iatexample2.png  used on input line 30.
 (pdftex.def)             Requested size: 185.75906pt x 127.8372pt.
-<figure/iatexample3.png, id=570, 739.76375pt x 500.87125pt>
+<figure/iatexample3.png, id=515, 739.76375pt x 500.87125pt>
 File: figure/iatexample3.png Graphic file (type png)
 <use figure/iatexample3.png>
 Package pdftex.def Info: figure/iatexample3.png  used on input line 35.
 (pdftex.def)             Requested size: 185.75906pt x 125.76776pt.
-<figure/iatexample4.png, id=571, 733.74126pt x 503.8825pt>
+<figure/iatexample4.png, id=516, 733.74126pt x 503.8825pt>
 File: figure/iatexample4.png Graphic file (type png)
 <use figure/iatexample4.png>
 Package pdftex.def Info: figure/iatexample4.png  used on input line 40.
 (pdftex.def)             Requested size: 185.75906pt x 127.56186pt.
-<figure/iatexample5.png, id=572, 732.7375pt x 504.88625pt>
+<figure/iatexample5.png, id=517, 732.7375pt x 504.88625pt>
 File: figure/iatexample5.png Graphic file (type png)
 <use figure/iatexample5.png>
 Package pdftex.def Info: figure/iatexample5.png  used on input line 45.
 (pdftex.def)             Requested size: 185.75906pt x 127.99315pt.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[34 <./figure/iatexample1.png> <./figure/iatexample2.png> <./figure/iatexample3.png> <./figure/iatexample4.png> <./figure/iatexample5.png>]
-<figure/scatter-plot-bias-Asian-less2015.png, id=582, 722.7pt x 433.62pt>
+[32 <./figure/iatexample1.png> <./figure/iatexample2.png> <./figure/iatexample3.png> <./figure/iatexample4.png> <./figure/iatexample5.png>]
+<figure/scatter-plot-bias-Asian-less2015.png, id=527, 722.7pt x 433.62pt>
 File: figure/scatter-plot-bias-Asian-less2015.png Graphic file (type png)
 <use figure/scatter-plot-bias-Asian-less2015.png>
 Package pdftex.def Info: figure/scatter-plot-bias-Asian-less2015.png  used on input line 62.
 (pdftex.def)             Requested size: 348.299pt x 208.98215pt.
-<figure/scatter-plot-bias-Asian-great2015.png, id=583, 722.7pt x 433.62pt>
+<figure/scatter-plot-bias-Asian-great2015.png, id=528, 722.7pt x 433.62pt>
 File: figure/scatter-plot-bias-Asian-great2015.png Graphic file (type png)
 <use figure/scatter-plot-bias-Asian-great2015.png>
 Package pdftex.def Info: figure/scatter-plot-bias-Asian-great2015.png  used on input line 69.
 (pdftex.def)             Requested size: 348.299pt x 208.98215pt.
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[35]
+[33]
 Overfull \vbox (3.20204pt too high) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[36 <./figure/scatter-plot-bias-Asian-less2015.png> <./figure/scatter-plot-bias-Asian-great2015.png>]
+[34 <./figure/scatter-plot-bias-Asian-less2015.png> <./figure/scatter-plot-bias-Asian-great2015.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\textcite' on input line 75.
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 100.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 99.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
+[35])
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[37])
-Overfull \hbox (6.38974pt too wide) in paragraph at lines 123--95
-[]\T1/ppl/m/n/10.95 Thus, OLS pro-duces an es-ti-mate of $\U/zeur/m/n/10.95 ^^L$ \T1/ppl/m/n/10.95 with the least bias by op-ti-mally com-bin-ing the in-
- []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[38] (./submit_preprint.aux)
+[36] (./submit_preprint.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
@@ -1713,13 +1412,13 @@ Package logreq Info: Writing requests to 'submit_preprint.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42460 strings out of 473579
- 869643 string characters out of 5728228
- 2026889 words of memory out of 5000000
- 64492 multiletter control sequences out of 15000+600000
+ 42174 strings out of 473579
+ 863405 string characters out of 5728228
+ 2020707 words of memory out of 5000000
+ 64222 multiletter control sequences out of 15000+600000
  620446 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,21n,98p,2259b,4041s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,21n,98p,1942b,4041s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
@@ -1727,10 +1426,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on submit_preprint.pdf (39 pages, 2309818 bytes).
+Output written on submit_preprint.pdf (37 pages, 2304667 bytes).
 PDF statistics:
- 703 PDF objects out of 1000 (max. 8388607)
- 595 compressed objects within 6 object streams
- 154 named destinations out of 1000 (max. 500000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
+ 142 named destinations out of 1000 (max. 500000)
  224 words of extra memory for PDF output out of 10000 (max. 10000000)
 

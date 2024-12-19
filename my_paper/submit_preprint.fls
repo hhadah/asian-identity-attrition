@@ -244,6 +244,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
@@ -254,6 +256,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
@@ -272,12 +276,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadat
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmisc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmisc.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -538,13 +536,13 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/eulervm/zeurm10.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/euler/eurm10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm

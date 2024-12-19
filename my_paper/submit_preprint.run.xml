@@ -81,7 +81,7 @@
       <file>submit_preprint.bcf</file>
     </requires>
     <requires type="editable">
-      <file>bib/references.bib</file>
+      <file>bib/AttitudesPaper.bib</file>
     </requires>
   </external>
 </requests>

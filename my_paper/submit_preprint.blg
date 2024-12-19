@@ -1,0 +1,18 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'submit_preprint.blg'
+[34] biber-darwin:340> INFO - === Sat Oct  5, 2024, 21:02:02
+[44] Biber.pm:420> INFO - Reading 'submit_preprint.bcf'
+[135] Biber.pm:994> INFO - Found 45 citekeys in bib section 0
+[143] Biber.pm:4463> INFO - Processing section 0
+[147] Biber.pm:4654> INFO - Looking for bibtex file 'bib/AttitudesPaper.bib' for section 0
+[162] bibtex.pm:1713> INFO - LaTeX decoding ...
+[335] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/AttitudesPaper.bib'
+[506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[506] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[506] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[534] bbl.pm:676> INFO - Writing 'submit_preprint.bbl' with encoding 'UTF-8'
+[547] bbl.pm:779> INFO - Output to submit_preprint.bbl
+[547] Biber.pm:131> WARN - legacy year field 'forthcoming' in entry 'hadah2024hispanicidentity' is not an integer - this will probably not sort properly.
+[547] Biber.pm:133> INFO - WARNINGS: 1
