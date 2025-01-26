@@ -11,21 +11,20 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |>
   rename(value = lw_index)
 
 # fixed effects regression
-
 reg1 <- list(
-  "\\specialcell{(1) \\\\ $A^2_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(1) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
                      + MomGradCollege + DadGradCollege + frac_asian +
-                       Age + Age_sq + Age_cube + Age_quad + factor(ParentType2) | region:year, 
+                       Age + Age_sq + Age_cube + Age_quad + AA_0bj| region:year, 
                      data = CPS_IAT |> filter(SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(2) \\\\ $A^2_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(2) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
                      + MomGradCollege + DadGradCollege + frac_asian +
                        Age + Age_sq + Age_cube + Age_quad| region:year, 
                      data = CPS_IAT |> filter(AA_0bj == 1 & SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(3) \\\\ $A^2_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(3) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
                      + MomGradCollege + DadGradCollege + frac_asian +
                        Age + Age_sq + Age_cube + Age_quad | region:year, 
                      data = CPS_IAT |> filter(AW_0bj == 1 & SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(4) \\\\ $A^2_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(4) \\\\ $A^2$}" = feols(Asian ~ 1 + value + Female 
                      + MomGradCollege + DadGradCollege + frac_asian +
                        Age + Age_sq + Age_cube + Age_quad | region:year, 
                      data = CPS_IAT |> filter(WA_0bj == 1 & SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip)
@@ -117,14 +116,14 @@ regression_tab <- modelsummary(reg1, fmt = f1,
                       immigrant children with at least one parent born in a Asian 
                       country.}",
                       "\\\\footnotesize{Column (1) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on all second-generation immigrants, 
-                                        column (2) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a father and mother that were born in a Asian country (HH),
-                                        column (3) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a father that was born in a Asian country and a native-born mother (HW), and
-                                        column (4) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a native-born father and a mother that was born in a Asian country (WH).}",
+                                        column (2) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a father and mother that were born in a Asian country (AA),
+                                        column (3) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a father that was born in a Asian country and a native-born mother (AW), and
+                                        column (4) includes the results to regression (\\\\ref{eq:identity_reg_bias}) on second-generation immigrants that who has a native-born father and a mother that was born in a Asian country (WA).}",
                       "\\\\footnotesize{Data source is the 2004-2021 Current Population Survey.}"),
            footnote_as_chunk = F, title_format = c("italic"),
            escape = F, threeparttable = T, fixed_small_size = T
   ) |> 
-  add_header_above(c("Parents Type" = 1, "All" = 1, "Both Parents \n from Spanish \n Speaking Country \n (HH)" = 1, "Father \n from Spanish \n Speaking Country \n (HW)" = 1, "Mother  \n from Spanish \n Speaking Country \n (WH)" = 1
+  add_header_above(c("Parents Type" = 1, "All" = 1, "Both Parents \n from Asian Country \n (AA)" = 1, "Father \n from Asian Country \n (AW)" = 1, "Mother  \n from Asian Country \n (WA)" = 1
                      )) 
 
 regression_tab %>%

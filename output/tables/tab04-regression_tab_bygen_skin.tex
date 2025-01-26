@@ -6,15 +6,15 @@
 \begin{threeparttable}
 \begin{tabular}[t]{lcccc}
 \toprule
-  & \specialcell{(1) \\ All Gens \\ $H_{ist}$} & \specialcell{(2) \\  First Gen \\ $H^1_{ist}$} & \specialcell{(3) \\  Second Gen \\ $H^2_{ist}$} & \specialcell{(4) \\  Third Gen \\ $H^3_{ist}$}\\
+  & \specialcell{(1) \\ $A_i$} & \specialcell{(2) \\ $A^1_i$} & \specialcell{(3) \\ $A^2_i$} & \specialcell{(4) \\ $A^3_i$}\\
 \midrule
-Bias & -0.06** & -0.05 & -0.08** & -0.08**\\
- & (0.02) & (0.04) & (0.03) & (0.03)\\
-Female & 0.00 & -0.01 & 0.00 & -0.01\\
+Bias & -0.09*** & -0.05 & -0.08** & -0.08**\\
+ & (0.03) & (0.04) & (0.03) & (0.03)\\
+Female & -0.01* & -0.01 & 0.00 & -0.01\\
  & (0.00) & (0.01) & (0.00) & (0.01)\\
-College Graduate: Mother & 0.00 & -0.01 & 0.01 & 0.03\\
+College Graduate: Mother & 0.01 & -0.01 & 0.01 & 0.03\\
  & (0.01) & (0.01) & (0.01) & \vphantom{1} (0.02)\\
-College Graduate: Father & 0.00 & 0.02** & 0.00 & -0.01\\
+College Graduate: Father & 0.01** & 0.02** & 0.00 & -0.01\\
  & (0.01) & (0.01) & (0.01) & (0.02)\\
 \midrule
 Observations & 129,078 & 15,499 & 80,137 & 33,442\\
@@ -28,8 +28,8 @@ Year $\times$ Region FE & X & X & X & X\\
 \item[1] \footnotesize{Each column is an estimation of a heterogeneous effect of regression (\ref{eq:identity_reg_bias}) by 
                       generation with region × year fixed effects. 
                       I include controls for sex, quartic age, fraction of Asians in a state, and parental education.
-                      I also added parents' (HH, HW, and WH) and grandparents' (HHHH, HHHW, HHWH, etc.) type dummy variables to the regression
-                      on second and third generation immigrants, where H is objectively Asian (born in a Asian country) and W is objectively White (native-born). 
+                      I also added parents' (AA, AW, and WA) and grandparents' (AAAA, AAAW, AAWA, etc.) type dummy variables to the regression
+                      on second and third generation immigrants, where A is objectively Asian (born in a Asian country) and W is objectively White (native-born). 
                       Standard errors are clustered on the state level.}
 \item[2] \footnotesize{The samples include children ages 17 and below who live in intact families. 
                       First-generation Asian immigrant children that were born in a 

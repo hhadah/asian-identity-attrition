@@ -20,25 +20,26 @@ feols(Asian ~ 1 + value + Female
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip)                         
 # By generation
 reg1 <- list(
-  "\\specialcell{(1) \\\\ All Gens \\\\ $H_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(1) \\\\ $A_i$}" = feols(Asian ~ 1 + value + Female 
                                 + MomGradCollege + DadGradCollege + frac_asian +
-                                Age + Age_sq + Age_cube + Age_quad  + factor(ParentType2) + factor(Grandparent_Type)
-                                + FirstGen_Asian + SecondGen_Asian| region:year, 
+                                Age + Age_sq + Age_cube + Age_quad  + AA_0bj  + FirstGen_Asian + SecondGen_Asian| region:year, 
                                 data = CPS_IAT, weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(2) \\\\  First Gen \\\\ $H^1_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(2) \\\\ $A^1_i$}" = feols(Asian ~ 1 + value + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
                                Age + Age_sq + Age_cube + Age_quad| region:year, 
                                data = CPS_IAT |> filter(FirstGen_Asian == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(3) \\\\  Second Gen \\\\ $H^2_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(3) \\\\ $A^2_i$}" = feols(Asian ~ 1 + value + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
-                               Age + Age_sq + Age_cube + Age_quad + factor(ParentType2)| region:year, 
+                               Age + Age_sq + Age_cube + Age_quad + AA_0bj| region:year, 
                                data = CPS_IAT |> filter(SecondGen_Asian == 1), weights = ~weight, vcov = ~statefip),
-  "\\specialcell{(4) \\\\  Third Gen \\\\ $H^3_{ist}$}" = feols(Asian ~ 1 + value + Female 
+  "\\specialcell{(4) \\\\ $A^3_i$}" = feols(Asian ~ 1 + value + Female 
                                + MomGradCollege + DadGradCollege + frac_asian +
-                               Age + Age_sq + Age_cube + Age_quad + factor(Grandparent_Type)| region:year, 
+                               Age + Age_sq + Age_cube + Age_quad + Grandparent_Type| region:year, 
                                data = CPS_IAT |> filter(ThirdGen_Asian == 1), weights = ~weight, vcov = ~statefip)
   
 )
+
+
 
 # calculate means to add
 # as a row
@@ -113,8 +114,8 @@ regression_tab <- modelsummary(reg1, fmt = f1,
   footnote(number = c("\\\\footnotesize{Each column is an estimation of a heterogeneous effect of regression (\\\\ref{eq:identity_reg_bias}) by 
                       generation with region × year fixed effects. 
                       I include controls for sex, quartic age, fraction of Asians in a state, and parental education.
-                      I also added parents' (HH, HW, and WH) and grandparents' (HHHH, HHHW, HHWH, etc.) type dummy variables to the regression
-                      on second and third generation immigrants, where H is objectively Asian (born in a Asian country) and W is objectively White (native-born). 
+                      I also added parents' (AA, AW, and WA) and grandparents' (AAAA, AAAW, AAWA, etc.) type dummy variables to the regression
+                      on second and third generation immigrants, where A is objectively Asian (born in a Asian country) and W is objectively White (native-born). 
                       Standard errors are clustered on the state level.}",
                       "\\\\footnotesize{The samples include children ages 17 and below who live in intact families. 
                       First-generation Asian immigrant children that were born in a 
