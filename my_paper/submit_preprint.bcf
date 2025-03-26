@@ -5055,4 +5055,89 @@
     <bcf:citekey order="47" intorder="2">antmanEthnicAttritionAssimilation2020</bcf:citekey>
     <bcf:citekey order="47" intorder="3">duncanIdentifyingLaterGenerationDescendants2018</bcf:citekey>
     <bcf:citekey order="47" intorder="4">duncanSocioeconomicIntegrationImmigrant2018</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">greenwaldMeasuringIn
+    <bcf:citekey order="48" intorder="1">greenwaldMeasuringIndividualDifferences1998</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">egloffPredictiveValidityImplicit2002</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">greenwaldMeasuringIndividualDifferences1998</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">greenwaldMeasuringIndividualDifferences1998</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">chettyRaceEconomicOpportunity2020</bcf:citekey>
+    <bcf:citekey order="52" intorder="2">gloverDiscriminationSelfFulfillingProphecy2017</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">friesePredictingVotingBehavior2007</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">leitnerRacialBiasAssociated2016</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">chettyRaceEconomicOpportunity2020</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">arkesAttributionsImplicitPrejudice2004</bcf:citekey>
+    <bcf:citekey order="56" intorder="2">forscherMetaanalysisProceduresChange2019</bcf:citekey>
+    <bcf:citekey order="56" intorder="3">leeDoesImplicitBias2018</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">anes2021</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">anes2021</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">charlesPrejudiceWagesEmpirical2008</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">charlesPrejudiceWagesEmpirical2008</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">ucrbook</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">floodsarahIntegratedPublicUse2021</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">duncanIntermarriageIntergenerationalTransmission2011</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">duncanIntermarriageIntergenerationalTransmission2011</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">egloffPredictiveValidityImplicit2002</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">egloffPredictiveValidityImplicit2002</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">chettyRaceEconomicOpportunity2020</bcf:citekey>
+    <bcf:citekey order="69" intorder="2">gloverDiscriminationSelfFulfillingProphecy2017</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">friesePredictingVotingBehavior2007</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">bertrandImplicitDiscrimination2005</bcf:citekey>
+    <bcf:citekey order="71" intorder="2">carlanaImplicitStereotypesEvidence2019</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">leitnerRacialBiasAssociated2016</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">lubotskyInterpretationRegressionsMultiple2006</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="nyt">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem literal="1" order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nyt/global//global/global/global"
+                type="entry"
+                sortingtemplatename="nyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>

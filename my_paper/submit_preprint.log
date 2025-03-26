@@ -1311,4 +1311,125 @@ File: figure/by-parents-regs-hh.png Graphic file (type png)
 Package pdftex.def Info: figure/by-parents-regs-hh.png  used on input line 161.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 <figure/by-parents-regs-hw.png, id=499, 722.7pt x 289.08pt>
-File: figure/by-pare
+File: figure/by-parents-regs-hw.png Graphic file (type png)
+<use figure/by-parents-regs-hw.png>
+Package pdftex.def Info: figure/by-parents-regs-hw.png  used on input line 167.
+(pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
+<figure/by-parents-regs-wh.png, id=500, 722.7pt x 289.08pt>
+File: figure/by-parents-regs-wh.png Graphic file (type png)
+<use figure/by-parents-regs-wh.png>
+Package pdftex.def Info: figure/by-parents-regs-wh.png  used on input line 173.
+(pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
+
+
+[27 <./figure/by-parents-regs-all.png> <./figure/by-parents-regs-hh.png> <./figure/by-parents-regs-hw.png> <./figure/by-parents-regs-wh.png>] (./tables/tab45-iat_regression_tab_bygrandparent_type.tex)
+
+[28] (./tables/tab41a-marriage.tex)
+
+[29] (./tables/tab46-iat-migration-tab.tex)
+
+[30] (./tables/maineffect-proxy.tex)
+
+[31])
+
+[32
+
+] (./manuscript_online_appendix.tex
+<figure/iatexample1.png, id=539, 1170.3725pt x 560.0925pt>
+File: figure/iatexample1.png Graphic file (type png)
+<use figure/iatexample1.png>
+Package pdftex.def Info: figure/iatexample1.png  used on input line 23.
+(pdftex.def)             Requested size: 185.75906pt x 88.89018pt.
+<figure/iatexample2.png, id=540, 730.73pt x 502.87875pt>
+File: figure/iatexample2.png Graphic file (type png)
+<use figure/iatexample2.png>
+Package pdftex.def Info: figure/iatexample2.png  used on input line 29.
+(pdftex.def)             Requested size: 185.75906pt x 127.8372pt.
+<figure/iatexample3.png, id=541, 739.76375pt x 500.87125pt>
+File: figure/iatexample3.png Graphic file (type png)
+<use figure/iatexample3.png>
+Package pdftex.def Info: figure/iatexample3.png  used on input line 34.
+(pdftex.def)             Requested size: 185.75906pt x 125.76776pt.
+<figure/iatexample4.png, id=542, 733.74126pt x 503.8825pt>
+File: figure/iatexample4.png Graphic file (type png)
+<use figure/iatexample4.png>
+Package pdftex.def Info: figure/iatexample4.png  used on input line 39.
+(pdftex.def)             Requested size: 185.75906pt x 127.56186pt.
+<figure/iatexample5.png, id=543, 732.7375pt x 504.88625pt>
+File: figure/iatexample5.png Graphic file (type png)
+<use figure/iatexample5.png>
+Package pdftex.def Info: figure/iatexample5.png  used on input line 44.
+(pdftex.def)             Requested size: 185.75906pt x 127.99315pt.
+
+
+[33 <./figure/iatexample1.png> <./figure/iatexample2.png> <./figure/iatexample3.png> <./figure/iatexample4.png> <./figure/iatexample5.png>] (./tables/tab33-asianiat_regression_tab.tex)
+
+[34] (./tables/tab04-regression_tab_bygen_skin.tex)
+
+[35] (./tables/tab05-iat_regression_tab_byparent_type.tex)
+
+[36] (./tables/tab47-marriage.tex)
+
+[37]
+<figure/scatter-plot-bias-Asian-less2015.png, id=581, 722.7pt x 433.62pt>
+File: figure/scatter-plot-bias-Asian-less2015.png Graphic file (type png)
+<use figure/scatter-plot-bias-Asian-less2015.png>
+Package pdftex.def Info: figure/scatter-plot-bias-Asian-less2015.png  used on input line 84.
+(pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+<figure/scatter-plot-bias-Asian-great2015.png, id=582, 722.7pt x 433.62pt>
+File: figure/scatter-plot-bias-Asian-great2015.png Graphic file (type png)
+<use figure/scatter-plot-bias-Asian-great2015.png>
+Package pdftex.def Info: figure/scatter-plot-bias-Asian-great2015.png  used on input line 91.
+(pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+
+
+[38]
+Overfull \vbox (3.20204pt too high) has occurred while \output is active []
+
+
+
+[39 <./figure/scatter-plot-bias-Asian-less2015.png> <./figure/scatter-plot-bias-Asian-great2015.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textcite' on input line 97.
+
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 121.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+
+[40])
+
+[41] (./submit_preprint.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+Package rerunfilecheck Info: File `submit_preprint.out' has not changed.
+(rerunfilecheck)             Checksum: 21398BFE9A1BBECDA43F15045DC46931;1866.
+Package logreq Info: Writing requests to 'submit_preprint.run.xml'.
+\openout1 = `submit_preprint.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 42223 strings out of 473579
+ 864732 string characters out of 5728228
+ 2031096 words of memory out of 5000000
+ 64241 multiletter control sequences out of 15000+600000
+ 620446 words of font info for 193 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 93i,21n,98p,1942b,4041s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on submit_preprint.pdf (42 pages, 2313363 bytes).
+PDF statistics:
+ 702 PDF objects out of 1000 (max. 8388607)
+ 591 compressed objects within 6 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+
