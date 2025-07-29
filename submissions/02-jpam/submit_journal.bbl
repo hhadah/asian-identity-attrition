@@ -19,205 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{abramitzkyDiscriminationReturnsCultural2020}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
-           family={Abramitzky},
-           familyi={A\bibinitperiod},
-           given={Ran},
-           giveni={R\bibinitperiod}}}%
-        {{hash=097f20a084ef21521ae0b0fafbe25b3a}{%
-           family={Boustan},
-           familyi={B\bibinitperiod},
-           given={Leah},
-           giveni={L\bibinitperiod}}}%
-        {{hash=ee4f98dc5fca1344da5371dc8dd16aba}{%
-           family={Eriksson},
-           familyi={E\bibinitperiod},
-           given={Katherine},
-           giveni={K\bibinitperiod}}}%
-        {{hash=7be7b10df9a2d57e7bddce67122182a1}{%
-           family={Hao},
-           familyi={H\bibinitperiod},
-           given={Stephanie},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{f51b7a0ef8aadb16af296a6db90fb0f8}
-      \strng{fullhash}{80c6a4c4307df0e5baf560bcc4f3de06}
-      \strng{fullhashraw}{80c6a4c4307df0e5baf560bcc4f3de06}
-      \strng{bibnamehash}{80c6a4c4307df0e5baf560bcc4f3de06}
-      \strng{authorbibnamehash}{80c6a4c4307df0e5baf560bcc4f3de06}
-      \strng{authornamehash}{f51b7a0ef8aadb16af296a6db90fb0f8}
-      \strng{authorfullhash}{80c6a4c4307df0e5baf560bcc4f3de06}
-      \strng{authorfullhashraw}{80c6a4c4307df0e5baf560bcc4f3de06}
-      \field{extraname}{1}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{abstract}{We document that, in the early twentieth century, children of immigrants who were given more-foreign first names completed fewer years of schooling, earned less, and married less assimilated spouses. However, we find few differences in the adult outcomes of brothers with more/less foreign-sounding first names. This pattern suggests that the negative association between ethnic names and adult outcomes in this era does not stem from discrimination on the basis of first names but instead reflects household differences associated with cultural assimilation. We cannot rule out discrimination on the basis of other ethnic cues.}
-      \field{annotation}{Citation keys: abramitzkyDiscriminationReturnsCultural2020b}
-      \field{day}{1}
-      \field{issn}{2574-0768, 2574-0776}
-      \field{journaltitle}{AEA Papers and Proceedings}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{shortjournal}{AEA Papers and Proceedings}
-      \field{title}{Discrimination and the {{Returns}} to {{Cultural Assimilation}} in the {{Age}} of {{Mass Migration}}}
-      \field{urlday}{19}
-      \field{urlmonth}{10}
-      \field{urlyear}{2020}
-      \field{volume}{110}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{340\bibrangedash 346}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1257/pandp.20201090
-      \endverb
-      \verb{file}
-      \verb /Users/hhadah/Zotero/storage/XFWGUXNR/Abramitzky et al. - 2020 - Discrimination and the Returns to Cultural Assimil.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://pubs.aeaweb.org/doi/10.1257/pandp.20201090
-      \endverb
-      \verb{url}
-      \verb https://pubs.aeaweb.org/doi/10.1257/pandp.20201090
-      \endverb
-    \endentry
-    \entry{abramitzkyLeavingEnclaveHistorical2020}{report}{}{}
-      \name{author}{3}{}{%
-        {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
-           family={Abramitzky},
-           familyi={A\bibinitperiod},
-           given={Ran},
-           giveni={R\bibinitperiod}}}%
-        {{hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
-           family={Boustan},
-           familyi={B\bibinitperiod},
-           given={Leah\bibnamedelima Platt},
-           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=1e0dcc7b23a65834af8edd8943bf648f}{%
-           family={Connor},
-           familyi={C\bibinitperiod},
-           given={Dylan},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {National Bureau of Economic Research}%
-      }
-      \list{location}{1}{%
-        {Cambridge, MA}%
-      }
-      \strng{namehash}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{fullhash}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{fullhashraw}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{bibnamehash}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{authorbibnamehash}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{authornamehash}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{authorfullhash}{b87058eca8accfc6a6d3dc64102ceec3}
-      \strng{authorfullhashraw}{b87058eca8accfc6a6d3dc64102ceec3}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{We study a program that funded 39,000 Jewish households in New York City to leave enclave neighborhoods circa 1910. Compared to their neighbors with the same occupation and income score at baseline, program participants earned 4 percent more ten years after removal, and these gains persisted to the next generation. Men who left enclaves also married spouses with less Jewish names, but they did not choose less Jewish names for their children. Gains were largest for men who spent more years outside of an enclave. Our results suggest that leaving ethnic neighborhoods could facilitate economic advancement and assimilation into the broader society, but might make it more difficult to retain cultural identity.}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{number}{w27372}
-      \field{shorttitle}{Leaving the {{Enclave}}}
-      \field{title}{Leaving the {{Enclave}}: {{Historical Evidence}} on {{Immigrant Mobility}} from the {{Industrial Removal Office}}}
-      \field{urlday}{19}
-      \field{urlmonth}{10}
-      \field{urlyear}{2020}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{w27372}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.3386/w27372
-      \endverb
-      \verb{file}
-      \verb /Users/hhadah/Zotero/storage/WCJ6FHS8/Abramitzky et al. - 2020 - Leaving the Enclave Historical Evidence on Immigr.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.nber.org/papers/w27372.pdf
-      \endverb
-      \verb{url}
-      \verb http://www.nber.org/papers/w27372.pdf
-      \endverb
-    \endentry
-    \entry{abramitzkyNationImmigrantsAssimilation2014}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
-           family={Abramitzky},
-           familyi={A\bibinitperiod},
-           given={Ran},
-           giveni={R\bibinitperiod}}}%
-        {{hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
-           family={Boustan},
-           familyi={B\bibinitperiod},
-           given={Leah\bibnamedelima Platt},
-           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=ee4f98dc5fca1344da5371dc8dd16aba}{%
-           family={Eriksson},
-           familyi={E\bibinitperiod},
-           given={Katherine},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {The University of Chicago Press}%
-      }
-      \strng{namehash}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{fullhash}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{fullhashraw}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{bibnamehash}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{authorbibnamehash}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{authornamehash}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{authorfullhash}{5ad3ce8972d83434a968db281cb79d83}
-      \strng{authorfullhashraw}{5ad3ce8972d83434a968db281cb79d83}
-      \field{extraname}{1}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{abstract}{During the Age of Mass Migration (1850–1913), the United States maintained an open border, absorbing 30 million European immigrants. Prior cross-sectional work finds that immigrants initially held lower-paid occupations than natives but converged over time. In newly assembled panel data, we show that, in fact, the average immigrant did not face a substantial occupation-based earnings penalty upon first arrival and experienced occupational advancement at the same rate as natives. Cross-sectional patterns are driven by biases from declining arrival cohort skill level and departures of negatively selected return migrants. We show that assimilation patterns vary substantially across sending countries and persist in the second generation.}
-      \field{issn}{0022-3808}
-      \field{journaltitle}{Journal of Political Economy}
-      \field{month}{6}
-      \field{number}{3}
-      \field{shorttitle}{A {{Nation}} of {{Immigrants}}}
-      \field{title}{A {{Nation}} of {{Immigrants}}: {{Assimilation}} and {{Economic Outcomes}} in the {{Age}} of {{Mass Migration}}}
-      \field{urlday}{15}
-      \field{urlmonth}{8}
-      \field{urlyear}{2022}
-      \field{volume}{122}
-      \field{year}{2014}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{467\bibrangedash 506}
-      \range{pages}{40}
-      \verb{doi}
-      \verb 10.1086/675805
-      \endverb
-      \verb{file}
-      \verb /Users/hhadah/Zotero/storage/UYDRWS37/Abramitzky et al. - 2014 - A Nation of Immigrants Assimilation and Economic .pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.journals.uchicago.edu/doi/full/10.1086/675805
-      \endverb
-      \verb{url}
-      \verb https://www.journals.uchicago.edu/doi/full/10.1086/675805
-      \endverb
-    \endentry
     \entry{abramitzkyCulturalAssimilationAge2016}{online}{}{}
       \name{author}{3}{}{%
         {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
@@ -244,7 +45,6 @@
       \strng{authornamehash}{5ad3ce8972d83434a968db281cb79d83}
       \strng{authorfullhash}{5ad3ce8972d83434a968db281cb79d83}
       \strng{authorfullhashraw}{5ad3ce8972d83434a968db281cb79d83}
-      \field{extraname}{2}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
@@ -279,75 +79,6 @@
       \endverb
       \verb{url}
       \verb https://www.nber.org/papers/w22381
-      \endverb
-    \endentry
-    \entry{abramitzkyIntergenerationalMobilityImmigrants2019}{report}{}{}
-      \name{author}{4}{}{%
-        {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
-           family={Abramitzky},
-           familyi={A\bibinitperiod},
-           given={Ran},
-           giveni={R\bibinitperiod}}}%
-        {{hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
-           family={Boustan},
-           familyi={B\bibinitperiod},
-           given={Leah\bibnamedelima Platt},
-           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=0f40f7d9618c2923353048e78b1a443e}{%
-           family={Jácome},
-           familyi={J\bibinitperiod},
-           given={Elisa},
-           giveni={E\bibinitperiod}}}%
-        {{hash=502fbf64a8c89d361dda64150bfa0928}{%
-           family={Pérez},
-           familyi={P\bibinitperiod},
-           given={Santiago},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {National Bureau of Economic Research}%
-      }
-      \list{location}{1}{%
-        {Cambridge, MA}%
-      }
-      \strng{namehash}{f51b7a0ef8aadb16af296a6db90fb0f8}
-      \strng{fullhash}{a825002ee7fef853c478b7f806d867c6}
-      \strng{fullhashraw}{a825002ee7fef853c478b7f806d867c6}
-      \strng{bibnamehash}{a825002ee7fef853c478b7f806d867c6}
-      \strng{authorbibnamehash}{a825002ee7fef853c478b7f806d867c6}
-      \strng{authornamehash}{f51b7a0ef8aadb16af296a6db90fb0f8}
-      \strng{authorfullhash}{a825002ee7fef853c478b7f806d867c6}
-      \strng{authorfullhashraw}{a825002ee7fef853c478b7f806d867c6}
-      \field{extraname}{2}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{month}{10}
-      \field{number}{w26408}
-      \field{title}{Intergenerational {{Mobility}} of {{Immigrants}} in the {{US}} over {{Two Centuries}}}
-      \field{urlday}{19}
-      \field{urlmonth}{10}
-      \field{urlyear}{2020}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{w26408}
-      \range{pages}{-1}
-      \verb{doi}
-      \verb 10.3386/w26408
-      \endverb
-      \verb{file}
-      \verb /Users/hhadah/Zotero/storage/AM98RG5M/Abramitzky et al. - 2019 - Intergenerational Mobility of Immigrants in the US.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.nber.org/papers/w26408.pdf
-      \endverb
-      \verb{url}
-      \verb http://www.nber.org/papers/w26408.pdf
       \endverb
     \endentry
     \entry{akerlofEconomicsIdentity2000}{article}{}{}
@@ -1904,64 +1635,6 @@
       \endverb
       \keyw{Cashiers,Chain stores,Grocery industry,Industrial relations,Job performance}
     \endentry
-    \entry{golash-bozaLatinoRacialChoices2008}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=8952694c9f5acee4d737c43e483e5b87}{%
-           family={Golash-Boza},
-           familyi={G\bibinithyphendelim B\bibinitperiod},
-           given={Tanya},
-           giveni={T\bibinitperiod}}}%
-        {{hash=368b5e655a322cbc6c25ac6818e3d197}{%
-           family={Darity\bibnamedelima Jr},
-           familyi={D\bibinitperiod\bibinitdelim J\bibinitperiod},
-           given={William},
-           giveni={W\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Routledge}%
-      }
-      \strng{namehash}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{fullhash}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{fullhashraw}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{bibnamehash}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{authorbibnamehash}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{authornamehash}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{authorfullhash}{a95645c56d23b09996eea1f72f80bc4d}
-      \strng{authorfullhashraw}{a95645c56d23b09996eea1f72f80bc4d}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{abstract}{Are predictions that Hispanics will make up 25 per cent of the US population in 2050 reliable? The authors of this paper argue that these and other predictions are problematic insofar as they do not account for the volatile nature of Latino racial and ethnic identifications. In this light, the authors propose a theoretical framework that can be used to predict Latinos’ and Latinas’ racial choices. This framework is tested using two distinct datasets – the 1989 Latino National Political Survey and the 2002 National Survey of Latinos. The results from the analyses of both of these surveys lend credence to the authors’ claims that Latinas’ and Latinos’ skin colour and experiences of discrimination affect whether people from Latin America and their descendants who live in the US will choose to identify racially as black, white or Latina/o.}
-      \field{day}{1}
-      \field{issn}{0141-9870}
-      \field{journaltitle}{Ethnic and Racial Studies}
-      \field{month}{7}
-      \field{number}{5}
-      \field{shorttitle}{Latino Racial Choices}
-      \field{title}{Latino Racial Choices: The Effects of Skin Colour and Discrimination on {{Latinos}}’ and {{Latinas}}’ Racial Self-Identifications}
-      \field{urlday}{26}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
-      \field{volume}{31}
-      \field{year}{2008}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{899\bibrangedash 934}
-      \range{pages}{36}
-      \verb{doi}
-      \verb 10.1080/01419870701568858
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1080/01419870701568858
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1080/01419870701568858
-      \endverb
-      \keyw{assimilation,discrimination,Hispanic,Latino,racial identification,skin colour}
-    \endentry
     \entry{goldsmithDarkLightSkin2007}{article}{}{}
       \name{author}{3}{}{%
         {{hash=e0e738661118a656ff9d5a5cd4cebc33}{%
@@ -2091,6 +1764,9 @@
            given={Hussain},
            giveni={H\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
       \strng{namehash}{091f3b21f21a72f28da7c6db491e1522}
       \strng{fullhash}{091f3b21f21a72f28da7c6db491e1522}
       \strng{fullhashraw}{091f3b21f21a72f28da7c6db491e1522}
@@ -2106,9 +1782,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{author}
       \field{journaltitle}{Southern Economic Journal}
-      \field{note}{Forthcoming}
-      \field{title}{The Effect of Racial and Ethnic Attitudes on Hispanic Identity in the U.S.}
-      \field{year}{forthcoming}
+      \field{title}{The effect of racial and ethnic attitudes on Hispanic identity in the United States}
+      \field{year}{2024}
     \endentry
     \entry{hamiltonSheddingLightMarriage2009}{article}{}{}
       \name{author}{3}{}{%
@@ -2380,59 +2055,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1162/rest.88.3.549
-      \endverb
-    \endentry
-    \entry{masonNotBlackAlone20082017}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=034f58202e469da5071c7afb12071f0f}{%
-           family={Mason},
-           familyi={M\bibinitperiod},
-           given={Patrick\bibnamedelima L.},
-           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SAGE Publications Inc}%
-      }
-      \strng{namehash}{034f58202e469da5071c7afb12071f0f}
-      \strng{fullhash}{034f58202e469da5071c7afb12071f0f}
-      \strng{fullhashraw}{034f58202e469da5071c7afb12071f0f}
-      \strng{bibnamehash}{034f58202e469da5071c7afb12071f0f}
-      \strng{authorbibnamehash}{034f58202e469da5071c7afb12071f0f}
-      \strng{authornamehash}{034f58202e469da5071c7afb12071f0f}
-      \strng{authorfullhash}{034f58202e469da5071c7afb12071f0f}
-      \strng{authorfullhashraw}{034f58202e469da5071c7afb12071f0f}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{abstract}{This paper estimates a reduced form racial identity equation for a sample of African American survey respondents. The change in a state's fraction of white votes for Obama in 2008 relative to Kerry in 2004 provides an empirical proxy for a change in white antagonism toward African Americans. Using Current Population Survey data from 2003 to 2013, this paper finds that there is a positive and statistically significant Obama-effect on African American self-identification as mixed-race rather than as black-alone.}
-      \field{day}{1}
-      \field{issn}{0034-6446}
-      \field{journaltitle}{The Review of Black Political Economy}
-      \field{langid}{english}
-      \field{month}{1}
-      \field{number}{1-2}
-      \field{shorttitle}{Not {{Black-Alone}}}
-      \field{title}{Not {{Black-Alone}}: {{The}} 2008 {{Presidential Election}} and {{Racial Self-Identification}} among {{African Americans}}}
-      \field{urlday}{26}
-      \field{urlmonth}{12}
-      \field{urlyear}{2023}
-      \field{volume}{44}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{55\bibrangedash 76}
-      \range{pages}{22}
-      \verb{doi}
-      \verb 10.1007/s12114-017-9247-z
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1007/s12114-017-9247-z
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1007/s12114-017-9247-z
       \endverb
     \endentry
     \entry{masonStigmatizationRacialSelection2014}{article}{}{}
