@@ -34,41 +34,41 @@ Taking into consideration the identity flexibility that characterizes Asian Amer
 
 The empirical analysis documents how observable characteristics—individual traits and societal attitudes—affect racial identity reporting among Asian Americans. These findings have important implications for measuring racial economic disparities and understanding how discrimination operates in modern labor markets.
 
-The rest of this paper proceeds as follows. First, I discuss the theoretical framework in section (\ref{sec:model}). Second, I describe the data sources in section (\ref{sec:data}). Third, I present the empirical approach and results in sections (\ref{sec:empstrat}) and (\ref{sec:results}). Fourth, I discuss robustness checks and alternative explanations in section (\ref{sec:robcheck}). Finally, I conclude in section (\ref{sec:conc}).
+The rest of this paper proceeds as follows. I describe the data sources in section (\ref{sec:data}) and present the empirical approach and results in sections (\ref{sec:empstrat}) and (\ref{sec:results}). Then, I discuss robustness checks and alternative explanations in section (\ref{sec:robcheck}). Finally, I conclude in section (\ref{sec:conc}).
 
-\section{Theoretical Framework}\label{sec:model}
+% \section{Theoretical Framework}\label{sec:model}
 
-I develop a theoretical framework for understanding racial identity choice that extends \textcite{akerlofEconomicsIdentity2000} to incorporate stereotype-specific costs and benefits. Unlike generic minority identification models, this framework recognizes that Asian Americans face unique utility trade-offs where racial identity can signal both positive attributes (academic achievement, work ethic) and negative characteristics (foreignness, social exclusion).
+% I develop a theoretical framework for understanding racial identity choice that extends \textcite{akerlofEconomicsIdentity2000} to incorporate stereotype-specific costs and benefits. Unlike generic minority identification models, this framework recognizes that Asian Americans face unique utility trade-offs where racial identity can signal both positive attributes (academic achievement, work ethic) and negative characteristics (foreignness, social exclusion).
 
-Formally, individual $i$ belongs to racial group $r_i \in \{A, W\}$, where $A$ represents Asian and $W$ represents White. Agent $i$'s utility depends on their actions and how those actions interact with their chosen racial identity $I_i$:
+% Formally, individual $i$ belongs to racial group $r_i \in \{A, W\}$, where $A$ represents Asian and $W$ represents White. Agent $i$'s utility depends on their actions and how those actions interact with their chosen racial identity $I_i$:
 
-\begin{equation}
-U_i = U_i(\pmb{a_i}, \pmb{a_{-i}}, I_i)\label{eq:util}
-\end{equation}
+% \begin{equation}
+% U_i = U_i(\pmb{a_i}, \pmb{a_{-i}}, I_i)\label{eq:util}
+% \end{equation}
 
-Individual identity $I_i$ reflects personal actions, others' behaviors toward them, and societal expectations associated with their racial group:
+% Individual identity $I_i$ reflects personal actions, others' behaviors toward them, and societal expectations associated with their racial group:
 
-\begin{equation}
-I_i = I_i(\pmb{a_i}, \pmb{a_{-i}}; \pmb{S}_{r_{i}})\label{eq:identity}
-\end{equation}
+% \begin{equation}
+% I_i = I_i(\pmb{a_i}, \pmb{a_{-i}}; \pmb{S}_{r_{i}})\label{eq:identity}
+% \end{equation}
 
-Where $\pmb{a_i}$ represents individual $i$'s actions, $\pmb{a_{-i}}$ captures others' actions affecting $i$'s identity (including anti-Asian bias), and $\pmb{S}_{r_{i}}$ denotes societal stereotypes and expectations associated with racial group membership.\footnote{This extends \textcite{akerlofEconomicsIdentity2000}'s proscription concept to encompass both negative stereotypes and positive model minority expectations.}
+% Where $\pmb{a_i}$ represents individual $i$'s actions, $\pmb{a_{-i}}$ captures others' actions affecting $i$'s identity (including anti-Asian bias), and $\pmb{S}_{r_{i}}$ denotes societal stereotypes and expectations associated with racial group membership.\footnote{This extends \textcite{akerlofEconomicsIdentity2000}'s proscription concept to encompass both negative stereotypes and positive model minority expectations.}
 
-The key insight for Asian Americans is that $\pmb{S}_{A}$ includes both positive stereotypes (academic excellence, economic success) and negative ones (perpetual foreigner status, social exclusion). This creates context-dependent utility from Asian identification—beneficial in some settings (academic achievement contexts) but costly in others (social acceptance, political inclusion).
+% The key insight for Asian Americans is that $\pmb{S}_{A}$ includes both positive stereotypes (academic excellence, economic success) and negative ones (perpetual foreigner status, social exclusion). This creates context-dependent utility from Asian identification—beneficial in some settings (academic achievement contexts) but costly in others (social acceptance, political inclusion).
 
-Individual $i$ selects actions $a_i$ to maximize utility given their racial group $r_i$, associated stereotypes $\pmb{S}_{r_{i}}$, and others' actions $\pmb{a_{-i}}$. The first-order condition becomes:
+% Individual $i$ selects actions $a_i$ to maximize utility given their racial group $r_i$, associated stereotypes $\pmb{S}_{r_{i}}$, and others' actions $\pmb{a_{-i}}$. The first-order condition becomes:
 
-\begin{equation}
-\frac{\partial U_i}{\partial a_i} + \frac{\partial U_i}{\partial I_i} \cdot \frac{d I_i}{d a_i} = 0\label{eq:foc}
-\end{equation}
+% \begin{equation}
+% \frac{\partial U_i}{\partial a_i} + \frac{\partial U_i}{\partial I_i} \cdot \frac{d I_i}{d a_i} = 0\label{eq:foc}
+% \end{equation}
 
-The solution $a_{i}^{\star}$ yields utility $U_{i}^{\star}$. Now suppose individuals can strategically choose their racial identity at cost $c$. They will switch identities when $\tilde{U_{i}}^{\star} \geq U_{i}^{\star} + c$, where $\tilde{U_{i}}^{\star}$ represents utility under the alternative racial identity.
+% The solution $a_{i}^{\star}$ yields utility $U_{i}^{\star}$. Now suppose individuals can strategically choose their racial identity at cost $c$. They will switch identities when $\tilde{U_{i}}^{\star} \geq U_{i}^{\star} + c$, where $\tilde{U_{i}}^{\star}$ represents utility under the alternative racial identity.
 
-Identity switching occurs when benefits $\tilde{U_{i}}^{\star} - U_{i}^{\star}$ exceed costs $c$. These net benefits are non-zero only when $\frac{d I_i}{d a_i} \neq 0$ and $\frac{\partial U_i}{\partial I_i} \neq 0$. This framework suggests empirical analysis should focus on: (1) individual characteristics affecting optimal actions under different racial identities, (2) contextual factors (anti-Asian bias) creating differential treatment by racial group, (3) populations with low switching costs $c$, and (4) groups whose utility significantly depends on racial identity.
+% Identity switching occurs when benefits $\tilde{U_{i}}^{\star} - U_{i}^{\star}$ exceed costs $c$. These net benefits are non-zero only when $\frac{d I_i}{d a_i} \neq 0$ and $\frac{\partial U_i}{\partial I_i} \neq 0$. This framework suggests empirical analysis should focus on: (1) individual characteristics affecting optimal actions under different racial identities, (2) contextual factors (anti-Asian bias) creating differential treatment by racial group, (3) populations with low switching costs $c$, and (4) groups whose utility significantly depends on racial identity.
 
-From the empirical analysis, I investigate characteristics affecting individual actions under different identity choices from point (1). These characteristics include immigrant generation, mixed-race versus mono-racial family structure, etc. I also examine how anti-Asian bias influences identity choices. Finally, restricting analysis to individuals with low identity switching costs $c$ ensures the sample excludes populations unlikely to modify racial identification—for example, non-Asian Whites without Asian ancestry.
+% From the empirical analysis, I investigate characteristics affecting individual actions under different identity choices from point (1). These characteristics include immigrant generation, mixed-race versus mono-racial family structure, etc. I also examine how anti-Asian bias influences identity choices. Finally, restricting analysis to individuals with low identity switching costs $c$ ensures the sample excludes populations unlikely to modify racial identification—for example, non-Asian Whites without Asian ancestry.
 
-The model predicts that anti-Asian bias increases the utility differential between White and Asian identification, making identity switching more attractive. Mixed-race individuals face lower switching costs due to phenotypic ambiguity, while later-generation Asian Americans may find identity switching more feasible due to cultural assimilation.
+% The model predicts that anti-Asian bias increases the utility differential between White and Asian identification, making identity switching more attractive. Mixed-race individuals face lower switching costs due to phenotypic ambiguity, while later-generation Asian Americans may find identity switching more feasible due to cultural assimilation.
 
 \section{Data Sources and Measurement Strategy}\label{sec:data}
 
