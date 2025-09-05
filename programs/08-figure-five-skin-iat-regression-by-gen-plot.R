@@ -11,7 +11,8 @@
 # open data
 CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |> 
   rename(value = lw_index)
-
+CrossTable(CPS_IAT$race, CPS_IAT$Type_Asian)
+table(CPS_IAT$Type_Asian, CPS_IAT$Asian)
 
 # By generation
 reg1 <- list(
