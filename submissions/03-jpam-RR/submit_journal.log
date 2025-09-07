@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  6 SEP 2025 21:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  7 SEP 2025 13:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1312,14 +1312,14 @@ Overfull \hbox (4.04277pt too wide) in paragraph at lines 108--109
 [17]
 
 [18]
-Overfull \hbox (35.2545pt too wide) in paragraph at lines 135--136
+Overfull \hbox (35.2545pt too wide) in paragraph at lines 137--138
 \T1/ppl/m/n/12 creases in Asian racial iden-tity re-port-ing among en-dog-a-mous par-ent chil-dren^^Vestimates
  []
 
 
 
 [19]
-Overfull \hbox (6.73065pt too wide) in paragraph at lines 143--144
+Overfull \hbox (6.73065pt too wide) in paragraph at lines 145--146
 \T1/ppl/m/n/12 ter-ra-cial mar-riages, plus mi-gra-tion pat-terns among second-generation Asian Amer-
  []
 
@@ -1328,36 +1328,36 @@ Overfull \hbox (6.73065pt too wide) in paragraph at lines 143--144
 [20]
 
 [21]
-Overfull \hbox (59.51225pt too wide) in paragraph at lines 169--170
+Overfull \hbox (59.51225pt too wide) in paragraph at lines 171--172
 \T1/ppl/m/n/12 re-la-tion-ships be-tween av-er-age bias at in-ter-view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 and $\U/zeur/m/n/12 BirthPlaceMigration[]$\T1/ppl/m/n/12 .
  []
 
 
 
 [22]
-Overfull \hbox (5.13467pt too wide) in paragraph at lines 181--182
+Overfull \hbox (5.13467pt too wide) in paragraph at lines 183--184
 \T1/ppl/m/n/12 movers, my bias and Asian racial iden-tity re-port-ing re-la-tion-ship as-sess-ments might
  []
 
 
-Overfull \hbox (5.40746pt too wide) in paragraph at lines 183--184
+Overfull \hbox (5.40746pt too wide) in paragraph at lines 185--186
 []\T1/ppl/m/n/12 These find-ings in-di-cate neg-a-tive cor-re-la-tions be-tween anti-Asian bias and Asian
  []
 
 
-Overfull \hbox (3.51488pt too wide) in paragraph at lines 185--186
+Overfull \hbox (3.51488pt too wide) in paragraph at lines 187--188
 \T1/ppl/m/n/12 reported iden-tity comes from house-hold re-spon-dents^^Vparents or adult care-givers.
  []
 
 
 
 [23]
-Overfull \hbox (13.8442pt too wide) in paragraph at lines 187--188
+Overfull \hbox (13.8442pt too wide) in paragraph at lines 189--190
 []\T1/ppl/m/n/12 Moreover, []Dun-can and Trejo ([][]2011[][]) show re-ported His-panic iden-ti-fi-ca-tion doesn't
  []
 
 
-Overfull \hbox (4.35477pt too wide) in paragraph at lines 189--190
+Overfull \hbox (4.35477pt too wide) in paragraph at lines 191--192
 \T1/ppl/m/n/12 pop-u-la-tions, []Egloff and Schmukle ([][]2002[][]) demon-strate ma-nip-u-la-tion dif-fi-culty. Sev-
  []
 
@@ -1366,7 +1366,7 @@ Overfull \hbox (4.35477pt too wide) in paragraph at lines 189--190
 [24]
 
 [25]
-Overfull \hbox (2.20256pt too wide) in paragraph at lines 199--200
+Overfull \hbox (2.20256pt too wide) in paragraph at lines 201--202
 []\T1/ppl/m/n/12 I find that in-di-vid-u-als with Asian an-ces-try are sig-nif-i-cantly less likely to racially
  []
 
@@ -1447,12 +1447,12 @@ Overfull \hbox (22.87082pt too wide) in paragraph at lines 6--22
  []
 
 )
-<Bias_twostates.png, id=574, 722.7pt x 289.08pt>
+<Bias_twostates.png, id=578, 722.7pt x 289.08pt>
 File: Bias_twostates.png Graphic file (type png)
 <use Bias_twostates.png>
 Package pdftex.def Info: Bias_twostates.png  used on input line 32.
 (pdftex.def)             Requested size: 348.299pt x 139.32143pt.
-<Bias_twostates-asian.png, id=575, 722.7pt x 289.08pt>
+<Bias_twostates-asian.png, id=579, 722.7pt x 289.08pt>
 File: Bias_twostates-asian.png Graphic file (type png)
 <use Bias_twostates-asian.png>
 Package pdftex.def Info: Bias_twostates-asian.png  used on input line 39.
@@ -1467,7 +1467,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--43
 [37]
 
 [38 <./Bias_twostates.png> <./Bias_twostates-asian.png>]
-<diag.png, id=586, 673.51625pt x 492.84125pt>
+<diag.png, id=590, 673.51625pt x 492.84125pt>
 File: diag.png Graphic file (type png)
 <use diag.png>
 Package pdftex.def Info: diag.png  used on input line 54.
@@ -1475,22 +1475,22 @@ Package pdftex.def Info: diag.png  used on input line 54.
 
 
 [39 <./diag.png>]
-<2004skinmap.png, id=593, 722.7pt x 361.35pt>
+<2004skinmap.png, id=597, 722.7pt x 361.35pt>
 File: 2004skinmap.png Graphic file (type png)
 <use 2004skinmap.png>
 Package pdftex.def Info: 2004skinmap.png  used on input line 71.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2008skinmap.png, id=594, 722.7pt x 361.35pt>
+<2008skinmap.png, id=598, 722.7pt x 361.35pt>
 File: 2008skinmap.png Graphic file (type png)
 <use 2008skinmap.png>
 Package pdftex.def Info: 2008skinmap.png  used on input line 79.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2012skinmap.png, id=595, 722.7pt x 361.35pt>
+<2012skinmap.png, id=599, 722.7pt x 361.35pt>
 File: 2012skinmap.png Graphic file (type png)
 <use 2012skinmap.png>
 Package pdftex.def Info: 2012skinmap.png  used on input line 87.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2016skinmap.png, id=596, 722.7pt x 361.35pt>
+<2016skinmap.png, id=600, 722.7pt x 361.35pt>
 File: 2016skinmap.png Graphic file (type png)
 <use 2016skinmap.png>
 Package pdftex.def Info: 2016skinmap.png  used on input line 95.
@@ -1498,7 +1498,7 @@ Package pdftex.def Info: 2016skinmap.png  used on input line 95.
 
 
 [40 <./2004skinmap.png> <./2008skinmap.png> <./2012skinmap.png> <./2016skinmap.png>]
-<Average_Skinmap.png, id=603, 722.7pt x 361.35pt>
+<Average_Skinmap.png, id=607, 722.7pt x 361.35pt>
 File: Average_Skinmap.png Graphic file (type png)
 <use Average_Skinmap.png>
 Package pdftex.def Info: Average_Skinmap.png  used on input line 109.
@@ -1506,107 +1506,198 @@ Package pdftex.def Info: Average_Skinmap.png  used on input line 109.
 
 
 [41 <./Average_Skinmap.png>]
-<skin-iat-regression-all-gens.png, id=610, 722.7pt x 289.08pt>
+<histogram_asian_american_race_aggregated.png, id=614, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_aggregated.png Graphic file (type png)
+<use histogram_asian_american_race_aggregated.png>
+Package pdftex.def Info: histogram_asian_american_race_aggregated.png  used on input line 121.
+(pdftex.def)             Requested size: 430.00462pt x 258.0038pt.
+
+
+[42 <./histogram_asian_american_race_aggregated.png>]
+<histogram_asian_american_race_firstgen.png, id=625, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_firstgen.png Graphic file (type png)
+<use histogram_asian_american_race_firstgen.png>
+Package pdftex.def Info: histogram_asian_american_race_firstgen.png  used on input line 138.
+(pdftex.def)             Requested size: 430.00462pt x 258.0038pt.
+
+
+[43 <./histogram_asian_american_race_firstgen.png>]
+<histogram_asian_american_race_secondgen.png, id=635, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_secondgen.png Graphic file (type png)
+<use histogram_asian_american_race_secondgen.png>
+Package pdftex.def Info: histogram_asian_american_race_secondgen.png  used on input line 164.
+(pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
+
+Underfull \hbox (badness 1953) in paragraph at lines 168--168
+[]\T1/ppl/m/n/10.95 (b) |Sec-ond Gen-er-a-tion: Asian Fathers-
+ []
+
+<histogram_asian_american_race_secondgen_AA.png, id=636, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_secondgen_AA.png Graphic file (type png)
+<use histogram_asian_american_race_secondgen_AA.png>
+Package pdftex.def Info: histogram_asian_american_race_secondgen_AA.png  used on input line 170.
+(pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
+
+Underfull \hbox (badness 2285) in paragraph at lines 177--177
+[]\T1/ppl/m/n/10.95 (c) |Sec-ond Gen-er-a-tion: Asian Fathers-
+ []
+
+<histogram_asian_american_race_secondgen_AW.png, id=637, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_secondgen_AW.png Graphic file (type png)
+<use histogram_asian_american_race_secondgen_AW.png>
+Package pdftex.def Info: histogram_asian_american_race_secondgen_AW.png  used on input line 179.
+(pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
+
+Underfull \hbox (badness 1521) in paragraph at lines 183--183
+[]\T1/ppl/m/n/10.95 (d) |Sec-ond Gen-er-a-tion: White Fathers-
+ []
+
+<histogram_asian_american_race_secondgen_WA.png, id=638, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_secondgen_WA.png Graphic file (type png)
+<use histogram_asian_american_race_secondgen_WA.png>
+Package pdftex.def Info: histogram_asian_american_race_secondgen_WA.png  used on input line 185.
+(pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
+
+LaTeX Warning: Float too large for page by 32.78012pt on input line 198.
+
+
+
+[44 <./histogram_asian_american_race_secondgen.png> <./histogram_asian_american_race_secondgen_AA.png> <./histogram_asian_american_race_secondgen_AW.png> <./histogram_asian_american_race_secondgen_WA.png>]
+<histogram_asian_american_race_thirdgen.png, id=649, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_thirdgen.png Graphic file (type png)
+<use histogram_asian_american_race_thirdgen.png>
+Package pdftex.def Info: histogram_asian_american_race_thirdgen.png  used on input line 217.
+(pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
+<histogram_asian_american_race_thirdgen_oneasiangran.png, id=650, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_thirdgen_oneasiangran.png Graphic file (type png)
+<use histogram_asian_american_race_thirdgen_oneasiangran.png>
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_oneasiangran.png  used on input line 223.
+(pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
+<histogram_asian_american_race_thirdgen_twoasiangran.png, id=651, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_thirdgen_twoasiangran.png Graphic file (type png)
+<use histogram_asian_american_race_thirdgen_twoasiangran.png>
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_twoasiangran.png  used on input line 229.
+(pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
+<histogram_asian_american_race_thirdgen_threeasiangran.png, id=652, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_thirdgen_threeasiangran.png Graphic file (type png)
+<use histogram_asian_american_race_thirdgen_threeasiangran.png>
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_threeasiangran.png  used on input line 239.
+(pdftex.def)             Requested size: 171.99922pt x 103.19754pt.
+<histogram_asian_american_race_thirdgen_fourasiangran.png, id=653, 722.7pt x 433.62pt>
+File: histogram_asian_american_race_thirdgen_fourasiangran.png Graphic file (type png)
+<use histogram_asian_american_race_thirdgen_fourasiangran.png>
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_fourasiangran.png  used on input line 245.
+(pdftex.def)             Requested size: 171.99922pt x 103.19754pt.
+
+
+[45
+
+
+
+ <./histogram_asian_american_race_thirdgen.png> <./histogram_asian_american_race_thirdgen_oneasiangran.png> <./histogram_asian_american_race_thirdgen_twoasiangran.png> <./histogram_asian_american_race_thirdgen_threeasiangran.png> <./histogram_asian_american_race_thirdgen_fourasiangran.png>]
+<skin-iat-regression-all-gens.png, id=663, 722.7pt x 289.08pt>
 File: skin-iat-regression-all-gens.png Graphic file (type png)
 <use skin-iat-regression-all-gens.png>
-Package pdftex.def Info: skin-iat-regression-all-gens.png  used on input line 127.
+Package pdftex.def Info: skin-iat-regression-all-gens.png  used on input line 275.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-first-gen.png, id=611, 722.7pt x 289.08pt>
+<skin-iat-regression-first-gen.png, id=664, 722.7pt x 289.08pt>
 File: skin-iat-regression-first-gen.png Graphic file (type png)
 <use skin-iat-regression-first-gen.png>
-Package pdftex.def Info: skin-iat-regression-first-gen.png  used on input line 134.
+Package pdftex.def Info: skin-iat-regression-first-gen.png  used on input line 282.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-second-gen.png, id=612, 722.7pt x 289.08pt>
+<skin-iat-regression-second-gen.png, id=665, 722.7pt x 289.08pt>
 File: skin-iat-regression-second-gen.png Graphic file (type png)
 <use skin-iat-regression-second-gen.png>
-Package pdftex.def Info: skin-iat-regression-second-gen.png  used on input line 140.
+Package pdftex.def Info: skin-iat-regression-second-gen.png  used on input line 288.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-third-gen.png, id=613, 722.7pt x 289.08pt>
+<skin-iat-regression-third-gen.png, id=666, 722.7pt x 289.08pt>
 File: skin-iat-regression-third-gen.png Graphic file (type png)
 <use skin-iat-regression-third-gen.png>
-Package pdftex.def Info: skin-iat-regression-third-gen.png  used on input line 146.
+Package pdftex.def Info: skin-iat-regression-third-gen.png  used on input line 294.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[42 <./skin-iat-regression-all-gens.png> <./skin-iat-regression-first-gen.png> <./skin-iat-regression-second-gen.png> <./skin-iat-regression-third-gen.png>]
-<skin-iat-regression-all-gens-adults.png, id=620, 722.7pt x 289.08pt>
+[46
+
+ <./skin-iat-regression-all-gens.png> <./skin-iat-regression-first-gen.png> <./skin-iat-regression-second-gen.png> <./skin-iat-regression-third-gen.png>]
+<skin-iat-regression-all-gens-adults.png, id=673, 722.7pt x 289.08pt>
 File: skin-iat-regression-all-gens-adults.png Graphic file (type png)
 <use skin-iat-regression-all-gens-adults.png>
-Package pdftex.def Info: skin-iat-regression-all-gens-adults.png  used on input line 164.
+Package pdftex.def Info: skin-iat-regression-all-gens-adults.png  used on input line 312.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-first-gen-adults.png, id=621, 722.7pt x 289.08pt>
+<skin-iat-regression-first-gen-adults.png, id=674, 722.7pt x 289.08pt>
 File: skin-iat-regression-first-gen-adults.png Graphic file (type png)
 <use skin-iat-regression-first-gen-adults.png>
-Package pdftex.def Info: skin-iat-regression-first-gen-adults.png  used on input line 171.
+Package pdftex.def Info: skin-iat-regression-first-gen-adults.png  used on input line 319.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-second-gen-adults.png, id=622, 722.7pt x 289.08pt>
+<skin-iat-regression-second-gen-adults.png, id=675, 722.7pt x 289.08pt>
 File: skin-iat-regression-second-gen-adults.png Graphic file (type png)
 <use skin-iat-regression-second-gen-adults.png>
-Package pdftex.def Info: skin-iat-regression-second-gen-adults.png  used on input line 177.
+Package pdftex.def Info: skin-iat-regression-second-gen-adults.png  used on input line 325.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[43 <./skin-iat-regression-all-gens-adults.png> <./skin-iat-regression-first-gen-adults.png> <./skin-iat-regression-second-gen-adults.png>]
-<by-parents-regs-all.png, id=630, 722.7pt x 289.08pt>
+[47 <./skin-iat-regression-all-gens-adults.png> <./skin-iat-regression-first-gen-adults.png> <./skin-iat-regression-second-gen-adults.png>]
+<by-parents-regs-all.png, id=682, 722.7pt x 289.08pt>
 File: by-parents-regs-all.png Graphic file (type png)
 <use by-parents-regs-all.png>
-Package pdftex.def Info: by-parents-regs-all.png  used on input line 196.
+Package pdftex.def Info: by-parents-regs-all.png  used on input line 344.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hh.png, id=631, 722.7pt x 289.08pt>
+<by-parents-regs-hh.png, id=683, 722.7pt x 289.08pt>
 File: by-parents-regs-hh.png Graphic file (type png)
 <use by-parents-regs-hh.png>
-Package pdftex.def Info: by-parents-regs-hh.png  used on input line 203.
+Package pdftex.def Info: by-parents-regs-hh.png  used on input line 351.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hw.png, id=632, 722.7pt x 289.08pt>
+<by-parents-regs-hw.png, id=684, 722.7pt x 289.08pt>
 File: by-parents-regs-hw.png Graphic file (type png)
 <use by-parents-regs-hw.png>
-Package pdftex.def Info: by-parents-regs-hw.png  used on input line 209.
+Package pdftex.def Info: by-parents-regs-hw.png  used on input line 357.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-wh.png, id=633, 722.7pt x 289.08pt>
+<by-parents-regs-wh.png, id=685, 722.7pt x 289.08pt>
 File: by-parents-regs-wh.png Graphic file (type png)
 <use by-parents-regs-wh.png>
-Package pdftex.def Info: by-parents-regs-wh.png  used on input line 215.
+Package pdftex.def Info: by-parents-regs-wh.png  used on input line 363.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[44 <./by-parents-regs-all.png> <./by-parents-regs-hh.png> <./by-parents-regs-hw.png> <./by-parents-regs-wh.png>]
-<by-parents-regs-all-adults.png, id=641, 722.7pt x 289.08pt>
+[48 <./by-parents-regs-all.png> <./by-parents-regs-hh.png> <./by-parents-regs-hw.png> <./by-parents-regs-wh.png>]
+<by-parents-regs-all-adults.png, id=692, 722.7pt x 289.08pt>
 File: by-parents-regs-all-adults.png Graphic file (type png)
 <use by-parents-regs-all-adults.png>
-Package pdftex.def Info: by-parents-regs-all-adults.png  used on input line 233.
+Package pdftex.def Info: by-parents-regs-all-adults.png  used on input line 381.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hh-adults.png, id=642, 722.7pt x 289.08pt>
+<by-parents-regs-hh-adults.png, id=693, 722.7pt x 289.08pt>
 File: by-parents-regs-hh-adults.png Graphic file (type png)
 <use by-parents-regs-hh-adults.png>
-Package pdftex.def Info: by-parents-regs-hh-adults.png  used on input line 240.
+Package pdftex.def Info: by-parents-regs-hh-adults.png  used on input line 388.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hw-adults.png, id=643, 722.7pt x 289.08pt>
+<by-parents-regs-hw-adults.png, id=694, 722.7pt x 289.08pt>
 File: by-parents-regs-hw-adults.png Graphic file (type png)
 <use by-parents-regs-hw-adults.png>
-Package pdftex.def Info: by-parents-regs-hw-adults.png  used on input line 246.
+Package pdftex.def Info: by-parents-regs-hw-adults.png  used on input line 394.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-wh-adults.png, id=644, 722.7pt x 289.08pt>
+<by-parents-regs-wh-adults.png, id=695, 722.7pt x 289.08pt>
 File: by-parents-regs-wh-adults.png Graphic file (type png)
 <use by-parents-regs-wh-adults.png>
-Package pdftex.def Info: by-parents-regs-wh-adults.png  used on input line 252.
+Package pdftex.def Info: by-parents-regs-wh-adults.png  used on input line 400.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[45 <./by-parents-regs-all-adults.png> <./by-parents-regs-hh-adults.png> <./by-parents-regs-hw-adults.png> <./by-parents-regs-wh-adults.png>] (./tab45-iat_regression_tab_bygrandparent_type.tex)
+[49 <./by-parents-regs-all-adults.png> <./by-parents-regs-hh-adults.png> <./by-parents-regs-hw-adults.png> <./by-parents-regs-wh-adults.png>] (./tab45-iat_regression_tab_bygrandparent_type.tex)
 Overfull \vbox (20.17314pt too high) has occurred while \output is active []
 
 
 
-[46] (./tab41a-marriage.tex)
+[50] (./tab41a-marriage.tex)
 
-[47] (./tab46-iat-migration-tab.tex)
+[51] (./tab46-iat-migration-tab.tex)
 Overfull \vbox (63.0095pt too high) has occurred while \output is active []
 
 
 
-[48] (./maineffect-proxy.tex)
+[52] (./maineffect-proxy.tex)
 
-[49])
+[53])
 \blx@maxsegment@1=\count519
 \blx@sectionciteorder@1=\count520
 Package biblatex Info: Reference section=1 on input line 143.
@@ -1717,27 +1808,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{appendix.A}) h
                    \relax 
 l.14 \section{Data}
                     % (fold)
-<iatexample1.png, id=741, 1170.3725pt x 560.0925pt>
+<iatexample1.png, id=794, 1170.3725pt x 560.0925pt>
 File: iatexample1.png Graphic file (type png)
 <use iatexample1.png>
 Package pdftex.def Info: iatexample1.png  used on input line 23.
 (pdftex.def)             Requested size: 185.75906pt x 88.89018pt.
-<iatexample2.png, id=742, 730.73pt x 502.87875pt>
+<iatexample2.png, id=795, 730.73pt x 502.87875pt>
 File: iatexample2.png Graphic file (type png)
 <use iatexample2.png>
 Package pdftex.def Info: iatexample2.png  used on input line 29.
 (pdftex.def)             Requested size: 185.75906pt x 127.8372pt.
-<iatexample3.png, id=743, 739.76375pt x 500.87125pt>
+<iatexample3.png, id=796, 739.76375pt x 500.87125pt>
 File: iatexample3.png Graphic file (type png)
 <use iatexample3.png>
 Package pdftex.def Info: iatexample3.png  used on input line 34.
 (pdftex.def)             Requested size: 185.75906pt x 125.76776pt.
-<iatexample4.png, id=744, 733.74126pt x 503.8825pt>
+<iatexample4.png, id=797, 733.74126pt x 503.8825pt>
 File: iatexample4.png Graphic file (type png)
 <use iatexample4.png>
 Package pdftex.def Info: iatexample4.png  used on input line 39.
 (pdftex.def)             Requested size: 185.75906pt x 127.56186pt.
-<iatexample5.png, id=745, 732.7375pt x 504.88625pt>
+<iatexample5.png, id=798, 732.7375pt x 504.88625pt>
 File: iatexample5.png Graphic file (type png)
 <use iatexample5.png>
 Package pdftex.def Info: iatexample5.png  used on input line 44.
@@ -1790,22 +1881,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{appendix.C}) h
                    \relax 
 l.74 \section{Figures}
                       \label{appendix:figs}
-<county-by-parents-regs-all.png, id=783, 722.7pt x 289.08pt>
+<county-by-parents-regs-all.png, id=835, 722.7pt x 289.08pt>
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
 Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 85.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-first-gen.png, id=784, 722.7pt x 289.08pt>
+<county-skin-iat-regression-first-gen.png, id=836, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-first-gen.png Graphic file (type png)
 <use county-skin-iat-regression-first-gen.png>
 Package pdftex.def Info: county-skin-iat-regression-first-gen.png  used on input line 92.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-second-gen.png, id=785, 722.7pt x 289.08pt>
+<county-skin-iat-regression-second-gen.png, id=837, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-second-gen.png Graphic file (type png)
 <use county-skin-iat-regression-second-gen.png>
 Package pdftex.def Info: county-skin-iat-regression-second-gen.png  used on input line 98.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-third-gen.png, id=786, 722.7pt x 289.08pt>
+<county-skin-iat-regression-third-gen.png, id=838, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-third-gen.png Graphic file (type png)
 <use county-skin-iat-regression-third-gen.png>
 Package pdftex.def Info: county-skin-iat-regression-third-gen.png  used on input line 104.
@@ -1822,17 +1913,17 @@ File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
 Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 122.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-hh.png, id=790, 722.7pt x 289.08pt>
+<county-by-parents-regs-hh.png, id=842, 722.7pt x 289.08pt>
 File: county-by-parents-regs-hh.png Graphic file (type png)
 <use county-by-parents-regs-hh.png>
 Package pdftex.def Info: county-by-parents-regs-hh.png  used on input line 129.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-hw.png, id=791, 722.7pt x 289.08pt>
+<county-by-parents-regs-hw.png, id=843, 722.7pt x 289.08pt>
 File: county-by-parents-regs-hw.png Graphic file (type png)
 <use county-by-parents-regs-hw.png>
 Package pdftex.def Info: county-by-parents-regs-hw.png  used on input line 135.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-wh.png, id=792, 722.7pt x 289.08pt>
+<county-by-parents-regs-wh.png, id=844, 722.7pt x 289.08pt>
 File: county-by-parents-regs-wh.png Graphic file (type png)
 <use county-by-parents-regs-wh.png>
 Package pdftex.def Info: county-by-parents-regs-wh.png  used on input line 141.
@@ -1845,22 +1936,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has 
                    \relax 
 l.148 \newpage
                [18 <./county-by-parents-regs-hh.png> <./county-by-parents-regs-hw.png> <./county-by-parents-regs-wh.png>]
-<msa-by-parents-regs-all.png, id=796, 722.7pt x 289.08pt>
+<msa-by-parents-regs-all.png, id=848, 722.7pt x 289.08pt>
 File: msa-by-parents-regs-all.png Graphic file (type png)
 <use msa-by-parents-regs-all.png>
 Package pdftex.def Info: msa-by-parents-regs-all.png  used on input line 159.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-first-gen.png, id=797, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-first-gen.png, id=849, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-first-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-first-gen.png>
 Package pdftex.def Info: msa-skin-iat-regression-first-gen.png  used on input line 166.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-second-gen.png, id=798, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-second-gen.png, id=850, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-second-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-second-gen.png>
 Package pdftex.def Info: msa-skin-iat-regression-second-gen.png  used on input line 172.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-third-gen.png, id=799, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-third-gen.png, id=851, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-third-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-third-gen.png>
 Package pdftex.def Info: msa-skin-iat-regression-third-gen.png  used on input line 178.
@@ -1897,12 +1988,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has 
                    \relax 
 l.222 \newpage
                [20]
-<scatter-plot-bias-Asian-less2015.png, id=807, 722.7pt x 433.62pt>
+<scatter-plot-bias-Asian-less2015.png, id=858, 722.7pt x 433.62pt>
 File: scatter-plot-bias-Asian-less2015.png Graphic file (type png)
 <use scatter-plot-bias-Asian-less2015.png>
 Package pdftex.def Info: scatter-plot-bias-Asian-less2015.png  used on input line 231.
 (pdftex.def)             Requested size: 348.299pt x 208.98215pt.
-<scatter-plot-bias-Asian-great2015.png, id=808, 722.7pt x 433.62pt>
+<scatter-plot-bias-Asian-great2015.png, id=859, 722.7pt x 433.62pt>
 File: scatter-plot-bias-Asian-great2015.png Graphic file (type png)
 <use scatter-plot-bias-Asian-great2015.png>
 Package pdftex.def Info: scatter-plot-bias-Asian-great2015.png  used on input line 238.
@@ -1952,16 +2043,16 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
 Package rerunfilecheck Info: File `submit_journal.out' has not changed.
-(rerunfilecheck)             Checksum: FE652C5A0E6314CCDB3F439D912AF697;2825.
+(rerunfilecheck)             Checksum: F6335DF2B1001DE316D186BDF4BE5681;3140.
 Package logreq Info: Writing requests to 'submit_journal.run.xml'.
 \openout1 = `submit_journal.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42812 strings out of 473579
- 877663 string characters out of 5728228
- 2049315 words of memory out of 5000000
- 64795 multiletter control sequences out of 15000+600000
+ 42904 strings out of 473579
+ 882138 string characters out of 5728228
+ 2050659 words of memory out of 5000000
+ 64878 multiletter control sequences out of 15000+600000
  612000 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  93i,21n,98p,2210b,4043s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1984,10 +2075,10 @@ pdfTeX warning (dest): name{cite.2@telles2008generations} has been referenced bu
 pdfTeX warning (dest): name{cite.2@waters1990ethnic} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on submit_journal.pdf (78 pages, 3290527 bytes).
+Output written on submit_journal.pdf (82 pages, 4773874 bytes).
 PDF statistics:
- 933 PDF objects out of 1000 (max. 8388607)
- 766 compressed objects within 8 object streams
- 205 named destinations out of 1000 (max. 500000)
- 346 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 986 PDF objects out of 1000 (max. 8388607)
+ 796 compressed objects within 8 object streams
+ 214 named destinations out of 1000 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
 
