@@ -1,36 +1,36 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'submit_journal.blg'
-[35] biber-darwin:340> INFO - === Fri Sep  5, 2025, 15:12:46
-[46] Biber.pm:420> INFO - Reading 'submit_journal.bcf'
-[135] Biber.pm:994> INFO - Found 51 citekeys in bib section 0
-[136] Biber.pm:994> INFO - Found 0 citekeys in bib section 1
-[136] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[136] Biber.pm:994> INFO - Found 6 citekeys in bib section 2
-[136] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[136] Biber.pm:994> INFO - Found 1 citekeys in bib section 3
-[136] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[151] Biber.pm:4463> INFO - Processing section 0
-[156] Biber.pm:4654> INFO - Looking for bibtex file 'AttitudesPaper.bib' for section 0
-[171] bibtex.pm:1713> INFO - LaTeX decoding ...
-[358] bibtex.pm:1519> INFO - Found BibTeX data source 'AttitudesPaper.bib'
-[565] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[565] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[36] biber-darwin:340> INFO - === Sat Sep  6, 2025, 20:59:10
+[48] Biber.pm:420> INFO - Reading 'submit_journal.bcf'
+[140] Biber.pm:994> INFO - Found 51 citekeys in bib section 0
+[140] Biber.pm:994> INFO - Found 0 citekeys in bib section 1
+[140] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[140] Biber.pm:994> INFO - Found 6 citekeys in bib section 2
+[140] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[140] Biber.pm:994> INFO - Found 1 citekeys in bib section 3
+[140] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[156] Biber.pm:4463> INFO - Processing section 0
+[161] Biber.pm:4654> INFO - Looking for bibtex file 'AttitudesPaper.bib' for section 0
+[177] bibtex.pm:1713> INFO - LaTeX decoding ...
+[362] bibtex.pm:1519> INFO - Found BibTeX data source 'AttitudesPaper.bib'
 [565] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[565] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[565] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [565] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
 [565] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[599] Biber.pm:4463> INFO - Processing section 2
-[599] Biber.pm:4654> INFO - Looking for bibtex file 'AttitudesPaper.bib' for section 2
-[621] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
-[621] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[621] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[621] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[621] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[624] Biber.pm:4463> INFO - Processing section 3
-[624] Biber.pm:4654> INFO - Looking for bibtex file 'AttitudesPaper.bib' for section 3
-[632] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[632] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
-[632] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[632] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[632] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[633] bbl.pm:676> INFO - Writing 'submit_journal.bbl' with encoding 'UTF-8'
-[650] bbl.pm:779> INFO - Output to submit_journal.bbl
+[600] Biber.pm:4463> INFO - Processing section 2
+[600] Biber.pm:4654> INFO - Looking for bibtex file 'AttitudesPaper.bib' for section 2
+[619] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[619] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[619] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[619] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[619] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[622] Biber.pm:4463> INFO - Processing section 3
+[623] Biber.pm:4654> INFO - Looking for bibtex file 'AttitudesPaper.bib' for section 3
+[630] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[630] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[630] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[631] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[631] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[631] bbl.pm:676> INFO - Writing 'submit_journal.bbl' with encoding 'UTF-8'
+[648] bbl.pm:779> INFO - Output to submit_journal.bbl

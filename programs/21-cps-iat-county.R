@@ -19,6 +19,8 @@ Asian_IAT <- read_csv(file.path(datasets,"Asia_IAT_Clean.csv"))
 
 CPS <- fread(CPS_asian)
 CPS <- as.data.frame(CPS)
+CPS <- CPS[, !duplicated(names(CPS))]
+
 CPS <- CPS |> 
   mutate(Proxy = case_when(hhrespln ==lineno ~ "Self",
                            hhrespln ==lineno_mom ~ "Mother",
@@ -203,5 +205,3 @@ CPS_IAT <- left_join(CPS_IAT,
   rename(frac_asian = MeanAsian)
 # save
 write_csv(CPS_IAT, file.path(datasets,"CPS_IAT_asian_county.csv"))
-
-CrossTable(CPS_IAT$Type_Asian, CPS_IAT$Asian)

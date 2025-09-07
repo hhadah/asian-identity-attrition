@@ -19,6 +19,8 @@ Asian_IAT <- read_csv(file.path(datasets,"Asia_IAT_Clean.csv"))
 
 CPS <- fread(CPS_asian)
 CPS <- as.data.frame(CPS)
+CPS <- CPS[, !duplicated(names(CPS))]
+
 CPS <- CPS |> 
   mutate(Proxy = case_when(hhrespln ==lineno ~ "Self",
                            hhrespln ==lineno_mom ~ "Mother",

@@ -206,6 +206,31 @@
       \endverb
       \keyw{Behavior,Identity (Psychology),Sex discrimination in employment,Social marginality}
     \endentry
+    \entry{almasalkhi2023links}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ef2e5345625875ab85bdd283d72fe080}{%
+           family={Almasalkhi},
+           familyi={A\bibinitperiod},
+           given={Nadia},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{fullhash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{fullhashraw}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{bibnamehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authorbibnamehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authornamehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authorfullhash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authorfullhashraw}{ef2e5345625875ab85bdd283d72fe080}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{title}{Links between Anti-Immigrant Bias and Racial Prejudice in California}
+      \field{year}{2023}
+    \endentry
     \entry{anes2021}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=d8d96bc5d0cad88ae5aebca078a7d103}{%
@@ -1227,6 +1252,39 @@
       \field{year}{1983}
       \field{pages}{197\bibrangedash 214}
       \range{pages}{18}
+    \endentry
+    \entry{cornell2006ethnicity}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=76496629405c073255a4f9956f9d727a}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4a828980b9a66d3e191779260e4fd29b}{%
+           family={Hartmann},
+           familyi={H\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{259c4ccd70783c1622864946f0727720}
+      \strng{fullhash}{259c4ccd70783c1622864946f0727720}
+      \strng{fullhashraw}{259c4ccd70783c1622864946f0727720}
+      \strng{bibnamehash}{259c4ccd70783c1622864946f0727720}
+      \strng{authorbibnamehash}{259c4ccd70783c1622864946f0727720}
+      \strng{authornamehash}{259c4ccd70783c1622864946f0727720}
+      \strng{authorfullhash}{259c4ccd70783c1622864946f0727720}
+      \strng{authorfullhashraw}{259c4ccd70783c1622864946f0727720}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethnicity and race: Making identities in a changing world}
+      \field{year}{2006}
     \endentry
     \entry{darityPositionPossessionsStratification2022}{article}{}{}
       \name{author}{1}{}{%
@@ -2554,6 +2612,140 @@
       \verb{url}
       \verb https://www-journals-uchicago-edu.ezproxy.lib.uh.edu/doi/full/10.1086%2F425436
       \endverb
+    \endentry
+    \entry{mora2020antiblackness}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=666ad588b4a88746cfd79236f8d41dad}{%
+           family={Mora},
+           familyi={M\bibinitperiod},
+           given={G\bibnamedelima Cristina},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a1cbcef564ea3f57e94c7a9c8bdb6519}{%
+           family={Paschel},
+           familyi={P\bibinitperiod},
+           given={Tianna\bibnamedelima S},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{fullhash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{fullhashraw}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{bibnamehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authorbibnamehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authornamehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authorfullhash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authorfullhashraw}{c763931174fbbad94a85f9dd927a14a1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Sociological Forum}
+      \field{title}{Antiblackness as a logic for anti-immigrant resentment: Evidence from California}
+      \field{volume}{35}
+      \field{year}{2020}
+      \field{pages}{918\bibrangedash 940}
+      \range{pages}{23}
+    \endentry
+    \entry{telles2008generations}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=3a376febe4fea93815b8ffe7bc5661b1}{%
+           family={Telles},
+           familyi={T\bibinitperiod},
+           given={Edward\bibnamedelima E},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=dffa0381872705b3a452e2a2ec9a8e7a}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Vilma},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Russell Sage Foundation}%
+      }
+      \strng{namehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{fullhash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{fullhashraw}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{bibnamehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authorbibnamehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authornamehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authorfullhash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authorfullhashraw}{e3462f154dd3b9022cefbf82d6ccada6}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Generations of exclusion: Mexican-Americans, assimilation, and race}
+      \field{year}{2008}
+    \endentry
+    \entry{waters1990ethnic}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1da01b6fe7ec3ead55755064e216f253}{%
+           family={Waters},
+           familyi={W\bibinitperiod},
+           given={Mary\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berkeley}%
+      }
+      \list{publisher}{1}{%
+        {University of California Press}%
+      }
+      \strng{namehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{fullhash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{fullhashraw}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{bibnamehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authorbibnamehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authornamehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authorfullhash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authorfullhashraw}{1da01b6fe7ec3ead55755064e216f253}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{title}{Ethnic Options: Choosing Identities in America}
+      \field{year}{1990}
+    \endentry
+    \entry{zhou1997segmented}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f18ed0379542e330dab8ec3d169b83ee}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage CA: Los Angeles, CA}%
+      }
+      \strng{namehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{fullhash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{fullhashraw}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{bibnamehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authorbibnamehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authornamehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authorfullhash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authorfullhashraw}{f18ed0379542e330dab8ec3d169b83ee}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{International migration review}
+      \field{number}{4}
+      \field{title}{Segmented assimilation: Issues, controversies, and recent research on the new second generation}
+      \field{volume}{31}
+      \field{year}{1997}
+      \field{pages}{975\bibrangedash 1008}
+      \range{pages}{34}
     \endentry
   \enddatalist
 \endrefsection

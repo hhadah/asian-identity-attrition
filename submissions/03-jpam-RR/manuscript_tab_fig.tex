@@ -9,7 +9,17 @@
 \newpage
 \pagebreak
 
+\input{tab53-SumStatOverAll-adults}
+
+\newpage
+\pagebreak
+
 \input{tab02-observations-by-gen}
+
+\newpage
+\pagebreak
+
+\input{tab54-observations-by-gen-adults}
 
 \begin{center}
 \begin{figure}[H]
@@ -145,6 +155,38 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \begin{center}
 \begin{figure}[!htb]
 \centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Generation Among Adults}
+\label{plot01-regression-gen-adults}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{All Generations}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-all-gens-adults.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{First-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-first-gen-adults.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-second-gen-adults.png}
+\end{subfigure}
+
+\caption*{\footnotesize{I show three panels of estimating equation (\ref{eq:identity_reg_bias}) on a sample of adults. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel is the results from the same regression but on different samples that are divided by generation. Standard errors are clustered on the state level. The samples include first- and second-generation Asian adults ages 18 and above. First-generation Asian immigrants are individuals that were born in a Asian country. Native-born second-generation Asian immigrants are individuals with at least one parent born in a Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
 \caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types}
 \label{plot01-regression-byparent}
 %First graph
@@ -175,6 +217,44 @@ Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scor
 \caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in an Asian country.}}
 \end{figure}
 \end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types Among Adults}
+\label{plot01-regression-byparent-adults}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation (All Parental Types)}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-all-adults.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-hh-adults.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-hw-adults.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-wh-adults.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}) on a sample of adults. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian individuals ages 18 and above. Native-born second-generation Asian immigrant individuals with at least one parent born in an Asian country.}}
+\end{figure}
+\end{center}
+
 
 \pagebreak
 \newpage
