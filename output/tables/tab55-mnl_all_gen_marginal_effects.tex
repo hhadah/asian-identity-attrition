@@ -1,0 +1,24 @@
+\begin{table}[H]
+\centering
+\caption{Multinomial Logit — All Generations (AMEs)}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lrrrrrr}
+\toprule
+variable\_label & est\_ci\_Asian\_only & est\_ci\_White\_only & est\_ci\_Asian\_and\_White & p.value\_Asian\_only & p.value\_White\_only & p.value\_Asian\_and\_White\\
+\midrule
+Anti-Asian Bias & -0.1447 [-0.1447, -0.1447] & 0.1316 [0.1316, 0.1316] & 0.0131 [0.0131, 0.0131] & 0 & 0 & 0\\
+College Graduate: Father & 0.0011 [0.0011, 0.0011] & -0.0159 [-0.0160, -0.0159] & 0.0149 [0.0149, 0.0149] & 0 & 0 & 0\\
+College Graduate: Mother & 0.0109 [0.0109, 0.0109] & -0.0146 [-0.0146, -0.0146] & 0.0037 [0.0037, 0.0037] & 0 & 0 & 0\\
+Female & -0.0077 [-0.0077, -0.0077] & 0.0261 [0.0261, 0.0261] & -0.0184 [-0.0184, -0.0184] & 0 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] footnotesize{Average Marginal Effects (AME) with 95% CI.}
+\item[2] footnotesize{Standard errors clustered at the state level.}
+\item[3] footnotesize{Reference category is embedded in the multinomial baseline (Asian only).}
+\item[4] footnotesize{Models include region-year fixed effects.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

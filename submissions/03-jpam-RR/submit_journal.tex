@@ -183,7 +183,7 @@ The author declare that they have no conflicts of interest regarding the publica
         \end{spacing}
         
     \begin{spacing}{\rrxspc}
-        \textbf{Response:} I appreciate the referee's attention to this issue. It is a point I address in the paper's data section in the following footnote ``I restrict first-generation cases to those whose parents were born in Asian countries to exclude US citizens born abroad to American parents''. Following the comment, I am going to add a few sentences to clarify this point. Specifically, I will add the following sentences in the data section: ``It is important to note that while the ancestry measure provides an objective assessment of Asian heritage, it may not capture all nuances of racial identity. For instance, White individuals with Asian ancestry born to non-Asian parents in Asia, such as on American military bases, may not be classified as Asian in the data. To avoid potential misclassification, I remove individuals who report that they were born abroad of American parents.''
+        \textbf{Response:} I appreciate the referee's attention to this issue. It is a point I address in the paper's data section in the following footnote ``I restrict first-generation cases to those whose parents were born in Asian countries to exclude US citizens born abroad to American parents''. Following the comment, I added a few sentences to clarify this point. Specifically, I added the following sentences in the data section: ``It is important to note that while the ancestry measure provides an objective assessment of Asian heritage, it may not capture all nuances of racial identity. For instance, White individuals with Asian ancestry born to non-Asian parents in Asia, such as on American military bases, may not be classified as Asian in the data. To avoid potential misclassification, I remove individuals who report that they were born abroad of American parents.''
     \end{spacing}    
 
     \begin{spacing}{\rrxspc}
@@ -227,32 +227,55 @@ The author declare that they have no conflicts of interest regarding the publica
 
     \begin{spacing}{\rrquote}
         \begin{quotation}
-        \textbf{R2: } 1. 
+        \textbf{R2: } 1. The paper reports that roughly 96\% of individuals who were born in Asia or who have two Asian parents report being Asian. Before analyzing this group, it would be essential to understand the 4\% who do not. Do they report being of a single racial group not elsewhere classified (e.g., Indian or Chinese), in which case we might reasonably either exclude them since we do not know what they reported or assume that they chose a subcategory of Asian? Is there any way to determine what proportion might be expats born in Asia (primarily in Hong Kong or Singapore)?
         \end{quotation}
         \end{spacing}
         
         \begin{spacing}{\rrxspc}
-            \textbf{Response:}  
+            \textbf{Response:}  Thank you for this important question. Allow me to break down your comment into different parts that I would address separately. 
+
+            First, regarding the 4\% of individuals born in Asia or with two Asian parents who do not report being Asian, I have examined their self-reported racial identities. I believe that this comment is related to your other comment below regarding showing the distribution of racial identities among those with Asian ancestry. I will respond to that comment below in more detail. However, to briefly address this point, I added a new section to the manuscript (From the Data: Asian Racial Identity and Attrition) where I show the racial attrition and racial choices among those with Asian ancestry. Specifically, I show which of the following categories they report: (1) Asian only, (2) White only, (3) Asian and White/Pacific Islander, (4) other non-Asian multiracial combinations, (5) Asian combined with other races, and (6) Asian/Pacific Islander. 
+
+            Moreover, my analysis defines Asian countries as East Asian and Southeast Asian nations (China, Hong Kong, Taiwan, Japan, Korea, Mongolia, Cambodia, Indonesia, Laos, Malaysia, Philippines, Singapore, Thailand, and Vietnam), excluding South Asian and Middle Eastern countries. This classification aligns with standard demographic research on East and Southeast Asian populations and reflects shared experiences within these regions. To make this clearer, I have added a footnote in the data section specifying which countries are included in the definition of Asian countries. The footnote reads: ``For this analysis, Asian countries comprise East Asian and Southeast Asian nations, including China, Hong Kong, Taiwan, Japan, Korea, Mongolia, Cambodia, Indonesia, Laos, Malaysia, Philippines, Singapore, Thailand, and Vietnam, but exclude South Asian and Middle Eastern countries, consistent with standard demographic classifications.''
+
+
+            Finally, regarding your point on the ability using the data to identify expats born in Asian countries (i.e. US citizens born abroad to US parents). It is a point I address in the paper's data section in the following footnote ``I restrict first-generation cases to those whose parents were born in Asian countries to exclude US citizens born abroad to American parents''. To make sure that this would be clear in the paper, I added a few sentences to clarify this point. Specifically, I added the following sentences in the data section: ``It is important to note that while the ancestry measure provides an objective assessment of Asian heritage, it may not capture all nuances of racial identity. For instance, White individuals with Asian ancestry born to non-Asian parents in Asia, such as on American military bases, may not be classified as Asian in the data. To avoid potential misclassification, I remove individuals who report that they were born abroad of American parents.''
+
     \end{spacing}
 
     \begin{spacing}{\rrquote}
         \begin{quotation}
-        \textbf{R2: } 2. 
+        \textbf{R2: } 2. Leaving aside these issues, it is problematic to use a linear probability model when the probability is near 0 or 1. Given the range of bias shown in some of the figures, a coefficient of -.05 suggests that the predicted probability of reporting to be Asian is likely to exceed 1 for a nontrivial number of observations. At the very least, the author should show that the results are robust to using probit and logit. I am more inclined to the view that trying to explain the small proportion of individuals with two Asian parents who do not self-identify as Asian is not likely to be productive.
         \end{quotation}
         \end{spacing}
         
         \begin{spacing}{\rrxspc}
-            \textbf{Response:} 
+            \textbf{Response:} I thank the reviewer for this important methodological point. To address concerns about the linear probability model's limitations when probabilities approach boundary values, I have estimated both logit and probit models alongside the LPM specifications for all analyses. As shown in Tables \ref{regtab-all-gen}-\ref{regtab-third-gen}, the marginal effects from logit and probit models are remarkably consistent with the LPM coefficients across all generational groups, providing strong evidence for the robustness of the findings.
+
+            Regarding the specific concern about predicted probabilities exceeding 1: the logit and probit specifications, which are bounded between 0 and 1 by construction, yield nearly identical marginal effects, confirming that boundary issues are not driving the results.
+
+            The reviewer raises an interesting point about the substantive focus on the minority who do not self-identify as Asian despite having Asian ancestry. However, this phenomenon represents a theoretically important pattern that motivates my research design choices. This is precisely why I break down my analysis by generation and family structure—to demonstrate how identity switching costs vary systematically across different groups. As outlined in Akerlof and Kranton (2000), individuals face differential costs when changing identities based on their circumstances and social constraints. Those with more proscribed identity choices, such as individuals with two Asian parents who appear phenotypically Asian, face higher switching costs and react differently to their environment than those with less constrained options, such as mixed-race individuals who possess greater phenotypic ambiguity. My findings support this theoretical prediction: while bias effects are statistically insignificant among second-generation children with two Asian parents, they are substantial and significant among children from interracial families (15 percentage points for Asian father-White mother families and 10 percentage points for White father-Asian mother families). I present results for all subgroups both for transparency and to illustrate this crucial heterogeneity in identity switching costs. The systematic relationship between experienced bias and identity reporting across these different constraint structures provides insights into how discrimination shapes ethnic and racial identification processes, with direct implications for measuring racial gaps and understanding the economic mechanisms underlying assimilation patterns.
+
+
         \end{spacing}
 
     \begin{spacing}{\rrquote}
         \begin{quotation}
-        \textbf{R2: } 3. 
+        \textbf{R2: } 3. The interesting part of the paper concerns individuals of mixed ancestry, most of whom do not identify as Asian. But, the only Asian/not only Asian dichotomy is problematic. What proportion of the “not only Asian” reports being Asian and something else? In general, we want to know whether explanatory variables shift mixed-race individuals from reporting themselves as Asian only to something else only, or to biracial.
         \end{quotation}
         \end{spacing}
         
         \begin{spacing}{\rrxspc}
-            \textbf{Response:} 
+            \textbf{Response:} I appreciate the reviewer's insightful comments on the complexities of racial identity. I believe that addressing this point will significantly enhance my paper. First, to address your comment regarding the distribution of racial identities among those with Asian ancestry, I have added a new section to the manuscript (From the Data: Asian Racial Identity and Attrition) where I show the racial attrition and racial choices among those with Asian ancestry. Specifically, I show which of the following categories they report: (1) Asian only, (2) White only, (3) Asian and White/Pacific Islander, (4) other non-Asian multiracial combinations, (5) Asian combined with other races, and (6) Asian/Pacific Islander. I provide this breakdown for all generations and separately for first-, second-, and third-generation individuals in Figures \ref{fig:histogram-all}-\ref{fig:histogram-thirdgen}. Please see Section \ref{sec:attrition} for the full discussion of these results. 
+
+            The data reveal that among those not identifying as ``Asian only,'' there is substantial variation in identity choices. Among second-generation children from interracial families, 29\% of those with Asian fathers and White mothers report ``Asian and White/Pacific Islander'' (biracial), while 27\% report ``White only.'' Similarly, 40\% of those with White fathers and Asian mothers report ``Asian and White/Pacific Islander,'' while 24\% report ``White only.'' This pattern shows that mixed-ancestry individuals do not simply shift from Asian identification to White identification, but frequently adopt multiracial identities.
+
+            The breakdown becomes even more complex among third-generation individuals. Those with fewer Asian grandparents are more likely to report ``White only'' (54\% for those with one Asian grandparent), while those with more Asian ancestry maintain higher rates of multiracial identification. Critically, even among third-generation children with four Asian grandparents, 92\% still report ``Asian only,'' demonstrating that family composition rather than generational status drives identity flexibility.
+
+            These findings directly address the reviewer's question ``What proportion of the “not only Asian” reports being Asian and something else?'' 
+
+            % To further explore how explanatory variables influence these identity choices, I have re-estimated my main models using multinomial logistic regression. This approach allows me to model the probabilities of reporting ``Asian only,'' ``White only,'' and ``Asian and White/Pacific Islander'' as separate outcomes. The results, presented in Tables \ref{regtab-mnl-all-gen}-\ref{regtab-mnl-third-gen}, reveal that anti-Asian bias significantly decreases the likelihood of reporting ``Asian only'' while increasing the probabilities of both ``White only'' and ``Asian and White/Pacific Islander'' identifications among mixed-ancestry individuals. For example, among second-generation children from Asian father-White mother families, a one standard deviation increase in anti-Asian bias is associated with a 12 percentage point decrease in the probability of reporting ``Asian only,'' a 7 percentage point increase in ``White only,'' and a 5 percentage point increase in ``Asian and White/Pacific Islander.''
+
     \end{spacing}
 
     \begin{spacing}{\rrquote}
