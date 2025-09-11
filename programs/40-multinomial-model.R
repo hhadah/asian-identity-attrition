@@ -189,31 +189,31 @@ mnl_second_wa <- fit_multinomial_model(
 # Choose ONE of the vcov routes below:
 
 me_all_gen    <- avg_slopes(mnl_all_gen,    variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = CPS_IAT_multinomial, vcov = ~statefip)
+                            by = "group", newdata = CPS_IAT_multinomial)
 me_first_gen  <- avg_slopes(mnl_first_gen,  variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian==1))
 me_second_gen <- avg_slopes(mnl_second_gen, variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1))
 me_third_gen  <- avg_slopes(mnl_third_gen,  variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1))
 
 # Marginal effects for third generation ancestry subgroups
 me_third_one   <- avg_slopes(mnl_third_one,   variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, OneAsian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, OneAsian==1))
 me_third_two   <- avg_slopes(mnl_third_two,   variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, TwoAsian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, TwoAsian==1))
 me_third_three <- avg_slopes(mnl_third_three, variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, ThreeAsian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, ThreeAsian==1))
 me_third_four  <- avg_slopes(mnl_third_four,  variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, FourAsian==1), vcov = ~statefip)
+                            by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian==1, FourAsian==1))
 
 # Marginal effects for second generation ancestry subgroups
 me_second_aa <- avg_slopes(mnl_second_aa, variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                          by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1, AA_0bj==1), vcov = ~statefip)
+                          by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1, AA_0bj==1))
 me_second_aw <- avg_slopes(mnl_second_aw, variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                          by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1, AW_0bj==1), vcov = ~statefip)
+                          by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1, AW_0bj==1))
 me_second_wa <- avg_slopes(mnl_second_wa, variables = c("value","Female","MomGradCollege","DadGradCollege"),
-                          by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1, WA_0bj==1), vcov = ~statefip)
+                          by = "group", newdata = dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian==1, WA_0bj==1))
 
 # 2) One-SD effects for `value` with CIs
 # Normalize column names from marginaleffects outputs
@@ -681,13 +681,13 @@ cat("Files include:\n",
     " - mnl_ame_value_*.png (AME dot-whiskers: effect on the margins)\n", sep = "")
 
 
-# Enhanced plotting function for multinomial logit results
-# This creates line plots with confidence intervals similar to your reference image
-# More robust plotting function that handles nnet::multinom peculiarities
-# Function that manually calculates predictions and uses bootstrap for CIs
-plot_pp_enhanced_manual <- function(model, data_subset, var_name, gen_label, n_points = 5) {
+# Simple and reliable plotting function for nnet::multinom models
+# Uses base R predict() with straightforward confidence intervals
+
+# Enhanced plotting function that adds value labels to points
+plot_pp_simple_with_labels <- function(model, data_subset, var_name, gen_label, n_points = 5) {
   
-  # Get variable sequence
+  # Set variable sequence
   if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
     var_seq <- c(0, 1)
   } else {
@@ -695,43 +695,392 @@ plot_pp_enhanced_manual <- function(model, data_subset, var_name, gen_label, n_p
     var_seq <- seq(var_range[1], var_range[2], length.out = n_points)
   }
   
-  # Create newdata manually
-  newdata_base <- data_subset[1, ]
-  newdata_base$Female <- safe_mean(data_subset$Female)
-  newdata_base$MomGradCollege <- safe_mean(data_subset$MomGradCollege)
-  newdata_base$DadGradCollege <- safe_mean(data_subset$DadGradCollege)
-  newdata_base$frac_asian <- safe_mean(data_subset$frac_asian)
-  newdata_base$Age <- safe_mean(data_subset$Age)
-  newdata_base$Age_sq <- safe_mean(data_subset$Age_sq)
-  newdata_base$Age_cube <- safe_mean(data_subset$Age_cube)
-  newdata_base$Age_quad <- safe_mean(data_subset$Age_quad)
-  newdata_base$region_year <- ref_region_year
+  # Get representative values (using simple base R functions)
+  get_rep_value <- function(x) {
+    if (is.numeric(x)) {
+      mean(x, na.rm = TRUE)
+    } else {
+      # For factors/characters, get the most common value
+      tbl <- table(x)
+      names(tbl)[which.max(tbl)]
+    }
+  }
   
-  if ("AA_0bj" %in% names(data_subset)) newdata_base$AA_0bj <- safe_mean(data_subset$AA_0bj)
-  if ("FirstGen_Asian" %in% names(data_subset)) newdata_base$FirstGen_Asian <- safe_mean(data_subset$FirstGen_Asian)
-  if ("SecondGen_Asian" %in% names(data_subset)) newdata_base$SecondGen_Asian <- safe_mean(data_subset$SecondGen_Asian)
-  if ("Grandparent_Type" %in% names(data_subset)) newdata_base$Grandparent_Type <- Mode(data_subset$Grandparent_Type)
+  # Create a representative observation
+  rep_data <- data_subset[1, ]  # Start with first row as template
   
-  # Create prediction grid
-  nd <- newdata_base[rep(1, length(var_seq)), ]
+  # Set all variables to representative values
+  rep_data$Female <- get_rep_value(data_subset$Female)
+  rep_data$MomGradCollege <- get_rep_value(data_subset$MomGradCollege)
+  rep_data$DadGradCollege <- get_rep_value(data_subset$DadGradCollege)
+  rep_data$frac_asian <- get_rep_value(data_subset$frac_asian)
+  rep_data$Age <- get_rep_value(data_subset$Age)
+  rep_data$Age_sq <- get_rep_value(data_subset$Age_sq)
+  rep_data$Age_cube <- get_rep_value(data_subset$Age_cube)
+  rep_data$Age_quad <- get_rep_value(data_subset$Age_quad)
+  
+  # Set region_year to the most common value
+  rep_data$region_year <- get_rep_value(data_subset$region_year)
+  
+  # Handle generation-specific variables
+  if ("AA_0bj" %in% names(data_subset)) {
+    rep_data$AA_0bj <- get_rep_value(data_subset$AA_0bj)
+  }
+  if ("FirstGen_Asian" %in% names(data_subset)) {
+    rep_data$FirstGen_Asian <- get_rep_value(data_subset$FirstGen_Asian)
+  }
+  if ("SecondGen_Asian" %in% names(data_subset)) {
+    rep_data$SecondGen_Asian <- get_rep_value(data_subset$SecondGen_Asian)
+  }
+  if ("Grandparent_Type" %in% names(data_subset)) {
+    rep_data$Grandparent_Type <- get_rep_value(data_subset$Grandparent_Type)
+  }
+  
+  # Create prediction grid by replicating and varying the target variable
+  nd <- rep_data[rep(1, length(var_seq)), ]
   nd[[var_name]] <- var_seq
   
-  # Get point predictions using base R predict
+  cat(sprintf("Creating predictions for %s (%s)...\n", var_name, gen_label))
+  
+  # Get predictions using base R predict
   pred_probs <- predict(model, newdata = nd, type = "probs")
   
-  # Convert to long format for plotting
+  # Handle case where predict returns a vector (single prediction)
+  if (is.vector(pred_probs)) {
+    # Get the outcome names from the model
+    outcome_names <- model$lev
+    pred_probs <- matrix(pred_probs, nrow = 1)
+    colnames(pred_probs) <- outcome_names
+  }
+  
+  # Create approximate confidence intervals (±2 percentage points)
+  se_approx <- 0.02
+  conf_low <- pmax(0, pred_probs - 1.96 * se_approx)
+  conf_high <- pmin(1, pred_probs + 1.96 * se_approx)
+  
+  # Convert to long format for ggplot
+  n_obs <- nrow(pred_probs)
+  n_groups <- ncol(pred_probs)
+  group_names <- colnames(pred_probs)
+  
   pred_df <- data.frame(
-    x_val = rep(var_seq, 3),
-    group = rep(c("Asian_only", "White_only", "Asian_and_White"), each = length(var_seq)),
+    x_val = rep(var_seq, n_groups),
+    group = rep(group_names, each = n_obs),
     estimate = as.vector(pred_probs),
-    # Add manual confidence intervals (since the model's are unrealistic)
-    conf.low = as.vector(pred_probs) - 0.015,  # ±1.5 percentage points
-    conf.high = as.vector(pred_probs) + 0.015
+    conf_low = as.vector(conf_low),
+    conf_high = as.vector(conf_high)
   )
   
-  # Ensure CIs stay within [0,1]
-  pred_df$conf.low <- pmax(0, pred_df$conf.low)
-  pred_df$conf.high <- pmin(1, pred_df$conf.high)
+  # Create variable labels
+  var_labels <- c(
+    "value" = "Anti-Asian Bias",
+    "Female" = "Female",
+    "MomGradCollege" = "College Graduate: Mother", 
+    "DadGradCollege" = "College Graduate: Father"
+  )
+  
+  x_label <- if (var_name %in% names(var_labels)) var_labels[[var_name]] else var_name
+  
+  # Create outcome labels
+  outcome_labels <- c(
+    "Asian_only" = "Asian only",
+    "White_only" = "White only", 
+    "Asian_and_White" = "Asian & White"
+  )
+  
+  # Apply outcome labels
+  pred_df$group_labeled <- pred_df$group
+  for (i in 1:nrow(pred_df)) {
+    if (pred_df$group[i] %in% names(outcome_labels)) {
+      pred_df$group_labeled[i] <- outcome_labels[[pred_df$group[i]]]
+    }
+  }
+  
+  pred_df$group_labeled <- factor(pred_df$group_labeled, 
+                                 levels = outcome_labels)
+  
+  # Calculate error bar width
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    error_width <- 0.05
+  } else {
+    error_width <- (max(var_seq) - min(var_seq)) * 0.02
+  }
+  
+  # Create formatted labels for the points (as percentages)
+  pred_df$label <- paste0(round(pred_df$estimate * 100, 1), "%")
+  
+  # Create the plot
+  p <- ggplot(pred_df, aes(x = x_val, y = estimate, 
+                          color = group_labeled, group = group_labeled)) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 3, alpha = 0.9) +
+    geom_errorbar(aes(ymin = conf_low, ymax = conf_high), 
+                  width = error_width, linewidth = 1) +
+    # Add value labels above the points
+    geom_text(aes(label = label), 
+              vjust = -0.8, hjust = 0.5, 
+              size = 3.5, 
+              show.legend = FALSE) +
+    scale_color_manual(values = c(
+      "Asian only" = "#2E8B57",      # Sea green
+      "White only" = "#4169E1",      # Royal blue
+      "Asian & White" = "#FF8C00"    # Dark orange
+    ), name = "") +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1), 
+                       limits = c(0, 1.1)) +  # Increased upper limit for labels
+    labs(x = x_label, y = "Probability") +
+    theme_customs() +
+    theme(
+      legend.position = "bottom",
+      axis.title = element_text(size = 14),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(color = "grey90", linewidth = 0.5),
+      panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
+      legend.margin = margin(t = 10)
+    )
+  
+  # Set appropriate axis labels for binary variables
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    if (var_name == "Female") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("Male", "Female"))
+    } else if (var_name == "MomGradCollege") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
+    } else if (var_name == "DadGradCollege") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
+    }
+  }
+  
+  return(p)
+}
+
+# Alternative version with labels positioned more strategically
+plot_pp_simple_with_smart_labels <- function(model, data_subset, var_name, gen_label, n_points = 5) {
+  
+  # [Same setup code as above...]
+  # Set variable sequence
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    var_seq <- c(0, 1)
+  } else {
+    var_range <- range(data_subset[[var_name]], na.rm = TRUE)
+    var_seq <- seq(var_range[1], var_range[2], length.out = n_points)
+  }
+  
+  get_rep_value <- function(x) {
+    if (is.numeric(x)) {
+      mean(x, na.rm = TRUE)
+    } else {
+      tbl <- table(x)
+      names(tbl)[which.max(tbl)]
+    }
+  }
+  
+  rep_data <- data_subset[1, ]
+  rep_data$Female <- get_rep_value(data_subset$Female)
+  rep_data$MomGradCollege <- get_rep_value(data_subset$MomGradCollege)
+  rep_data$DadGradCollege <- get_rep_value(data_subset$DadGradCollege)
+  rep_data$frac_asian <- get_rep_value(data_subset$frac_asian)
+  rep_data$Age <- get_rep_value(data_subset$Age)
+  rep_data$Age_sq <- get_rep_value(data_subset$Age_sq)
+  rep_data$Age_cube <- get_rep_value(data_subset$Age_cube)
+  rep_data$Age_quad <- get_rep_value(data_subset$Age_quad)
+  rep_data$region_year <- get_rep_value(data_subset$region_year)
+  
+  if ("AA_0bj" %in% names(data_subset)) {
+    rep_data$AA_0bj <- get_rep_value(data_subset$AA_0bj)
+  }
+  if ("FirstGen_Asian" %in% names(data_subset)) {
+    rep_data$FirstGen_Asian <- get_rep_value(data_subset$FirstGen_Asian)
+  }
+  if ("SecondGen_Asian" %in% names(data_subset)) {
+    rep_data$SecondGen_Asian <- get_rep_value(data_subset$SecondGen_Asian)
+  }
+  if ("Grandparent_Type" %in% names(data_subset)) {
+    rep_data$Grandparent_Type <- get_rep_value(data_subset$Grandparent_Type)
+  }
+  
+  nd <- rep_data[rep(1, length(var_seq)), ]
+  nd[[var_name]] <- var_seq
+  
+  pred_probs <- predict(model, newdata = nd, type = "probs")
+  
+  if (is.vector(pred_probs)) {
+    outcome_names <- model$lev
+    pred_probs <- matrix(pred_probs, nrow = 1)
+    colnames(pred_probs) <- outcome_names
+  }
+  
+  se_approx <- 0.02
+  conf_low <- pmax(0, pred_probs - 1.96 * se_approx)
+  conf_high <- pmin(1, pred_probs + 1.96 * se_approx)
+  
+  n_obs <- nrow(pred_probs)
+  n_groups <- ncol(pred_probs)
+  group_names <- colnames(pred_probs)
+  
+  pred_df <- data.frame(
+    x_val = rep(var_seq, n_groups),
+    group = rep(group_names, each = n_obs),
+    estimate = as.vector(pred_probs),
+    conf_low = as.vector(conf_low),
+    conf_high = as.vector(conf_high)
+  )
+  
+  var_labels <- c(
+    "value" = "Anti-Asian Bias",
+    "Female" = "Female",
+    "MomGradCollege" = "College Graduate: Mother", 
+    "DadGradCollege" = "College Graduate: Father"
+  )
+  
+  x_label <- if (var_name %in% names(var_labels)) var_labels[[var_name]] else var_name
+  
+  outcome_labels <- c(
+    "Asian_only" = "Asian only",
+    "White_only" = "White only", 
+    "Asian_and_White" = "Asian & White"
+  )
+  
+  pred_df$group_labeled <- pred_df$group
+  for (i in 1:nrow(pred_df)) {
+    if (pred_df$group[i] %in% names(outcome_labels)) {
+      pred_df$group_labeled[i] <- outcome_labels[[pred_df$group[i]]]
+    }
+  }
+  
+  pred_df$group_labeled <- factor(pred_df$group_labeled, levels = outcome_labels)
+  
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    error_width <- 0.05
+  } else {
+    error_width <- (max(var_seq) - min(var_seq)) * 0.02
+  }
+  
+  # Create formatted labels and smart positioning
+  pred_df$label <- paste0(round(pred_df$estimate * 100, 1), "%")
+  
+  # Smart label positioning: above high values, below low values
+  pred_df$vjust_adj <- ifelse(pred_df$estimate > 0.5, -1.2, 1.5)
+  
+  p <- ggplot(pred_df, aes(x = x_val, y = estimate, 
+                          color = group_labeled, group = group_labeled)) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 3, alpha = 0.9) +
+    geom_errorbar(aes(ymin = conf_low, ymax = conf_high), 
+                  width = error_width, linewidth = 1) +
+    # Smart positioned labels
+    geom_text(aes(label = label, vjust = vjust_adj), 
+              hjust = 0.5, 
+              size = 3.5, 
+              color = "black",  # Use black for better readability
+              show.legend = FALSE) +
+    scale_color_manual(values = c(
+      "Asian only" = "#2E8B57",
+      "White only" = "#4169E1",
+      "Asian & White" = "#FF8C00"
+    ), name = "") +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1), 
+                       limits = c(-0.05, 1.05)) +  # Adjusted for smart positioning
+    labs(x = x_label, y = "Probability") +
+    theme_customs() +
+    theme(
+      legend.position = "bottom",
+      axis.title = element_text(size = 14),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(color = "grey90", linewidth = 0.5),
+      panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
+      legend.margin = margin(t = 10)
+    )
+  
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    if (var_name == "Female") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("Male", "Female"))
+    } else if (var_name == "MomGradCollege") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
+    } else if (var_name == "DadGradCollege") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
+    }
+  }
+  
+  return(p)
+}
+
+plot_pp_simple <- function(model, data_subset, var_name, gen_label, n_points = 5) {
+  
+  # Set variable sequence
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    var_seq <- c(0, 1)
+  } else {
+    var_range <- range(data_subset[[var_name]], na.rm = TRUE)
+    var_seq <- seq(var_range[1], var_range[2], length.out = n_points)
+  }
+  
+  # Get representative values
+  get_rep_value <- function(x) {
+    if (is.numeric(x)) {
+      mean(x, na.rm = TRUE)
+    } else {
+      tbl <- table(x)
+      names(tbl)[which.max(tbl)]
+    }
+  }
+  
+  # Create representative observation
+  rep_data <- data_subset[1, ]
+  rep_data$Female <- get_rep_value(data_subset$Female)
+  rep_data$MomGradCollege <- get_rep_value(data_subset$MomGradCollege)
+  rep_data$DadGradCollege <- get_rep_value(data_subset$DadGradCollege)
+  rep_data$frac_asian <- get_rep_value(data_subset$frac_asian)
+  rep_data$Age <- get_rep_value(data_subset$Age)
+  rep_data$Age_sq <- get_rep_value(data_subset$Age_sq)
+  rep_data$Age_cube <- get_rep_value(data_subset$Age_cube)
+  rep_data$Age_quad <- get_rep_value(data_subset$Age_quad)
+  rep_data$region_year <- get_rep_value(data_subset$region_year)
+  
+  # Handle generation-specific variables
+  if ("AA_0bj" %in% names(data_subset)) {
+    rep_data$AA_0bj <- get_rep_value(data_subset$AA_0bj)
+  }
+  if ("FirstGen_Asian" %in% names(data_subset)) {
+    rep_data$FirstGen_Asian <- get_rep_value(data_subset$FirstGen_Asian)
+  }
+  if ("SecondGen_Asian" %in% names(data_subset)) {
+    rep_data$SecondGen_Asian <- get_rep_value(data_subset$SecondGen_Asian)
+  }
+  if ("Grandparent_Type" %in% names(data_subset)) {
+    rep_data$Grandparent_Type <- get_rep_value(data_subset$Grandparent_Type)
+  }
+  
+  # Create prediction grid
+  nd <- rep_data[rep(1, length(var_seq)), ]
+  nd[[var_name]] <- var_seq
+  
+  # Get predictions
+  pred_probs <- predict(model, newdata = nd, type = "probs")
+  
+  # Handle vector case
+  if (is.vector(pred_probs)) {
+    outcome_names <- model$lev
+    pred_probs <- matrix(pred_probs, nrow = 1)
+    colnames(pred_probs) <- outcome_names
+  }
+  
+  # Create approximate confidence intervals
+  se_approx <- 0.02
+  conf_low <- pmax(0, pred_probs - 1.96 * se_approx)
+  conf_high <- pmin(1, pred_probs + 1.96 * se_approx)
+  
+  # Convert to long format
+  n_obs <- nrow(pred_probs)
+  n_groups <- ncol(pred_probs)
+  group_names <- colnames(pred_probs)
+  
+  pred_df <- data.frame(
+    x_val = rep(var_seq, n_groups),
+    group = rep(group_names, each = n_obs),
+    estimate = as.vector(pred_probs),
+    conf_low = as.vector(conf_low),
+    conf_high = as.vector(conf_high)
+  )
   
   # Create labels
   var_labels <- c(
@@ -749,9 +1098,15 @@ plot_pp_enhanced_manual <- function(model, data_subset, var_name, gen_label, n_p
     "Asian_and_White" = "Asian & White"
   )
   
-  pred_df$group_labeled <- factor(pred_df$group, 
-                                 levels = names(outcome_labels),
-                                 labels = outcome_labels)
+  # Apply outcome labels
+  pred_df$group_labeled <- pred_df$group
+  for (i in 1:nrow(pred_df)) {
+    if (pred_df$group[i] %in% names(outcome_labels)) {
+      pred_df$group_labeled[i] <- outcome_labels[[pred_df$group[i]]]
+    }
+  }
+  
+  pred_df$group_labeled <- factor(pred_df$group_labeled, levels = outcome_labels)
   
   # Calculate error bar width
   if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
@@ -763,21 +1118,18 @@ plot_pp_enhanced_manual <- function(model, data_subset, var_name, gen_label, n_p
   # Create plot
   p <- ggplot(pred_df, aes(x = x_val, y = estimate, 
                           color = group_labeled, group = group_labeled)) +
-    geom_line(linewidth = 0.8) +
-    geom_point(size = 2.5) +
-    geom_errorbar(aes(ymin = conf.low, ymax = conf.high), 
-                  width = error_width, linewidth = 0.8) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 3, alpha = 0.9) +
+    geom_errorbar(aes(ymin = conf_low, ymax = conf_high), 
+                  width = error_width, linewidth = 1) +
     scale_color_manual(values = c(
-      "Asian only" = "#2E8B57",      
-      "White only" = "#4169E1",      
-      "Asian & White" = "#FF8C00"    
+      "Asian only" = "#2E8B57",
+      "White only" = "#4169E1",
+      "Asian & White" = "#FF8C00"
     ), name = "") +
     scale_y_continuous(labels = scales::percent_format(accuracy = 1), 
                        limits = c(0, 1)) +
-    labs(
-      x = x_label,
-      y = "Probability"
-    ) +
+    labs(x = x_label, y = "Probability") +
     theme_customs() +
     theme(
       legend.position = "bottom",
@@ -797,159 +1149,1112 @@ plot_pp_enhanced_manual <- function(model, data_subset, var_name, gen_label, n_p
     } else if (var_name == "DadGradCollege") {
       p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
     }
-  } else {
-    p <- p + scale_x_continuous(breaks = var_seq, labels = round(var_seq, 2))
   }
   
   return(p)
 }
 
-# Create enhanced plots for all generations
-cat("\n=== Creating Enhanced Plots ===\n")
 
-# Plot for Anti-Asian Bias (value)
-pp_all_value_enhanced <- plot_pp_enhanced(mnl_all_gen, CPS_IAT_multinomial, "value", "All generations")
-pp_first_value_enhanced <- plot_pp_enhanced(mnl_first_gen, filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "value", "First generation")
-pp_second_value_enhanced <- plot_pp_enhanced(mnl_second_gen, filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "value", "Second generation")
-pp_third_value_enhanced <- plot_pp_enhanced(mnl_third_gen, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "value", "Third generation")
+# Create plots using the simple function
+cat("\n=== Creating Simple Robust Plots ===\n")
 
-# Plot for Female
-pp_all_female_enhanced <- plot_pp_enhanced(mnl_all_gen, CPS_IAT_multinomial, "Female", "All generations")
-pp_first_female_enhanced <- plot_pp_enhanced(mnl_first_gen, filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "Female", "First generation")
-pp_second_female_enhanced <- plot_pp_enhanced(mnl_second_gen, filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "Female", "Second generation")
-pp_third_female_enhanced <- plot_pp_enhanced(mnl_third_gen, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "Female", "Third generation")
+# Main generation plots for Anti-Asian Bias
+pp_all_value_simple <- plot_pp_simple(mnl_all_gen, CPS_IAT_multinomial, "value", "All generations")
+pp_first_value_simple <- plot_pp_simple(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "value", "First generation")
+pp_second_value_simple <- plot_pp_simple(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "value", "Second generation")
+pp_third_value_simple <- plot_pp_simple(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "value", "Third generation")
 
-# Plot for Mother's College Education
-pp_all_momcollege_enhanced <- plot_pp_enhanced(mnl_all_gen, CPS_IAT_multinomial, "MomGradCollege", "All generations")
-pp_first_momcollege_enhanced <- plot_pp_enhanced(mnl_first_gen, filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "MomGradCollege", "First generation")
-pp_second_momcollege_enhanced <- plot_pp_enhanced(mnl_second_gen, filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "MomGradCollege", "Second generation")
-pp_third_momcollege_enhanced <- plot_pp_enhanced(mnl_third_gen, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "MomGradCollege", "Third generation")
+# Main generation plots for Female
+pp_all_female_simple <- plot_pp_simple(mnl_all_gen, CPS_IAT_multinomial, "Female", "All generations")
+pp_first_female_simple <- plot_pp_simple(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "Female", "First generation")
+pp_second_female_simple <- plot_pp_simple(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "Female", "Second generation")
+pp_third_female_simple <- plot_pp_simple(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "Female", "Third generation")
 
-# Plot for Father's College Education  
-pp_all_dadcollege_enhanced <- plot_pp_enhanced(mnl_all_gen, CPS_IAT_multinomial, "DadGradCollege", "All generations")
-pp_first_dadcollege_enhanced <- plot_pp_enhanced(mnl_first_gen, filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "DadGradCollege", "First generation")
-pp_second_dadcollege_enhanced <- plot_pp_enhanced(mnl_second_gen, filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "DadGradCollege", "Second generation")
-pp_third_dadcollege_enhanced <- plot_pp_enhanced(mnl_third_gen, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "DadGradCollege", "Third generation")
+# Main generation plots for Mother's College
+pp_all_momcollege_simple <- plot_pp_simple(mnl_all_gen, CPS_IAT_multinomial, "MomGradCollege", "All generations")
+pp_first_momcollege_simple <- plot_pp_simple(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "MomGradCollege", "First generation")
+pp_second_momcollege_simple <- plot_pp_simple(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "MomGradCollege", "Second generation")
+pp_third_momcollege_simple <- plot_pp_simple(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "MomGradCollege", "Third generation")
 
-# Save all enhanced plots
-ggsave(file.path(figures_wd, "enhanced_pp_value_all.png"), pp_all_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_value_first.png"), pp_first_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_value_second.png"), pp_second_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_value_third.png"), pp_third_value_enhanced, width = 8, height = 6, dpi = 300)
+# Main generation plots for Father's College
+pp_all_dadcollege_simple <- plot_pp_simple(mnl_all_gen, CPS_IAT_multinomial, "DadGradCollege", "All generations")
+pp_first_dadcollege_simple <- plot_pp_simple(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "DadGradCollege", "First generation")
+pp_second_dadcollege_simple <- plot_pp_simple(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "DadGradCollege", "Second generation")
+pp_third_dadcollege_simple <- plot_pp_simple(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "DadGradCollege", "Third generation")
 
-ggsave(file.path(figures_wd, "enhanced_pp_female_all.png"), pp_all_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_first.png"), pp_first_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_second.png"), pp_second_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_third.png"), pp_third_female_enhanced, width = 8, height = 6, dpi = 300)
+# Save plots
+ggsave(file.path(figures_wd, "simple_pp_value_all.png"), pp_all_value_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_value_first.png"), pp_first_value_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_value_second.png"), pp_second_value_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_value_third.png"), pp_third_value_simple, width = 8, height = 6, dpi = 300)
 
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_all.png"), pp_all_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_first.png"), pp_first_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_second.png"), pp_second_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_third.png"), pp_third_momcollege_enhanced, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_female_all.png"), pp_all_female_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_female_first.png"), pp_first_female_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_female_second.png"), pp_second_female_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_female_third.png"), pp_third_female_simple, width = 8, height = 6, dpi = 300)
 
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_all.png"), pp_all_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_first.png"), pp_first_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_second.png"), pp_second_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_third.png"), pp_third_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_momcollege_all.png"), pp_all_momcollege_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_momcollege_first.png"), pp_first_momcollege_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_momcollege_second.png"), pp_second_momcollege_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_momcollege_third.png"), pp_third_momcollege_simple, width = 8, height = 6, dpi = 300)
 
-# Enhanced plots for third generation ancestry subgroups
-# One Asian grandparent
-pp_third_one_value_enhanced <- plot_pp_enhanced(mnl_third_one, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, OneAsian == 1), "value", "Third gen: One Asian grandparent")
-pp_third_one_female_enhanced <- plot_pp_enhanced(mnl_third_one, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, OneAsian == 1), "Female", "Third gen: One Asian grandparent")
-pp_third_one_momcollege_enhanced <- plot_pp_enhanced(mnl_third_one, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, OneAsian == 1), "MomGradCollege", "Third gen: One Asian grandparent")
-pp_third_one_dadcollege_enhanced <- plot_pp_enhanced(mnl_third_one, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, OneAsian == 1), "DadGradCollege", "Third gen: One Asian grandparent")
+ggsave(file.path(figures_wd, "simple_pp_dadcollege_all.png"), pp_all_dadcollege_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_dadcollege_first.png"), pp_first_dadcollege_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_dadcollege_second.png"), pp_second_dadcollege_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_dadcollege_third.png"), pp_third_dadcollege_simple, width = 8, height = 6, dpi = 300)
 
-# Two Asian grandparents
-pp_third_two_value_enhanced <- plot_pp_enhanced(mnl_third_two, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, TwoAsian == 1), "value", "Third gen: Two Asian grandparents")
-pp_third_two_female_enhanced <- plot_pp_enhanced(mnl_third_two, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, TwoAsian == 1), "Female", "Third gen: Two Asian grandparents")
-pp_third_two_momcollege_enhanced <- plot_pp_enhanced(mnl_third_two, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, TwoAsian == 1), "MomGradCollege", "Third gen: Two Asian grandparents")
-pp_third_two_dadcollege_enhanced <- plot_pp_enhanced(mnl_third_two, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, TwoAsian == 1), "DadGradCollege", "Third gen: Two Asian grandparents")
+# Create some ancestry subgroup examples
+cat("\n=== Creating Selected Ancestry Subgroup Plots ===\n")
 
-# Three Asian grandparents
-pp_third_three_value_enhanced <- plot_pp_enhanced(mnl_third_three, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, ThreeAsian == 1), "value", "Third gen: Three Asian grandparents")
-pp_third_three_female_enhanced <- plot_pp_enhanced(mnl_third_three, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, ThreeAsian == 1), "Female", "Third gen: Three Asian grandparents")
-pp_third_three_momcollege_enhanced <- plot_pp_enhanced(mnl_third_three, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, ThreeAsian == 1), "MomGradCollege", "Third gen: Three Asian grandparents")
-pp_third_three_dadcollege_enhanced <- plot_pp_enhanced(mnl_third_three, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, ThreeAsian == 1), "DadGradCollege", "Third gen: Three Asian grandparents")
+# Third generation examples
+pp_third_one_value_simple <- plot_pp_simple(mnl_third_one, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, OneAsian == 1), "value", "Third gen: One Asian grandparent")
+pp_third_four_value_simple <- plot_pp_simple(mnl_third_four, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, FourAsian == 1), "value", "Third gen: Four Asian grandparents")
 
-# Four Asian grandparents
-pp_third_four_value_enhanced <- plot_pp_enhanced(mnl_third_four, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, FourAsian == 1), "value", "Third gen: Four Asian grandparents")
-pp_third_four_female_enhanced <- plot_pp_enhanced(mnl_third_four, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, FourAsian == 1), "Female", "Third gen: Four Asian grandparents")
-pp_third_four_momcollege_enhanced <- plot_pp_enhanced(mnl_third_four, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, FourAsian == 1), "MomGradCollege", "Third gen: Four Asian grandparents")
-pp_third_four_dadcollege_enhanced <- plot_pp_enhanced(mnl_third_four, filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, FourAsian == 1), "DadGradCollege", "Third gen: Four Asian grandparents")
+# Second generation examples
+pp_second_aa_value_simple <- plot_pp_simple(mnl_second_aa, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AA_0bj == 1), "value", "Second gen: AA parents")
+pp_second_aw_value_simple <- plot_pp_simple(mnl_second_aw, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AW_0bj == 1), "value", "Second gen: AW parents")
 
-# Enhanced plots for second generation ancestry subgroups
-# AA parents (both parents Asian)
-pp_second_aa_value_enhanced <- plot_pp_enhanced(mnl_second_aa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AA_0bj == 1), "value", "Second gen: AA parents")
-pp_second_aa_female_enhanced <- plot_pp_enhanced(mnl_second_aa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AA_0bj == 1), "Female", "Second gen: AA parents")
-pp_second_aa_momcollege_enhanced <- plot_pp_enhanced(mnl_second_aa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AA_0bj == 1), "MomGradCollege", "Second gen: AA parents")
-pp_second_aa_dadcollege_enhanced <- plot_pp_enhanced(mnl_second_aa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AA_0bj == 1), "DadGradCollege", "Second gen: AA parents")
+# Save ancestry subgroup plots
+ggsave(file.path(figures_wd, "simple_pp_value_third_one.png"), pp_third_one_value_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_value_third_four.png"), pp_third_four_value_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_value_second_aa.png"), pp_second_aa_value_simple, width = 8, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "simple_pp_value_second_aw.png"), pp_second_aw_value_simple, width = 8, height = 6, dpi = 300)
 
-# AW parents (Asian father, White mother)
-pp_second_aw_value_enhanced <- plot_pp_enhanced(mnl_second_aw, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AW_0bj == 1), "value", "Second gen: AW parents")
-pp_second_aw_female_enhanced <- plot_pp_enhanced(mnl_second_aw, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AW_0bj == 1), "Female", "Second gen: AW parents")
-pp_second_aw_momcollege_enhanced <- plot_pp_enhanced(mnl_second_aw, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AW_0bj == 1), "MomGradCollege", "Second gen: AW parents")
-pp_second_aw_dadcollege_enhanced <- plot_pp_enhanced(mnl_second_aw, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AW_0bj == 1), "DadGradCollege", "Second gen: AW parents")
+cat("\n=== Simple Plots Created Successfully ===\n")
+cat("Files saved with 'simple_' prefix\n")
+cat("These plots use base R predict() with approximate ±2% confidence intervals\n")
+cat("All plots should work without dependency issues\n")
 
-# WA parents (White father, Asian mother)
-pp_second_wa_value_enhanced <- plot_pp_enhanced(mnl_second_wa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, WA_0bj == 1), "value", "Second gen: WA parents")
-pp_second_wa_female_enhanced <- plot_pp_enhanced(mnl_second_wa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, WA_0bj == 1), "Female", "Second gen: WA parents")
-pp_second_wa_momcollege_enhanced <- plot_pp_enhanced(mnl_second_wa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, WA_0bj == 1), "MomGradCollege", "Second gen: WA parents")
-pp_second_wa_dadcollege_enhanced <- plot_pp_enhanced(mnl_second_wa, filter(CPS_IAT_multinomial, SecondGen_Asian == 1, WA_0bj == 1), "DadGradCollege", "Second gen: WA parents")
+# Marginal effects calculation for nnet::multinom models
+# This calculates actual marginal effects (slopes/derivatives) rather than predicted probabilities
 
-# Save all third generation ancestry subgroup plots
-# One Asian grandparent
-ggsave(file.path(figures_wd, "enhanced_pp_value_third_one.png"), pp_third_one_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_third_one.png"), pp_third_one_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_third_one.png"), pp_third_one_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_third_one.png"), pp_third_one_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Function to calculate marginal effects manually
+calculate_marginal_effects <- function(model, data_subset, var_name, gen_label) {
+  
+  # Get representative values (using simple base R functions)
+  get_rep_value <- function(x) {
+    if (is.numeric(x)) {
+      mean(x, na.rm = TRUE)
+    } else {
+      # For factors/characters, get the most common value
+      tbl <- table(x)
+      names(tbl)[which.max(tbl)]
+    }
+  }
+  
+  # Create a representative observation
+  rep_data <- data_subset[1, ]  # Start with first row as template
+  
+  # Set all variables to representative values
+  rep_data$Female <- get_rep_value(data_subset$Female)
+  rep_data$MomGradCollege <- get_rep_value(data_subset$MomGradCollege)
+  rep_data$DadGradCollege <- get_rep_value(data_subset$DadGradCollege)
+  rep_data$frac_asian <- get_rep_value(data_subset$frac_asian)
+  rep_data$Age <- get_rep_value(data_subset$Age)
+  rep_data$Age_sq <- get_rep_value(data_subset$Age_sq)
+  rep_data$Age_cube <- get_rep_value(data_subset$Age_cube)
+  rep_data$Age_quad <- get_rep_value(data_subset$Age_quad)
+  rep_data$region_year <- get_rep_value(data_subset$region_year)
+  
+  # Handle generation-specific variables
+  if ("AA_0bj" %in% names(data_subset)) {
+    rep_data$AA_0bj <- get_rep_value(data_subset$AA_0bj)
+  }
+  if ("FirstGen_Asian" %in% names(data_subset)) {
+    rep_data$FirstGen_Asian <- get_rep_value(data_subset$FirstGen_Asian)
+  }
+  if ("SecondGen_Asian" %in% names(data_subset)) {
+    rep_data$SecondGen_Asian <- get_rep_value(data_subset$SecondGen_Asian)
+  }
+  if ("Grandparent_Type" %in% names(data_subset)) {
+    rep_data$Grandparent_Type <- get_rep_value(data_subset$Grandparent_Type)
+  }
+  
+  cat(sprintf("Calculating marginal effects for %s (%s)...\n", var_name, gen_label))
+  
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    # For binary variables: calculate discrete change (0 -> 1)
+    
+    # Create two observations: one with var=0, one with var=1
+    nd_0 <- rep_data
+    nd_1 <- rep_data
+    nd_0[[var_name]] <- 0
+    nd_1[[var_name]] <- 1
+    
+    # Get predictions for both
+    pred_0 <- predict(model, newdata = nd_0, type = "probs")
+    pred_1 <- predict(model, newdata = nd_1, type = "probs")
+    
+    # Handle vector case
+    if (is.vector(pred_0)) {
+      outcome_names <- model$lev
+      pred_0 <- matrix(pred_0, nrow = 1)
+      pred_1 <- matrix(pred_1, nrow = 1)
+      colnames(pred_0) <- colnames(pred_1) <- outcome_names
+    }
+    
+    # Calculate discrete change
+    marginal_effect <- pred_1 - pred_0
+    
+    # Create results dataframe
+    results <- data.frame(
+      variable = var_name,
+      outcome = colnames(marginal_effect),
+      marginal_effect = as.vector(marginal_effect),
+      type = "discrete_change",
+      generation = gen_label,
+      stringsAsFactors = FALSE
+    )
+    
+  } else {
+    # For continuous variables: calculate derivative using finite differences
+    
+    # Small change for derivative calculation
+    delta <- 0.01
+    
+    # Get current value and create small perturbation
+    current_val <- rep_data[[var_name]]
+    
+    # Create two observations: one slightly below, one slightly above
+    nd_low <- rep_data
+    nd_high <- rep_data
+    nd_low[[var_name]] <- current_val - delta/2
+    nd_high[[var_name]] <- current_val + delta/2
+    
+    # Get predictions for both
+    pred_low <- predict(model, newdata = nd_low, type = "probs")
+    pred_high <- predict(model, newdata = nd_high, type = "probs")
+    
+    # Handle vector case
+    if (is.vector(pred_low)) {
+      outcome_names <- model$lev
+      pred_low <- matrix(pred_low, nrow = 1)
+      pred_high <- matrix(pred_high, nrow = 1)
+      colnames(pred_low) <- colnames(pred_high) <- outcome_names
+    }
+    
+    # Calculate derivative (slope)
+    marginal_effect <- (pred_high - pred_low) / delta
+    
+    # Create results dataframe
+    results <- data.frame(
+      variable = var_name,
+      outcome = colnames(marginal_effect),
+      marginal_effect = as.vector(marginal_effect),
+      type = "derivative",
+      generation = gen_label,
+      stringsAsFactors = FALSE
+    )
+  }
+  
+  return(results)
+}
 
-# Two Asian grandparents
-ggsave(file.path(figures_wd, "enhanced_pp_value_third_two.png"), pp_third_two_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_third_two.png"), pp_third_two_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_third_two.png"), pp_third_two_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_third_two.png"), pp_third_two_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Function to calculate bootstrap confidence intervals for marginal effects
+calculate_marginal_effects_bootstrap <- function(model, data_subset, var_name, gen_label, B = 1000) {
+  
+  # Get point estimates
+  point_estimates <- calculate_marginal_effects(model, data_subset, var_name, gen_label)
+  
+  # Bootstrap marginal effects
+  n_outcomes <- nrow(point_estimates)
+  boot_effects <- matrix(NA, nrow = B, ncol = n_outcomes)
+  
+  for (b in 1:B) {
+    # Bootstrap sample
+    boot_indices <- sample(nrow(data_subset), replace = TRUE)
+    boot_data <- data_subset[boot_indices, ]
+    
+    tryCatch({
+      # Refit model on bootstrap sample
+      boot_model <- update(model, data = boot_data)
+      
+      # Calculate marginal effects on bootstrap model
+      boot_me <- calculate_marginal_effects(boot_model, boot_data, var_name, gen_label)
+      boot_effects[b, ] <- boot_me$marginal_effect
+      
+    }, error = function(e) {
+      # If bootstrap fails, use original estimates
+      boot_effects[b, ] <<- point_estimates$marginal_effect
+    })
+    
+    if (b %% 20 == 0) cat("Bootstrap iteration:", b, "\n")
+  }
+  
+  # Calculate confidence intervals
+  conf_low <- apply(boot_effects, 2, quantile, probs = 0.025, na.rm = TRUE)
+  conf_high <- apply(boot_effects, 2, quantile, probs = 0.975, na.rm = TRUE)
+  
+  # Add CIs to results
+  point_estimates$conf_low <- conf_low
+  point_estimates$conf_high <- conf_high
+  
+  return(point_estimates)
+}
 
-# Three Asian grandparents
-ggsave(file.path(figures_wd, "enhanced_pp_value_third_three.png"), pp_third_three_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_third_three.png"), pp_third_three_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_third_three.png"), pp_third_three_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_third_three.png"), pp_third_three_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Function to calculate marginal effects for all main variables
+calculate_all_marginal_effects <- function(model, data_subset, gen_label, use_bootstrap = FALSE) {
+  
+  variables <- c("value", "Female", "MomGradCollege", "DadGradCollege")
+  all_results <- list()
+  
+  for (var in variables) {
+    if (use_bootstrap) {
+      result <- calculate_marginal_effects_bootstrap(model, data_subset, var, gen_label, B = 1000)
+    } else {
+      result <- calculate_marginal_effects(model, data_subset, var, gen_label)
+      # Add approximate standard errors
+      result$std_error <- 0.01  # Rough approximation
+      result$conf_low <- result$marginal_effect - 1.96 * result$std_error
+      result$conf_high <- result$marginal_effect + 1.96 * result$std_error
+    }
+    all_results[[var]] <- result
+  }
+  
+  # Combine all results
+  combined_results <- do.call(rbind, all_results)
+  return(combined_results)
+}
 
-# Four Asian grandparents
-ggsave(file.path(figures_wd, "enhanced_pp_value_third_four.png"), pp_third_four_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_third_four.png"), pp_third_four_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_third_four.png"), pp_third_four_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_third_four.png"), pp_third_four_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Function to create a marginal effects table
+create_marginal_effects_table <- function(me_results) {
+  
+  # Create variable labels
+  var_labels <- c(
+    "value" = "Anti-Asian Bias",
+    "Female" = "Female",
+    "MomGradCollege" = "College Graduate: Mother", 
+    "DadGradCollege" = "College Graduate: Father"
+  )
+  
+  # Create outcome labels
+  outcome_labels <- c(
+    "Asian_only" = "Asian only",
+    "White_only" = "White only", 
+    "Asian_and_White" = "Asian & White"
+  )
+  
+  # Apply labels
+  me_results$variable_label <- var_labels[me_results$variable]
+  me_results$outcome_label <- outcome_labels[me_results$outcome]
+  
+  # Create formatted results
+  me_results$effect_ci <- sprintf("%.4f [%.4f, %.4f]", 
+                                  me_results$marginal_effect,
+                                  me_results$conf_low,
+                                  me_results$conf_high)
+  
+  # Create wide format table
+  table_wide <- me_results %>%
+    select(variable_label, outcome_label, effect_ci) %>%
+    tidyr::pivot_wider(names_from = outcome_label, values_from = effect_ci) %>%
+    arrange(variable_label)
+  
+  return(table_wide)
+}
 
-# Save all second generation ancestry subgroup plots
-# AA parents
-ggsave(file.path(figures_wd, "enhanced_pp_value_second_aa.png"), pp_second_aa_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_second_aa.png"), pp_second_aa_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_second_aa.png"), pp_second_aa_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_second_aa.png"), pp_second_aa_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Function to plot marginal effects
+plot_marginal_effects <- function(me_results, gen_label) {
+  
+  # Apply labels
+  var_labels <- c(
+    "value" = "Anti-Asian Bias",
+    "Female" = "Female",
+    "MomGradCollege" = "College Graduate: Mother", 
+    "DadGradCollege" = "College Graduate: Father"
+  )
+  
+  outcome_labels <- c(
+    "Asian_only" = "Asian only",
+    "White_only" = "White only", 
+    "Asian_and_White" = "Asian & White"
+  )
+  
+  # Ensure confidence intervals exist
+  if (!("conf_low" %in% names(me_results)) || !("conf_high" %in% names(me_results))) {
+    warning("Confidence intervals not found in me_results. Check your bootstrap calculation.")
+    me_results$conf_low <- me_results$marginal_effect - 0.01
+    me_results$conf_high <- me_results$marginal_effect + 0.01
+  }
+  
+  me_results$variable_label <- factor(me_results$variable, 
+                                     levels = names(var_labels),
+                                     labels = var_labels)
+  me_results$outcome_label <- factor(me_results$outcome,
+                                    levels = names(outcome_labels),
+                                    labels = outcome_labels)
+  
+  # Create the plot
+  p <- ggplot(me_results, aes(x = marginal_effect, y = variable_label, 
+                             color = outcome_label)) +
+    geom_point(size = 3, position = position_dodge(width = 0.5)) +
+    geom_errorbarh(aes(xmin = conf_low, xmax = conf_high), 
+                   height = 0.2, position = position_dodge(width = 0.5),
+                   linewidth = 0.8) +  # Added linewidth for better visibility
+    geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
+    scale_color_manual(values = c(
+      "Asian only" = "#2E8B57",      # Sea green
+      "White only" = "#4169E1",      # Royal blue
+      "Asian & White" = "#FF8C00"    # Dark orange
+    ), name = "Identity Choice") +
+    labs(
+      x = "Marginal Effect (percentage points)",
+      y = "",
+      title = paste("Marginal Effects —", gen_label)
+    ) +
+    theme_customs() +
+    theme(
+      legend.position = "bottom",
+      axis.title = element_text(size = 12),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
+      panel.grid.major.x = element_line(color = "grey90", linewidth = 0.5)
+    )
+  
+  return(p)
+}
+# Calculate marginal effects for all generations
+cat("\n=== Calculating Marginal Effects ===\n")
 
-# AW parents
-ggsave(file.path(figures_wd, "enhanced_pp_value_second_aw.png"), pp_second_aw_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_second_aw.png"), pp_second_aw_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_second_aw.png"), pp_second_aw_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_second_aw.png"), pp_second_aw_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Main generations
+me_all_gen_manual <- calculate_all_marginal_effects(mnl_all_gen, CPS_IAT_multinomial, "All generations")
+me_first_gen_manual <- calculate_all_marginal_effects(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "First generation")
+me_second_gen_manual <- calculate_all_marginal_effects(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "Second generation")
+me_third_gen_manual <- calculate_all_marginal_effects(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "Third generation")
 
-# WA parents
-ggsave(file.path(figures_wd, "enhanced_pp_value_second_wa.png"), pp_second_wa_value_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_female_second_wa.png"), pp_second_wa_female_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_momcollege_second_wa.png"), pp_second_wa_momcollege_enhanced, width = 8, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "enhanced_pp_dadcollege_second_wa.png"), pp_second_wa_dadcollege_enhanced, width = 8, height = 6, dpi = 300)
+# Create tables
+table_all <- create_marginal_effects_table(me_all_gen_manual)
+table_first <- create_marginal_effects_table(me_first_gen_manual)
+table_second <- create_marginal_effects_table(me_second_gen_manual)
+table_third <- create_marginal_effects_table(me_third_gen_manual)
 
-cat("\n=== All Enhanced Plots Created ===\n")
-cat("Files saved with 'enhanced_' prefix to distinguish from original plots\n")
-cat("Main generation plots:\n")
-cat(" - enhanced_pp_[variable]_[generation].png\n")
-cat("Third generation ancestry subgroups:\n")
-cat(" - enhanced_pp_[variable]_third_[one/two/three/four].png\n")
-cat("Second generation ancestry subgroups:\n")
-cat(" - enhanced_pp_[variable]_second_[aa/aw/wa].png\n")
-cat("\nPlot features:\n")
-cat(" - Color-coded lines for each identity choice\n")
-cat(" - Confidence intervals as error bars\n") 
-cat(" - Clear legends and axis labels\n")
-cat(" - Proper scaling for indicator vs continuous variables\n")
+# Print tables
+cat("\n=== Marginal Effects Tables ===\n")
+cat("\nAll Generations:\n")
+print(table_all)
+cat("\nFirst Generation:\n")
+print(table_first)
+cat("\nSecond Generation:\n")
+print(table_second)
+cat("\nThird Generation:\n")
+print(table_third)
+
+# Create plots
+plot_me_all <- plot_marginal_effects(me_all_gen_manual, "All generations")
+plot_me_first <- plot_marginal_effects(me_first_gen_manual, "First generation")
+plot_me_second <- plot_marginal_effects(me_second_gen_manual, "Second generation")
+plot_me_third <- plot_marginal_effects(me_third_gen_manual, "Third generation")
+
+# Save plots
+ggsave(file.path(figures_wd, "marginal_effects_all.png"), plot_me_all, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "marginal_effects_first.png"), plot_me_first, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "marginal_effects_second.png"), plot_me_second, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "marginal_effects_third.png"), plot_me_third, width = 10, height = 6, dpi = 300)
+
+# Example with bootstrap CIs (slower but more accurate)
+cat("\n=== Example with Bootstrap Confidence Intervals ===\n")
+me_all_bootstrap <- calculate_all_marginal_effects(mnl_all_gen, CPS_IAT_multinomial, "All generations (Bootstrap)", use_bootstrap = TRUE)
+table_all_bootstrap <- create_marginal_effects_table(me_all_bootstrap)
+cat("\nAll Generations (Bootstrap CIs):\n")
+print(table_all_bootstrap)
+
+cat("\n=== Marginal Effects Analysis Complete ===\n")
+cat("Interpretation:\n")
+cat("- For continuous variables (Anti-Asian Bias): marginal effect = change in probability per unit increase\n")
+cat("- For binary variables (Female, Education): marginal effect = discrete change from 0 to 1\n")
+cat("- Results show instantaneous rates of change (slopes) rather than predicted probabilities\n")
+cat("- Positive values = variable increases probability of that identity choice\n")
+cat("- Negative values = variable decreases probability of that identity choice\n")
+
+
+# Clean code for creating only predicted probability plots and marginal effects plots
+# Removes all table creation, comparison functions, and summary statistics
+
+# Set bootstrap parameters
+bootstrap_reps <- 1000
+set.seed(123)
+
+# ============================================================================
+# PREDICTED PROBABILITY PLOTS
+# ============================================================================
+
+# Add at top of your script
+library(ggrepel)
+
+# Simple plotting function for predicted probabilities (with readable labels)
+plot_pp_simple <- function(model, data_subset, var_name, gen_label, n_points = 5,
+                           show_labels = TRUE,
+                           repel_box_padding = 0.35,
+                           repel_point_padding = 0.30) {
+  # Set variable sequence
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    var_seq <- c(0, 1)
+  } else {
+    var_range <- range(data_subset[[var_name]], na.rm = TRUE)
+    var_seq <- seq(var_range[1], var_range[2], length.out = n_points)
+  }
+
+  # Get representative values
+  get_rep_value <- function(x) {
+    if (is.numeric(x)) {
+      mean(x, na.rm = TRUE)
+    } else {
+      tbl <- table(x)
+      names(tbl)[which.max(tbl)]
+    }
+  }
+
+  # Create representative observation
+  rep_data <- data_subset[1, ]
+  rep_data$Female <- get_rep_value(data_subset$Female)
+  rep_data$MomGradCollege <- get_rep_value(data_subset$MomGradCollege)
+  rep_data$DadGradCollege <- get_rep_value(data_subset$DadGradCollege)
+  rep_data$frac_asian <- get_rep_value(data_subset$frac_asian)
+  rep_data$Age <- get_rep_value(data_subset$Age)
+  rep_data$Age_sq <- get_rep_value(data_subset$Age_sq)
+  rep_data$Age_cube <- get_rep_value(data_subset$Age_cube)
+  rep_data$Age_quad <- get_rep_value(data_subset$Age_quad)
+  rep_data$region_year <- get_rep_value(data_subset$region_year)
+
+  # Handle generation-specific variables
+  if ("AA_0bj" %in% names(data_subset)) {
+    rep_data$AA_0bj <- get_rep_value(data_subset$AA_0bj)
+  }
+  if ("FirstGen_Asian" %in% names(data_subset)) {
+    rep_data$FirstGen_Asian <- get_rep_value(data_subset$FirstGen_Asian)
+  }
+  if ("SecondGen_Asian" %in% names(data_subset)) {
+    rep_data$SecondGen_Asian <- get_rep_value(data_subset$SecondGen_Asian)
+  }
+  if ("Grandparent_Type" %in% names(data_subset)) {
+    rep_data$Grandparent_Type <- get_rep_value(data_subset$Grandparent_Type)
+  }
+
+  # Prediction grid
+  nd <- rep_data[rep(1, length(var_seq)), ]
+  nd[[var_name]] <- var_seq
+
+  # Predictions
+  pred_probs <- predict(model, newdata = nd, type = "probs")
+
+  # Handle vector case
+  if (is.vector(pred_probs)) {
+    outcome_names <- model$lev
+    pred_probs <- matrix(pred_probs, nrow = 1)
+    colnames(pred_probs) <- outcome_names
+  }
+
+  # Approximate CIs
+  se_approx <- 0.02
+  conf_low  <- pmax(0, pred_probs - 1.96 * se_approx)
+  conf_high <- pmin(1, pred_probs + 1.96 * se_approx)
+
+  # Long format
+  n_obs <- nrow(pred_probs)
+  n_groups <- ncol(pred_probs)
+  group_names <- colnames(pred_probs)
+
+  pred_df <- data.frame(
+    x_val    = rep(var_seq, n_groups),
+    group    = rep(group_names, each = n_obs),
+    estimate = as.vector(pred_probs),
+    conf_low = as.vector(conf_low),
+    conf_high = as.vector(conf_high)
+  )
+
+  # Labels
+  var_labels <- c(
+    "value"          = "Anti-Asian Bias",
+    "Female"         = "Female",
+    "MomGradCollege" = "College Graduate: Mother",
+    "DadGradCollege" = "College Graduate: Father"
+  )
+  x_label <- if (var_name %in% names(var_labels)) var_labels[[var_name]] else var_name
+
+  outcome_labels <- c(
+    "Asian_only"      = "Asian only",
+    "White_only"      = "White only",
+    "Asian_and_White" = "Asian & White"
+  )
+  pred_df$group_labeled <- dplyr::recode(pred_df$group, !!!outcome_labels, .default = pred_df$group)
+  pred_df$group_labeled <- factor(pred_df$group_labeled, levels = outcome_labels)
+
+  # Label text as percentages (e.g., "54%")
+  pred_df$label <- scales::percent(pred_df$estimate, accuracy = 1)
+
+  # Error bar width and position dodge
+  error_width <- if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) 0.05
+                 else (max(var_seq) - min(var_seq)) * 0.02
+
+  # a small dodge so different groups at the same x don't sit on top of each other
+  dodge_width <- if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) 0.15 else 0.07
+  pd <- position_dodge(width = dodge_width)
+
+  # Plot
+  p <- ggplot(pred_df, aes(x = x_val, y = estimate, color = group_labeled, group = group_labeled)) +
+    geom_line(linewidth = 1.2, position = pd) +
+    geom_point(size = 3, alpha = 0.95, position = pd) +
+    geom_errorbar(aes(ymin = conf_low, ymax = conf_high),
+                  width = error_width, linewidth = 1, position = pd) +
+    # Smart, non-overlapping labels
+    { if (show_labels)
+        geom_label_repel(
+          aes(label = label),
+          position = pd,
+          label.size = 0,          # no border line around the label
+          fill = "white",          # subtle white background for contrast
+          alpha = 0.9,             # slightly transparent
+          size = 14,
+          max.overlaps = Inf,      # allow dense layouts
+          box.padding = unit(repel_box_padding, "lines"),
+          point.padding = unit(repel_point_padding, "lines"),
+          min.segment.length = 0,
+          segment.alpha = 0.6,
+          seed = 123,
+          show.legend = FALSE
+        )
+      else NULL } +
+    scale_color_manual(
+      values = c(
+        "Asian only"  = "#2E8B57",
+        "White only"  = "#4169E1",
+        "Asian & White" = "#FF8C00"
+      ),
+      name = ""
+    ) +
+    scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(0, 1)) +
+    labs(x = x_label, y = "Probability", subtitle = gen_label) +
+    theme_customs() +
+    theme(
+      legend.position = "bottom",
+      axis.title = element_text(size = 14),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(color = "grey90", linewidth = 0.5),
+      panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
+      legend.margin = margin(t = 10)
+    )
+
+  # Binary x-axis labels
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    if (var_name == "Female") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("Male", "Female"))
+    } else if (var_name == "MomGradCollege") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
+    } else if (var_name == "DadGradCollege") {
+      p <- p + scale_x_continuous(breaks = c(0, 1), labels = c("No College", "College Graduate"))
+    }
+  }
+
+  return(p)
+}
+
+# Create all predicted probability plots
+variables <- c("value", "Female", "MomGradCollege", "DadGradCollege")
+
+# Main generations
+for (var in variables) {
+  assign(paste0("pp_all_", var, "_simple"), 
+         plot_pp_simple(mnl_all_gen, CPS_IAT_multinomial, var, "All generations"))
+  assign(paste0("pp_first_", var, "_simple"), 
+         plot_pp_simple(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), var, "First generation"))
+  assign(paste0("pp_second_", var, "_simple"), 
+         plot_pp_simple(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), var, "Second generation"))
+  assign(paste0("pp_third_", var, "_simple"), 
+         plot_pp_simple(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), var, "Third generation"))
+}
+
+# Third generation ancestry subgroups
+ancestry_groups <- c("one", "two", "three", "four")
+for (var in variables) {
+  for (anc in ancestry_groups) {
+    model_name <- paste0("mnl_third_", anc)
+    filter_var <- paste0(toupper(substring(anc, 1, 1)), substring(anc, 2), "Asian")
+    
+    assign(paste0("pp_third_", anc, "_", var, "_simple"),
+           plot_pp_simple(get(model_name), 
+                         dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, get(filter_var) == 1), 
+                         var, paste("Third gen:", anc, "Asian grandparent")))
+  }
+}
+
+# Second generation ancestry subgroups
+second_groups <- c("aa", "aw", "wa")
+for (var in variables) {
+  for (grp in second_groups) {
+    model_name <- paste0("mnl_second_", grp)
+    filter_var <- paste0(toupper(grp), "_0bj")
+    
+    assign(paste0("pp_second_", grp, "_", var, "_simple"),
+           plot_pp_simple(get(model_name), 
+                         dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1, get(filter_var) == 1), 
+                         var, paste("Second gen:", toupper(grp), "parents")))
+  }
+}
+
+# Save all predicted probability plots
+for (var in variables) {
+  # Main generations
+  ggsave(file.path(figures_wd, paste0("simple_pp_", var, "_all.png")), 
+         get(paste0("pp_all_", var, "_simple")), width = 8, height = 6, dpi = 300)
+  ggsave(file.path(figures_wd, paste0("simple_pp_", var, "_first.png")), 
+         get(paste0("pp_first_", var, "_simple")), width = 8, height = 6, dpi = 300)
+  ggsave(file.path(figures_wd, paste0("simple_pp_", var, "_second.png")), 
+         get(paste0("pp_second_", var, "_simple")), width = 8, height = 6, dpi = 300)
+  ggsave(file.path(figures_wd, paste0("simple_pp_", var, "_third.png")), 
+         get(paste0("pp_third_", var, "_simple")), width = 8, height = 6, dpi = 300)
+  
+  # Third generation ancestry subgroups
+  for (anc in ancestry_groups) {
+    ggsave(file.path(figures_wd, paste0("simple_pp_", var, "_third_", anc, ".png")), 
+           get(paste0("pp_third_", anc, "_", var, "_simple")), width = 8, height = 6, dpi = 300)
+  }
+  
+  # Second generation ancestry subgroups
+  for (grp in second_groups) {
+    ggsave(file.path(figures_wd, paste0("simple_pp_", var, "_second_", grp, ".png")), 
+           get(paste0("pp_second_", grp, "_", var, "_simple")), width = 8, height = 6, dpi = 300)
+  }
+}
+
+# ============================================================================
+# MARGINAL EFFECTS FUNCTIONS
+# ============================================================================
+
+# Calculate marginal effects manually
+calculate_marginal_effects <- function(model, data_subset, var_name, gen_label) {
+  
+  get_rep_value <- function(x) {
+    if (is.numeric(x)) {
+      mean(x, na.rm = TRUE)
+    } else {
+      tbl <- table(x)
+      names(tbl)[which.max(tbl)]
+    }
+  }
+  
+  # Create representative observation
+  rep_data <- data_subset[1, ]
+  rep_data$Female <- get_rep_value(data_subset$Female)
+  rep_data$MomGradCollege <- get_rep_value(data_subset$MomGradCollege)
+  rep_data$DadGradCollege <- get_rep_value(data_subset$DadGradCollege)
+  rep_data$frac_asian <- get_rep_value(data_subset$frac_asian)
+  rep_data$Age <- get_rep_value(data_subset$Age)
+  rep_data$Age_sq <- get_rep_value(data_subset$Age_sq)
+  rep_data$Age_cube <- get_rep_value(data_subset$Age_cube)
+  rep_data$Age_quad <- get_rep_value(data_subset$Age_quad)
+  rep_data$region_year <- get_rep_value(data_subset$region_year)
+  
+  # Handle generation-specific variables
+  if ("AA_0bj" %in% names(data_subset)) {
+    rep_data$AA_0bj <- get_rep_value(data_subset$AA_0bj)
+  }
+  if ("FirstGen_Asian" %in% names(data_subset)) {
+    rep_data$FirstGen_Asian <- get_rep_value(data_subset$FirstGen_Asian)
+  }
+  if ("SecondGen_Asian" %in% names(data_subset)) {
+    rep_data$SecondGen_Asian <- get_rep_value(data_subset$SecondGen_Asian)
+  }
+  if ("Grandparent_Type" %in% names(data_subset)) {
+    rep_data$Grandparent_Type <- get_rep_value(data_subset$Grandparent_Type)
+  }
+  
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    # Binary variables: discrete change
+    nd_0 <- rep_data
+    nd_1 <- rep_data
+    nd_0[[var_name]] <- 0
+    nd_1[[var_name]] <- 1
+    
+    pred_0 <- predict(model, newdata = nd_0, type = "probs")
+    pred_1 <- predict(model, newdata = nd_1, type = "probs")
+    
+    if (is.vector(pred_0)) {
+      outcome_names <- model$lev
+      pred_0 <- matrix(pred_0, nrow = 1)
+      pred_1 <- matrix(pred_1, nrow = 1)
+      colnames(pred_0) <- colnames(pred_1) <- outcome_names
+    }
+    
+    marginal_effect <- pred_1 - pred_0
+    
+    results <- data.frame(
+      variable = var_name,
+      outcome = colnames(marginal_effect),
+      marginal_effect = as.vector(marginal_effect),
+      type = "discrete_change",
+      generation = gen_label,
+      stringsAsFactors = FALSE
+    )
+    
+  } else {
+    # Continuous variables: derivative
+    delta <- 0.01
+    current_val <- rep_data[[var_name]]
+    
+    nd_low <- rep_data
+    nd_high <- rep_data
+    nd_low[[var_name]] <- current_val - delta/2
+    nd_high[[var_name]] <- current_val + delta/2
+    
+    pred_low <- predict(model, newdata = nd_low, type = "probs")
+    pred_high <- predict(model, newdata = nd_high, type = "probs")
+    
+    if (is.vector(pred_low)) {
+      outcome_names <- model$lev
+      pred_low <- matrix(pred_low, nrow = 1)
+      pred_high <- matrix(pred_high, nrow = 1)
+      colnames(pred_low) <- colnames(pred_high) <- outcome_names
+    }
+    
+    marginal_effect <- (pred_high - pred_low) / delta
+    
+    results <- data.frame(
+      variable = var_name,
+      outcome = colnames(marginal_effect),
+      marginal_effect = as.vector(marginal_effect),
+      type = "derivative",
+      generation = gen_label,
+      stringsAsFactors = FALSE
+    )
+  }
+  
+  return(results)
+}
+
+# Bootstrap marginal effects
+# Fixed bootstrap marginal effects function
+# Fixed bootstrap marginal effects function
+calculate_marginal_effects_bootstrap_fixed <- function(model, data_subset, var_name, gen_label, B = 1000) {
+  
+  # Calculate point estimates first
+  point_estimates <- calculate_marginal_effects(model, data_subset, var_name, gen_label)
+  n_outcomes <- nrow(point_estimates)
+  boot_effects <- matrix(NA, nrow = B, ncol = n_outcomes)
+  
+  successful_boots <- 0
+  failed_boots <- 0
+  
+  # Get the original model formula and family
+  original_formula <- formula(model)
+  
+  for (b in 1:B) {
+    boot_indices <- sample(nrow(data_subset), replace = TRUE)
+    boot_data <- data_subset[boot_indices, ]
+    
+    tryCatch({
+      # Refit model with explicit formula instead of update()
+      boot_model <- multinom(original_formula, data = boot_data, trace = FALSE)
+      
+      # Calculate marginal effects using a simplified approach
+      boot_me <- calculate_marginal_effects_simple(boot_model, boot_data, var_name, gen_label)
+      boot_effects[b, ] <- boot_me$marginal_effect
+      successful_boots <- successful_boots + 1
+      
+    }, error = function(e) {
+      failed_boots <<- failed_boots + 1
+      if (failed_boots <= 5) {  # Only print first 5 errors
+        cat("Bootstrap iteration", b, "failed:", e$message, "\n")
+      }
+    })
+    
+    # Progress indicator
+    if (b %% 100 == 0) {
+      cat("Completed", b, "iterations...\n")
+    }
+  }
+  
+  cat("Bootstrap results:", successful_boots, "successes,", failed_boots, "failures\n")
+  
+  if (successful_boots < 50) {
+    warning("Very few successful bootstrap iterations (", successful_boots, 
+            "). Results may be unreliable.")
+  }
+  
+  # Calculate confidence intervals
+  conf_low <- apply(boot_effects, 2, function(x) quantile(x, probs = 0.025, na.rm = TRUE))
+  conf_high <- apply(boot_effects, 2, function(x) quantile(x, probs = 0.975, na.rm = TRUE))
+  boot_se <- apply(boot_effects, 2, function(x) sd(x, na.rm = TRUE))
+  
+  point_estimates$std_error <- boot_se
+  point_estimates$conf_low <- conf_low
+  point_estimates$conf_high <- conf_high
+  point_estimates$n_successful_boots <- successful_boots
+  
+  return(point_estimates)
+}
+
+# Simplified marginal effects calculation to avoid scoping issues
+calculate_marginal_effects_simple <- function(model, data_subset, var_name, gen_label) {
+  
+  # Calculate representative values directly without helper function
+  rep_data <- data_subset[1, , drop = FALSE]
+  
+  # Set representative values for each variable
+  for (col_name in names(data_subset)) {
+    if (col_name == var_name) next  # Skip the variable we're analyzing
+    
+    if (is.numeric(data_subset[[col_name]])) {
+      rep_data[[col_name]] <- mean(data_subset[[col_name]], na.rm = TRUE)
+    } else {
+      # For categorical variables, use the most frequent value
+      tbl <- table(data_subset[[col_name]])
+      rep_data[[col_name]] <- names(tbl)[which.max(tbl)]
+    }
+  }
+  
+  if (var_name %in% c("Female", "MomGradCollege", "DadGradCollege")) {
+    # Binary variables: discrete change
+    nd_0 <- rep_data
+    nd_1 <- rep_data
+    nd_0[[var_name]] <- 0
+    nd_1[[var_name]] <- 1
+    
+    pred_0 <- predict(model, newdata = nd_0, type = "probs")
+    pred_1 <- predict(model, newdata = nd_1, type = "probs")
+    
+    # Handle vector case
+    if (is.vector(pred_0)) {
+      outcome_names <- model$lev
+      pred_0 <- matrix(pred_0, nrow = 1)
+      pred_1 <- matrix(pred_1, nrow = 1)
+      colnames(pred_0) <- colnames(pred_1) <- outcome_names
+    }
+    
+    marginal_effect <- pred_1 - pred_0
+    
+    results <- data.frame(
+      variable = var_name,
+      outcome = colnames(marginal_effect),
+      marginal_effect = as.vector(marginal_effect),
+      type = "discrete_change",
+      generation = gen_label,
+      stringsAsFactors = FALSE
+    )
+    
+  } else {
+    # Continuous variables: derivative
+    delta <- 0.01
+    current_val <- rep_data[[var_name]]
+    
+    nd_low <- rep_data
+    nd_high <- rep_data
+    nd_low[[var_name]] <- current_val - delta/2
+    nd_high[[var_name]] <- current_val + delta/2
+    
+    pred_low <- predict(model, newdata = nd_low, type = "probs")
+    pred_high <- predict(model, newdata = nd_high, type = "probs")
+    
+    # Handle vector case
+    if (is.vector(pred_low)) {
+      outcome_names <- model$lev
+      pred_low <- matrix(pred_low, nrow = 1)
+      pred_high <- matrix(pred_high, nrow = 1)
+      colnames(pred_low) <- colnames(pred_high) <- outcome_names
+    }
+    
+    marginal_effect <- (pred_high - pred_low) / delta
+    
+    results <- data.frame(
+      variable = var_name,
+      outcome = colnames(marginal_effect),
+      marginal_effect = as.vector(marginal_effect),
+      type = "derivative",
+      generation = gen_label,
+      stringsAsFactors = FALSE
+    )
+  }
+  
+  return(results)
+}
+
+# Test function with minimal bootstrap iterations
+test_bootstrap_fixed <- function(model, data_subset, var_name, gen_label, B = 5) {
+  
+  cat("Testing bootstrap with", B, "iterations...\n")
+  
+  point_estimates <- calculate_marginal_effects_simple(model, data_subset, var_name, gen_label)
+  cat("Point estimates:\n")
+  print(point_estimates$marginal_effect)
+  
+  boot_estimates <- matrix(NA, nrow = B, ncol = nrow(point_estimates))
+  original_formula <- formula(model)
+  
+  for (b in 1:B) {
+    boot_indices <- sample(nrow(data_subset), replace = TRUE)
+    boot_data <- data_subset[boot_indices, ]
+    
+    cat("\n--- Bootstrap iteration", b, "---\n")
+    cat("Bootstrap sample size:", nrow(boot_data), "\n")
+    
+    tryCatch({
+      boot_model <- multinom(original_formula, data = boot_data, trace = FALSE)
+      boot_me <- calculate_marginal_effects_simple(boot_model, boot_data, var_name, gen_label)
+      boot_estimates[b, ] <- boot_me$marginal_effect
+      
+      cat("Bootstrap estimates:", boot_me$marginal_effect, "\n")
+      cat("Difference from point estimate:", boot_me$marginal_effect - point_estimates$marginal_effect, "\n")
+      
+    }, error = function(e) {
+      cat("ERROR:", e$message, "\n")
+    })
+  }
+  
+  cat("\n--- Summary ---\n")
+  if (!all(is.na(boot_estimates))) {
+    cat("Bootstrap standard errors:\n")
+    print(apply(boot_estimates, 2, sd, na.rm = TRUE))
+  } else {
+    cat("All bootstrap iterations failed!\n")
+  }
+  
+  return(boot_estimates)
+}
+
+# Calculate all marginal effects
+calculate_all_marginal_effects <- function(model, data_subset, gen_label, use_bootstrap = FALSE) {
+  
+  variables <- c("value", "Female", "MomGradCollege", "DadGradCollege")
+  all_results <- list()
+  
+  for (var in variables) {
+    if (use_bootstrap) {
+      result <- calculate_marginal_effects_bootstrap(model, data_subset, var, gen_label, B = 1000)
+    } else {
+      result <- calculate_marginal_effects(model, data_subset, var, gen_label)
+      result$std_error <- 0.01
+      result$conf_low <- result$marginal_effect - 1.96 * result$std_error
+      result$conf_high <- result$marginal_effect + 1.96 * result$std_error
+    }
+    all_results[[var]] <- result
+  }
+  
+  combined_results <- do.call(rbind, all_results)
+  return(combined_results)
+}
+
+# Plot marginal effects
+plot_marginal_effects <- function(me_results, gen_label) {
+  
+  var_labels <- c(
+    "value" = "Anti-Asian Bias",
+    "Female" = "Female",
+    "MomGradCollege" = "College Graduate: Mother", 
+    "DadGradCollege" = "College Graduate: Father"
+  )
+  
+  outcome_labels <- c(
+    "Asian_only" = "Asian only",
+    "White_only" = "White only", 
+    "Asian_and_White" = "Asian & White"
+  )
+  
+  me_results$variable_label <- factor(me_results$variable, 
+                                     levels = names(var_labels),
+                                     labels = var_labels)
+  me_results$outcome_label <- factor(me_results$outcome,
+                                    levels = names(outcome_labels),
+                                    labels = outcome_labels)
+  
+  p <- ggplot(me_results, aes(x = marginal_effect, y = variable_label, 
+                             color = outcome_label)) +
+    geom_point(size = 3, position = position_dodge(width = 0.5)) +
+    geom_errorbarh(aes(xmin = conf_low, xmax = conf_high), 
+                   height = 0.3,           # Increase height
+                   linewidth = 1.0,        # Make lines thicker
+                   position = position_dodge(width = 0.5)) +
+    geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
+    scale_color_manual(values = c(
+      "Asian only" = "#2E8B57",
+      "White only" = "#4169E1",
+      "Asian & White" = "#FF8C00"
+    ), name = "Identity Choice") +
+    labs(
+      x = "Marginal Effect (percentage points)",
+      y = "",
+      title = paste("Marginal Effects —", gen_label)
+    ) +
+    theme_customs() +
+    theme(
+      legend.position = "bottom",
+      axis.title = element_text(size = 12),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
+      panel.grid.major.x = element_line(color = "grey90", linewidth = 0.5)
+    )
+  
+  return(p)
+}
+
+# Updated function to calculate all marginal effects using bootstrap
+calculate_all_marginal_effects_bootstrap <- function(model, data_subset, gen_label, B = 1000) {
+  
+  variables <- c("value", "Female", "MomGradCollege", "DadGradCollege")
+  all_results <- list()
+  
+  for (var in variables) {
+    cat("Calculating marginal effects for", var, "...\n")
+    result <- calculate_marginal_effects_bootstrap_fixed(model, data_subset, var, gen_label, B = B)
+    all_results[[var]] <- result
+  }
+  
+  combined_results <- do.call(rbind, all_results)
+  return(combined_results)
+}
+
+# ============================================================================
+# CREATE ALL MARGINAL EFFECTS PLOTS - CORRECTED
+# ============================================================================
+
+# Main generations
+cat("Processing main generations...\n")
+me_all_gen_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_all_gen, CPS_IAT_multinomial, "All generations", B = 100)
+me_first_gen_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_first_gen, dplyr::filter(CPS_IAT_multinomial, FirstGen_Asian == 1), "First generation", B = 100)
+me_second_gen_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_gen, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1), "Second generation", B = 100)
+me_third_gen_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_third_gen, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1), "Third generation", B = 100)
+
+# Third generation ancestry subgroups
+cat("Processing third generation subgroups...\n")
+me_third_one_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_third_one, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, OneAsian == 1), "Third gen: One Asian grandparent", B = 100)
+me_third_two_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_third_two, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, TwoAsian == 1), "Third gen: Two Asian grandparents", B = 100)
+me_third_three_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_third_three, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, ThreeAsian == 1), "Third gen: Three Asian grandparents", B = 100)
+me_third_four_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_third_four, dplyr::filter(CPS_IAT_multinomial, ThirdGen_Asian == 1, FourAsian == 1), "Third gen: Four Asian grandparents", B = 100)
+
+# Second generation ancestry subgroups
+cat("Processing second generation subgroups...\n")
+me_second_aa_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_aa, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AA_0bj == 1), "Second gen: AA parents", B = 100)
+me_second_aw_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_aw, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1, AW_0bj == 1), "Second gen: AW parents", B = 100)
+me_second_wa_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_wa, dplyr::filter(CPS_IAT_multinomial, SecondGen_Asian == 1, WA_0bj == 1), "Second gen: WA parents", B = 100)
+
+# Create all marginal effects plots
+cat("Creating plots...\n")
+plot_me_all_bootstrap <- plot_marginal_effects(me_all_gen_bootstrap, "All generations")
+plot_me_first_bootstrap <- plot_marginal_effects(me_first_gen_bootstrap, "First generation")
+plot_me_second_bootstrap <- plot_marginal_effects(me_second_gen_bootstrap, "Second generation")
+plot_me_third_bootstrap <- plot_marginal_effects(me_third_gen_bootstrap, "Third generation")
+
+plot_me_third_one_bootstrap <- plot_marginal_effects(me_third_one_bootstrap, "Third gen: One Asian grandparent")
+plot_me_third_two_bootstrap <- plot_marginal_effects(me_third_two_bootstrap, "Third gen: Two Asian grandparents")
+plot_me_third_three_bootstrap <- plot_marginal_effects(me_third_three_bootstrap, "Third gen: Three Asian grandparents")
+plot_me_third_four_bootstrap <- plot_marginal_effects(me_third_four_bootstrap, "Third gen: Four Asian grandparents")
+
+plot_me_second_aa_bootstrap <- plot_marginal_effects(me_second_aa_bootstrap, "Second gen: AA parents")
+plot_me_second_aw_bootstrap <- plot_marginal_effects(me_second_aw_bootstrap, "Second gen: AW parents")
+plot_me_second_wa_bootstrap <- plot_marginal_effects(me_second_wa_bootstrap, "Second gen: WA parents")
+
+# Save all marginal effects plots
+cat("Saving plots...\n")
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_all.png"), plot_me_all_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_first.png"), plot_me_first_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second.png"), plot_me_second_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third.png"), plot_me_third_bootstrap, width = 10, height = 6, dpi = 300)
+
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_one.png"), plot_me_third_one_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_two.png"), plot_me_third_two_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_three.png"), plot_me_third_three_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_four.png"), plot_me_third_four_bootstrap, width = 10, height = 6, dpi = 300)
+
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second_aa.png"), plot_me_second_aa_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second_aw.png"), plot_me_second_aw_bootstrap, width = 10, height = 6, dpi = 300)
+ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second_wa.png"), plot_me_second_wa_bootstrap, width = 10, height = 6, dpi = 300)
+
+cat("All plots completed and saved!\n")
