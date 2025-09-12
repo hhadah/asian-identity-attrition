@@ -1091,43 +1091,94 @@ calculate_marginal_effects_simple <- function(model, data_subset, var_name, gen_
   }
 }
 
-# Fixed bootstrap (refits with explicit formula; aligns outcomes)
-calculate_marginal_effects_bootstrap_fixed <- function(model, data_subset, var_name, gen_label, B = 1000) {
-  point_est <- calculate_marginal_effects_simple(model, data_subset, var_name, gen_label)
-  boot_effects <- matrix(NA_real_, nrow = B, ncol = nrow(point_est))
-  successful <- 0; failed <- 0
-  original_formula <- formula(model)
+make_reference_row <- function(data_subset) {
+  ref <- data_subset[1, , drop = FALSE]
+  for (nm in names(data_subset)) {
+    if (is.numeric(data_subset[[nm]])) {
+      ref[[nm]] <- mean(data_subset[[nm]], na.rm = TRUE)
+    } else {
+      tab <- table(data_subset[[nm]])
+      ref[[nm]] <- names(tab)[which.max(tab)]
+    }
+  }
+  # lock factor levels so predict() sees the same x levels every time
+  for (nm in names(ref)) if (is.factor(data_subset[[nm]])) {
+    ref[[nm]] <- factor(ref[[nm]], levels = levels(data_subset[[nm]]))
+  }
+  ref
+}
 
-  for (b in 1:B) {
-    boot_idx <- sample(nrow(data_subset), replace = TRUE)
-    boot_data <- data_subset[boot_idx, ]
-    tryCatch({
-      boot_model <- multinom(original_formula, data = boot_data, trace = FALSE)
-      boot_me <- calculate_marginal_effects_simple(boot_model, boot_data, var_name, gen_label)
-      idx <- match(point_est$outcome, boot_me$outcome)
-      aligned <- rep(NA_real_, nrow(point_est))
-      aligned[!is.na(idx)] <- boot_me$marginal_effect[idx[!is.na(idx)]]
-      boot_effects[b, ] <- aligned
-      successful <- successful + 1
-    }, error = function(e) {
-      failed <<- failed + 1
-      if (failed <= 5) cat("Bootstrap iteration", b, "failed:", e$message, "\n")
-    })
-    if (b %% 100 == 0) cat("Completed", b, "iterations...\n")
+calculate_marginal_effects_at_ref <- function(model, ref_row, var_name) {
+  ref0 <- ref1 <- ref_low <- ref_high <- ref_row
+
+  if (var_name %in% c("Female","MomGradCollege","DadGradCollege")) {
+    ref0[[var_name]] <- 0; ref1[[var_name]] <- 1
+    p0 <- predict(model, newdata = ref0, type = "probs")
+    p1 <- predict(model, newdata = ref1, type = "probs")
+    me <- p1 - p0
+    type <- "discrete_change"
+  } else {
+    delta <- 0.01
+    x <- ref_row[[var_name]]
+    ref_low[[var_name]]  <- x - delta/2
+    ref_high[[var_name]] <- x + delta/2
+    pL <- predict(model, newdata = ref_low,  type = "probs")
+    pH <- predict(model, newdata = ref_high, type = "probs")
+    me <- (pH - pL)/delta
+    type <- "derivative"
   }
 
-  cat("Bootstrap results:", successful, "successes,", failed, "failures\n")
-  if (successful < 50) warning("Very few successful bootstrap iterations (", successful, "). Results may be unreliable.")
+  if (is.vector(me)) { me <- matrix(me, nrow = 1, dimnames = list(NULL, model$lev)) }
 
-  conf_low  <- apply(boot_effects, 2, function(x) quantile(x, probs = 0.025, na.rm = TRUE))
-  conf_high <- apply(boot_effects, 2, function(x) quantile(x, probs = 0.975, na.rm = TRUE))
-  boot_se   <- apply(boot_effects,  2, function(x) sd(x, na.rm = TRUE))
+  data.frame(
+    variable = var_name,
+    outcome  = colnames(me),
+    marginal_effect = as.vector(me),
+    type = type,
+    stringsAsFactors = FALSE
+  )
+}
 
-  point_est$std_error <- boot_se
-  point_est$conf_low  <- conf_low
-  point_est$conf_high <- conf_high
-  point_est$n_successful_boots <- successful
-  point_est
+
+# Fixed bootstrap (refits with explicit formula; aligns outcomes)
+calculate_marginal_effects_bootstrap_fixed <- function(model, data_subset, var_name, B = 1000) {
+  # one reference row from the ORIGINAL subset
+  ref_row <- make_reference_row(data_subset)
+
+  # point estimate at the same ref row
+  point_est <- calculate_marginal_effects_at_ref(model, ref_row, var_name)
+
+  boot_effects <- matrix(NA_real_, nrow = B, ncol = nrow(point_est))
+  form <- formula(model)
+
+  for (b in 1:B) {
+    idx <- sample.int(nrow(data_subset), replace = TRUE)
+    boot_data <- data_subset[idx, , drop = FALSE]
+
+    # preserve factor levels used in the original fit
+    for (nm in names(boot_data)) if (is.factor(data_subset[[nm]])) {
+      boot_data[[nm]] <- factor(boot_data[[nm]], levels = levels(data_subset[[nm]]))
+    }
+
+    # REFIT WITH WEIGHTS
+    fit_b <- multinom(form, data = boot_data, weights = boot_data$weight, trace = FALSE)
+
+    # evaluate at the SAME ref row (from original subset)
+    me_b  <- calculate_marginal_effects_at_ref(fit_b, ref_row, var_name)
+
+    # align outcomes in case column order differs
+    boot_effects[b, match(point_est$outcome, me_b$outcome)] <- me_b$marginal_effect
+  }
+
+  # percentile CI (or use normal approx around point_est with sd of boots)
+  conf_low  <- apply(boot_effects, 2, quantile, 0.025, na.rm = TRUE)
+  conf_high <- apply(boot_effects, 2, quantile, 0.975, na.rm = TRUE)
+  boot_se   <- apply(boot_effects, 2, sd, na.rm = TRUE)
+
+  transform(point_est,
+            std_error = boot_se,
+            conf_low  = conf_low,
+            conf_high = conf_high)
 }
 
 # Collect all variables' MEs (bootstrap)
