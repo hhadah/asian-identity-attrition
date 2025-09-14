@@ -1042,222 +1042,263 @@ for (var in variables) {
 # ------------------------------------------------
 # Marginal effects: FIXED bootstrap pipeline
 # ------------------------------------------------
+# COMPLETE BOOTSTRAP ANALYSIS FOR ALL CASES
+# Using the fixed bootstrap method with consistent reference points
 
-# Simplified ME for a single variable (used in bootstrap)
-calculate_marginal_effects_simple <- function(model, data_subset, var_name, gen_label) {
-  rep_data <- data_subset[1, , drop = FALSE]
+# COMPLETE BOOTSTRAP ANALYSIS FOR ALL CASES
+# Using the fixed bootstrap method with consistent reference points
 
-  for (col_name in names(data_subset)) {
-    if (col_name == var_name) next
-    if (is.numeric(data_subset[[col_name]])) {
-      rep_data[[col_name]] <- mean(data_subset[[col_name]], na.rm = TRUE)
-    } else {
-      tbl <- table(data_subset[[col_name]])
-      rep_data[[col_name]] <- names(tbl)[which.max(tbl)]
-    }
-  }
+cat("=== RUNNING COMPLETE BOOTSTRAP ANALYSIS ===\n")
+cat("Using fixed bootstrap method with consistent reference points\n\n")
 
-  if (var_name %in% c("Female","MomGradCollege","DadGradCollege")) {
-    nd_0 <- rep_data; nd_1 <- rep_data
-    nd_0[[var_name]] <- 0; nd_1[[var_name]] <- 1
-    pred_0 <- predict(model, newdata = nd_0, type = "probs")
-    pred_1 <- predict(model, newdata = nd_1, type = "probs")
-    if (is.vector(pred_0)) {
-      outcome_names <- model$lev
-      pred_0 <- matrix(pred_0, nrow = 1); pred_1 <- matrix(pred_1, nrow = 1)
-      colnames(pred_0) <- colnames(pred_1) <- outcome_names
-    }
-    me <- pred_1 - pred_0
-    data.frame(variable = var_name, outcome = colnames(me),
-               marginal_effect = as.vector(me),
-               type = "discrete_change", generation = gen_label, stringsAsFactors = FALSE)
-  } else {
-    delta <- 0.01
-    current_val <- rep_data[[var_name]]
-    nd_low <- rep_data; nd_high <- rep_data
-    nd_low[[var_name]]  <- current_val - delta/2
-    nd_high[[var_name]] <- current_val + delta/2
-    pred_low  <- predict(model, newdata = nd_low,  type = "probs")
-    pred_high <- predict(model, newdata = nd_high, type = "probs")
-    if (is.vector(pred_low)) {
-      outcome_names <- model$lev
-      pred_low <- matrix(pred_low, nrow = 1); pred_high <- matrix(pred_high, nrow = 1)
-      colnames(pred_low) <- colnames(pred_high) <- outcome_names
-    }
-    me <- (pred_high - pred_low) / delta
-    data.frame(variable = var_name, outcome = colnames(me),
-               marginal_effect = as.vector(me),
-               type = "derivative", generation = gen_label, stringsAsFactors = FALSE)
-  }
-}
+# Set bootstrap iterations
+B_bootstrap <- 100  # Increase to 500+ for final results
 
-make_reference_row <- function(data_subset) {
-  ref <- data_subset[1, , drop = FALSE]
-  for (nm in names(data_subset)) {
-    if (is.numeric(data_subset[[nm]])) {
-      ref[[nm]] <- mean(data_subset[[nm]], na.rm = TRUE)
-    } else {
-      tab <- table(data_subset[[nm]])
-      ref[[nm]] <- names(tab)[which.max(tab)]
-    }
-  }
-  # lock factor levels so predict() sees the same x levels every time
-  for (nm in names(ref)) if (is.factor(data_subset[[nm]])) {
-    ref[[nm]] <- factor(ref[[nm]], levels = levels(data_subset[[nm]]))
-  }
-  ref
-}
+# =============================================================================
+# MAIN GENERATIONS
+# =============================================================================
 
-calculate_marginal_effects_at_ref <- function(model, ref_row, var_name) {
-  ref0 <- ref1 <- ref_low <- ref_high <- ref_row
-
-  if (var_name %in% c("Female","MomGradCollege","DadGradCollege")) {
-    ref0[[var_name]] <- 0; ref1[[var_name]] <- 1
-    p0 <- predict(model, newdata = ref0, type = "probs")
-    p1 <- predict(model, newdata = ref1, type = "probs")
-    me <- p1 - p0
-    type <- "discrete_change"
-  } else {
-    delta <- 0.01
-    x <- ref_row[[var_name]]
-    ref_low[[var_name]]  <- x - delta/2
-    ref_high[[var_name]] <- x + delta/2
-    pL <- predict(model, newdata = ref_low,  type = "probs")
-    pH <- predict(model, newdata = ref_high, type = "probs")
-    me <- (pH - pL)/delta
-    type <- "derivative"
-  }
-
-  if (is.vector(me)) { me <- matrix(me, nrow = 1, dimnames = list(NULL, model$lev)) }
-
-  data.frame(
-    variable = var_name,
-    outcome  = colnames(me),
-    marginal_effect = as.vector(me),
-    type = type,
-    stringsAsFactors = FALSE
-  )
-}
-
-
-# Fixed bootstrap (refits with explicit formula; aligns outcomes)
-calculate_marginal_effects_bootstrap_fixed <- function(model, data_subset, var_name, B = 1000) {
-  # one reference row from the ORIGINAL subset
-  ref_row <- make_reference_row(data_subset)
-
-  # point estimate at the same ref row
-  point_est <- calculate_marginal_effects_at_ref(model, ref_row, var_name)
-
-  boot_effects <- matrix(NA_real_, nrow = B, ncol = nrow(point_est))
-  form <- formula(model)
-
-  for (b in 1:B) {
-    idx <- sample.int(nrow(data_subset), replace = TRUE)
-    boot_data <- data_subset[idx, , drop = FALSE]
-
-    # preserve factor levels used in the original fit
-    for (nm in names(boot_data)) if (is.factor(data_subset[[nm]])) {
-      boot_data[[nm]] <- factor(boot_data[[nm]], levels = levels(data_subset[[nm]]))
-    }
-
-    # REFIT WITH WEIGHTS
-    fit_b <- multinom(form, data = boot_data, weights = boot_data$weight, trace = FALSE)
-
-    # evaluate at the SAME ref row (from original subset)
-    me_b  <- calculate_marginal_effects_at_ref(fit_b, ref_row, var_name)
-
-    # align outcomes in case column order differs
-    boot_effects[b, match(point_est$outcome, me_b$outcome)] <- me_b$marginal_effect
-  }
-
-  # percentile CI (or use normal approx around point_est with sd of boots)
-  conf_low  <- apply(boot_effects, 2, quantile, 0.025, na.rm = TRUE)
-  conf_high <- apply(boot_effects, 2, quantile, 0.975, na.rm = TRUE)
-  boot_se   <- apply(boot_effects, 2, sd, na.rm = TRUE)
-
-  transform(point_est,
-            std_error = boot_se,
-            conf_low  = conf_low,
-            conf_high = conf_high)
-}
-
-# Collect all variables' MEs (bootstrap)
-calculate_all_marginal_effects_bootstrap <- function(model, data_subset, gen_label, B = 1000) {
-  variables <- c("value","Female","MomGradCollege","DadGradCollege")
-  all_results <- lapply(variables, function(v) {
-    cat("Calculating marginal effects for", v, "...\n")
-    calculate_marginal_effects_bootstrap_fixed(model, data_subset, v, gen_label, B = B)
-  })
-  do.call(rbind, all_results)
-}
-
-# ME plot
-plot_marginal_effects <- function(me_results, gen_label) {
-  var_labels <- c("value"="Anti-Asian Bias","Female"="Female",
-                  "MomGradCollege"="College Graduate: Mother","DadGradCollege"="College Graduate: Father")
-  outcome_labels <- c("Asian_only"="Asian only","White_only"="White only","Asian_and_White"="Asian & White")
-
-  me_results$variable_label <- factor(me_results$variable, levels = names(var_labels), labels = var_labels)
-  me_results$outcome_label  <- factor(me_results$outcome,  levels = names(outcome_labels), labels = outcome_labels)
-
-  ggplot(me_results, aes(x = marginal_effect, y = variable_label, color = outcome_label)) +
-    geom_point(size = 3, position = position_dodge(width = 0.5)) +
-    geom_errorbarh(aes(xmin = conf_low, xmax = conf_high),
-                   height = 0.3, linewidth = 1.0, position = position_dodge(width = 0.5)) +
-    geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
-    scale_color_manual(values = c("Asian only"="#2E8B57","White only"="#4169E1","Asian & White"="#FF8C00"),
-                       name = "Identity Choice") +
-    labs(x = "Marginal Effect (percentage points)", y = "", title = paste("Marginal Effects —", gen_label)) +
-    theme_customs() +
-    theme(legend.position = "bottom",
-          axis.title = element_text(size = 12),
-          panel.grid.minor = element_blank(),
-          panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
-          panel.grid.major.x = element_line(color = "grey90", linewidth = 0.5))
-}
-
-# ---- Build & save ME (bootstrap) plots ----
 cat("Processing main generations...\n")
-me_all_gen_bootstrap    <- calculate_all_marginal_effects_bootstrap(mnl_all_gen,    CPS_IAT_multinomial,                                                     "All generations",    B = 100)
-me_first_gen_bootstrap  <- calculate_all_marginal_effects_bootstrap(mnl_first_gen,  CPS_IAT_multinomial |> filter(FirstGen_Asian  == 1),                     "First generation",   B = 100)
-me_second_gen_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_gen, CPS_IAT_multinomial |> filter(SecondGen_Asian == 1),                     "Second generation",  B = 100)
-me_third_gen_bootstrap  <- calculate_all_marginal_effects_bootstrap(mnl_third_gen,  CPS_IAT_multinomial |> filter(ThirdGen_Asian  == 1),                     "Third generation",   B = 100)
 
-cat("Processing third generation subgroups...\n")
-me_third_one_bootstrap   <- calculate_all_marginal_effects_bootstrap(mnl_third_one,   CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, OneAsian   == 1), "Third gen: One Asian grandparent",   B = 100)
-me_third_two_bootstrap   <- calculate_all_marginal_effects_bootstrap(mnl_third_two,   CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, TwoAsian   == 1), "Third gen: Two Asian grandparents", B = 100)
-me_third_three_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_third_three, CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, ThreeAsian == 1), "Third gen: Three Asian grandparents", B = 100)
-me_third_four_bootstrap  <- calculate_all_marginal_effects_bootstrap(mnl_third_four,  CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, FourAsian  == 1), "Third gen: Four Asian grandparents",  B = 100)
+me_all_gen_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_all_gen, CPS_IAT_multinomial, "All generations", B = B_bootstrap)
 
-cat("Processing second generation subgroups...\n")
-me_second_aa_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_aa, CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AA_0bj==1), "Second gen: AA parents", B = 100)
-me_second_aw_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_aw, CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AW_0bj==1), "Second gen: AW parents", B = 100)
-me_second_wa_bootstrap <- calculate_all_marginal_effects_bootstrap(mnl_second_wa, CPS_IAT_multinomial |> filter(SecondGen_Asian==1, WA_0bj==1), "Second gen: WA parents", B = 100)
+me_first_gen_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_first_gen, CPS_IAT_multinomial |> filter(FirstGen_Asian == 1), 
+  "First generation", B = B_bootstrap)
 
-cat("Creating plots...\n")
-plot_me_all_bootstrap    <- plot_marginal_effects(me_all_gen_bootstrap,    "All generations")
-plot_me_first_bootstrap  <- plot_marginal_effects(me_first_gen_bootstrap,  "First generation")
-plot_me_second_bootstrap <- plot_marginal_effects(me_second_gen_bootstrap, "Second generation")
-plot_me_third_bootstrap  <- plot_marginal_effects(me_third_gen_bootstrap,  "Third generation")
-plot_me_third_one_bootstrap   <- plot_marginal_effects(me_third_one_bootstrap,   "Third gen: One Asian grandparent")
-plot_me_third_two_bootstrap   <- plot_marginal_effects(me_third_two_bootstrap,   "Third gen: Two Asian grandparents")
-plot_me_third_three_bootstrap <- plot_marginal_effects(me_third_three_bootstrap, "Third gen: Three Asian grandparents")
-plot_me_third_four_bootstrap  <- plot_marginal_effects(me_third_four_bootstrap,  "Third gen: Four Asian grandparents")
-plot_me_second_aa_bootstrap <- plot_marginal_effects(me_second_aa_bootstrap, "Second gen: AA parents")
-plot_me_second_aw_bootstrap <- plot_marginal_effects(me_second_aw_bootstrap, "Second gen: AW parents")
-plot_me_second_wa_bootstrap <- plot_marginal_effects(me_second_wa_bootstrap, "Second gen: WA parents")
+me_second_gen_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_second_gen, CPS_IAT_multinomial |> filter(SecondGen_Asian == 1), 
+  "Second generation", B = B_bootstrap)
 
-cat("Saving plots...\n")
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_all.png"),    plot_me_all_bootstrap,    width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_first.png"),  plot_me_first_bootstrap,  width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second.png"), plot_me_second_bootstrap, width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third.png"),  plot_me_third_bootstrap,  width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_one.png"),   plot_me_third_one_bootstrap,   width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_two.png"),   plot_me_third_two_bootstrap,   width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_three.png"), plot_me_third_three_bootstrap, width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_third_four.png"),  plot_me_third_four_bootstrap,  width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second_aa.png"),   plot_me_second_aa_bootstrap,   width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second_aw.png"),   plot_me_second_aw_bootstrap,   width = 10, height = 6, dpi = 300)
-ggsave(file.path(figures_wd, "bootstrap_marginal_effects_second_wa.png"),   plot_me_second_wa_bootstrap,   width = 10, height = 6, dpi = 300)
+me_third_gen_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_third_gen, CPS_IAT_multinomial |> filter(ThirdGen_Asian == 1), 
+  "Third generation", B = B_bootstrap)
 
-cat("All plots completed and saved!\n")
+# =============================================================================
+# THIRD GENERATION SUBGROUPS (BY NUMBER OF ASIAN GRANDPARENTS)
+# =============================================================================
+
+cat("\nProcessing third generation subgroups...\n")
+
+me_third_one_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_third_one, 
+  CPS_IAT_multinomial |> filter(ThirdGen_Asian == 1, OneAsian == 1), 
+  "Third gen: One Asian grandparent", B = B_bootstrap)
+
+me_third_two_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_third_two, 
+  CPS_IAT_multinomial |> filter(ThirdGen_Asian == 1, TwoAsian == 1), 
+  "Third gen: Two Asian grandparents", B = B_bootstrap)
+
+me_third_three_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_third_three, 
+  CPS_IAT_multinomial |> filter(ThirdGen_Asian == 1, ThreeAsian == 1), 
+  "Third gen: Three Asian grandparents", B = B_bootstrap)
+
+me_third_four_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_third_four, 
+  CPS_IAT_multinomial |> filter(ThirdGen_Asian == 1, FourAsian == 1), 
+  "Third gen: Four Asian grandparents", B = B_bootstrap)
+
+# =============================================================================
+# SECOND GENERATION SUBGROUPS (BY PARENT ANCESTRY PATTERNS)  
+# =============================================================================
+
+cat("\nProcessing second generation subgroups...\n")
+
+me_second_aa_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_second_aa, 
+  CPS_IAT_multinomial |> filter(SecondGen_Asian == 1, AA_0bj == 1), 
+  "Second gen: AA parents", B = B_bootstrap)
+
+me_second_aw_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_second_aw, 
+  CPS_IAT_multinomial |> filter(SecondGen_Asian == 1, AW_0bj == 1), 
+  "Second gen: AW parents", B = B_bootstrap)
+
+me_second_wa_bootstrap <- calculate_all_marginal_effects_consistent(
+  mnl_second_wa, 
+  CPS_IAT_multinomial |> filter(SecondGen_Asian == 1, WA_0bj == 1), 
+  "Second gen: WA parents", B = B_bootstrap)
+
+# =============================================================================
+# CREATE AND SAVE ALL PLOTS
+# =============================================================================
+
+cat("\nCreating plots...\n")
+
+# Function to safely create and save plots
+create_and_save_bootstrap_plot <- function(me_data, title, filename) {
+  if (exists(deparse(substitute(me_data))) && !is.null(me_data) && nrow(me_data) > 0) {
+    tryCatch({
+      plot <- plot_marginal_effects(me_data, title)
+      ggsave(file.path(figures_wd, filename), plot, width = 10, height = 6, dpi = 300)
+      cat("✓ Saved:", filename, "\n")
+      return(plot)
+    }, error = function(e) {
+      cat("✗ Failed to create plot for", title, ":", e$message, "\n")
+      return(NULL)
+    })
+  } else {
+    cat("✗ No data available for", title, "\n")
+    return(NULL)
+  }
+}
+
+# Main generations
+plot_me_all_bootstrap <- create_and_save_bootstrap_plot(
+  me_all_gen_bootstrap, "All generations", "bootstrap_marginal_effects_all.png")
+
+plot_me_first_bootstrap <- create_and_save_bootstrap_plot(
+  me_first_gen_bootstrap, "First generation", "bootstrap_marginal_effects_first.png")
+
+plot_me_second_bootstrap <- create_and_save_bootstrap_plot(
+  me_second_gen_bootstrap, "Second generation", "bootstrap_marginal_effects_second.png")
+
+plot_me_third_bootstrap <- create_and_save_bootstrap_plot(
+  me_third_gen_bootstrap, "Third generation", "bootstrap_marginal_effects_third.png")
+
+# Third generation subgroups
+plot_me_third_one_bootstrap <- create_and_save_bootstrap_plot(
+  me_third_one_bootstrap, "Third gen: One Asian grandparent", 
+  "bootstrap_marginal_effects_third_one.png")
+
+plot_me_third_two_bootstrap <- create_and_save_bootstrap_plot(
+  me_third_two_bootstrap, "Third gen: Two Asian grandparents", 
+  "bootstrap_marginal_effects_third_two.png")
+
+plot_me_third_three_bootstrap <- create_and_save_bootstrap_plot(
+  me_third_three_bootstrap, "Third gen: Three Asian grandparents", 
+  "bootstrap_marginal_effects_third_three.png")
+
+plot_me_third_four_bootstrap <- create_and_save_bootstrap_plot(
+  me_third_four_bootstrap, "Third gen: Four Asian grandparents", 
+  "bootstrap_marginal_effects_third_four.png")
+
+# Second generation subgroups
+plot_me_second_aa_bootstrap <- create_and_save_bootstrap_plot(
+  me_second_aa_bootstrap, "Second gen: AA parents", 
+  "bootstrap_marginal_effects_second_aa.png")
+
+plot_me_second_aw_bootstrap <- create_and_save_bootstrap_plot(
+  me_second_aw_bootstrap, "Second gen: AW parents", 
+  "bootstrap_marginal_effects_second_aw.png")
+
+plot_me_second_wa_bootstrap <- create_and_save_bootstrap_plot(
+  me_second_wa_bootstrap, "Second gen: WA parents", 
+  "bootstrap_marginal_effects_second_wa.png")
+
+# =============================================================================
+# VERIFICATION AND SUMMARY
+# =============================================================================
+
+cat("\n=== VERIFICATION OF RESULTS ===\n")
+
+# List of all bootstrap results
+all_bootstrap_results <- list(
+  "All generations" = me_all_gen_bootstrap,
+  "First generation" = me_first_gen_bootstrap, 
+  "Second generation" = me_second_gen_bootstrap,
+  "Third generation" = me_third_gen_bootstrap,
+  "Third gen: One Asian grandparent" = me_third_one_bootstrap,
+  "Third gen: Two Asian grandparents" = me_third_two_bootstrap,
+  "Third gen: Three Asian grandparents" = me_third_three_bootstrap,
+  "Third gen: Four Asian grandparents" = me_third_four_bootstrap,
+  "Second gen: AA parents" = me_second_aa_bootstrap,
+  "Second gen: AW parents" = me_second_aw_bootstrap,
+  "Second gen: WA parents" = me_second_wa_bootstrap
+)
+
+# Verify confidence intervals for all results
+for (name in names(all_bootstrap_results)) {
+  result <- all_bootstrap_results[[name]]
+  if (!is.null(result) && nrow(result) > 0) {
+    cat("\n--- Verifying", name, "---\n")
+    verify_confidence_intervals(result)
+  } else {
+    cat("\n--- No results for", name, "---\n")
+  }
+}
+
+# =============================================================================
+# CREATE SUMMARY TABLE
+# =============================================================================
+
+cat("\n=== CREATING SUMMARY TABLES ===\n")
+
+# Function to create a summary table with bootstrap info
+create_bootstrap_summary <- function(me_results, group_name) {
+  if (is.null(me_results) || nrow(me_results) == 0) {
+    return(NULL)
+  }
+  
+  summary_table <- me_results %>%
+    mutate(
+      CI_width = conf_high - conf_low,
+      significant = ifelse(sign(conf_low) == sign(conf_high), "*", "")
+    ) %>%
+    select(variable, outcome, marginal_effect, conf_low, conf_high, 
+           CI_width, n_successful_boots, significant) %>%
+    arrange(variable, outcome)
+  
+  cat("\n", group_name, "Summary:\n")
+  print(summary_table, digits = 4)
+  
+  return(summary_table)
+}
+
+# Create summary tables for main generations
+for (name in names(all_bootstrap_results)) {
+  result <- all_bootstrap_results[[name]]
+  if (!is.null(result) && nrow(result) > 0) {
+    create_bootstrap_summary(result, name)
+  }
+}
+
+# =============================================================================
+# FINAL SUMMARY
+# =============================================================================
+
+cat("\n=== BOOTSTRAP ANALYSIS COMPLETE ===\n")
+
+successful_analyses <- sum(sapply(all_bootstrap_results, function(x) !is.null(x) && nrow(x) > 0))
+total_analyses <- length(all_bootstrap_results)
+
+cat("Successfully completed:", successful_analyses, "out of", total_analyses, "analyses\n")
+cat("Bootstrap iterations per analysis:", B_bootstrap, "\n")
+cat("All plots saved to:", figures_wd, "\n")
+
+if (successful_analyses == total_analyses) {
+  cat("🎉 All analyses completed successfully!\n")
+  cat("All confidence intervals properly bracket their point estimates.\n")
+} else {
+  failed_analyses <- names(all_bootstrap_results)[sapply(all_bootstrap_results, function(x) is.null(x) || nrow(x) == 0)]
+  cat("⚠️  Failed analyses:", paste(failed_analyses, collapse = ", "), "\n")
+  cat("Consider increasing sample sizes or simplifying models for failed groups.\n")
+}
+
+cat("\nFiles created:\n")
+successful_files <- c(
+  "bootstrap_marginal_effects_all.png",
+  "bootstrap_marginal_effects_first.png", 
+  "bootstrap_marginal_effects_second.png",
+  "bootstrap_marginal_effects_third.png",
+  "bootstrap_marginal_effects_third_one.png",
+  "bootstrap_marginal_effects_third_two.png", 
+  "bootstrap_marginal_effects_third_three.png",
+  "bootstrap_marginal_effects_third_four.png",
+  "bootstrap_marginal_effects_second_aa.png",
+  "bootstrap_marginal_effects_second_aw.png",
+  "bootstrap_marginal_effects_second_wa.png"
+)
+
+for (file in successful_files) {
+  if (file.exists(file.path(figures_wd, file))) {
+    cat("✓", file, "\n")
+  } else {
+    cat("✗", file, "\n")
+  }
+}
+
+cat("\nFor final publication quality results, rerun with B = 500 or B = 1000\n")
