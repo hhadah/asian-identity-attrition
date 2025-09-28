@@ -64,9 +64,10 @@ source(file.path(programs,"01-packages-wds.r")) # set up package
 # source(file.path(programs,"30-msa-table-four-skin-iat-regression-by-gen.R")) # 
 # source(file.path(programs,"31-msa-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # 
 # source(file.path(programs,"32-msa-table-five-regressions-skin-iat-byparent.R")) # 
-
-source(file.path(programs,"40-multinomial-model-optimized.R")) # 
-
+# source(file.path(programs,"40-multinomial-model-optimized.R")) # 
+source(file.path(programs,"41-multinomial-model-optimized-adults.R")) # adults only
+# source(file.path(programs,"42-interaction-iat-byparent-plot.R")) # teens only
+# source(file.path(programs,"43-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # kids only
 ### summary stats
 
 # Send Message
