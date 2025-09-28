@@ -413,6 +413,70 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \pagebreak
 \newpage
 
+% =========================
+% 42: Interaction Coefficient Plots (AW/WA)
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Mixed Parental Types Among Adults}
+\label{fig:interaction-coefs-aw-wa}
+
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_AW.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_WA.png}
+\end{subfigure}
+
+\caption*{\footnotesize{I show interaction coefficients from estimating equation (\ref{eq:identity_reg_bias}) with interaction terms for gender and parental education. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by mixed parental types. Standard errors are clustered on the state level. The samples include second-generation Asian individuals ages 18 and above with mixed-race parentage. Native-born second-generation Asian immigrant individuals with one parent born in an Asian country and one parent born outside of Asia.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+% =========================
+% 43: Interaction Coefficient Plots (Third Generation by Grandparent Type)
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Asian Grandparent Count Among Third Generation}
+\label{fig:interaction-coefs-thirdgen-grandparent}
+
+\begin{subfigure}{.45\textwidth}
+\caption{One Asian Grandparent}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_OneAsian.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+\caption{Two Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_TwoAsian.png}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}{.45\textwidth}
+\caption{Three Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_ThreeAsian.png}
+\end{subfigure}
+
+\caption*{\footnotesize{I show interaction coefficients from estimating equation (\ref{eq:identity_reg_bias}) with interaction terms for gender and parental education on third-generation samples. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by the number of Asian grandparents. Standard errors are clustered on the state level. The samples include third-generation Asian individuals with varying degrees of Asian ancestry through grandparents. Native-born third-generation individuals with at least one grandparent born in an Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
 \begin{center}
 \begin{figure}[!htb]
 \centering
@@ -571,6 +635,49 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \pagebreak
 \newpage
 
+% =========================
+% 41: Multinomial Model - Predicted Probabilities (Adults, AW/WA)
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Second Generation Adults, AW/WA)}
+\label{fig:pp-secondgen-adults-aw-wa}
+
+% Top row: Anti-Asian Bias and Female
+\begin{subfigure}{.48\textwidth}
+\caption{Anti-Asian Bias (AW)}
+\centering
+\includegraphics[width=1\linewidth]{pp_second_aw_value_simple.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{Anti-Asian Bias (WA)}
+\centering
+\includegraphics[width=1\linewidth]{pp_second_wa_value_simple.png}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+% Second row: Female
+\begin{subfigure}{.48\textwidth}
+\caption{Female (AW)}
+\centering
+\includegraphics[width=1\linewidth]{pp_second_aw_Female_simple.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{Female (WA)}
+\centering
+\includegraphics[width=1\linewidth]{pp_second_wa_Female_simple.png}
+\end{subfigure}
+
+\caption*{\footnotesize{Predicted probabilities from multinomial logit models for second-generation adults with Asian father/White mother (AW) and White father/Asian mother (WA). Each panel shows the probability of choosing each racial identity as a function of anti-Asian bias or gender, holding other covariates at their means.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
 \begin{center}
 \begin{figure}[!htb]
 \centering
@@ -734,10 +841,5 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \input{maineffect-proxy}
 \pagebreak
 \newpage
-
-
-% \input{tab06-regression_tab_byproxy_skin.tex}
-% \pagebreak
-% \newpage
 
 \clearpage

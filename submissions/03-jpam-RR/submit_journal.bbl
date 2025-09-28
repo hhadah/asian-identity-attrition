@@ -2810,6 +2810,40 @@
       \field{title}{Ethnicity and race: Making identities in a changing world}
       \field{year}{2006}
     \endentry
+    \entry{duncanIntermarriageIntergenerationalTransmission2011}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f985c604b003806bf9a9ee9821828dfb}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=14c1b1e714ca24d7e11468c64523b74e}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={S.\bibnamedelimi J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{fullhash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{fullhashraw}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{bibnamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authorbibnamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authornamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authorfullhash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authorfullhashraw}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{J Labor Econ}
+      \field{shortjournal}{J Labor Econ}
+      \field{title}{Intermarriage and the Intergenerational Transmission of Ethnic Identity and Human {{Capital}} for {{Mexican Americans}}}
+      \field{volume}{29}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
     \entry{mora2020antiblackness}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=666ad588b4a88746cfd79236f8d41dad}{%
