@@ -1,0 +1,2753 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{abramitzkyNationImmigrantsAssimilation2014}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
+           family={Abramitzky},
+           familyi={A\bibinitperiod},
+           given={Ran},
+           giveni={R\bibinitperiod}}}%
+        {{hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
+           family={Boustan},
+           familyi={B\bibinitperiod},
+           given={Leah\bibnamedelima Platt},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ee4f98dc5fca1344da5371dc8dd16aba}{%
+           family={Eriksson},
+           familyi={E\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
+      }
+      \strng{namehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{fullhash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{fullhashraw}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{bibnamehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authorbibnamehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authornamehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authorfullhash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authorfullhashraw}{5ad3ce8972d83434a968db281cb79d83}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{During the Age of Mass Migration (1850–1913), the United States maintained an open border, absorbing 30 million European immigrants. Prior cross-sectional work finds that immigrants initially held lower-paid occupations than natives but converged over time. In newly assembled panel data, we show that, in fact, the average immigrant did not face a substantial occupation-based earnings penalty upon first arrival and experienced occupational advancement at the same rate as natives. Cross-sectional patterns are driven by biases from declining arrival cohort skill level and departures of negatively selected return migrants. We show that assimilation patterns vary substantially across sending countries and persist in the second generation.}
+      \field{issn}{0022-3808}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{month}{6}
+      \field{number}{3}
+      \field{shorttitle}{A {{Nation}} of {{Immigrants}}}
+      \field{title}{A {{Nation}} of {{Immigrants}}: {{Assimilation}} and {{Economic Outcomes}} in the {{Age}} of {{Mass Migration}}}
+      \field{urlday}{15}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{122}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{467\bibrangedash 506}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1086/675805
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/UYDRWS37/Abramitzky et al. - 2014 - A Nation of Immigrants Assimilation and Economic .pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.journals.uchicago.edu/doi/full/10.1086/675805
+      \endverb
+      \verb{url}
+      \verb https://www.journals.uchicago.edu/doi/full/10.1086/675805
+      \endverb
+    \endentry
+    \entry{abramitzkyCulturalAssimilationAge2016}{online}{}{}
+      \name{author}{3}{}{%
+        {{hash=dfaa0bfe014fce7344fad0782d0d0d01}{%
+           family={Abramitzky},
+           familyi={A\bibinitperiod},
+           given={Ran},
+           giveni={R\bibinitperiod}}}%
+        {{hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
+           family={Boustan},
+           familyi={B\bibinitperiod},
+           given={Leah\bibnamedelima Platt},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ee4f98dc5fca1344da5371dc8dd16aba}{%
+           family={Eriksson},
+           familyi={E\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{fullhash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{fullhashraw}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{bibnamehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authorbibnamehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authornamehash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authorfullhash}{5ad3ce8972d83434a968db281cb79d83}
+      \strng{authorfullhashraw}{5ad3ce8972d83434a968db281cb79d83}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using two million census records, we document cultural assimilation during the Age of Mass Migration, a formative period in US history. Immigrants chose less foreign names for children as they spent more time in the US, eventually closing half of the gap with natives. Many immigrants also intermarried and learned English. Name-based assimilation was similar by literacy status, and faster for immigrants who were more culturally distant from natives. Cultural assimilation affected the next generation. Within households, brothers with more foreign names completed fewer years of schooling, faced higher unemployment, earned less and were more likely to marry foreign-born spouses.}
+      \field{eprinttype}{National Bureau of Economic Research}
+      \field{month}{7}
+      \field{number}{22381}
+      \field{pubstate}{prepublished}
+      \field{series}{Working {{Paper Series}}}
+      \field{title}{Cultural {{Assimilation}} during the {{Age}} of {{Mass Migration}}}
+      \field{type}{Working Paper}
+      \field{urlday}{15}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3386/w22381
+      \endverb
+      \verb{eprint}
+      \verb 22381
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/8MT4B7X3/Abramitzky et al. - 2016 - Cultural Assimilation during the Age of Mass Migra.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nber.org/papers/w22381
+      \endverb
+      \verb{url}
+      \verb https://www.nber.org/papers/w22381
+      \endverb
+    \endentry
+    \entry{akerlofEconomicsIdentity2000}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f198b417f1390a0f8ff279349b43f47d}{%
+           family={Akerlof},
+           familyi={A\bibinitperiod},
+           given={George\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4b1dcf73249e6ee13fe4f0e5b8c0f500}{%
+           family={Kranton},
+           familyi={K\bibinitperiod},
+           given={Rachel\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press / USA}%
+      }
+      \strng{namehash}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{fullhash}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{fullhashraw}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{bibnamehash}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{authorbibnamehash}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{authornamehash}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{authorfullhash}{cd2fb2a135b090c6b56801ab841fa746}
+      \strng{authorfullhashraw}{cd2fb2a135b090c6b56801ab841fa746}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{This paper considers how identity, a person's sense of self, affects economic outcomes. We incorporate the psychology and sociology of identity into an economic model of behavior. In the utility function we propose, identity is associated with different social categories and how people in these categories should behave. We then construct a simple game-theoretic model showing how identity can affect individual interactions. The paper adapts these models to gender discrimination in the workplace, the economics of poverty and social exclusion, and the household division of labor. In each case, the inclusion of identity substantively changes conclusions of previous economic analysis.}
+      \field{issn}{00335533}
+      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{month}{8}
+      \field{number}{3}
+      \field{title}{Economics and {{Identity}}}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{volume}{115}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{715\bibrangedash 753}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1162/003355300554881
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/LN886HNN/Akerlof and Kranton - 2000 - Economics and Identity.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=3474873&site=ehost-live
+      \endverb
+      \verb{url}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=3474873&site=ehost-live
+      \endverb
+      \keyw{Behavior,Identity (Psychology),Sex discrimination in employment,Social marginality}
+    \endentry
+    \entry{almasalkhi2023links}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ef2e5345625875ab85bdd283d72fe080}{%
+           family={Almasalkhi},
+           familyi={A\bibinitperiod},
+           given={Nadia},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{fullhash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{fullhashraw}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{bibnamehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authorbibnamehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authornamehash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authorfullhash}{ef2e5345625875ab85bdd283d72fe080}
+      \strng{authorfullhashraw}{ef2e5345625875ab85bdd283d72fe080}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{title}{Links between Anti-Immigrant Bias and Racial Prejudice in California}
+      \field{year}{2023}
+    \endentry
+    \entry{anes2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d8d96bc5d0cad88ae5aebca078a7d103}{%
+           family={{American National Election Studies}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{fullhash}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{fullhashraw}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{bibnamehash}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{authorbibnamehash}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{authornamehash}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{authorfullhash}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \strng{authorfullhashraw}{d8d96bc5d0cad88ae5aebca078a7d103}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{ANES}} 2020 Time Series Study Full Release [Dataset and Documentation]}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.electionstudies.org
+      \endverb
+      \verb{url}
+      \verb https://www.electionstudies.org
+      \endverb
+    \endentry
+    \entry{antmanIncentivesIdentifyRacial2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=027166a0a07b4166565e41ab9c7051d4}{%
+           family={Antman},
+           familyi={A\bibinitperiod},
+           given={Francisca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{fullhash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{fullhashraw}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{bibnamehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authorbibnamehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authornamehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authorfullhash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authorfullhashraw}{7e1a47a22eab1e478de0bacaade32785}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{We link data on racial self-identification with changes in state-level affirmative action policies to ask whether racial self-identification responds to economic incentives. We find that after a state bans affirmative action, multiracial individuals who face an incentive to identify under affirmative action are about 30\% less likely to identify with their minority group. In contrast, multiracial individuals who face a disincentive to identify under affirmative action are roughly 20\% more likely to identify with their minority group once affirmative action policies are banned.}
+      \field{issn}{00346535}
+      \field{journaltitle}{Review of Economics \& Statistics}
+      \field{month}{7}
+      \field{number}{3}
+      \field{shorttitle}{Incentives to {{Identify}}}
+      \field{title}{Incentives to {{Identify}}: {{Racial Identity}} in the {{Age}} of {{Affirmative Action}}}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{volume}{97}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{710\bibrangedash 713}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1162/REST_a_00527
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/PHUP5IMQ/Antman and Duncan - 2015 - Incentives to Identify Racial Identity in the Age.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=108366368&site=ehost-live
+      \endverb
+      \verb{url}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=108366368&site=ehost-live
+      \endverb
+      \keyw{Affirmative action programs,Ethnic groups,Group identity,Minorities,Race identity,United States}
+    \endentry
+    \entry{antmanAmericanIndianCasinos2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=027166a0a07b4166565e41ab9c7051d4}{%
+           family={Antman},
+           familyi={A\bibinitperiod},
+           given={Francisca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{fullhash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{fullhashraw}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{bibnamehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authorbibnamehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authornamehash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authorfullhash}{7e1a47a22eab1e478de0bacaade32785}
+      \strng{authorfullhashraw}{7e1a47a22eab1e478de0bacaade32785}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{day}{29}
+      \field{month}{8}
+      \field{title}{American {{Indian Casinos}} and {{Native American Self}}‐{{Identification}}}
+      \field{year}{2021}
+      \field{dateera}{ce}
+    \endentry
+    \entry{antmanEthnicAttritionObserved2016}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=027166a0a07b4166565e41ab9c7051d4}{%
+           family={Antman},
+           familyi={A\bibinitperiod},
+           given={Francisca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a97c2de88e00743241d71e2e6d236672}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Economic Association}%
+      }
+      \strng{namehash}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{fullhash}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{fullhashraw}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{bibnamehash}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{authorbibnamehash}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{authornamehash}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{authorfullhash}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \strng{authorfullhashraw}{2aab7f6ac1c36fbcacd088f709a3bf79}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{eprinttype}{jstor}
+      \field{issn}{0002-8282}
+      \field{journaltitle}{The American Economic Review}
+      \field{number}{5}
+      \field{title}{Ethnic {{Attrition}} and the {{Observed Health}} of {{Later-Generation Mexican Americans}}}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{volume}{106}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{467\bibrangedash 471}
+      \range{pages}{5}
+      \verb{eprint}
+      \verb 43861065
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/LPLCGSCX/Antman et al. - 2016 - Ethnic Attrition and the Observed Health of Later-.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/43861065
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/43861065
+      \endverb
+    \endentry
+    \entry{antmanEthnicAttritionAssimilation2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1ef379f32668010fef7d487157e80a49}{%
+           family={Antman},
+           familyi={A\bibinitperiod},
+           given={Francisca\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a97c2de88e00743241d71e2e6d236672}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg, Netherlands}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature B.V.}%
+      }
+      \strng{namehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{fullhash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{fullhashraw}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{bibnamehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authorbibnamehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authornamehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authorfullhash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authorfullhashraw}{ccadbeea3e5f6c2f5922792a450064e1}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{The literature on immigrant assimilation and intergenerational progress has sometimes reached surprising conclusions, such as the puzzle of immigrant advantage which finds that Hispanic immigrants sometimes have better health than US-born Hispanics. While numerous studies have attempted to explain these patterns, almost all studies rely on subjective measures of ethnic self-identification to identify immigrants’ descendants. This can lead to bias due to “ethnic attrition,” which occurs whenever a US-born descendant of a Hispanic immigrant fails to self-identify as Hispanic. In this paper, we exploit information on parents’ and grandparents’ place of birth to show that Mexican ethnic attrition, operating through intermarriage, is sizable and positively selected on health, making subsequent generations of Mexican immigrants appear less healthy than they actually are. Consequently, conventional estimates of health disparities between Mexican Americans and non-Hispanic whites as well as those between Mexican Americans and recent Mexican immigrants have been significantly overstated.}
+      \field{issn}{09331433}
+      \field{journaltitle}{Journal of Population Economics}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{pagetotal}{1499-1522}
+      \field{title}{Ethnic Attrition, Assimilation, and the Measured Health Outcomes of {{Mexican Americans}}}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{volume}{33}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1499\bibrangedash 1522}
+      \range{pages}{24}
+      \verb{doi}
+      \verb https://doi-org.ezproxy.lib.uh.edu/10.1007/s00148-020-00772-8
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/WNKC7FPZ/Antman et al. - 2020 - Ethnic attrition, assimilation, and the measured h.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.proquest.com/docview/2425726423/abstract/684CF31C38A647FBPQ/1
+      \endverb
+      \verb{url}
+      \verb http://www.proquest.com/docview/2425726423/abstract/684CF31C38A647FBPQ/1
+      \endverb
+      \keyw{Assimilation,Attrition,Bias,Descendants,Grandparents,Health disparities,Health status,Hispanic Americans,Identity,Immigrants,Intermarriage,Mexican Americans,Noncitizens,Population Studies}
+    \endentry
+    \entry{arabsheibani2010asian}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=cd860625c530b82d494f6ba8ed535863}{%
+           family={Arabsheibani},
+           familyi={A\bibinitperiod},
+           given={G\bibnamedelima Reza},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=fcd6114a30fda9801eef65b9d374f56b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{fullhash}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{fullhashraw}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{bibnamehash}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{authorbibnamehash}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{authornamehash}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{authorfullhash}{b1297ebde69380ce30caefc59d6f5482}
+      \strng{authorfullhashraw}{b1297ebde69380ce30caefc59d6f5482}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Applied Economics Letters}
+      \field{number}{1}
+      \field{title}{Asian-white male wage differentials in the United States}
+      \field{volume}{17}
+      \field{year}{2010}
+      \field{pages}{37\bibrangedash 43}
+      \range{pages}{7}
+    \endentry
+    \entry{arkesAttributionsImplicitPrejudice2004}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=444838e8b05c3a1bfa90232aa536ce31}{%
+           family={Arkes},
+           familyi={A\bibinitperiod},
+           given={Hal\bibnamedelima R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=149b5f190482778d8791833f2c72aea5}{%
+           family={Tetlock},
+           familyi={T\bibinitperiod},
+           given={Philip\bibnamedelima E.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {US}%
+      }
+      \list{publisher}{1}{%
+        {Lawrence Erlbaum}%
+      }
+      \strng{namehash}{ddce1af936b10ef812c8d000887242ff}
+      \strng{fullhash}{ddce1af936b10ef812c8d000887242ff}
+      \strng{fullhashraw}{ddce1af936b10ef812c8d000887242ff}
+      \strng{bibnamehash}{ddce1af936b10ef812c8d000887242ff}
+      \strng{authorbibnamehash}{ddce1af936b10ef812c8d000887242ff}
+      \strng{authornamehash}{ddce1af936b10ef812c8d000887242ff}
+      \strng{authorfullhash}{ddce1af936b10ef812c8d000887242ff}
+      \strng{authorfullhashraw}{ddce1af936b10ef812c8d000887242ff}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Measures of implicit prejudice are based on associations between race-related stimuli and valenced words. Reaction time (RT) data have been characterized as showing implicit prejudice when White names or faces are associated with positive concepts and African-American names or faces with negative concepts, compared to the reverse pairings. We offer three objections to the inferential leap from the comparative RT of different associations to the attribution of implicit prejudice: (a) The data may reflect shared cultural stereotypes rather than personal animus, (b) the affective negativity attributed to participants may be due to cognitions and emotions that are not necessarily prejudiced, and (c) the patterns of judgment deemed to be indicative of prejudice pass tests deemed to be diagnostic of rational behavior. (PsycInfo Database Record (c) 2024 APA, all rights reserved)}
+      \field{issn}{1532-7965}
+      \field{journaltitle}{Psychological Inquiry}
+      \field{number}{4}
+      \field{shorttitle}{Attributions of {{Implicit Prejudice}}, or "{{Would Jesse Jackson}} '{{Fail}}' the {{Implicit Association Test}}?}
+      \field{title}{Attributions of {{Implicit Prejudice}}, or "{{Would Jesse Jackson}} '{{Fail}}' the {{Implicit Association Test}}?"}
+      \field{volume}{15}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{257\bibrangedash 278}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1207/s15327965pli1504_01
+      \endverb
+      \keyw{Black People,Culture (Anthropological),Prejudice,Racial and Ethnic Attitudes,Reaction Time,Stereotyped Attitudes,White People}
+    \endentry
+    \entry{atkinHowWeChoose2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f673f9090cb4a1f7275c7106b927c6e0}{%
+           family={Atkin},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c063d0cff3aa4978a98fffa0806ccaf3}{%
+           family={Colson-Sihra},
+           familyi={C\bibinithyphendelim S\bibinitperiod},
+           given={Eve},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1581bcfed710b23b79548df84f07477e}{%
+           family={Shayo},
+           familyi={S\bibinitperiod},
+           given={Moses},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
+      }
+      \strng{namehash}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{fullhash}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{fullhashraw}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{bibnamehash}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{authorbibnamehash}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{authornamehash}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{authorfullhash}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \strng{authorfullhashraw}{ecc7669d6f71764c34bbf19bf990b7d6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Are identities fungible? How do people come to identify with specific groups? This paper proposes a revealed preference approach, using food consumption to uncover ethnic and religious identity choices in India. We first show that consumption of identity goods responds to forces suggested by social identity research: group status and group salience. Moreover, identity choices respond to the cost of following the group’s prescribed behaviors. We propose and estimate a demand system to quantify the identity changes that followed India’s 1991 reforms. While social identity research has focused on status and salience, our results suggest that economic costs also play an important role.}
+      \field{issn}{0022-3808}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shorttitle}{How {{Do We Choose Our Identity}}?}
+      \field{title}{How {{Do We Choose Our Identity}}? {{A Revealed Preference Approach Using Food Consumption}}}
+      \field{urlday}{9}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{129}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1193\bibrangedash 1251}
+      \range{pages}{59}
+      \verb{doi}
+      \verb 10.1086/712761
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/AQSHZ6E6/Atkin et al. - 2021 - How Do We Choose Our Identity A Revealed Preferen.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.journals.uchicago.edu/doi/full/10.1086/712761
+      \endverb
+      \verb{url}
+      \verb https://www.journals.uchicago.edu/doi/full/10.1086/712761
+      \endverb
+    \endentry
+    \entry{bertrandImplicitDiscrimination2005}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=a25cba6b139b5ccffa7a9dcf8252a692}{%
+           family={Bertrand},
+           familyi={B\bibinitperiod},
+           given={Marianne},
+           giveni={M\bibinitperiod}}}%
+        {{hash=35b6943bd58e9ad4ac500e94d19b4405}{%
+           family={Chugh},
+           familyi={C\bibinitperiod},
+           given={Dolly},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0ad4a50fedec7f3fb2ce43f3f64e62d6}{%
+           family={Mullainathan},
+           familyi={M\bibinitperiod},
+           given={Sendhil},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{fullhash}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{fullhashraw}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{bibnamehash}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{authorbibnamehash}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{authornamehash}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{authorfullhash}{1b85b039ace034977c1c82707e1b56ee}
+      \strng{authorfullhashraw}{1b85b039ace034977c1c82707e1b56ee}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{issn}{0002-8282}
+      \field{journaltitle}{American Economic Review}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{Implicit {{Discrimination}}}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{95}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{94\bibrangedash 98}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1257/000282805774670365
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/2JTVXTUC/Bertrand et al. - 2005 - Implicit Discrimination.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.aeaweb.org/articles?id=10.1257/000282805774670365
+      \endverb
+      \verb{url}
+      \verb http://www.aeaweb.org/articles?id=10.1257/000282805774670365
+      \endverb
+      \keyw{{Economics of Minorities,Races,Indigenous Peoples,and Immigrants},Non-labor Discrimination}
+    \endentry
+    \entry{bertrandAreEmilyGreg2004}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a25cba6b139b5ccffa7a9dcf8252a692}{%
+           family={Bertrand},
+           familyi={B\bibinitperiod},
+           given={Marianne},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0ad4a50fedec7f3fb2ce43f3f64e62d6}{%
+           family={Mullainathan},
+           familyi={M\bibinitperiod},
+           given={Sendhil},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0fb7650a51dce6981a165911223f00a}
+      \strng{fullhash}{e0fb7650a51dce6981a165911223f00a}
+      \strng{fullhashraw}{e0fb7650a51dce6981a165911223f00a}
+      \strng{bibnamehash}{e0fb7650a51dce6981a165911223f00a}
+      \strng{authorbibnamehash}{e0fb7650a51dce6981a165911223f00a}
+      \strng{authornamehash}{e0fb7650a51dce6981a165911223f00a}
+      \strng{authorfullhash}{e0fb7650a51dce6981a165911223f00a}
+      \strng{authorfullhashraw}{e0fb7650a51dce6981a165911223f00a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{We study race in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are randomly assigned African-American- or White-sounding names. White names receive 50 percent more callbacks for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U. S. labor market.}
+      \field{issn}{0002-8282}
+      \field{journaltitle}{American Economic Review}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{4}
+      \field{shorttitle}{Are {{Emily}} and {{Greg More Employable Than Lakisha}} and {{Jamal}}?}
+      \field{title}{Are {{Emily}} and {{Greg More Employable Than Lakisha}} and {{Jamal}}? {{A Field Experiment}} on {{Labor Market Discrimination}}}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2022}
+      \field{volume}{94}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{991\bibrangedash 1013}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1257/0002828042002561
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/5XDXWHAE/Bertrand and Mullainathan - 2004 - Are Emily and Greg More Employable Than Lakisha an.pdf;/Users/hhadah/Zotero/storage/2NRDWHVJ/articles.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.aeaweb.org/articles?id=10.1257/0002828042002561
+      \endverb
+      \verb{url}
+      \verb https://www.aeaweb.org/articles?id=10.1257/0002828042002561
+      \endverb
+      \keyw{{Economics of Minorities,Races,Indigenous Peoples,and Immigrants},{Non-labor Discrimination,Labor Discrimination}}
+    \endentry
+    \entry{bonomiIdentityBeliefsPolitical2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2adadaa6c474048a72097832bc6ccaee}{%
+           family={Bonomi},
+           familyi={B\bibinitperiod},
+           given={Giampaolo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=fb79d42b4fe32269d4bb5047f82354e2}{%
+           family={Gennaioli},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=5c48e1a82e30b93eec473760eccb65e9}{%
+           family={Tabellini},
+           familyi={T\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{fullhash}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{fullhashraw}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{bibnamehash}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{authorbibnamehash}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{authornamehash}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{authorfullhash}{39de5bb7100fc833b78f2c479b28a590}
+      \strng{authorfullhashraw}{39de5bb7100fc833b78f2c479b28a590}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{We present a theory of identity politics that builds on two ideas. First, when policy conflict renders a certain social divide—economic or cultural—salient, a voter identifies with her economic or cultural group. Second, the voter slants her beliefs toward the stereotype of the group she identifies with. We obtain three implications. First, voters’ beliefs are polarized along the distinctive features of salient groups. Second, if the salience of cultural policies increases, cultural conflict rises, redistributive conflict falls, and polarization becomes more correlated across issues. Third, economic shocks hurting conservative voters may trigger a switch to cultural identity, causing these voters to demand less redistribution. We discuss U.S. survey evidence in light of these implications.}
+      \field{day}{1}
+      \field{issn}{0033-5533}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{month}{11}
+      \field{number}{4}
+      \field{shortjournal}{The Quarterly Journal of Economics}
+      \field{title}{Identity, {{Beliefs}}, and {{Political Conflict}}*}
+      \field{urlday}{9}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{136}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2371\bibrangedash 2411}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1093/qje/qjab034
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/W7GCT9PX/Bonomi et al. - 2021 - Identity, Beliefs, and Political Conflict.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/qje/qjab034
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/qje/qjab034
+      \endverb
+    \endentry
+    \entry{bordaloStereotypes2016}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=754ef93ac5f9e9323e8d410ace8d947b}{%
+           family={Bordalo},
+           familyi={B\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8131a3d39a60d496b91cdaa352488a25}{%
+           family={Coffman},
+           familyi={C\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+        {{hash=fb79d42b4fe32269d4bb5047f82354e2}{%
+           family={Gennaioli},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=73d7bf2d3105674f373111fc7356eec3}{%
+           family={Shleifer},
+           familyi={S\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{df488e7b58dbd1ade1ac1530d6028103}
+      \strng{fullhash}{b4811986a38312054ef2a6392626044d}
+      \strng{fullhashraw}{b4811986a38312054ef2a6392626044d}
+      \strng{bibnamehash}{b4811986a38312054ef2a6392626044d}
+      \strng{authorbibnamehash}{b4811986a38312054ef2a6392626044d}
+      \strng{authornamehash}{df488e7b58dbd1ade1ac1530d6028103}
+      \strng{authorfullhash}{b4811986a38312054ef2a6392626044d}
+      \strng{authorfullhashraw}{b4811986a38312054ef2a6392626044d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{We present a model of stereotypes based on Kahneman and Tversky’s representativeness heuristic. A decision maker assesses a target group by overweighting its representative types, defined as the types that occur more frequently in that group than in a baseline reference group. Stereotypes formed this way contain a “kernel of truth”: they are rooted in true differences between groups. Because stereotypes focus on differences, they cause belief distortions, particularly when groups are similar. Stereotypes are also context dependent: beliefs about a group depend on the characteristics of the reference group. In line with our predictions, beliefs in the lab about abstract groups and beliefs in the field about political groups are context dependent and distorted in the direction of representative types.}
+      \field{day}{1}
+      \field{issn}{0033-5533}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{month}{11}
+      \field{number}{4}
+      \field{shortjournal}{The Quarterly Journal of Economics}
+      \field{title}{Stereotypes*}
+      \field{urlday}{27}
+      \field{urlmonth}{9}
+      \field{urlyear}{2022}
+      \field{volume}{131}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1753\bibrangedash 1794}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1093/qje/qjw029
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/9IZUEW9U/Bordalo et al. - 2016 - Stereotypes.pdf;/Users/hhadah/Zotero/storage/7ZDTDSGY/2468882.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/qje/qjw029
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/qje/qjw029
+      \endverb
+    \endentry
+    \entry{ucrbook}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d5f88b9393873fa528244a01674f1e94}{%
+           family={{Bureau of Justice Statistics}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5f88b9393873fa528244a01674f1e94}
+      \strng{fullhash}{d5f88b9393873fa528244a01674f1e94}
+      \strng{fullhashraw}{d5f88b9393873fa528244a01674f1e94}
+      \strng{bibnamehash}{d5f88b9393873fa528244a01674f1e94}
+      \strng{authorbibnamehash}{d5f88b9393873fa528244a01674f1e94}
+      \strng{authornamehash}{d5f88b9393873fa528244a01674f1e94}
+      \strng{authorfullhash}{d5f88b9393873fa528244a01674f1e94}
+      \strng{authorfullhashraw}{d5f88b9393873fa528244a01674f1e94}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed via Data.gov}
+      \field{title}{Uniform Crime Reporting Program Data Series [Dataset]}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://catalog.data.gov/dataset/uniform-crime-reporting-program-data-series-16edb
+      \endverb
+      \verb{url}
+      \verb https://catalog.data.gov/dataset/uniform-crime-reporting-program-data-series-16edb
+      \endverb
+    \endentry
+    \entry{bursztynImmigrantNextDoor2022}{online}{}{}
+      \name{author}{4}{}{%
+        {{hash=104a6288dd9030ae66a027279f24d85f}{%
+           family={Bursztyn},
+           familyi={B\bibinitperiod},
+           given={Leonardo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d51aef5ba798004195db6b48eaf77eff}{%
+           family={Chaney},
+           familyi={C\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=af18102ff00f4d0b470567a5fbd38024}{%
+           family={Hassan},
+           familyi={H\bibinitperiod},
+           given={Tarek\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=885c1f302fc8ef603f79e24a55bd9b31}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Aakash},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Rochester, NY}%
+      }
+      \strng{namehash}{298ed74dded3c079f6b44d382c5028a6}
+      \strng{fullhash}{e0eb7448d5e29fed9f4bddbce650d903}
+      \strng{fullhashraw}{e0eb7448d5e29fed9f4bddbce650d903}
+      \strng{bibnamehash}{e0eb7448d5e29fed9f4bddbce650d903}
+      \strng{authorbibnamehash}{e0eb7448d5e29fed9f4bddbce650d903}
+      \strng{authornamehash}{298ed74dded3c079f6b44d382c5028a6}
+      \strng{authorfullhash}{e0eb7448d5e29fed9f4bddbce650d903}
+      \strng{authorfullhashraw}{e0eb7448d5e29fed9f4bddbce650d903}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We study how decades-long exposure to individuals of a given foreign descent shapes natives’ attitudes and behavior toward that group. Using individualized donations data from large charitable organizations, we show that long-term exposure to a given foreign ancestry leads to more generous behavior specifically toward that group’s ancestral country. To shed light on mechanisms, we focus on attitudes and behavior toward Arab-Muslims, combining several existing large-scale surveys, cross-county data on implicit prejudice, and a newly-collected national survey. We show that greater long-term exposure: (i) decreases both explicit and implicit prejudice against Arab-Muslims, (ii) reduces support for policies and political candidates hostile toward Arab-Muslims, (iii) leads to more personal contact with Arab-Muslim individuals, and (iv) increases knowledge of Arab-Muslims and Islam in general.}
+      \field{day}{31}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3781974}
+      \field{pubstate}{prepublished}
+      \field{shorttitle}{The {{Immigrant Next Door}}}
+      \field{title}{The {{Immigrant Next Door}}: {{Long-Term Contact}}, {{Generosity}}, and {{Prejudice}}}
+      \field{type}{SSRN Scholarly Paper}
+      \field{urlday}{14}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2139/ssrn.3781974
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/MPFX9RLV/Bursztyn et al. - 2022 - The Immigrant Next Door Long-Term Contact, Genero.pdf;/Users/hhadah/Zotero/storage/26N3K5AB/papers.html
+      \endverb
+      \verb{urlraw}
+      \verb https://papers.ssrn.com/abstract=3781974
+      \endverb
+      \verb{url}
+      \verb https://papers.ssrn.com/abstract=3781974
+      \endverb
+      \keyw{attitudes,contact,immigration,prejudice}
+    \endentry
+    \entry{carlanaImplicitStereotypesEvidence2019}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4a6b8ff1ef0d527f9fa700a6a37b83ef}{%
+           family={Carlana},
+           familyi={C\bibinitperiod},
+           given={Michela},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press / USA}%
+      }
+      \strng{namehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{fullhash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{fullhashraw}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{bibnamehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{authorbibnamehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{authornamehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{authorfullhash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \strng{authorfullhashraw}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{I study whether exposure to teacher stereotypes, as measured by the Gender-Science Implicit Association Test, affects student achievement. I provide evidence that the gender gap in math performance, defined as the score of boys minus the score of girls in standardized tests, substantially increases when students are assigned to math teachers with stronger gender stereotypes. Teacher stereotypes induce girls to underperform in math and self-select into less demanding high schools, following the track recommendation of their teachers. These effects are at least partially driven by lower self-confidence on math ability of girls exposed to gender-biased teachers. Stereotypes impair the test performance of girls, who end up failing to achieve their full potential. I do not detect statistically significant effects on student outcomes of literature teacher stereotypes.}
+      \field{issn}{00335533}
+      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{month}{8}
+      \field{number}{3}
+      \field{shorttitle}{Implicit {{Stereotypes}}}
+      \field{title}{Implicit {{Stereotypes}}: {{Evidence}} from {{Teachers}}' {{Gender Bias}}}
+      \field{urlday}{24}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{134}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1163\bibrangedash 1224}
+      \range{pages}{62}
+      \verb{doi}
+      \verb 10.1093/qje/qjz008
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/8ZHS54WB/Carlana - 2019 - Implicit Stereotypes Evidence from Teachers' Gend.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=137475910&site=ehost-live
+      \endverb
+      \verb{url}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=137475910&site=ehost-live
+      \endverb
+      \keyw{Gender stereotypes,Mathematics teachers,Sex discrimination,Standardized tests,Stereotypes}
+    \endentry
+    \entry{charlesPrejudiceWagesEmpirical2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2deff0eb8eeb0531abaa80f8f1712e6d}{%
+           family={Charles},
+           familyi={C\bibinitperiod},
+           given={Kerwin\bibnamedelima Kofi},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=afaf99f2cd8558fc742a3a4428881909}{%
+           family={Guryan},
+           familyi={G\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
+      }
+      \strng{namehash}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{fullhash}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{fullhashraw}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{bibnamehash}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{authorbibnamehash}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{authornamehash}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{authorfullhash}{13112377c6c98c1c66c97c7b401219d0}
+      \strng{authorfullhashraw}{13112377c6c98c1c66c97c7b401219d0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{We test the predictions from Becker’s (1957) seminal work on employer prejudice and find that relative black wages (a) vary negatively with the prejudice of the “marginal” white in a state, (b) vary negatively with the prejudice in the lower tail of the prejudice distribution but are unaffected by the prejudice of the most prejudiced persons in a state, and (c) vary negatively with the fraction of a state that is black. Our estimates suggest that one‐quarter of the racial wage gap is due to prejudice, with nontrivial consequences for black lifetime earnings.}
+      \field{issn}{0022-3808}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{month}{10}
+      \field{number}{5}
+      \field{shorttitle}{Prejudice and {{Wages}}}
+      \field{title}{Prejudice and {{Wages}}: {{An Empirical Assessment}} of {{Becker}}’s {{The Economics}} of {{Discrimination}}}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2022}
+      \field{volume}{116}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{773\bibrangedash 809}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1086/593073
+      \endverb
+      \verb{urlraw}
+      \verb https://www.journals.uchicago.edu/doi/abs/10.1086/593073
+      \endverb
+      \verb{url}
+      \verb https://www.journals.uchicago.edu/doi/abs/10.1086/593073
+      \endverb
+    \endentry
+    \entry{charnessSocialIdentityGroup2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=134e92f09e5ba63f519ccd0a63b0dcff}{%
+           family={Charness},
+           familyi={C\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b6f25c2ea695f4385f6acab832194dfc}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{fullhash}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{fullhashraw}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{bibnamehash}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{authorbibnamehash}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{authornamehash}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{authorfullhash}{d82863089b4a7b8d22aea94bcb994954}
+      \strng{authorfullhashraw}{d82863089b4a7b8d22aea94bcb994954}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{The issue of one's identity has loomed large recently and has unfortunately been used more and more as a wedge to separate subgroups. It is important to understand the ramifications of identity, both to limit the negative consequences (such as so-called identity politics) and to be able to use one's sense of identity as a positive force in the world. What are effective approaches to allow positive identities and pride about one's social identity to be reinforced for the greater good? Recent work suggests that some forms of team competition can induce greater effort, which can be applied to areas such as microlending, charitable giving, and organization of the gig economy. And yet many fascinating questions remain; for example, what is the interaction of salience, social norms, and preferences on the effects of social identity in our society?}
+      \field{journaltitle}{Annual Review of Economics}
+      \field{number}{1}
+      \field{title}{Social {{Identity}}, {{Group Behavior}}, and {{Teams}}}
+      \field{urlday}{11}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{12}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{691\bibrangedash 713}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1146/annurev-economics-091619-032800
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/RNWP46EH/Charness and Chen - 2020 - Social Identity, Group Behavior, and Teams.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1146/annurev-economics-091619-032800
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1146/annurev-economics-091619-032800
+      \endverb
+      \keyw{experiment,group behavior,norms,social identity,teams}
+    \endentry
+    \entry{chettyRaceEconomicOpportunity2020}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=7a853740afbc544905334cf607b3cd51}{%
+           family={Chetty},
+           familyi={C\bibinitperiod},
+           given={Raj},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8dddc1bd4014bf50f037b3b8772994dd}{%
+           family={Hendren},
+           familyi={H\bibinitperiod},
+           given={Nathaniel},
+           giveni={N\bibinitperiod}}}%
+        {{hash=229a1ce3cd3de5c577d260fad8077dfd}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Maggie\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2222abe277b80e00ef366c6b4775419c}{%
+           family={Porter},
+           familyi={P\bibinitperiod},
+           given={Sonya\bibnamedelima R},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{de9f176c59c95a4d2de134921515d461}
+      \strng{fullhash}{5a45f81d614de8501bc75bb986954ea8}
+      \strng{fullhashraw}{5a45f81d614de8501bc75bb986954ea8}
+      \strng{bibnamehash}{5a45f81d614de8501bc75bb986954ea8}
+      \strng{authorbibnamehash}{5a45f81d614de8501bc75bb986954ea8}
+      \strng{authornamehash}{de9f176c59c95a4d2de134921515d461}
+      \strng{authorfullhash}{5a45f81d614de8501bc75bb986954ea8}
+      \strng{authorfullhashraw}{5a45f81d614de8501bc75bb986954ea8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{We study the sources of racial disparities in income using anonymized longitudinal data covering nearly the entire U.S. population from 1989 to 2015. We document three results. First, black Americans and American Indians have much lower rates of upward mobility and higher rates of downward mobility than whites, leading to persistent disparities across generations. Conditional on parent income, the black-white income gap is driven by differences in wages and employment rates between black and white men; there are no such differences between black and white women. Hispanic Americans have rates of intergenerational mobility more similar to whites than blacks, leading the Hispanic-white income gap to shrink across generations. Second, differences in parental marital status, education, and wealth explain little of the black-white income gap conditional on parent income. Third, the black-white gap persists even among boys who grow up in the same neighborhood. Controlling for parental income, black boys have lower incomes in adulthood than white boys in 99\% of Census tracts. The few areas with small black-white gaps tend to be low-poverty neighborhoods with low levels of racial bias among whites and high rates of father presence among blacks. Black males who move to such neighborhoods earlier in childhood have significantly better outcomes. However, less than 5\% of black children grow up in such areas. Our findings suggest that reducing the black-white income gap will require efforts whose impacts cross neighborhood and class lines and increase upward mobility specifically for black men.}
+      \field{day}{1}
+      \field{issn}{0033-5533}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{month}{5}
+      \field{number}{2}
+      \field{shortjournal}{The Quarterly Journal of Economics}
+      \field{shorttitle}{Race and {{Economic Opportunity}} in the {{United States}}}
+      \field{title}{Race and {{Economic Opportunity}} in the {{United States}}: An {{Intergenerational Perspective}}*}
+      \field{urlday}{27}
+      \field{urlmonth}{9}
+      \field{urlyear}{2022}
+      \field{volume}{135}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{711\bibrangedash 783}
+      \range{pages}{73}
+      \verb{doi}
+      \verb 10.1093/qje/qjz042
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/5Y4FAKHH/Chetty et al. - 2020 - Race and Economic Opportunity in the United States.pdf;/Users/hhadah/Zotero/storage/JJZN7NZV/5687353.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/qje/qjz042
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/qje/qjz042
+      \endverb
+    \endentry
+    \entry{chiswick1983analysis}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e59f08e456bdcbd10f9bd8efbd78b4a4}{%
+           family={Chiswick},
+           familyi={C\bibinitperiod},
+           given={Barry\bibnamedelima R},
+           giveni={B\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{fullhash}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{fullhashraw}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{bibnamehash}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{authorbibnamehash}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{authornamehash}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{authorfullhash}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \strng{authorfullhashraw}{e59f08e456bdcbd10f9bd8efbd78b4a4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Journal of Labor Economics}
+      \field{number}{2}
+      \field{title}{An analysis of the earnings and employment of Asian-American men}
+      \field{volume}{1}
+      \field{year}{1983}
+      \field{pages}{197\bibrangedash 214}
+      \range{pages}{18}
+    \endentry
+    \entry{cornell2006ethnicity}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=76496629405c073255a4f9956f9d727a}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4a828980b9a66d3e191779260e4fd29b}{%
+           family={Hartmann},
+           familyi={H\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{259c4ccd70783c1622864946f0727720}
+      \strng{fullhash}{259c4ccd70783c1622864946f0727720}
+      \strng{fullhashraw}{259c4ccd70783c1622864946f0727720}
+      \strng{bibnamehash}{259c4ccd70783c1622864946f0727720}
+      \strng{authorbibnamehash}{259c4ccd70783c1622864946f0727720}
+      \strng{authornamehash}{259c4ccd70783c1622864946f0727720}
+      \strng{authorfullhash}{259c4ccd70783c1622864946f0727720}
+      \strng{authorfullhashraw}{259c4ccd70783c1622864946f0727720}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethnicity and race: Making identities in a changing world}
+      \field{year}{2006}
+    \endentry
+    \entry{darityPositionPossessionsStratification2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3b8ed8409dbfc57a2cb8c16f25fb0461}{%
+           family={Darity},
+           familyi={D\bibinitperiod},
+           given={William\bibnamedelima A.},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{fullhash}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{fullhashraw}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{bibnamehash}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{authorbibnamehash}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{authornamehash}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{authorfullhash}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \strng{authorfullhashraw}{3b8ed8409dbfc57a2cb8c16f25fb0461}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{This article provides an overview of the origins and development of stratification economics as a subfield that centers the importance of identity, social ranking, and relative group position. Stratification economics developed in response to explanations for interracial/ethnic/gender inequality that invoked group-based dysfunction on the part of the subordinate community. Influences, detailed here, include the works of W. E. B. DuBois, Thorstein Veblen, Karl Marx, Eric Williams, Herbert Blumer, Claude Steele, Cecilia Ridgeway, Thomas Pettigrew, and Linda Tropp. The article concludes with an exploration of unique insights and extensions stratification economics affords a variety of themes: the impact of multiple identities, the determinants of individual productivity, variation in intensity of group identification, “passing,” sources of intergroup differences in wealth, and social mobility and immigration. (JEL D31, D63, I31, J15, J16, Z13)}
+      \field{day}{1}
+      \field{issn}{0022-0515}
+      \field{journaltitle}{Journal of Economic Literature}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shortjournal}{Journal of Economic Literature}
+      \field{shorttitle}{Position and {{Possessions}}}
+      \field{title}{Position and {{Possessions}}: {{Stratification Economics}} and {{Intergroup Inequality}}}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{60}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{400\bibrangedash 426}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1257/jel.20211690
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/SQLDTRJB/Darity - 2022 - Position and Possessions Stratification Economics.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pubs.aeaweb.org/doi/10.1257/jel.20211690
+      \endverb
+      \verb{url}
+      \verb https://pubs.aeaweb.org/doi/10.1257/jel.20211690
+      \endverb
+    \endentry
+    \entry{darityEconomicsIdentityOrigin2006}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3b8ed8409dbfc57a2cb8c16f25fb0461}{%
+           family={Darity},
+           familyi={D\bibinitperiod},
+           given={William\bibnamedelima A.},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=034f58202e469da5071c7afb12071f0f}{%
+           family={Mason},
+           familyi={M\bibinitperiod},
+           given={Patrick\bibnamedelima L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=be01cfbfb855ea07bf4d4306b5a46463}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={James\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{379be957258052db1982a8e40ba050c6}
+      \strng{fullhash}{379be957258052db1982a8e40ba050c6}
+      \strng{fullhashraw}{379be957258052db1982a8e40ba050c6}
+      \strng{bibnamehash}{379be957258052db1982a8e40ba050c6}
+      \strng{authorbibnamehash}{379be957258052db1982a8e40ba050c6}
+      \strng{authornamehash}{379be957258052db1982a8e40ba050c6}
+      \strng{authorfullhash}{379be957258052db1982a8e40ba050c6}
+      \strng{authorfullhashraw}{379be957258052db1982a8e40ba050c6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{This study uses evolutionary game theory to model the relationship between racial identity formation and inter-racial disparities in economic and non-economic outcomes. Starting with a fixed population of persons who are easily identified according to an exogenous criterion, for example, phenotype, we then allow individuals to pursue either a racialist or an individualist identity strategy in social interactions. The formation of identity norms imposes both positive and negative externalities on each person's identity actions. There are forces in the model that might push society toward racialism, individualism, or a mixed identity equilibrium, depending on matching assumptions, dynamic assumptions, parameter values, and initial conditions.}
+      \field{day}{1}
+      \field{issn}{0167-2681}
+      \field{journaltitle}{Journal of Economic Behavior \& Organization}
+      \field{month}{7}
+      \field{number}{3}
+      \field{shortjournal}{Journal of Economic Behavior \& Organization}
+      \field{shorttitle}{The Economics of Identity}
+      \field{title}{The Economics of Identity: {{The}} Origin and Persistence of Racial Identity Norms}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{60}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{283\bibrangedash 305}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1016/j.jebo.2004.09.005
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/XYDJ26N2/S0167268105001277.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167268105001277
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167268105001277
+      \endverb
+      \keyw{Economics,Persistence,Racial identity}
+    \endentry
+    \entry{dietteSkinShadeStratification2015}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d92a3670d255b10db52c7e4ef276983d}{%
+           family={Diette},
+           familyi={D\bibinitperiod},
+           given={Timothy\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e0e738661118a656ff9d5a5cd4cebc33}{%
+           family={Goldsmith},
+           familyi={G\bibinitperiod},
+           given={Arthur\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=abcc1b0725052d57ee5e43dc5aec73de}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Darrick},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e1536ee40b611a420c67e6920be486ac}{%
+           family={Darity},
+           familyi={D\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Inc}%
+      }
+      \strng{namehash}{52d102739d3e4b91e36a2783bf2f3bb0}
+      \strng{fullhash}{d7ca9f6f7168e908030d793635c7bb1d}
+      \strng{fullhashraw}{d7ca9f6f7168e908030d793635c7bb1d}
+      \strng{bibnamehash}{d7ca9f6f7168e908030d793635c7bb1d}
+      \strng{authorbibnamehash}{d7ca9f6f7168e908030d793635c7bb1d}
+      \strng{authornamehash}{52d102739d3e4b91e36a2783bf2f3bb0}
+      \strng{authorfullhash}{d7ca9f6f7168e908030d793635c7bb1d}
+      \strng{authorfullhashraw}{d7ca9f6f7168e908030d793635c7bb1d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{The purpose of this paper is to formally evaluate whether the deleterious impact of unemployment on mental health increases as skin shade darkens for black women in the U.S. Using data drawn from the National Survey of American Life, we find strong evidence of a gradient on depression between skin shade and unemployment for black women. These findings are consistent with the premises of the emerging field of stratification economics. Moreover, the findings are robust to various definitions of skin shade. Unemployed black women with darker complexions are significantly more likely to suffer their first onset of depression than unemployed black females with lighter skin shade. While in some cases, lighter skinned black women appeared not to suffer adverse effects of unemployment compared to their employed counterparts, persons with dark complexions did not enjoy the same degree of protection from poor mental health.}
+      \field{day}{1}
+      \field{issn}{0034-6446}
+      \field{journaltitle}{The Review of Black Political Economy}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1-2}
+      \field{shorttitle}{Skin {{Shade Stratification}} and the {{Psychological Cost}} of {{Unemployment}}}
+      \field{title}{Skin {{Shade Stratification}} and the {{Psychological Cost}} of {{Unemployment}}: {{Is}} There a {{Gradient}} for {{Black Females}}?}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{42}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{155\bibrangedash 177}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s12114-014-9192-z
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/QVK7M45G/Diette et al. - 2015 - Skin Shade Stratification and the Psychological Co.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s12114-014-9192-z
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s12114-014-9192-z
+      \endverb
+    \endentry
+    \entry{duleep2012economic}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=c7d7b4617693c1bae5366fca293eeee8}{%
+           family={Duleep},
+           familyi={D\bibinitperiod},
+           given={Harriet\bibnamedelima Orcutt},
+           giveni={H\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=381184e5624aa03d3d29e130aed4d3dd}{%
+           family={Sanders},
+           familyi={S\bibinitperiod},
+           given={Seth\bibnamedelima G},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IZA Discussion Paper}%
+      }
+      \strng{namehash}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{fullhash}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{fullhashraw}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{bibnamehash}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{authorbibnamehash}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{authornamehash}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{authorfullhash}{e6d3b14b7492cab27b01843fa996160d}
+      \strng{authorfullhashraw}{e6d3b14b7492cab27b01843fa996160d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{title}{The economic status of Asian Americans before and after the Civil Rights Act}
+      \field{year}{2012}
+    \endentry
+    \entry{duncanIntermarriageIntergenerationalTransmission2011}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f985c604b003806bf9a9ee9821828dfb}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=14c1b1e714ca24d7e11468c64523b74e}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={S.\bibnamedelimi J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{fullhash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{fullhashraw}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{bibnamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authorbibnamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authornamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authorfullhash}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \strng{authorfullhashraw}{a68ca79e5f4099d8d5d15fe929c992ce}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{J Labor Econ}
+      \field{shortjournal}{J Labor Econ}
+      \field{title}{Intermarriage and the Intergenerational Transmission of Ethnic Identity and Human {{Capital}} for {{Mexican Americans}}}
+      \field{volume}{29}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+    \entry{duncanIdentifyingLaterGenerationDescendants2018}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a97c2de88e00743241d71e2e6d236672}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications Inc}%
+      }
+      \strng{namehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{fullhash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{fullhashraw}{6a41f3d2d843ec652d69b93259668827}
+      \strng{bibnamehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authorbibnamehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authornamehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authorfullhash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authorfullhashraw}{6a41f3d2d843ec652d69b93259668827}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Evaluating the long-term socioeconomic integration of immigrants in the United States requires analyses of differences between foreign-born and U.S.-born residents, as well as analyses across generations of the U.S.-born. Regrettably, though, standard data sources used to study these populations provide very limited information pertaining to generation. As a result, research on the U.S.-born descendants of immigrants often relies on the use of subjective measures of racial/ethnic identification. Because ethnic attachments tend to fade across generations, these subjective measures might miss a significant portion of the later-generation descendants of immigrants. Moreover, if such “ethnic attrition” is selective on socioeconomic attainment, it can distort assessments of integration and generational progress. We discuss evidence that suggests that ethnic attrition is sizable and selective for the second- and third-generation populations of key Hispanic and Asian national-origin groups, and that correcting for the resulting biases is likely to raise the socioeconomic standing of the U.S.-born descendants of most Hispanic immigrants relative to their Asian counterparts.}
+      \field{day}{1}
+      \field{issn}{0002-7162}
+      \field{journaltitle}{The ANNALS of the American Academy of Political and Social Science}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{1}
+      \field{shortjournal}{The ANNALS of the American Academy of Political and Social Science}
+      \field{shorttitle}{Identifying the {{Later-Generation Descendants}} of {{U}}.{{S}}. {{Immigrants}}}
+      \field{title}{Identifying the {{Later-Generation Descendants}} of {{U}}.{{S}}. {{Immigrants}}: {{Issues Arising}} from {{Selective Ethnic Attrition}}}
+      \field{urlday}{21}
+      \field{urlmonth}{6}
+      \field{urlyear}{2022}
+      \field{volume}{677}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{131\bibrangedash 138}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1177/0002716218763293
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/0002716218763293
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/0002716218763293
+      \endverb
+      \keyw{generational mobility,immigrant integration,racial/ethnic identification}
+    \endentry
+    \entry{duncanSocioeconomicIntegrationImmigrant2018}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a97c2de88e00743241d71e2e6d236672}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{fullhash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{fullhashraw}{6a41f3d2d843ec652d69b93259668827}
+      \strng{bibnamehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authorbibnamehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authornamehash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authorfullhash}{6a41f3d2d843ec652d69b93259668827}
+      \strng{authorfullhashraw}{6a41f3d2d843ec652d69b93259668827}
+      \field{extraname}{3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this chapter, we document generational patterns of educational attainment and earnings for contemporary immigrant groups. We also discuss some potentially serious measurement issues that arise when attempting to track the socioeconomic progress of the later-generation descendants of U.S. immigrants, and we summarize what recent research has to say about these measurement issues and how they might bias our assessment of the long-term integration of particular groups. Most national origin groups arrive with relatively high educational attainment and/or experience enough improvement between the first and second generations such that they quickly meet or exceed, on average, the schooling level of the typical American. Several large and important Hispanic groups (including Mexicans and Puerto Ricans) are exceptions to this pattern, however, and their prospects for future upward mobility are subject to much debate. Because of measurement issues and data limitations, Mexican Americans in particular and Hispanic Americans in general probably have experienced significantly more socioeconomic progress beyond the second generation than available data indicate. Even so, it may take longer for their descendants to integrate fully into the American mainstream than it did for the descendants of the European immigrants who arrived near the turn of the twentieth century.}
+      \field{month}{3}
+      \field{number}{24394}
+      \field{series}{Working {{Paper Series}}}
+      \field{shorttitle}{Socioeconomic {{Integration}} of {{U}}.{{S}}. {{Immigrant Groups}} over the {{Long Term}}}
+      \field{title}{Socioeconomic {{Integration}} of {{U}}.{{S}}. {{Immigrant Groups}} over the {{Long Term}}: {{The Second Generation}} and {{Beyond}}}
+      \field{type}{Working Paper}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3386/w24394
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/L752WN9H/Duncan and Trejo - 2018 - Socioeconomic Integration of U.S. Immigrant Groups.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nber.org/papers/w24394
+      \endverb
+      \verb{url}
+      \verb http://www.nber.org/papers/w24394
+      \endverb
+    \endentry
+    \entry{egloffPredictiveValidityImplicit2002}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=665b7772efc8ad33d297672c5640a242}{%
+           family={Egloff},
+           familyi={E\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=16050343163f1f5276b574b5a6981977}{%
+           family={Schmukle},
+           familyi={S\bibinitperiod},
+           given={Stefan\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {US}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{fullhash}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{fullhashraw}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{bibnamehash}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{authorbibnamehash}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{authornamehash}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{authorfullhash}{5e4ceb97edf354ee344101b1259c1f96}
+      \strng{authorfullhashraw}{5e4ceb97edf354ee344101b1259c1f96}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{The Implicit Association Test (TAT) was adapted to measure anxiety by assessing associations of self (vs. other) with anxiety-related (vs. calmness-related) words. Study 1 showed that the TAT-Anxiety exhibited good internal consistency and adequate stability. Study 2 revealed that the IAT-Anxiety was unaffected by a faking instruction. Study 3 examined the predictive validity of implicit and explicit measures and showed that the TAT-Anxiety was related to changes in experimenter-rated anxiety and performance decrements after failure. Study 4 found that several behavioral indicators of anxiety during a stressful speech were predicted by the TAT. Taken together, these studies show that the TAT-Anxiety is a reliable measure that is able to predict criterion variables above questionnaire measures of anxiety and social desirability. (PsycINFO Database Record (c) 2019 APA, all rights reserved)}
+      \field{issn}{1939-1315}
+      \field{journaltitle}{Journal of Personality and Social Psychology}
+      \field{title}{Predictive Validity of an Implicit Association Test for Assessing Anxiety}
+      \field{volume}{83}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{pages}{1441\bibrangedash 1455}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1037/0022-3514.83.6.1441
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/A692TVHP/doiLanding.html
+      \endverb
+      \keyw{Anxiety,Personality Measures,Predictive Validity,Self-Concept,Statistical Validity,Test Validity}
+    \endentry
+    \entry{floodsarahIntegratedPublicUse2021a}{dataset}{}{}
+      \name{author}{6}{ul=2}{%
+        {{hash=1d1fdad8c06cc33521b145d93817da67}{%
+           family={Flood},
+           familyi={F\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ab42c3eadba152d84026b753bf8af73d}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Miriam},
+           giveni={M\bibinitperiod}}}%
+        {{hash=18c822c799eae536099d4d057e8b4841}{%
+           family={Rodgers},
+           familyi={R\bibinitperiod},
+           given={Renae},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7387f51a82f67bf6afaf06e50696a5ba}{%
+           family={Ruggles},
+           familyi={R\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=87c260141b59c836dfb32a91619ec27a}{%
+           family={Warren},
+           familyi={W\bibinitperiod},
+           given={J.\bibnamedelimi Robert},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d4fdaff39992b835ca77108ce69ca378}{%
+           family={Westberry},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=8790a5c7b54290e7602a80de67b31da6}{%
+           family={Bureau},
+           familyi={B\bibinitperiod},
+           given={United\bibnamedelimb States\bibnamedelima Census},
+           giveni={U\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fdfb43769695b838bc0a497f529753ec}{%
+           family={Statistics},
+           familyi={S\bibinitperiod},
+           given={United\bibnamedelimb States\bibnamedelimb Bureau\bibnamedelimb Of\bibnamedelima Labor},
+           giveni={U\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Minneapolis, MN: IPUMS}%
+      }
+      \strng{namehash}{70c1d2b037afbef031efaaf57230263b}
+      \strng{fullhash}{62d7cf5e98e48cbe7cf757e57ba31a3f}
+      \strng{fullhashraw}{62d7cf5e98e48cbe7cf757e57ba31a3f}
+      \strng{bibnamehash}{62d7cf5e98e48cbe7cf757e57ba31a3f}
+      \strng{authorbibnamehash}{62d7cf5e98e48cbe7cf757e57ba31a3f}
+      \strng{authornamehash}{70c1d2b037afbef031efaaf57230263b}
+      \strng{authorfullhash}{62d7cf5e98e48cbe7cf757e57ba31a3f}
+      \strng{authorfullhashraw}{62d7cf5e98e48cbe7cf757e57ba31a3f}
+      \strng{nameabibnamehash}{52c20f7085d2ca98b6422d6db4b124cd}
+      \strng{nameanamehash}{52c20f7085d2ca98b6422d6db4b124cd}
+      \strng{nameafullhash}{52c20f7085d2ca98b6422d6db4b124cd}
+      \strng{nameafullhashraw}{52c20f7085d2ca98b6422d6db4b124cd}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{IPUMS-CPS is dedicated to integrating and disseminating microdata from the Current Population Survey (CPS). The CPS is a monthly U.S. household survey conducted jointly by the U.S. Census Bureau and the Bureau of Labor Statistics. IPUMS-CPS contains harmonized data from every Annual Social and Economic Supplement (ASEC) supplement from 1962 to the present and all other supplements from 1976 to present. In addition to the many of the variables included in census data (race and ethnicity, education, income, occupation, industry, migration, disability, and veteran status), IPUMS-CPS includes additional information on work and income, such as participation in welfare programs, job searching, barriers to looking for work, union membership, hourly wages, health insurance, and tax liability. In addition, monthly supplements supplemental for certain years include information on computer and Internet use, displaced workers, fertility, food security, job tenure, tobacco use, volunteer activities, voter registration, and work schedules. IPUMS-CPS data are available through an online data access system free of charge to registered users at cps.ipums.org.}
+      \field{langid}{english}
+      \field{nameatype}{collaborator}
+      \field{shorttitle}{Integrated {{Public Use Microdata Series}}, {{Current Population Survey}}}
+      \field{title}{Integrated {{Public Use Microdata Series}}, {{Current Population Survey}}: {{Version}} 9.0}
+      \field{urlday}{30}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{version}{9.0}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.18128/D030.V9.0
+      \endverb
+      \verb{urlraw}
+      \verb https://cps.ipums.org
+      \endverb
+      \verb{url}
+      \verb https://cps.ipums.org
+      \endverb
+    \endentry
+    \entry{floodsarahIntegratedPublicUse2021}{dataset}{}{}
+      \name{author}{4}{ul=2}{%
+        {{hash=1d1fdad8c06cc33521b145d93817da67}{%
+           family={Flood},
+           familyi={F\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=164ad68b33cf892d77928d8d36adb2e0}{%
+           family={Ronald},
+           familyi={R\bibinitperiod},
+           given={Goeken},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1ec1c184b40559b4394176a8ffd71cc0}{%
+           family={Megan},
+           familyi={M\bibinitperiod},
+           given={Schouweiler},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6717f33050c785a3cfb289560d461372}{%
+           family={Matthew},
+           familyi={M\bibinitperiod},
+           given={Sobek},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=8790a5c7b54290e7602a80de67b31da6}{%
+           family={Bureau},
+           familyi={B\bibinitperiod},
+           given={United\bibnamedelimb States\bibnamedelima Census},
+           giveni={U\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=fdfb43769695b838bc0a497f529753ec}{%
+           family={Statistics},
+           familyi={S\bibinitperiod},
+           given={United\bibnamedelimb States\bibnamedelimb Bureau\bibnamedelimb Of\bibnamedelima Labor},
+           giveni={U\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Minneapolis, MN: IPUMS}%
+      }
+      \strng{namehash}{8a973e6915ea6213e24f0939f5188135}
+      \strng{fullhash}{ff2bbfdfdb8841474378270c707b980a}
+      \strng{fullhashraw}{ff2bbfdfdb8841474378270c707b980a}
+      \strng{bibnamehash}{ff2bbfdfdb8841474378270c707b980a}
+      \strng{authorbibnamehash}{ff2bbfdfdb8841474378270c707b980a}
+      \strng{authornamehash}{8a973e6915ea6213e24f0939f5188135}
+      \strng{authorfullhash}{ff2bbfdfdb8841474378270c707b980a}
+      \strng{authorfullhashraw}{ff2bbfdfdb8841474378270c707b980a}
+      \strng{nameabibnamehash}{52c20f7085d2ca98b6422d6db4b124cd}
+      \strng{nameanamehash}{52c20f7085d2ca98b6422d6db4b124cd}
+      \strng{nameafullhash}{52c20f7085d2ca98b6422d6db4b124cd}
+      \strng{nameafullhashraw}{52c20f7085d2ca98b6422d6db4b124cd}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{langid}{english}
+      \field{nameatype}{collaborator}
+      \field{shorttitle}{Integrated {{Public Use Microdata Series}}, {{USA}}}
+      \field{title}{Integrated {{Public Use Microdata Series}}, {{USA}}: {{Version}} 12.0}
+      \field{urlday}{30}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{version}{9.0}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.18128/D030.V9.0
+      \endverb
+      \verb{urlraw}
+      \verb https://cps.ipums.org
+      \endverb
+      \verb{url}
+      \verb https://cps.ipums.org
+      \endverb
+    \endentry
+    \entry{forscherMetaanalysisProceduresChange2019}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=229e3e65669fd26bc4376e2231adde41}{%
+           family={Forscher},
+           familyi={F\bibinitperiod},
+           given={Patrick\bibnamedelima S.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=896dd16203fccc6469065153335052d6}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Calvin\bibnamedelima K.},
+           giveni={C\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=5088e160a6c758404f56ca7b394aba60}{%
+           family={Axt},
+           familyi={A\bibinitperiod},
+           given={Jordan\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=7093babdca23fd1561a24f5f495b9355}{%
+           family={Ebersole},
+           familyi={E\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=9727ec6692d42e7bc48a5c9f23f38378}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Michelle},
+           giveni={M\bibinitperiod}}}%
+        {{hash=736418a7618f270f12c4f18d40bb954c}{%
+           family={Devine},
+           familyi={D\bibinitperiod},
+           given={Patricia\bibnamedelima G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=2ceb8cc4d2da76a97eda97d8a0eb22a8}{%
+           family={Nosek},
+           familyi={N\bibinitperiod},
+           given={Brian\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {US}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{2b1bcada474bf9b583846cfcee2aed39}
+      \strng{fullhash}{33c8227005a8997f1bb4fa2608cb1286}
+      \strng{fullhashraw}{33c8227005a8997f1bb4fa2608cb1286}
+      \strng{bibnamehash}{33c8227005a8997f1bb4fa2608cb1286}
+      \strng{authorbibnamehash}{33c8227005a8997f1bb4fa2608cb1286}
+      \strng{authornamehash}{2b1bcada474bf9b583846cfcee2aed39}
+      \strng{authorfullhash}{33c8227005a8997f1bb4fa2608cb1286}
+      \strng{authorfullhashraw}{33c8227005a8997f1bb4fa2608cb1286}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Using a novel technique known as network meta-analysis, we synthesized evidence from 492 studies (87,418 participants) to investigate the effectiveness of procedures in changing implicit measures, which we define as response biases on implicit tasks. We also evaluated these procedures’ effects on explicit and behavioral measures. We found that implicit measures can be changed, but effects are often relatively weak (|ds| {$<$} .30). Most studies focused on producing short-term changes with brief, single-session manipulations. Procedures that associate sets of concepts, invoke goals or motivations, or tax mental resources changed implicit measures the most, whereas procedures that induced threat, affirmation, or specific moods/emotions changed implicit measures the least. Bias tests suggested that implicit effects could be inflated relative to their true population values. Procedures changed explicit measures less consistently and to a smaller degree than implicit measures and generally produced trivial changes in behavior. Finally, changes in implicit measures did not mediate changes in explicit measures or behavior. Our findings suggest that changes in implicit measures are possible, but those changes do not necessarily translate into changes in explicit measures or behavior. (PsycINFO Database Record (c) 2019 APA, all rights reserved)}
+      \field{issn}{1939-1315}
+      \field{journaltitle}{Journal of Personality and Social Psychology}
+      \field{number}{3}
+      \field{title}{A Meta-Analysis of Procedures to Change Implicit Measures}
+      \field{volume}{117}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{522\bibrangedash 559}
+      \range{pages}{38}
+      \verb{doi}
+      \verb 10.1037/pspa0000160
+      \endverb
+      \keyw{Concepts,Goals,Implicit Bias,Implicit Measures,Motivation,Response Bias,Social Cognition,Task}
+    \endentry
+    \entry{foukaImmigrantsAmericansRace2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1cab937e2abc8e4286b0738c4085d590}{%
+           family={Fouka},
+           familyi={F\bibinitperiod},
+           given={Vasiliki},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ef488a6c9dfc8e4eea2ff577a6e74151}{%
+           family={Mazumder},
+           familyi={M\bibinitperiod},
+           given={Soumyajit},
+           giveni={S\bibinitperiod}}}%
+        {{hash=638b1eae37f2993c3561368bb54f19ee}{%
+           family={Tabellini},
+           familyi={T\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{fullhash}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{fullhashraw}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{bibnamehash}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{authorbibnamehash}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{authornamehash}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{authorfullhash}{ff52c812f2fe38b7d7418cca03022022}
+      \strng{authorfullhashraw}{ff52c812f2fe38b7d7418cca03022022}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{How does the arrival of a new minority group affect the social acceptance and outcomes of existing minorities? We study this question in the context of the First Great Migration. Between 1915 and 1930, 1.5 million African Americans moved from the U.S. South to Northern urban centres, which were home to millions of European immigrants arrived in previous decades. We formalize and empirically test the hypothesis that the inflows of Black Americans changed perceptions of outgroup distance among native-born whites, reducing the barriers to the social integration of European immigrants. Predicting Black in-migration with a version of the shift-share instrument, we find that immigrants living in areas that received more Black migrants experienced higher assimilation along a range of outcomes, such as naturalization rates and intermarriages with native-born spouses. Evidence from the historical press and patterns of heterogeneity across immigrant nationalities provide additional support to the role of shifting perceptions of the white majority.}
+      \field{day}{1}
+      \field{issn}{0034-6527}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{month}{3}
+      \field{number}{2}
+      \field{shortjournal}{The Review of Economic Studies}
+      \field{shorttitle}{From {{Immigrants}} to {{Americans}}}
+      \field{title}{From {{Immigrants}} to {{Americans}}: {{Race}} and {{Assimilation}} during the {{Great Migration}}}
+      \field{urlday}{9}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{89}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{811\bibrangedash 842}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1093/restud/rdab038
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/PX8QS8M9/Fouka et al. - 2022 - From Immigrants to Americans Race and Assimilatio.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/restud/rdab038
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/restud/rdab038
+      \endverb
+    \endentry
+    \entry{friesePredictingVotingBehavior2007}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=877946c22ea87a4417836178a1127775}{%
+           family={Friese},
+           familyi={F\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a911084008c5f155f08f21c26d53fe63}{%
+           family={Bluemke},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=928707829b11790b7260a3201b2e6376}{%
+           family={Wänke},
+           familyi={W\bibinitperiod},
+           given={Michaela},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Germany}%
+      }
+      \list{publisher}{1}{%
+        {Hogrefe \& Huber Publishers}%
+      }
+      \strng{namehash}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{fullhash}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{fullhashraw}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{bibnamehash}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{authorbibnamehash}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{authornamehash}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{authorfullhash}{ace7815e8b748259a9bea5c6504726a9}
+      \strng{authorfullhashraw}{ace7815e8b748259a9bea5c6504726a9}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Implicit measures of attitudes are commonly seen to be primarily capable of predicting spontaneous behavior. However, evidence exists that these measures can also improve the prediction of more deliberate behavior. In a prospective study we tested the hypothesis that Implicit Association Test (IAT) measures of the five major political parties in Germany would improve the prediction of voting behavior over and above explicit self-report measures in the 2002 parliamentary elections. Additionally we tested whether general interest in politics moderates the relationship between explicit and implicit attitude measures. The results support our hypotheses. Implications for predictive models of explicitly and implicitly measured attitudes are discussed. (PsycINFO Database Record (c) 2016 APA, all rights reserved)}
+      \field{issn}{2190-5142}
+      \field{journaltitle}{Experimental Psychology}
+      \field{number}{4}
+      \field{shorttitle}{Predicting Voting Behavior with Implicit Attitude Measures}
+      \field{title}{Predicting Voting Behavior with Implicit Attitude Measures: {{The}} 2002 {{German}} Parliamentary Election}
+      \field{volume}{54}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{247\bibrangedash 255}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1027/1618-3169.54.4.247
+      \endverb
+      \keyw{Attitude Measures,Interests,Political Elections,Political Parties,Prediction,Self-Report,Test Validity,Voting Behavior}
+    \endentry
+    \entry{gloverDiscriminationSelfFulfillingProphecy2017}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=36bd13e96ed8edadd0ea922949359142}{%
+           family={Glover},
+           familyi={G\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a5827578f46c09747f511997b3d4a333}{%
+           family={Pallais},
+           familyi={P\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod}}}%
+        {{hash=75d450a6d8574acb8617d3dffc5b311a}{%
+           family={Pariente},
+           familyi={P\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press / USA}%
+      }
+      \strng{namehash}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{fullhash}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{fullhashraw}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{bibnamehash}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{authorbibnamehash}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{authornamehash}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{authorfullhash}{c2e84e9e1d272db5c3984cd7482b673c}
+      \strng{authorfullhashraw}{c2e84e9e1d272db5c3984cd7482b673c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Examining the performance of cashiers in a French grocery store chain, we find that manager bias negatively affects minority job performance. In the stores studied, cashiers work with different managers on different days and their schedules are determined quasi-randomly. When minority cashiers, but not majority cashiers, are scheduled to work with managers who are biased (as determined by an implicit association test), they are absent more often, spend less time at work, scan items more slowly, and take more time between customers. This appears to be because biased managers interact less with minorities, leading minorities to exert less effort. Manager bias has consequences for the average performance of minority workers: while on average minority and majority workers perform equivalently, on days where managers are unbiased, minorities perform significantly better than do majority workers. The findings are consistent with statistical discrimination in hiring whereby because minorities underperform when assigned to biased managers, the firm sets a higher hiring standard for minorities to get similar average performance from minority and nonminority workers.}
+      \field{issn}{00335533}
+      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{month}{8}
+      \field{number}{3}
+      \field{shorttitle}{Discrimination as a {{Self-Fulfilling Prophecy}}}
+      \field{title}{Discrimination as a {{Self-Fulfilling Prophecy}}: {{Evidence}} from {{French Grocery Stores}}}
+      \field{urlday}{14}
+      \field{urlmonth}{9}
+      \field{urlyear}{2022}
+      \field{volume}{132}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1219\bibrangedash 1260}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1093/qje/qjx006
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/PNG4YWRM/Glover et al. - 2017 - Discrimination as a Self-Fulfilling Prophecy Evid.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=124340948&site=ehost-live
+      \endverb
+      \verb{url}
+      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=124340948&site=ehost-live
+      \endverb
+      \keyw{Cashiers,Chain stores,Grocery industry,Industrial relations,Job performance}
+    \endentry
+    \entry{goldsmithDarkLightSkin2007}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e0e738661118a656ff9d5a5cd4cebc33}{%
+           family={Goldsmith},
+           familyi={G\bibinitperiod},
+           given={Arthur\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=abcc1b0725052d57ee5e43dc5aec73de}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Darrick},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e1536ee40b611a420c67e6920be486ac}{%
+           family={Darity},
+           familyi={D\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[University of Wisconsin Press, Board of Regents of the University of Wisconsin System]}%
+      }
+      \strng{namehash}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{fullhash}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{fullhashraw}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{bibnamehash}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{authorbibnamehash}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{authornamehash}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{authorfullhash}{9d7dca31161ea59ffea0045f743373e7}
+      \strng{authorfullhashraw}{9d7dca31161ea59ffea0045f743373e7}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{This paper develops and tests a theory, referred to as "preference for whiteness," which predicts that the interracial (white-black) and intraracial wage gap widens as the skin shade of the black worker darkens. Using data drawn from the Multi City Study of Urban Inequality and the National Survey of Black Americans, we report evidence largely consistent with the theory. Moreover, we decompose the estimated interracial and intraracial wage gaps, and find that favorable treatment of lighter-skinned workers is a major source of interracial and intraracial wage differences as predicted by the theory.}
+      \field{eprinttype}{jstor}
+      \field{issn}{0022-166X}
+      \field{journaltitle}{The Journal of Human Resources}
+      \field{number}{4}
+      \field{shorttitle}{From {{Dark}} to {{Light}}}
+      \field{title}{From {{Dark}} to {{Light}}: {{Skin Color}} and {{Wages}} among {{African-Americans}}}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{42}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{701\bibrangedash 738}
+      \range{pages}{38}
+      \verb{eprint}
+      \verb 40057327
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/PRV79KQE/Goldsmith et al. - 2007 - From Dark to Light Skin Color and Wages among Afr.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.jstor.org/stable/40057327
+      \endverb
+      \verb{url}
+      \verb https://www.jstor.org/stable/40057327
+      \endverb
+    \endentry
+    \entry{greenwaldMeasuringIndividualDifferences1998}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=86dfc25e0fd944e53243d19cd9030437}{%
+           family={Greenwald},
+           familyi={G\bibinitperiod},
+           given={Anthony\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=c95281b88bf8fa62aff0ed1ee7dc95d7}{%
+           family={McGhee},
+           familyi={M\bibinitperiod},
+           given={Debbie\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3271b7dbbc4edbf0c65622b436d684a9}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Jordan\bibnamedelimb L.\bibnamedelimi K.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {US}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{fullhash}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{fullhashraw}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{bibnamehash}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{authorbibnamehash}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{authornamehash}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{authorfullhash}{532c7c4b4dc917190ac1bbc567250d27}
+      \strng{authorfullhashraw}{532c7c4b4dc917190ac1bbc567250d27}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{An implicit association test (IAT) measures differential association of 2 target concepts with an attribute. The 2 concepts appear in a 2-choice task (e.g., flower vs. insect names), and the attribute in a 2nd task (e.g., pleasant vs. unpleasant words for an evaluation attribute). When instructions oblige highly associated categories (e.g., flower + pleasant) to share a response key, performance is faster than when less associated categories (e.g., insect + pleasant) share a key. This performance difference implicitly measures differential association of the 2 concepts with the attribute. In 3 experiments, the IAT was sensitive to (a) near-universal evaluative differences (e.g., flower vs. insect), (b) expected individual differences in evaluative associations (Japanese + pleasant vs. Korean + pleasant for Japanese vs. Korean subjects), and (c) consciously disavowed evaluative differences (Black + pleasant vs. White + pleasant for self-described unprejudiced White subjects). (PsycINFO Database Record (c) 2016 APA, all rights reserved)}
+      \field{issn}{1939-1315}
+      \field{journaltitle}{Journal of Personality and Social Psychology}
+      \field{number}{6}
+      \field{shorttitle}{Measuring Individual Differences in Implicit Cognition}
+      \field{title}{Measuring Individual Differences in Implicit Cognition: {{The}} Implicit Association Test}
+      \field{volume}{74}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{pages}{1464\bibrangedash 1480}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1037/0022-3514.74.6.1464
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/8SIAM5VE/1998-02892-004.html
+      \endverb
+      \keyw{Associative Processes,Attitude Measures,Individual Differences,Judgment,Test Construction}
+    \endentry
+    \entry{hadah2024hispanicidentity}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=091f3b21f21a72f28da7c6db491e1522}{%
+           family={Hadah},
+           familyi={H\bibinitperiod},
+           given={Hussain},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{fullhash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{fullhashraw}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{bibnamehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authorbibnamehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authornamehash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authorfullhash}{091f3b21f21a72f28da7c6db491e1522}
+      \strng{authorfullhashraw}{091f3b21f21a72f28da7c6db491e1522}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{Southern Economic Journal}
+      \field{title}{The effect of racial and ethnic attitudes on Hispanic identity in the United States}
+      \field{year}{2024}
+    \endentry
+    \entry{hamiltonSheddingLightMarriage2009}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=abcc1b0725052d57ee5e43dc5aec73de}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={Darrick},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e0e738661118a656ff9d5a5cd4cebc33}{%
+           family={Goldsmith},
+           familyi={G\bibinitperiod},
+           given={Arthur\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=e1536ee40b611a420c67e6920be486ac}{%
+           family={Darity},
+           familyi={D\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{fullhash}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{fullhashraw}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{bibnamehash}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{authorbibnamehash}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{authornamehash}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{authorfullhash}{381f772118c7a735af7fc5f09541b8d9}
+      \strng{authorfullhashraw}{381f772118c7a735af7fc5f09541b8d9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{The inter-racial marriage gap that opened in the past 50 years is generally attributed to a decline in the availability of young black marriageable men. We contend that the associated shortage of desirable men in the marriage market provides those black men who are sought after with the opportunity to attain a high status spouse, which has placed a premium on black women with lighter skin. We provide evidence, based on data drawn from the Multi City Study of Urban Inequality, consistent with this hypothesis. Our theoretical analysis of the marriage market reveals that marriage promotion policies to increase the desire to marry on the part of young black women will serve to exacerbate the importance attached to skin shade.}
+      \field{day}{1}
+      \field{issn}{0167-2681}
+      \field{journaltitle}{Journal of Economic Behavior \& Organization}
+      \field{month}{10}
+      \field{number}{1}
+      \field{shortjournal}{Journal of Economic Behavior \& Organization}
+      \field{shorttitle}{Shedding “Light” on Marriage}
+      \field{title}{Shedding “Light” on Marriage: {{The}} Influence of Skin Shade on Marriage for Black Females}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2023}
+      \field{volume}{72}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{30\bibrangedash 50}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1016/j.jebo.2009.05.024
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/3EU9WZ5L/S0167268109001577.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167268109001577
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167268109001577
+      \endverb
+      \keyw{Marriage,Race,Skin shade}
+    \endentry
+    \entry{hilger2016upward}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d31b398540c4d02ae264b68428bef84}{%
+           family={Hilger},
+           familyi={H\bibinitperiod},
+           given={Nathaniel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{2d31b398540c4d02ae264b68428bef84}
+      \strng{fullhash}{2d31b398540c4d02ae264b68428bef84}
+      \strng{fullhashraw}{2d31b398540c4d02ae264b68428bef84}
+      \strng{bibnamehash}{2d31b398540c4d02ae264b68428bef84}
+      \strng{authorbibnamehash}{2d31b398540c4d02ae264b68428bef84}
+      \strng{authornamehash}{2d31b398540c4d02ae264b68428bef84}
+      \strng{authorfullhash}{2d31b398540c4d02ae264b68428bef84}
+      \strng{authorfullhashraw}{2d31b398540c4d02ae264b68428bef84}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Upward mobility and discrimination: The case of Asian Americans}
+      \field{type}{techreport}
+      \field{year}{2016}
+    \endentry
+    \entry{leeDoesImplicitBias2018}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fabf50bfb24a4f12503c61b01cf6ad19}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{fullhash}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{fullhashraw}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{bibnamehash}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{authorbibnamehash}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{authornamehash}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{authorfullhash}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \strng{authorfullhashraw}{fabf50bfb24a4f12503c61b01cf6ad19}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Implicit associations and biases are carried without awareness or conscious direction, yet there is reason to believe they may be influenced by social pressures. In this paper, I study social pressure as a motive to give, as well as giving itself under conditions of implicit bias. In doing so, I pair the Implicit Association Test (IAT), commonplace in other social sciences, with a laboratory dictator game with sorting. I find that despite its popularity, the IAT does not predict dictator giving and social pressure does not explain acts of giving from biased dictators. These results are indicative of the meaningful difference between having an implicit bias and acting on one. As such, results can be thought of as a bound on the external validity of the IAT.}
+      \field{issn}{2073-4336}
+      \field{issue}{4}
+      \field{journaltitle}{Games}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{4}
+      \field{title}{Does {{Implicit Bias Predict Dictator Giving}}?}
+      \field{urlday}{31}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{73}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/g9040073
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2073-4336/9/4/73
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2073-4336/9/4/73
+      \endverb
+      \keyw{IAT,implicit bias,prosocial behavior,race,social pressures}
+    \endentry
+    \entry{leitnerRacialBiasAssociated2016}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=b1b7a147b8a7547918156f3f69c2bca0}{%
+           family={Leitner},
+           familyi={L\bibinitperiod},
+           given={Jordan\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=3f52fb840cd569490836122e897c4ab8}{%
+           family={Hehman},
+           familyi={H\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=10df31259601ef8935322c3c99f3ce5d}{%
+           family={Ayduk},
+           familyi={A\bibinitperiod},
+           given={Ozlem},
+           giveni={O\bibinitperiod}}}%
+        {{hash=14514b36b0aca1f595a5770a8ec6e07c}{%
+           family={Mendoza-Denton},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Rodolfo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{00859398e0dff10292c1fd606e266c32}
+      \strng{fullhash}{b894d70bca8023553eb282a1024393c2}
+      \strng{fullhashraw}{b894d70bca8023553eb282a1024393c2}
+      \strng{bibnamehash}{b894d70bca8023553eb282a1024393c2}
+      \strng{authorbibnamehash}{b894d70bca8023553eb282a1024393c2}
+      \strng{authornamehash}{00859398e0dff10292c1fd606e266c32}
+      \strng{authorfullhash}{b894d70bca8023553eb282a1024393c2}
+      \strng{authorfullhashraw}{b894d70bca8023553eb282a1024393c2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Rationale Research suggests that, among Whites, racial bias predicts negative ingroup health outcomes. However, little is known about whether racial bias predicts ingroup health outcomes among minority populations. Objective The aim of the current research was to understand whether racial bias predicts negative ingroup health outcomes for Blacks. Method We compiled racial bias responses from 250,665 Blacks and 1,391,632 Whites to generate county-level estimates of Blacks' and Whites’ implicit and explicit biases towards each other. We then examined the degree to which these biases predicted ingroup death rate from circulatory-related diseases. Results In counties where Blacks harbored more implicit bias towards Whites, Blacks died at a higher rate. Additionally, consistent with previous research, in counties where Whites harbored more explicit bias towards Blacks, Whites died at a higher rate. These links between racial bias and ingroup death rate were independent of county-level socio-demographic characteristics, and racial biases from the outgroup in the same county. Conclusion Findings indicate that racial bias is related to negative ingroup health outcomes for both Blacks and Whites, though this relationship is driven by implicit bias for Blacks, and explicit bias for Whites.}
+      \field{day}{1}
+      \field{issn}{0277-9536}
+      \field{journaltitle}{Social Science \& Medicine}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{shortjournal}{Social Science \& Medicine}
+      \field{shorttitle}{Racial Bias Is Associated with Ingroup Death Rate for {{Blacks}} and {{Whites}}}
+      \field{title}{Racial Bias Is Associated with Ingroup Death Rate for {{Blacks}} and {{Whites}}: {{Insights}} from {{Project Implicit}}}
+      \field{urlday}{15}
+      \field{urlmonth}{8}
+      \field{urlyear}{2022}
+      \field{volume}{170}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{220\bibrangedash 227}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.socscimed.2016.10.007
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/TNHEKX98/Leitner et al. - 2016 - Racial bias is associated with ingroup death rate .pdf;/Users/hhadah/Zotero/storage/UY8MCM3N/S0277953616305664.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0277953616305664
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0277953616305664
+      \endverb
+      \keyw{Explicit bias,Implicit bias,Minority health,Prejudice,Racism}
+    \endentry
+    \entry{lubotskyInterpretationRegressionsMultiple2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=0d8a90d7e8254d79621138124c944971}{%
+           family={Lubotsky},
+           familyi={L\bibinitperiod},
+           given={Darren},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1e244f7a4c9c6137305cf4ce5e7307ed}{%
+           family={Wittenberg},
+           familyi={W\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b97835630e5997d92d2954c34d90f57c}
+      \strng{fullhash}{b97835630e5997d92d2954c34d90f57c}
+      \strng{fullhashraw}{b97835630e5997d92d2954c34d90f57c}
+      \strng{bibnamehash}{b97835630e5997d92d2954c34d90f57c}
+      \strng{authorbibnamehash}{b97835630e5997d92d2954c34d90f57c}
+      \strng{authornamehash}{b97835630e5997d92d2954c34d90f57c}
+      \strng{authorfullhash}{b97835630e5997d92d2954c34d90f57c}
+      \strng{authorfullhashraw}{b97835630e5997d92d2954c34d90f57c}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Multiple proxy variables are typically available for an unobserved explanatory variable in a regression. We provide a procedure by which the coefficient of interest can be estimated from a regression in which all the proxies are included simultaneously. This estimator is superior in large samples to the common practice of creating a summary measure of the proxy variables. We examine the relationship between parents' income and children's reading test scores in the United States, and between parents' assets and children's school enrollment in India, and demonstrate that the reduction in attenuation bias from a better use of proxy variables can be significant.}
+      \field{day}{1}
+      \field{issn}{0034-6535}
+      \field{journaltitle}{The Review of Economics and Statistics}
+      \field{month}{8}
+      \field{number}{3}
+      \field{shortjournal}{The Review of Economics and Statistics}
+      \field{title}{Interpretation of {{Regressions}} with {{Multiple Proxies}}}
+      \field{urlday}{29}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{88}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{549\bibrangedash 562}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1162/rest.88.3.549
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/YAV4D3TS/Interpretation-of-Regressions-with-Multiple.html
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1162/rest.88.3.549
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1162/rest.88.3.549
+      \endverb
+    \endentry
+    \entry{mengIntermarriageEconomicAssimilation2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=15138a45563a2751ba7d8f8757722e0e}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=69ea3bf7db14f3daea42a93dd45aa391}{%
+           family={Gregory},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
+      }
+      \strng{namehash}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{fullhash}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{fullhashraw}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{bibnamehash}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{authorbibnamehash}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{authornamehash}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{authorfullhash}{33981e2cdebc250d00fe151fc7ea5084}
+      \strng{authorfullhashraw}{33981e2cdebc250d00fe151fc7ea5084}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{This article investigates the assimilation role of intermarriage between immigrants and natives. Intermarried immigrants earn significantly higher incomes than endogamously married immigrants, even after we take account of human capital endowments and endogeneity of intermarriage. The premium does not appear to be a reward for unobservable individual characteristics. Natives who intermarry do not receive this premium, nor do immigrants who intermarry into another ethnic group. The premium is mainly attributable to a faster speed of assimilation rather than any difference in labor‐market quality between intermarried and nonintermarried immigrants at the point of arrival.}
+      \field{issn}{0734-306X}
+      \field{journaltitle}{Journal of Labor Economics}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Intermarriage and the {{Economic Assimilation}} of {{Immigrants}}}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2022}
+      \field{volume}{23}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{135\bibrangedash 174}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1086/425436
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/QZACYKMD/Meng and Gregory - 2005 - Intermarriage and the Economic Assimilation of Imm.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www-journals-uchicago-edu.ezproxy.lib.uh.edu/doi/full/10.1086%2F425436
+      \endverb
+      \verb{url}
+      \verb https://www-journals-uchicago-edu.ezproxy.lib.uh.edu/doi/full/10.1086%2F425436
+      \endverb
+    \endentry
+    \entry{mora2020antiblackness}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=666ad588b4a88746cfd79236f8d41dad}{%
+           family={Mora},
+           familyi={M\bibinitperiod},
+           given={G\bibnamedelima Cristina},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a1cbcef564ea3f57e94c7a9c8bdb6519}{%
+           family={Paschel},
+           familyi={P\bibinitperiod},
+           given={Tianna\bibnamedelima S},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{fullhash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{fullhashraw}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{bibnamehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authorbibnamehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authornamehash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authorfullhash}{c763931174fbbad94a85f9dd927a14a1}
+      \strng{authorfullhashraw}{c763931174fbbad94a85f9dd927a14a1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Sociological Forum}
+      \field{title}{Antiblackness as a logic for anti-immigrant resentment: Evidence from California}
+      \field{volume}{35}
+      \field{year}{2020}
+      \field{pages}{918\bibrangedash 940}
+      \range{pages}{23}
+    \endentry
+    \entry{telles2008generations}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=3a376febe4fea93815b8ffe7bc5661b1}{%
+           family={Telles},
+           familyi={T\bibinitperiod},
+           given={Edward\bibnamedelima E},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=dffa0381872705b3a452e2a2ec9a8e7a}{%
+           family={Ortiz},
+           familyi={O\bibinitperiod},
+           given={Vilma},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Russell Sage Foundation}%
+      }
+      \strng{namehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{fullhash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{fullhashraw}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{bibnamehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authorbibnamehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authornamehash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authorfullhash}{e3462f154dd3b9022cefbf82d6ccada6}
+      \strng{authorfullhashraw}{e3462f154dd3b9022cefbf82d6ccada6}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Generations of exclusion: Mexican-Americans, assimilation, and race}
+      \field{year}{2008}
+    \endentry
+    \entry{waters1990ethnic}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1da01b6fe7ec3ead55755064e216f253}{%
+           family={Waters},
+           familyi={W\bibinitperiod},
+           given={Mary\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berkeley}%
+      }
+      \list{publisher}{1}{%
+        {University of California Press}%
+      }
+      \strng{namehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{fullhash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{fullhashraw}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{bibnamehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authorbibnamehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authornamehash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authorfullhash}{1da01b6fe7ec3ead55755064e216f253}
+      \strng{authorfullhashraw}{1da01b6fe7ec3ead55755064e216f253}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{title}{Ethnic Options: Choosing Identities in America}
+      \field{year}{1990}
+    \endentry
+    \entry{zhou1997segmented}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f18ed0379542e330dab8ec3d169b83ee}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications Sage CA: Los Angeles, CA}%
+      }
+      \strng{namehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{fullhash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{fullhashraw}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{bibnamehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authorbibnamehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authornamehash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authorfullhash}{f18ed0379542e330dab8ec3d169b83ee}
+      \strng{authorfullhashraw}{f18ed0379542e330dab8ec3d169b83ee}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{International migration review}
+      \field{number}{4}
+      \field{title}{Segmented assimilation: Issues, controversies, and recent research on the new second generation}
+      \field{volume}{31}
+      \field{year}{1997}
+      \field{pages}{975\bibrangedash 1008}
+      \range{pages}{34}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

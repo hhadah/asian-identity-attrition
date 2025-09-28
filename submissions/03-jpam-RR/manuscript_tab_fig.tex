@@ -1,4 +1,3 @@
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,7 +22,7 @@
 
 \begin{center}
 \begin{figure}[H]
-\caption{Bias and Self-reported Asian Identity in the Least and Most Biased Places}
+\caption{Bias and Self-reported Asian Identity in the Least and Most Biased Places} \label{fig:toptwobias}
 
 % first
 \begin{subfigure}{.9\textwidth}
@@ -300,6 +299,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \pagebreak
 \newpage
 
+
 \begin{center}
 \begin{figure}[!htb]
 \centering
@@ -331,6 +331,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 
 \pagebreak
 \newpage
+
 
 \begin{center}
 \begin{figure}[!htb]
@@ -415,7 +416,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Predicted Probabilities: All Generations}
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (All Generations)}
 \label{fig:pp-all-gen}
 
 \begin{subfigure}{.48\textwidth}
@@ -444,17 +445,32 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \includegraphics[width=1\linewidth]{simple_pp_DadGradCollege_all.png}
 \end{subfigure}
 
-\caption*{\footnotesize{This figure shows predicted probabilities from the multinomial logit model for all generations. The model estimates the probability of choosing "Asian only", "White only", or "Asian and White" racial identification as a function of covariates. All other variables are held at their sample means. The analysis includes first-, second-, and third-generation Asian Americans.}}
+\caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means. The analysis includes first-, second-, and third-generation Asian Americans. First-generation Asian Americans are foreign-born individuals. Second-generation Asian Americans are native-born individuals with at least one Asian-born parent. Third-generation Asian Americans are native-born individuals with native-born parents and at least one Asian-born grandparent.}}
 \end{figure}
 \end{center}
 
 \pagebreak
 \newpage
 
+% Marginal Effects: All Generations (after main Multinomial Logit Model plot)
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Predicted Probabilities: Second Generation Asian Father-White Mother (AW)}
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice from Multinomial Logit Model (All Generations)}
+\label{fig:marginal-effects-all}
+\includegraphics[width=0.9\linewidth]{optimized_marginal_effects_all.png}
+\caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using a multinomial logit model. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Error bars indicate 95\% confidence intervals. The sample includes first-, second-, and third-generation Asian Americans as defined above.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Second-Generation Asian Americans with Asian Fathers and White Mothers)}
 \label{fig:pp-second-aw}
 
 \begin{subfigure}{.48\textwidth}
@@ -483,7 +499,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \includegraphics[width=1\linewidth]{simple_pp_DadGradCollege_second_aw.png}
 \end{subfigure}
 
-\caption*{\footnotesize{This figure shows predicted probabilities from the multinomial logit model for second-generation Asian Americans with Asian fathers and White mothers. The model estimates the probability of choosing "Asian only", "White only", or "Asian and White" racial identification as a function of covariates. All other variables are held at their sample means.}}
+\caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of second-generation Asian Americans with Asian fathers and White mothers. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means.}}
 \end{figure}
 \end{center}
 
@@ -493,7 +509,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Predicted Probabilities: Second Generation White Father-Asian Mother (WA)}
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Second-Generation Asian Americans with White Fathers and Asian Mothers)}
 \label{fig:pp-second-wa}
 
 \begin{subfigure}{.48\textwidth}
@@ -522,7 +538,33 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \includegraphics[width=1\linewidth]{simple_pp_DadGradCollege_second_wa.png}
 \end{subfigure}
 
-\caption*{\footnotesize{This figure shows predicted probabilities from the multinomial logit model for second-generation Asian Americans with White fathers and Asian mothers. The model estimates the probability of choosing "Asian only", "White only", or "Asian and White" racial identification as a function of covariates. All other variables are held at their sample means.}}
+\caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of second-generation Asian Americans with Asian fathers and White mothers. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+% Marginal Effects: Second Generation by Parental Type (AW and WA)
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice by Parental Ancestry (Second-Generation Asian Americans)}
+\label{fig:marginal-effects-second-parental}
+
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Father-White Mother (AW)}\label{subfig:meaw}
+\centering
+\includegraphics[width=1\linewidth]{optimized_marginal_effects_second_aw.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{White Father-Asian Mother (WA)}\label{subfig:mewa}
+\centering
+\includegraphics[width=1\linewidth]{optimized_marginal_effects_second_wa.png}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for second-generation Asian Americans by parental ancestry configuration. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Error bars indicate 95\% confidence intervals. Second-generation Asian Americans are native-born individuals with at least one Asian-born parent.}}
 \end{figure}
 \end{center}
 
@@ -532,7 +574,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Predicted Probabilities: Third Generation One Asian Grandparent}
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Third-Generation Asian Americans with One Asian Grandparent)}
 \label{fig:pp-third-one}
 
 \begin{subfigure}{.48\textwidth}
@@ -561,7 +603,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \includegraphics[width=1\linewidth]{simple_pp_DadGradCollege_third_one.png}
 \end{subfigure}
 
-\caption*{\footnotesize{This figure shows predicted probabilities from the multinomial logit model for third-generation Asian Americans with one Asian grandparent. The model estimates the probability of choosing "Asian only", "White only", or "Asian and White" racial identification as a function of covariates. All other variables are held at their sample means.}}
+\caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of third-generation Asian Americans with one Asian grandparent. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means.}}
 \end{figure}
 \end{center}
 
@@ -571,7 +613,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Predicted Probabilities: Third Generation Two Asian Grandparents}
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Third-Generation Asian Americans with Two Asian Grandparents)}
 \label{fig:pp-third-two}
 
 \begin{subfigure}{.48\textwidth}
@@ -600,7 +642,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \includegraphics[width=1\linewidth]{simple_pp_DadGradCollege_third_two.png}
 \end{subfigure}
 
-\caption*{\footnotesize{This figure shows predicted probabilities from the multinomial logit model for third-generation Asian Americans with two Asian grandparents. The model estimates the probability of choosing "Asian only", "White only", or "Asian and White" racial identification as a function of covariates. All other variables are held at their sample means.}}
+\caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of third-generation Asian Americans with two Asian grandparents. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means.}}
 \end{figure}
 \end{center}
 
@@ -610,7 +652,7 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Predicted Probabilities: Third Generation Three Asian Grandparents}
+\caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Third-Generation Asian Americans with Three Asian Grandparents)}
 \label{fig:pp-third-three}
 
 \begin{subfigure}{.48\textwidth}
@@ -639,12 +681,42 @@ The fifth panel is for third-generation Asian Americans with four grandparents b
 \includegraphics[width=1\linewidth]{simple_pp_DadGradCollege_third_three.png}
 \end{subfigure}
 
-\caption*{\footnotesize{This figure shows predicted probabilities from the multinomial logit model for third-generation Asian Americans with three Asian grandparents. The model estimates the probability of choosing "Asian only", "White only", or "Asian and White" racial identification as a function of covariates. All other variables are held at their sample means.}}
+\caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of third-generation Asian Americans with three Asian grandparents. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means.}}
 \end{figure}
 \end{center}
 
 \pagebreak
 \newpage
+
+% Marginal Effects: Third Generation by Grandparental Type (One, Two, Three Asian Grandparents)
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice by Number of Asian Grandparents (Third-Generation Asian Americans)}
+\label{fig:marginal-effects-third-grandparental}
+\begin{subfigure}{.45\textwidth}
+\caption{One Asian Grandparent}\label{subfig:oneasiangrand}
+\centering
+\includegraphics[width=1\linewidth]{optimized_marginal_effects_third_one.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+\caption{Two Asian Grandparents}\label{subfig:twoasiangrand}
+\centering
+\includegraphics[width=1\linewidth]{optimized_marginal_effects_third_two.png}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}{.45\textwidth}
+\caption{Three Asian Grandparents}\label{subfig:threeasiangrand}
+\centering
+\includegraphics[width=1\linewidth]{optimized_marginal_effects_third_three.png}
+\end{subfigure}
+\caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for third-generation Asian Americans by number of Asian grandparents. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Error bars indicate 95\% confidence intervals.}}
+\end{figure}
+\end{center}
+
 
 \pagebreak
 \newpage
