@@ -2197,6 +2197,46 @@
       \verb https://www.jstor.org/stable/40057327
       \endverb
     \endentry
+    \entry{gover2020anti}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2cf9206f97cb9a277e14507253acf70b}{%
+           family={Gover},
+           familyi={G\bibinitperiod},
+           given={Angela\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5bbb7b9b78436ef0bcb4c55dd3582235}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={Shannon\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2f5361f8a3082dd5ebce90b8e30fa707}{%
+           family={Langton},
+           familyi={L\bibinitperiod},
+           given={Lynn},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{fullhash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{fullhashraw}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{bibnamehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authorbibnamehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authornamehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authorfullhash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authorfullhashraw}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{American Journal of Criminal Justice}
+      \field{number}{4}
+      \field{title}{Anti-Asian Hate Crime During the COVID-19 Pandemic: Exploring the Reproduction of Inequality}
+      \field{volume}{45}
+      \field{year}{2020}
+      \field{pages}{647\bibrangedash 667}
+      \range{pages}{21}
+    \endentry
     \entry{greenwaldMeasuringIndividualDifferences1998}{article}{}{}
       \name{author}{3}{}{%
         {{hash=86dfc25e0fd944e53243d19cd9030437}{%
@@ -2777,6 +2817,75 @@
       \field{title}{Links between Anti-Immigrant Bias and Racial Prejudice in California}
       \field{year}{2023}
     \endentry
+    \entry{antmanEthnicAttritionAssimilation2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1ef379f32668010fef7d487157e80a49}{%
+           family={Antman},
+           familyi={A\bibinitperiod},
+           given={Francisca\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=028bafcd91a81da51bc7eb575a2392ce}{%
+           family={Duncan},
+           familyi={D\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a97c2de88e00743241d71e2e6d236672}{%
+           family={Trejo},
+           familyi={T\bibinitperiod},
+           given={Stephen\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg, Netherlands}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature B.V.}%
+      }
+      \strng{namehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{fullhash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{fullhashraw}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{bibnamehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authorbibnamehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authornamehash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authorfullhash}{ccadbeea3e5f6c2f5922792a450064e1}
+      \strng{authorfullhashraw}{ccadbeea3e5f6c2f5922792a450064e1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{The literature on immigrant assimilation and intergenerational progress has sometimes reached surprising conclusions, such as the puzzle of immigrant advantage which finds that Hispanic immigrants sometimes have better health than US-born Hispanics. While numerous studies have attempted to explain these patterns, almost all studies rely on subjective measures of ethnic self-identification to identify immigrants’ descendants. This can lead to bias due to “ethnic attrition,” which occurs whenever a US-born descendant of a Hispanic immigrant fails to self-identify as Hispanic. In this paper, we exploit information on parents’ and grandparents’ place of birth to show that Mexican ethnic attrition, operating through intermarriage, is sizable and positively selected on health, making subsequent generations of Mexican immigrants appear less healthy than they actually are. Consequently, conventional estimates of health disparities between Mexican Americans and non-Hispanic whites as well as those between Mexican Americans and recent Mexican immigrants have been significantly overstated.}
+      \field{issn}{09331433}
+      \field{journaltitle}{Journal of Population Economics}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{pagetotal}{1499-1522}
+      \field{title}{Ethnic Attrition, Assimilation, and the Measured Health Outcomes of {{Mexican Americans}}}
+      \field{urlday}{18}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{volume}{33}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1499\bibrangedash 1522}
+      \range{pages}{24}
+      \verb{doi}
+      \verb https://doi-org.ezproxy.lib.uh.edu/10.1007/s00148-020-00772-8
+      \endverb
+      \verb{file}
+      \verb /Users/hhadah/Zotero/storage/WNKC7FPZ/Antman et al. - 2020 - Ethnic attrition, assimilation, and the measured h.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.proquest.com/docview/2425726423/abstract/684CF31C38A647FBPQ/1
+      \endverb
+      \verb{url}
+      \verb http://www.proquest.com/docview/2425726423/abstract/684CF31C38A647FBPQ/1
+      \endverb
+      \keyw{Assimilation,Attrition,Bias,Descendants,Grandparents,Health disparities,Health status,Hispanic Americans,Identity,Immigrants,Intermarriage,Mexican Americans,Noncitizens,Population Studies}
+    \endentry
     \entry{cornell2006ethnicity}{book}{}{}
       \name{author}{2}{}{%
         {{hash=76496629405c073255a4f9956f9d727a}{%
@@ -2809,40 +2918,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Ethnicity and race: Making identities in a changing world}
       \field{year}{2006}
-    \endentry
-    \entry{duncanIntermarriageIntergenerationalTransmission2011}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=f985c604b003806bf9a9ee9821828dfb}{%
-           family={Duncan},
-           familyi={D\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-        {{hash=14c1b1e714ca24d7e11468c64523b74e}{%
-           family={Trejo},
-           familyi={T\bibinitperiod},
-           given={S.\bibnamedelimi J.},
-           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{fullhash}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{fullhashraw}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{bibnamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{authorbibnamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{authornamehash}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{authorfullhash}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \strng{authorfullhashraw}{a68ca79e5f4099d8d5d15fe929c992ce}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{journaltitle}{J Labor Econ}
-      \field{shortjournal}{J Labor Econ}
-      \field{title}{Intermarriage and the Intergenerational Transmission of Ethnic Identity and Human {{Capital}} for {{Mexican Americans}}}
-      \field{volume}{29}
-      \field{year}{2011}
-      \field{dateera}{ce}
     \endentry
     \entry{mora2020antiblackness}{inproceedings}{}{}
       \name{author}{2}{}{%

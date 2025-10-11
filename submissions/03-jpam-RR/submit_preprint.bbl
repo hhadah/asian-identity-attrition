@@ -2197,6 +2197,46 @@
       \verb https://www.jstor.org/stable/40057327
       \endverb
     \endentry
+    \entry{gover2020anti}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2cf9206f97cb9a277e14507253acf70b}{%
+           family={Gover},
+           familyi={G\bibinitperiod},
+           given={Angela\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5bbb7b9b78436ef0bcb4c55dd3582235}{%
+           family={Harper},
+           familyi={H\bibinitperiod},
+           given={Shannon\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2f5361f8a3082dd5ebce90b8e30fa707}{%
+           family={Langton},
+           familyi={L\bibinitperiod},
+           given={Lynn},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{fullhash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{fullhashraw}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{bibnamehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authorbibnamehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authornamehash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authorfullhash}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \strng{authorfullhashraw}{17e457b9d1dda0cfd24eaa6f0a284c7d}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{journaltitle}{American Journal of Criminal Justice}
+      \field{number}{4}
+      \field{title}{Anti-Asian Hate Crime During the COVID-19 Pandemic: Exploring the Reproduction of Inequality}
+      \field{volume}{45}
+      \field{year}{2020}
+      \field{pages}{647\bibrangedash 667}
+      \range{pages}{21}
+    \endentry
     \entry{greenwaldMeasuringIndividualDifferences1998}{article}{}{}
       \name{author}{3}{}{%
         {{hash=86dfc25e0fd944e53243d19cd9030437}{%
