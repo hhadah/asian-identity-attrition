@@ -2,3 +2,14 @@
 data/datasets/*
 *.csv
 !data/datasets/.gitkeep   # optional placeholder so the folder stays
+.safety_backups/
+data/
+*.zip
+*.parquet
+*.rds
+*.dta
+*.sav
+*.feather
+*.pdf
+*.png
+*.jpg
