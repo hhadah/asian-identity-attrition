@@ -6,7 +6,11 @@
 gc()
 rm(list = ls()) 
 ## Set master directory where all sub-directories are located
+<<<<<<< HEAD
 s
+=======
+
+>>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
 CPS_path <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_DataTable.csv"
 CPS_all_path <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_DataTable_All.csv"
 CPS_asian <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/CPS_DataTable_Asians.csv"
@@ -65,12 +69,18 @@ source(file.path(programs,"01-packages-wds.r")) # set up package
 # source(file.path(programs,"31-msa-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # 
 # source(file.path(programs,"32-msa-table-five-regressions-skin-iat-byparent.R")) # 
 # source(file.path(programs,"40-multinomial-model-optimized.R")) # 
+<<<<<<< HEAD
 # source(file.path(programs,"41-multinomial-model-optimized-adults.R")) # adults only
 # source(file.path(programs,"42-interaction-iat-byparent-plot.R")) # teens only
 # source(file.path(programs,"43-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # kids only
 source(file.path(programs,"44-bootstrap-logit.r")) # 
 # source(file.path(programs,"bootstrap-functions.r")) # 
 
+=======
+source(file.path(programs,"41-multinomial-model-optimized-adults.R")) # adults only
+# source(file.path(programs,"42-interaction-iat-byparent-plot.R")) # teens only
+# source(file.path(programs,"43-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # kids only
+>>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
 ### summary stats
 
 # Send Message

@@ -2,6 +2,7 @@
 data/datasets/*
 *.csv
 !data/datasets/.gitkeep   # optional placeholder so the folder stays
+<<<<<<< HEAD
 .safety_backups/
 data/
 *.zip
@@ -13,3 +14,5 @@ data/
 *.pdf
 *.png
 *.jpg
+=======
+>>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07

@@ -1,0 +1,206 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+\input{tab01-SumStat}
+\end{landscape}
+
+\newpage
+\pagebreak
+
+\input{tab02-observations-by-gen}
+
+\begin{center}
+\begin{figure}[H]
+\caption{Bias and Self-reported Asian Identity in the Least and Most Biased Places}
+
+% first
+\begin{subfigure}{.9\textwidth}
+\caption{Bias Over Time}
+\centering
+\includegraphics[width=.9\linewidth]{Bias_twostates.png} 
+\label{fig:skiniat}
+\end{subfigure}
+% Second
+\begin{subfigure}{.9\textwidth}
+\caption{Self-reported Asian Identity Over Time}
+\centering
+\includegraphics[width=.9\linewidth]{Bias_twostates-asian.png} 
+\label{fig:Asian-twostates}
+\end{subfigure}
+\caption*{\footnotesize{These two panels show the trends in bias (panel a) and self-reported Asian identity among Asian immigrants (panel b) of the least and most biased places in the data. The District of Colombia is the least biased geographical area, and North Dakota is the most biased. The bias units are in standard deviations. Self-reported Asian identity is among first, second, and third-generation Asian immigrants aged 17 and younger still living in intact families.\\
+Bias data is from the 2004-2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. Identity data is from the 2004-2021 Current Population Survey (CPS).}}
+\end{figure}
+\end{center}
+
+
+\newpage
+\pagebreak
+
+\begin{center}
+\begin{figure}[H]
+\caption{Diagram of the Three Different Generations of Asian Immigrants.}
+\includegraphics[width=\textwidth, height=9cm]{diag.png} 
+\label{fig:diag}
+\end{figure}
+\hfill%
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[H]
+\caption{Maps of State-level Association Test Bias Over Time Measure with Census Division Regional Boundaries}
+\label{fig:skiniat-maps}
+% first
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2004}
+\centering
+\includegraphics[width=0.9\linewidth]{2004skinmap.png} 
+\label{fig:skiniat-map-2004}
+\end{subfigure}
+\hfill%
+% Second
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2008}
+\centering
+\includegraphics[width=0.9\linewidth]{2008skinmap.png} 
+\label{fig:skiniat-map-2006}
+\end{subfigure}
+\hfill%
+% third
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2012}
+\centering
+\includegraphics[width=0.9\linewidth]{2012skinmap.png} 
+\label{fig:skiniat-map-2008}
+\end{subfigure}
+\hfill%
+% fourth
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2016}
+\centering
+\includegraphics[width=0.9\linewidth]{2016skinmap.png} 
+\label{fig:skiniat-map-2010}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure shows the state-level bias index in different years in the sample. The bias units are in standard deviations and ranges from low to high bias. Bias index is constructed following \textcite{lubotskyInterpretationRegressionsMultiple2006}. The data is from the 2004-2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. Each panel presents state-level bias during a certain year. The boundaries in black represent the different Census divisions in the United States. Notice how there is a variation across states within a region.}}
+\end{figure}
+\end{center}
+
+\newpage
+\pagebreak
+
+\begin{center}
+\begin{figure}[H]
+\caption{Maps of State-level Bias 2004-2021 Measure with Census Division Regional Boundaries}
+\includegraphics[width=\textwidth]{Average_Skinmap.png} 
+\label{fig:iat-map-all}
+\caption*{\footnotesize{This figure shows the state-level bias index in the sample from 2004 to 2021. The bias units are in standard deviations and ranges from low to high bias. Bias index is constructed following \textcite{lubotskyInterpretationRegressionsMultiple2006}. The data is from the 2004-2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. The boundaries in black represent the different Census divisions in the United States. Notice how there is a variation across states within a region.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Generation}
+\label{plot01-regression-gen}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{All Generations}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-all-gens.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{First-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-first-gen.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-second-gen.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Third-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{skin-iat-regression-third-gen.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel is the results from the same regression but on different samples that are divided by generation. Standard errors are clustered on the state level. The samples include first-, second-, and third-generation Asian children ages 17 and below who live in intact families. First-generation Asian immigrants are children that were born in a Asian country. Native-born second-generation Asian immigrants are children with at least one parent born in a Asian country. Finally, native-born third-generation Asian immigrants are children with native-born parents and at least one grandparent born in a Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types}
+\label{plot01-regression-byparent}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation (All Parental Types)}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-all.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-hh.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-hw.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{by-parents-regs-wh.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating equation (\ref{eq:identity_reg_bias}). I include region $\times$ year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is state-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in an Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\input{tab45-iat_regression_tab_bygrandparent_type}
+
+\pagebreak
+\newpage
+
+\input{tab41a-marriage}
+
+\pagebreak
+\newpage
+
+\input{tab46-iat-migration-tab.tex}
+
+\pagebreak
+\newpage
+
+\input{maineffect-proxy}
+\pagebreak
+\newpage
+
+
+% \input{tab06-regression_tab_byproxy_skin.tex}
+% \pagebreak
+% \newpage
+
+\clearpage
