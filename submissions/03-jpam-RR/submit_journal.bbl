@@ -640,70 +640,6 @@
       \verb https://www.journals.uchicago.edu/doi/full/10.1086/712761
       \endverb
     \endentry
-<<<<<<< HEAD
-=======
-    \entry{bertrandImplicitDiscrimination2005}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=a25cba6b139b5ccffa7a9dcf8252a692}{%
-           family={Bertrand},
-           familyi={B\bibinitperiod},
-           given={Marianne},
-           giveni={M\bibinitperiod}}}%
-        {{hash=35b6943bd58e9ad4ac500e94d19b4405}{%
-           family={Chugh},
-           familyi={C\bibinitperiod},
-           given={Dolly},
-           giveni={D\bibinitperiod}}}%
-        {{hash=0ad4a50fedec7f3fb2ce43f3f64e62d6}{%
-           family={Mullainathan},
-           familyi={M\bibinitperiod},
-           given={Sendhil},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{fullhash}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{fullhashraw}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{bibnamehash}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{authorbibnamehash}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{authornamehash}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{authorfullhash}{1b85b039ace034977c1c82707e1b56ee}
-      \strng{authorfullhashraw}{1b85b039ace034977c1c82707e1b56ee}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{issn}{0002-8282}
-      \field{journaltitle}{American Economic Review}
-      \field{langid}{english}
-      \field{month}{5}
-      \field{number}{2}
-      \field{title}{Implicit {{Discrimination}}}
-      \field{urlday}{24}
-      \field{urlmonth}{10}
-      \field{urlyear}{2022}
-      \field{volume}{95}
-      \field{year}{2005}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{94\bibrangedash 98}
-      \range{pages}{5}
-      \verb{doi}
-      \verb 10.1257/000282805774670365
-      \endverb
-      \verb{file}
-      \verb /Users/hhadah/Zotero/storage/2JTVXTUC/Bertrand et al. - 2005 - Implicit Discrimination.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://www.aeaweb.org/articles?id=10.1257/000282805774670365
-      \endverb
-      \verb{url}
-      \verb http://www.aeaweb.org/articles?id=10.1257/000282805774670365
-      \endverb
-      \keyw{{Economics of Minorities,Races,Indigenous Peoples,and Immigrants},Non-labor Discrimination}
-    \endentry
->>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
     \entry{bertrandAreEmilyGreg2004}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a25cba6b139b5ccffa7a9dcf8252a692}{%
@@ -990,64 +926,6 @@
       \endverb
       \keyw{attitudes,contact,immigration,prejudice}
     \endentry
-<<<<<<< HEAD
-=======
-    \entry{carlanaImplicitStereotypesEvidence2019}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=4a6b8ff1ef0d527f9fa700a6a37b83ef}{%
-           family={Carlana},
-           familyi={C\bibinitperiod},
-           given={Michela},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Oxford University Press / USA}%
-      }
-      \strng{namehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{fullhash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{fullhashraw}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{bibnamehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{authorbibnamehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{authornamehash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{authorfullhash}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \strng{authorfullhashraw}{4a6b8ff1ef0d527f9fa700a6a37b83ef}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{author}
-      \field{abstract}{I study whether exposure to teacher stereotypes, as measured by the Gender-Science Implicit Association Test, affects student achievement. I provide evidence that the gender gap in math performance, defined as the score of boys minus the score of girls in standardized tests, substantially increases when students are assigned to math teachers with stronger gender stereotypes. Teacher stereotypes induce girls to underperform in math and self-select into less demanding high schools, following the track recommendation of their teachers. These effects are at least partially driven by lower self-confidence on math ability of girls exposed to gender-biased teachers. Stereotypes impair the test performance of girls, who end up failing to achieve their full potential. I do not detect statistically significant effects on student outcomes of literature teacher stereotypes.}
-      \field{issn}{00335533}
-      \field{journaltitle}{Quarterly Journal of Economics}
-      \field{month}{8}
-      \field{number}{3}
-      \field{shorttitle}{Implicit {{Stereotypes}}}
-      \field{title}{Implicit {{Stereotypes}}: {{Evidence}} from {{Teachers}}' {{Gender Bias}}}
-      \field{urlday}{24}
-      \field{urlmonth}{10}
-      \field{urlyear}{2022}
-      \field{volume}{134}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{1163\bibrangedash 1224}
-      \range{pages}{62}
-      \verb{doi}
-      \verb 10.1093/qje/qjz008
-      \endverb
-      \verb{file}
-      \verb /Users/hhadah/Zotero/storage/8ZHS54WB/Carlana - 2019 - Implicit Stereotypes Evidence from Teachers' Gend.pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=137475910&site=ehost-live
-      \endverb
-      \verb{url}
-      \verb http://ezproxy.lib.uh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=bth&AN=137475910&site=ehost-live
-      \endverb
-      \keyw{Gender stereotypes,Mathematics teachers,Sex discrimination,Standardized tests,Stereotypes}
-    \endentry
->>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
     \entry{charlesPrejudiceWagesEmpirical2008}{article}{}{}
       \name{author}{2}{}{%
         {{hash=2deff0eb8eeb0531abaa80f8f1712e6d}{%
@@ -2798,7 +2676,6 @@
 
 \refsection{2}
   \datalist[entry]{nyt/global//global/global/global}
-<<<<<<< HEAD
     \entry{akerlofEconomicsIdentity2000}{article}{}{}
       \name{author}{2}{}{%
         {{hash=f198b417f1390a0f8ff279349b43f47d}{%
@@ -2858,8 +2735,6 @@
       \endverb
       \keyw{Behavior,Identity (Psychology),Sex discrimination in employment,Social marginality}
     \endentry
-=======
->>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
     \entry{almasalkhi2023links}{article}{}{}
       \name{author}{1}{}{%
         {{hash=ef2e5345625875ab85bdd283d72fe080}{%

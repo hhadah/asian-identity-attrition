@@ -439,7 +439,6 @@ plot_marginal_effects_enhanced <- function(me_results, gen_label) {
   # Add significance indicators
   me_results$significant <- ifelse(me_results$conf_low * me_results$conf_high > 0, "Significant", "Not Significant")
   me_results$alpha_val <- ifelse(me_results$significant == "Significant", 1.0, 0.6)
-<<<<<<< HEAD
   
   # Add coefficient value labels for annotation
   me_results$coef_label <- sprintf("%.2f", me_results$marginal_effect)
@@ -474,23 +473,6 @@ plot_marginal_effects_enhanced <- function(me_results, gen_label) {
       legend.position = "bottom",
       # axis.title = element_text(size = 12),
       # axis.text.x = element_text(size = 10, angle = 0),
-=======
-
-  p <- ggplot(me_results, aes(x = marginal_effect, y = variable_label, color = outcome_label)) +
-    geom_point(aes(alpha = I(alpha_val)), size = 4, position = position_dodge(width = 0.6)) +
-    geom_errorbarh(aes(xmin = conf_low, xmax = conf_high, alpha = I(alpha_val)),
-                   height = 0.2, linewidth = 1.2, position = position_dodge(width = 0.6)) +
-    geom_vline(xintercept = 0, linetype = "dashed", color = "gray40", linewidth = 0.8) +
-    scale_color_manual(values = c("Asian only"="#2E8B57","White only"="#4169E1","Asian & White"="#FF8C00"),
-                       name = "Identity Choice") +
-    labs(x = "Marginal Effect (percentage points)", y = "", 
-         title = paste("Marginal Effects —", gen_label),
-         caption = "Note: Transparent points indicate non-significant effects (95% CI includes zero)") +
-    theme_customs() +
-    theme(
-      legend.position = "bottom",
-      axis.title = element_text(size = 12),
->>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
       plot.title = element_text(size = 14, face = "bold"),
       panel.grid.minor = element_blank(),
       panel.grid.major.y = element_line(color = "grey90", linewidth = 0.5),
@@ -555,7 +537,6 @@ print(me_all_gen)
 
 cat("\nAll optimized plots completed and saved!\n")
 cat("Method used: Enhanced analytical marginal effects with sample-size-adjusted SEs\n")
-<<<<<<< HEAD
 cat("Note: margins package incompatible with nnet::multinom - analytical method provides reliable results\n")
 
 
@@ -664,6 +645,3 @@ plot_pp_second_aw <- plot_pp_boot(boot_second_aw$pp, PP_VAR, "Second gen: AW par
 plot_me_second_aw <- plot_me_boot(boot_second_aw$me, "Second gen: AW parents")
 ggsave(file.path(figures_wd, "boot_pp_second_aw.png"), plot_pp_second_aw, width = 8, height = 6, dpi = 300)
 ggsave(file.path(figures_wd, "boot_me_second_aw.png"), plot_me_second_aw, width = 10, height = 6, dpi = 300)
-=======
-cat("Note: margins package incompatible with nnet::multinom - analytical method provides reliable results\n")
->>>>>>> 316a54059d1a2890f868822370e4e12cafadaa07
