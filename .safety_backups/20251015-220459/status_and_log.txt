@@ -1,0 +1,154 @@
+== git status ==
+warning: could not open directory '.Trash/': Operation not permitted
+## No commits yet on master
+?? "../../../\"/"
+?? ../../../.CFUserTextEncoding
+?? ../../../.DS_Store
+?? ../../../.Rapp.history
+?? ../../../.Renviron
+?? ../../../.Renviron_backup
+?? ../../../.Rprofile
+?? ../../../.Rprofile.swp
+?? ../../../.Xauthority
+?? ../../../.anaconda/
+?? ../../../.anaconda_backup/
+?? ../../../.android/
+?? ../../../.anyconnect
+?? ../../../.aspell.en.prepl
+?? ../../../.aspell.en.pws
+?? ../../../.bash_history
+?? ../../../.bash_profile
+?? ../../../.bash_profile-anaconda3.bak
+?? ../../../.bash_profile.backup
+?? ../../../.bash_profile.pysave
+?? ../../../.bash_sessions/
+?? ../../../.bashrc
+?? ../../../.boto
+?? ../../../.cache/
+?? ../../../.cisco/
+?? ../../../.codex/
+?? ../../../.conda/
+?? ../../../.condarc
+?? ../../../.config/
+?? ../../../.continuum/
+?? ../../../.cufflinks/
+?? ../../../.cups/
+?? ../../../.docker/
+?? ../../../.dropbox/
+?? ../../../.gdal/
+?? ../../../.gem/
+?? ../../../.gitconfig
+?? ../../../.gitignore
+?? ../../../.gk/
+?? ../../../.gmail_private
+?? ../../../.gsutil/
+?? ../../../.idlerc/
+?? ../../../.ipynb_checkpoints/
+?? ../../../.ipython/
+?? ../../../.julia/
+?? ../../../.jupyter/
+?? ../../../.lesshst
+?? ../../../.local/
+?? ../../../.matplotlib/
+?? ../../../.oracle_jre_usage/
+?? ../../../.pdfbox.cache
+?? ../../../.putty/
+?? ../../../.pylint.d/
+?? ../../../.python_history
+?? ../../../.r/
+?? ../../../.radian_history
+?? ../../../.skhdrc
+?? ../../../.ssh/
+?? ../../../.stata17/
+?? ../../../.subversion/
+?? ../../../.tcshrc
+?? ../../../.thinkorswim/
+?? ../../../.vim/
+?? ../../../.viminfo
+?? ../../../.virtualenvs/
+?? ../../../.vscode-R/
+?? ../../../.vscode/
+?? ../../../.wdc/
+?? ../../../.xonshrc
+?? ../../../.yabairc
+?? ../../../.zprofile
+?? ../../../.zsh_history
+?? ../../../.zsh_sessions/
+?? ../../../.zshrc
+?? ../../../AEA_Markdown/
+?? ../../../Applications/
+?? ../../../Brewfile
+?? ../../../Desktop/
+?? ../../
+?? ../../../Downloads/
+?? ../../../Dropbox
+?? ../../../Dropbox (Old)/
+?? ../../../Library/
+?? ../../../Lists.ipynb
+?? ../../../Manifest.toml
+?? ../../../Movies/
+?? ../../../Music/
+?? ../../../OneDrive/
+?? ../../../PSID/
+?? ../../../Pictures/
+?? ../../../Project.toml
+?? ../../../Public/
+?? ../../../README.md
+?? ../../../Rprof.out
+?? ../../../Sites/
+?? ../../../TeX
+?? ../../../Untitled.ipynb
+?? ../../../Untitled/
+?? ../../../Untitled1.ipynb
+?? ../../../Untitled2.ipynb
+?? ../../../Untitled3.ipynb
+?? ../../../Untitled4.ipynb
+?? ../../../Untitled5.ipynb
+?? ../../../Untitled6.ipynb
+?? ../../../Untitled7.ipynb
+?? ../../../Untitled8.ipynb
+?? ../../../Zotero/
+?? ../../../_extensions/
+?? ../../../bin/
+?? ../../../coefficient_distribution.png
+?? ../../../fsadfas/
+?? ../../../getting-started/
+?? ../../../git/
+?? ../../../google-cloud-sdk/
+?? ../../../hellotikzit.tikzstyles
+?? ../../../htmltable.html
+?? ../../../libffi.6.dylib
+?? ../../../libs/
+?? ../../../myrepo/
+?? ../../../nltk_data/
+?? ../../../opt/
+?? ../../../profile.do
+?? ../../../project-template.git/
+?? ../../../pypotrace/
+?? ../../../quickstart/
+?? ../../../recommendation.aux
+?? ../../../recommendation.log
+?? ../../../recommendation.out
+?? ../../../recommendation.pdf
+?? ../../../sadfsa/
+?? ../../../sdfas/
+?? ../../../seaborn-data/
+?? ../../../tab01-etwfe.tex
+?? ../../../temp.Rmd
+?? ../../../temp.html
+?? ../../../temp_files/
+?? ../../../tiny_python_projects/
+?? ../../../untitled.md
+?? ../../../venv/
+
+== current branch ==
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+HEAD
+(no branch yet)
+
+== recent log ==
+fatal: your current branch 'master' does not have any commits yet
+(no commits yet)
+fatal: Refusing to create empty bundle.

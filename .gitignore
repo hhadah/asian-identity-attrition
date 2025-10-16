@@ -1,0 +1,4 @@
+# ignore large datasets
+data/datasets/*
+*.csv
+!data/datasets/.gitkeep   # optional placeholder so the folder stays

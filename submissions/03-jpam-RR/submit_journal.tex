@@ -1,0 +1,435 @@
+\documentclass[12pt,english]{article}
+
+\input{preamble_package}
+% Citation comes loading other packages, so that footnotes follow biblatex-chicago style
+\input{preamble_citation}
+
+% Responses to Referees
+\usepackage{blindtext}
+\newcommand{\aptxspc}{1.8}
+\newcommand{\rrquote}{1.1}
+\newcommand{\rrxspc}{1.5}
+
+\begin{document}
+
+% SUBMISSION COVER
+\thispagestyle{empty}
+\begingroup
+  \doublespacing
+  \centering
+  \LARGE REVISE \& RESUBMIT SUBMISSION\\[0.25em]
+  \LARGE Journal of Policy Analysis and Management \\[0.25em]
+  \LARGE MANUSCRIPT ID: JPAM-2025-13688 \\[1.0em]
+\endgroup
+This document and the associated contents in the accepted version of JPAM-2025-13688 for the Journal of Policy Analysis and Management. I include:
+\begin{enumerate}
+    \item Title page information
+    \begin{itemize}
+        \item Title and Author
+        \item Abstract
+        \item Keywords
+        \item Acknowledgment
+    \end{itemize}
+    \item The manuscript
+    \begin{itemize}
+        \item Main manuscript text
+        \item Main manuscript references
+        \item Main manuscript figures
+        \item Main manuscript tables
+    \end{itemize}  
+    \item \hyperref[r&r:responses]{Responses to the editor and referees comments}
+    \item The online appendix, which is separately paged. It includes an online appendix title page, appendix A, appendix B, appendix C, and references for citations in the appendix.
+\end{enumerate}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part I. Title Page, Authors, Abstract, etc. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load in title page information, title, author information, abstract, etc are stored here
+\input{manuscript_title_etc}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% Part I.a.1 Title
+\section*{TITLE AND AUTHORS}
+\subsection*{TITLE AND RUNNING HEAD}
+\begin{itemize}[label={}, leftmargin=*]
+    \item Title: \textbf{\PAPERTITLE}
+    \item Running Head:  \textbf{Bias and Asian Identity}
+\end{itemize}
+% Part I.a.2 Author info
+\subsection*{AUTHORS}
+\begin{itemize}[label={}, leftmargin=*]
+    \item List of authors:
+    \begin{enumerate}
+        \item \AUTHORHADAHINFO
+    \end{enumerate}
+    \item Corresponding author:
+    \begin{itemize}
+        \item \textbf{\AUTHORHADAHINFO}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Data Availability Statement}
+The data that support the findings of this study will be openly available to all researchers after the review process. For immediate information regarding the data and/or computer programs used for this study, please contact Hussain Hadah at hhadah@tulane.edu.
+
+\subsection*{Funding Statement}
+
+The author has no funding for the research, authorship, and/or publication of this article to report.
+
+\subsection*{Conflict of Interest Disclosure}
+The author declare that they have no conflicts of interest regarding the publication of this manuscript.
+
+\clearpage 
+
+% Part I.b Abstract
+\doublespacing
+\section*{ABSTRACT}
+% \begin{myRaggedRight}
+\PAPERABSTRACT
+% \end{myRaggedRight}
+\clearpage 
+
+% Part I.c Keywords
+\doublespacing
+\section*{KEYWORDS}
+\PAPERKEYWORDS
+\clearpage 
+
+% Part IV.d Acknowledgements
+\doublespacing
+\section*{ACKNOWLEDGMENT}
+% \begin{myRaggedRight}
+\ACKNOWLEDGMENTS
+% \end{myRaggedRight}
+\clearpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part II. Manuscript main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+\begingroup
+  \centering
+  \Large MANUSCRIPT TEXT\\[1em]
+\endgroup
+% Manuscript main text
+% \begin{myRaggedRight}
+\input{manuscript_main}
+% \end{myRaggedRight}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part III. Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\begingroup
+\setstretch{1.0}
+\setlength\bibitemsep{5.0pt}
+\printbibliography[title=References for Manuscript]
+\endgroup
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part IV. Tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{manuscript_tab_fig}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PART V. Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\begin{refsection}
+
+% reset page numbers
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\end{refsection}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % PART VI. Responses to Editor and Referees
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{refsection}
+% Reset section numbering
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+        \section{Responses to Editors and Referee} \label{r&r:responses}
+        \begin{spacing}{\rrxspc}
+            I would like to thank the editors and the anonymous referees for their insightful comments, suggestions, and effort and time in reviewing this paper. I have addressed all the comments and suggestions in the revised manuscript. Below, I provide a summary of the changes made to the manuscript in response to the comments and suggestions.
+        \end{spacing}
+
+    \newpage
+    
+    \section{Responses to Referee One}
+        I would like to thank referee one for the insightful comments and suggestions. Below is a detailed response to the comments and suggestions.
+    \begin{spacing}{\rrquote}
+    \begin{quotation}
+    \textbf{R1: } 1. Beginning with the paper's theoretical account of racial bias and its potential impact on racial identity, I appreciate the author's use of formal theory to present a logical and rational model explaining why bias may affect racial identity. However, I feel the author misses an important literature on racial identity and assimilation that focuses on the behavioral aspects of race and racial identity. While they do briefly touch on some of this literature, I suggest that revisions have a greater focus on the behavioral literature on racial identity and assimilation in addition to the formal model. A good work that I could suggest on this topic is Telles and Ortiz's Generations of Exclusion.
+    \end{quotation}
+    \end{spacing}
+    
+    \begin{spacing}{\rrxspc}
+        \textbf{Response:} I thank the referee for this suggestion. I have added a paragraph in the introduction discussing Telles and Ortiz's Generations of Exclusion and other related works on racial identity and assimilation. Specifically, I add the following paragraph in the introduction: 
+
+        ``While \textcite{akerlofEconomicsIdentity2000} theoretical model that I use provides a logical framework for understanding how bias affects racial identity, the behavioral literature on racial identity and assimilation offers crucial empirical insights that complement this theoretical approach. Research in this tradition emphasizes how racial identity is not merely a cognitive construct but is actively performed, negotiated, and reconstructed through daily interactions and life experiences \autocite{waters1990ethnic}. \textcite{telles2008generations}'s study of Mexican Americans demonstrates how individuals strategically adapt their racial presentations across different social contexts while maintaining core identity elements across generations. 
+
+        Similarly, behavioral studies have documented how discrimination experiences shape identity salience and group attachment, with individuals developing adaptive strategies that range from ethnic distancing to reactive ethnicity depending on situational factors \autocite{zhou1997segmented}. This behavioral perspective reveals that racial identity operates as both a response to external categorization and an active process of boundary maintenance \autocite{cornell2006ethnicity}. While this literature has primarily relied on qualitative observations and ethnographic methods to document identity flexibility, the present analysis advances this understanding by quantifying these strategic choices through systematic comparison of objective ancestry measures with subjective racial identification across varying environmental contexts.''
+    \end{spacing}
+    
+    \begin{spacing}{\rrxspc}
+    \begin{quotation}
+        \textbf{R1: } 2. As for the methods, I have a few concerns that I hope the author can address in future drafts. One concern that looms over the paper for me is that the 'objective' measure of Asian background may not be as objective as it seems. For instance, it is unclear that, say, the children or grandchildren of people who were born to non-asian parents in Asia, for example, on an American military base, would be classified as Asian. I don't think this is a huge concern for the analysis, but it needs to at least be addressed.
+        \end{quotation}
+        \end{spacing}
+        
+    \begin{spacing}{\rrxspc}
+        \textbf{Response:} I appreciate the referee's attention to this issue. It is a point I address in the paper's data section in the following footnote ``I restrict first-generation cases to those whose parents were born in Asian countries to exclude US citizens born abroad to American parents''. Following the comment, I added a few sentences to clarify this point. Specifically, I added the following sentences in the data section: ``Note that while the ancestry measure provides an objective assessment of Asian heritage, it may not capture all nuances of racial identity. For instance, White individuals with Asian ancestry born to non-Asian parents in Asia, such as on American military bases, may be classified as Asian in the data. To avoid potential misclassification, I remove individuals who report that they were born abroad of American parents.''
+    \end{spacing}    
+
+    \begin{spacing}{\rrxspc}
+        \begin{quotation}
+            \textbf{R1: } 3. Second, I am concerned that using the state as the unit of analysis for regional bias may be problematic. Perhaps the bias of the community that one grows up in would be better measured at the city or zip-code level. For instance, those who live in Austin, Texas may have a very different experience with bias than those who live in rural west Texas. If the authors could provide even a supplemental analysis in which they analyze this at local level, this would help significantly to alleviate these concerns.
+    \end{quotation}
+        \end{spacing}
+            
+    \begin{spacing}{\rrxspc}
+            \textbf{Response:} I thank the referee for this suggestion. I agree that using more granular geographic units would provide a more precise measure of local bias. However, there are major data limitations that prevent me from doing so. First, the CPS does not provide geographic identifiers below the county level and only for 45\% of the sample and only for counties with larger populations. Therefore, if used at the county level, I would lose more than half of the sample and potentially introduce bias. Second, even if I had access to more granular geographic identifiers in the CPS, to my knowledge, there are no measures of racial bias at more granular geographic levels. The General Social Survey (GSS), which I use as one of my measures of racial bias, is only representative at the the state level. The American National Election Studies (ANES) is only available at the state level. The Uniform Crime Reports (UCR), which I use to calculate anti-Asian hate crimes, is recommended to not be used at the county level and is not available at lower levels. The Implicit Association Test (IAT) data is the only dataset that available at the county level, however, many social scientists have raised concerns about using the IAT on it's own. Therefore, while I agree with the referee that using more granular geographic units would be ideal, I am limited by data availability. I will add a paragraph to the conclusion discussing this limitation and suggesting that future research could explore this question using more granular geographic units if data becomes available. Specifically, I will add the following paragraph to the conclusion: ``More granular geographic units, such as counties, city, or zip-code level, could provide a more precise measure of local bias. However, data limitations prevent the use of these finer geographic levels in the current analysis. Future research could explore this question using more detailed geographic identifiers if such data becomes available, allowing for a deeper understanding of how local contexts shape racial identity.''
+
+            To strengthen how I address this concern, I have conducted supplemental analyses using county-level and MSA-level Implicit Association Test (IAT) data, which are available at more granular geographic levels than the state-level measures used in the main analysis. These results are presented in Appendix Figures \ref{plot01-regression-gen-county}, \ref{plot01-regression-byparent-county}, \ref{plot01-regression-gen-msa}, and \ref{plot01-regression-byparent-msa}. The patterns observed at the county and MSA levels are consistent with the main state-level findings, showing similar negative relationships between anti-Asian bias and Asian identity reporting across generations and parental types. While these analyses are limited to IAT measures alone (due to data availability constraints for other bias measures at sub-state levels), they provide additional evidence that the documented relationships hold at more localized geographic scales. I have also added a footnote in the main results section directing readers to these supplemental analyses. The footnote reads: ``I show the results using county-level and MSA-level anti-Asian bias measures from the Implicit Association Test (IAT) show similar patterns. I present the county-level results in Figures \ref{plot01-regression-gen-county} and \ref{plot01-regression-byparent-county}, while I show the MSA-level in Figures \ref{plot01-regression-gen-msa} and \ref{plot01-regression-byparent-msa}.''
+    \end{spacing}
+    
+    \begin{spacing}{\rrxspc}
+        \begin{quotation}
+            \textbf{R1: } 4. Additionally, while I understand why children are of particular interest, I would also like to see what the results look like for Asian adults. Is this phenomenon of calculating one's identity concentrated among children? Do they come to identify more with their Asian roots as they reach adolescence and adulthood? Are the same calculations being made by adults? These are important questions that including the sample of adults could be useful to help answer.
+        \end{quotation}
+    \end{spacing}
+
+    \begin{spacing}{\rrxspc}
+        \textbf{Response:} Thank you so much for this important suggestion. I agree that examining the relationship between bias and racial identity among adults would provide valuable insights into how these dynamics evolve over the life course. To address this comment, I have conducted supplemental analyses using the same empirical strategy on an adult sample (ages 18 and above) from the CPS. I show the summary statistics for the adult sample in Table (\ref{tab:sumstat-adults}) and the ethnic attrition for first- and second-generation Asian adults in Table (\ref{tab:hispbygen-adults}). Moreover, I present the relationship between anti-Asian bias and self-reported Asian identity among adults in Figures \ref{plot01-regression-gen-adults} and \ref{plot01-regression-byparent-adults}. The results indicate that the negative relationship between anti-Asian bias and Asian identity reporting among adults mirrors the patterns observed in children, suggesting that similar identity calculations are at play across age groups.
+
+        I also added the following two discussion of the results in the main text. First: ``Adult samples show similar patterns (Figure \ref{plot01-regression-gen-adults}).\footnote{For adults with Asian ancestry, I can only observe birthplaces of the person and their parents, not grandparents, limiting analysis to first- and second-generation individuals.} A one standard deviation increase in anti-Asian bias correlates with a 5 percentage point decrease in Asian racial identity reporting across all adults, with a 2 percentage point decrease among first-generation adults (statistically insignificant) and a 13 percentage point decrease among second-generation adults. Higher household income and years of education both positively correlate with Asian identity reporting, with each additional year of education associated with approximately 1--2 percentage point increases.'' Second: ``Adult second-generation results show even larger heterogeneity by family structure (Figure \ref{plot01-regression-byparent-adults}). A one standard deviation increase in anti-Asian bias correlates with a 13 percentage point decrease across all second-generation adults, with the largest effect among White father-Asian mother adults (24 percentage points, panel D). Notably, higher education positively correlates with Asian identity reporting among mixed-race adults but shows no effect in endogamous families, suggesting that more educated individuals with Asian ancestry are more likely to maintain their Asian racial identity. This selective retention implies that studies using self-reported racial identity may overestimate Asian American success and underestimate assimilation speed, as successful Asians remain visible in the data while less successful Asians attrit to other racial categories.''
+    \end{spacing}
+
+    \begin{spacing}{\rrxspc}
+        \begin{quotation}
+            \textbf{R1: } 5. Lastly and importantly, it is also unclear to me why the author uses measures of animus towards African Americans from the ANES in their bias index, especially when measures of animus towards Asian Americans are available on the very same study. Here I think the author either needs to make a case for the bias they are interested in being more broad than just bias toward Asian-Americans or they need to reestimate their measures of bias.
+        \end{quotation}
+    \end{spacing}
+
+    \begin{spacing}{\rrxspc}
+       \textbf{Response:} Thank you for this important methodological observation. You raise a valid point about the conceptual alignment between my bias measures and outcomes. Let me clarify my approach: The ANES racial animus questions do primarily focus on attitudes toward Black Americans, I also use measures of animus toward Asian Americans. Research consistently shows that racial prejudices are highly correlated across different minority groups—individuals who express bias toward one racial minority typically hold similar attitudes toward others \autocite{almasalkhi2023links, mora2020antiblackness}. These measures therefore capture general patterns of racial animus rather than group-specific bias alone. Crucially, my composite bias index combines three distinct components: (1) Asian-focused IAT measures, (2) ANES racial animus questions, and (3) hate crimes specifically targeting Asian Americans. This multi-proxy approach effectively weights the overall bias measure toward Asian-specific prejudice (two of three components directly measure anti-Asian sentiment) while incorporating information about the broader racial climate through the ANES measures. This methodological choice serves two purposes: it reduces measurement error through the composite approach while capturing both specific anti-Asian bias and the general environment of racial prejudice that affects all minority groups. I added the following to the text of the manuscript to address the important point the referee raised: ``While the ANES racial animus questions primarily focus on attitudes toward Black Americans, research demonstrates that racial prejudices are highly correlated across different minority groups, with individuals who express bias toward one racial minority typically holding similar attitudes toward others \autocite{almasalkhi2023links, mora2020antiblackness}. These measures therefore capture broader patterns of racial animus that extend beyond anti-Black sentiment specifically. When combined with the Asian-focused IAT measures and hate crimes against Asian Americans in my composite index, this multi-proxy approach weights the bias measure more heavily toward Asian-specific prejudice while still capturing the general racial climate.''
+    \end{spacing}
+    \clearpage
+    \pagebreak
+
+    \section{Responses to Referee Two}
+    I would like to thank referee two for the insightful and constructive comments and suggestions. Below is a detailed response to the comments and suggestions.
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 1. The paper reports that roughly 96\% of individuals who were born in Asia or who have two Asian parents report being Asian. Before analyzing this group, it would be essential to understand the 4\% who do not. Do they report being of a single racial group not elsewhere classified (e.g., Indian or Chinese), in which case we might reasonably either exclude them since we do not know what they reported or assume that they chose a subcategory of Asian? Is there any way to determine what proportion might be expats born in Asia (primarily in Hong Kong or Singapore)?
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+            \textbf{Response:}  Thank you for this important question. Allow me to break down your comment into different parts that I would address separately. 
+
+            First, regarding the 4\% of individuals born in Asia or with two Asian parents who do not report being Asian, I have examined their self-reported racial identities. I believe that this comment is related to your other comment below regarding showing the distribution of racial identities among those with Asian ancestry. I will respond to that comment below in more detail. However, to briefly address this point, I added a new section to the manuscript (From the Data: Asian Racial Identity and Attrition) where I show the racial attrition and racial choices among those with Asian ancestry. Specifically, I show which of the following categories they report: (1) Asian only, (2) White only, (3) Asian and White/Pacific Islander, (4) other non-Asian multiracial combinations, (5) Asian combined with other races, and (6) Asian/Pacific Islander. 
+
+            Moreover, my analysis defines Asian countries as East Asian and Southeast Asian nations (China, Hong Kong, Taiwan, Japan, Korea, Mongolia, Cambodia, Indonesia, Laos, Malaysia, Philippines, Singapore, Thailand, and Vietnam), excluding South Asian and Middle Eastern countries. This classification aligns with standard demographic research on East and Southeast Asian populations and reflects shared experiences within these regions. To make this clearer, I have added a footnote in the data section specifying which countries are included in the definition of Asian countries. The footnote reads: ``For this analysis, Asian countries comprise East Asian and Southeast Asian nations, including China, Hong Kong, Taiwan, Japan, Korea, Mongolia, Cambodia, Indonesia, Laos, Malaysia, Philippines, Singapore, Thailand, and Vietnam, but exclude South Asian and Middle Eastern countries, consistent with standard demographic classifications.''
+
+
+            Finally, regarding your point on the ability using the data to identify expats born in Asian countries (i.e. US citizens born abroad to US parents). It is a point I address in the paper's data section in the following footnote ``I restrict first-generation cases to those whose parents were born in Asian countries to exclude US citizens born abroad to American parents''. To make sure that this would be clear in the paper, I added a few sentences to clarify this point. Specifically, I added the following sentences in the data section: ``It is important to note that while the ancestry measure provides an objective assessment of Asian heritage, it may not capture all nuances of racial identity. For instance, White individuals with Asian ancestry born to non-Asian parents in Asia, such as on American military bases, may not be classified as Asian in the data. To avoid potential misclassification, I remove individuals who report that they were born abroad of American parents.''
+
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 2. Leaving aside these issues, it is problematic to use a linear probability model when the probability is near 0 or 1. Given the range of bias shown in some of the figures, a coefficient of -.05 suggests that the predicted probability of reporting to be Asian is likely to exceed 1 for a nontrivial number of observations. At the very least, the author should show that the results are robust to using probit and logit. I am more inclined to the view that trying to explain the small proportion of individuals with two Asian parents who do not self-identify as Asian is not likely to be productive.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+            \textbf{Response:} I thank the reviewer for this important methodological point. To address concerns about the linear probability model's limitations when probabilities approach boundary values, I have estimated both logit and probit models alongside the LPM specifications for all analyses. As shown in Tables \ref{regtab-all-gen}-\ref{regtab-third-gen}, the marginal effects from logit and probit models are remarkably consistent with the LPM coefficients across all generational groups, providing strong evidence for the robustness of the findings.
+
+            Regarding the specific concern about predicted probabilities exceeding 1: the logit and probit specifications, which are bounded between 0 and 1 by construction, yield nearly identical marginal effects, confirming that boundary issues are not driving the results.
+
+            The reviewer raises an interesting point about the substantive focus on the minority who do not self-identify as Asian despite having Asian ancestry. However, this phenomenon represents a theoretically important pattern that motivates my research design choices. This is precisely why I break down my analysis by generation and family structure—to demonstrate how identity switching costs vary systematically across different groups. As outlined in Akerlof and Kranton (2000), individuals face differential costs when changing identities based on their circumstances and social constraints. Those with more proscribed identity choices, such as individuals with two Asian parents who appear phenotypically Asian, face higher switching costs and react differently to their environment than those with less constrained options, such as mixed-race individuals who possess greater phenotypic ambiguity. My findings support this theoretical prediction: while bias effects are statistically insignificant among second-generation children with two Asian parents, they are substantial and significant among children from interracial families (15 percentage points for Asian father-White mother families and 10 percentage points for White father-Asian mother families). I present results for all subgroups both for transparency and to illustrate this crucial heterogeneity in identity switching costs. The systematic relationship between experienced bias and identity reporting across these different constraint structures provides insights into how discrimination shapes ethnic and racial identification processes, with direct implications for measuring racial gaps and understanding the economic mechanisms underlying assimilation patterns.
+
+
+        \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 3. The interesting part of the paper concerns individuals of mixed ancestry, most of whom do not identify as Asian. But, the only Asian/not only Asian dichotomy is problematic. What proportion of the “not only Asian” reports being Asian and something else? In general, we want to know whether explanatory variables shift mixed-race individuals from reporting themselves as Asian only to something else only, or to biracial.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+            \textbf{Response:} I appreciate the reviewer's insightful comments on the complexities of racial identity. I believe that addressing this point will significantly enhance my paper. First, to address your comment regarding the distribution of racial identities among those with Asian ancestry, I have added a new section to the manuscript (From the Data: Asian Racial Identity and Attrition) where I show the racial attrition and racial choices among those with Asian ancestry. Specifically, I show which of the following categories they report: (1) Asian only, (2) White only, (3) Asian and White/Pacific Islander, (4) other non-Asian multiracial combinations, (5) Asian combined with other races, and (6) Asian/Pacific Islander. I provide this breakdown for all generations and separately for first-, second-, and third-generation individuals in Figures \ref{fig:histogram-all}-\ref{fig:histogram-thirdgen}. Please see Section \ref{sec:attrition} for the full discussion of these results. 
+
+            The data reveal that among those not identifying as ``Asian only,'' there is substantial variation in identity choices. Among second-generation children from interracial families, 29\% of those with Asian fathers and White mothers report ``Asian and White/Pacific Islander'' (biracial), while 27\% report ``White only.'' Similarly, 40\% of those with White fathers and Asian mothers report ``Asian and White/Pacific Islander,'' while 24\% report ``White only.'' This pattern shows that mixed-ancestry individuals do not simply shift from Asian identification to White identification, but frequently adopt multiracial identities.
+
+            The breakdown becomes even more complex among third-generation individuals. Those with fewer Asian grandparents are more likely to report ``White only'' (54\% for those with one Asian grandparent), while those with more Asian ancestry maintain higher rates of multiracial identification. Critically, even among third-generation children with four Asian grandparents, 92\% still report ``Asian only,'' demonstrating that family composition rather than generational status drives identity flexibility.
+
+            These findings directly address the reviewer's question ``What proportion of the “not only Asian” reports being Asian and something else?'' 
+
+            To further explore how explanatory variables influence these identity choices, I added results from estimating the effects of bias, parental education, and sex using a multinomial logistic regression. This approach allows me to model the probabilities of reporting ``Asian only,'' ``White only,'' and ``Asian and White/Pacific Islander'' as separate outcomes.
+
+            I present the results in Figures \ref{fig:pp-all-gen}-\ref{fig:pp-third-three}, reveal that anti-Asian bias significantly decreases the likelihood of reporting ``Asian only'' while increasing the probabilities of both ``White only'' and ``Asian and White/Pacific Islander'' identifications among mixed-ancestry individuals. For example, among second-generation children from Asian father-White mother families, a one standard deviation increase in anti-Asian bias is associated with a 12 percentage point decrease in the probability of reporting ``Asian only,'' a 20 percentage point increase in ``White only,'' and a 5 percentage points decrease in ``Asian and White/Pacific Islander.'' To discuss these results, I broke down the results into two subsection. The first subsection--- sub-section \ref{sec:results-dichotomous} titles ``Dichotomous Asian Racial Identity Reporting and Anti-Asian Bias''---discusses the dichotomous outcomes. The second subsection---sub-section \ref{sec:multinomial} titled ``Multinomial Logit Results: Racial Identity Choices and Anti-Asian Bias''---focuses on the multinomial outcomes.
+
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 4. The paper either doesn’t report basic summary statistics about the distribution of bias, or I missed it. The effect of a one-standard-deviation increase in anti-Asian bias on the probability of reporting only Asian appears to be modest.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+            \textbf{Response:} I appreciate the reviewer's comments regarding the need for clearer presentation of the bias measures. In the original manuscript, I provided several maps and figures illustrating the geographic distribution of anti-Asian bias across states. In Figure \ref{fig:toptwobias}, I show the aggregate bias index for the two most biased (North Dakota and Tennessee) and two least biased states (Hawaii and Vermont) in Panel \ref{fig:skiniat}. In Panel \ref{fig:Asian-twostates}, I show the self-reported Asian identity rates for the two most biased and two least biased states to illustrate the differences. This would provide visual evidence of the variation in bias levels across states. For example, a one standard deviation bias increases equivalent to moving from Washington, DC, or Vermont to North Dakota in 2020. Additionally, in Figure \ref{fig:skiniat-maps}, I present maps showing the variation in anti-Asian bias across states and over time for my bias index. The maps are of state-level bias in 2004 (Panel \ref{fig:skiniat-map-2004}), 2008 (Panel \ref{fig:skiniat-map-2008}), 2012 (Panel \ref{fig:skiniat-map-2008}), and 2016 (Panel \ref{fig:skiniat-map-2010}). Finally, I show the average state-level bias over the entire sample period in Figure \ref{fig:iat-map-all}. A discussion of these figures is provided in subsection \ref{sub:lw-bias} titled ``Measuring Anti-Asian Sentiment'' in the data section \ref{sec:data}.
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 5. It is surprising that the paper does not look more carefully at other potential explanatory factors, such as income. This is particularly important because the paper is motivated by the potential bias in measures of Asian/non-Asian disparities. However, unless reporting Asian identity is directly or indirectly related to the outcomes for which we want to measure disparities, to a first approximation, there is no bias in the disparities estimates. For example, if reporting a non-Asian identity is uncorrelated with income, the estimated income of Asians is unbiased. The problem only arises if highincome Asians are more (or less) likely to report themselves as non-Asian.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+            \textbf{Response:} I would like to thank the reviewer for this important comment. I agree that examining how racial identity reporting correlates with socioeconomic outcomes like income is crucial for understanding potential biases in measuring disparities. The issue of including income is problematic since family income is only available in the Annual Social and Economic Supplements (ASEC) of the CPS, i.e. the March supplement. Therefore, if I were to include income in my analysis, my sample size would be reduced significantly. Moreover, since I agree that income is an important variable to consider, I included parental education as it is a proxy for socioeconomic status. 
+
+            Furthermore, in my analysis of the adult sample, I included individual independent variables that include income. As shown in the paragraph describing Figure (\ref{plot01-regression-byparent-adults}), the adult specifications reveal that higher household income positively correlates with Asian identity reporting. This finding directly addresses the reviewer's concern about potential bias in disparity estimates: higher-income Asian Americans are indeed more likely to report Asian identity, which would lead to overestimation of Asian outcomes and underestimation of the true Asian-White gaps in surveys that rely on self-reported race.
+
+            These results support the reviewer's intuition that the relationship between identity reporting and socioeconomic outcomes is crucial for understanding measurement bias. The positive correlation between income and Asian identity reporting, combined with the differential effects by parental education, suggests that studies measuring Asian-White disparities may indeed be systematically biased, particularly overestimating the assimilation and socioeconomic success of Asian Americans.
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 6. Similarly, any effect of anti-Asian bias on reporting is only important if it affects Asians differentially based on their incomes (or other variables we examine for disparities). Thus, it is somewhat surprising that anti-Asian bias is not interacted with other variables, although I expect that the data are not up to the task.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+           \textbf{Response:} I appreciate the reviewer's insightful comment about the importance of examining how anti-Asian bias effects vary by socioeconomic characteristics. I have directly addressed this concern through several approaches. First, I estimated interaction models that examine how demeaned state-level bias effects differ by parental education and gender, as presented in Figures (\ref{fig:interaction-coefs-aw-wa}) and (\ref{fig:interaction-coefs-thirdgen-grandparent}). These results reveal that anti-Asian bias effects indeed vary significantly by parental education, particularly among mixed-race families, where individuals with college-educated parents respond differently to above-average state bias levels in their identity reporting decisions.
+           
+           Second, in my adult sample analysis that includes individual income as a covariate, I am able to examine how bias effects interact with socioeconomic status more directly. The adult specifications show not only that higher household income positively correlates with Asian identity reporting, but also reveal differential patterns of bias responsiveness across income levels. This analysis demonstrates that the relationship between anti-Asian bias and identity reporting is indeed moderated by socioeconomic factors, directly addressing the reviewer's concern about differential effects by income and other variables relevant for measuring disparities.
+           
+           These interaction analyses confirm that anti-Asian bias does not affect all Asian Americans uniformly—rather, its effects are concentrated among specific socioeconomic groups, which has important implications for understanding potential biases in disparity estimates.
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 7. The argument that parents and children provide similar reports about the child's race is not compelling. Presumably, most children mimic their parents' views and only develop an independent self-concept late in childhood or in adulthood. That doesn’t make the parent’s report or the child’s report uninteresting; it just affects the interpretation.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+           \textbf{Response:} I would like to thank the reviewer for their thoughtful critique regarding the interpretation of parental versus child reports of racial identity. The reviewer correctly notes that children often internalize parental views and may not develop independent racial self-concepts until later in development. However, I address these concerns multiple ways that reinforce the robustness of my findings.
+           
+           First, as part of my robustness checks, I directly examine this issue by analyzing reporting patterns by household respondent type in Table (\ref{tab:hispbyproxy}). The empirical evidence shows remarkably consistent patterns across different reporting arrangements, with main Asian racial identity effects of 72 percentage points whether mothers or fathers serve as proxies, and 87 percentage points when children themselves serve as household respondents. This consistency suggests that the underlying phenomenon I am measuring—the relationship between anti-Asian bias and identity reporting—is robust across different respondent types. Furthermore, I explore ethnic attrition patterns among adults. I find that the attrition among adults are similar to those of children, as shown in Table (\ref{tab:hispbygen-adults}), suggesting that proxy reporting aligns with individuals' self-identification. 
+           
+           Second, and more importantly, I address this concern directly in my robustness analysis by examining adult samples where individuals unambiguously self-report their racial identity. As demonstrated in Table (\ref{tab:hispbygen-adults}) and Figures (\ref{plot01-regression-gen-adults}-\ref{plot01-regression-byparent-adults}), I find similar patterns of ethnic attrition and bias effects among adults. This replication with self-reporting adults confirms that the relationship between environmental bias and identity choices is not an artifact of proxy reporting or parental influence on children's responses.
+                      
+           The \textcite{antmanEthnicAttritionAssimilation2020} finding that Hispanic identification patterns don't vary by household respondent provides additional external validation for the robustness of racial identity reporting across different respondent arrangements.
+           
+           The reviewer's point about the interpretation is particularly valuable because it clarifies that whether parents or children are making these identity choices, the mechanism I identify---strategic responses to environmental bias---remains substantively important. If parents are making strategic identity choices in response to anti-Asian bias (whether for themselves or on behalf of their children), this represents exactly the type of adaptive behavior my theory predicts and has the same implications for measurement bias in demographic data. The reviewer's insight helps clarify the phenomenon of interest (bias-responsive identity reporting) operates at the family level, which I think would strengthen rather than weaken the theoretical importance of these findings.
+
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 8. My memory, perhaps incorrect, is that Akerlof and Kranton primarily discuss identity in terms of prescribed, not proscribed, behaviors. Of course, the requirement to act in a certain way may also be interpreted as a requirement not to act in some other way, but the former is more in line with the presentation in the original paper.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+           \textbf{Response:} Thank you for pointing out this important distinction regarding Akerlof and Kranton's (2000) framework on identity. In thier paper, they discuss both prescribed and proscribed behaviors as integral components of identity formation and maintenance. I did correct the terminology in the manuscript to align more closely with your point. Specifically, I revised the language to emphasize ``prescribed behaviors''. 
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 9. On page 23, I find the statement “While my aim is not to establish a causal effect of bias on self-reported Asian identity, I intend to illustrate a correlation between anti-Asian bias and self-reported identity” extremely odd. Presumably, the goal is to show that the level of bias causes some Asians to switch between an Asian and non-Asian identity. If not, why is the paper interesting? The following sentence maintains that the existence of a correlation suggests possible bias in other measures, but as discussed above, this is only important if anti-Asian bias interacts with characteristics we are comparing between Asians and others.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+           \textbf{Response:} I would like to thank the reviewer for pointing out this important issue regarding the framing of my research objectives. I removed the sentence you highlighted.
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 10. The world would be a better place if economists stopped including the final paragraph of the introduction, which we all skip anyway. The body of the introduction should be a sufficient guide without a paragraph telling us that the conceptual framework is in a section called conceptual framework.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+           \textbf{Response:} I appreciate this feedback and have removed the final paragraph from the introduction to streamline the presentation.
+    \end{spacing}
+
+    \begin{spacing}{\rrquote}
+        \begin{quotation}
+        \textbf{R2: } 11. There is a potentially interesting paper here, but the current version is quite far from that paper. I expect that the paper should focus almost entirely on “Asians” of mixed ancestry. It should begin by showing how those individuals report their race and not simply use an Asian only/everything else dichotomy. It should then explore more fully what determines the choice among the possible responses, rather than just examining the effect of anti- Asian bias. If possible, it should examine whether anti-Asian bias affects “Asians” with different characteristics (education, income, gender) differently It should then return to motivating discussion of bias in the measure of disparities to give us a sense of how important endogenous identity is for our estimates.
+        \end{quotation}
+        \end{spacing}
+        
+        \begin{spacing}{\rrxspc}
+        \textbf{Response:} I am deeply grateful to the reviewer for these comprehensive and incisive comments, which have fundamentally strengthened this paper. The reviewer's suggestions have helped me sharpen the empirical focus, and better connect the findings to their broader implications for measuring disparities. I particularly appreciate the opportunity to address these substantive critiques, as they have guided me toward a more compelling and policy-relevant analysis.
+        
+        I would like to specifically point out that your suggestions have been incorporated throughout the revision in several key ways. First, following your recommendation to focus more intensively on mixed-ancestry individuals, I have expanded the analysis to examine AW and WA families separately, as shown in the new interaction analysis in Figures (\ref{fig:interaction-coefs-aw-wa}) and (\ref{fig:interaction-coefs-thirdgen-grandparent}). These results reveal the heterogeneous effects you anticipated and demonstrate that bias responses vary significantly by family composition and socioeconomic characteristics.
+        
+        Second, I have addressed your call for examining differential effects by incorporating interaction models that show how anti-Asian bias affects individuals differently based on parental education, gender, and income. The adult sample analysis now includes direct income controls and demonstrates the selection effects you highlighted—that higher-income Asian Americans are more likely to maintain Asian identity, leading to potential overestimation of Asian outcomes in standard surveys.
+        
+        Third, I have strengthened the connection between identity reporting patterns and measurement bias in disparity estimates, directly addressing your concern about the policy relevance of endogenous identity choices. The findings now clearly demonstrate how selective identity reporting could systematically bias our understanding of Asian American socioeconomic outcomes.
+        
+        Finally, your suggestion to move beyond the Asian only/everything else dichotomy has informed my discussion of the multinomial results, where I examine the full range of identity choices available to mixed-race individuals. These revisions have transformed the paper from a descriptive analysis of identity patterns into a more theoretically grounded examination of how environmental factors shape strategic identity choices with clear implications for demographic measurement and policy research.
+    \end{spacing}
+
+    \end{refsection}
+
+\clearpage
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PART VII. Online Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{refsection}
+% Reset section numbering
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% Title Page for Appendix
+% special footnote symbols
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begingroup
+\doublespacing
+\centering
+\Large ONLINE APPENDIX \\[1.5em]
+\LARGE \PAPERTITLE \\[0.75em]
+\large
+\AUTHORHADAH\footnote[1]{\AUTHORHADAHINFO}\\[1.0em]
+\endgroup
+\clearpage
+
+% Online appendix
+\input{manuscript_online_appendix}
+
+\newpage
+\pagebreak
+
+% Appendix Bibliography
+\begingroup
+\setstretch{1.0}
+\setlength\bibitemsep{0pt}
+\printbibliography[title=References for Online Appendix]
+\endgroup
+\pagebreak
+\end{refsection}
+
+\end{document}

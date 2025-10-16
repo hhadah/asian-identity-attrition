@@ -1,0 +1,376 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Appendix A, Solution and Estimation Details
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set equation, figure, table indexing
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\setcounter{table}{0}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\setcounter{equation}{0}
+\renewcommand{\thefootnote}{A.\arabic{footnote}}
+\setcounter{footnote}{0}
+\section*{Data} % (fold)
+\label{sec:data-ap}
+
+\begin{figure}[H]
+\centering
+\caption{Examples of an Implicit Association Test}
+\label{fig:iatexamples}
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample1.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample2.png}
+\end{subfigure}
+%Third
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample3.png}
+\end{subfigure}
+% Fourth
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample4.png}
+\end{subfigure}
+%Fifth
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample5.png}
+\end{subfigure}
+\caption*{\footnotesize{Here are a few examples of what a respondent would see on an implicit association test.}}
+\end{figure}
+
+\newpage
+\pagebreak
+
+\section*{Tables} % (fold)
+\label{sec:tabs-ap}
+
+\input{tab49-all_gen_comparison_with_me.tex}
+
+\newpage
+\pagebreak
+\input{tab50-first_gen_comparison_with_me.tex}
+
+\newpage
+\pagebreak
+
+\input{tab51-second_gen_comparison_with_me.tex}
+
+\newpage
+\pagebreak
+
+\input{tab52-third_gen_comparison_with_me.tex}
+
+\newpage
+\pagebreak
+
+\input{tab33-asianiat_regression_tab.tex}
+
+\newpage
+\pagebreak
+
+\input{tab04-regression_tab_bygen_skin.tex}
+
+\newpage
+\pagebreak
+
+\input{tab05-iat_regression_tab_byparent_type.tex}
+
+\newpage
+\pagebreak
+
+\input{tab47-marriage.tex}
+
+\newpage
+\pagebreak
+
+\section*{Figures}\label{appendix:figs}
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Generation at the County Level}
+\label{plot01-regression-gen-county}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{All Generations}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-all.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{First-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{county-skin-iat-regression-first-gen.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{county-skin-iat-regression-second-gen.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Third-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{county-skin-iat-regression-third-gen.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating the effect of county-level anti-Asian implicit bias. I include state and year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is county-level bias. Each panel is the results from the same regression but on different samples that are divided by generation. Standard errors are clustered on the state level. The samples include first-, second-, and third-generation Asian children ages 17 and below who live in intact families. First-generation Asian immigrants are children that were born in a Asian country. Native-born second-generation Asian immigrants are children with at least one parent born in a Asian country. Finally, native-born third-generation Asian immigrants are children with native-born parents and at least one grandparent born in a Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types at the County Level}
+\label{plot01-regression-byparent-county}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation (All Parental Types)}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-all.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-hh.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-hw.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-wh.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating the effect of county-level anti-Asian implicit bias---using the implicit association test (IAT) scores. I include state and year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is county-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in an Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Generation at the MSA Level}
+\label{plot01-regression-gen-msa}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{All Generations}
+\centering
+\includegraphics[width=.9\linewidth]{msa-by-parents-regs-all.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{First-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{msa-skin-iat-regression-first-gen.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{msa-skin-iat-regression-second-gen.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Third-Generation}
+\centering
+\includegraphics[width=.9\linewidth]{msa-skin-iat-regression-third-gen.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating the effect of MSA-level anti-Asian implicit bias. I include state and year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is MSA-level bias. Each panel is the results from the same regression but on different samples that are divided by generation. Standard errors are clustered on the state level. The samples include first-, second-, and third-generation Asian children ages 17 and below who live in intact families. First-generation Asian immigrants are children that were born in a Asian country. Native-born second-generation Asian immigrants are children with at least one parent born in a Asian country. Finally, native-born third-generation Asian immigrants are children with native-born parents and at least one grandparent born in a Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Relationship Between Self-Reported Asian Identity and Bias: By Parental Types at the MSA Level}
+\label{plot01-regression-byparent-msa}
+%First graph
+\begin{subfigure}{.48\textwidth}
+\caption{Second-Generation (All Parental Types)}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-all.png}
+\end{subfigure}
+\centering
+%Second graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-hh.png}
+\end{subfigure}
+%Third Graph
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-hw.png}
+\end{subfigure}
+%Fourth Graph
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=.9\linewidth]{county-by-parents-regs-wh.png}
+\end{subfigure}
+\caption*{\footnotesize{I show four panels of estimating the effect of county-level anti-Asian implicit bias---using the implicit association test (IAT) scores. I include state and year fixed effects with controls for sex, quartic age, and parental education. The dependent variable is self-reported Asian identity and the independent variable is county-level bias. Each panel results from the same regression but on different samples divided by parental types. Standard errors are clustered on the state level. The samples include second-generation Asian children ages 17 and below who live in intact families. Native-born second-generation Asian immigrant children with at least one parent born in an Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+% =========================
+% 42: Interaction Coefficient Plots (AW/WA)
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Mixed Parental Types Among Adults}
+\label{fig:interaction-coefs-aw-wa}
+
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_AW.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_WA.png}
+\end{subfigure}
+
+\caption*{\footnotesize{I show interaction coefficients from estimating equation (\ref{eq:identity_reg_bias}) with interaction terms for gender and parental education. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by mixed parental types. Standard errors are clustered on the state level. The samples include second-generation Asian individuals ages 18 and above with mixed-race parentage. Native-born second-generation Asian immigrant individuals with one parent born in an Asian country and one parent born outside of Asia.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+% =========================
+% 43: Interaction Coefficient Plots (Third Generation by Grandparent Type)
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Asian Grandparent Count Among Third Generation}
+\label{fig:interaction-coefs-thirdgen-grandparent}
+
+\begin{subfigure}{.45\textwidth}
+\caption{One Asian Grandparent}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_OneAsian.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+\caption{Two Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_TwoAsian.png}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}{.45\textwidth}
+\caption{Three Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{interaction_coefficients_ThreeAsian.png}
+\end{subfigure}
+
+\caption*{\footnotesize{I show interaction coefficients from estimating equation (\ref{eq:identity_reg_bias}) with interaction terms for gender and parental education on third-generation samples. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by the number of Asian grandparents. Standard errors are clustered on the state level. The samples include third-generation Asian individuals with varying degrees of Asian ancestry through grandparents. Native-born third-generation individuals with at least one grandparent born in an Asian country.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \caption{Scatter Plot of Proportion Subjectively Asian on Bias}
+    \label{scatter-plot-1}
+    \begin{subfigure}{.9\textwidth}
+    \caption{Year < 2015}
+    \centering
+    \includegraphics[width=.9\linewidth]{scatter-plot-bias-Asian-less2015.png}
+    \end{subfigure}
+    \centering
+    %Second graph
+    \begin{subfigure}{.9\textwidth}
+    \caption{Year $\geq$ 2015}
+    \centering
+    \includegraphics[width=.9\linewidth]{scatter-plot-bias-Asian-great2015.png}
+    \end{subfigure}
+    \caption*{\footnotesize{Here are two scatter plots showing the relationship between bias and subjective Asian population in a state. Each dot represents a state in a certain year. Percent subjectively Asian = $\frac{\# \text{Asian}}{\text{Population}}$ \\
+    \emph{Source.} 2004--2021 Current Population Survey.}}
+    \end{figure}
+
+    
+\subsection*{Using \textcite{lubotskyInterpretationRegressionsMultiple2006} to Construct Bias Index} % (fold)
+\label{sub:lw-bias}
+In \textcite{lubotskyInterpretationRegressionsMultiple2006}, the authors propose a method to reduce measurement error in proxies by constructing a composite index. The Lubotsky-Wittenberg (henceforth LW) consider a model where a covariate is unobserved. Therefore, they use two proxies in its place, which will have measurement error. Thus, the LW method allows researchers to use two proxies that are error-ridden. 
+
+LW consider a setup with the following model:
+
+\begin{align*}
+    y &= \alpha + \beta x^* + \epsilon \\
+    x_1 &= x^* + \mu_1 \\
+    x_2 &= x^* + \mu_2
+\end{align*}
+
+Where \(x_{i}^{*}\) is the unobserved covariate, \(x_{1i}\) and \(x_{2i}\) are the proxies, and the measurement errors \(\mu_1\) and \(\mu_2\) are assumed to be classical and allowed to covary. The covariance matrix of the errors is given by:
+
+\[
+\Sigma = \begin{bmatrix}
+    \sigma_1^2 & \sigma_{12} \\
+    \sigma_{12} & \sigma_2^2
+\end{bmatrix}
+\]
+
+Replacing the unobserved \(x^*\) with \(x_1\) or \(x_2\) yields the following expectations of the OLS estimates:
+
+\[
+\mathbb{E} \left[ \hat{\beta}_1 \right] = \beta \frac{\sigma_{x^*}^2}{\sigma_{x^*}^2 + \sigma_1^2} \quad ; \quad \mathbb{E} \left[ \hat{\beta}_2 \right] = \beta \frac{\sigma_{x^*}^2}{\sigma_{x^*}^2 + \sigma_2^2}
+\]
+
+Both estimates are biased; the one with the smaller variance of the measurement error being less biased.
+
+LW then propose defining a new proxy \(x_3\) as a weighted average of \(x_1\) and \(x_2\):
+
+\[
+x_3 = \lambda x_1 + (1 - \lambda) x_2
+\]
+
+To minimize the attenuation bias in the OLS estimate of \(\beta\), they solve for the optimal value of \(\lambda\):
+
+\[
+\lambda^* = \frac{\sigma_2^2 - \sigma_{12}}{\sigma_1^2 + \sigma_2^2 - 2\sigma_{12}}
+\]
+
+This optimal value of \(\lambda\) is not directly useful because the variances of the measurement errors and their covariance are unobserved. However, if you estimate a bivariate regression using OLS (i.e., regress \(y\) on \(x_1\) and \(x_2\)), then the expectation of the sum of the two coefficient estimates is identical to the expectation of the OLS coefficient estimate on \(x_3\) in a univariate regression using the optimal choice of \(\lambda\):
+
+\[
+\mathbb{E} \left[ \hat{\beta}_1 + \hat{\beta}_2 \right] = \mathbb{E} \left[ \hat{\beta}_{x_3} \right]
+\]
+
+Thus, OLS produces an estimate of \(\beta\) with the least bias by optimally combining the information in \(x_1\) and \(x_2\).

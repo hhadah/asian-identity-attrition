@@ -1,0 +1,29 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'submit_journal.blg'
+[37] biber-darwin:340> INFO - === Sat Oct 11, 2025, 17:15:10
+[48] Biber.pm:420> INFO - Reading 'submit_journal.bcf'
+[142] Biber.pm:994> INFO - Found 45 citekeys in bib section 0
+[143] Biber.pm:994> INFO - Found 0 citekeys in bib section 1
+[143] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[143] Biber.pm:994> INFO - Found 1 citekeys in bib section 2
+[143] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[156] Biber.pm:4463> INFO - Processing section 0
+[161] Biber.pm:4654> INFO - Looking for bibtex file 'bib/AttitudesPaper.bib' for section 0
+[177] bibtex.pm:1713> INFO - LaTeX decoding ...
+[365] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/AttitudesPaper.bib'
+[556] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[557] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[557] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[557] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[557] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[589] Biber.pm:4463> INFO - Processing section 2
+[589] Biber.pm:4654> INFO - Looking for bibtex file 'bib/AttitudesPaper.bib' for section 2
+[597] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[597] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[597] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[597] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[597] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[598] bbl.pm:676> INFO - Writing 'submit_journal.bbl' with encoding 'UTF-8'
+[613] bbl.pm:779> INFO - Output to submit_journal.bbl
+[613] Biber.pm:131> WARN - legacy year field 'forthcoming' in entry 'hadah2024hispanicidentity' is not an integer - this will probably not sort properly.
+[613] Biber.pm:133> INFO - WARNINGS: 1
