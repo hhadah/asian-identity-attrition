@@ -33,8 +33,8 @@ options(modelsummary_factory_latex = "kableExtra")
 
 # main scripts
 source(file.path(programs,"01-packages-wds.r")) # set up package
-# source(file.path(programs,"02-clean-implicit-project-asian.r")) # clean asian implicit data
-# source(file.path(programs,"03-merge-asian-iat-cps.r")) # merge iat and cps
+source(file.path(programs,"02-clean-implicit-project-asian.r")) # clean asian implicit data
+source(file.path(programs,"03-merge-asian-iat-cps.r")) # merge iat and cps
 # source(file.path(programs,"04-table-one-summary-stats.r")) # summary stats of sample
 # source(file.path(programs,"05-table-two-observations-by-gen.r")) # ethnic attrition of sample
 # source(file.path(programs,"06-figure-two-skin-iat-plots.r")) # figure of iat and asian identity
@@ -68,7 +68,7 @@ source(file.path(programs,"01-packages-wds.r")) # set up package
 # source(file.path(programs,"41-multinomial-model-optimized-adults.R")) # adults only
 # source(file.path(programs,"42-interaction-iat-byparent-plot.R")) # teens only
 # source(file.path(programs,"43-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # kids only
-source(file.path(programs,"44-bootstrap-logit.r")) # 
+# source(file.path(programs,"44-bootstrap-logit.r")) # 
 # source(file.path(programs,"bootstrap-functions.r")) # 
 
 ### summary stats
