@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  16 OCT 2025 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  11 NOV 2025 09:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -991,7 +991,11 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-No file submit_preprint.aux.
+(./submit_preprint.aux
+
+LaTeX Warning: Label `sub:lw-bias' multiply defined.
+
+)
 \openout1 = `submit_preprint.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -1014,7 +1018,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 Package biblatex Info: Trying to load language 'english' -> 'cms-american'...
 Package biblatex Info: ... file 'cms-american.lbx' found.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
 File: cms-american.lbx 2022/07/02 v 3.18 biblatex localization
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
@@ -1069,6 +1073,7 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 9.
+ (./submit_preprint.out) (./submit_preprint.out)
 \@outlinefile=\write5
 \openout5 = `submit_preprint.out'.
 
@@ -1170,10 +1175,6 @@ Overfull \hbox (3.7869pt too wide) in paragraph at lines 19--20
 
 
 [2]
-
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 27.
-
-
 Overfull \hbox (4.24289pt too wide) in paragraph at lines 27--28
 []\T1/ppl/m/n/12 This re-search con-tributes to mul-ti-ple bod-ies of schol-arly lit-er-a-ture in eco-nomics.
  []
@@ -1203,30 +1204,10 @@ Overfull \hbox (6.51474pt too wide) in paragraph at lines 39--40
 
 [6]
 
-LaTeX Warning: Reference `fig:diag' on page 7 undefined on input line 83.
-
-
-
 [7]
-
-LaTeX Warning: Reference `tab:sumstat1' on page 8 undefined on input line 87.
-
-
-LaTeX Warning: Reference `tab:sumstat-adults' on page 8 undefined on input line 87.
-
-
 Overfull \hbox (2.97177pt too wide) in paragraph at lines 87--88
 []\T1/ppl/m/n/12 Note that while the an-ces-try mea-sure pro-vides an ob-jec-tive as-sess-ment of Asian
  []
-
-
-LaTeX Warning: Reference `tab:hispbyproxy' on page 8 undefined on input line 91.
-
-
-LaTeX Warning: Reference `tab:hispbygen' on page 8 undefined on input line 91.
-
-
-LaTeX Warning: Reference `tab:hispbygen-adults' on page 8 undefined on input line 91.
 
 
 Overfull \hbox (8.1918pt too wide) in paragraph at lines 91--92
@@ -1236,10 +1217,6 @@ Overfull \hbox (8.1918pt too wide) in paragraph at lines 91--92
 
 
 [8]
-
-LaTeX Warning: Reference `tab:sumstat1' on page 9 undefined on input line 93.
-
-
 Overfull \hbox (3.76373pt too wide) in paragraph at lines 93--94
 []\T1/ppl/m/n/12 The over-all sam-ple com-prises 49% fe-males, with 65% self-reporting Asian racial
  []
@@ -1253,15 +1230,6 @@ Overfull \hbox (15.82648pt too wide) in paragraph at lines 95--97
 Overfull \hbox (0.74278pt too wide) in paragraph at lines 102--103
 \T1/ppl/m/n/12 (2) ob-jec-tively White pa-ter-nal grandfather-Asian pa-ter-nal grandmother-Asian ma-
  []
-
-
-LaTeX Warning: Reference `tab:hispbygen' on page 9 undefined on input line 104.
-
-
-LaTeX Warning: Reference `tab:sumstat-adults' on page 9 undefined on input line 104.
-
-
-LaTeX Warning: Reference `fig:iatexamples' on page 9 undefined on input line 108.
 
 
 Overfull \hbox (9.00652pt too wide) in paragraph at lines 108--109
@@ -1293,53 +1261,13 @@ Overfull \hbox (13.28268pt too wide) in paragraph at lines 116--117
  []
 
 
-LaTeX Warning: Reference `sub:lw-bias' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Reference `fig:skiniat' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Reference `fig:Asian-twostates' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Reference `fig:skiniat-maps' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Reference `fig:iat-map-all' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Reference `tab:hispbygen' on page 11 undefined on input line 122.
-
-
-LaTeX Warning: Reference `tab:hispbygen-adults' on page 11 undefined on input line 122.
-
-
-LaTeX Warning: Reference `fig:histogram-all' on page 11 undefined on input line 124.
-
-
-LaTeX Warning: Reference `fig:histogram-thirdgen' on page 11 undefined on input line 124.
-
-
-LaTeX Warning: Reference `fig:histogram-all' on page 11 undefined on input line 124.
-
-
-LaTeX Warning: Reference `fig:histogram-firstgen' on page 11 undefined on input line 124.
-
-
-LaTeX Warning: Reference `fig:histogram-secondgen' on page 11 undefined on input line 124.
-
-
-Overfull \hbox (7.1142pt too wide) in paragraph at lines 124--125
-\T1/ppl/m/n/12 only iden-tity (94%, Fig-ure []). Fam-ily struc-ture strongly pre-dicts second-generation
+Overfull \hbox (12.89925pt too wide) in paragraph at lines 124--125
+[][]\T1/ppl/m/n/12 5[][]), 63% re-port Asian only iden-tity, 15% White only, and 15% Asian and White/Pacific
  []
 
 
 
 [11]
-
-LaTeX Warning: Reference `fig:histogram-thirdgen' on page 12 undefined on input line 126.
-
-
 Overfull \hbox (8.77937pt too wide) in paragraph at lines 128--129
 []\T1/ppl/m/n/12 These pat-terns demon-strate that racial iden-tity be-comes in-creas-ingly fluid across
  []
@@ -1359,89 +1287,27 @@ Overfull \hbox (8.49416pt too wide) in paragraph at lines 159--160
  []
 
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `plot01-regression-gen' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `plot01-regression-gen-county' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `plot01-regression-byparent-county' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `plot01-regression-gen-msa' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `plot01-regression-byparent-msa' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `regtab-all-gen' on page 14 undefined on input line 169.
-
-
-LaTeX Warning: Reference `regtab-third-gen' on page 14 undefined on input line 169.
-
-
 
 [14]
 
-LaTeX Warning: Reference `plot01-regression-gen-adults' on page 15 undefined on input line 171.
-
-
-LaTeX Warning: Reference `plot01-regression-byparent' on page 15 undefined on input line 173.
-
-
-LaTeX Warning: Reference `plot01-regression-byparent-adults' on page 15 undefined on input line 175.
-
-
+[15]
 Overfull \hbox (7.91524pt too wide) in paragraph at lines 175--176
 []\T1/ppl/m/n/12 Adult second-generation re-sults show even larger het-ero-gene-ity by fam-ily struc-
  []
 
 
-
-[15]
-
-LaTeX Warning: Reference `regtab-bygrandparents' on page 16 undefined on input line 177.
-
-
-LaTeX Warning: Reference `fig:interaction-coefs-aw-wa' on page 16 undefined on input line 177.
+Overfull \hbox (10.97585pt too wide) in paragraph at lines 177--178
+[]\T1/ppl/m/n/12 Third-generation re-sults by num-ber of Asian grand-par-ents (Ta-ble [][]6[][]) show mostly
+ []
 
 
-LaTeX Warning: Reference `fig:interaction-coefs-thirdgen-grandparent' on page 16 undefined on input line 177.
-
-
-LaTeX Warning: Reference `fig:pp-all-gen' on page 16 undefined on input line 184.
+Overfull \hbox (9.08217pt too wide) in paragraph at lines 177--178
+\T1/ppl/m/n/12 sta-tis-ti-cally in-signif-i-cant bias ef-fects, ex-cept among chil-dren with three Asian grand-
+ []
 
 
 
 [16]
-
-LaTeX Warning: Reference `fig:pp-second-aw' on page 17 undefined on input line 186.
-
-
-LaTeX Warning: Reference `fig:pp-second-wa' on page 17 undefined on input line 186.
-
-
-LaTeX Warning: Reference `fig:pp-secondgen-adults-aw-wa' on page 17 undefined on input line 188.
-
-
-LaTeX Warning: Reference `subfig:pp-secgen-aw-bias' on page 17 undefined on input line 188.
-
-
-LaTeX Warning: Reference `subfig:pp-secgen-wa-bias' on page 17 undefined on input line 188.
-
-
-LaTeX Warning: Reference `fig:pp-third-one' on page 17 undefined on input line 190.
-
-
-LaTeX Warning: Reference `fig:pp-third-two' on page 17 undefined on input line 190.
-
-
-LaTeX Warning: Reference `fig:pp-third-three' on page 17 undefined on input line 190.
-
-
 Overfull \hbox (8.36101pt too wide) in paragraph at lines 190--191
 []\T1/ppl/b/n/12 Third-Generation Sub-sam-ple by Grand-par-ent Com-po-si-tion. \T1/ppl/m/n/12 Third-generation
  []
@@ -1460,34 +1326,14 @@ Overfull \hbox (0.85127pt too wide) in paragraph at lines 192--193
 
 [17]
 
-LaTeX Warning: Reference `eq:inter-interracial' on page 18 undefined on input line 207.
-
-
-LaTeX Warning: Reference `regtab-logit-02' on page 18 undefined on input line 207.
-
-
-LaTeX Warning: Reference `eq:migration-3' on page 18 undefined on input line 220.
-
-
-LaTeX Warning: Reference `eq:migration-4' on page 18 undefined on input line 220.
-
-
+[18]
 Overfull \hbox (23.23366pt too wide) in paragraph at lines 220--221
 \T1/ppl/m/n/12 view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 lives in a state dif-fer-ent from their birth state, and $\U/zeur/m/n/12 BirthPlaceMigration[]$
  []
 
 
-
-[18]
-
-LaTeX Warning: Reference `eq:migration-3' on page 19 undefined on input line 222.
-
-
-LaTeX Warning: Reference `eq:migration-4' on page 19 undefined on input line 222.
-
-
-Overfull \hbox (59.51225pt too wide) in paragraph at lines 222--223
-\T1/ppl/m/n/12 re-la-tion-ships be-tween av-er-age bias at in-ter-view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 and $\U/zeur/m/n/12 BirthPlaceMigration[]$\T1/ppl/m/n/12 .
+Overfull \hbox (49.24034pt too wide) in paragraph at lines 222--223
+\T1/ppl/m/n/12 la-tion-ships be-tween av-er-age bias at in-ter-view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 and $\U/zeur/m/n/12 BirthPlaceMigration[]$\T1/ppl/m/n/12 .
  []
 
 
@@ -1496,46 +1342,15 @@ Overfull \hbox (14.07767pt too wide) in paragraph at lines 232--233
  []
 
 
-LaTeX Warning: Reference `eq:migration-3' on page 19 undefined on input line 234.
-
-
-LaTeX Warning: Reference `eq:migration-4' on page 19 undefined on input line 234.
-
-
-LaTeX Warning: Reference `eq:migration-5' on page 19 undefined on input line 234.
-
-
-LaTeX Warning: Reference `regtab-mig-01' on page 19 undefined on input line 234.
-
-
-LaTeX Warning: Reference `tab:hispbyproxy' on page 19 undefined on input line 238.
-
-
-LaTeX Warning: Reference `tab:hispbygen-adults' on page 19 undefined on input line 238.
-
-
-LaTeX Warning: Reference `plot01-regression-gen-adults' on page 19 undefined on input line 238.
-
-
-LaTeX Warning: Reference `plot01-regression-byparent-adults' on page 19 undefined on input line 238.
-
-
 
 [19]
 
-LaTeX Warning: Reference `scatter-plot-1' on page 20 undefined on input line 240.
-
-
-LaTeX Warning: Reference `regtab-mig-01' on page 20 undefined on input line 242.
-
-
+[20]
 Overfull \hbox (2.20256pt too wide) in paragraph at lines 248--249
 []\T1/ppl/m/n/12 I find that in-di-vid-u-als with Asian an-ces-try are sig-nif-i-cantly less likely to racially
  []
 
 
-
-[20]
 Overfull \hbox (6.02287pt too wide) in paragraph at lines 250--251
 \T1/ppl/m/n/12 more pro-nounced pat-terns, with second-generation adults from White father-Asian
  []
@@ -1620,46 +1435,24 @@ Overfull \hbox (22.87082pt too wide) in paragraph at lines 6--22
 
 )
 
-[32] (./tab45-iat_regression_tab_bygrandparent_type.tex
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 33 undefined on input line 39.
-
-
-Underfull \hbox (badness 1762) in paragraph at lines 39--39
-[]\T1/ppl/m/n/10 Each col-umn is an es-ti-ma-tion of equa-tion ([]) re-stricted to third-
- []
-
-)
+[32] (./tab45-iat_regression_tab_bygrandparent_type.tex)
 
 [33] (./tab46-iat-migration-tab.tex)
-Runaway argument?
-{ ======= \resizebox {0.75\textwidth }{!}{ >>>>>>> 316a54059d1a2890f8\ETC.
-./manuscript_tab_fig.tex:36: File ended while scanning use of \Gscale@box@dd.
-<inserted text> 
-                \par 
-l.36 \input{tab46-iat-migration-tab.tex}
-                                        
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
 
-(./tab41a-marriage.tex
+[34] (./tab41a-marriage.tex)
 
-LaTeX Warning: Reference `eq:inter-interracial' on page 34 undefined on input line 26.
-
-)
-<diag.png, id=420, 673.51625pt x 492.84125pt>
+[35]
+<diag.png, id=566, 673.51625pt x 492.84125pt>
 File: diag.png Graphic file (type png)
 <use diag.png>
 Package pdftex.def Info: diag.png  used on input line 49.
 (pdftex.def)             Requested size: 430.01096pt x 256.08339pt.
-<Bias_twostates.png, id=422, 722.7pt x 289.08pt>
+<Bias_twostates.png, id=568, 722.7pt x 289.08pt>
 File: Bias_twostates.png Graphic file (type png)
 <use Bias_twostates.png>
 Package pdftex.def Info: Bias_twostates.png  used on input line 63.
 (pdftex.def)             Requested size: 348.299pt x 139.32143pt.
-<Bias_twostates-asian.png, id=423, 722.7pt x 289.08pt>
+<Bias_twostates-asian.png, id=569, 722.7pt x 289.08pt>
 File: Bias_twostates-asian.png Graphic file (type png)
 <use Bias_twostates-asian.png>
 Package pdftex.def Info: Bias_twostates-asian.png  used on input line 70.
@@ -1669,54 +1462,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--74
 [][]
  []
 
-<2004skinmap.png, id=424, 722.7pt x 361.35pt>
+
+
+[36 <./diag.png>]
+
+[37 <./Bias_twostates.png> <./Bias_twostates-asian.png>]
+<2004skinmap.png, id=580, 722.7pt x 361.35pt>
 File: 2004skinmap.png Graphic file (type png)
 <use 2004skinmap.png>
 Package pdftex.def Info: 2004skinmap.png  used on input line 90.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2008skinmap.png, id=425, 722.7pt x 361.35pt>
+<2008skinmap.png, id=581, 722.7pt x 361.35pt>
 File: 2008skinmap.png Graphic file (type png)
 <use 2008skinmap.png>
 Package pdftex.def Info: 2008skinmap.png  used on input line 98.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2012skinmap.png, id=426, 722.7pt x 361.35pt>
+<2012skinmap.png, id=582, 722.7pt x 361.35pt>
 File: 2012skinmap.png Graphic file (type png)
 <use 2012skinmap.png>
 Package pdftex.def Info: 2012skinmap.png  used on input line 106.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2016skinmap.png, id=427, 722.7pt x 361.35pt>
+<2016skinmap.png, id=583, 722.7pt x 361.35pt>
 File: 2016skinmap.png Graphic file (type png)
 <use 2016skinmap.png>
 Package pdftex.def Info: 2016skinmap.png  used on input line 114.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<Average_Skinmap.png, id=430, 722.7pt x 361.35pt>
+
+
+[38 <./2004skinmap.png> <./2008skinmap.png> <./2012skinmap.png> <./2016skinmap.png>]
+<Average_Skinmap.png, id=590, 722.7pt x 361.35pt>
 File: Average_Skinmap.png Graphic file (type png)
 <use Average_Skinmap.png>
 Package pdftex.def Info: Average_Skinmap.png  used on input line 128.
 (pdftex.def)             Requested size: 430.00462pt x 215.00316pt.
-<histogram_asian_american_race_aggregated.png, id=433, 722.7pt x 433.62pt>
+
+
+[39 <./Average_Skinmap.png>]
+<histogram_asian_american_race_aggregated.png, id=597, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_aggregated.png Graphic file (type png)
 <use histogram_asian_american_race_aggregated.png>
 Package pdftex.def Info: histogram_asian_american_race_aggregated.png  used on input line 140.
 (pdftex.def)             Requested size: 430.00462pt x 258.0038pt.
-<histogram_asian_american_race_firstgen.png, id=438, 722.7pt x 433.62pt>
+
+
+[40 <./histogram_asian_american_race_aggregated.png>]
+<histogram_asian_american_race_firstgen.png, id=606, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_firstgen.png Graphic file (type png)
 <use histogram_asian_american_race_firstgen.png>
 Package pdftex.def Info: histogram_asian_american_race_firstgen.png  used on input line 157.
 (pdftex.def)             Requested size: 430.00462pt x 258.0038pt.
 
-./manuscript_tab_fig.tex:174: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.174 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<histogram_asian_american_race_secondgen.png, id=443, 722.7pt x 433.62pt>
+[41 <./histogram_asian_american_race_firstgen.png>]
+<histogram_asian_american_race_secondgen.png, id=615, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen.png>
 Package pdftex.def Info: histogram_asian_american_race_secondgen.png  used on input line 183.
@@ -1726,7 +1524,7 @@ Underfull \hbox (badness 1953) in paragraph at lines 187--187
 []\T1/ppl/m/n/10.95 (b) |Sec-ond Gen-er-a-tion: Asian Fathers-
  []
 
-<histogram_asian_american_race_secondgen_AA.png, id=444, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen_AA.png, id=616, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen_AA.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen_AA.png>
 Package pdftex.def Info: histogram_asian_american_race_secondgen_AA.png  used on input line 189.
@@ -1736,7 +1534,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 196--196
 []\T1/ppl/m/n/10.95 (c) |Sec-ond Gen-er-a-tion: Asian Fathers-
  []
 
-<histogram_asian_american_race_secondgen_AW.png, id=445, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen_AW.png, id=617, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen_AW.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen_AW.png>
 Package pdftex.def Info: histogram_asian_american_race_secondgen_AW.png  used on input line 198.
@@ -1746,638 +1544,415 @@ Underfull \hbox (badness 1521) in paragraph at lines 202--202
 []\T1/ppl/m/n/10.95 (d) |Sec-ond Gen-er-a-tion: White Fathers-
  []
 
-<histogram_asian_american_race_secondgen_WA.png, id=446, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen_WA.png, id=618, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen_WA.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen_WA.png>
 Package pdftex.def Info: histogram_asian_american_race_secondgen_WA.png  used on input line 204.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
 
-./manuscript_tab_fig.tex:227: LaTeX Error: Not in outer par mode.
+LaTeX Warning: Float too large for page by 32.78012pt on input line 217.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.227 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
-<histogram_asian_american_race_thirdgen.png, id=451, 722.7pt x 433.62pt>
+
+[42 <./histogram_asian_american_race_secondgen.png> <./histogram_asian_american_race_secondgen_AA.png> <./histogram_asian_american_race_secondgen_AW.png> <./histogram_asian_american_race_secondgen_WA.png>]
+<histogram_asian_american_race_thirdgen.png, id=628, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_thirdgen.png Graphic file (type png)
 <use histogram_asian_american_race_thirdgen.png>
 Package pdftex.def Info: histogram_asian_american_race_thirdgen.png  used on input line 236.
 (pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
-<histogram_asian_american_race_thirdgen_oneasiangran.png, id=452, 722.7pt x 433.62pt>
+<histogram_asian_american_race_thirdgen_oneasiangran.png, id=629, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_thirdgen_oneasiangran.png Graphic file (type png)
 <use histogram_asian_american_race_thirdgen_oneasiangran.png>
 Package pdftex.def Info: histogram_asian_american_race_thirdgen_oneasiangran.png  used on input line 242.
 (pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
-<histogram_asian_american_race_thirdgen_twoasiangran.png, id=453, 722.7pt x 433.62pt>
+<histogram_asian_american_race_thirdgen_twoasiangran.png, id=630, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_thirdgen_twoasiangran.png Graphic file (type png)
 <use histogram_asian_american_race_thirdgen_twoasiangran.png>
 Package pdftex.def Info: histogram_asian_american_race_thirdgen_twoasiangran.png  used on input line 248.
 (pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
-<histogram_asian_american_race_thirdgen_threeasiangran.png, id=454, 722.7pt x 433.62pt>
+<histogram_asian_american_race_thirdgen_threeasiangran.png, id=631, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_thirdgen_threeasiangran.png Graphic file (type png)
 <use histogram_asian_american_race_thirdgen_threeasiangran.png>
 Package pdftex.def Info: histogram_asian_american_race_thirdgen_threeasiangran.png  used on input line 258.
 (pdftex.def)             Requested size: 171.99922pt x 103.19754pt.
-<histogram_asian_american_race_thirdgen_fourasiangran.png, id=455, 722.7pt x 433.62pt>
+<histogram_asian_american_race_thirdgen_fourasiangran.png, id=632, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_thirdgen_fourasiangran.png Graphic file (type png)
 <use histogram_asian_american_race_thirdgen_fourasiangran.png>
 Package pdftex.def Info: histogram_asian_american_race_thirdgen_fourasiangran.png  used on input line 264.
 (pdftex.def)             Requested size: 171.99922pt x 103.19754pt.
 
-./manuscript_tab_fig.tex:286: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.286 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[43
 
-<skin-iat-regression-all-gens.png, id=460, 722.7pt x 289.08pt>
+
+
+ <./histogram_asian_american_race_thirdgen.png> <./histogram_asian_american_race_thirdgen_oneasiangran.png> <./histogram_asian_american_race_thirdgen_twoasiangran.png> <./histogram_asian_american_race_thirdgen_threeasiangran.png> <./histogram_asian_american_race_thirdgen_fourasiangran.png>]
+<skin-iat-regression-all-gens.png, id=642, 722.7pt x 289.08pt>
 File: skin-iat-regression-all-gens.png Graphic file (type png)
 <use skin-iat-regression-all-gens.png>
 Package pdftex.def Info: skin-iat-regression-all-gens.png  used on input line 294.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-first-gen.png, id=461, 722.7pt x 289.08pt>
+<skin-iat-regression-first-gen.png, id=643, 722.7pt x 289.08pt>
 File: skin-iat-regression-first-gen.png Graphic file (type png)
 <use skin-iat-regression-first-gen.png>
 Package pdftex.def Info: skin-iat-regression-first-gen.png  used on input line 301.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-second-gen.png, id=462, 722.7pt x 289.08pt>
+<skin-iat-regression-second-gen.png, id=644, 722.7pt x 289.08pt>
 File: skin-iat-regression-second-gen.png Graphic file (type png)
 <use skin-iat-regression-second-gen.png>
 Package pdftex.def Info: skin-iat-regression-second-gen.png  used on input line 307.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-third-gen.png, id=463, 722.7pt x 289.08pt>
+<skin-iat-regression-third-gen.png, id=645, 722.7pt x 289.08pt>
 File: skin-iat-regression-third-gen.png Graphic file (type png)
 <use skin-iat-regression-third-gen.png>
 Package pdftex.def Info: skin-iat-regression-third-gen.png  used on input line 313.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 315.
 
+[44
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 315.
-
-
-./manuscript_tab_fig.tex:324: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.324 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<skin-iat-regression-all-gens-adults.png, id=464, 722.7pt x 289.08pt>
+ <./skin-iat-regression-all-gens.png> <./skin-iat-regression-first-gen.png> <./skin-iat-regression-second-gen.png> <./skin-iat-regression-third-gen.png>]
+<skin-iat-regression-all-gens-adults.png, id=652, 722.7pt x 289.08pt>
 File: skin-iat-regression-all-gens-adults.png Graphic file (type png)
 <use skin-iat-regression-all-gens-adults.png>
 Package pdftex.def Info: skin-iat-regression-all-gens-adults.png  used on input line 332.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-first-gen-adults.png, id=465, 722.7pt x 289.08pt>
+<skin-iat-regression-first-gen-adults.png, id=653, 722.7pt x 289.08pt>
 File: skin-iat-regression-first-gen-adults.png Graphic file (type png)
 <use skin-iat-regression-first-gen-adults.png>
 Package pdftex.def Info: skin-iat-regression-first-gen-adults.png  used on input line 339.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-second-gen-adults.png, id=466, 722.7pt x 289.08pt>
+<skin-iat-regression-second-gen-adults.png, id=654, 722.7pt x 289.08pt>
 File: skin-iat-regression-second-gen-adults.png Graphic file (type png)
 <use skin-iat-regression-second-gen-adults.png>
 Package pdftex.def Info: skin-iat-regression-second-gen-adults.png  used on input line 345.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 348.
 
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 348.
-
-
-./manuscript_tab_fig.tex:357: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.357 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<by-parents-regs-all.png, id=467, 722.7pt x 289.08pt>
+[45 <./skin-iat-regression-all-gens-adults.png> <./skin-iat-regression-first-gen-adults.png> <./skin-iat-regression-second-gen-adults.png>]
+<by-parents-regs-all.png, id=661, 722.7pt x 289.08pt>
 File: by-parents-regs-all.png Graphic file (type png)
 <use by-parents-regs-all.png>
 Package pdftex.def Info: by-parents-regs-all.png  used on input line 365.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hh.png, id=468, 722.7pt x 289.08pt>
+<by-parents-regs-hh.png, id=662, 722.7pt x 289.08pt>
 File: by-parents-regs-hh.png Graphic file (type png)
 <use by-parents-regs-hh.png>
 Package pdftex.def Info: by-parents-regs-hh.png  used on input line 372.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hw.png, id=469, 722.7pt x 289.08pt>
+<by-parents-regs-hw.png, id=663, 722.7pt x 289.08pt>
 File: by-parents-regs-hw.png Graphic file (type png)
 <use by-parents-regs-hw.png>
 Package pdftex.def Info: by-parents-regs-hw.png  used on input line 378.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-wh.png, id=470, 722.7pt x 289.08pt>
+<by-parents-regs-wh.png, id=664, 722.7pt x 289.08pt>
 File: by-parents-regs-wh.png Graphic file (type png)
 <use by-parents-regs-wh.png>
 Package pdftex.def Info: by-parents-regs-wh.png  used on input line 384.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 386.
 
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 386.
-
-
-./manuscript_tab_fig.tex:394: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.394 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<by-parents-regs-all-adults.png, id=471, 722.7pt x 289.08pt>
+[46 <./by-parents-regs-all.png> <./by-parents-regs-hh.png> <./by-parents-regs-hw.png> <./by-parents-regs-wh.png>]
+<by-parents-regs-all-adults.png, id=671, 722.7pt x 289.08pt>
 File: by-parents-regs-all-adults.png Graphic file (type png)
 <use by-parents-regs-all-adults.png>
 Package pdftex.def Info: by-parents-regs-all-adults.png  used on input line 402.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hh-adults.png, id=472, 722.7pt x 289.08pt>
+<by-parents-regs-hh-adults.png, id=672, 722.7pt x 289.08pt>
 File: by-parents-regs-hh-adults.png Graphic file (type png)
 <use by-parents-regs-hh-adults.png>
 Package pdftex.def Info: by-parents-regs-hh-adults.png  used on input line 409.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hw-adults.png, id=473, 722.7pt x 289.08pt>
+<by-parents-regs-hw-adults.png, id=673, 722.7pt x 289.08pt>
 File: by-parents-regs-hw-adults.png Graphic file (type png)
 <use by-parents-regs-hw-adults.png>
 Package pdftex.def Info: by-parents-regs-hw-adults.png  used on input line 415.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-wh-adults.png, id=474, 722.7pt x 289.08pt>
+<by-parents-regs-wh-adults.png, id=674, 722.7pt x 289.08pt>
 File: by-parents-regs-wh-adults.png Graphic file (type png)
 <use by-parents-regs-wh-adults.png>
 Package pdftex.def Info: by-parents-regs-wh-adults.png  used on input line 421.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 423.
 
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 423.
-
-
-./manuscript_tab_fig.tex:431: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.431 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<simple_pp_value_all.png, id=475, 578.16pt x 433.62pt>
-File: simple_pp_value_all.png Graphic file (type png)
-<use simple_pp_value_all.png>
-Package pdftex.def Info: simple_pp_value_all.png  used on input line 439.
+[47 <./by-parents-regs-all-adults.png> <./by-parents-regs-hh-adults.png> <./by-parents-regs-hw-adults.png> <./by-parents-regs-wh-adults.png>]
+<boot_pp_all_generations_value.png, id=681, 578.16pt x 433.62pt>
+File: boot_pp_all_generations_value.png Graphic file (type png)
+<use boot_pp_all_generations_value.png>
+Package pdftex.def Info: boot_pp_all_generations_value.png  used on input line 439.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_Female_all.png, id=476, 578.16pt x 433.62pt>
-File: simple_pp_Female_all.png Graphic file (type png)
-<use simple_pp_Female_all.png>
-Package pdftex.def Info: simple_pp_Female_all.png  used on input line 445.
+<boot_pp_all_generations_Female.png, id=682, 578.16pt x 433.62pt>
+File: boot_pp_all_generations_Female.png Graphic file (type png)
+<use boot_pp_all_generations_Female.png>
+Package pdftex.def Info: boot_pp_all_generations_Female.png  used on input line 445.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_MomGradCollege_all.png, id=477, 578.16pt x 433.62pt>
-File: simple_pp_MomGradCollege_all.png Graphic file (type png)
-<use simple_pp_MomGradCollege_all.png>
-Package pdftex.def Info: simple_pp_MomGradCollege_all.png  used on input line 453.
+<boot_pp_all_generations_MomGradCollege.png, id=683, 578.16pt x 433.62pt>
+File: boot_pp_all_generations_MomGradCollege.png Graphic file (type png)
+<use boot_pp_all_generations_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_all_generations_MomGradCollege.png  used on input line 453.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_DadGradCollege_all.png, id=478, 578.16pt x 433.62pt>
-File: simple_pp_DadGradCollege_all.png Graphic file (type png)
-<use simple_pp_DadGradCollege_all.png>
-Package pdftex.def Info: simple_pp_DadGradCollege_all.png  used on input line 459.
+<boot_pp_all_generations_DadGradCollege.png, id=684, 578.16pt x 433.62pt>
+File: boot_pp_all_generations_DadGradCollege.png Graphic file (type png)
+<use boot_pp_all_generations_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_all_generations_DadGradCollege.png  used on input line 459.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 462.
 
+[48 <./boot_pp_all_generations_value.png> <./boot_pp_all_generations_Female.png> <./boot_pp_all_generations_MomGradCollege.png> <./boot_pp_all_generations_DadGradCollege.png>]
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 462.
-
-
-./manuscript_tab_fig.tex:485: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.485 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<simple_pp_value_second_aw.png, id=479, 578.16pt x 433.62pt>
-File: simple_pp_value_second_aw.png Graphic file (type png)
-<use simple_pp_value_second_aw.png>
-Package pdftex.def Info: simple_pp_value_second_aw.png  used on input line 493.
+[49]
+<boot_pp_second_AW_value.png, id=696, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_value.png Graphic file (type png)
+<use boot_pp_second_AW_value.png>
+Package pdftex.def Info: boot_pp_second_AW_value.png  used on input line 493.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_Female_second_aw.png, id=480, 578.16pt x 433.62pt>
-File: simple_pp_Female_second_aw.png Graphic file (type png)
-<use simple_pp_Female_second_aw.png>
-Package pdftex.def Info: simple_pp_Female_second_aw.png  used on input line 499.
+<boot_pp_second_AW_Female.png, id=697, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_Female.png Graphic file (type png)
+<use boot_pp_second_AW_Female.png>
+Package pdftex.def Info: boot_pp_second_AW_Female.png  used on input line 499.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_MomGradCollege_second_aw.png, id=481, 578.16pt x 433.62pt>
-File: simple_pp_MomGradCollege_second_aw.png Graphic file (type png)
-<use simple_pp_MomGradCollege_second_aw.png>
-Package pdftex.def Info: simple_pp_MomGradCollege_second_aw.png  used on input line 507.
+<boot_pp_second_AW_MomGradCollege.png, id=698, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_MomGradCollege.png Graphic file (type png)
+<use boot_pp_second_AW_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_second_AW_MomGradCollege.png  used on input line 507.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_DadGradCollege_second_aw.png, id=482, 578.16pt x 433.62pt>
-File: simple_pp_DadGradCollege_second_aw.png Graphic file (type png)
-<use simple_pp_DadGradCollege_second_aw.png>
-Package pdftex.def Info: simple_pp_DadGradCollege_second_aw.png  used on input line 513.
+<boot_pp_second_AW_DadGradCollege.png, id=699, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_DadGradCollege.png Graphic file (type png)
+<use boot_pp_second_AW_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_second_AW_DadGradCollege.png  used on input line 513.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 516.
 
-
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 516.
-
-
-./manuscript_tab_fig.tex:524: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.524 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<simple_pp_value_second_wa.png, id=483, 578.16pt x 433.62pt>
-File: simple_pp_value_second_wa.png Graphic file (type png)
-<use simple_pp_value_second_wa.png>
-Package pdftex.def Info: simple_pp_value_second_wa.png  used on input line 532.
+[50 <./boot_pp_second_AW_value.png> <./boot_pp_second_AW_Female.png> <./boot_pp_second_AW_MomGradCollege.png> <./boot_pp_second_AW_DadGradCollege.png>]
+<boot_pp_second_WA_value.png, id=706, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_value.png Graphic file (type png)
+<use boot_pp_second_WA_value.png>
+Package pdftex.def Info: boot_pp_second_WA_value.png  used on input line 532.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_Female_second_wa.png, id=484, 578.16pt x 433.62pt>
-File: simple_pp_Female_second_wa.png Graphic file (type png)
-<use simple_pp_Female_second_wa.png>
-Package pdftex.def Info: simple_pp_Female_second_wa.png  used on input line 538.
+<boot_pp_second_WA_Female.png, id=707, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_Female.png Graphic file (type png)
+<use boot_pp_second_WA_Female.png>
+Package pdftex.def Info: boot_pp_second_WA_Female.png  used on input line 538.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_MomGradCollege_second_wa.png, id=485, 578.16pt x 433.62pt>
-File: simple_pp_MomGradCollege_second_wa.png Graphic file (type png)
-<use simple_pp_MomGradCollege_second_wa.png>
-Package pdftex.def Info: simple_pp_MomGradCollege_second_wa.png  used on input line 546.
+<boot_pp_second_WA_MomGradCollege.png, id=708, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_MomGradCollege.png Graphic file (type png)
+<use boot_pp_second_WA_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_second_WA_MomGradCollege.png  used on input line 546.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_DadGradCollege_second_wa.png, id=486, 578.16pt x 433.62pt>
-File: simple_pp_DadGradCollege_second_wa.png Graphic file (type png)
-<use simple_pp_DadGradCollege_second_wa.png>
-Package pdftex.def Info: simple_pp_DadGradCollege_second_wa.png  used on input line 552.
+<boot_pp_second_WA_DadGradCollege.png, id=709, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_DadGradCollege.png Graphic file (type png)
+<use boot_pp_second_WA_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_second_WA_DadGradCollege.png  used on input line 552.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 555.
 
-
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 555.
-
-
-./manuscript_tab_fig.tex:592: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.592 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<pp_second_aw_value_simple.png, id=487, 578.16pt x 433.62pt>
-File: pp_second_aw_value_simple.png Graphic file (type png)
-<use pp_second_aw_value_simple.png>
-Package pdftex.def Info: pp_second_aw_value_simple.png  used on input line 601.
+[51 <./boot_pp_second_WA_value.png> <./boot_pp_second_WA_Female.png> <./boot_pp_second_WA_MomGradCollege.png> <./boot_pp_second_WA_DadGradCollege.png>]
+<logit_boot_pp_second_AW_adults_multinom_value.png, id=716, 578.16pt x 433.62pt>
+File: logit_boot_pp_second_AW_adults_multinom_value.png Graphic file (type png)
+<use logit_boot_pp_second_AW_adults_multinom_value.png>
+Package pdftex.def Info: logit_boot_pp_second_AW_adults_multinom_value.png  used on input line 601.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<pp_second_wa_value_simple.png, id=488, 578.16pt x 433.62pt>
-File: pp_second_wa_value_simple.png Graphic file (type png)
-<use pp_second_wa_value_simple.png>
-Package pdftex.def Info: pp_second_wa_value_simple.png  used on input line 607.
+<logit_boot_pp_second_WA_adults_multinom_value.png, id=717, 578.16pt x 433.62pt>
+File: logit_boot_pp_second_WA_adults_multinom_value.png Graphic file (type png)
+<use logit_boot_pp_second_WA_adults_multinom_value.png>
+Package pdftex.def Info: logit_boot_pp_second_WA_adults_multinom_value.png  used on input line 607.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<pp_second_aw_Female_simple.png, id=489, 578.16pt x 433.62pt>
-File: pp_second_aw_Female_simple.png Graphic file (type png)
-<use pp_second_aw_Female_simple.png>
-Package pdftex.def Info: pp_second_aw_Female_simple.png  used on input line 616.
+<logit_boot_pp_second_AW_adults_multinom_Female.png, id=718, 578.16pt x 433.62pt>
+File: logit_boot_pp_second_AW_adults_multinom_Female.png Graphic file (type png)
+<use logit_boot_pp_second_AW_adults_multinom_Female.png>
+Package pdftex.def Info: logit_boot_pp_second_AW_adults_multinom_Female.png  used on input line 616.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<pp_second_wa_Female_simple.png, id=490, 578.16pt x 433.62pt>
-File: pp_second_wa_Female_simple.png Graphic file (type png)
-<use pp_second_wa_Female_simple.png>
-Package pdftex.def Info: pp_second_wa_Female_simple.png  used on input line 622.
+<logit_boot_pp_second_WA_adults_multinom_Female.png, id=719, 578.16pt x 433.62pt>
+File: logit_boot_pp_second_WA_adults_multinom_Female.png Graphic file (type png)
+<use logit_boot_pp_second_WA_adults_multinom_Female.png>
+Package pdftex.def Info: logit_boot_pp_second_WA_adults_multinom_Female.png  used on input line 622.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-./manuscript_tab_fig.tex:633: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.633 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<simple_pp_value_third_one.png, id=491, 578.16pt x 433.62pt>
-File: simple_pp_value_third_one.png Graphic file (type png)
-<use simple_pp_value_third_one.png>
-Package pdftex.def Info: simple_pp_value_third_one.png  used on input line 641.
+[52 <./logit_boot_pp_second_AW_adults_multinom_value.png> <./logit_boot_pp_second_WA_adults_multinom_value.png> <./logit_boot_pp_second_AW_adults_multinom_Female.png> <./logit_boot_pp_second_WA_adults_multinom_Female.png>]
+<boot_pp_third_oneAsian_value.png, id=724, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_value.png Graphic file (type png)
+<use boot_pp_third_oneAsian_value.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_value.png  used on input line 641.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_Female_third_one.png, id=492, 578.16pt x 433.62pt>
-File: simple_pp_Female_third_one.png Graphic file (type png)
-<use simple_pp_Female_third_one.png>
-Package pdftex.def Info: simple_pp_Female_third_one.png  used on input line 647.
+<boot_pp_third_oneAsian_Female.png, id=725, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_Female.png Graphic file (type png)
+<use boot_pp_third_oneAsian_Female.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_Female.png  used on input line 647.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_MomGradCollege_third_one.png, id=493, 578.16pt x 433.62pt>
-File: simple_pp_MomGradCollege_third_one.png Graphic file (type png)
-<use simple_pp_MomGradCollege_third_one.png>
-Package pdftex.def Info: simple_pp_MomGradCollege_third_one.png  used on input line 655.
+<boot_pp_third_oneAsian_MomGradCollege.png, id=726, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_MomGradCollege.png Graphic file (type png)
+<use boot_pp_third_oneAsian_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_MomGradCollege.png  used on input line 655.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_DadGradCollege_third_one.png, id=494, 578.16pt x 433.62pt>
-File: simple_pp_DadGradCollege_third_one.png Graphic file (type png)
-<use simple_pp_DadGradCollege_third_one.png>
-Package pdftex.def Info: simple_pp_DadGradCollege_third_one.png  used on input line 661.
+<boot_pp_third_oneAsian_DadGradCollege.png, id=727, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_DadGradCollege.png Graphic file (type png)
+<use boot_pp_third_oneAsian_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_DadGradCollege.png  used on input line 661.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 664.
 
-
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 664.
-
-
-./manuscript_tab_fig.tex:672: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.672 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<simple_pp_value_third_two.png, id=495, 578.16pt x 433.62pt>
-File: simple_pp_value_third_two.png Graphic file (type png)
-<use simple_pp_value_third_two.png>
-Package pdftex.def Info: simple_pp_value_third_two.png  used on input line 680.
+[53 <./boot_pp_third_oneAsian_value.png> <./boot_pp_third_oneAsian_Female.png> <./boot_pp_third_oneAsian_MomGradCollege.png> <./boot_pp_third_oneAsian_DadGradCollege.png>]
+<boot_pp_third_twoAsian_value.png, id=734, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_value.png Graphic file (type png)
+<use boot_pp_third_twoAsian_value.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_value.png  used on input line 680.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_Female_third_two.png, id=496, 578.16pt x 433.62pt>
-File: simple_pp_Female_third_two.png Graphic file (type png)
-<use simple_pp_Female_third_two.png>
-Package pdftex.def Info: simple_pp_Female_third_two.png  used on input line 686.
+<boot_pp_third_twoAsian_Female.png, id=735, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_Female.png Graphic file (type png)
+<use boot_pp_third_twoAsian_Female.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_Female.png  used on input line 686.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_MomGradCollege_third_two.png, id=497, 578.16pt x 433.62pt>
-File: simple_pp_MomGradCollege_third_two.png Graphic file (type png)
-<use simple_pp_MomGradCollege_third_two.png>
-Package pdftex.def Info: simple_pp_MomGradCollege_third_two.png  used on input line 694.
+<boot_pp_third_twoAsian_MomGradCollege.png, id=736, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_MomGradCollege.png Graphic file (type png)
+<use boot_pp_third_twoAsian_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_MomGradCollege.png  used on input line 694.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_DadGradCollege_third_two.png, id=498, 578.16pt x 433.62pt>
-File: simple_pp_DadGradCollege_third_two.png Graphic file (type png)
-<use simple_pp_DadGradCollege_third_two.png>
-Package pdftex.def Info: simple_pp_DadGradCollege_third_two.png  used on input line 700.
+<boot_pp_third_twoAsian_DadGradCollege.png, id=737, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_DadGradCollege.png Graphic file (type png)
+<use boot_pp_third_twoAsian_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_DadGradCollege.png  used on input line 700.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 703.
 
-
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 703.
-
-
-./manuscript_tab_fig.tex:711: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.711 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<simple_pp_value_third_three.png, id=499, 578.16pt x 433.62pt>
-File: simple_pp_value_third_three.png Graphic file (type png)
-<use simple_pp_value_third_three.png>
-Package pdftex.def Info: simple_pp_value_third_three.png  used on input line 719.
+[54 <./boot_pp_third_twoAsian_value.png> <./boot_pp_third_twoAsian_Female.png> <./boot_pp_third_twoAsian_MomGradCollege.png> <./boot_pp_third_twoAsian_DadGradCollege.png>]
+<boot_pp_third_threeAsian_value.png, id=745, 578.16pt x 433.62pt>
+File: boot_pp_third_threeAsian_value.png Graphic file (type png)
+<use boot_pp_third_threeAsian_value.png>
+Package pdftex.def Info: boot_pp_third_threeAsian_value.png  used on input line 719.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_Female_third_three.png, id=500, 578.16pt x 433.62pt>
-File: simple_pp_Female_third_three.png Graphic file (type png)
-<use simple_pp_Female_third_three.png>
-Package pdftex.def Info: simple_pp_Female_third_three.png  used on input line 725.
+<boot_pp_third_threeAsian_Female.png, id=746, 578.16pt x 433.62pt>
+File: boot_pp_third_threeAsian_Female.png Graphic file (type png)
+<use boot_pp_third_threeAsian_Female.png>
+Package pdftex.def Info: boot_pp_third_threeAsian_Female.png  used on input line 725.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_MomGradCollege_third_three.png, id=501, 578.16pt x 433.62pt>
-File: simple_pp_MomGradCollege_third_three.png Graphic file (type png)
-<use simple_pp_MomGradCollege_third_three.png>
-Package pdftex.def Info: simple_pp_MomGradCollege_third_three.png  used on input line 733.
+<boot_pp_third_threeAsian_MomGradCollege.png, id=747, 578.16pt x 433.62pt>
+File: boot_pp_third_threeAsian_MomGradCollege.png Graphic file (type png)
+<use boot_pp_third_threeAsian_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_third_threeAsian_MomGradCollege.png  used on input line 733.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
-<simple_pp_DadGradCollege_third_three.png, id=502, 578.16pt x 433.62pt>
-File: simple_pp_DadGradCollege_third_three.png Graphic file (type png)
-<use simple_pp_DadGradCollege_third_three.png>
-Package pdftex.def Info: simple_pp_DadGradCollege_third_three.png  used on input line 739.
+<boot_pp_third_threeAsian_DadGradCollege.png, id=748, 578.16pt x 433.62pt>
+File: boot_pp_third_threeAsian_DadGradCollege.png Graphic file (type png)
+<use boot_pp_third_threeAsian_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_third_threeAsian_DadGradCollege.png  used on input line 739.
 (pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 742.
 
+[55 <./boot_pp_third_threeAsian_value.png> <./boot_pp_third_threeAsian_Female.png> <./boot_pp_third_threeAsian_MomGradCollege.png> <./boot_pp_third_threeAsian_DadGradCollege.png>])
 
-LaTeX Warning: Reference `eq:multinomial_logit' on page 34 undefined on input line 742.
-
-) (./manuscript_online_appendix.tex
-<iatexample1.png, id=504, 1170.3725pt x 560.0925pt>
+[56] (./manuscript_online_appendix.tex
+<iatexample1.png, id=760, 1170.3725pt x 560.0925pt>
 File: iatexample1.png Graphic file (type png)
 <use iatexample1.png>
 Package pdftex.def Info: iatexample1.png  used on input line 23.
 (pdftex.def)             Requested size: 185.75906pt x 88.89018pt.
-<iatexample2.png, id=505, 730.73pt x 502.87875pt>
+<iatexample2.png, id=761, 730.73pt x 502.87875pt>
 File: iatexample2.png Graphic file (type png)
 <use iatexample2.png>
 Package pdftex.def Info: iatexample2.png  used on input line 29.
 (pdftex.def)             Requested size: 185.75906pt x 127.8372pt.
-<iatexample3.png, id=506, 739.76375pt x 500.87125pt>
+<iatexample3.png, id=762, 739.76375pt x 500.87125pt>
 File: iatexample3.png Graphic file (type png)
 <use iatexample3.png>
 Package pdftex.def Info: iatexample3.png  used on input line 34.
 (pdftex.def)             Requested size: 185.75906pt x 125.76776pt.
-<iatexample4.png, id=507, 733.74126pt x 503.8825pt>
+<iatexample4.png, id=763, 733.74126pt x 503.8825pt>
 File: iatexample4.png Graphic file (type png)
 <use iatexample4.png>
 Package pdftex.def Info: iatexample4.png  used on input line 39.
 (pdftex.def)             Requested size: 185.75906pt x 127.56186pt.
-<iatexample5.png, id=508, 732.7375pt x 504.88625pt>
+<iatexample5.png, id=764, 732.7375pt x 504.88625pt>
 File: iatexample5.png Graphic file (type png)
 <use iatexample5.png>
 Package pdftex.def Info: iatexample5.png  used on input line 44.
 (pdftex.def)             Requested size: 185.75906pt x 127.99315pt.
- (./tab49-all_gen_comparison_with_me.tex) (./tab50-first_gen_comparison_with_me.tex) (./tab51-second_gen_comparison_with_me.tex) (./tab52-third_gen_comparison_with_me.tex) (./tab33-asianiat_regression_tab.tex
-
-./tab33-asianiat_regression_tab.tex:1: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \begin{table}[!h]
-                     
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (./tab04-regression_tab_bygen_skin.tex
-
-./tab04-regression_tab_bygen_skin.tex:1: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 \begin{table}[!h]
-                     
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 42.
+[57 <./iatexample1.png> <./iatexample2.png> <./iatexample3.png> <./iatexample4.png> <./iatexample5.png>] (./tab49-all_gen_comparison_with_me.tex)
 
-) (./tab05-iat_regression_tab_byparent_type.tex
+[58] (./tab50-first_gen_comparison_with_me.tex)
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 44.
+[59] (./tab51-second_gen_comparison_with_me.tex)
 
+[60] (./tab52-third_gen_comparison_with_me.tex)
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 44.
+[61] (./tab33-asianiat_regression_tab.tex)
 
+[62] (./tab04-regression_tab_bygen_skin.tex)
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 44.
+[63] (./tab05-iat_regression_tab_byparent_type.tex)
 
+[64] (./tab47-marriage.tex)
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 44.
-
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 44.
-
-) (./tab47-marriage.tex
-
-LaTeX Warning: Reference `eq:inter-interracial' on page 34 undefined on input line 26.
-
-)
-
-./manuscript_online_appendix.tex:97: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 \begin{figure}[!htb]
-                         
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<county-by-parents-regs-all.png, id=509, 722.7pt x 289.08pt>
+[65]
+<county-by-parents-regs-all.png, id=831, 722.7pt x 289.08pt>
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
 Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 105.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-first-gen.png, id=510, 722.7pt x 289.08pt>
+<county-skin-iat-regression-first-gen.png, id=832, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-first-gen.png Graphic file (type png)
 <use county-skin-iat-regression-first-gen.png>
 Package pdftex.def Info: county-skin-iat-regression-first-gen.png  used on input line 112.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-second-gen.png, id=511, 722.7pt x 289.08pt>
+<county-skin-iat-regression-second-gen.png, id=833, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-second-gen.png Graphic file (type png)
 <use county-skin-iat-regression-second-gen.png>
 Package pdftex.def Info: county-skin-iat-regression-second-gen.png  used on input line 118.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-third-gen.png, id=512, 722.7pt x 289.08pt>
+<county-skin-iat-regression-third-gen.png, id=834, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-third-gen.png Graphic file (type png)
 <use county-skin-iat-regression-third-gen.png>
 Package pdftex.def Info: county-skin-iat-regression-third-gen.png  used on input line 124.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-./manuscript_online_appendix.tex:134: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.134 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[66 <./county-by-parents-regs-all.png> <./county-skin-iat-regression-first-gen.png> <./county-skin-iat-regression-second-gen.png> <./county-skin-iat-regression-third-gen.png>]
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
 Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 142.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-hh.png, id=513, 722.7pt x 289.08pt>
+<county-by-parents-regs-hh.png, id=841, 722.7pt x 289.08pt>
 File: county-by-parents-regs-hh.png Graphic file (type png)
 <use county-by-parents-regs-hh.png>
 Package pdftex.def Info: county-by-parents-regs-hh.png  used on input line 149.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-hw.png, id=514, 722.7pt x 289.08pt>
+<county-by-parents-regs-hw.png, id=842, 722.7pt x 289.08pt>
 File: county-by-parents-regs-hw.png Graphic file (type png)
 <use county-by-parents-regs-hw.png>
 Package pdftex.def Info: county-by-parents-regs-hw.png  used on input line 155.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-wh.png, id=515, 722.7pt x 289.08pt>
+<county-by-parents-regs-wh.png, id=843, 722.7pt x 289.08pt>
 File: county-by-parents-regs-wh.png Graphic file (type png)
 <use county-by-parents-regs-wh.png>
 Package pdftex.def Info: county-by-parents-regs-wh.png  used on input line 161.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-./manuscript_online_appendix.tex:171: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<msa-by-parents-regs-all.png, id=516, 722.7pt x 289.08pt>
+[67 <./county-by-parents-regs-hh.png> <./county-by-parents-regs-hw.png> <./county-by-parents-regs-wh.png>]
+<msa-by-parents-regs-all.png, id=848, 722.7pt x 289.08pt>
 File: msa-by-parents-regs-all.png Graphic file (type png)
 <use msa-by-parents-regs-all.png>
 Package pdftex.def Info: msa-by-parents-regs-all.png  used on input line 179.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-first-gen.png, id=517, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-first-gen.png, id=849, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-first-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-first-gen.png>
 Package pdftex.def Info: msa-skin-iat-regression-first-gen.png  used on input line 186.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-second-gen.png, id=518, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-second-gen.png, id=850, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-second-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-second-gen.png>
 Package pdftex.def Info: msa-skin-iat-regression-second-gen.png  used on input line 192.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-third-gen.png, id=519, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-third-gen.png, id=851, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-third-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-third-gen.png>
 Package pdftex.def Info: msa-skin-iat-regression-third-gen.png  used on input line 198.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-./manuscript_online_appendix.tex:208: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.208 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[68 <./msa-by-parents-regs-all.png> <./msa-skin-iat-regression-first-gen.png> <./msa-skin-iat-regression-second-gen.png> <./msa-skin-iat-regression-third-gen.png>]
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
 Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 216.
@@ -2395,168 +1970,90 @@ File: county-by-parents-regs-wh.png Graphic file (type png)
 Package pdftex.def Info: county-by-parents-regs-wh.png  used on input line 235.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
-./manuscript_online_appendix.tex:248: LaTeX Error: Not in outer par mode.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.248 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<interaction_coefficients_AW.png, id=520, 505.89pt x 289.08pt>
+[69]
+<interaction_coefficients_AW.png, id=860, 505.89pt x 289.08pt>
 File: interaction_coefficients_AW.png Graphic file (type png)
 <use interaction_coefficients_AW.png>
 Package pdftex.def Info: interaction_coefficients_AW.png  used on input line 256.
 (pdftex.def)             Requested size: 206.40038pt x 117.94571pt.
-<interaction_coefficients_WA.png, id=521, 505.89pt x 289.08pt>
+<interaction_coefficients_WA.png, id=861, 505.89pt x 289.08pt>
 File: interaction_coefficients_WA.png Graphic file (type png)
 <use interaction_coefficients_WA.png>
 Package pdftex.def Info: interaction_coefficients_WA.png  used on input line 262.
 (pdftex.def)             Requested size: 206.40038pt x 117.94571pt.
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 265.
 
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 265.
-
-
-./manuscript_online_appendix.tex:276: LaTeX Error: Not in outer par mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.276 \begin{figure}[!htb]
-                          
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<interaction_coefficients_OneAsian.png, id=522, 505.89pt x 289.08pt>
+[70 <./interaction_coefficients_AW.png> <./interaction_coefficients_WA.png>]
+<interaction_coefficients_OneAsian.png, id=868, 505.89pt x 289.08pt>
 File: interaction_coefficients_OneAsian.png Graphic file (type png)
 <use interaction_coefficients_OneAsian.png>
 Package pdftex.def Info: interaction_coefficients_OneAsian.png  used on input line 284.
 (pdftex.def)             Requested size: 193.50076pt x 110.57053pt.
-<interaction_coefficients_TwoAsian.png, id=523, 505.89pt x 289.08pt>
+<interaction_coefficients_TwoAsian.png, id=869, 505.89pt x 289.08pt>
 File: interaction_coefficients_TwoAsian.png Graphic file (type png)
 <use interaction_coefficients_TwoAsian.png>
 Package pdftex.def Info: interaction_coefficients_TwoAsian.png  used on input line 290.
 (pdftex.def)             Requested size: 193.50076pt x 110.57053pt.
-<interaction_coefficients_ThreeAsian.png, id=524, 505.89pt x 289.08pt>
+<interaction_coefficients_ThreeAsian.png, id=870, 505.89pt x 289.08pt>
 File: interaction_coefficients_ThreeAsian.png Graphic file (type png)
 <use interaction_coefficients_ThreeAsian.png>
 Package pdftex.def Info: interaction_coefficients_ThreeAsian.png  used on input line 298.
 (pdftex.def)             Requested size: 193.50076pt x 110.57053pt.
 
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 301.
 
-
-LaTeX Warning: Reference `eq:identity_reg_bias' on page 34 undefined on input line 301.
-
-<scatter-plot-bias-Asian-less2015.png, id=525, 722.7pt x 433.62pt>
+[71 <./interaction_coefficients_OneAsian.png> <./interaction_coefficients_TwoAsian.png> <./interaction_coefficients_ThreeAsian.png>]
+<scatter-plot-bias-Asian-less2015.png, id=877, 722.7pt x 433.62pt>
 File: scatter-plot-bias-Asian-less2015.png Graphic file (type png)
 <use scatter-plot-bias-Asian-less2015.png>
 Package pdftex.def Info: scatter-plot-bias-Asian-less2015.png  used on input line 315.
 (pdftex.def)             Requested size: 348.299pt x 208.98215pt.
-<scatter-plot-bias-Asian-great2015.png, id=526, 722.7pt x 433.62pt>
+<scatter-plot-bias-Asian-great2015.png, id=878, 722.7pt x 433.62pt>
 File: scatter-plot-bias-Asian-great2015.png Graphic file (type png)
 <use scatter-plot-bias-Asian-great2015.png>
 Package pdftex.def Info: scatter-plot-bias-Asian-great2015.png  used on input line 322.
 (pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+
+
+[72 <./scatter-plot-bias-Asian-less2015.png> <./scatter-plot-bias-Asian-great2015.png>]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 351.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-))
+)
 
-/Users/hhadah/Documents/GiT/asian-identity-attrition/submissions/03-jpam-RR/submit_preprint.tex:107: LaTeX Error: \begin{table} on input line 1 ended by \end{document}.
+[73])
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(./submit_preprint.aux)
+[74] (./submit_preprint.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `submit_preprint.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `submit_preprint.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  CBC48200DE36F0E240149EE86E94D08D;2766.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                submit_preprint
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `submit_preprint.out' has not changed.
+(rerunfilecheck)             Checksum: CBC48200DE36F0E240149EE86E94D08D;2766.
 Package logreq Info: Writing requests to 'submit_preprint.run.xml'.
 \openout1 = `submit_preprint.run.xml'.
 
-/Users/hhadah/Documents/GiT/asian-identity-attrition/submissions/03-jpam-RR/submit_preprint.tex:107: You can't use `\end' in internal vertical mode.
-\enddocument ...cument/end}\deadcycles \z@ \@@end 
-                                                  
-l.107 \end{document}
-                    
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-
-/Users/hhadah/Documents/GiT/asian-identity-attrition/submissions/03-jpam-RR/submit_preprint.tex:107: LaTeX Error: \begin{table} on input line 1 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-/Users/hhadah/Documents/GiT/asian-identity-attrition/submissions/03-jpam-RR/submit_preprint.tex:107: Missing } inserted.
-<inserted text> 
-                }
-l.107 \end{document}
-                    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-)
-! Emergency stop.
-<*> .../submissions/03-jpam-RR/submit_preprint.tex
-                                                  
-*** (job aborted, no legal \end found)
-
- 
+ ) 
 Here is how much of TeX's memory you used:
- 42552 strings out of 473579
- 882049 string characters out of 5728228
- 2080401 words of memory out of 5000000
- 64598 multiletter control sequences out of 15000+600000
- 618410 words of font info for 180 fonts, out of 8000000 for 9000
+ 42821 strings out of 473579
+ 886519 string characters out of 5728228
+ 2036184 words of memory out of 5000000
+ 64760 multiletter control sequences out of 15000+600000
+ 620532 words of font info for 188 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 93i,22n,98p,1833b,4041s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 93i,21n,98p,1833b,4041s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on submit_preprint.pdf (75 pages, 9014623 bytes).
+PDF statistics:
+ 1015 PDF objects out of 1200 (max. 8388607)
+ 787 compressed objects within 8 object streams
+ 232 named destinations out of 1000 (max. 500000)
+ 534 words of extra memory for PDF output out of 10000 (max. 10000000)
+

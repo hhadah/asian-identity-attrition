@@ -30,46 +30,57 @@ thesis_plots <- paste0(git_mdir,"/my_paper/figure")
 
 ### run do files and scripts
 options(modelsummary_factory_latex = "kableExtra")
-
+# print all R scripts in programs folder
+r_scripts <- list.files(programs, pattern = "\\.R$", full.names = TRUE)
+print(r_scripts)
 # main scripts
-source(file.path(programs,"01-packages-wds.r")) # set up package
-source(file.path(programs,"02-clean-implicit-project-asian.r")) # clean asian implicit data
-source(file.path(programs,"03-merge-asian-iat-cps.r")) # merge iat and cps
-# source(file.path(programs,"04-table-one-summary-stats.r")) # summary stats of sample
-# source(file.path(programs,"05-table-two-observations-by-gen.r")) # ethnic attrition of sample
-# source(file.path(programs,"06-figure-two-skin-iat-plots.r")) # figure of iat and asian identity
-# source(file.path(programs,"07-figure-three-skin-map.r")) # asian iat maps
-# source(file.path(programs,"08-figure-five-skin-iat-regression-by-gen-plot.r")) # asian iat maps
-# source(file.path(programs,"09-figure-six-regressions-skin-iat-byparent-plot.r")) # asian iat maps
-# source(file.path(programs,"10-table-four-skin-iat-regression-by-gen.r")) # asian iat maps
-# source(file.path(programs,"11-table-five-regressions-skin-iat-byparent.r")) # asian iat by parent regression
-# source(file.path(programs,"12-figure-eight-skin-iat-regression-interaction-bygen-plot.r")) # interaction regression
-# source(file.path(programs,"13-table-six-regressions-skin-iat-thirdgens-grandparents.r")) # regression by grandparents type
-# source(file.path(programs,"14-regressions-cps-asian-iat.r")) # iat regression on asian identity
-# source(file.path(programs,"15-asian-iat-regression-by-gen.r")) # iat regression table by gen
-# source(file.path(programs,"16-regressions-asian-iat-byparent.r")) # iat regression table by parent
-# source(file.path(programs,"17-table-eight-endo-interethnic-reg.r")) # interethnic regression table
-# source(file.path(programs,"18-table-nine-proxy-main-effect-table.r")) # main effect table
-# source(file.path(programs,"19-prep-data-for-acs.R")) # 
-# source(file.path(programs,"20-acs-skin-iat-migration.R")) # 
-# source(file.path(programs,"21-cps-iat-county.R")) # 
-# source(file.path(programs,"22-cps-iat-msa.R")) # 
-# source(file.path(programs,"23-county-figure-five-skin-iat-regression-by-gen-plot.R")) # 
-# source(file.path(programs,"24-county-figure-six-regressions-skin-iat-byparent-plot.R")) # 
-# source(file.path(programs,"25-county-table-four-skin-iat-regression-by-gen.R")) # 
-# source(file.path(programs,"26-county-table-five-regressions-skin-iat-byparent.R")) # 
-# source(file.path(programs,"27-county-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # 
-# source(file.path(programs,"28-msa-figure-five-skin-iat-regression-by-gen-plot.R")) # 
-# source(file.path(programs,"29-msa-figure-six-regressions-skin-iat-byparent-plot.R")) # 
-# source(file.path(programs,"30-msa-table-four-skin-iat-regression-by-gen.R")) # 
-# source(file.path(programs,"31-msa-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # 
-# source(file.path(programs,"32-msa-table-five-regressions-skin-iat-byparent.R")) # 
-# source(file.path(programs,"40-multinomial-model-optimized.R")) # 
-# source(file.path(programs,"41-multinomial-model-optimized-adults.R")) # adults only
-# source(file.path(programs,"42-interaction-iat-byparent-plot.R")) # teens only
-# source(file.path(programs,"43-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # kids only
-# source(file.path(programs,"44-bootstrap-logit.r")) # 
-# source(file.path(programs,"bootstrap-functions.r")) # 
+# main scripts
+source(file.path(programs,"01-packages-wds.R")) # set up package
+source(file.path(programs,"02-clean-implicit-project-asian.R")) # clean asian implicit data
+source(file.path(programs,"03-merge-asian-iat-cps.R")) # merge iat and cps
+source(file.path(programs,"04-table-one-summary-stats.R")) # summary stats of sample
+source(file.path(programs,"05-table-two-observations-by-gen.R")) # ethnic attrition of sample
+source(file.path(programs,"06-figure-two-skin-iat-plots.R")) # figure of iat and asian identity
+source(file.path(programs,"07-figure-three-skin-map.R")) # asian iat maps
+source(file.path(programs,"08-figure-five-skin-iat-regression-by-gen-plot.R")) # asian iat regression by gen plot
+source(file.path(programs,"09-figure-six-regressions-skin-iat-byparent-plot.R")) # asian iat by parent plot
+source(file.path(programs,"10-table-four-skin-iat-regression-by-gen.R")) # asian iat regression by gen table
+source(file.path(programs,"11-table-five-regressions-skin-iat-byparent.R")) # asian iat by parent regression
+source(file.path(programs,"12-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # interaction regression
+source(file.path(programs,"13-table-six-regressions-skin-iat-thirdgens-grandparents.R")) # regression by grandparents type
+source(file.path(programs,"14-regressions-cps-asian-iat.R")) # iat regression on asian identity
+source(file.path(programs,"15-asian-iat-regression-by-gen.R")) # iat regression table by gen
+source(file.path(programs,"16-regressions-asian-iat-byparent.R")) # iat regression table by parent
+source(file.path(programs,"17-table-eight-endo-interethnic-reg.R")) # interethnic regression table
+source(file.path(programs,"18-table-nine-proxy-main-effect-table.R")) # main effect table
+source(file.path(programs,"19-prep-data-for-acs.R")) # prep ACS data
+source(file.path(programs,"20-acs-skin-iat-migration.R")) # ACS migration analysis
+source(file.path(programs,"21-cps-iat-county.R")) # county-level CPS IAT
+source(file.path(programs,"22-cps-iat-msa.R")) # MSA-level CPS IAT
+source(file.path(programs,"23-county-figure-five-skin-iat-regression-by-gen-plot.R")) # county regression by gen plot
+source(file.path(programs,"24-county-figure-six-regressions-skin-iat-byparent-plot.R")) # county regression by parent plot
+source(file.path(programs,"25-county-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # county interaction plot
+source(file.path(programs,"26-msa-figure-five-skin-iat-regression-by-gen-plot.R")) # MSA regression by gen plot
+source(file.path(programs,"27-msa-figure-six-regressions-skin-iat-byparent-plot.R")) # MSA regression by parent plot
+source(file.path(programs,"28-msa-figure-eight-skin-iat-regression-interaction-bygen-plot.R")) # MSA interaction plot
+source(file.path(programs,"29-merge-cps-with-hatecrime.R")) # merge CPS with hate crime data
+source(file.path(programs,"30-hatecrime-figure-five-skin-iat-regression-by-gen-plot.R")) # hate crime regression by gen plot
+source(file.path(programs,"31-hatecrime-figure-six-regressions-skin-iat-byparent-plot.R")) # hate crime regression by parent plot
+source(file.path(programs,"32-figure-10-cps-hispanic-plot.R")) # Hispanic CPS plot
+source(file.path(programs,"33-multi-logit-reg.R")) # multinomial logit regression
+source(file.path(programs,"34-merge-asian-iat-cps-adults.R")) # merge IAT and CPS adults
+source(file.path(programs,"35-table-adults-summary-stats.R")) # adults summary stats
+source(file.path(programs,"36-table-adults-observations-by-gen.R")) # adults observations by gen
+source(file.path(programs,"37-figure-five-skin-iat-regression-by-gen-plot-adults.R")) # adults regression by gen plot
+source(file.path(programs,"38-figure-six-regressions-skin-iat-byparent-plot-adults.R")) # adults regression by parent plot
+source(file.path(programs,"39-figure-histogram-identities.R")) # histogram of identities
+source(file.path(programs,"40-interaction-iat-byparent-plot.R")) # interaction by parent plot
+source(file.path(programs,"41-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # interaction regression grandparents
+source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis
+source(file.path(programs,"45-bootstrap-plot.R")) # bootstrap plot
+source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap
+source(file.path(programs,"47-secadult-bootstrap-plot.R")) # second adult bootstrap plot
+source(file.path(programs,"95-make-all.R")) # make all
 
 ### summary stats
 
