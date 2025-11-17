@@ -15,7 +15,6 @@ CPS_asian_mean  <- "~/Dropbox/Research/My Research Data and Ideas/CPS_4GenData/C
 Implicit_asian_Harvard <- "~/Dropbox/Research/My Research Data and Ideas/ProjectImplicit/asian_iat/Asian_IAT.public.2004-2021.csv"
 Implicit_Race_Harvard <- "~/Documents/GiT/Project-Implicit-Data/data/datasets"
 GSS_bystate_new_path <- "~/Dropbox/Research/GSS/Data/Datasets/Prejeduice_index_by_stateyear_new.csv"
-
 ANES_dir <- "/Users/hhadah/Dropbox/ANES/anes_timeseries_cdf_csv_20220916/anes_timeseries_cdf_csv_20220916.csv"
 hate_crime <- "/Users/hhadah/Documents/GiT/hate-crime-data/data/datasets/hate_crime_data_per_thousands.csv"
 ### GiT directories
@@ -27,6 +26,7 @@ figures_wd <- paste0(git_mdir,"/output/figures")
 programs <- paste0(git_mdir,"/programs")
 thesis_tabs <- paste0(git_mdir,"/my_paper/tables")
 thesis_plots <- paste0(git_mdir,"/my_paper/figure")
+bootstrap_results_path <- paste0(git_mdir,"/data/raw/bootstrapping-data")
 
 ### run do files and scripts
 options(modelsummary_factory_latex = "kableExtra")
@@ -76,11 +76,28 @@ source(file.path(programs,"38-figure-six-regressions-skin-iat-byparent-plot-adul
 source(file.path(programs,"39-figure-histogram-identities.R")) # histogram of identities
 source(file.path(programs,"40-interaction-iat-byparent-plot.R")) # interaction by parent plot
 source(file.path(programs,"41-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # interaction regression grandparents
-source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis
-source(file.path(programs,"45-bootstrap-plot.R")) # bootstrap plot
-source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap
-source(file.path(programs,"47-secadult-bootstrap-plot.R")) # second adult bootstrap plot
-source(file.path(programs,"95-make-all.R")) # make all
+
+# ================================================================
+# WARNING: Bootstrapping analysis 
+# takes 2+ weeks on a high-performance computing cluster
+# ================================================================
+
+### Bootstrapping analysis
+### WARNING: Bootstrapping the logistic regression takes 2+ weeks
+### on a high-performance computing cluster
+### The bootstrap results from my own analysis are saved as TXT 
+### and RDS files in the bootstrap_results_path directory
+### The plots can be re-created by running scripts `45-bootstrap-plot.R` 
+### and `47-secadult-bootstrap-plot.R` without having to re-run 
+### the bootstrapping analysis
+### Uncomment the following lines only if you intend to run the bootstrap analysis
+
+
+# source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis
+# source(file.path(programs,"45-bootstrap-plot.R")) # bootstrap plot
+# source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap
+# source(file.path(programs,"47-secadult-bootstrap-plot.R")) # second adult bootstrap plot
+
 
 ### summary stats
 

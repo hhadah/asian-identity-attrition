@@ -15,34 +15,28 @@ suppressPackageStartupMessages({
 EPS_PP <- getOption("bootstrap_eps_pp", 0.002)
 EPS_ME <- getOption("bootstrap_eps_me", 1e-4)
 
-stopifnot(exists("git_mdir"), exists("git_mdir"))
-if (!dir.exists(git_mdir)) dir.create(git_mdir, recursive = TRUE)
-
-if (!exists("theme_customs", mode = "function")) {
-  message("theme_customs() not found; using default plotting theme.")
-  theme_customs <- function() {
-    ggplot2::theme_minimal(base_family = "serif") +
-      ggplot2::theme(
-        panel.grid.minor = ggplot2::element_blank(),
-        panel.grid.major = ggplot2::element_blank(),
-        plot.background = ggplot2::element_rect(fill = "white", color = NA),
-        axis.title = ggplot2::element_text(face = "bold"),
-        strip.text = ggplot2::element_text(face = "bold"),
-        strip.background = ggplot2::element_rect(color = "black", fill = "white", size = 1.5),
-        legend.title = ggplot2::element_text(face = "bold", size = ggplot2::rel(1)),
-        axis.text.y  = ggplot2::element_text(size = 18),
-        axis.text.x  = ggplot2::element_text(size = 24),
-        axis.title.x = ggplot2::element_text(size = 28),
-        axis.title.y = ggplot2::element_text(size = 28),
-        panel.grid.major.x = ggplot2::element_blank(),
-        panel.grid.minor.x = ggplot2::element_blank(),
-        axis.line = ggplot2::element_line(colour = "black"),
-        legend.text = ggplot2::element_text(size = ggplot2::rel(1))
-      )
-  }
+theme_customs <- function() {
+  ggplot2::theme_minimal(base_family = "serif") +
+    ggplot2::theme(
+      panel.grid.minor = ggplot2::element_blank(),
+      panel.grid.major = ggplot2::element_blank(),
+      plot.background = ggplot2::element_rect(fill = "white", color = NA),
+      axis.title = ggplot2::element_text(face = "bold"),
+      strip.text = ggplot2::element_text(face = "bold"),
+      strip.background = ggplot2::element_rect(color = "black", fill = "white", size = 1.5),
+      legend.title = ggplot2::element_text(face = "bold", size = ggplot2::rel(1)),
+      axis.text.y  = ggplot2::element_text(size = 18),
+      axis.text.x  = ggplot2::element_text(size = 24),
+      axis.title.x = ggplot2::element_text(size = 24),
+      axis.title.y = ggplot2::element_text(size = 28),
+      panel.grid.major.x = ggplot2::element_blank(),
+      panel.grid.minor.x = ggplot2::element_blank(),
+      axis.line = ggplot2::element_line(colour = "black"),
+      legend.text = ggplot2::element_text(size = ggplot2::rel(1))
+    )
 }
 
-.checkpoint_paths <- function(label_slug, output_dir = git_mdir) {
+.checkpoint_paths <- function(label_slug, output_dir = bootstrap_results_path) {
   list(
     rds = file.path(output_dir, sprintf("boot_results_%s.rds", label_slug)),
     metadata = file.path(output_dir, sprintf("boot_results_%s.txt", label_slug))
@@ -186,7 +180,7 @@ render_bootstrap_plots <- function(label_slug, label_pretty){
       if (!nrow(pp_data)) next
       plt_pp <- plot_pp_boot(pp_data, var_name, label_pretty)
       .safe_ggsave(
-        filename = file.path(git_mdir, sprintf("boot_pp_%s_%s.png", label_slug, var_name)),
+        filename = file.path(bootstrap_results_path, sprintf("boot_pp_%s_%s.png", label_slug, var_name)),
         plot = plt_pp,
         width = 8,
         height = 6,
@@ -201,7 +195,7 @@ render_bootstrap_plots <- function(label_slug, label_pretty){
   if (!is.null(me_tbl) && nrow(me_tbl)) {
     plt_me <- plot_me_boot(me_tbl, label_pretty)
     .safe_ggsave(
-      filename = file.path(git_mdir, sprintf("boot_me_%s.png", label_slug)),
+      filename = file.path(bootstrap_results_path, sprintf("boot_me_%s.png", label_slug)),
       plot = plt_me,
       width = 10,
       height = 6,
@@ -230,4 +224,4 @@ for (spec in models_to_plot) {
   render_bootstrap_plots(spec$label_slug, spec$label_pretty)
 }
 
-message(sprintf("All figures saved in: %s", git_mdir))
+message(sprintf("All figures saved in: %s", bootstrap_results_path))
