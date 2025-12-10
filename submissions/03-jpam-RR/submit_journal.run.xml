@@ -81,7 +81,7 @@
       <file>submit_journal.bcf</file>
     </requires>
     <requires type="editable">
-      <file>bib/AttitudesPaper.bib</file>
+      <file>AttitudesPaper.bib</file>
     </requires>
   </external>
 </requests>
