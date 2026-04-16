@@ -462,7 +462,7 @@ bootstrap_multinom_boot <- function(data_subset, generation="second", ancestry_f
             ame_lo_plot = ifelse(abs(ame_hi - ame_lo) < 1e-12, ame_point - EPS_ME, ame_lo),
             ame_hi_plot = ifelse(abs(ame_hi - ame_lo) < 1e-12, ame_point + EPS_ME, ame_hi)
           )
-        
+
         me_results[[var_name]] <- main_ame |>
           dplyr::select(variable, outcome) |>
           dplyr::left_join(me_df, by="outcome") |>

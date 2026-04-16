@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  10 DEC 2025 08:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.15)  31 MAR 2026 12:15
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/hhadah/Documents/GiT/asian-identity-attrition/submissions/03-jpam-RR/submit_journal.tex
-(/Users/hhadah/Documents/GiT/asian-identity-attrition/submissions/03-jpam-RR/submit_journal.tex
+**submit_journal.tex
+(./submit_journal.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -23,7 +22,8 @@ File: size12.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (./preamble_package.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/mathpazo.sty
+) (./preamble_package.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/
+mathpazo.sty
 Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
 \symupright=\mathgroup4
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/eulervm.sty
@@ -31,11 +31,10 @@ Package: eulervm 2005/01/11 v4.0 (WaS)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
 \@mathmargin=\skip51
-
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen142
@@ -94,7 +93,7 @@ LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
@@ -107,26 +106,28 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@posthook=\toks23
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 116.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ppl.fd
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
+6.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/
+local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/06/26 v24.7 The Babel package
 \babel@savecnt=\count280
 \U@D=\dimen151
 \l@unhyphenated=\language89
- (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count281
- (/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -134,12 +135,14 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language23). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language23). Reported on input line 108.
-)) (/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count282
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
@@ -153,22 +156,21 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \csq@maxlvl=\count287
 \csq@tshold=\count288
 \csq@ltx@everypar=\toks25
- (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
 )) (/Users/hhadah/Library/texmf/tex/latex/setspace.sty
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
-
 Package: `setspace' 6.7 <2000/12/01>
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
@@ -198,7 +200,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisrulewidth=\dimen166
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen167
 \ar@mcellbox=\box54
@@ -215,7 +217,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \bigstrutjot=\dimen169
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen170
 \captionmargin=\dimen171
@@ -231,11 +233,12 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count295
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 
-Package xcolor Warning: Package option `usenames' is obsolete and ignored on input line 266.
+Package xcolor Warning: Package option `usenames' is obsolete and ignored on in
+put line 266.
 
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 LaTeX Info: Redefining \color on input line 758.
@@ -267,19 +270,21 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box57
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local
+/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks30
 \XKV@tempa@toks=\toks31
 )
 \XKV@depth=\count298
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
- (/usr/local/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box58
 )
@@ -288,7 +293,7 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen180
 \tc@ury=\dimen181
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen182
@@ -299,7 +304,7 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen187
 \adjbox@pdepth=\dimen188
 \adjbox@ptotalheight=\dimen189
- (/usr/local/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count299
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/varwidth/varwidth.sty
@@ -318,7 +323,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitdp@description=\count302
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -326,11 +331,12 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -340,21 +346,24 @@ Package pdftexcmds Info: \pdfdraftmode found.
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
- (/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count303
 ) (/usr/local/texlive/2024/texmf-dist/tex/generic/stringenc/stringenc.sty
-Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
 )
 \@linkdim=\dimen193
 \Hy@linkcounter=\count304
 \Hy@pagecounter=\count305
- (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
@@ -362,7 +371,7 @@ Now handling font encoding PD1 ...
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count306
- (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -378,16 +387,17 @@ Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count307
- (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
 \XeTeXLinkMargin=\dimen194
- (/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
 ))
 \Fld@menulength=\count308
 \Field@Width=\dimen195
@@ -399,7 +409,7 @@ Package hyperref Info: backreferencing OFF on input line 6057.
 Package hyperref Info: Link coloring ON on input line 6060.
 Package hyperref Info: Link coloring with OCG OFF on input line 6067.
 Package hyperref Info: PDF/A mode OFF on input line 6072.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -408,25 +418,29 @@ package with kernel methods
 \c@Hfootnote=\count311
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
- (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
 with kernel methods
 )
 \Fld@listcount=\count312
 \c@bookmark@seq@number=\count313
- (/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
 )
 \Hy@SectionHShift=\skip60
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
 \Gm@cnth=\count314
@@ -489,8 +503,9 @@ Package: siunitx 2024-08-01 v3.3.20 A comprehensive (SI) units package
 \l__siunitx_angle_marker_box=\box61
 \l__siunitx_angle_unit_box=\box62
 \l__siunitx_compound_count_int=\count333
- (/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
-Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
 )
 \l__siunitx_table_tmp_box=\box63
 \l__siunitx_table_tmp_dim=\dimen263
@@ -527,21 +542,27 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \c@LT@tables=\count340
 \c@LT@chunks=\count341
 \LT@p@ftn=\toks35
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box74
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/threeparttablex/threeparttablex.s
+ty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
- (/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
- (/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip79
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
- (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
-Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.st
+y
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
@@ -552,24 +573,36 @@ Package footmisc Info: Declaring symbol style bringhurst on input line 696.
 Package footmisc Info: Declaring symbol style chicago on input line 704.
 Package footmisc Info: Declaring symbol style wiley on input line 713.
 Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
+
 Package footmisc Info: Declaring symbol style lamport* on input line 744.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 765.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
+.
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/us
+r/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/te
+xlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
 \pgfutil@everybye=\toks37
 \pgfutil@tempdima=\dimen270
 \pgfutil@tempdimb=\dimen271
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box75
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/
+local/texlive/2024/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks38
 \pgfkeys@temptoks=\toks39
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
 \pgfkeys@tmptoks=\toks40
 ))
 \pgf@x=\dimen272
@@ -592,32 +625,65 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \t@pgf@tokb=\toks42
 \t@pgf@tokc=\toks43
 \pgf@sys@id@count=\count346
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+)))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count347
 \pgfsyssoftpath@bigbuffer@items=\count348
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr
+/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen282
 \pgfmath@count=\count349
 \pgfmath@box=\box76
 \pgfmath@toks=\toks44
 \pgfmath@stack@operand=\toks45
 \pgfmath@stack@operation=\toks46
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/mat
+h/pgfmathcalc.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/mat
+h/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count350
-)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen283
 \pgf@picmaxx=\dimen284
@@ -633,75 +699,124 @@ File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yy=\dimen294
 \pgf@zx=\dimen295
 \pgf@zy=\dimen296
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@path@lastx=\dimen297
 \pgf@path@lasty=\dimen298
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@end@additional=\dimen299
 \pgf@shorten@start@additional=\dimen300
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box77
 \pgf@hbox=\box78
 \pgf@layerbox@main=\box79
 \pgf@picture@serial@count=\count351
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen301
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen302
 \pgf@pt@y=\dimen303
 \pgf@pt@temp=\dimen304
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowsep=\dimen305
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen306
 \pgf@sys@shading@range@num=\count352
 \pgf@shadingcount=\count353
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfexternal@startupbox=\box80
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+)))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodeparttextbox=\box81
-) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepstart=\dimen307
 \pgf@nodesepend=\dimen308
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr
+/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/
+texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/loca
+l/texlive/2024/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/20
+24/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2024/
+texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen309
 \pgffor@skip=\dimen310
 \pgffor@stack=\toks47
 \pgffor@toks=\toks48
-)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count354
 \pgfplotmarksize=\dimen311
@@ -722,38 +837,52 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofchildren=\count356
 \tikznumberofcurrentchild=\count357
 \tikz@fig@count=\count358
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count359
 \pgfmatrixcurrentcolumn=\count360
 \pgf@matrix@numberofcolumns=\count361
 )
 \tikz@expandcount=\count362
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+)))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \arrowsize=\dimen320
-))) (./preamble_citation.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/biblatex-chicago.sty
+))) (./preamble_citation.tex
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/biblatex-chicago
+.sty
 Package: biblatex-chicago 2022/07/02 v 3.18 biblatex style
- (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+(/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local
+/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count363
 \xs_countb=\count364
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/logreq/logreq.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count365
- (/usr/local/texlive/2024/texmf-dist/tex/latex/logreq/logreq.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
@@ -817,7 +946,7 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \c@mincompwidth=\count411
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-dm.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -908,12 +1037,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip101
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-compat.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
 \c@textcitecount=\count480
 \c@textcitetotal=\count481
@@ -929,12 +1058,16 @@ File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip22
 \c@smartand=\count488
 )
-Package biblatex Info: Trying to load bibliography style 'chicago-authordate'...
+Package biblatex Info: Trying to load bibliography style 'chicago-authordate'..
+.
 Package biblatex Info: ... file 'chicago-authordate.bbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/chicago-authordate.bbx
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/chicago-authorda
+te.bbx
 File: chicago-authordate.bbx 2022/11/17 v 3.18b biblatex bibliography style
 \lositemsep=\skip102
-Package biblatex Info: Delimiter 'revsdnamedelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'revsdnamedelim' in context '' already defined
+, overwriting.
 \cms@tempcnta=\count489
 \cms@tempcntb=\count490
 \c@bbx:relatedcount=\count491
@@ -942,11 +1075,15 @@ Package biblatex Info: Delimiter 'revsdnamedelim' in context '' already defined,
 )
 Package biblatex Info: Trying to load citation style 'chicago-authordate'...
 Package biblatex Info: ... file 'chicago-authordate.cbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/chicago-authordate.cbx
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/chicago-authorda
+te.cbx
 File: chicago-authordate.cbx 2022/07/02 v 3.18 biblatex citation style
 Package biblatex Info: Trying to load citation style 'chicago-dates-common'...
 Package biblatex Info: ... file 'chicago-dates-common.cbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/chicago-dates-common.cbx
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/chicago-dates-co
+mmon.cbx
 File: chicago-dates-common.cbx 2024/04/15 v 3.20 biblatex citation style
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -962,18 +1099,19 @@ Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\footcites'.
 Package biblatex Info: Redefining '\footcitetexts'.
 \c@cms@punct=\count493
-Package biblatex Info: Delimiter 'dateeradelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'dateeradelim' in context '' already defined, 
+overwriting.
 ))
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.cfg
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
- (/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-07-20 L3 programming layer (loader) 
- (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count494
 \l__pdf_internal_box=\box86
@@ -982,13 +1120,14 @@ Package biblatex Info: ... and expl3
 (biblatex)             2024-07-20 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr
+/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-05-08 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 )))) (/usr/local/texlive/2024/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
- (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/xspace.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count495
@@ -1014,7 +1153,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./submit_journal.aux
+(./submit_journal.aux
 
 LaTeX Warning: Label `sub:lw-bias' multiply defined.
 
@@ -1039,7 +1178,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
- (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count513
 \scratchdimen=\dimen321
@@ -1054,24 +1193,25 @@ LaTeX Font Info:    ... okay on input line 13.
 \everyMPtoPDFconversion=\toks50
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 13.
- (./submit_journal.out) (./submit_journal.out)
+(./submit_journal.out) (./submit_journal.out)
 \@outlinefile=\write5
 \openout5 = `submit_journal.out'.
-
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1107,26 +1247,31 @@ Package hyperref Info: Link coloring ON on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
-File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-d
+ictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 13.
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 13.
 Package biblatex Info: Trying to load language 'english' -> 'cms-american'...
 Package biblatex Info: ... file 'cms-american.lbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex-chicago/cms-american.lbx
 File: cms-american.lbx 2022/07/02 v 3.18 biblatex localization
 Package biblatex Info: Trying to load language 'american'...
 Package biblatex Info: ... file 'american.lbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/american.lbx
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/american.lbx
 File: american.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 ))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(/usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 ))
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -1136,17 +1281,20 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'submit_journal.bbl' found.
- (./submit_journal.bbl)
+(./submit_journal.bbl)
 Package biblatex Info: Reference section=0 on input line 13.
 Package biblatex Info: Reference segment=0 on input line 13.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 28.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
+8.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./manuscript_title_etc.tex)
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./manuscript_title_et
+c.tex)
 
 [1
 
@@ -1163,39 +1311,47 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 [4
 
 ] (./manuscript_main.tex
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 7
+.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for U+zeur on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/uzeur.fd
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 )
 LaTeX Font Info:    Trying to load font information for U+zeus on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/uzeus.fd
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for U+zeuex on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/uzeuex.fd
+LaTeX Font Info:    Trying to load font information for U+zeuex on input line 7
+.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 7.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+7.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 Overfull \hbox (6.5355pt too wide) in paragraph at lines 7--8
-[]\T1/ppl/m/n/12 Asian Amer-i-cans rep-re-sent the fastest-growing racial group in the United States,
+[]\T1/ppl/m/n/12 Asian Amer-i-cans rep-re-sent the fastest-growing racial group
+ in the United States,
  []
 
 
 Overfull \hbox (1.1714pt too wide) in paragraph at lines 9--10
-[]\T1/ppl/m/n/12 An ex-ten-sive lit-er-a-ture has doc-u-mented Asian-White gaps in var-i-ous out-comes
+[]\T1/ppl/m/n/12 An ex-ten-sive lit-er-a-ture has doc-u-mented Asian-White gaps
+ in var-i-ous out-comes
  []
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.10 
@@ -1205,7 +1361,8 @@ l.10
 
 [2]
 Overfull \hbox (3.7869pt too wide) in paragraph at lines 19--20
-[]\T1/ppl/m/n/12 I doc-u-ment that height-ened anti-Asian bias cor-re-lates with re-duced Asian racial
+[]\T1/ppl/m/n/12 I doc-u-ment that height-ened anti-Asian bias cor-re-lates wit
+h re-duced Asian racial
  []
 
 
@@ -1214,46 +1371,50 @@ Overfull \hbox (3.7869pt too wide) in paragraph at lines 19--20
 
 [4]
 Overfull \hbox (2.74678pt too wide) in paragraph at lines 25--26
-\T1/ppl/m/n/12 Asian mother adults move out of ``Asian only'' (about --0.13) into mul-tira-cial (about
+\T1/ppl/m/n/12 Asian mother adults move out of ``Asian only'' (about --0.13) in
+to mul-tira-cial (about
  []
 
 
-Package biblatex-chicago Warning: Empty Ibidem citation on input line 27.
-
-
 Overfull \hbox (4.24289pt too wide) in paragraph at lines 27--28
-[]\T1/ppl/m/n/12 This re-search con-tributes to mul-ti-ple bod-ies of schol-arly lit-er-a-ture in eco-nomics.
+[]\T1/ppl/m/n/12 This re-search con-tributes to mul-ti-ple bod-ies of schol-arl
+y lit-er-a-ture in eco-nomics.
  []
 
 
 
 [5]
 Overfull \hbox (3.31926pt too wide) in paragraph at lines 31--32
-[]\T1/ppl/m/n/12 Similarly, be-hav-ioral stud-ies have doc-u-mented how dis-crim-i-na-tion ex-pe-ri-ences
+[]\T1/ppl/m/n/12 Similarly, be-hav-ioral stud-ies have doc-u-mented how dis-cri
+m-i-na-tion ex-pe-ri-ences
  []
 
 
 
 [6]
 Overfull \hbox (5.75897pt too wide) in paragraph at lines 35--36
-\T1/ppl/m/n/12 am-in-ing how Asian Amer-i-cans nav-i-gate as-sim-i-la-tion pro-cesses ([]Abramitzky, Bous-
+\T1/ppl/m/n/12 am-in-ing how Asian Amer-i-cans nav-i-gate as-sim-i-la-tion pro-
+cesses ([]Abramitzky, Bous-
  []
 
 
 
 [7]
 Overfull \hbox (6.51474pt too wide) in paragraph at lines 39--40
-\T1/ppl/m/n/12 in-flu-ence eco-nomic decision-making, while []Bonomi, Gen-naioli, and Tabellini ([][]2021[][])
+\T1/ppl/m/n/12 in-flu-ence eco-nomic decision-making, while []Bonomi, Gen-naiol
+i, and Tabellini ([][]2021[][])
  []
 
 
 Overfull \hbox (56.6379pt too wide) in paragraph at lines 41--42
-\T1/ppl/m/n/12 present for other groups. The em-pir-i-cal anal-y-sis doc-u-ments how ob-serv-able characteristics---
+\T1/ppl/m/n/12 present for other groups. The em-pir-i-cal anal-y-sis doc-u-ment
+s how ob-serv-able characteristics---
  []
 
 
 Overfull \hbox (8.74608pt too wide) in paragraph at lines 41--42
-\T1/ppl/m/n/12 individual traits and so-ci-etal attitudes---affect racial iden-tity re-port-ing among Asian
+\T1/ppl/m/n/12 individual traits and so-ci-etal attitudes---affect racial iden-
+tity re-port-ing among Asian
  []
 
 
@@ -1266,48 +1427,56 @@ Overfull \hbox (8.74608pt too wide) in paragraph at lines 41--42
 
 [11]
 Overfull \hbox (2.97177pt too wide) in paragraph at lines 87--88
-[]\T1/ppl/m/n/12 Note that while the an-ces-try mea-sure pro-vides an ob-jec-tive as-sess-ment of Asian
+[]\T1/ppl/m/n/12 Note that while the an-ces-try mea-sure pro-vides an ob-jec-ti
+ve as-sess-ment of Asian
  []
 
 
 
 [12]
 Overfull \hbox (8.1918pt too wide) in paragraph at lines 91--92
-[]\T1/ppl/m/n/12 My data shows con-sis-tent Asian iden-tity re-port-ing re-gard-less of whether mother
+[]\T1/ppl/m/n/12 My data shows con-sis-tent Asian iden-tity re-port-ing re-gard
+-less of whether mother
  []
 
 
 Overfull \hbox (3.76373pt too wide) in paragraph at lines 93--94
-[]\T1/ppl/m/n/12 The over-all sam-ple com-prises 49% fe-males, with 65% self-reporting Asian racial
+[]\T1/ppl/m/n/12 The over-all sam-ple com-prises 49% fe-males, with 65% self-re
+porting Asian racial
  []
 
 
 
 [13]
 Overfull \hbox (15.82648pt too wide) in paragraph at lines 95--97
-\T1/ppl/m/n/12 ces-try and cat-e-go-rize dif-fer-ent fam-ily types. For second-generation chil-dren, parental
+\T1/ppl/m/n/12 ces-try and cat-e-go-rize dif-fer-ent fam-ily types. For second-
+generation chil-dren, parental
  []
 
 
 Overfull \hbox (0.74278pt too wide) in paragraph at lines 102--103
-\T1/ppl/m/n/12 (2) ob-jec-tively White pa-ter-nal grandfather-Asian pa-ter-nal grandmother-Asian ma-
+\T1/ppl/m/n/12 (2) ob-jec-tively White pa-ter-nal grandfather-Asian pa-ter-nal 
+grandmother-Asian ma-
  []
 
 
 Overfull \hbox (9.00652pt too wide) in paragraph at lines 108--109
-[]\T1/ppl/m/n/12 I con-struct anti-Asian sen-ti-ment mea-sures us-ing im-plicit as-so-ci-a-tion tests, Amer-
+[]\T1/ppl/m/n/12 I con-struct anti-Asian sen-ti-ment mea-sures us-ing im-plicit
+ as-so-ci-a-tion tests, Amer-
  []
 
 
 
 [14]
 Overfull \hbox (3.92242pt too wide) in paragraph at lines 112--113
-\T1/ppl/m/n/12 demon-strates the dif-fi-culty of ma-nip-u-lat-ing IAT scores ([]Egloff and Schmukle [][]2002[][]).
+\T1/ppl/m/n/12 demon-strates the dif-fi-culty of ma-nip-u-lat-ing IAT scores ([
+]Egloff and Schmukle [][]2002[][]).
  []
 
 
 Overfull \hbox (3.34605pt too wide) in paragraph at lines 114--115
-\T1/ppl/m/n/12 hav-iors. Re-search shows im-plicit bi-ases ex-pe-ri-ence mi-nor, tem-po-rary intervention-
+\T1/ppl/m/n/12 hav-iors. Re-search shows im-plicit bi-ases ex-pe-ri-ence mi-nor
+, tem-po-rary intervention-
  []
 
 
@@ -1316,26 +1485,30 @@ Overfull \hbox (3.34605pt too wide) in paragraph at lines 114--115
 
 [16]
 Overfull \hbox (13.28268pt too wide) in paragraph at lines 118--119
-\T1/ppl/m/n/12 hen-sive un-der-stand-ing of prej-u-dice across states. This mul-ti-di-men-sional approach---
+\T1/ppl/m/n/12 hen-sive un-der-stand-ing of prej-u-dice across states. This mul
+-ti-di-men-sional approach---
  []
 
 
 
 [17]
 Overfull \hbox (12.89925pt too wide) in paragraph at lines 126--127
-[][]\T1/ppl/m/n/12 5[][]), 63% re-port Asian only iden-tity, 15% White only, and 15% Asian and White/Pacific
+[][]\T1/ppl/m/n/12 5[][]), 63% re-port Asian only iden-tity, 15% White only, an
+d 15% Asian and White/Pacific
  []
 
 
 
 [18]
 Overfull \hbox (8.77937pt too wide) in paragraph at lines 130--131
-[]\T1/ppl/m/n/12 These pat-terns demon-strate that racial iden-tity be-comes in-creas-ingly fluid across
+[]\T1/ppl/m/n/12 These pat-terns demon-strate that racial iden-tity be-comes in
+-creas-ingly fluid across
  []
 
 
 Overfull \hbox (6.05876pt too wide) in paragraph at lines 130--131
-\T1/ppl/m/n/12 tween an-ces-tral back-ground and self-reported racial iden-tity when an-a-lyz-ing Asian
+\T1/ppl/m/n/12 tween an-ces-tral back-ground and self-reported racial iden-tity
+ when an-a-lyz-ing Asian
  []
 
 
@@ -1346,7 +1519,8 @@ Overfull \hbox (6.05876pt too wide) in paragraph at lines 130--131
 
 [21]
 Overfull \hbox (8.49416pt too wide) in paragraph at lines 161--162
-\T1/ppl/m/n/12 tanc-ing (re-port-ing ``White only'') and main-tain-ing par-tial eth-nic con-nec-tion through
+\T1/ppl/m/n/12 tanc-ing (re-port-ing ``White only'') and main-tain-ing par-tial
+ eth-nic con-nec-tion through
  []
 
 
@@ -1355,19 +1529,22 @@ Overfull \hbox (8.49416pt too wide) in paragraph at lines 161--162
 
 [23]
 Overfull \hbox (7.91524pt too wide) in paragraph at lines 177--178
-[]\T1/ppl/m/n/12 Adult second-generation re-sults show even larger het-ero-gene-ity by fam-ily struc-
+[]\T1/ppl/m/n/12 Adult second-generation re-sults show even larger het-ero-gene
+-ity by fam-ily struc-
  []
 
 
 
 [24]
 Overfull \hbox (10.97585pt too wide) in paragraph at lines 179--180
-[]\T1/ppl/m/n/12 Third-generation re-sults by num-ber of Asian grand-par-ents (Ta-ble [][]6[][]) show mostly
+[]\T1/ppl/m/n/12 Third-generation re-sults by num-ber of Asian grand-par-ents (
+Ta-ble [][]6[][]) show mostly
  []
 
 
 Overfull \hbox (9.08217pt too wide) in paragraph at lines 179--180
-\T1/ppl/m/n/12 sta-tis-ti-cally in-signif-i-cant bias ef-fects, ex-cept among chil-dren with three Asian grand-
+\T1/ppl/m/n/12 sta-tis-ti-cally in-signif-i-cant bias ef-fects, ex-cept among c
+hil-dren with three Asian grand-
  []
 
 
@@ -1376,19 +1553,22 @@ Overfull \hbox (9.08217pt too wide) in paragraph at lines 179--180
 
 [26]
 Overfull \hbox (8.36101pt too wide) in paragraph at lines 194--195
-[]\T1/ppl/b/n/12 Third-Generation Sub-sam-ple by Grand-par-ent Com-po-si-tion. \T1/ppl/m/n/12 Third-generation
+[]\T1/ppl/b/n/12 Third-Generation Sub-sam-ple by Grand-par-ent Com-po-si-tion. 
+\T1/ppl/m/n/12 Third-generation
  []
 
 
 Overfull \hbox (1.70207pt too wide) in paragraph at lines 194--195
-\T1/ppl/m/n/12 grand-par-ent, tilt-ing prob-a-bil-ity mod-estly to-ward mul-tira-cial iden-tity (about +0.04)
+\T1/ppl/m/n/12 grand-par-ent, tilt-ing prob-a-bil-ity mod-estly to-ward mul-tir
+a-cial iden-tity (about +0.04)
  []
 
 
 
 [27]
 Overfull \hbox (1.33073pt too wide) in paragraph at lines 198--199
-\T1/ppl/m/n/12 Asian grand-par-ents), while parental ed-u-ca-tion of-ten shifts mixed-ancestry re-spon-
+\T1/ppl/m/n/12 Asian grand-par-ents), while parental ed-u-ca-tion of-ten shifts
+ mixed-ancestry re-spon-
  []
 
 
@@ -1397,19 +1577,24 @@ Overfull \hbox (1.33073pt too wide) in paragraph at lines 198--199
 
 [29]
 Overfull \hbox (23.23366pt too wide) in paragraph at lines 226--227
-\T1/ppl/m/n/12 view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 lives in a state dif-fer-ent from their birth state, and $\U/zeur/m/n/12 BirthPlaceMigration[]$
+\T1/ppl/m/n/12 view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 lives in a state dif
+-fer-ent from their birth state, and $\U/zeur/m/n/12 BirthPlaceMigration[]$
  []
 
 
 Overfull \hbox (49.24034pt too wide) in paragraph at lines 228--229
-\T1/ppl/m/n/12 la-tion-ships be-tween av-er-age bias at in-ter-view time $\U/zeur/m/n/12 t$ \T1/ppl/m/n/12 in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 and $\U/zeur/m/n/12 BirthPlaceMigration[]$\T1/ppl/m/n/12 .
+\T1/ppl/m/n/12 la-tion-ships be-tween av-er-age bias at in-ter-view time $\U/ze
+ur/m/n/12 t$ \T1/ppl/m/n/12 in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 and $\U/
+zeur/m/n/12 BirthPlaceMigration[]$\T1/ppl/m/n/12 .
  []
 
 
 
 [30]
 Overfull \hbox (14.07767pt too wide) in paragraph at lines 238--239
-\T1/ppl/m/n/12 re-sents per-son $\U/zeur/m/n/12 i$\T1/ppl/m/n/12 's anti-Asian bias in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 at in-ter-view time $\U/zeur/m/n/12 t$\T1/ppl/m/n/12 , and $\U/zeur/m/n/12 AntiAsianBias[]$
+\T1/ppl/m/n/12 re-sents per-son $\U/zeur/m/n/12 i$\T1/ppl/m/n/12 's anti-Asian 
+bias in state $\U/zeur/m/n/12 s$ \T1/ppl/m/n/12 at in-ter-view time $\U/zeur/m/
+n/12 t$\T1/ppl/m/n/12 , and $\U/zeur/m/n/12 AntiAsianBias[]$
  []
 
 
@@ -1418,36 +1603,42 @@ Overfull \hbox (14.07767pt too wide) in paragraph at lines 238--239
 
 [32]
 Overfull \hbox (2.20256pt too wide) in paragraph at lines 254--255
-[]\T1/ppl/m/n/12 I find that in-di-vid-u-als with Asian an-ces-try are sig-nif-i-cantly less likely to racially
+[]\T1/ppl/m/n/12 I find that in-di-vid-u-als with Asian an-ces-try are sig-nif-
+i-cantly less likely to racially
  []
 
 
 
 [33]
 Overfull \hbox (6.02287pt too wide) in paragraph at lines 256--257
-\T1/ppl/m/n/12 more pro-nounced pat-terns, with second-generation adults from White father-Asian
+\T1/ppl/m/n/12 more pro-nounced pat-terns, with second-generation adults from W
+hite father-Asian
  []
 
 
 Overfull \hbox (6.71901pt too wide) in paragraph at lines 258--259
-\T1/ppl/m/n/12 Asian father-White mother re-spon-dents to-ward ``White only'' iden-tity (about +0.14)
+\T1/ppl/m/n/12 Asian father-White mother re-spon-dents to-ward ``White only'' i
+den-tity (about +0.14)
  []
 
 
 Overfull \hbox (1.70305pt too wide) in paragraph at lines 258--259
-\T1/ppl/m/n/12 and away from mul-tira-cial iden-tity (about --0.11), while White father-Asian mother
+\T1/ppl/m/n/12 and away from mul-tira-cial iden-tity (about --0.11), while Whit
+e father-Asian mother
  []
 
 
 Overfull \hbox (0.35925pt too wide) in paragraph at lines 258--259
-\T1/ppl/m/n/12 with two Asian grand-par-ents, higher bias shifts re-port-ing away from ``Asian only''
+\T1/ppl/m/n/12 with two Asian grand-par-ents, higher bias shifts re-port-ing aw
+ay from ``Asian only''
  []
 
 
 
 [34]
 Overfull \hbox (13.29414pt too wide) in paragraph at lines 264--265
-\T1/ppl/m/n/12 and other com-mu-ni-ties face dis-tinct stereo-types and dis-crim-i-na-tion pat-terns. Fourth,
+\T1/ppl/m/n/12 and other com-mu-ni-ties face dis-tinct stereo-types and dis-cri
+m-i-na-tion pat-terns. Fourth,
  []
 
 
@@ -1456,26 +1647,30 @@ Overfull \hbox (13.29414pt too wide) in paragraph at lines 264--265
 
 [36]
 Overfull \hbox (1.2156pt too wide) in paragraph at lines 130--130
-\T1/ppl/m/n/12 and the Ob-served Health of Later-Generation Mex-i-can Amer-i-cans.^^Q \T1/ppl/m/it/12 The Amer-
+\T1/ppl/m/n/12 and the Ob-served Health of Later-Generation Mex-i-can Amer-i-ca
+ns.^^Q \T1/ppl/m/it/12 The Amer-
  []
 
 
 
 [37]
 Overfull \hbox (19.1463pt too wide) in paragraph at lines 130--130
-[][]\T1/ppl/m/n/12 Bureau of Jus-tice Statis-tics. 2023. \T1/ppl/m/it/12 Uni-form Crime Re-port-ing Pro-gram Data Se-ries [Dataset].
+[][]\T1/ppl/m/n/12 Bureau of Jus-tice Statis-tics. 2023. \T1/ppl/m/it/12 Uni-fo
+rm Crime Re-port-ing Pro-gram Data Se-ries [Dataset].
  []
 
 
 Overfull \hbox (3.56932pt too wide) in paragraph at lines 130--130
-[][]\T1/ppl/m/n/12 Charness, Gary, and Yan Chen. 2020. ^^P  So-cial Iden-tity, Group Be-hav-ior, and Teams.^^Q
+[][]\T1/ppl/m/n/12 Charness, Gary, and Yan Chen. 2020. ^^P  So-cial Iden-tity, 
+Group Be-hav-ior, and Teams.^^Q
  []
 
 
 
 [38]
 Overfull \hbox (0.16231pt too wide) in paragraph at lines 130--130
-\T1/ppl/m/it/12 The Sec-ond Gen-er-a-tion and Be-yond. \T1/ppl/m/n/12 Work-ing Pa-per, Work-ing Pa-per Se-ries 24394.
+\T1/ppl/m/it/12 The Sec-ond Gen-er-a-tion and Be-yond. \T1/ppl/m/n/12 Work-ing 
+Pa-per, Work-ing Pa-per Se-ries 24394.
  []
 
 
@@ -1484,17 +1679,20 @@ Overfull \hbox (0.16231pt too wide) in paragraph at lines 130--130
 
 [40]
 Overfull \hbox (8.57233pt too wide) in paragraph at lines 130--130
-\T1/ppl/m/n/12 2016. ^^P  Racial Bias Is As-so-ci-ated with In-group Death Rate for Blacks and Whites:
+\T1/ppl/m/n/12 2016. ^^P  Racial Bias Is As-so-ci-ated with In-group Death Rate
+ for Blacks and Whites:
  []
 
 
 Overfull \hbox (10.43727pt too wide) in paragraph at lines 130--130
-\T1/ppl/m/n/12 immigrant re-sent-ment: Ev-i-dence from Cal-i-for-nia.^^Q In \T1/ppl/m/it/12 So-ci-o-log-i-cal Fo-rum, \T1/ppl/m/n/12 35:918^^U
+\T1/ppl/m/n/12 immigrant re-sent-ment: Ev-i-dence from Cal-i-for-nia.^^Q In \T1
+/ppl/m/it/12 So-ci-o-log-i-cal Fo-rum, \T1/ppl/m/n/12 35:918^^U
  []
 
 
 Overfull \hbox (5.29546pt too wide) in paragraph at lines 130--130
-[][]\T1/ppl/m/n/12 Telles, Ed-ward E, and Vilma Or-tiz. 2008. \T1/ppl/m/it/12 Gen-er-a-tions of ex-clu-sion: Mexican-Americans,
+[][]\T1/ppl/m/n/12 Telles, Ed-ward E, and Vilma Or-tiz. 2008. \T1/ppl/m/it/12 G
+en-er-a-tions of ex-clu-sion: Mexican-Americans,
  []
 
 
@@ -1539,17 +1737,17 @@ Overfull \vbox (22.86687pt too high) has occurred while \output is active []
 [47] (./tab41a-marriage.tex)
 
 [48]
-<diag.png, id=662, 673.51625pt x 492.84125pt>
+<diag.png, id=661, 673.51625pt x 492.84125pt>
 File: diag.png Graphic file (type png)
 <use diag.png>
 Package pdftex.def Info: diag.png  used on input line 79.
 (pdftex.def)             Requested size: 430.01096pt x 256.08339pt.
-<Bias_twostates.png, id=664, 722.7pt x 289.08pt>
+<Bias_twostates.png, id=663, 722.7pt x 289.08pt>
 File: Bias_twostates.png Graphic file (type png)
 <use Bias_twostates.png>
 Package pdftex.def Info: Bias_twostates.png  used on input line 100.
 (pdftex.def)             Requested size: 348.299pt x 139.32143pt.
-<Bias_twostates-asian.png, id=665, 722.7pt x 289.08pt>
+<Bias_twostates-asian.png, id=664, 722.7pt x 289.08pt>
 File: Bias_twostates-asian.png Graphic file (type png)
 <use Bias_twostates-asian.png>
 Package pdftex.def Info: Bias_twostates-asian.png  used on input line 107.
@@ -1564,30 +1762,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--111
 [49 <./diag.png>]
 
 [50 <./Bias_twostates.png> <./Bias_twostates-asian.png>]
-<2004skinmap.png, id=676, 722.7pt x 361.35pt>
+<2004skinmap.png, id=675, 722.7pt x 361.35pt>
 File: 2004skinmap.png Graphic file (type png)
 <use 2004skinmap.png>
 Package pdftex.def Info: 2004skinmap.png  used on input line 132.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2008skinmap.png, id=677, 722.7pt x 361.35pt>
+<2008skinmap.png, id=676, 722.7pt x 361.35pt>
 File: 2008skinmap.png Graphic file (type png)
 <use 2008skinmap.png>
 Package pdftex.def Info: 2008skinmap.png  used on input line 140.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2012skinmap.png, id=678, 722.7pt x 361.35pt>
+<2012skinmap.png, id=677, 722.7pt x 361.35pt>
 File: 2012skinmap.png Graphic file (type png)
 <use 2012skinmap.png>
 Package pdftex.def Info: 2012skinmap.png  used on input line 148.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
-<2016skinmap.png, id=679, 722.7pt x 361.35pt>
+<2016skinmap.png, id=678, 722.7pt x 361.35pt>
 File: 2016skinmap.png Graphic file (type png)
 <use 2016skinmap.png>
 Package pdftex.def Info: 2016skinmap.png  used on input line 156.
 (pdftex.def)             Requested size: 174.14949pt x 87.07314pt.
 
 
-[51 <./2004skinmap.png> <./2008skinmap.png> <./2012skinmap.png> <./2016skinmap.png>]
-<Average_Skinmap.png, id=686, 722.7pt x 361.35pt>
+[51 <./2004skinmap.png> <./2008skinmap.png> <./2012skinmap.png> <./2016skinmap.
+png>]
+<Average_Skinmap.png, id=685, 722.7pt x 361.35pt>
 File: Average_Skinmap.png Graphic file (type png)
 <use Average_Skinmap.png>
 Package pdftex.def Info: Average_Skinmap.png  used on input line 170.
@@ -1595,87 +1794,108 @@ Package pdftex.def Info: Average_Skinmap.png  used on input line 170.
 
 
 [52 <./Average_Skinmap.png>]
-<histogram_asian_american_race_aggregated.png, id=693, 722.7pt x 433.62pt>
+<histogram_asian_american_race_aggregated.png, id=692, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_aggregated.png Graphic file (type png)
 <use histogram_asian_american_race_aggregated.png>
-Package pdftex.def Info: histogram_asian_american_race_aggregated.png  used on input line 187.
+Package pdftex.def Info: histogram_asian_american_race_aggregated.png  used on 
+input line 187.
 (pdftex.def)             Requested size: 430.00462pt x 258.0038pt.
 
 
 [53 <./histogram_asian_american_race_aggregated.png>]
-<histogram_asian_american_race_firstgen.png, id=702, 722.7pt x 433.62pt>
+<histogram_asian_american_race_firstgen.png, id=701, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_firstgen.png Graphic file (type png)
 <use histogram_asian_american_race_firstgen.png>
-Package pdftex.def Info: histogram_asian_american_race_firstgen.png  used on input line 204.
+Package pdftex.def Info: histogram_asian_american_race_firstgen.png  used on in
+put line 204.
 (pdftex.def)             Requested size: 430.00462pt x 258.0038pt.
 
 
 [54 <./histogram_asian_american_race_firstgen.png>]
-<histogram_asian_american_race_secondgen.png, id=711, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen.png, id=710, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen.png>
-Package pdftex.def Info: histogram_asian_american_race_secondgen.png  used on input line 230.
+Package pdftex.def Info: histogram_asian_american_race_secondgen.png  used on i
+nput line 230.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
 
 Underfull \hbox (badness 1953) in paragraph at lines 234--234
 []\T1/ppl/m/n/10.95 (b) |Sec-ond Gen-er-a-tion: Asian Fathers-
  []
 
-<histogram_asian_american_race_secondgen_AA.png, id=712, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen_AA.png, id=711, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen_AA.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen_AA.png>
-Package pdftex.def Info: histogram_asian_american_race_secondgen_AA.png  used on input line 236.
+Package pdftex.def Info: histogram_asian_american_race_secondgen_AA.png  used o
+n input line 236.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
 
 Underfull \hbox (badness 2285) in paragraph at lines 243--243
 []\T1/ppl/m/n/10.95 (c) |Sec-ond Gen-er-a-tion: Asian Fathers-
  []
 
-<histogram_asian_american_race_secondgen_AW.png, id=713, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen_AW.png, id=712, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen_AW.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen_AW.png>
-Package pdftex.def Info: histogram_asian_american_race_secondgen_AW.png  used on input line 245.
+Package pdftex.def Info: histogram_asian_american_race_secondgen_AW.png  used o
+n input line 245.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
 
 Underfull \hbox (badness 1521) in paragraph at lines 249--249
 []\T1/ppl/m/n/10.95 (d) |Sec-ond Gen-er-a-tion: White Fathers-
  []
 
-<histogram_asian_american_race_secondgen_WA.png, id=714, 722.7pt x 433.62pt>
+<histogram_asian_american_race_secondgen_WA.png, id=713, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_secondgen_WA.png Graphic file (type png)
 <use histogram_asian_american_race_secondgen_WA.png>
-Package pdftex.def Info: histogram_asian_american_race_secondgen_WA.png  used on input line 251.
+Package pdftex.def Info: histogram_asian_american_race_secondgen_WA.png  used o
+n input line 251.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
 
 LaTeX Warning: Float too large for page by 32.78012pt on input line 264.
 
 
 
-[55 <./histogram_asian_american_race_secondgen.png> <./histogram_asian_american_race_secondgen_AA.png> <./histogram_asian_american_race_secondgen_AW.png> <./histogram_asian_american_race_secondgen_WA.png>]
-<histogram_asian_american_race_thirdgen.png, id=723, 722.7pt x 433.62pt>
+[55 <./histogram_asian_american_race_secondgen.png> <./histogram_asian_american
+_race_secondgen_AA.png> <./histogram_asian_american_race_secondgen_AW.png> <./h
+istogram_asian_american_race_secondgen_WA.png>]
+<histogram_asian_american_race_thirdgen.png, id=722, 722.7pt x 433.62pt>
 File: histogram_asian_american_race_thirdgen.png Graphic file (type png)
 <use histogram_asian_american_race_thirdgen.png>
-Package pdftex.def Info: histogram_asian_american_race_thirdgen.png  used on input line 283.
+Package pdftex.def Info: histogram_asian_american_race_thirdgen.png  used on in
+put line 283.
 (pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
-<histogram_asian_american_race_thirdgen_oneasiangran.png, id=724, 722.7pt x 433.62pt>
-File: histogram_asian_american_race_thirdgen_oneasiangran.png Graphic file (type png)
+<histogram_asian_american_race_thirdgen_oneasiangran.png, id=723, 722.7pt x 433
+.62pt>
+File: histogram_asian_american_race_thirdgen_oneasiangran.png Graphic file (typ
+e png)
 <use histogram_asian_american_race_thirdgen_oneasiangran.png>
-Package pdftex.def Info: histogram_asian_american_race_thirdgen_oneasiangran.png  used on input line 289.
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_oneasiangran.pn
+g  used on input line 289.
 (pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
-<histogram_asian_american_race_thirdgen_twoasiangran.png, id=725, 722.7pt x 433.62pt>
-File: histogram_asian_american_race_thirdgen_twoasiangran.png Graphic file (type png)
+<histogram_asian_american_race_thirdgen_twoasiangran.png, id=724, 722.7pt x 433
+.62pt>
+File: histogram_asian_american_race_thirdgen_twoasiangran.png Graphic file (typ
+e png)
 <use histogram_asian_american_race_thirdgen_twoasiangran.png>
-Package pdftex.def Info: histogram_asian_american_race_thirdgen_twoasiangran.png  used on input line 295.
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_twoasiangran.pn
+g  used on input line 295.
 (pdftex.def)             Requested size: 137.60461pt x 82.56068pt.
-<histogram_asian_american_race_thirdgen_threeasiangran.png, id=726, 722.7pt x 433.62pt>
-File: histogram_asian_american_race_thirdgen_threeasiangran.png Graphic file (type png)
+<histogram_asian_american_race_thirdgen_threeasiangran.png, id=725, 722.7pt x 4
+33.62pt>
+File: histogram_asian_american_race_thirdgen_threeasiangran.png Graphic file (t
+ype png)
 <use histogram_asian_american_race_thirdgen_threeasiangran.png>
-Package pdftex.def Info: histogram_asian_american_race_thirdgen_threeasiangran.png  used on input line 305.
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_threeasiangran.
+png  used on input line 305.
 (pdftex.def)             Requested size: 171.99922pt x 103.19754pt.
-<histogram_asian_american_race_thirdgen_fourasiangran.png, id=727, 722.7pt x 433.62pt>
-File: histogram_asian_american_race_thirdgen_fourasiangran.png Graphic file (type png)
+<histogram_asian_american_race_thirdgen_fourasiangran.png, id=726, 722.7pt x 43
+3.62pt>
+File: histogram_asian_american_race_thirdgen_fourasiangran.png Graphic file (ty
+pe png)
 <use histogram_asian_american_race_thirdgen_fourasiangran.png>
-Package pdftex.def Info: histogram_asian_american_race_thirdgen_fourasiangran.png  used on input line 311.
+Package pdftex.def Info: histogram_asian_american_race_thirdgen_fourasiangran.p
+ng  used on input line 311.
 (pdftex.def)             Requested size: 171.99922pt x 103.19754pt.
 
 
@@ -1683,102 +1903,120 @@ Package pdftex.def Info: histogram_asian_american_race_thirdgen_fourasiangran.pn
 
 
 
- <./histogram_asian_american_race_thirdgen.png> <./histogram_asian_american_race_thirdgen_oneasiangran.png> <./histogram_asian_american_race_thirdgen_twoasiangran.png> <./histogram_asian_american_race_thirdgen_threeasiangran.png> <./histogram_asian_american_race_thirdgen_fourasiangran.png>]
-<skin-iat-regression-all-gens.png, id=737, 722.7pt x 289.08pt>
+ <./histogram_asian_american_race_thirdgen.png> <./histogram_asian_american_rac
+e_thirdgen_oneasiangran.png> <./histogram_asian_american_race_thirdgen_twoasian
+gran.png> <./histogram_asian_american_race_thirdgen_threeasiangran.png> <./hist
+ogram_asian_american_race_thirdgen_fourasiangran.png>]
+<skin-iat-regression-all-gens.png, id=736, 722.7pt x 289.08pt>
 File: skin-iat-regression-all-gens.png Graphic file (type png)
 <use skin-iat-regression-all-gens.png>
-Package pdftex.def Info: skin-iat-regression-all-gens.png  used on input line 346.
+Package pdftex.def Info: skin-iat-regression-all-gens.png  used on input line 3
+46.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-first-gen.png, id=738, 722.7pt x 289.08pt>
+<skin-iat-regression-first-gen.png, id=737, 722.7pt x 289.08pt>
 File: skin-iat-regression-first-gen.png Graphic file (type png)
 <use skin-iat-regression-first-gen.png>
-Package pdftex.def Info: skin-iat-regression-first-gen.png  used on input line 353.
+Package pdftex.def Info: skin-iat-regression-first-gen.png  used on input line 
+353.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-second-gen.png, id=739, 722.7pt x 289.08pt>
+<skin-iat-regression-second-gen.png, id=738, 722.7pt x 289.08pt>
 File: skin-iat-regression-second-gen.png Graphic file (type png)
 <use skin-iat-regression-second-gen.png>
-Package pdftex.def Info: skin-iat-regression-second-gen.png  used on input line 359.
+Package pdftex.def Info: skin-iat-regression-second-gen.png  used on input line
+ 359.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-third-gen.png, id=740, 722.7pt x 289.08pt>
+<skin-iat-regression-third-gen.png, id=739, 722.7pt x 289.08pt>
 File: skin-iat-regression-third-gen.png Graphic file (type png)
 <use skin-iat-regression-third-gen.png>
-Package pdftex.def Info: skin-iat-regression-third-gen.png  used on input line 365.
+Package pdftex.def Info: skin-iat-regression-third-gen.png  used on input line 
+365.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
 [57
 
- <./skin-iat-regression-all-gens.png> <./skin-iat-regression-first-gen.png> <./skin-iat-regression-second-gen.png> <./skin-iat-regression-third-gen.png>]
-<skin-iat-regression-all-gens-adults.png, id=747, 722.7pt x 289.08pt>
+ <./skin-iat-regression-all-gens.png> <./skin-iat-regression-first-gen.png> <./
+skin-iat-regression-second-gen.png> <./skin-iat-regression-third-gen.png>]
+<skin-iat-regression-all-gens-adults.png, id=746, 722.7pt x 289.08pt>
 File: skin-iat-regression-all-gens-adults.png Graphic file (type png)
 <use skin-iat-regression-all-gens-adults.png>
-Package pdftex.def Info: skin-iat-regression-all-gens-adults.png  used on input line 384.
+Package pdftex.def Info: skin-iat-regression-all-gens-adults.png  used on input
+ line 384.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-first-gen-adults.png, id=748, 722.7pt x 289.08pt>
+<skin-iat-regression-first-gen-adults.png, id=747, 722.7pt x 289.08pt>
 File: skin-iat-regression-first-gen-adults.png Graphic file (type png)
 <use skin-iat-regression-first-gen-adults.png>
-Package pdftex.def Info: skin-iat-regression-first-gen-adults.png  used on input line 391.
+Package pdftex.def Info: skin-iat-regression-first-gen-adults.png  used on inpu
+t line 391.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<skin-iat-regression-second-gen-adults.png, id=749, 722.7pt x 289.08pt>
+<skin-iat-regression-second-gen-adults.png, id=748, 722.7pt x 289.08pt>
 File: skin-iat-regression-second-gen-adults.png Graphic file (type png)
 <use skin-iat-regression-second-gen-adults.png>
-Package pdftex.def Info: skin-iat-regression-second-gen-adults.png  used on input line 397.
+Package pdftex.def Info: skin-iat-regression-second-gen-adults.png  used on inp
+ut line 397.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[58 <./skin-iat-regression-all-gens-adults.png> <./skin-iat-regression-first-gen-adults.png> <./skin-iat-regression-second-gen-adults.png>]
-<by-parents-regs-all.png, id=756, 722.7pt x 289.08pt>
+[58 <./skin-iat-regression-all-gens-adults.png> <./skin-iat-regression-first-ge
+n-adults.png> <./skin-iat-regression-second-gen-adults.png>]
+<by-parents-regs-all.png, id=755, 722.7pt x 289.08pt>
 File: by-parents-regs-all.png Graphic file (type png)
 <use by-parents-regs-all.png>
 Package pdftex.def Info: by-parents-regs-all.png  used on input line 417.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hh.png, id=757, 722.7pt x 289.08pt>
+<by-parents-regs-hh.png, id=756, 722.7pt x 289.08pt>
 File: by-parents-regs-hh.png Graphic file (type png)
 <use by-parents-regs-hh.png>
 Package pdftex.def Info: by-parents-regs-hh.png  used on input line 424.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hw.png, id=758, 722.7pt x 289.08pt>
+<by-parents-regs-hw.png, id=757, 722.7pt x 289.08pt>
 File: by-parents-regs-hw.png Graphic file (type png)
 <use by-parents-regs-hw.png>
 Package pdftex.def Info: by-parents-regs-hw.png  used on input line 430.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-wh.png, id=759, 722.7pt x 289.08pt>
+<by-parents-regs-wh.png, id=758, 722.7pt x 289.08pt>
 File: by-parents-regs-wh.png Graphic file (type png)
 <use by-parents-regs-wh.png>
 Package pdftex.def Info: by-parents-regs-wh.png  used on input line 436.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[59 <./by-parents-regs-all.png> <./by-parents-regs-hh.png> <./by-parents-regs-hw.png> <./by-parents-regs-wh.png>]
-<by-parents-regs-all-adults.png, id=766, 722.7pt x 289.08pt>
+[59 <./by-parents-regs-all.png> <./by-parents-regs-hh.png> <./by-parents-regs-h
+w.png> <./by-parents-regs-wh.png>]
+<by-parents-regs-all-adults.png, id=765, 722.7pt x 289.08pt>
 File: by-parents-regs-all-adults.png Graphic file (type png)
 <use by-parents-regs-all-adults.png>
-Package pdftex.def Info: by-parents-regs-all-adults.png  used on input line 454.
+Package pdftex.def Info: by-parents-regs-all-adults.png  used on input line 454
+.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hh-adults.png, id=767, 722.7pt x 289.08pt>
+<by-parents-regs-hh-adults.png, id=766, 722.7pt x 289.08pt>
 File: by-parents-regs-hh-adults.png Graphic file (type png)
 <use by-parents-regs-hh-adults.png>
 Package pdftex.def Info: by-parents-regs-hh-adults.png  used on input line 461.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-hw-adults.png, id=768, 722.7pt x 289.08pt>
+<by-parents-regs-hw-adults.png, id=767, 722.7pt x 289.08pt>
 File: by-parents-regs-hw-adults.png Graphic file (type png)
 <use by-parents-regs-hw-adults.png>
 Package pdftex.def Info: by-parents-regs-hw-adults.png  used on input line 467.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<by-parents-regs-wh-adults.png, id=769, 722.7pt x 289.08pt>
+<by-parents-regs-wh-adults.png, id=768, 722.7pt x 289.08pt>
 File: by-parents-regs-wh-adults.png Graphic file (type png)
 <use by-parents-regs-wh-adults.png>
 Package pdftex.def Info: by-parents-regs-wh-adults.png  used on input line 473.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
-[60 <./by-parents-regs-all-adults.png> <./by-parents-regs-hh-adults.png> <./by-parents-regs-hw-adults.png> <./by-parents-regs-wh-adults.png>]
-<boot_me_second_AW.png, id=776, 722.7pt x 433.62pt>
+[60 <./by-parents-regs-all-adults.png> <./by-parents-regs-hh-adults.png> <./by-
+parents-regs-hw-adults.png> <./by-parents-regs-wh-adults.png>]
+<boot_me_second_AW.png, id=775, 722.7pt x 433.62pt>
 File: boot_me_second_AW.png Graphic file (type png)
 <use boot_me_second_AW.png>
 Package pdftex.def Info: boot_me_second_AW.png  used on input line 511.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
-<boot_me_second_WA.png, id=777, 722.7pt x 433.62pt>
+<boot_me_second_WA.png, id=776, 722.7pt x 433.62pt>
 File: boot_me_second_WA.png Graphic file (type png)
 <use boot_me_second_WA.png>
 Package pdftex.def Info: boot_me_second_WA.png  used on input line 517.
@@ -1786,25 +2024,28 @@ Package pdftex.def Info: boot_me_second_WA.png  used on input line 517.
 
 
 [61 <./boot_me_second_AW.png> <./boot_me_second_WA.png>]
-<logit_boot_me_second_AW_adults_multinom.png, id=784, 722.7pt x 433.62pt>
+<logit_boot_me_second_AW_adults_multinom.png, id=783, 722.7pt x 433.62pt>
 File: logit_boot_me_second_AW_adults_multinom.png Graphic file (type png)
 <use logit_boot_me_second_AW_adults_multinom.png>
-Package pdftex.def Info: logit_boot_me_second_AW_adults_multinom.png  used on input line 537.
+Package pdftex.def Info: logit_boot_me_second_AW_adults_multinom.png  used on i
+nput line 537.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
-<logit_boot_me_second_WA_adults_multinom.png, id=785, 722.7pt x 433.62pt>
+<logit_boot_me_second_WA_adults_multinom.png, id=784, 722.7pt x 433.62pt>
 File: logit_boot_me_second_WA_adults_multinom.png Graphic file (type png)
 <use logit_boot_me_second_WA_adults_multinom.png>
-Package pdftex.def Info: logit_boot_me_second_WA_adults_multinom.png  used on input line 543.
+Package pdftex.def Info: logit_boot_me_second_WA_adults_multinom.png  used on i
+nput line 543.
 (pdftex.def)             Requested size: 206.40038pt x 123.84102pt.
 
 
-[62 <./logit_boot_me_second_AW_adults_multinom.png> <./logit_boot_me_second_WA_adults_multinom.png>]
-<boot_me_third_oneAsian.png, id=794, 722.7pt x 433.62pt>
+[62 <./logit_boot_me_second_AW_adults_multinom.png> <./logit_boot_me_second_WA_
+adults_multinom.png>]
+<boot_me_third_oneAsian.png, id=793, 722.7pt x 433.62pt>
 File: boot_me_third_oneAsian.png Graphic file (type png)
 <use boot_me_third_oneAsian.png>
 Package pdftex.def Info: boot_me_third_oneAsian.png  used on input line 561.
 (pdftex.def)             Requested size: 193.50076pt x 116.09972pt.
-<boot_me_third_twoAsian.png, id=795, 722.7pt x 433.62pt>
+<boot_me_third_twoAsian.png, id=794, 722.7pt x 433.62pt>
 File: boot_me_third_twoAsian.png Graphic file (type png)
 <use boot_me_third_twoAsian.png>
 Package pdftex.def Info: boot_me_third_twoAsian.png  used on input line 567.
@@ -1824,7 +2065,8 @@ Package biblatex Info: Setting label 'refsection:2' on input line 156.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.168     \newpage
@@ -1832,79 +2074,91 @@ l.168     \newpage
 
 ]
 Overfull \hbox (3.31926pt too wide) in paragraph at lines 183--184
-[]\T1/ppl/m/n/12 Similarly, be-hav-ioral stud-ies have doc-u-mented how dis-crim-i-na-tion ex-pe-ri-ences
+[]\T1/ppl/m/n/12 Similarly, be-hav-ioral stud-ies have doc-u-mented how dis-cri
+m-i-na-tion ex-pe-ri-ences
  []
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.184     \end{spacing}
                         [2]
 Overfull \hbox (4.00548pt too wide) in paragraph at lines 193--194
-\T1/ppl/m/n/12 dress in the pa-per's data sec-tion in the fol-low-ing foot-note ``I re-strict first-generation
+\T1/ppl/m/n/12 dress in the pa-per's data sec-tion in the fol-low-ing foot-note
+ ``I re-strict first-generation
  []
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.194     \end{spacing}
                         [3]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.204 
        [4]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.206     \end{spacing}
                         [5]
 Overfull \hbox (4.29475pt too wide) in paragraph at lines 217--218
-\T1/ppl/m/n/12 racial iden-tity re-port-ing across all adults, with a 2 per-cent-age point de-crease among
+\T1/ppl/m/n/12 racial iden-tity re-port-ing across all adults, with a 2 per-cen
+t-age point de-crease among
  []
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.218     \end{spacing}
                         [6]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.223         \end{quotation}
                               [7]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.228     \end{spacing}
                         [8]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.229     \clearpage
                      [9]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.247 
@@ -1913,94 +2167,109 @@ l.247
 ]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.256         \end{quotation}
                               [11]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.265 
        [12]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.277 
        [13]
 Overfull \hbox (7.5943pt too wide) in paragraph at lines 280--281
-\T1/ppl/m/n/12 only,'' demon-strat-ing that fam-ily com-po-si-tion rather than gen-er-a-tional sta-tus drives
+\T1/ppl/m/n/12 only,'' demon-strat-ing that fam-ily com-po-si-tion rather than 
+gen-er-a-tional sta-tus drives
  []
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.286             I
-                    present the results in Figures \ref{fig:marginal-effects... [14]
+                    present the results in Figures \ref{fig:marginal-effects...
+[14]
 Overfull \hbox (7.0161pt too wide) in paragraph at lines 291--292
-\T1/ppl/m/n/12 about the dis-tri-bu-tion of bias, or I missed it. The ef-fect of a one-standard-
+\T1/ppl/m/n/12 about the dis-tri-bu-tion of bias, or I missed it. The ef-fect o
+f a one-standard-
  []
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.297     \end{spacing}
                         [15]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.309 
        [16]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.321 
        [17]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.335 
        [18]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.343 
        [19]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.359         \end{quotation}
                               [20]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.384 
        [21]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.392     \end{spacing}
@@ -2009,7 +2278,8 @@ Package biblatex Info: Reference section=0 on input line 394.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.396 \clearpage
@@ -2021,34 +2291,35 @@ Package biblatex Info: Setting label 'refsection:3' on input line 402.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.420 \clearpage
                  [24
 
 ] (./manuscript_online_appendix.tex
-<iatexample1.png, id=948, 1170.3725pt x 560.0925pt>
+<iatexample1.png, id=946, 1170.3725pt x 560.0925pt>
 File: iatexample1.png Graphic file (type png)
 <use iatexample1.png>
 Package pdftex.def Info: iatexample1.png  used on input line 27.
 (pdftex.def)             Requested size: 185.75906pt x 88.89018pt.
-<iatexample2.png, id=949, 730.73pt x 502.87875pt>
+<iatexample2.png, id=947, 730.73pt x 502.87875pt>
 File: iatexample2.png Graphic file (type png)
 <use iatexample2.png>
 Package pdftex.def Info: iatexample2.png  used on input line 33.
 (pdftex.def)             Requested size: 185.75906pt x 127.8372pt.
-<iatexample3.png, id=950, 739.76375pt x 500.87125pt>
+<iatexample3.png, id=948, 739.76375pt x 500.87125pt>
 File: iatexample3.png Graphic file (type png)
 <use iatexample3.png>
 Package pdftex.def Info: iatexample3.png  used on input line 38.
 (pdftex.def)             Requested size: 185.75906pt x 125.76776pt.
-<iatexample4.png, id=951, 733.74126pt x 503.8825pt>
+<iatexample4.png, id=949, 733.74126pt x 503.8825pt>
 File: iatexample4.png Graphic file (type png)
 <use iatexample4.png>
 Package pdftex.def Info: iatexample4.png  used on input line 43.
 (pdftex.def)             Requested size: 185.75906pt x 127.56186pt.
-<iatexample5.png, id=952, 732.7375pt x 504.88625pt>
+<iatexample5.png, id=950, 732.7375pt x 504.88625pt>
 File: iatexample5.png Graphic file (type png)
 <use iatexample5.png>
 Package pdftex.def Info: iatexample5.png  used on input line 48.
@@ -2056,200 +2327,608 @@ Package pdftex.def Info: iatexample5.png  used on input line 48.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.53 \newpage
               [25
 
- <./iatexample1.png> <./iatexample2.png> <./iatexample3.png> <./iatexample4.png> <./iatexample5.png>] (./tab49-all_gen_comparison_with_me.tex)
+ <./iatexample1.png> <./iatexample2.png> <./iatexample3.png> <./iatexample4.png
+> <./iatexample5.png>] (./tab49-all_gen_comparison_with_me.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.26}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.26}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.61 \newpage
               [26] (./tab50-first_gen_comparison_with_me.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.65 \newpage
               [27] (./tab51-second_gen_comparison_with_me.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.28}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.28}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.70 \newpage
               [28] (./tab52-third_gen_comparison_with_me.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.75 \newpage
               [29] (./tab33-asianiat_regression_tab.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.30}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.30}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.80 \newpage
               [30] (./tab04-regression_tab_bygen_skin.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.31}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.31}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.85 \newpage
               [31] (./tab05-iat_regression_tab_byparent_type.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.32}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.32}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.90 \newpage
               [32] (./tab47-marriage.tex)
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.33}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.33}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.95 \newpage
               [33]
-<county-by-parents-regs-all.png, id=1011, 722.7pt x 289.08pt>
+<county-by-parents-regs-all.png, id=1007, 722.7pt x 289.08pt>
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
-Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 109.
+Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 109
+.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-first-gen.png, id=1012, 722.7pt x 289.08pt>
+<county-skin-iat-regression-first-gen.png, id=1008, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-first-gen.png Graphic file (type png)
 <use county-skin-iat-regression-first-gen.png>
-Package pdftex.def Info: county-skin-iat-regression-first-gen.png  used on input line 116.
+Package pdftex.def Info: county-skin-iat-regression-first-gen.png  used on inpu
+t line 116.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-second-gen.png, id=1013, 722.7pt x 289.08pt>
+<county-skin-iat-regression-second-gen.png, id=1009, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-second-gen.png Graphic file (type png)
 <use county-skin-iat-regression-second-gen.png>
-Package pdftex.def Info: county-skin-iat-regression-second-gen.png  used on input line 122.
+Package pdftex.def Info: county-skin-iat-regression-second-gen.png  used on inp
+ut line 122.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-skin-iat-regression-third-gen.png, id=1014, 722.7pt x 289.08pt>
+<county-skin-iat-regression-third-gen.png, id=1010, 722.7pt x 289.08pt>
 File: county-skin-iat-regression-third-gen.png Graphic file (type png)
 <use county-skin-iat-regression-third-gen.png>
-Package pdftex.def Info: county-skin-iat-regression-third-gen.png  used on input line 128.
+Package pdftex.def Info: county-skin-iat-regression-third-gen.png  used on inpu
+t line 128.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.34}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.34}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.135 \newpage
-               [34 <./county-by-parents-regs-all.png> <./county-skin-iat-regression-first-gen.png> <./county-skin-iat-regression-second-gen.png> <./county-skin-iat-regression-third-gen.png>]
+               [34 <./county-by-parents-regs-all.png> <./county-skin-iat-regres
+sion-first-gen.png> <./county-skin-iat-regression-second-gen.png> <./county-ski
+n-iat-regression-third-gen.png>]
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
-Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 146.
+Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 146
+.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-hh.png, id=1019, 722.7pt x 289.08pt>
+<county-by-parents-regs-hh.png, id=1015, 722.7pt x 289.08pt>
 File: county-by-parents-regs-hh.png Graphic file (type png)
 <use county-by-parents-regs-hh.png>
 Package pdftex.def Info: county-by-parents-regs-hh.png  used on input line 153.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-hw.png, id=1020, 722.7pt x 289.08pt>
+<county-by-parents-regs-hw.png, id=1016, 722.7pt x 289.08pt>
 File: county-by-parents-regs-hw.png Graphic file (type png)
 <use county-by-parents-regs-hw.png>
 Package pdftex.def Info: county-by-parents-regs-hw.png  used on input line 159.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<county-by-parents-regs-wh.png, id=1021, 722.7pt x 289.08pt>
+<county-by-parents-regs-wh.png, id=1017, 722.7pt x 289.08pt>
 File: county-by-parents-regs-wh.png Graphic file (type png)
 <use county-by-parents-regs-wh.png>
 Package pdftex.def Info: county-by-parents-regs-wh.png  used on input line 165.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.35}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.35}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.172 \newpage
-               [35 <./county-by-parents-regs-hh.png> <./county-by-parents-regs-hw.png> <./county-by-parents-regs-wh.png>]
-<msa-by-parents-regs-all.png, id=1026, 722.7pt x 289.08pt>
+               [35 <./county-by-parents-regs-hh.png> <./county-by-parents-regs-
+hw.png> <./county-by-parents-regs-wh.png>]
+<msa-by-parents-regs-all.png, id=1022, 722.7pt x 289.08pt>
 File: msa-by-parents-regs-all.png Graphic file (type png)
 <use msa-by-parents-regs-all.png>
 Package pdftex.def Info: msa-by-parents-regs-all.png  used on input line 183.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-first-gen.png, id=1027, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-first-gen.png, id=1023, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-first-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-first-gen.png>
-Package pdftex.def Info: msa-skin-iat-regression-first-gen.png  used on input line 190.
+Package pdftex.def Info: msa-skin-iat-regression-first-gen.png  used on input l
+ine 190.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-second-gen.png, id=1028, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-second-gen.png, id=1024, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-second-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-second-gen.png>
-Package pdftex.def Info: msa-skin-iat-regression-second-gen.png  used on input line 196.
+Package pdftex.def Info: msa-skin-iat-regression-second-gen.png  used on input 
+line 196.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
-<msa-skin-iat-regression-third-gen.png, id=1029, 722.7pt x 289.08pt>
+<msa-skin-iat-regression-third-gen.png, id=1025, 722.7pt x 289.08pt>
 File: msa-skin-iat-regression-third-gen.png Graphic file (type png)
 <use msa-skin-iat-regression-third-gen.png>
-Package pdftex.def Info: msa-skin-iat-regression-third-gen.png  used on input line 202.
+Package pdftex.def Info: msa-skin-iat-regression-third-gen.png  used on input l
+ine 202.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.36}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.36}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.209 \newpage
-               [36 <./msa-by-parents-regs-all.png> <./msa-skin-iat-regression-first-gen.png> <./msa-skin-iat-regression-second-gen.png> <./msa-skin-iat-regression-third-gen.png>]
+               [36 <./msa-by-parents-regs-all.png> <./msa-skin-iat-regression-f
+irst-gen.png> <./msa-skin-iat-regression-second-gen.png> <./msa-skin-iat-regres
+sion-third-gen.png>]
 File: county-by-parents-regs-all.png Graphic file (type png)
 <use county-by-parents-regs-all.png>
-Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 220.
+Package pdftex.def Info: county-by-parents-regs-all.png  used on input line 220
+.
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 File: county-by-parents-regs-hh.png Graphic file (type png)
 <use county-by-parents-regs-hh.png>
 Package pdftex.def Info: county-by-parents-regs-hh.png  used on input line 227.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 File: county-by-parents-regs-hw.png Graphic file (type png)
 <use county-by-parents-regs-hw.png>
 Package pdftex.def Info: county-by-parents-regs-hw.png  used on input line 233.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 File: county-by-parents-regs-wh.png Graphic file (type png)
 <use county-by-parents-regs-wh.png>
 Package pdftex.def Info: county-by-parents-regs-wh.png  used on input line 239.
+
 (pdftex.def)             Requested size: 185.75906pt x 74.30328pt.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.37}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.37}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.246 \newpage
                [37]
-<interaction_coefficients_AW.png, id=1036, 505.89pt x 289.08pt>
+<interaction_coefficients_AW.png, id=1032, 505.89pt x 289.08pt>
 File: interaction_coefficients_AW.png Graphic file (type png)
 <use interaction_coefficients_AW.png>
-Package pdftex.def Info: interaction_coefficients_AW.png  used on input line 260.
+Package pdftex.def Info: interaction_coefficients_AW.png  used on input line 26
+0.
 (pdftex.def)             Requested size: 206.40038pt x 117.94571pt.
-<interaction_coefficients_WA.png, id=1037, 505.89pt x 289.08pt>
+<interaction_coefficients_WA.png, id=1033, 505.89pt x 289.08pt>
 File: interaction_coefficients_WA.png Graphic file (type png)
 <use interaction_coefficients_WA.png>
-Package pdftex.def Info: interaction_coefficients_WA.png  used on input line 266.
+Package pdftex.def Info: interaction_coefficients_WA.png  used on input line 26
+6.
 (pdftex.def)             Requested size: 206.40038pt x 117.94571pt.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.38}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.38}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.274 \newpage
-               [38 <./interaction_coefficients_AW.png> <./interaction_coefficients_WA.png>]
-<interaction_coefficients_OneAsian.png, id=1043, 505.89pt x 289.08pt>
+               [38 <./interaction_coefficients_AW.png> <./interaction_coefficie
+nts_WA.png>]
+<interaction_coefficients_OneAsian.png, id=1039, 505.89pt x 289.08pt>
 File: interaction_coefficients_OneAsian.png Graphic file (type png)
 <use interaction_coefficients_OneAsian.png>
-Package pdftex.def Info: interaction_coefficients_OneAsian.png  used on input line 288.
+Package pdftex.def Info: interaction_coefficients_OneAsian.png  used on input l
+ine 288.
 (pdftex.def)             Requested size: 193.50076pt x 110.57053pt.
-<interaction_coefficients_TwoAsian.png, id=1044, 505.89pt x 289.08pt>
+<interaction_coefficients_TwoAsian.png, id=1040, 505.89pt x 289.08pt>
 File: interaction_coefficients_TwoAsian.png Graphic file (type png)
 <use interaction_coefficients_TwoAsian.png>
-Package pdftex.def Info: interaction_coefficients_TwoAsian.png  used on in
+Package pdftex.def Info: interaction_coefficients_TwoAsian.png  used on input l
+ine 294.
+(pdftex.def)             Requested size: 193.50076pt x 110.57053pt.
+<interaction_coefficients_ThreeAsian.png, id=1041, 505.89pt x 289.08pt>
+File: interaction_coefficients_ThreeAsian.png Graphic file (type png)
+<use interaction_coefficients_ThreeAsian.png>
+Package pdftex.def Info: interaction_coefficients_ThreeAsian.png  used on input
+ line 302.
+(pdftex.def)             Requested size: 193.50076pt x 110.57053pt.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.39}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.311 \newpage
+               [39 <./interaction_coefficients_OneAsian.png> <./interaction_coe
+fficients_TwoAsian.png> <./interaction_coefficients_ThreeAsian.png>]
+<boot_pp_second_AW_value.png, id=1047, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_value.png Graphic file (type png)
+<use boot_pp_second_AW_value.png>
+Package pdftex.def Info: boot_pp_second_AW_value.png  used on input line 359.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_AW_Female.png, id=1048, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_Female.png Graphic file (type png)
+<use boot_pp_second_AW_Female.png>
+Package pdftex.def Info: boot_pp_second_AW_Female.png  used on input line 365.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_AW_MomGradCollege.png, id=1049, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_MomGradCollege.png Graphic file (type png)
+<use boot_pp_second_AW_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_second_AW_MomGradCollege.png  used on input li
+ne 373.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_AW_DadGradCollege.png, id=1050, 578.16pt x 433.62pt>
+File: boot_pp_second_AW_DadGradCollege.png Graphic file (type png)
+<use boot_pp_second_AW_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_second_AW_DadGradCollege.png  used on input li
+ne 379.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_WA_value.png, id=1053, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_value.png Graphic file (type png)
+<use boot_pp_second_WA_value.png>
+Package pdftex.def Info: boot_pp_second_WA_value.png  used on input line 395.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_WA_Female.png, id=1054, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_Female.png Graphic file (type png)
+<use boot_pp_second_WA_Female.png>
+Package pdftex.def Info: boot_pp_second_WA_Female.png  used on input line 401.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_WA_MomGradCollege.png, id=1055, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_MomGradCollege.png Graphic file (type png)
+<use boot_pp_second_WA_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_second_WA_MomGradCollege.png  used on input li
+ne 409.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_second_WA_DadGradCollege.png, id=1056, 578.16pt x 433.62pt>
+File: boot_pp_second_WA_DadGradCollege.png Graphic file (type png)
+<use boot_pp_second_WA_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_second_WA_DadGradCollege.png  used on input li
+ne 415.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.40}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.420 \end{center}
+                   [40 <./boot_pp_second_AW_value.png> <./boot_pp_second_AW_Fem
+ale.png> <./boot_pp_second_AW_MomGradCollege.png> <./boot_pp_second_AW_DadGradC
+ollege.png>]
+
+LaTeX Warning: Text page 41 contains only floats.
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.41}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.420 \end{center}
+                   [41 <./boot_pp_second_WA_value.png> <./boot_pp_second_WA_Fem
+ale.png> <./boot_pp_second_WA_MomGradCollege.png> <./boot_pp_second_WA_DadGradC
+ollege.png>]
+<logit_boot_pp_second_AW_adults_multinom_value.png, id=1067, 578.16pt x 433.62p
+t>
+File: logit_boot_pp_second_AW_adults_multinom_value.png Graphic file (type png)
+
+<use logit_boot_pp_second_AW_adults_multinom_value.png>
+Package pdftex.def Info: logit_boot_pp_second_AW_adults_multinom_value.png  use
+d on input line 436.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_WA_adults_multinom_value.png, id=1068, 578.16pt x 433.62p
+t>
+File: logit_boot_pp_second_WA_adults_multinom_value.png Graphic file (type png)
+
+<use logit_boot_pp_second_WA_adults_multinom_value.png>
+Package pdftex.def Info: logit_boot_pp_second_WA_adults_multinom_value.png  use
+d on input line 442.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_AW_adults_multinom_Female.png, id=1069, 578.16pt x 433.62
+pt>
+File: logit_boot_pp_second_AW_adults_multinom_Female.png Graphic file (type png
+)
+<use logit_boot_pp_second_AW_adults_multinom_Female.png>
+Package pdftex.def Info: logit_boot_pp_second_AW_adults_multinom_Female.png  us
+ed on input line 451.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_WA_adults_multinom_Female.png, id=1070, 578.16pt x 433.62
+pt>
+File: logit_boot_pp_second_WA_adults_multinom_Female.png Graphic file (type png
+)
+<use logit_boot_pp_second_WA_adults_multinom_Female.png>
+Package pdftex.def Info: logit_boot_pp_second_WA_adults_multinom_Female.png  us
+ed on input line 457.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_AW_adults_multinom_EducYears.png, id=1071, 578.16pt x 433
+.62pt>
+File: logit_boot_pp_second_AW_adults_multinom_EducYears.png Graphic file (type 
+png)
+<use logit_boot_pp_second_AW_adults_multinom_EducYears.png>
+Package pdftex.def Info: logit_boot_pp_second_AW_adults_multinom_EducYears.png 
+ used on input line 474.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_WA_adults_multinom_EducYears.png, id=1072, 578.16pt x 433
+.62pt>
+File: logit_boot_pp_second_WA_adults_multinom_EducYears.png Graphic file (type 
+png)
+<use logit_boot_pp_second_WA_adults_multinom_EducYears.png>
+Package pdftex.def Info: logit_boot_pp_second_WA_adults_multinom_EducYears.png 
+ used on input line 480.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_AW_adults_multinom_lnftotval.png, id=1073, 578.16pt x 433
+.62pt>
+File: logit_boot_pp_second_AW_adults_multinom_lnftotval.png Graphic file (type 
+png)
+<use logit_boot_pp_second_AW_adults_multinom_lnftotval.png>
+Package pdftex.def Info: logit_boot_pp_second_AW_adults_multinom_lnftotval.png 
+ used on input line 489.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<logit_boot_pp_second_WA_adults_multinom_lnftotval.png, id=1074, 578.16pt x 433
+.62pt>
+File: logit_boot_pp_second_WA_adults_multinom_lnftotval.png Graphic file (type 
+png)
+<use logit_boot_pp_second_WA_adults_multinom_lnftotval.png>
+Package pdftex.def Info: logit_boot_pp_second_WA_adults_multinom_lnftotval.png 
+ used on input line 495.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_oneAsian_value.png, id=1075, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_value.png Graphic file (type png)
+<use boot_pp_third_oneAsian_value.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_value.png  used on input line 5
+15.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_oneAsian_Female.png, id=1076, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_Female.png Graphic file (type png)
+<use boot_pp_third_oneAsian_Female.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_Female.png  used on input line 
+521.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_oneAsian_MomGradCollege.png, id=1077, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_MomGradCollege.png Graphic file (type png)
+<use boot_pp_third_oneAsian_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_MomGradCollege.png  used on inp
+ut line 529.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_oneAsian_DadGradCollege.png, id=1078, 578.16pt x 433.62pt>
+File: boot_pp_third_oneAsian_DadGradCollege.png Graphic file (type png)
+<use boot_pp_third_oneAsian_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_third_oneAsian_DadGradCollege.png  used on inp
+ut line 535.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.42}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.539 \end{figure}
+                   [42 <./logit_boot_pp_second_AW_adults_multinom_value.png> <.
+/logit_boot_pp_second_WA_adults_multinom_value.png> <./logit_boot_pp_second_AW_
+adults_multinom_Female.png> <./logit_boot_pp_second_WA_adults_multinom_Female.p
+ng>]
+<boot_pp_third_twoAsian_value.png, id=1085, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_value.png Graphic file (type png)
+<use boot_pp_third_twoAsian_value.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_value.png  used on input line 5
+50.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_twoAsian_Female.png, id=1086, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_Female.png Graphic file (type png)
+<use boot_pp_third_twoAsian_Female.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_Female.png  used on input line 
+556.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_twoAsian_MomGradCollege.png, id=1087, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_MomGradCollege.png Graphic file (type png)
+<use boot_pp_third_twoAsian_MomGradCollege.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_MomGradCollege.png  used on inp
+ut line 564.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+<boot_pp_third_twoAsian_DadGradCollege.png, id=1088, 578.16pt x 433.62pt>
+File: boot_pp_third_twoAsian_DadGradCollege.png Graphic file (type png)
+<use boot_pp_third_twoAsian_DadGradCollege.png>
+Package pdftex.def Info: boot_pp_third_twoAsian_DadGradCollege.png  used on inp
+ut line 570.
+(pdftex.def)             Requested size: 206.40038pt x 154.79962pt.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.43}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.578 \newpage
+               [43 <./logit_boot_pp_second_AW_adults_multinom_EducYears.png> <.
+/logit_boot_pp_second_WA_adults_multinom_EducYears.png> <./logit_boot_pp_second
+_AW_adults_multinom_lnftotval.png> <./logit_boot_pp_second_WA_adults_multinom_l
+nftotval.png>]
+<scatter-plot-bias-Asian-less2015.png, id=1095, 722.7pt x 433.62pt>
+File: scatter-plot-bias-Asian-less2015.png Graphic file (type png)
+<use scatter-plot-bias-Asian-less2015.png>
+Package pdftex.def Info: scatter-plot-bias-Asian-less2015.png  used on input li
+ne 587.
+(pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+<scatter-plot-bias-Asian-great2015.png, id=1096, 722.7pt x 433.62pt>
+File: scatter-plot-bias-Asian-great2015.png Graphic file (type png)
+<use scatter-plot-bias-Asian-great2015.png>
+Package pdftex.def Info: scatter-plot-bias-Asian-great2015.png  used on input l
+ine 594.
+(pdftex.def)             Requested size: 348.299pt x 208.98215pt.
+
+Overfull \vbox (480.14653pt too high) has occurred while \output is active []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.44}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.599 \subsection
+                 *{Using \textcite{lubotskyInterpretationRegressionsMultiple...
+[44 <./boot_pp_third_oneAsian_value.png> <./boot_pp_third_oneAsian_Female.png> 
+<./boot_pp_third_oneAsian_MomGradCollege.png> <./boot_pp_third_oneAsian_DadGrad
+College.png> <./scatter-plot-bias-Asian-less2015.png> <./scatter-plot-bias-Asia
+n-great2015.png>]
+Overfull \vbox (28.23586pt too high) has occurred while \output is active []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.45}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.602 
+       [45 <./boot_pp_third_twoAsian_value.png> <./boot_pp_third_twoAsian_Femal
+e.png> <./boot_pp_third_twoAsian_MomGradCollege.png> <./boot_pp_third_twoAsian_
+DadGradCollege.png>]
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
+623.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.46}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.632 \]
+         [46])
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.47}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.425 \newpage
+               [47]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.48}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.435 \end
+          {refsection} [48]
+Package biblatex Info: Reference section=0 on input line 435.
+(./submit_journal.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `submit_journal.out' has not changed.
+(rerunfilecheck)             Checksum: C464DAB1C744F44D118A87BDADF5B422;3331.
+Package logreq Info: Writing requests to 'submit_journal.run.xml'.
+\openout1 = `submit_journal.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 43293 strings out of 473579
+ 895902 string characters out of 5728228
+ 2053647 words of memory out of 5000000
+ 65205 multiletter control sequences out of 15000+600000
+ 619463 words of font info for 187 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 93i,21n,98p,2344b,4043s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.2@antmanEthnicAttritionAssimilation2020} has b
+een referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@mora2020antiblackness} has been referenced b
+ut does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@almasalkhi2023links} has been referenced but
+ does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@cornell2006ethnicity} has been referenced bu
+t does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@zhou1997segmented} has been referenced but d
+oes not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@telles2008generations} has been referenced b
+ut does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@waters1990ethnic} has been referenced but do
+es not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.2@akerlofEconomicsIdentity2000} has been refer
+enced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb><
+/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb
+></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pf
+b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.
+pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb>
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.
+pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on submit_journal.pdf (116 pages, 9515839 bytes).
+PDF statistics:
+ 1243 PDF objects out of 1440 (max. 8388607)
+ 971 compressed objects within 10 object streams
+ 256 named destinations out of 1000 (max. 500000)
+ 568 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -115,6 +115,68 @@ select_pp_highlights <- function(x_vals, var_name) {
   })
 }
 
+# ------------------------------------------------------------------
+# Pairwise Wald tests for marginal effects
+# ------------------------------------------------------------------
+# For each variable, tests all pairwise differences between outcome
+# AMEs using approximate SEs recovered from the bootstrap percentile
+# CIs already stored in the ME summary.  No raw bootstrap draws needed.
+#
+#   SE_k  ≈ (CI_hi_k − CI_lo_k) / (2 × 1.96)
+#   z     = (AME_i − AME_j) / sqrt(SE_i² + SE_j²)
+#   p     = 2 Φ(−|z|)
+#
+# Returns a tidy data frame with the difference estimate, z-statistic,
+# p-value, and significance stars  (* p<.10, ** p<.05, *** p<.01).
+# ------------------------------------------------------------------
+compute_pairwise_me_tests <- function(me_summ) {
+  if (is.null(me_summ) || nrow(me_summ) == 0) return(NULL)
+
+  results <- list()
+  for (var_name in unique(me_summ$variable)) {
+    vd <- me_summ |> dplyr::filter(variable == var_name)
+    if (nrow(vd) < 2) next
+
+    # Approximate SE from bootstrap percentile CI
+    vd <- vd |> dplyr::mutate(
+      se_approx = (ame_hi_plot - ame_lo_plot) / (2 * 1.96)
+    )
+
+    outcomes <- vd$outcome
+    pairs <- combn(seq_along(outcomes), 2)
+    for (k in seq_len(ncol(pairs))) {
+      i <- pairs[1, k]; j <- pairs[2, k]
+      diff_est <- vd$ame_point[i] - vd$ame_point[j]
+      se_diff  <- sqrt(vd$se_approx[i]^2 + vd$se_approx[j]^2)
+      if (!is.finite(se_diff) || se_diff < 1e-12) next
+
+      z_stat  <- diff_est / se_diff
+      p_value <- 2 * stats::pnorm(-abs(z_stat))
+
+      sig <- dplyr::case_when(
+        p_value < 0.01 ~ "***",
+        p_value < 0.05 ~ "**",
+        p_value < 0.10 ~ "*",
+        TRUE ~ ""
+      )
+
+      results[[length(results) + 1]] <- data.frame(
+        variable = var_name,
+        outcome1 = outcomes[i],
+        outcome2 = outcomes[j],
+        diff_est = diff_est,
+        se_diff  = se_diff,
+        z_stat   = z_stat,
+        p_value  = p_value,
+        sig      = sig,
+        stringsAsFactors = FALSE
+      )
+    }
+  }
+
+  if (length(results)) dplyr::bind_rows(results) else NULL
+}
+
 plot_pp_boot <- function(pp_summ, var_name, gen_label){
   pp <- pp_summ |>
     mutate(
@@ -220,24 +282,27 @@ plot_pp_boot <- function(pp_summ, var_name, gen_label){
   }
 }
 
-plot_me_boot <- function(me_summ, gen_label){
-  me_summ |>
+plot_me_boot <- function(me_summ, gen_label, me_diff = NULL){
+  DODGE_W <- 0.8
+
+  plot_data <- me_summ |>
     mutate(
       variable_label = factor(variable, levels = names(VAR_LABELS), labels = VAR_LABELS),
       outcome_label  = factor(outcome, levels = names(OUTCOME_LABELS), labels = OUTCOME_LABELS),
       coef_label = sprintf("%.2f", ame_point)
-    ) |>
-    ggplot(aes(x = ame_point, y = variable_label, color = outcome_label)) +
-    geom_point(size = 3, position = position_dodge(width = 0.8)) +
+    )
+
+  p <- ggplot(plot_data, aes(x = ame_point, y = variable_label, color = outcome_label)) +
+    geom_point(size = 3, position = position_dodge(width = DODGE_W)) +
     geom_errorbarh(
       aes(xmin = ame_lo_plot, xmax = ame_hi_plot),
       height = 0.2, linewidth = 1.1,
-      position = position_dodge(width = 0.8)
+      position = position_dodge(width = DODGE_W)
     ) +
     ggrepel::geom_text_repel(
       aes(label = coef_label),
       size = 4, max.overlaps = Inf,
-      position = position_dodge(width = 0.8),
+      position = position_dodge(width = DODGE_W),
       point.padding = 0.3, box.padding = 0.5,
       segment.curvature = 0, fontface = "bold",
       show.legend = FALSE
@@ -247,6 +312,110 @@ plot_me_boot <- function(me_summ, gen_label){
     labs(y = NULL, x = "Average marginal effect (per unit of variable)", title = gen_label) +
     theme_customs() +
     theme(legend.position = "bottom")
+
+  # ---- Bracket annotations for pairwise significance tests ----
+  # Show ALL pairwise comparisons for the "value" variable (Anti-Asian Bias)
+  # regardless of significance, so brackets are consistent across all plots.
+  if (!is.null(me_diff) && nrow(me_diff) > 0) {
+
+    sig_diff <- me_diff |>
+      dplyr::filter(variable %in% me_summ$variable)
+
+    if (nrow(sig_diff) > 0) {
+
+      # Map outcome keys to their dodge y-offsets
+      out_keys   <- names(OUTCOME_LABELS)            # internal keys
+      out_labels <- unname(OUTCOME_LABELS)            # display labels
+      n_out      <- length(out_keys)
+      dodge_offsets <- stats::setNames(
+        DODGE_W * (seq_along(out_keys) - (n_out + 1) / 2) / n_out,
+        out_keys
+      )
+
+      # Variable label → integer y-position (drops unused levels)
+      var_levs <- levels(droplevels(plot_data$variable_label))
+      var_ypos <- stats::setNames(seq_along(var_levs), var_levs)
+
+      # Per-variable max CI endpoint (for placing brackets to the right)
+      x_maxes <- plot_data |>
+        dplyr::group_by(variable_label) |>
+        dplyr::summarize(x_max = max(ame_hi_plot, na.rm = TRUE), .groups = "drop")
+
+      x_range     <- diff(range(c(plot_data$ame_lo_plot, plot_data$ame_hi_plot), na.rm = TRUE))
+      bracket_gap  <- x_range * 0.08
+      bracket_step <- x_range * 0.07
+      tick_len     <- x_range * 0.015
+
+      seg_list <- list()
+      lab_list <- list()
+
+      for (vn in unique(sig_diff$variable)) {
+        vl <- VAR_LABELS[[vn]]
+        if (is.na(vl) || !(vl %in% names(var_ypos))) next
+        y_center <- var_ypos[[vl]]
+        x_base   <- x_maxes$x_max[x_maxes$variable_label == vl]
+
+        vd <- sig_diff |>
+          dplyr::filter(variable == vn) |>
+          dplyr::mutate(
+            y1   = y_center + dodge_offsets[outcome1],
+            y2   = y_center + dodge_offsets[outcome2],
+            span = abs(y2 - y1)
+          ) |>
+          dplyr::arrange(span)   # narrower brackets closer to data
+
+        for (idx in seq_len(nrow(vd))) {
+          row <- vd[idx, ]
+          x_bk <- x_base + bracket_gap + (idx - 1) * bracket_step
+          y1 <- row$y1;  y2 <- row$y2
+
+          # Three segments: tick at y1, vertical connector, tick at y2
+          seg_list[[length(seg_list) + 1]] <- data.frame(
+            x = x_bk - tick_len, xend = x_bk, y = y1, yend = y1)
+          seg_list[[length(seg_list) + 1]] <- data.frame(
+            x = x_bk, xend = x_bk, y = y1, yend = y2)
+          seg_list[[length(seg_list) + 1]] <- data.frame(
+            x = x_bk - tick_len, xend = x_bk, y = y2, yend = y2)
+
+          # p-value annotation
+          p_fmt <- if (row$p_value < 0.001) {
+            sprintf("p < 0.001 %s", row$sig)
+          } else {
+            sprintf("p = %s %s", formatC(row$p_value, format = "f", digits = 3), row$sig)
+          }
+          lab_list[[length(lab_list) + 1]] <- data.frame(
+            x = x_bk + tick_len * 0.8,
+            y = (y1 + y2) / 2,
+            label = p_fmt
+          )
+        }
+      }
+
+      if (length(seg_list) > 0) {
+        seg_df <- dplyr::bind_rows(seg_list)
+        lab_df <- dplyr::bind_rows(lab_list)
+
+        p <- p +
+          geom_segment(
+            data = seg_df,
+            aes(x = x, xend = xend, y = y, yend = yend),
+            inherit.aes = FALSE,
+            color = "gray30", linewidth = 0.35
+          ) +
+          geom_text(
+            data = lab_df,
+            aes(x = x, y = y, label = label),
+            inherit.aes = FALSE,
+            size = 2.8, color = "gray20", hjust = 0, vjust = 0.5,
+            family = "serif"
+          ) +
+          coord_cartesian(clip = "off") +
+          theme(plot.margin = margin(5.5, 80, 5.5, 5.5, unit = "pt"))
+      }
+    }
+  }
+
+  p
 }
 
 render_bootstrap_plots <- function(label_slug, label_pretty){
@@ -285,11 +454,23 @@ render_bootstrap_plots <- function(label_slug, label_pretty){
     if (nrow(me_tbl) == 0) {
       warning("No ME results to plot after filtering for: ", label_pretty)
     } else {
-      plt_me <- plot_me_boot(me_tbl, label_pretty)
+      # Compute pairwise Wald tests from ME summary stats
+      me_diff <- compute_pairwise_me_tests(me_tbl)
+      if (!is.null(me_diff) && nrow(me_diff) > 0) {
+        message(sprintf("  Pairwise ME tests for %s:", label_pretty))
+        for (r in seq_len(nrow(me_diff))) {
+          row <- me_diff[r, ]
+          message(sprintf("    %s: %s vs %s | diff = %.4f | z = %.3f | p = %.4f %s",
+                          row$variable, row$outcome1, row$outcome2,
+                          row$diff_est, row$z_stat, row$p_value, row$sig))
+        }
+      }
+
+      plt_me <- plot_me_boot(me_tbl, label_pretty, me_diff = me_diff)
       .safe_ggsave(
         filename = file.path(bootstrap_results_path, sprintf("logit_boot_me_%s.png", label_slug)),
         plot = plt_me,
-        width = 10,
+        width = 12,
         height = 6,
         dpi = 300
       )

@@ -1,0 +1,43 @@
+\begin{table}[!h]
+\centering\centering
+\caption{Relationship Between Bias and Self-Reported Asian Identity: By Generation \label{regtab-bygen-01}}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+  & \specialcell{(1) \\ $A_i$} & \specialcell{(2) \\ $A^1_i$} & \specialcell{(3) \\ $A^2_i$} & \specialcell{(4) \\ $A^3_i$}\\
+\midrule
+Bias & -0.09*** & -0.05 & -0.08** & -0.08**\\
+ & (0.03) & (0.04) & (0.03) & (0.03)\\
+Female & -0.01* & -0.01 & 0.00 & -0.01\\
+ & (0.00) & (0.01) & (0.00) & (0.01)\\
+College Graduate: Mother & 0.01 & -0.01 & 0.01 & 0.03\\
+ & (0.01) & (0.01) & (0.01) & \vphantom{1} (0.02)\\
+College Graduate: Father & 0.01** & 0.02** & 0.00 & -0.01\\
+ & (0.01) & (0.01) & (0.01) & (0.02)\\
+\midrule
+Observations & 129,078 & 15,499 & 80,137 & 33,442\\
+Mean & 0.65 & 0.44 & 0.22 & 0.66\\
+Year $\times$ Region FE & X & X & X & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of a heterogeneous effect of regression (\ref{eq:identity_reg_bias}) by 
+                      generation with region × year fixed effects. 
+                      I include controls for sex, quartic age, fraction of Asians in a state, and parental education.
+                      I also added parents' (AA, AW, and WA) and grandparents' (AAAA, AAAW, AAWA, etc.) type dummy variables to the regression
+                      on second and third generation immigrants, where A is objectively Asian (born in a Asian country) and W is objectively White (native-born). 
+                      Standard errors are clustered on the state level.}
+\item[2] \footnotesize{The samples include children ages 17 and below who live in intact families. 
+                      First-generation Asian immigrant children that were born in a 
+                      Asian country. Native-born second-generation Asian 
+                      immigrant children with at least one parent born in a Asian 
+                      country. Finally, native-born third-generation Asian immigrant children 
+                      with native-born parents and at least one grandparent born in a Asian country.}
+\item[3] \footnotesize{Data source is the 2004-2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

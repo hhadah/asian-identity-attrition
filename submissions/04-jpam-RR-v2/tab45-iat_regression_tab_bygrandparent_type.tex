@@ -1,0 +1,40 @@
+\begin{table}[H]
+\centering\centering
+\caption{Relationship Between Bias and Self-Reported Asian identity Among Third-Generation Asian Immigrants: By Grandparental Type \label{regtab-bygrandparents}}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{4}{c}{Number of Asian Grandparents} \\
+\cmidrule(l{3pt}r{3pt}){2-5}
+  & \specialcell{(1) \\ One} & \specialcell{(2) \\ Two} & \specialcell{(3) \\ Three} & \specialcell{(4) \\ Four}\\
+\midrule
+Bias & -0.01 & -0.09 & -0.69** & -0.11\\
+ & (0.04) & (0.08) & (0.32) & (0.06)\\
+Female & -0.01 & -0.01 & -0.04 & -0.03**\\
+ & (0.01) & (0.02) & (0.06) & (0.01)\\
+College Graduate: Mother & 0.01 & 0.07** & 0.08 & 0.00\\
+ & (0.01) & (0.03) & (0.09) & (0.03)\\
+College Graduate: Father & -0.04*** & 0.00 & -0.07 & 0.00\\
+ & (0.01) & (0.04) & (0.08) & (0.01)\\
+\midrule
+Observations & 14,453 & 12,678 & 567 & 5,744\\
+Year $\times$ Region FE & X & X & X & X\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each column is an estimation of equation (\ref{eq:identity_reg_bias}) restricted to third-generation Asian immigrants by 
+                      number of Asian grandparents with region × year fixed effects. 
+                      I include controls for sex, quartic age, fraction of Asians in a state, and parental education.
+                      Standard errors are clustered on the state level.}
+\item[2] \footnotesize{The samples include third-generation Asian children ages 17 and below who live in intact families. 
+                      Native-born third-generation Asian 
+                      immigrant children with at least one grandparent born in a Asian 
+                      country.}
+\item[3] \footnotesize{Data source is the 2004-2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
