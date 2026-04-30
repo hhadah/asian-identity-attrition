@@ -33,11 +33,9 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |>
 
 
 
-# Only interethnic groups: One, Two, Three Asian grandparents
-# Add interaction terms: value_dm*Female, value_dm*MomGradCollege, value_dm*DadGradCollege
-
-# Only interethnic groups: One, Two, Three Asian grandparents
-# Add interaction terms: value_dm*Female, value_dm*MomGradCollege, value_dm*DadGradCollege
+# Pooled interracial third-gen (One + Two + Three Asian grandparents)
+pooled_3g_data <- CPS_IAT |> filter(ThirdGen_Asian == 1 & (OneAsian == 1 | TwoAsian == 1 | ThreeAsian == 1))
+pooled_3g_model <- feols(Asian ~ value_dm*Female + value_dm*MomGradCollege + value_dm*DadGradCollege + frac_asian + Age + Age_sq + Age_cube + Age_quad | region:year, data = pooled_3g_data, weights = ~weight, vcov = ~statefip)
 
 # One Asian grandparent
 one_data <- CPS_IAT |> filter(ThirdGen_Asian == 1 & OneAsian == 1)
@@ -64,21 +62,36 @@ get_interaction_terms <- function(model) {
       grepl(":MomGradCollege", term) ~ "Bias × Mom Grad College",
       grepl(":DadGradCollege", term) ~ "Bias × Dad Grad College",
       TRUE ~ term
-    )
+    ),
+    label = factor(label, levels = c("Bias × Female",
+                                     "Bias × Dad Grad College",
+                                     "Bias × Mom Grad College"))
   )
 }
 
 # Extract interaction coefficients for each group
-one_inter <- get_interaction_terms(one_model)
-two_inter <- get_interaction_terms(two_model)
+pooled_3g_inter <- get_interaction_terms(pooled_3g_model)
+one_inter   <- get_interaction_terms(one_model)
+two_inter   <- get_interaction_terms(two_model)
 three_inter <- get_interaction_terms(three_model)
+
+
+# Plot interaction coefficients for pooled third-gen
+ggplot(pooled_3g_inter, aes(y = label, x = estimate)) +
+  geom_point(size=3) +
+  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
+  geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
+  theme_customs() +
+  theme(axis.text.y = element_text(size=13))
+ggsave(paste0(figures_wd, "/interaction_coefficients_pooled_thirdgen.png"), width = 7, height = 4)
 
 # Plot interaction coefficients for One Asian Grandparent
 ggplot(one_inter, aes(y = label, x = estimate)) +
   geom_point(size=3) +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
-  labs(title = "One Asian Grandparent: Interaction Coefficients", y = "Interaction Term", x = "Estimate") +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
   theme_customs() +
   theme(axis.text.y = element_text(size=13))
 ggsave(paste0(figures_wd, "/interaction_coefficients_OneAsian.png"), width = 7, height = 4)
@@ -88,7 +101,7 @@ ggplot(two_inter, aes(y = label, x = estimate)) +
   geom_point(size=3) +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
-  labs(title = "Two Asian Grandparents: Interaction Coefficients", y = "Interaction Term", x = "Estimate") +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
   theme_customs() +
   theme(axis.text.y = element_text(size=13))
 ggsave(paste0(figures_wd, "/interaction_coefficients_TwoAsian.png"), width = 7, height = 4)
@@ -98,7 +111,7 @@ ggplot(three_inter, aes(y = label, x = estimate)) +
   geom_point(size=3) +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
-  labs(title = "Three Asian Grandparents: Interaction Coefficients", y = "Interaction Term", x = "Estimate") +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
   theme_customs() +
   theme(axis.text.y = element_text(size=13))
 ggsave(paste0(figures_wd, "/interaction_coefficients_ThreeAsian.png"), width = 7, height = 4)

@@ -16,7 +16,7 @@
 
 ## Reviewer 1 (minor)
 
-- [ ] **Explicitly list the ANES survey items used to measure racial animus** (e.g., ethnocentrism, racial resentment, feeling thermometers, or a combination). A footnote or appendix is sufficient.
+- [X] **Explicitly list the ANES survey items used to measure racial animus** (e.g., ethnocentrism, racial resentment, feeling thermometers, or a combination). A footnote or appendix is sufficient.
 
 ---
 
@@ -101,9 +101,9 @@ The editor specifically asks you to move/add the income × bias interaction into
 
 Reviewer 1 is essentially asking for conditional acceptance — this is a quick win. Currently footnote 6 in Section 3.2 lists the ANES questions but somewhat generically. Steps:
 
-- [ ] **Expand the existing footnote (or create a new one / short appendix subsection)** to explicitly enumerate each ANES item used, with the exact question wording or at minimum the variable labels. For example: (1) racial resentment items, (2) feeling thermometer toward Asians, (3) "conditions make it difficult for Blacks to succeed," etc.
-- [ ] **Clarify the measure type** — state whether these are ethnocentrism measures, racial resentment scales, feeling thermometers, or a combination. The current footnote lists them but doesn't categorize them.
-- [ ] **Add a brief note** explaining why anti-Black racial resentment items proxy for anti-Asian attitudes (you already have the Almasalkhi and Mora citations; just be more explicit about cross-group correlation of prejudice).
+- [X] **Expand the existing footnote (or create a new one / short appendix subsection)** to explicitly enumerate each ANES item used, with the exact question wording or at minimum the variable labels. For example: (1) racial resentment items, (2) feeling thermometer toward Asians, (3) "conditions make it difficult for Blacks to succeed," etc.
+- [X] **Clarify the measure type** — state whether these are ethnocentrism measures, racial resentment scales, feeling thermometers, or a combination. The current footnote lists them but doesn't categorize them.
+- [X] **Add a brief note** explaining why anti-Black racial resentment items proxy for anti-Asian attitudes (you already have the Almasalkhi and Mora citations; just be more explicit about cross-group correlation of prejudice).
 
 ---
 

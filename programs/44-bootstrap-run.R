@@ -17,6 +17,7 @@ suppressPackageStartupMessages({
 # Configuration
 # ---------------------------
 N_BOOTSTRAP <- getOption("bootstrap_n", 1000)  # raise (e.g., 500–1000) for production runs
+# N_BOOTSTRAP <- 50
 detected_cores <- suppressWarnings(as.integer(detectCores()))
 if (is.na(detected_cores) || detected_cores < 1) {
   detected_cores <- 1
@@ -33,6 +34,10 @@ EPS_ME <- getOption("bootstrap_eps_me", 1e-4)    # enlarge collapsed ME CI by ±
 VERBOSE <- isTRUE(getOption("bootstrap_verbose", FALSE))
 SHOW_PROGRESS <- isTRUE(getOption("bootstrap_show_progress", TRUE))
 PROGRESS_EVERY <- max(1L, as.integer(getOption("bootstrap_progress_every", 1L)))
+# Per-iteration progress requires sequential execution (multicore forks
+# don't share the counter env). Default keeps parallelism and emits
+# per-block timing logs instead. Set TRUE to opt back into per-iter progress.
+FORCE_SEQUENTIAL <- isTRUE(getOption("bootstrap_force_sequential", FALSE))
 
 `%||%` <- function(x, y) if (!is.null(x)) x else y
 
@@ -112,14 +117,23 @@ CPS_IAT <- readr::read_csv(file.path(git_mdir, "CPS_IAT_asian.csv.zip")) |>
     FourAsian  = case_when(Grandparent_Type == "AAAA" ~ 1, TRUE ~ 0)
   )
 
-get_pp_vars <- function(data){
+# Predicted-probability computation disabled — the manuscript uses marginal-effect
+# figures only. Restore the commented body below to re-enable PP bootstraps.
+get_pp_vars <- function(data) character(0)
+# get_pp_vars <- function(data){
+#   base <- c("value","Female")
+#   if (all(c("MomGradCollege","DadGradCollege") %in% names(data))) base <- c(base,"MomGradCollege","DadGradCollege")
+#   if ("education" %in% names(data)) base <- c(base,"education")
+#   if ("income"    %in% names(data)) base <- c(base,"income")
+#   base
+# }
+get_me_vars <- function(data){
   base <- c("value","Female")
   if (all(c("MomGradCollege","DadGradCollege") %in% names(data))) base <- c(base,"MomGradCollege","DadGradCollege")
   if ("education" %in% names(data)) base <- c(base,"education")
   if ("income"    %in% names(data)) base <- c(base,"income")
   base
 }
-get_me_vars <- function(data) get_pp_vars(data)
 
 categorize_race_multinomial <- function(race_code){
   case_when(
@@ -164,6 +178,10 @@ fit_multinomial_model <- function(data_subset, generation="all", ancestry_filter
     if (!is.null(ancestry_filter) && ancestry_filter %in% c("AA_0bj","AW_0bj","WA_0bj")) {
       fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
         frac_asian + Age + Age_sq + Age_cube + Age_quad + region_year
+    } else if (!is.null(ancestry_filter) && ancestry_filter == "AW_WA_pool") {
+      # AW + WA pooled: AA_0bj is always 0 in this sample; include WA_0bj as group indicator (AW reference)
+      fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
+        frac_asian + Age + Age_sq + Age_cube + Age_quad + WA_0bj + region_year
     } else {
       fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
         frac_asian + Age + Age_sq + Age_cube + Age_quad + AA_0bj + region_year
@@ -172,6 +190,14 @@ fit_multinomial_model <- function(data_subset, generation="all", ancestry_filter
     if (!is.null(ancestry_filter) && ancestry_filter %in% c("OneAsian","TwoAsian","ThreeAsian","FourAsian")) {
       fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
         frac_asian + Age + Age_sq + Age_cube + Age_quad + region_year
+    } else if (!is.null(ancestry_filter) && ancestry_filter == "OneTwoThree_pool") {
+      # 1+2+3 Asian grandparents pooled: include OneAsian, TwoAsian dummies (ThreeAsian reference)
+      fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
+        frac_asian + Age + Age_sq + Age_cube + Age_quad + OneAsian + TwoAsian + region_year
+    } else if (!is.null(ancestry_filter) && ancestry_filter == "OneTwo_pool") {
+      # 1+2 Asian grandparents pooled (excludes 3 and 4): include OneAsian dummy (TwoAsian reference)
+      fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
+        frac_asian + Age + Age_sq + Age_cube + Age_quad + OneAsian + region_year
     } else {
       fml <- identity_choice ~ value + Female + MomGradCollege + DadGradCollege +
         frac_asian + Age + Age_sq + Age_cube + Age_quad + Grandparent_Type + region_year
@@ -185,11 +211,13 @@ fit_multinomial_model <- function(data_subset, generation="all", ancestry_filter
   nnet::multinom(fml, data=data_subset, weights=data_subset$weight, trace=FALSE, na.action=na.exclude)
 }
 
-# Pre-fit models (helps early failure visibility)
-mnl_all_gen    <- fit_multinomial_model(CPS_IAT_multinomial, "all")
-mnl_first_gen  <- fit_multinomial_model(CPS_IAT_multinomial |> filter(FirstGen_Asian==1), "first")
-mnl_second_gen <- fit_multinomial_model(CPS_IAT_multinomial |> filter(SecondGen_Asian==1), "second")
-mnl_third_gen  <- fit_multinomial_model(CPS_IAT_multinomial |> filter(ThirdGen_Asian==1),  "third")
+# Pre-fit models (helps early failure visibility) — disabled: the variables are
+# never read downstream and each full-sample fit costs minutes. The bootstrap
+# blocks below fit their own subset models. Uncomment to restore diagnostics.
+# mnl_all_gen    <- fit_multinomial_model(CPS_IAT_multinomial, "all")
+# mnl_first_gen  <- fit_multinomial_model(CPS_IAT_multinomial |> filter(FirstGen_Asian==1), "first")
+# mnl_second_gen <- fit_multinomial_model(CPS_IAT_multinomial |> filter(SecondGen_Asian==1), "second")
+# mnl_third_gen  <- fit_multinomial_model(CPS_IAT_multinomial |> filter(ThirdGen_Asian==1),  "third")
 
 # ---------------------------
 # Bootstrap helpers
@@ -315,11 +343,14 @@ bootstrap_multinom_boot <- function(data_subset, generation="all", ancestry_filt
   strata <- if (!is.null(stratify_by)) data_subset[[stratify_by]] else NULL
   boot_parallel <- if (.Platform$OS.type == "windows") "no" else "multicore"
   n_cpus <- if (boot_parallel=="no") 1 else n_cores
-  if (SHOW_PROGRESS && boot_parallel != "no") {
-    .log_info("Progress requested; falling back to sequential bootstrap execution.")
+  if (FORCE_SEQUENTIAL && boot_parallel != "no") {
+    .log_info("FORCE_SEQUENTIAL=TRUE; running bootstrap sequentially.")
     boot_parallel <- "no"
     n_cpus <- 1
   }
+  # Per-iter progress is only meaningful when sequential — multicore forks
+  # mutate the counter env in workers and the changes don't reach the parent.
+  in_loop_progress <- SHOW_PROGRESS && boot_parallel == "no"
   outcome_levels <- levels(data_subset$identity_choice)
   rep_row_full <- representative_row(data_subset)
   main_model <- tryCatch(
@@ -341,11 +372,16 @@ bootstrap_multinom_boot <- function(data_subset, generation="all", ancestry_filt
     grid <- make_var_grid(data_subset, var_name, pp_grid_step)
     nd <- newdata_for_grid(data_subset, var_name, grid, rep_row_full)
 
-    progress_env <- create_boot_progress_tracker(B, model_label, var_name, "PP")
+    progress_env <- if (in_loop_progress) create_boot_progress_tracker(B, model_label, var_name, "PP") else NULL
+    .t0 <- proc.time()[["elapsed"]]
+    message(sprintf("[BOOT][PP][start] model=%s | var=%s | R=%d | parallel=%s | ncpus=%d",
+                    model_label, var_name, B, boot_parallel, n_cpus))
     boot_results <- boot(data=data_subset, statistic=boot_pp_stat, R=B, sim="ordinary", stype="i",
                          parallel=boot_parallel, ncpus=n_cpus, strata=strata,
                          var_name=var_name, grid=grid, generation=generation,
                          ancestry_filter=ancestry_filter, progress_env=progress_env)
+    message(sprintf("[BOOT][PP][done]  model=%s | var=%s | elapsed=%.1fs",
+                    model_label, var_name, proc.time()[["elapsed"]] - .t0))
 
     # Main model (for names/fallback)
     if (!is.null(main_model)) {
@@ -377,29 +413,27 @@ bootstrap_multinom_boot <- function(data_subset, generation="all", ancestry_filt
         boot_matrix_all <- boot_results$t[valid_rows,, drop=FALSE]
         n_grid <- nrow(grid); n_outcomes <- ncol(main_pred); outcome_names <- colnames(main_pred)
 
-        # rebuild matrices in column-major order (NO transpose)
-        boot_long <- vector("list", length=nrow(boot_matrix_all))
-        for (i in seq_len(nrow(boot_matrix_all))){
-          boot_vec <- boot_matrix_all[i, ]
-          boot_mat <- matrix(boot_vec, nrow=n_grid, ncol=n_outcomes, byrow=FALSE)
-          colnames(boot_mat) <- outcome_names
-          boot_long[[i]] <- as.data.frame(boot_mat) |>
-            dplyr::mutate(x_val=grid$x_val, iter=i) |>
-            tidyr::pivot_longer(cols = -c(x_val, iter), names_to="outcome", values_to="prob")
-        }
-        boot_long <- dplyr::bind_rows(boot_long)
+        # Each column of boot_matrix_all is the full vector of B_eff draws for
+        # one (x_val, outcome) cell — boot stat returns a column-major flatten
+        # of an (n_grid x n_outcomes) matrix, so column j of boot_matrix_all
+        # corresponds to grid[((j-1) %% n_grid) + 1] and
+        # outcome[((j-1) %/% n_grid) + 1]. Compute all three percentile
+        # statistics in a single column-wise pass.
+        col_stats <- apply(boot_matrix_all, 2, function(col) {
+          c(stats::median(col, na.rm = TRUE),
+            stats::quantile(col, 0.025, na.rm = TRUE, names = FALSE),
+            stats::quantile(col, 0.975, na.rm = TRUE, names = FALSE))
+        })
 
-        # Percentile CI (always in [0,1]); dot = bootstrap median
-        ci_df <- boot_long |>
-          dplyr::group_by(x_val, outcome) |>
-          dplyr::summarize(
-            p_main = stats::median(prob, na.rm=TRUE),
-            p_lo   = stats::quantile(prob, 0.025, na.rm=TRUE),
-            p_hi   = stats::quantile(prob, 0.975, na.rm=TRUE),
-            .groups="drop"
-          ) |>
+        ci_df <- tibble::tibble(
+          x_val   = rep(grid$x_val, times = n_outcomes),
+          outcome = rep(outcome_names, each = n_grid),
+          p_main  = col_stats[1, ],
+          p_lo    = col_stats[2, ],
+          p_hi    = col_stats[3, ]
+        ) |>
           dplyr::mutate(
-            p_main   = .clamp01(p_main),
+            p_main    = .clamp01(p_main),
             p_lo_plot = .clamp01(p_lo),
             p_hi_plot = .clamp01(p_hi),
             # ensure visible if collapsed
@@ -441,11 +475,16 @@ bootstrap_multinom_boot <- function(data_subset, generation="all", ancestry_filt
     .log_info(sprintf("[BOOT][ME] var=%s | gen=%s | anc=%s | R=%d", var_name, generation,
                 if (is.null(ancestry_filter)) "none" else ancestry_filter, B))
 
-    progress_env <- create_boot_progress_tracker(B, model_label, var_name, "ME")
+    progress_env <- if (in_loop_progress) create_boot_progress_tracker(B, model_label, var_name, "ME") else NULL
+    .t0 <- proc.time()[["elapsed"]]
+    message(sprintf("[BOOT][ME][start] model=%s | var=%s | R=%d | parallel=%s | ncpus=%d",
+                    model_label, var_name, B, boot_parallel, n_cpus))
     boot_results <- boot(data=data_subset, statistic=boot_me_stat, R=B, sim="ordinary", stype="i",
                          parallel=boot_parallel, ncpus=n_cpus, strata=strata,
                          var_name=var_name, generation=generation,
                          ancestry_filter=ancestry_filter, progress_env=progress_env)
+    message(sprintf("[BOOT][ME][done]  model=%s | var=%s | elapsed=%.1fs",
+                    model_label, var_name, proc.time()[["elapsed"]] - .t0))
 
     main_ame <- if (!is.null(main_model)) {
       tryCatch(
@@ -563,43 +602,47 @@ run_boot_and_save <- function(data_subset, generation, ancestry_filter, label_sl
 }
 
 # ---------- All generations ----------
-boot_all <- run_boot_and_save(
-  data_subset = CPS_IAT_multinomial,
-  generation  = "all",
-  ancestry_filter = NULL,
-  label_slug  = "all_generations",
-  label_pretty = "All generations",
-  seed = 2024
-)
+# Not used in current manuscript — commented out
+# boot_all <- run_boot_and_save(
+#   data_subset = CPS_IAT_multinomial,
+#   generation  = "all",
+#   ancestry_filter = NULL,
+#   label_slug  = "all_generations",
+#   label_pretty = "All generations",
+#   seed = 2024
+# )
 
 # ---------- Second generation (overall) ----------
-boot_second <- run_boot_and_save(
-  data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1),
-  generation  = "second",
-  ancestry_filter = NULL,
-  label_slug  = "second_generation",
-  label_pretty = "Second generation",
-  seed = 2026
-)
+# Not used in current manuscript — commented out
+# boot_second <- run_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1),
+#   generation  = "second",
+#   ancestry_filter = NULL,
+#   label_slug  = "second_generation",
+#   label_pretty = "Second generation",
+#   seed = 2026
+# )
 
 
 # ---------- Third generation (overall) ----------
-boot_third <- run_boot_and_save(
-  data_subset = CPS_IAT_multinomial |> filter(ThirdGen_Asian==1),
-  generation  = "third",
-  ancestry_filter = NULL,
-  label_slug  = "third_generation",
-  label_pretty = "Third generation",
-  seed = 2027
-)
+# Not used in current manuscript — commented out
+# boot_third <- run_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(ThirdGen_Asian==1),
+#   generation  = "third",
+#   ancestry_filter = NULL,
+#   label_slug  = "third_generation",
+#   label_pretty = "Third generation",
+#   seed = 2027
+# )
 
 # ---------- Second generation subgroups ----------
-boot_second_aa <- run_boot_and_save(
-  data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AA_0bj==1),
-  generation  = "second", ancestry_filter = "AA_0bj",
-  label_slug  = "second_AA", label_pretty = "Second gen: AA parents",
-  seed = 2028
-)
+# AA subgroup not used in current manuscript — commented out
+# boot_second_aa <- run_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AA_0bj==1),
+#   generation  = "second", ancestry_filter = "AA_0bj",
+#   label_slug  = "second_AA", label_pretty = "Second gen: AA parents",
+#   seed = 2028
+# )
 boot_second_aw <- run_boot_and_save(
   data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AW_0bj==1),
   generation  = "second", ancestry_filter = "AW_0bj",
@@ -611,6 +654,14 @@ boot_second_wa <- run_boot_and_save(
   generation  = "second", ancestry_filter = "WA_0bj",
   label_slug  = "second_WA", label_pretty = "Second gen: WA parents",
   seed = 2030
+)
+
+# ---------- Second generation: AW + WA pooled ----------
+boot_second_aw_wa <- run_boot_and_save(
+  data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AW_0bj==1 | WA_0bj==1),
+  generation  = "second", ancestry_filter = "AW_WA_pool",
+  label_slug  = "second_AW_WA", label_pretty = "Second gen: AW + WA parents (pooled)",
+  seed = 2035
 )
 
 # ---------- Third generation subgroups ----------
@@ -633,12 +684,29 @@ boot_third_three <- run_boot_and_save(
   label_slug  = "third_threeAsian", label_pretty = "Third gen: Three Asian grandparents",
   seed = 2033
   )
-boot_third_four <- run_boot_and_save(
-  data_subset = CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, FourAsian==1),
-  generation  = "third", ancestry_filter = "FourAsian",
-  label_slug  = "third_fourAsian", label_pretty = "Third gen: Four Asian grandparents",
-  seed = 2034
+# Four Asian grandparents subgroup not used in current manuscript — commented out
+# boot_third_four <- run_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, FourAsian==1),
+#   generation  = "third", ancestry_filter = "FourAsian",
+#   label_slug  = "third_fourAsian", label_pretty = "Third gen: Four Asian grandparents",
+#   seed = 2034
+# )
+
+# ---------- Third generation: 1 + 2 + 3 Asian grandparents pooled ----------
+boot_third_one_two_three <- run_boot_and_save(
+  data_subset = CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, OneAsian==1 | TwoAsian==1 | ThreeAsian==1),
+  generation  = "third", ancestry_filter = "OneTwoThree_pool",
+  label_slug  = "third_oneTwoThreeAsian", label_pretty = "Third gen: 1+2+3 Asian grandparents (pooled)",
+  seed = 2036
 )
+
+# # ---------- Third generation: 1 + 2 Asian grandparents pooled (excludes 3 and 4) ----------
+# boot_third_one_two <- run_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(ThirdGen_Asian==1, OneAsian==1 | TwoAsian==1),
+#   generation  = "third", ancestry_filter = "OneTwo_pool",
+#   label_slug  = "third_oneTwoAsian", label_pretty = "Third gen: 1+2 Asian grandparents (pooled)",
+#   seed = 2037
+# )
 
 .log_info(sprintf("All bootstrap results saved in: %s", git_mdir))
 .log_info("Set options bootstrap_show_progress = FALSE to silence iteration updates.")

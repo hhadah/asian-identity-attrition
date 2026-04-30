@@ -15,6 +15,10 @@ CPS_IAT <- read_csv(file.path(datasets,"CPS_IAT_asian.csv")) |>
 # Only interethnic groups: AW and WA
 # Add interaction terms: value_dm*Female, value_dm*MomGradCollege, value_dm*DadGradCollege
 
+# Pooled AW + WA
+awwa_data <- CPS_IAT |> filter((AW_0bj == 1 | WA_0bj == 1) & SecondGen_Asian == 1)
+awwa_model <- feols(Asian ~ value_dm*Female + value_dm*MomGradCollege + value_dm*DadGradCollege + frac_asian + Age + Age_sq + Age_cube + Age_quad | region:year, data = awwa_data, weights = ~weight, vcov = ~statefip)
+
 # AW: Asian Father, White Mother
 aw_data <- CPS_IAT |> filter(AW_0bj == 1 & SecondGen_Asian == 1)
 aw_model <- feols(Asian ~ value_dm*Female + value_dm*MomGradCollege + value_dm*DadGradCollege + frac_asian + Age + Age_sq + Age_cube + Age_quad | region:year, data = aw_data, weights = ~weight, vcov = ~statefip)
@@ -40,20 +44,34 @@ get_interaction_terms <- function(model) {
       grepl(":MomGradCollege", term) ~ "Bias × Mom Grad College",
       grepl(":DadGradCollege", term) ~ "Bias × Dad Grad College",
       TRUE ~ term
-    )
+    ),
+    label = factor(label, levels = c("Bias × Female",
+                                     "Bias × Dad Grad College",
+                                     "Bias × Mom Grad College"))
   )
 }
 
-# AW interaction coefficients
-aw_inter <- get_interaction_terms(aw_model)
-wa_inter <- get_interaction_terms(wa_model)
+# Extract interaction coefficients
+awwa_inter <- get_interaction_terms(awwa_model)
+aw_inter   <- get_interaction_terms(aw_model)
+wa_inter   <- get_interaction_terms(wa_model)
+
+# Plot interaction coefficients for pooled AW + WA
+ggplot(awwa_inter, aes(y = label, x = estimate)) +
+  geom_point(size=3) +
+  geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
+  geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
+  theme_customs() +
+  theme(axis.text.y = element_text(size=13))
+ggsave(paste0(figures_wd, "/interaction_coefficients_AWWA.png"), width = 7, height = 4)
 
 # Plot interaction coefficients for AW (coefficients on y-axis)
 ggplot(aw_inter, aes(y = label, x = estimate)) +
   geom_point(size=3) +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
-  labs(title = "AW: Interaction Coefficients", y = "Interaction Term", x = "Estimate") +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
   theme_customs() +
   theme(axis.text.y = element_text(size=13))
 ggsave(paste0(figures_wd, "/interaction_coefficients_AW.png"), width = 7, height = 4)
@@ -63,7 +81,7 @@ ggplot(wa_inter, aes(y = label, x = estimate)) +
   geom_point(size=3) +
   geom_vline(xintercept = 0, color = 'red', linetype = 'dotted', size = 1) +
   geom_errorbarh(aes(xmin = estimate - 1.96*std.error, xmax = estimate + 1.96*std.error), height=0.2) +
-  labs(title = "WA: Interaction Coefficients", y = "Interaction Term", x = "Estimate") +
+  labs(y = "Interaction Term", x = "Estimate (95% CIs)") +
   theme_customs() +
   theme(axis.text.y = element_text(size=13))
 ggsave(paste0(figures_wd, "/interaction_coefficients_WA.png"), width = 7, height = 4)

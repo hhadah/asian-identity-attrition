@@ -36,6 +36,10 @@ EPS_ME <- getOption("bootstrap_eps_me", 1e-4)    # enlarge collapsed ME CI by ±
 VERBOSE <- isTRUE(getOption("bootstrap_verbose", FALSE))
 SHOW_PROGRESS <- isTRUE(getOption("bootstrap_show_progress", TRUE))
 PROGRESS_EVERY <- max(1L, as.integer(getOption("bootstrap_progress_every", 1L)))
+# Per-iteration progress requires sequential execution (multicore forks
+# don't share the counter env). Default keeps parallelism and emits
+# per-block timing logs instead. Set TRUE to opt back into per-iter progress.
+FORCE_SEQUENTIAL <- isTRUE(getOption("bootstrap_force_sequential", FALSE))
 
 `%||%` <- function(x, y) if (!is.null(x)) x else y
 
@@ -153,7 +157,10 @@ fit_multinomial_model <- function(data_subset, generation="second", ancestry_fil
 }
 
 # Deterministic helpers (no auto-appending other columns)
-get_pp_vars <- function(data) PP_VARS
+# Predicted-probability computation disabled — the manuscript uses marginal-effect
+# figures only. Restore `PP_VARS` below to re-enable PP bootstraps.
+get_pp_vars <- function(data) character(0)
+# get_pp_vars <- function(data) PP_VARS
 get_me_vars <- function(data) ME_VARS
 
 # ---------------------------
@@ -299,11 +306,14 @@ bootstrap_multinom_boot <- function(data_subset, generation="second", ancestry_f
   strata <- if (!is.null(stratify_by)) data_subset[[stratify_by]] else NULL
   boot_parallel <- if (.Platform$OS.type == "windows") "no" else "multicore"
   n_cpus <- if (boot_parallel=="no") 1 else n_cores
-  if (SHOW_PROGRESS && boot_parallel != "no") {
-    .log_info("Progress requested; falling back to sequential bootstrap execution.")
+  if (FORCE_SEQUENTIAL && boot_parallel != "no") {
+    .log_info("FORCE_SEQUENTIAL=TRUE; running bootstrap sequentially.")
     boot_parallel <- "no"
     n_cpus <- 1
   }
+  # Per-iter progress is only meaningful when sequential — multicore forks
+  # mutate the counter env in workers and the changes don't reach the parent.
+  in_loop_progress <- SHOW_PROGRESS && boot_parallel == "no"
   outcome_levels <- levels(data_subset$identity_choice)
   rep_row_full <- representative_row(data_subset)
   main_model <- tryCatch(
@@ -325,11 +335,16 @@ bootstrap_multinom_boot <- function(data_subset, generation="second", ancestry_f
     grid <- make_var_grid(data_subset, var_name, pp_grid_step)
     nd <- newdata_for_grid(data_subset, var_name, grid, rep_row_full)
     
-    progress_env <- create_boot_progress_tracker(B, model_label, var_name, "PP")
+    progress_env <- if (in_loop_progress) create_boot_progress_tracker(B, model_label, var_name, "PP") else NULL
+    .t0 <- proc.time()[["elapsed"]]
+    message(sprintf("[BOOT][PP][start] model=%s | var=%s | R=%d | parallel=%s | ncpus=%d",
+                    model_label, var_name, B, boot_parallel, n_cpus))
     boot_results <- boot(data=data_subset, statistic=boot_pp_stat, R=B, sim="ordinary", stype="i",
                          parallel=boot_parallel, ncpus=n_cpus, strata=strata,
                          var_name=var_name, grid=grid, generation=generation,
                          ancestry_filter=ancestry_filter, progress_env=progress_env)
+    message(sprintf("[BOOT][PP][done]  model=%s | var=%s | elapsed=%.1fs",
+                    model_label, var_name, proc.time()[["elapsed"]] - .t0))
     
     # Main model (for names/fallback)
     if (!is.null(main_model)) {
@@ -360,32 +375,32 @@ bootstrap_multinom_boot <- function(data_subset, generation="second", ancestry_f
       
       if (sum(valid_rows) > 0){
         boot_matrix_all <- boot_results$t[valid_rows,, drop=FALSE]
-        
+
         # Percentile CI (always in [0,1]); dot = bootstrap median
         n_grid       <- nrow(grid)
         outcome_names <- colnames(main_pred)
         if (is.null(outcome_names)) outcome_names <- outcome_levels
         n_outcomes   <- length(outcome_names)
         stopifnot(ncol(boot_matrix_all) == n_grid * n_outcomes)
-        
-        boot_long <- vector("list", nrow(boot_matrix_all))
-        for (i in seq_len(nrow(boot_matrix_all))) {
-          boot_mat <- matrix(boot_matrix_all[i, ], nrow = n_grid, ncol = n_outcomes, byrow = FALSE)
-          colnames(boot_mat) <- outcome_names
-          boot_long[[i]] <- as.data.frame(boot_mat) |>
-            dplyr::mutate(x_val = grid$x_val, iter = i) |>
-            tidyr::pivot_longer(cols = -c(x_val, iter), names_to = "outcome", values_to = "prob")
-        }
-        boot_long <- dplyr::bind_rows(boot_long)
-        
-        ci_df <- boot_long |>
-          dplyr::group_by(x_val, outcome) |>
-          dplyr::summarize(
-            p_main = stats::median(prob, na.rm = TRUE),
-            p_lo   = stats::quantile(prob, 0.025, na.rm = TRUE),
-            p_hi   = stats::quantile(prob, 0.975, na.rm = TRUE),
-            .groups = "drop"
-          ) |>
+
+        # Each column of boot_matrix_all is the full vector of B_eff draws for
+        # one (x_val, outcome) cell — boot stat returns a column-major flatten
+        # of an (n_grid x n_outcomes) matrix. Compute median + 95% percentile
+        # bounds in a single column-wise pass instead of rebuilding/binding
+        # 1000 long-form data frames.
+        col_stats <- apply(boot_matrix_all, 2, function(col) {
+          c(stats::median(col, na.rm = TRUE),
+            stats::quantile(col, 0.025, na.rm = TRUE, names = FALSE),
+            stats::quantile(col, 0.975, na.rm = TRUE, names = FALSE))
+        })
+
+        ci_df <- tibble::tibble(
+          x_val   = rep(grid$x_val, times = n_outcomes),
+          outcome = rep(outcome_names, each = n_grid),
+          p_main  = col_stats[1, ],
+          p_lo    = col_stats[2, ],
+          p_hi    = col_stats[3, ]
+        ) |>
           dplyr::mutate(
             p_main    = .clamp01(p_main),
             p_lo_plot = .clamp01(p_lo),
@@ -428,11 +443,16 @@ bootstrap_multinom_boot <- function(data_subset, generation="second", ancestry_f
     .log_info(sprintf("[BOOT][ME] var=%s | gen=%s | anc=%s | R=%d", var_name, generation,
                       if (is.null(ancestry_filter)) "none" else ancestry_filter, B))
     
-    progress_env <- create_boot_progress_tracker(B, model_label, var_name, "ME")
+    progress_env <- if (in_loop_progress) create_boot_progress_tracker(B, model_label, var_name, "ME") else NULL
+    .t0 <- proc.time()[["elapsed"]]
+    message(sprintf("[BOOT][ME][start] model=%s | var=%s | R=%d | parallel=%s | ncpus=%d",
+                    model_label, var_name, B, boot_parallel, n_cpus))
     boot_results <- boot(data=data_subset, statistic=boot_me_stat, R=B, sim="ordinary", stype="i",
                          parallel=boot_parallel, ncpus=n_cpus, strata=strata,
                          var_name=var_name, generation=generation,
                          ancestry_filter=ancestry_filter, progress_env=progress_env)
+    message(sprintf("[BOOT][ME][done]  model=%s | var=%s | elapsed=%.1fs",
+                    model_label, var_name, proc.time()[["elapsed"]] - .t0))
     
     main_ame <- if (!is.null(main_model)) {
       tryCatch(
@@ -550,12 +570,13 @@ run_multinom_boot_and_save <- function(data_subset, generation, ancestry_filter,
 }
 
 # ---------- Second generation subgroups (Adults; fixed formula used for all) ----------
-boot_second_aa_adults <- run_multinom_boot_and_save(
-  data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AA_0bj==1),
-  generation  = "second", ancestry_filter = "AA_0bj",
-  label_slug  = "second_AA_adults_multinom", label_pretty = "Second gen adults: AA parents (Multinomial)",
-  seed = 3028
-)
+# AA subgroup not used in current manuscript — commented out
+# boot_second_aa_adults <- run_multinom_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AA_0bj==1),
+#   generation  = "second", ancestry_filter = "AA_0bj",
+#   label_slug  = "second_AA_adults_multinom", label_pretty = "Second gen adults: AA parents (Multinomial)",
+#   seed = 3028
+# )
 
 boot_second_aw_adults <- run_multinom_boot_and_save(
   data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AW_0bj==1),
@@ -571,11 +592,20 @@ boot_second_wa_adults <- run_multinom_boot_and_save(
   seed = 3030
 )
 
-boot_second_all_adults <- run_multinom_boot_and_save(
-  data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1), ancestry_filter=NULL,
-  generation  = "second",
-  label_slug  = "second_gen_adults_multinom", label_pretty = "Second gen adults (Multinomial)",
-  seed = 3031
+# Overall second-gen adults (includes AA) not used in current manuscript — commented out
+# boot_second_all_adults <- run_multinom_boot_and_save(
+#   data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1), ancestry_filter=NULL,
+#   generation  = "second",
+#   label_slug  = "second_gen_adults_multinom", label_pretty = "Second gen adults (Multinomial)",
+#   seed = 3031
+# )
+
+# ---------- Second generation adults: AW + WA pooled ----------
+boot_second_aw_wa_adults <- run_multinom_boot_and_save(
+  data_subset = CPS_IAT_multinomial |> filter(SecondGen_Asian==1, AW_0bj==1 | WA_0bj==1),
+  generation  = "second", ancestry_filter = "AW_WA_pool",
+  label_slug  = "second_AW_WA_adults_multinom", label_pretty = "Second gen adults: AW + WA parents pooled (Multinomial)",
+  seed = 3032
 )
 
 .log_info(sprintf("All multinomial bootstrap results saved in: %s", git_mdir))

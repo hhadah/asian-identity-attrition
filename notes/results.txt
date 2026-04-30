@@ -1,0 +1,358 @@
+
+alisaffouri@Alis-Mac-mini asian-identity-attrition % cd /Users/alisaffouri/Downloads/asian-identity-attrition
+Rscript 95-make-all.R
+         used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
+Ncells 285637 15.3     669611 35.8         NA   457378 24.5
+Vcells 492588  3.8    8388608 64.0      16384  1851200 14.2
+Error in font_add_google("Fira Sans", "firasans") : 
+  could not find function "font_add_google"
+Execution halted
+alisaffouri@Alis-Mac-mini asian-identity-attrition % cd /Users/alisaffouri/Downloads/asian-identity-attrition
+Rscript 95-make-all.R
+         used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
+Ncells 285637 15.3     669611 35.8         NA   457378 24.5
+Vcells 492588  3.8    8388608 64.0      16384  1851200 14.2
+Error in showtext_opts(dpi = 300) : 
+  could not find function "showtext_opts"
+Execution halted
+alisaffouri@Alis-Mac-mini asian-identity-attrition % cd /Users/alisaffouri/Downloads/asian-identity-attrition
+Rscript 95-make-all.R
+         used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
+Ncells 285637 15.3     669611 35.8         NA   457378 24.5
+Vcells 492588  3.8    8388608 64.0      16384  1851200 14.2
+Rows: 129078 Columns: 586
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr   (9): Type, Type_Asian, Type_Arab, Type_Black, Proxy, state_anes, state...
+dbl (389): year, serial, month, hwtfinl, cpsid, asecflag, asecwth, asecwth04...
+lgl (188): hflag, phispous, phihhkid, phinhkid, asecwtcvd_mom2, asecwtcvd_po...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+[BOOT][ME][start] model=Second gen: AW parents | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW parents | var=value | elapsed=669.7s
+[BOOT][ME][start] model=Second gen: AW parents | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW parents | var=Female | elapsed=625.0s
+[BOOT][ME][start] model=Second gen: AW parents | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW parents | var=MomGradCollege | elapsed=648.1s
+[BOOT][ME][start] model=Second gen: AW parents | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW parents | var=DadGradCollege | elapsed=623.7s
+[BOOT][ME][start] model=Second gen: WA parents | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: WA parents | var=value | elapsed=1441.4s
+[BOOT][ME][start] model=Second gen: WA parents | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: WA parents | var=Female | elapsed=1401.3s
+[BOOT][ME][start] model=Second gen: WA parents | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: WA parents | var=MomGradCollege | elapsed=1432.3s
+[BOOT][ME][start] model=Second gen: WA parents | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: WA parents | var=DadGradCollege | elapsed=1395.7s
+[BOOT][ME][start] model=Second gen: AW + WA parents (pooled) | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW + WA parents (pooled) | var=value | elapsed=2100.3s
+[BOOT][ME][start] model=Second gen: AW + WA parents (pooled) | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW + WA parents (pooled) | var=Female | elapsed=2072.1s
+[BOOT][ME][start] model=Second gen: AW + WA parents (pooled) | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW + WA parents (pooled) | var=MomGradCollege | elapsed=2110.8s
+[BOOT][ME][start] model=Second gen: AW + WA parents (pooled) | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen: AW + WA parents (pooled) | var=DadGradCollege | elapsed=2085.7s
+[BOOT][ME][start] model=Third gen: One Asian grandparent | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: One Asian grandparent | var=value | elapsed=942.6s
+[BOOT][ME][start] model=Third gen: One Asian grandparent | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: One Asian grandparent | var=Female | elapsed=954.0s
+[BOOT][ME][start] model=Third gen: One Asian grandparent | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: One Asian grandparent | var=MomGradCollege | elapsed=937.9s
+[BOOT][ME][start] model=Third gen: One Asian grandparent | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: One Asian grandparent | var=DadGradCollege | elapsed=932.6s
+[BOOT][ME][start] model=Third gen: Two Asian grandparents | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Two Asian grandparents | var=value | elapsed=835.9s
+[BOOT][ME][start] model=Third gen: Two Asian grandparents | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Two Asian grandparents | var=Female | elapsed=828.5s
+[BOOT][ME][start] model=Third gen: Two Asian grandparents | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Two Asian grandparents | var=MomGradCollege | elapsed=842.6s
+[BOOT][ME][start] model=Third gen: Two Asian grandparents | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Two Asian grandparents | var=DadGradCollege | elapsed=889.5s
+[BOOT][ME][start] model=Third gen: Three Asian grandparents | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Three Asian grandparents | var=value | elapsed=28.1s
+[BOOT][ME][start] model=Third gen: Three Asian grandparents | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Three Asian grandparents | var=Female | elapsed=30.0s
+[BOOT][ME][start] model=Third gen: Three Asian grandparents | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Three Asian grandparents | var=MomGradCollege | elapsed=33.4s
+[BOOT][ME][start] model=Third gen: Three Asian grandparents | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: Three Asian grandparents | var=DadGradCollege | elapsed=29.4s
+[BOOT][ME][start] model=Third gen: 1+2+3 Asian grandparents (pooled) | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: 1+2+3 Asian grandparents (pooled) | var=value | elapsed=1964.2s
+[BOOT][ME][start] model=Third gen: 1+2+3 Asian grandparents (pooled) | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: 1+2+3 Asian grandparents (pooled) | var=Female | elapsed=1978.2s
+[BOOT][ME][start] model=Third gen: 1+2+3 Asian grandparents (pooled) | var=MomGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: 1+2+3 Asian grandparents (pooled) | var=MomGradCollege | elapsed=1918.1s
+[BOOT][ME][start] model=Third gen: 1+2+3 Asian grandparents (pooled) | var=DadGradCollege | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Third gen: 1+2+3 Asian grandparents (pooled) | var=DadGradCollege | elapsed=1919.7s
+Rendering plots for Second gen: AW parents (second_AW)
+  Pairwise ME tests for Second gen: AW parents:
+    value: Asian_only vs White_only | diff = -0.3363 | z = -4.678 | p = 0.0000 ***
+    value: Asian_only vs Asian_and_White | diff = -0.0630 | z = -0.893 | p = 0.3718 
+    value: White_only vs Asian_and_White | diff = 0.2733 | z = 4.053 | p = 0.0001 ***
+    Female: Asian_only vs White_only | diff = -0.0296 | z = -1.082 | p = 0.2791 
+    Female: Asian_only vs Asian_and_White | diff = -0.0542 | z = -2.002 | p = 0.0453 **
+    Female: White_only vs Asian_and_White | diff = -0.0246 | z = -0.947 | p = 0.3438 
+    MomGradCollege: Asian_only vs White_only | diff = 0.2144 | z = 5.919 | p = 0.0000 ***
+    MomGradCollege: Asian_only vs Asian_and_White | diff = 0.0733 | z = 1.955 | p = 0.0506 *
+    MomGradCollege: White_only vs Asian_and_White | diff = -0.1411 | z = -4.004 | p = 0.0001 ***
+    DadGradCollege: Asian_only vs White_only | diff = -0.0748 | z = -2.576 | p = 0.0100 ***
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.1057 | z = -3.723 | p = 0.0002 ***
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.0310 | z = -1.104 | p = 0.2698 
+Rendering plots for Second gen: WA parents (second_WA)
+  Pairwise ME tests for Second gen: WA parents:
+    value: Asian_only vs White_only | diff = -0.2217 | z = -4.116 | p = 0.0000 ***
+    value: Asian_only vs Asian_and_White | diff = -0.1349 | z = -2.123 | p = 0.0337 **
+    value: White_only vs Asian_and_White | diff = 0.0868 | z = 1.581 | p = 0.1139 
+    Female: Asian_only vs White_only | diff = -0.0211 | z = -0.677 | p = 0.4987 
+    Female: Asian_only vs Asian_and_White | diff = 0.0933 | z = 2.817 | p = 0.0048 ***
+    Female: White_only vs Asian_and_White | diff = 0.1144 | z = 3.566 | p = 0.0004 ***
+    MomGradCollege: Asian_only vs White_only | diff = 0.0241 | z = 0.623 | p = 0.5330 
+    MomGradCollege: Asian_only vs Asian_and_White | diff = 0.0350 | z = 0.856 | p = 0.3919 
+    MomGradCollege: White_only vs Asian_and_White | diff = 0.0109 | z = 0.219 | p = 0.8269 
+    DadGradCollege: Asian_only vs White_only | diff = 0.0610 | z = 1.774 | p = 0.0760 *
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.0581 | z = -1.585 | p = 0.1130 
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.1191 | z = -2.934 | p = 0.0033 ***
+Rendering plots for Second gen: AW + WA parents (pooled) (second_AW_WA)
+  Pairwise ME tests for Second gen: AW + WA parents (pooled):
+    value: Asian_only vs White_only | diff = -0.2141 | z = -4.761 | p = 0.0000 ***
+    value: Asian_only vs Asian_and_White | diff = -0.0777 | z = -1.799 | p = 0.0720 *
+    value: White_only vs Asian_and_White | diff = 0.1364 | z = 3.219 | p = 0.0013 ***
+    Female: Asian_only vs White_only | diff = -0.0156 | z = -0.505 | p = 0.6136 
+    Female: Asian_only vs Asian_and_White | diff = 0.0040 | z = 0.112 | p = 0.9107 
+    Female: White_only vs Asian_and_White | diff = 0.0196 | z = 0.575 | p = 0.5654 
+    MomGradCollege: Asian_only vs White_only | diff = 0.1098 | z = 3.215 | p = 0.0013 ***
+    MomGradCollege: Asian_only vs Asian_and_White | diff = 0.0520 | z = 1.224 | p = 0.2210 
+    MomGradCollege: White_only vs Asian_and_White | diff = -0.0578 | z = -1.475 | p = 0.1401 
+    DadGradCollege: Asian_only vs White_only | diff = 0.0291 | z = 1.141 | p = 0.2537 
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.0605 | z = -2.038 | p = 0.0416 **
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.0896 | z = -2.843 | p = 0.0045 ***
+Rendering plots for Third gen: One Asian grandparent (third_oneAsian)
+  Pairwise ME tests for Third gen: One Asian grandparent:
+    value: Asian_only vs White_only | diff = -0.0129 | z = -0.161 | p = 0.8724 
+    value: Asian_only vs Asian_and_White | diff = -0.0588 | z = -0.731 | p = 0.4646 
+    value: White_only vs Asian_and_White | diff = -0.0459 | z = -0.547 | p = 0.5841 
+    Female: Asian_only vs White_only | diff = 0.0607 | z = 1.634 | p = 0.1022 
+    Female: Asian_only vs Asian_and_White | diff = -0.1078 | z = -2.821 | p = 0.0048 ***
+    Female: White_only vs Asian_and_White | diff = -0.1685 | z = -3.349 | p = 0.0008 ***
+    MomGradCollege: Asian_only vs White_only | diff = 0.1159 | z = 3.280 | p = 0.0010 ***
+    MomGradCollege: Asian_only vs Asian_and_White | diff = -0.0732 | z = -2.099 | p = 0.0358 **
+    MomGradCollege: White_only vs Asian_and_White | diff = -0.1892 | z = -4.048 | p = 0.0001 ***
+    DadGradCollege: Asian_only vs White_only | diff = 0.0027 | z = 0.061 | p = 0.9514 
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.1023 | z = -2.455 | p = 0.0141 **
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.1050 | z = -1.805 | p = 0.0710 *
+Rendering plots for Third gen: Two Asian grandparents (third_twoAsian)
+  Pairwise ME tests for Third gen: Two Asian grandparents:
+    value: Asian_only vs White_only | diff = -0.1503 | z = -2.151 | p = 0.0314 **
+    value: Asian_only vs Asian_and_White | diff = -0.1622 | z = -2.085 | p = 0.0370 **
+    value: White_only vs Asian_and_White | diff = -0.0119 | z = -0.156 | p = 0.8763 
+    Female: Asian_only vs White_only | diff = -0.0150 | z = -0.308 | p = 0.7578 
+    Female: Asian_only vs Asian_and_White | diff = -0.0282 | z = -0.545 | p = 0.5856 
+    Female: White_only vs Asian_and_White | diff = -0.0132 | z = -0.237 | p = 0.8130 
+    MomGradCollege: Asian_only vs White_only | diff = 0.0689 | z = 1.266 | p = 0.2056 
+    MomGradCollege: Asian_only vs Asian_and_White | diff = 0.1385 | z = 2.422 | p = 0.0154 **
+    MomGradCollege: White_only vs Asian_and_White | diff = 0.0697 | z = 1.095 | p = 0.2737 
+    DadGradCollege: Asian_only vs White_only | diff = 0.1098 | z = 2.090 | p = 0.0367 **
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.1200 | z = -2.231 | p = 0.0257 **
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.2298 | z = -3.778 | p = 0.0002 ***
+Rendering plots for Third gen: Three Asian grandparents (third_threeAsian)
+  Pairwise ME tests for Third gen: Three Asian grandparents:
+    value: Asian_only vs White_only | diff = -0.3751 | z = -2.490 | p = 0.0128 **
+    value: Asian_only vs Asian_and_White | diff = -0.1909 | z = -0.937 | p = 0.3487 
+    value: White_only vs Asian_and_White | diff = 0.1841 | z = 1.218 | p = 0.2232 
+    Female: Asian_only vs White_only | diff = -0.0913 | z = -1.945 | p = 0.0518 *
+    Female: Asian_only vs Asian_and_White | diff = -0.0613 | z = -1.440 | p = 0.1499 
+    Female: White_only vs Asian_and_White | diff = 0.0300 | z = 0.806 | p = 0.4203 
+    MomGradCollege: Asian_only vs White_only | diff = 0.6221 | z = 8.250 | p = 0.0000 ***
+    MomGradCollege: Asian_only vs Asian_and_White | diff = 0.3535 | z = 4.553 | p = 0.0000 ***
+    MomGradCollege: White_only vs Asian_and_White | diff = -0.2686 | z = -3.781 | p = 0.0002 ***
+    DadGradCollege: Asian_only vs White_only | diff = -0.6025 | z = -7.764 | p = 0.0000 ***
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.3247 | z = -4.505 | p = 0.0000 ***
+    DadGradCollege: White_only vs Asian_and_White | diff = 0.2777 | z = 3.881 | p = 0.0001 ***
+Rendering plots for Third gen: 1+2 Asian grandparents (pooled) (third_oneTwoAsian)
+  Pairwise ME tests for Third gen: 1+2 Asian grandparents (pooled):
+    value: Asian_only vs White_only | diff = -0.1015 | z = -3.559 | p = 0.0004 ***
+    value: Asian_only vs Asian_and_White | diff = -0.0847 | z = -2.462 | p = 0.0138 **
+    value: White_only vs Asian_and_White | diff = 0.0168 | z = 0.525 | p = 0.5994 
+    Female: Asian_only vs White_only | diff = -0.0028 | z = -0.095 | p = 0.9240 
+    Female: Asian_only vs Asian_and_White | diff = -0.0379 | z = -1.326 | p = 0.1849 
+    Female: White_only vs Asian_and_White | diff = -0.0350 | z = -1.083 | p = 0.2787 
+    MomGradCollege: Asian_only vs White_only | diff = 0.0900 | z = 2.551 | p = 0.0107 **
+    MomGradCollege: Asian_only vs Asian_and_White | diff = 0.0393 | z = 1.295 | p = 0.1954 
+    MomGradCollege: White_only vs Asian_and_White | diff = -0.0507 | z = -1.182 | p = 0.2372 
+    DadGradCollege: Asian_only vs White_only | diff = 0.0208 | z = 0.710 | p = 0.4775 
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.0204 | z = -0.678 | p = 0.4980 
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.0412 | z = -1.069 | p = 0.2850 
+Rendering plots for Third gen: 1+2+3 Asian grandparents (pooled) (third_oneTwoThreeAsian)
+  Pairwise ME tests for Third gen: 1+2+3 Asian grandparents (pooled):
+    value: Asian_only vs White_only | diff = -0.0150 | z = -0.357 | p = 0.7208 
+    value: Asian_only vs Asian_and_White | diff = -0.0589 | z = -1.459 | p = 0.1447 
+    value: White_only vs Asian_and_White | diff = -0.0439 | z = -0.992 | p = 0.3212 
+    Female: Asian_only vs White_only | diff = 0.0064 | z = 0.263 | p = 0.7926 
+    Female: Asian_only vs Asian_and_White | diff = -0.0766 | z = -3.256 | p = 0.0011 ***
+    Female: White_only vs Asian_and_White | diff = -0.0830 | z = -3.240 | p = 0.0012 ***
+    MomGradCollege: Asian_only vs White_only | diff = 0.0546 | z = 1.974 | p = 0.0484 **
+    MomGradCollege: Asian_only vs Asian_and_White | diff = -0.0033 | z = -0.118 | p = 0.9060 
+    MomGradCollege: White_only vs Asian_and_White | diff = -0.0578 | z = -1.677 | p = 0.0936 *
+    DadGradCollege: Asian_only vs White_only | diff = 0.0255 | z = 0.878 | p = 0.3802 
+    DadGradCollege: Asian_only vs Asian_and_White | diff = -0.0996 | z = -3.440 | p = 0.0006 ***
+    DadGradCollege: White_only vs Asian_and_White | diff = -0.1251 | z = -3.386 | p = 0.0007 ***
+Between-model ME tests: Second gen: AW vs Second gen: WA
+  value            | Asian_only         | diff = -0.0136 | z = -0.196 | p = 0.8443 
+  value            | White_only         | diff = +0.1010 | z = +1.756 | p = 0.0790 *
+  value            | Asian_and_White    | diff = -0.0854 | z = -1.309 | p = 0.1904 
+  Female           | Asian_only         | diff = -0.0526 | z = -1.732 | p = 0.0832 *
+  Female           | White_only         | diff = -0.0441 | z = -1.562 | p = 0.1183 
+  Female           | Asian_and_White    | diff = +0.0949 | z = +3.150 | p = 0.0016 ***
+  MomGradCollege   | Asian_only         | diff = +0.0749 | z = +2.288 | p = 0.0221 **
+  MomGradCollege   | White_only         | diff = -0.1154 | z = -2.772 | p = 0.0056 ***
+  MomGradCollege   | Asian_and_White    | diff = +0.0367 | z = +0.819 | p = 0.4131 
+  DadGradCollege   | Asian_only         | diff = -0.0613 | z = -2.077 | p = 0.0378 **
+  DadGradCollege   | White_only         | diff = +0.0745 | z = +2.193 | p = 0.0283 **
+  DadGradCollege   | Asian_and_White    | diff = -0.0137 | z = -0.382 | p = 0.7023 
+Between-model ME tests: Third gen: 1 Asian GP vs Third gen: 2 Asian GP
+  value            | Asian_only         | diff = +0.0801 | z = +1.084 | p = 0.2785 
+  value            | White_only         | diff = -0.0573 | z = -0.750 | p = 0.4533 
+  value            | Asian_and_White    | diff = -0.0233 | z = -0.278 | p = 0.7813 
+  Female           | Asian_only         | diff = -0.0008 | z = -0.025 | p = 0.9803 
+  Female           | White_only         | diff = -0.0765 | z = -1.495 | p = 0.1350 
+  Female           | Asian_and_White    | diff = +0.0788 | z = +1.438 | p = 0.1504 
+  MomGradCollege   | Asian_only         | diff = -0.0560 | z = -1.597 | p = 0.1104 
+  MomGradCollege   | White_only         | diff = -0.1031 | z = -1.889 | p = 0.0589 *
+  MomGradCollege   | Asian_and_White    | diff = +0.1558 | z = +2.729 | p = 0.0064 ***
+  DadGradCollege   | Asian_only         | diff = -0.0303 | z = -0.905 | p = 0.3657 
+  DadGradCollege   | White_only         | diff = +0.0768 | z = +1.285 | p = 0.1988 
+  DadGradCollege   | Asian_and_White    | diff = -0.0480 | z = -0.811 | p = 0.4176 
+Between-model ME tests: Third gen: 1 Asian GP vs Third gen: 3 Asian GP
+  value            | Asian_only         | diff = +0.1616 | z = +1.052 | p = 0.2926 
+  value            | White_only         | diff = -0.2006 | z = -2.698 | p = 0.0070 ***
+  value            | Asian_and_White    | diff = +0.0295 | z = +0.189 | p = 0.8500 
+  Female           | Asian_only         | diff = +0.0357 | z = +0.931 | p = 0.3519 
+  Female           | White_only         | diff = -0.1162 | z = -2.530 | p = 0.0114 **
+  Female           | Asian_and_White    | diff = +0.0822 | z = +1.936 | p = 0.0529 *
+  MomGradCollege   | Asian_only         | diff = -0.3106 | z = -5.269 | p = 0.0000 ***
+  MomGradCollege   | White_only         | diff = +0.1956 | z = +3.325 | p = 0.0009 ***
+  MomGradCollege   | Asian_and_White    | diff = +0.1161 | z = +1.891 | p = 0.0586 *
+  DadGradCollege   | Asian_only         | diff = +0.2748 | z = +4.863 | p = 0.0000 ***
+  DadGradCollege   | White_only         | diff = -0.3303 | z = -4.787 | p = 0.0000 ***
+  DadGradCollege   | Asian_and_White    | diff = +0.0523 | z = +0.856 | p = 0.3919 
+Between-model ME tests: Third gen: 2 Asian GP vs Third gen: 3 Asian GP
+  value            | Asian_only         | diff = +0.0815 | z = +0.535 | p = 0.5925 
+  value            | White_only         | diff = -0.1432 | z = -2.167 | p = 0.0303 **
+  value            | Asian_and_White    | diff = +0.0528 | z = +0.339 | p = 0.7349 
+  Female           | Asian_only         | diff = +0.0365 | z = +0.762 | p = 0.4462 
+  Female           | White_only         | diff = -0.0397 | z = -0.830 | p = 0.4063 
+  Female           | Asian_and_White    | diff = +0.0034 | z = +0.073 | p = 0.9416 
+  MomGradCollege   | Asian_only         | diff = -0.2546 | z = -3.828 | p = 0.0001 ***
+  MomGradCollege   | White_only         | diff = +0.2986 | z = +4.596 | p = 0.0000 ***
+  MomGradCollege   | Asian_and_White    | diff = -0.0397 | z = -0.568 | p = 0.5701 
+  DadGradCollege   | Asian_only         | diff = +0.3051 | z = +4.809 | p = 0.0000 ***
+  DadGradCollege   | White_only         | diff = -0.4071 | z = -5.903 | p = 0.0000 ***
+  DadGradCollege   | Asian_and_White    | diff = +0.1003 | z = +1.574 | p = 0.1154 
+All figures saved in: /Users/alisaffouri/Downloads/asian-identity-attrition
+Warning message:
+The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead. 
+Rows: 388925 Columns: 581
+── Column specification ───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: ","
+chr   (6): Type, Type_Asian, Type_Black, state_anes, state, ParentType2
+dbl (385): year, serial, month, hwtfinl, cpsid, asecflag, asecwth, asecwth04...
+lgl (190): hflag, phispous, phihhkid, phinhkid, asecwtcvd_mom2, asecwtcvd_po...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+[BOOT][ME][start] model=Second gen adults: AW parents (Multinomial) | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW parents (Multinomial) | var=value | elapsed=179.3s
+[BOOT][ME][start] model=Second gen adults: AW parents (Multinomial) | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW parents (Multinomial) | var=Female | elapsed=171.5s
+[BOOT][ME][start] model=Second gen adults: AW parents (Multinomial) | var=EducYears | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW parents (Multinomial) | var=EducYears | elapsed=172.3s
+[BOOT][ME][start] model=Second gen adults: AW parents (Multinomial) | var=frac_asian | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW parents (Multinomial) | var=frac_asian | elapsed=175.8s
+[BOOT][ME][start] model=Second gen adults: AW parents (Multinomial) | var=lnftotval | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW parents (Multinomial) | var=lnftotval | elapsed=170.2s
+[BOOT][ME][start] model=Second gen adults: WA parents (Multinomial) | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: WA parents (Multinomial) | var=value | elapsed=313.4s
+[BOOT][ME][start] model=Second gen adults: WA parents (Multinomial) | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: WA parents (Multinomial) | var=Female | elapsed=308.7s
+[BOOT][ME][start] model=Second gen adults: WA parents (Multinomial) | var=EducYears | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: WA parents (Multinomial) | var=EducYears | elapsed=306.3s
+[BOOT][ME][start] model=Second gen adults: WA parents (Multinomial) | var=frac_asian | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: WA parents (Multinomial) | var=frac_asian | elapsed=312.2s
+[BOOT][ME][start] model=Second gen adults: WA parents (Multinomial) | var=lnftotval | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: WA parents (Multinomial) | var=lnftotval | elapsed=312.9s
+[BOOT][ME][start] model=Second gen adults: AW + WA parents pooled (Multinomial) | var=value | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW + WA parents pooled (Multinomial) | var=value | elapsed=487.7s
+[BOOT][ME][start] model=Second gen adults: AW + WA parents pooled (Multinomial) | var=Female | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW + WA parents pooled (Multinomial) | var=Female | elapsed=479.3s
+[BOOT][ME][start] model=Second gen adults: AW + WA parents pooled (Multinomial) | var=EducYears | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW + WA parents pooled (Multinomial) | var=EducYears | elapsed=481.3s
+[BOOT][ME][start] model=Second gen adults: AW + WA parents pooled (Multinomial) | var=frac_asian | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW + WA parents pooled (Multinomial) | var=frac_asian | elapsed=482.7s
+[BOOT][ME][start] model=Second gen adults: AW + WA parents pooled (Multinomial) | var=lnftotval | R=1000 | parallel=multicore | ncpus=7
+[BOOT][ME][done]  model=Second gen adults: AW + WA parents pooled (Multinomial) | var=lnftotval | elapsed=469.5s
+Warning message:
+One or more parsing issues, call `problems()` on your data frame for details, e.g.:
+  dat <- vroom(...)
+  problems(dat) 
+Rendering plots for Second gen adults: AW parents (Multinomial) (second_AW_adults_multinom)
+  Pairwise ME tests for Second gen adults: AW parents (Multinomial):
+    value: Asian_only vs White_only | diff = -0.1618 | z = -1.923 | p = 0.0544 *
+    value: Asian_only vs Asian_and_White | diff = 0.0797 | z = 0.997 | p = 0.3186 
+    value: White_only vs Asian_and_White | diff = 0.2415 | z = 2.832 | p = 0.0046 ***
+    Female: Asian_only vs White_only | diff = -0.0038 | z = -0.097 | p = 0.9227 
+    Female: Asian_only vs Asian_and_White | diff = -0.0512 | z = -1.317 | p = 0.1880 
+    Female: White_only vs Asian_and_White | diff = -0.0474 | z = -1.244 | p = 0.2134 
+    EducYears: Asian_only vs White_only | diff = 0.0404 | z = 5.026 | p = 0.0000 ***
+    EducYears: Asian_only vs Asian_and_White | diff = 0.0292 | z = 3.563 | p = 0.0004 ***
+    EducYears: White_only vs Asian_and_White | diff = -0.0112 | z = -1.441 | p = 0.1496 
+    lnftotval: Asian_only vs White_only | diff = 0.0133 | z = 0.989 | p = 0.3229 
+    lnftotval: Asian_only vs Asian_and_White | diff = 0.0076 | z = 0.561 | p = 0.5746 
+    lnftotval: White_only vs Asian_and_White | diff = -0.0058 | z = -0.463 | p = 0.6433 
+Rendering plots for Second gen adults: WA parents (Multinomial) (second_WA_adults_multinom)
+  Pairwise ME tests for Second gen adults: WA parents (Multinomial):
+    value: Asian_only vs White_only | diff = -0.1722 | z = -1.926 | p = 0.0540 *
+    value: Asian_only vs Asian_and_White | diff = -0.2145 | z = -2.177 | p = 0.0295 **
+    value: White_only vs Asian_and_White | diff = -0.0423 | z = -0.485 | p = 0.6275 
+    Female: Asian_only vs White_only | diff = -0.0157 | z = -0.537 | p = 0.5913 
+    Female: Asian_only vs Asian_and_White | diff = -0.0191 | z = -0.646 | p = 0.5180 
+    Female: White_only vs Asian_and_White | diff = -0.0034 | z = -0.113 | p = 0.9102 
+    EducYears: Asian_only vs White_only | diff = 0.0322 | z = 4.680 | p = 0.0000 ***
+    EducYears: Asian_only vs Asian_and_White | diff = 0.0158 | z = 2.348 | p = 0.0189 **
+    EducYears: White_only vs Asian_and_White | diff = -0.0164 | z = -2.458 | p = 0.0140 **
+    lnftotval: Asian_only vs White_only | diff = -0.0178 | z = -2.156 | p = 0.0311 **
+    lnftotval: Asian_only vs Asian_and_White | diff = -0.0323 | z = -3.697 | p = 0.0002 ***
+    lnftotval: White_only vs Asian_and_White | diff = -0.0145 | z = -1.602 | p = 0.1092 
+Rendering plots for Second gen adults: AW + WA parents pooled (Multinomial) (second_AW_WA_adults_multinom)
+  Pairwise ME tests for Second gen adults: AW + WA parents pooled (Multinomial):
+    value: Asian_only vs White_only | diff = -0.1992 | z = -2.707 | p = 0.0068 ***
+    value: Asian_only vs Asian_and_White | diff = -0.1077 | z = -1.434 | p = 0.1515 
+    value: White_only vs Asian_and_White | diff = 0.0915 | z = 1.299 | p = 0.1940 
+    Female: Asian_only vs White_only | diff = -0.0119 | z = -0.496 | p = 0.6201 
+    Female: Asian_only vs Asian_and_White | diff = -0.0361 | z = -1.490 | p = 0.1362 
+    Female: White_only vs Asian_and_White | diff = -0.0242 | z = -1.021 | p = 0.3074 
+    EducYears: Asian_only vs White_only | diff = 0.0346 | z = 6.230 | p = 0.0000 ***
+    EducYears: Asian_only vs Asian_and_White | diff = 0.0197 | z = 3.532 | p = 0.0004 ***
+    EducYears: White_only vs Asian_and_White | diff = -0.0148 | z = -2.812 | p = 0.0049 ***
+    lnftotval: Asian_only vs White_only | diff = -0.0059 | z = -0.826 | p = 0.4087 
+    lnftotval: Asian_only vs Asian_and_White | diff = -0.0210 | z = -2.873 | p = 0.0041 ***
+    lnftotval: White_only vs Asian_and_White | diff = -0.0151 | z = -2.027 | p = 0.0427 **
+Between-model ME tests: Second gen adults: AW vs Second gen adults: WA
+  value            | Asian_only         | diff = +0.0998 | z = +1.106 | p = 0.2687 
+  value            | White_only         | diff = +0.0894 | z = +1.074 | p = 0.2828 
+  value            | Asian_and_White    | diff = -0.1945 | z = -2.180 | p = 0.0293 **
+  Female           | Asian_only         | diff = -0.0069 | z = -0.197 | p = 0.8442 
+  Female           | White_only         | diff = -0.0188 | z = -0.549 | p = 0.5831 
+  Female           | Asian_and_White    | diff = +0.0252 | z = +0.739 | p = 0.4596 
+  EducYears        | Asian_only         | diff = +0.0072 | z = +0.934 | p = 0.3505 
+  EducYears        | White_only         | diff = -0.0011 | z = -0.147 | p = 0.8833 
+  EducYears        | Asian_and_White    | diff = -0.0062 | z = -0.857 | p = 0.3912 
+  frac_asian       | Asian_only         | diff = -0.0408 | z = -0.217 | p = 0.8283 
+  frac_asian       | White_only         | diff = +0.0166 | z = +0.062 | p = 0.9506 
+  frac_asian       | Asian_and_White    | diff = +0.0289 | z = +0.190 | p = 0.8494 
+  lnftotval        | Asian_only         | diff = +0.0234 | z = +2.010 | p = 0.0444 **
+  lnftotval        | White_only         | diff = -0.0077 | z = -0.720 | p = 0.4717 
+  lnftotval        | Asian_and_White    | diff = -0.0164 | z = -1.484 | p = 0.1378 
+All figures saved in: /Users/alisaffouri/Downloads/asian-identity-attrition
+alisaffouri@Alis-Mac-mini asian-identity-attrition % 

@@ -93,9 +93,9 @@ source(file.path(programs,"01-packages-wds.R")) # set up package
 ### Uncomment the following lines only if you intend to run the bootstrap analysis
 
 
-# source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis
+source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis
 source(file.path(programs,"45-bootstrap-plot.R")) # bootstrap plot
-# source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap
+source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap
 source(file.path(programs,"47-secadult-bootstrap-plot.R")) # second adult bootstrap plot
 
 

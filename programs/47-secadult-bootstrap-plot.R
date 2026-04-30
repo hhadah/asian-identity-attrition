@@ -426,26 +426,28 @@ render_bootstrap_plots <- function(label_slug, label_pretty){
   }
 
   boot_res <- readRDS(paths$rds)
-  pp_tbl <- boot_res$pp
-  if (!is.null(pp_tbl) && nrow(pp_tbl)) {
-    vars_present <- unique(pp_tbl$variable)
-    vars_present <- vars_present[!is.na(vars_present)]
-    vars_present <- setdiff(vars_present, "frac_asian")  # Exclude frac_asian from plots
-    for (var_name in vars_present) {
-      pp_data <- pp_tbl |> dplyr::filter(variable == var_name)
-      if (!nrow(pp_data)) next
-      plt_pp <- plot_pp_boot(pp_data, var_name, label_pretty)
-      .safe_ggsave(
-        filename = file.path(bootstrap_results_path, sprintf("logit_boot_pp_%s_%s.png", label_slug, var_name)),
-        plot = plt_pp,
-        width = 8,
-        height = 6,
-        dpi = 300
-      )
-    }
-  } else {
-    warning("No PP results to plot for: ", label_pretty)
-  }
+  # Predicted-probability plots disabled — manuscript uses marginal-effect plots only.
+  # Restore the block below to re-enable PP figure rendering.
+  # pp_tbl <- boot_res$pp
+  # if (!is.null(pp_tbl) && nrow(pp_tbl)) {
+  #   vars_present <- unique(pp_tbl$variable)
+  #   vars_present <- vars_present[!is.na(vars_present)]
+  #   vars_present <- setdiff(vars_present, "frac_asian")  # Exclude frac_asian from plots
+  #   for (var_name in vars_present) {
+  #     pp_data <- pp_tbl |> dplyr::filter(variable == var_name)
+  #     if (!nrow(pp_data)) next
+  #     plt_pp <- plot_pp_boot(pp_data, var_name, label_pretty)
+  #     .safe_ggsave(
+  #       filename = file.path(bootstrap_results_path, sprintf("logit_boot_pp_%s_%s.png", label_slug, var_name)),
+  #       plot = plt_pp,
+  #       width = 8,
+  #       height = 6,
+  #       dpi = 300
+  #     )
+  #   }
+  # } else {
+  #   warning("No PP results to plot for: ", label_pretty)
+  # }
 
   me_tbl <- boot_res$me
   if (!is.null(me_tbl) && nrow(me_tbl)) {
@@ -480,17 +482,110 @@ render_bootstrap_plots <- function(label_slug, label_pretty){
   }
 }
 
-# Models to plot - matching the four models from script 46
+# Models to plot - matching models from script 46
 models_to_plot <- list(
-  list(label_slug = "second_AA_adults_multinom", label_pretty = "Second gen adults: AA parents (Multinomial)"),
+  # Blocks not used in current manuscript — commented out
+  # list(label_slug = "second_AA_adults_multinom", label_pretty = "Second gen adults: AA parents (Multinomial)"),
+  # list(label_slug = "second_gen_adults_multinom", label_pretty = "Second gen adults (Multinomial)"),
   list(label_slug = "second_AW_adults_multinom", label_pretty = "Second gen adults: AW parents (Multinomial)"),
   list(label_slug = "second_WA_adults_multinom", label_pretty = "Second gen adults: WA parents (Multinomial)"),
-  list(label_slug = "second_gen_adults_multinom", label_pretty = "Second gen adults (Multinomial)")
+  list(label_slug = "second_AW_WA_adults_multinom", label_pretty = "Second gen adults: AW + WA parents pooled (Multinomial)")
 )
 
 for (spec in models_to_plot) {
   message(sprintf("Rendering plots for %s (%s)", spec$label_pretty, spec$label_slug))
   render_bootstrap_plots(spec$label_slug, spec$label_pretty)
 }
+
+# ------------------------------------------------------------------
+# Between-model Wald tests
+# ------------------------------------------------------------------
+# Test whether the AME for each (variable, outcome) differs between
+# two independently bootstrapped models.  Because the bootstraps are
+# drawn from disjoint samples (e.g., AW vs WA parents), the two AMEs
+# are independent, so:
+#
+#   SE_k ≈ (CI_hi_k − CI_lo_k) / (2 × 1.96)
+#   z    = (AME_a − AME_b) / sqrt(SE_a² + SE_b²)
+#   p    = 2 Φ(−|z|)
+#
+# Significance stars: * p<.10, ** p<.05, *** p<.01.
+# ------------------------------------------------------------------
+compute_between_model_me_tests <- function(me_a, me_b, label_a, label_b) {
+  if (is.null(me_a) || is.null(me_b) || nrow(me_a) == 0 || nrow(me_b) == 0) return(NULL)
+
+  a <- me_a |> dplyr::transmute(
+    variable, outcome,
+    ame_a = ame_point,
+    se_a  = (ame_hi_plot - ame_lo_plot) / (2 * 1.96)
+  )
+  b <- me_b |> dplyr::transmute(
+    variable, outcome,
+    ame_b = ame_point,
+    se_b  = (ame_hi_plot - ame_lo_plot) / (2 * 1.96)
+  )
+
+  dplyr::inner_join(a, b, by = c("variable", "outcome")) |>
+    dplyr::mutate(
+      model_a = label_a,
+      model_b = label_b,
+      diff_est = ame_a - ame_b,
+      se_diff  = sqrt(se_a^2 + se_b^2),
+      z_stat   = ifelse(is.finite(se_diff) & se_diff > 1e-12, diff_est / se_diff, NA_real_),
+      p_value  = ifelse(is.na(z_stat), NA_real_, 2 * stats::pnorm(-abs(z_stat))),
+      sig = dplyr::case_when(
+        is.na(p_value)   ~ "",
+        p_value < 0.01   ~ "***",
+        p_value < 0.05   ~ "**",
+        p_value < 0.10   ~ "*",
+        TRUE             ~ ""
+      )
+    ) |>
+    dplyr::select(variable, outcome, model_a, model_b,
+                  ame_a, ame_b, diff_est, se_diff, z_stat, p_value, sig)
+}
+
+.load_me_summary <- function(label_slug) {
+  paths <- .checkpoint_paths(label_slug)
+  if (!file.exists(paths$rds)) {
+    warning("Cannot load ME summary — missing RDS for ", label_slug)
+    return(NULL)
+  }
+  readRDS(paths$rds)$me
+}
+
+run_between_model_tests <- function(pairs_list, out_csv = NULL) {
+  results <- list()
+  for (pair in pairs_list) {
+    me_a <- .load_me_summary(pair$a_slug)
+    me_b <- .load_me_summary(pair$b_slug)
+    res <- compute_between_model_me_tests(me_a, me_b, pair$a_label, pair$b_label)
+    if (is.null(res) || nrow(res) == 0) next
+
+    message(sprintf("Between-model ME tests: %s vs %s", pair$a_label, pair$b_label))
+    for (r in seq_len(nrow(res))) {
+      row <- res[r, ]
+      message(sprintf("  %-16s | %-18s | diff = %+.4f | z = %+.3f | p = %.4f %s",
+                      row$variable, row$outcome, row$diff_est, row$z_stat, row$p_value, row$sig))
+    }
+    results[[length(results) + 1]] <- res
+  }
+  out <- if (length(results)) dplyr::bind_rows(results) else NULL
+  if (!is.null(out) && !is.null(out_csv)) {
+    tryCatch(utils::write.csv(out, out_csv, row.names = FALSE),
+             error = function(e) warning("Failed to write ", out_csv, ": ", conditionMessage(e)))
+  }
+  invisible(out)
+}
+
+between_pairs_adults <- list(
+  list(a_slug = "second_AW_adults_multinom", a_label = "Second gen adults: AW",
+       b_slug = "second_WA_adults_multinom", b_label = "Second gen adults: WA")
+)
+
+run_between_model_tests(
+  between_pairs_adults,
+  out_csv = file.path(bootstrap_results_path, "logit_boot_me_between_model_tests.csv")
+)
 
 message(sprintf("All figures saved in: %s", bootstrap_results_path))
