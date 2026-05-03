@@ -69,27 +69,17 @@
 \section*{Figures}\label{appendix:figs}
 
 % =========================
-% 42: Interaction Coefficient Plots (AW/WA)
+% Between-Model Tests: Second Generation (AW vs. WA)
 % =========================
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Mixed Parental Types Among Adults}
-\label{fig:interaction-coefs-aw-wa}
+\caption{Between-Model Differences in Average Marginal Effects: Second-Generation AW vs.\ WA}
+\label{fig:between-model-second}
 
-\begin{subfigure}{.48\textwidth}
-\caption{Asian Fathers-White Mothers}
-\centering
-\includegraphics[width=1\linewidth]{interaction_coefficients_AW.png}
-\end{subfigure}
-\hfill
-\begin{subfigure}{.48\textwidth}
-\caption{White Fathers-Asian Mothers}
-\centering
-\includegraphics[width=1\linewidth]{interaction_coefficients_WA.png}
-\end{subfigure}
+\includegraphics[width=0.85\linewidth]{between_model_second_AW_WA.png}
 
-\caption*{\footnotesize{I show interaction coefficients from estimating $A_{ist}^g = \beta_1^g AntiAsianBias_{st} + \mathbf{X}_{ist}^g\pi + \gamma_{rt} + \varepsilon_{ist}$ with interaction terms for gender and parental education. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by mixed parental types. Standard errors are clustered on the state level. The samples include second-generation Asian individuals ages 18 and above with mixed-race parentage. Native-born second-generation Asian immigrant individuals with one parent born in an Asian country and one parent born outside of Asia.}}
+\caption*{\footnotesize{This figure plots the difference in average marginal effects (AME) between the Asian father--White mother (AW) and White father--Asian mother (WA) multinomial logit models, estimated from equation (\ref{eq:multinomial_logit}). Each point represents $\widehat{\text{AME}}_{\text{AW}} - \widehat{\text{AME}}_{\text{WA}}$ for a given covariate and racial identity outcome. Filled markers indicate statistical significance at the 5\% level. Error bars show 95\% confidence intervals constructed from the bootstrap standard errors of the difference. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples.}}
 \end{figure}
 \end{center}
 
@@ -97,38 +87,37 @@
 \newpage
 
 % =========================
-% 43: Interaction Coefficient Plots (Third Generation by Grandparent Type)
+% Between-Model Tests: Third Generation by Grandparent Count
 % =========================
 \begin{center}
 \begin{figure}[!htb]
 \centering
-\caption{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Asian Grandparent Count Among Third Generation}
-\label{fig:interaction-coefs-thirdgen-grandparent}
+\caption{Between-Model Differences in Average Marginal Effects: Third-Generation by Asian Grandparent Count}
+\label{fig:between-model-third}
 
-\begin{subfigure}{.45\textwidth}
-\caption{One Asian Grandparent}
+\begin{subfigure}{.48\textwidth}
+\caption{One vs.\ Two Asian Grandparents}
 \centering
-\includegraphics[width=1\linewidth]{interaction_coefficients_OneAsian.png}
+\includegraphics[width=1\linewidth]{between_model_third_1v2GP.png}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.45\textwidth}
-\caption{Two Asian Grandparents}
+\begin{subfigure}{.48\textwidth}
+\caption{One vs.\ Three Asian Grandparents}
 \centering
-\includegraphics[width=1\linewidth]{interaction_coefficients_TwoAsian.png}
+\includegraphics[width=1\linewidth]{between_model_third_1v3GP.png}
 \end{subfigure}
 
 \vspace{0.5cm}
 
-\begin{subfigure}{.45\textwidth}
-\caption{Three Asian Grandparents}
+\begin{subfigure}{.48\textwidth}
+\caption{Two vs.\ Three Asian Grandparents}
 \centering
-\includegraphics[width=1\linewidth]{interaction_coefficients_ThreeAsian.png}
+\includegraphics[width=1\linewidth]{between_model_third_2v3GP.png}
 \end{subfigure}
 
-\caption*{\footnotesize{I show interaction coefficients from estimating $A_{ist}^g = \beta_1^g AntiAsianBias_{st} + \mathbf{X}_{ist}^g\pi + \gamma_{rt} + \varepsilon_{ist}$ with interaction terms for gender and parental education on third-generation samples. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by the number of Asian grandparents. Standard errors are clustered on the state level. The samples include third-generation Asian individuals with varying degrees of Asian ancestry through grandparents. Native-born third-generation individuals with at least one grandparent born in an Asian country.}}
+\caption*{\footnotesize{This figure plots the difference in average marginal effects (AME) between third-generation multinomial logit models estimated on samples defined by the number of Asian grandparents. Each point represents the difference in AME between the indicated models for a given covariate and racial identity outcome. Filled markers indicate statistical significance at the 5\% level. Error bars show 95\% confidence intervals constructed from the bootstrap standard errors of the difference. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples.}}
 \end{figure}
 \end{center}
-
 
 \pagebreak
 \newpage
@@ -385,7 +374,8 @@
 
 \newpage
 \pagebreak
- 
+\FloatBarrier
+
 \subsection*{Using \textcite{lubotskyInterpretationRegressionsMultiple2006} to Construct Bias Index} % (fold)
 \label{sub:lw-bias}
 In \textcite{lubotskyInterpretationRegressionsMultiple2006}, the authors propose a method to reduce measurement error in proxies by constructing a composite index. The Lubotsky-Wittenberg (henceforth LW) consider a model where a covariate is unobserved. Therefore, they use two proxies in its place, which will have measurement error. Thus, the LW method allows researchers to use two proxies that are error-ridden. 

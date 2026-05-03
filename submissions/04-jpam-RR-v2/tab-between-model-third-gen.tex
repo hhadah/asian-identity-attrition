@@ -1,0 +1,64 @@
+\begin{table}[H]
+\centering
+\caption{Between-Model Tests of Average Marginal Effects: Third-Generation by Asian Grandparent Count \label{tab:between-model-third}}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+ & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+\midrule
+\multicolumn{4}{l}{\textit{Panel A: One Asian GP vs.\ Two Asian GP}} \\
+\addlinespace
+Anti-Asian Bias & $0.102$* & $-0.059$ & $-0.047$\\
+ & ($0.059$) & ($0.077$) & ($0.084$)\\
+\addlinespace
+Female & $-0.010$ & $-0.073$ & $0.088$*\\
+ & ($0.031$) & ($0.048$) & ($0.050$)\\
+\addlinespace
+College Graduate: Mother & $-0.048$ & $-0.106$** & $0.160$***\\
+ & ($0.032$) & ($0.048$) & ($0.052$)\\
+\addlinespace
+College Graduate: Father & $-0.021$ & $0.060$ & $-0.041$\\
+ & ($0.031$) & ($0.058$) & ($0.061$)\\
+\midrule
+\multicolumn{4}{l}{\textit{Panel B: One Asian GP vs.\ Three Asian GP}} \\
+\addlinespace
+Anti-Asian Bias & $0.201$ & $-0.203$*** & $-0.028$\\
+ & ($0.152$) & ($0.071$) & ($0.149$)\\
+\addlinespace
+Female & $0.031$ & $-0.118$*** & $0.087$**\\
+ & ($0.031$) & ($0.043$) & ($0.040$)\\
+\addlinespace
+College Graduate: Mother & $-0.318$*** & $0.198$*** & $0.122$**\\
+ & ($0.046$) & ($0.047$) & ($0.051$)\\
+\addlinespace
+College Graduate: Father & $0.293$*** & $-0.345$*** & $0.057$\\
+ & ($0.049$) & ($0.065$) & ($0.062$)\\
+\midrule
+\multicolumn{4}{l}{\textit{Panel C: Two Asian GP vs.\ Three Asian GP}} \\
+\addlinespace
+Anti-Asian Bias & $0.098$ & $-0.145$*** & $0.019$\\
+ & ($0.156$) & ($0.054$) & ($0.142$)\\
+\addlinespace
+Female & $0.042$ & $-0.045$ & $-0.000$\\
+ & ($0.041$) & ($0.047$) & ($0.045$)\\
+\addlinespace
+College Graduate: Mother & $-0.270$*** & $0.304$*** & $-0.039$\\
+ & ($0.054$) & ($0.055$) & ($0.059$)\\
+\addlinespace
+College Graduate: Father & $0.314$*** & $-0.405$*** & $0.098$\\
+ & ($0.056$) & ($0.060$) & ($0.067$)\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each cell reports the difference in average marginal effects (AME) between the indicated models, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit. The difference is computed as $\widehat{\text{AME}}_{\text{Model A}} - \widehat{\text{AME}}_{\text{Model B}}$.}
+\item[2] \footnotesize{Standard errors of the difference are computed from the bootstrap distributions of the two models. $z$-statistics test the null hypothesis that the marginal effects are equal across models.}
+\item[3] \footnotesize{I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals.}
+\item[4] \footnotesize{GP = Grandparent(s). Third-generation individuals are native-born with at least one grandparent born in an Asian country.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
