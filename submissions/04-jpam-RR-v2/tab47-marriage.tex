@@ -23,11 +23,7 @@ Year $\times$ Region FE & X & X & X\\
 \end{tabular}
 \begin{tablenotes}
 \small
-\item[1] \footnotesize{This is the result to estimating (\ref{eq:inter-interracial}) as a
-                        logistic regression. The coefficients are exponentiated, thus should be interpreted as odds ratios.}
-\item[2] \footnotesize{I include controls for partners' sex, age, education, 
-                      and years since immigrating to the United States.
-                      Standard errors are clustered on the household level.}
+\item[1] \footnotesize{Each column estimates a logistic regression: $\Pr(interracial_{ist} = 1) = \Lambda(\beta_1 AntiAsianBias_{st} + X_{ist}\pi + \gamma_{rt})$, where $interracial_{ist}$ indicates an interracial couple (Asian husband--White wife or White husband--Asian wife), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). Coefficients are exponentiated and should be interpreted as odds ratios. Standard errors are clustered on the household level.}
 \item[3] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
 \end{tablenotes}
 \end{threeparttable}
