@@ -9,12 +9,12 @@
 \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
   & \specialcell{(1) \\ Interracial} & \specialcell{(2) \\ Interracial} & \specialcell{(3) \\ Interracial}\\
 \midrule
-Bias & $0.04$*** & $-0.01$ & $0.03$**\\
- & ($0.01$) & ($0.01$) & ($0.01$)\\
+Bias & $0.04$ & $-0.01$ & $0.03$\\
+ & ($0.03$) & ($0.03$) & ($0.03$)\\
 College Graduate: Wife & $0.04$*** & $0.04$*** & $0.05$***\\
- & ($0.00$) & ($0.01$) & \vphantom{1} ($0.00$)\\
-College Graduate: Husband & $-0.01$* & $-0.01$ & $-0.02$***\\
- & ($0.00$) & ($0.01$) & ($0.00$)\\
+ & ($0.01$) & ($0.01$) & \vphantom{1} ($0.01$)\\
+College Graduate: Husband & $-0.01$ & $-0.01$ & $-0.02$*\\
+ & ($0.01$) & ($0.01$) & ($0.01$)\\
 \midrule
 Observations & $69,800$ & $52,103$ & $60,214$\\
 Year $\times$ Region FE & X & X & X\\
@@ -23,12 +23,8 @@ Year $\times$ Region FE & X & X & X\\
 \end{tabular}
 \begin{tablenotes}
 \small
-\item[1] \footnotesize{This is the result to estimating (\ref{eq:inter-interracial}) as a
-                      linear probability model.}
-\item[2] \footnotesize{I include controls for partners' sex, age, education, 
-                      and years since immigrating to the United States.
-                      Standard errors are clustered on the household level.}
-\item[3] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
+\item[1] \footnotesize{Each column estimates the following linear probability model: $interracial_{ist} = \beta_1 AntiAsianBias_{st} + X_{ist}\pi + \gamma_{rt} + \varepsilon_{ist}$, where $interracial_{ist}$ indicates a couple in which one partner was born in an Asian country and the other was not (labelled Asian husband--White wife or White husband--Asian wife, following the paper's convention), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). The unit of observation is a second-generation child; columns (2) and (3) restrict to children of Asian-born fathers and Asian-born mothers, respectively. Standard errors are clustered on the state level.}
+\item[2] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
 \end{tablenotes}
 \end{threeparttable}
 \end{table}

@@ -272,26 +272,14 @@ regression_tab <- modelsummary(reg1, fmt = f1,
   kable_styling(bootstrap_options = c("hover", "condensed"), 
                 latex_options = c("scale_down", "HOLD_position")
   ) %>%
-  footnote(number = c("\\\\footnotesize{Each column is an estimation of equations (\\\\ref{eq:migration-3}) in column (1), 
-                      (\\\\ref{eq:migration-4}) in column (2), and
-                      (\\\\ref{eq:migration-5}) in column (3).}",
-                      "\\\\footnotesize{Column (1) is a regression where the left hand side variable is 
-                      a dummy variable that is equal to one if a person migrated from the state
-                      were born in and the right hand side variable is bias the year of survey.
-                      Column (2) is a regression where the left hand side variable is 
-                      a dummy variable that is equal to one if a person migrated from the state
-                      were born in and the right hand side variable is bias the year of birth in the state of birth.
-                      Column (3) is a regression where the left hand side variable is 
-                      the difference between state-level bias during the year of the survey in the current state the 
-                      respondent is living in, and state-level bias during the year of birth in the state of birth 
-                      and the right hand side variable is self-reported Asian identity. This regression captures
-                      the selection of those that self-reported Asian identity into states with different levels of bias.
-                      I include controls for sex, quartic age, parental education, fraction of Asians in a state, and region × year fixed effects.
-                      Standard errors are clustered on the state level.}",
+  # Author decision Oct 2026 (JPAM R2, reviewer comment 6): three notes,
+  # numbered consecutively, with the model written out because the
+  # eq:migration-* labels no longer exist in the manuscript.
+  footnote(number = c("\\\\footnotesize{Columns (1) and (2) estimate: $BirthPlaceMigration_{i} = \\\\beta_1 AntiAsianBias + X_{i}\\\\pi + \\\\gamma + \\\\varepsilon_{i}$, where $BirthPlaceMigration$ indicates whether person $i$ lives in a state different from their birth state. Column (1) uses bias in the current state at survey time; column (2) uses bias in the birth state at birth year. Column (3) estimates: $Y_{i} = \\\\beta_0 + \\\\beta_1 Asian_{i} + X_{i}\\\\pi + \\\\varepsilon_{i}$, where $Y_{i} \\\\equiv AntiAsianBias_{ist} - AntiAsianBias_{ilb}$ is the difference between bias in the current state and bias in the birth state, and $Asian_{i}$ is self-reported Asian identity. I include controls for sex, quartic age, parental education, fraction of Asians in a state, and region $\\\\times$ year fixed effects (column 1) or birthyear $\\\\times$ birth region fixed effects (column 2). Standard errors are clustered on the state level.}",
                       "\\\\footnotesize{The samples include children ages 17 and below who live in intact families. 
                       Native-born second-generation Asian immigrant children with both
-                      parents born in a Asian country. The sample in the column (3) regression is further restricted to only those that migrated from their birth state.}",
-                      "\\\\footnotesize{Data source is the 2004-2021 Census Data.}"),
+                      parents born in an Asian country. The sample in the column (3) regression is further restricted to only those that migrated from their birth state.}",
+                      "\\\\footnotesize{Data source is the 2004--2021 American Community Survey (IPUMS USA).}"),
            footnote_as_chunk = F, title_format = c("italic"),
            escape = F, threeparttable = T, fixed_small_size = T)
 

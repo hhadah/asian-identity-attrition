@@ -1,0 +1,47 @@
+\begin{table}[H]
+\centering
+\small\setstretch{1.0}
+\caption{Heterogeneity in the Effect of Anti-Asian Bias on Asian Identification \label{tab:heterogeneity-interactions}}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+\multicolumn{5}{l}{\textit{Panel A: Mixed-race second generation (children)}} \\
+ & Bias $\times$ Female & Bias $\times$ Mother college & Bias $\times$ Father college & Observations \\
+\midrule
+Asian father--White mother & $-0.005$ & $-0.225$** & $0.039$ & $9{,}055$ \\
+ & ($0.052$) & ($0.097$) & ($0.094$) & \\
+White father--Asian mother & $-0.011$ & $0.006$ & $-0.036$ & $20{,}247$ \\
+ & ($0.048$) & ($0.047$) & ($0.035$) & \\
+\textbf{Pooled} & $-0.012$ & $-0.067$* & $-0.024$ & $29{,}302$ \\
+ & ($0.052$) & ($0.034$) & ($0.037$) & \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel B: Mixed-race second generation (adults)}} \\
+ & Bias $\times$ Female & Bias $\times$ College graduate & Bias $\times$ Above-median income & Observations \\
+\midrule
+Asian father--White mother & $-0.026$ & $-0.084$* & $-0.006$ & $1{,}710$ \\
+ & ($0.047$) & ($0.047$) & ($0.048$) & \\
+White father--Asian mother & $0.017$ & $0.003$ & $-0.022$ & $2{,}976$ \\
+ & ($0.042$) & ($0.041$) & ($0.041$) & \\
+\textbf{Pooled} & $-0.012$ & $-0.023$ & $-0.020$ & $4{,}686$ \\
+ & ($0.033$) & ($0.039$) & ($0.040$) & \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel C: Third generation (children)}} \\
+ & Bias $\times$ Female & Bias $\times$ Mother college & Bias $\times$ Father college & Observations \\
+\midrule
+One Asian grandparent & $-0.010$ & $-0.023$ & $-0.034$ & $14{,}453$ \\
+ & ($0.028$) & ($0.025$) & ($0.030$) & \\
+Two Asian grandparents & $0.034$ & $-0.077$ & $0.000$ & $12{,}678$ \\
+ & ($0.028$) & ($0.061$) & ($0.073$) & \\
+Three Asian grandparents & $0.019$ & $-0.297$ & $0.096$ & $567$ \\
+ & ($0.077$) & ($0.211$) & ($0.143$) & \\
+\textbf{Pooled} & $-0.004$ & $-0.067$** & $-0.005$ & $27{,}698$ \\
+ & ($0.017$) & ($0.030$) & ($0.039$) & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{Each row is a separate weighted linear probability model, $A_{ist} = \beta_1 Bias_{st} + \sum_k \delta_k (Bias_{st} \times Z_{ist}^k) + \sum_k \theta_k Z_{ist}^k + \mathbf{X}_{ist}\pi + \gamma_{rt} + \varepsilon_{ist}$, where $A_{ist}$ is self-reported Asian identity, $Bias_{st}$ is the demeaned state-level anti-Asian bias index (standard deviation units), and the table reports the interaction coefficients $\delta_k$. In Panels A and C, $Z$ is female, mother college graduate, and father college graduate; in Panel B, $Z$ is female, own college degree (16 or more years of schooling), and family income above the median of the full adult file. All models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Panel A uses children ages 17 and younger living with both parents, with one parent born in an Asian country and the other born outside Asia (labelled White, following the paper's convention; about 86 percent of these parents are US-born); Panel B uses adults ages 18 and older with the same parental configuration, restricted to March (ASEC) respondents because family income is observed only for them; Panel C uses native-born children with native-born parents and one, two, or three grandparents born in an Asian country. The pooled rows do not include group indicators, matching the specifications previously plotted. Standard errors clustered at the state level in parentheses. $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$. Data source is the 2004--2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}

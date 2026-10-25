@@ -23,17 +23,17 @@ reg <- list(
                                                   MomGradCollege + DadGradCollege + age_mom + age_pop +
                                                   yrimmig_mom + yrimmig_pop
                                             | region:year, 
-                                          data = CPS_IAT, weights = ~hwtfinl, vcov = ~serial),
+                                          data = CPS_IAT, weights = ~hwtfinl, vcov = ~statefip),
   "\\specialcell{(2) \\\\ Interracial}" = feols(Interethnic ~ 1 + Bias + 
                                                   MomGradCollege + DadGradCollege + age_mom + age_pop +
                                                   yrimmig_mom + yrimmig_pop
                                                 | region:year, 
-                                                data = CPS_IAT |> filter(Asian_Dad == 1), weights = ~hwtfinl, vcov = ~serial),
+                                                data = CPS_IAT |> filter(Asian_Dad == 1), weights = ~hwtfinl, vcov = ~statefip),
   "\\specialcell{(3) \\\\ Interracial}" = feols(Interethnic ~ 1 + Bias + 
                                                     MomGradCollege + DadGradCollege + age_mom + age_pop +
                                                     yrimmig_mom + yrimmig_pop
                                                   | region:year, 
-                                                  data = CPS_IAT |> filter(Asian_Mom == 1), weights = ~hwtfinl, vcov = ~serial)
+                                                  data = CPS_IAT |> filter(Asian_Mom == 1), weights = ~hwtfinl, vcov = ~statefip)
 )
 
 
@@ -82,11 +82,10 @@ regression_tab <- modelsummary(reg, #exponentiate = c(F, T, F, F),
   kable_styling(bootstrap_options = c("hover", "condensed", "responsive"),
                 latex_options = c("HOLD_position")
   ) |>
-  footnote(number = c("\\\\footnotesize{This is the result to estimating (\\\\ref{eq:inter-interracial}) as a
-                      linear probability model.}",
-                      "\\\\footnotesize{I include controls for partners' sex, age, education, 
-                      and years since immigrating to the United States.
-                      Standard errors are clustered on the household level.}",
+  # Author decision Oct 2026 (JPAM R2, reviewer comment 6): bias varies at the
+  # state-year level, so standard errors are clustered on the state, matching
+  # every other table. Household clustering (vcov = ~serial) was used before.
+  footnote(number = c("\\\\footnotesize{Each column estimates the following linear probability model: $interracial_{ist} = \\\\beta_1 AntiAsianBias_{st} + X_{ist}\\\\pi + \\\\gamma_{rt} + \\\\varepsilon_{ist}$, where $interracial_{ist}$ indicates a couple in which one partner was born in an Asian country and the other was not (labelled Asian husband--White wife or White husband--Asian wife, following the paper's convention), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). The unit of observation is a second-generation child; columns (2) and (3) restrict to children of Asian-born fathers and Asian-born mothers, respectively. Standard errors are clustered on the state level.}",
                       "\\\\footnotesize{Data source is the 2004-2020 Current Population Survey Data.}"),
            footnote_as_chunk = F, title_format = c("italic"),
            escape = F, threeparttable = T, fixed_small_size = T) |> 
@@ -120,17 +119,17 @@ reg <- list(
                                                   MomGradCollege + DadGradCollege + age_mom + age_pop +
                                                   yrimmig_mom + yrimmig_pop
                                             | region:year, family = "logit",
-                                          data = CPS_IAT, weights = ~hwtfinl, vcov = ~serial),
+                                          data = CPS_IAT, weights = ~hwtfinl, vcov = ~statefip),
   "\\specialcell{(2) \\\\ Interracial}" = feglm(Interethnic ~ 1 + Bias + 
                                                   MomGradCollege + DadGradCollege + age_mom + age_pop +
                                                   yrimmig_mom + yrimmig_pop
                                                 | region:year, family = "logit", 
-                                                data = CPS_IAT |> filter(Asian_Dad == 1), weights = ~hwtfinl, vcov = ~serial),
+                                                data = CPS_IAT |> filter(Asian_Dad == 1), weights = ~hwtfinl, vcov = ~statefip),
   "\\specialcell{(3) \\\\ Interracial}" = feglm(Interethnic ~ 1 + Bias + 
                                                     MomGradCollege + DadGradCollege + age_mom + age_pop +
                                                     yrimmig_mom + yrimmig_pop
                                                   | region:year, family = "logit", 
-                                                  data = CPS_IAT |> filter(Asian_Mom == 1), weights = ~hwtfinl, vcov = ~serial)
+                                                  data = CPS_IAT |> filter(Asian_Mom == 1), weights = ~hwtfinl, vcov = ~statefip)
 )
 
 cm <- c(
@@ -180,11 +179,7 @@ regression_tab <- modelsummary(reg, #exponentiate = c(F, T, F, F),
   kable_styling(bootstrap_options = c("hover", "condensed", "responsive"),
                 latex_options = c("HOLD_position")
   ) |>
-  footnote(number = c("\\\\footnotesize{This is the result to estimating (\\\\ref{eq:inter-interracial}) as a
-                        logistic regression. The coefficients are exponentiated, thus should be interpreted as odds ratios.}",
-                      "\\\\footnotesize{I include controls for partners' sex, age, education, 
-                      and years since immigrating to the United States.
-                      Standard errors are clustered on the household level.}",
+  footnote(number = c("\\\\footnotesize{Each column estimates a logistic regression: $\\\\Pr(interracial_{ist} = 1) = \\\\Lambda(\\\\beta_1 AntiAsianBias_{st} + X_{ist}\\\\pi + \\\\gamma_{rt})$, where $interracial_{ist}$ indicates a couple in which one partner was born in an Asian country and the other was not (labelled Asian husband--White wife or White husband--Asian wife, following the paper's convention), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). The unit of observation is a second-generation child; columns (2) and (3) restrict to children of Asian-born fathers and Asian-born mothers, respectively. Coefficients are exponentiated and should be interpreted as odds ratios. Standard errors are clustered on the state level.}",
                       "\\\\footnotesize{Data source is the 2004-2020 Current Population Survey Data.}"),
            footnote_as_chunk = F, title_format = c("italic"),
            escape = F, threeparttable = T, fixed_small_size = T) |> 

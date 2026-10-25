@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% =========================
+% Sum stat tables
+% =========================
+
+\begin{landscape}
+\input{tab01-SumStat}
+\end{landscape}
+
+\newpage
+\pagebreak
+
+\input{tab53-SumStatOverAll-adults}
+
+\newpage
+\pagebreak
+% =========================
+% Identity by proxy
+% =========================
+
+\input{maineffect-proxy}
+
+\pagebreak
+\newpage
+
+% =========================
+% Number of observations by generation
+% =========================
+
+\input{tab02-observations-by-gen}
+
+\newpage
+\pagebreak
+
+\input{tab54-observations-by-gen-adults}
+
+\pagebreak
+\newpage
+
+
+% =========================
+% Migration table
+% =========================
+
+\input{tab46-iat-migration-tab.tex}
+
+\pagebreak
+\newpage
+
+% =========================
+% Marriage table
+% =========================
+
+
+\input{tab41a-marriage}
+
+\pagebreak
+\newpage
+
+% =========================
+% Heterogeneity table
+% (replaces the interaction
+% coefficient figures)
+% =========================
+
+\input{tab50-heterogeneity-interactions}
+
+\pagebreak
+\newpage
+
+
+% =========================
+% Diagram of how
+% generations are defined
+% =========================
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[H]
+\caption{Diagram of the Three Different Generations of Asian Immigrants.}
+\includegraphics[width=\textwidth, height=9cm]{diag.png} 
+\label{fig:diag}
+\end{figure}
+\hfill%
+\end{center}
+
+% =========================
+% Bias and Self-reported 
+% Asian Identity in the Least 
+% and Most Biased Places
+% =========================
+
+
+\begin{center}
+\begin{figure}[H]
+\caption{Bias and Self-reported Asian Identity in the Least and Most Biased Places} \label{fig:toptwobias}
+
+% first
+\begin{subfigure}{.9\textwidth}
+\caption{Bias Over Time}
+\centering
+\includegraphics[width=.9\linewidth]{Bias_twostates.png} 
+\label{fig:skiniat}
+\end{subfigure}
+% Second
+\begin{subfigure}{.9\textwidth}
+\caption{Self-reported Asian Identity Over Time}
+\centering
+\includegraphics[width=.9\linewidth]{Bias_twostates-asian.png} 
+\label{fig:Asian-twostates}
+\end{subfigure}
+\caption*{\footnotesize{These two panels show the trends in bias (panel a) and self-reported Asian identity among Asian immigrants (panel b) of the least and most biased places in the data. The District of Colombia is the least biased geographical area, and North Dakota is the most biased. The bias units are in standard deviations. Self-reported Asian identity is among first, second, and third-generation Asian immigrants aged 17 and younger still living in intact families.\\
+Bias data is from the 2004--2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. Identity data is from the 2004--2021 Current Population Survey (CPS).}}
+\end{figure}
+\end{center}
+
+
+\pagebreak
+\newpage
+
+% =========================
+% Multinomial Logit Marginal
+% Effects: Pooled Samples
+% =========================
+
+\begin{figure}[H]
+\centering
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice}
+\label{fig:marginal-effects-pooled}
+
+\begin{subfigure}{.76\textwidth}
+\caption{Mixed-Race Second-Generation Asian Americans}\label{fig:marginal-effects-second-pooled}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_second_AW_WA.png}
+\end{subfigure}
+
+\vspace{0.3cm}
+
+\begin{subfigure}{.76\textwidth}
+\caption{Third-Generation Asian Americans}\label{fig:marginal-effects-third-pooled}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_third_oneTwoThreeAsian.png}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure displays average marginal effects of key covariates on the probability of each racial identity outcome, estimated from equation (\ref{eq:multinomial_logit}). Panel (a) pools second-generation children with one parent born in an Asian country and one parent born outside Asia; panel (b) pools third-generation children with one, two, or three Asian-born grandparents. For anti-Asian bias, the marginal effect is the derivative of each predicted probability with respect to the bias index, evaluated for every child at that child's own covariate values and averaged over the estimation sample, so it is the average change in probability per one-unit (one standard deviation) increase in bias. For the binary covariates, it is the average change in predicted probability from switching the indicator from 0 to 1 for every child. Models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Each point is the median of the average marginal effect across 1{,}000 bootstrap resamples of children, drawn with replacement within region $\times$ year cells; the bars span the 2.5th and 97.5th percentiles of the same resamples. Because children rather than states are resampled, the intervals do not account for dependence within state-year cells.}}
+\end{figure}

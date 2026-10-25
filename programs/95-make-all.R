@@ -76,6 +76,11 @@ source(file.path(programs,"01-packages-wds.R")) # set up package
 # source(file.path(programs,"39-figure-histogram-identities.R")) # histogram of identities
 # source(file.path(programs,"40-interaction-iat-byparent-plot.R")) # interaction by parent plot
 # source(file.path(programs,"41-interaction-regressions-skin-iat-thirdgens-grandparents.R")) # interaction regression grandparents
+# JPAM conditional-acceptance revision (October 2026)
+# source(file.path(programs,"50-make-heterogeneity-interaction-table.R")) # Table 8: interaction coefficients (replaces old Figures 14-16); also pooled bias x AW LPM
+# source(file.path(programs,"51-run-pooled-mnl-bias-x-aw.R")) # Appendix: pooled multinomial logit with bias x AW, clustered Wald test (~10 min)
+# source(file.path(programs,"52-make-bias-index-variance-decomposition.R")) # between- and within-state SD of the bias index
+# source(file.path(programs,"53-make-identity-distribution-tables.R")) # Tables 4 and 5 by MNL identity category (supersedes table output of 05 and 36)
 
 # ================================================================
 # WARNING: Bootstrapping analysis 
@@ -93,9 +98,9 @@ source(file.path(programs,"01-packages-wds.R")) # set up package
 ### Uncomment the following lines only if you intend to run the bootstrap analysis
 
 
-source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis
+# source(file.path(programs,"44-bootstrap-run.R")) # bootstrap analysis (2+ weeks on HPC; results cached in bootstrap_results_path)
 source(file.path(programs,"45-bootstrap-plot.R")) # bootstrap plot
-source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap
+# source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap (HPC; results cached)
 source(file.path(programs,"47-secadult-bootstrap-plot.R")) # second adult bootstrap plot
 
 

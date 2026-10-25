@@ -13,3 +13,6 @@ data/
 *.pdf
 *.png
 *.jpg
+
+# referee and editor correspondence stays local (public repo)
+submissions/*/ref-reports/

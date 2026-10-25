@@ -1,0 +1,2637 @@
+\documentclass[12pt,english]{article}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL ../04-jpam-RR-v2/submit_preprint.tex   Sat May 30 18:58:31 2026
+%DIF ADD submit_preprint.tex                    Sat May 30 18:58:31 2026
+
+% Load citation first, so that footmisc can change footnote, otherwise chicago style footnote overrides footmisc from biblatex-chicago
+% https://tex.stackexchange.com/a/110401/109818
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: Bibliography %%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[authordate,
+backend=biber,
+doi=only,
+isbn=false,
+sorting=nyt,
+maxcitenames=3,
+minbibnames=7,
+maxbibnames=7,
+uniquename=false,
+sortcites=true]{biblatex-chicago}
+
+\bibliography{AttitudesPaper.bib}
+
+\AtEveryBibitem{\clearlist{note}\clearlist{language}\clearlist{issn}} % clears issn
+\AtEveryBibitem{%
+	\ifentrytype{online}{%
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}{%
+		\clearfield{eprint}%
+% 		\clearfield{url}
+		\clearfield{urlyear}
+		\clearfield{urlmonth}
+		\clearfield{urlday}
+		\clearfield{note}
+		\clearlist{language}
+	}
+}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SEC: PACKAGEs MAIN  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mathpazo}
+\usepackage{eulervm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+% \usepackage[monochrome]{xcolor}
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs,dcolumn}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[font=singlespacing, skip=3pt]{caption}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%\usepackage[usenames,dvipsnames,svgnames,table,monochrome]{xcolor} % test black and white color results, 2018-11-21 08:48
+\usepackage{float}
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{enumitem}
+% \usepackage{subfig}
+%\usepackage[nolists, tablesfirst, nomarkers]{endfloat}
+% \usepackage[unicode=true,pdfusetitle,
+%  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+%  breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+%  {hyperref}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, plainpages=false, pdfpagelabels=true, urlcolor=blue]{hyperref}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{appendix}
+\usepackage{subcaption} % For subfigures
+
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{siunitx}
+\usepackage{indentfirst}
+\newcolumntype{d}{S[input-symbols = ()]}
+\usepackage{lscape}
+\usepackage{longtable}
+\newcommand{\source}[1]{\caption*{Source: {#1}} }
+\usepackage{threeparttable} % For tables with notes
+\usepackage{threeparttablex} % For extending threeparttable functionality
+\usepackage{pdflscape}
+\usepackage[section]{placeins} % prevents floats from crossing section boundaries
+
+% Redefine the footnoterule command
+\usepackage[hang,flushmargin]{footmisc}
+\renewcommand{\footnoterule}{%
+    \kern-3pt % Adjust the vertical position of the line
+    \hrule width 0.2\columnwidth height 0.4pt % Width and height of the line
+    \kern2.6pt % Adjust the spacing between the line and the footnotes
+}
+
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+% *****************************************************************
+% Estout LaTeX wrapper
+% *****************************************************************
+
+%%Original code developed by Jörg Weber: see
+%% https://www.jwe.cc/2012/03/stata-latex-tables-estout/
+%% andwho
+%% https://www.jwe.cc/blog/
+
+
+\let\estinput=\input % define a new input command so that we can still flatten the document
+
+\newcommand{\estwide}[3]{
+		\vspace{.75ex}{
+			%\textsymbols% Note the added command here
+			\begin{tabular*}
+			{\textwidth}{@{\hskip\tabcolsep\extracolsep\fill}l*{#2}{#3}}
+			\toprule
+			\estinput{#1}
+			\bottomrule
+			\addlinespace[.75ex]
+			\end{tabular*}
+			}
+		}	
+
+\newcommand{\estauto}[3]{
+		\vspace{.75ex}{
+			%\textsymbols% Note the added command here
+			\begin{tabular}{l*{#2}{#3}}
+			\toprule
+			\estinput{#1}
+			\bottomrule
+			\addlinespace[.75ex]
+			\end{tabular}
+			}
+		}
+
+% Allow line breaks with \ in specialcells
+\newcommand{\specialcell}[2][c]{%
+    \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}
+}
+
+% \newcommand{\sym}[1]{\rlap{#1}}% Thanks David Carlisle
+
+
+%%%%%%%%%%% End of wrapper %%%%%%%%%%%%%%%%%%%%%
+    
+%%%%%%%%%%% TiKz %%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, text width =5cm, draw=black, fill=blue!30]
+
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, text width =5cm, draw=black, fill=orange!30]
+
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. Define Keywords, JEL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PAPERKEYWORDS}{\textbf{Keywords}: Economics of Minorities, Race, and Immigrants; Discrimination and Prejudice; Stratification Economics}
+\newcommand{\PAPERJEL}{\textbf{JEL}: I310, J15, J71, Z13}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2. Define Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PAPERTITLE}{The Effect of Racial and Ethnic Attitudes on Asian Identity in the U.S}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3. Define Authors contact information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AUTHORHADAH}{Hussain Hadah}
+\newcommand{\AUTHORHADAHURL}{https://orcid.org/0000-0002-8705-6386}
+\newcommand{\AUTHORHADAHINFO}{\href{\AUTHORHADAHURL}{\AUTHORHADAH}: The Murphy Institute and Department of Economics, Tulane University, Caroline Richardson Building, 62 Newcomb Place, Suite 118, New Orleans, LA 70118, United States (e-mail: \href{mailto:hhadah@tulane.edu}{hhadah@tulane.edu}, phone: +1-602-393-8077)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 4. Define Thanks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ACKNOWLEDGMENTS}{
+ I thank Patrick Button, Willa Friedman, Chinhui Juhn, Vikram Maheshri, and Yona Rubinstein for their support and advice. I also thank Aimee Chin, Steven Craig, German Cubas, Elaine Liu, Fan Wang, and the participants of the Applied Microeconomics Workshop at the University of Houston, the European Society for Population Economics (ESPE), the anonymous referees, and the editor for their helpful feedback.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 5. Define Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PAPERABSTRACT}{
+%DIF 192c192
+%DIF < I study the determinants of racial self-identification among Asian Americans, combining Current Population Survey ancestry data with a composite anti-Asian bias measure drawn from Implicit Association Tests, the American National Election Studies, and hate crimes. I document substantial identity attrition across generations, driven by interracial family structures: while children of endogamous Asian parents report Asian identity at rates above 90\%, only about a third of second-generation children with one Asian and one White parent do the same. Using multinomial logit models, I show that anti-Asian bias shifts identity choices away from ``Asian only'' toward ``White only,'' with effects that are significantly larger when the father is Asian and that scale with the number of Asian grandparents in the third generation. Higher parental education increases the probability of Asian identification on average, but this relationship is weaker in high-bias environments; the interaction between state-level bias and parental education is negative and statistically significant. In high-bias areas, individuals with higher parental education are less likely to identify as Asian, leading to negative selection on socioeconomic status within the remaining Asian-identified sample. This compositional shift implies that conventional estimates overestimate Asian–White disparities in areas with high levels of prejudice.\PAPERJEL}
+%DIF -------
+I study the determinants of racial self-identification among Asian Americans, combining Current Population Survey ancestry data with a composite anti-Asian bias measure drawn from Implicit Association Tests, the American National Election Studies, and hate crimes. I document substantial identity attrition across generations, driven by interracial family structures: while children of endogamous Asian parents report Asian identity at rates above 90\%, only about a third of second-generation children with one Asian and one White parent do the same. Using multinomial logit models, I show that anti-Asian bias shifts identity choices away from ``Asian only'' toward ``White only,'' with effects that are significantly larger when the father is Asian and that scale with the number of Asian grandparents in the third generation. Higher parental education increases the probability of Asian identification on average, but this relationship is weaker in high-bias environments; the interaction between state-level bias and parental education is negative and statistically significant. In high-bias areas, individuals with higher parental education are less likely to identify as Asian, leading to negative selection on socioeconomic status within the remaining Asian-identified sample. This compositional shift implies that outcomes measured on self-reported race understate the outcomes of people of Asian ancestry in areas with high levels of prejudice, biasing conventional estimates of Asian--White disparities there.\PAPERJEL} %DIF > 
+%DIF -------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 6. Define citation or availability of latest draft
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PAPERDOIURL}{https://doi.org/10.1086/711654}
+\newcommand{\PAPERINFO}{
+
+ \url{\PAPERDOIURL}.
+}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part I. Title Page, Authors, Abstract, etc. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{
+\vspace*{-2em}
+\onehalfspacing
+\PAPERTITLE
+}
+
+\author{
+\AUTHORHADAH{} \thanks{
+\AUTHORHADAHINFO.
+}}
+
+\date{
+\vspace*{-1em}
+\today
+}
+
+\maketitle
+
+\vspace*{-2.75em}
+\begin{center}
+\href{https://hhadah.github.io/asian-identity-attrition/my_paper/submit_preprint.pdf}{\footnotesize{Click Here to Get the Most Updated Version}}
+\end{center}
+
+\thispagestyle{empty}
+
+\vspace*{-0.5em}
+\begin{abstract}
+\singlespacing
+\PAPERABSTRACT
+\end{abstract}
+\vspace*{-0.5em}
+{\small\PAPERKEYWORDS}
+\thispagestyle{empty}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part II. Manuscript main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+% Manuscript main text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main Text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}\label{sec:intro}
+
+Asian Americans represent the fastest-growing racial group in the United States, yet their experiences with discrimination and identity formation remain underexplored in economic research.\footnote{The 2020 Census counted more than 20 million Asian Americans---6.4 percent of the \DIFdelbegin \DIFdel{population—nearly }\DIFdelend \DIFaddbegin \DIFadd{population---nearly }\DIFaddend double the number counted two decades earlier. The Asian American population numbers are based on the author's calculations from the Current Population Survey and US Census data \autocite{floodsarahIntegratedPublicUse2021a}.} Unlike other minority groups, Asian Americans occupy a distinctive position in America's racial hierarchy---simultaneously experiencing discrimination and being labeled as ``perpetual foreigners'' while also being characterized through the ``model minority'' stereotype \autocite{foukaImmigrantsAmericansRace2022}. This dual status creates \DIFdelbegin \DIFdel{complex }\DIFdelend incentives around racial identity choices that \DIFdelbegin \DIFdel{fundamentally }\DIFdelend differ from other groups' experiences. \DIFdelbegin \DIFdel{Understanding how both }\DIFdelend \DIFaddbegin \DIFadd{Whether those choices respond to local prejudice is a question with direct consequences for policy, because nearly every policy that counts, protects, or monitors Asian Americans does so through self-reported race. The federal standards for collecting data on race and ethnicity, revised in 2024, govern the statistics used to enforce civil rights law, allocate federal funds, and track disparities \autocite{ombRevisionsStatisticalPolicy2024}, and the COVID-19 Hate Crimes Act of 2021 directed federal and state agencies to improve the reporting of }\DIFaddend anti-Asian \DIFdelbegin \DIFdel{bias and socioeconomic status influence racial identity decisions is crucial, as the selection could systematically distort the true enumeration of the Asian population in the US, the empirical assessments of Asian American outcomes and the true extent of discrimination they face. }\DIFdelend \DIFaddbegin \DIFadd{hate crimes \autocite{covid19HateCrimesAct2021}. If people of Asian ancestry are less likely to identify as Asian where prejudice is stronger, then the population counts, outcome gaps, and victimization rates that these policies rely on are measured with an error that is itself a function of prejudice.
+}\DIFaddend 
+
+An extensive literature has documented how Asians and Whites compare across multiple outcomes, yet the role of identity selection in shaping the Asian-White gaps remains understudied \autocite{chiswick1983analysis, duleep2012economic, hilger2016upward, arabsheibani2010asian}. The challenge lies in defining and measuring racial identity, particularly when individuals possess agency in how they racially self-identify. If reporting Asian racial identity represents a strategic choice influenced by local discrimination, measured gaps may systematically vary across geographic contexts in ways that previous research has not fully explored.
+
+Various contextual factors, including anti-Asian sentiment and stereotypes, can influence how individuals navigate their racial identity choices. The COVID-19 pandemic has brought renewed attention to how external hostility shapes Asian American experiences \autocite{gover2020anti}. In this paper, I examine the determinants of Asian racial identity reporting and analyze how Asian Americans strategically select between Asian and White racial identities. Specifically, I investigate how anti-Asian bias, education, and family income shape decisions to identify racially as Asian American. I also break down the analysis by generation and family structure (interracial versus endogamous parents) and examine what racial identities individuals with objective Asian ancestry report (Asian only, White only, multiracial, etc.).
+
+I explore how individual characteristics and societal attitudes toward Asian Americans influence racial identity reporting. I use identity and ancestry data from the Current Population Survey (CPS) combined with measures of anti-Asian bias derived from Harvard's Project Implicit Association Test (IAT), the American National Election Studies (ANES), and hate crimes targeting Asian Americans.\footnote{The IAT data comes from Harvard's Project Implicit \autocite{greenwaldMeasuringIndividualDifferences1998}. Implicit bias measures have gained prominence in economics, with IAT scores correlating with economic outcomes \autocite{chettyRaceEconomicOpportunity2020,gloverDiscriminationSelfFulfillingProphecy2017}, voting patterns \autocite{friesePredictingVotingBehavior2007}, and health disparities \autocite{leitnerRacialBiasAssociated2016}.} I ground my analysis in the theoretical framework of \textcite{akerlofEconomicsIdentity2000}, explicitly modeling how external prejudice creates differential utility from identity choices and establishing conditions under which individuals strategically modify their racial self-presentation. I also use CPS data to study the effect of education (parental and individual) and family income on Asian racial identity reporting.
+
+Measuring identity choices outside of lab settings is challenging, requiring both objective ancestry indicators and subjective identity measures. I leverage birthplace and ancestry data to construct objective Asian ancestry measures, then analyze deviations between objective ancestry and subjective racial identity. I find that racial identity reporting responds to both individual characteristics and environmental factors reflecting local discrimination levels. 
+
+I find substantial Asian racial identity attrition across generations, driven primarily by interracial family structures. While children of endogamous Asian parents report Asian identity at rates above 90\%, only about a third of second-generation children with one Asian and one White parent do the same. Using multinomial logit models, I show that anti-Asian bias shifts identity choices away from ``Asian only'' and toward ``White only,'' with effects that are larger in families where the father is Asian and that scale with the number of Asian grandparents among the third generation. On average, parental education increases the probability of Asian identification. However, this relationship reverses in high-bias states, where individuals with higher parental education are less likely to identify as Asian than those with lower parental education under the same levels of bias. Because of this shifting composition, the Asian-identified population has a lower average socioeconomic status in high-bias areas. Consequently, \DIFdelbegin \DIFdel{conventional analyses overestimate Asian –White disparities in areas where }\DIFdelend \DIFaddbegin \DIFadd{outcomes measured on self-reported race understate the outcomes of people of Asian ancestry where prejudice is strongest, and conventional estimates of Asian--White disparities are biased there.
+}
+
+\DIFadd{The policy stakes follow from the direction of this selection. First, the Asian population that official statistics count falls short of the population of Asian ancestry by the most where anti-Asian }\DIFaddend prejudice is strongest\DIFdelbegin \DIFdel{.
+}\DIFdelend \DIFaddbegin \DIFadd{, so the number of people exposed to that prejudice is understated where protection matters most. Second, because the children who stop identifying as Asian in high-bias states are disproportionately those with college-educated mothers, the Asian-identified population that remains there has lower socioeconomic status than the population of Asian ancestry. Outcomes measured on self-reported race therefore understate the outcomes of people of Asian ancestry in high-bias states, and the comparisons of Asian and White outcomes that guide civil rights enforcement, the targeting of programs by race, and the assessment of immigrant integration are distorted in a way that varies systematically with prejudice. \textcite{duncanIdentifyingLaterGenerationDescendants2018} show that selective ethnic attrition of this kind biases measures of intergenerational progress for Hispanics, and the National Academies raised the same concern for integration statistics generally \autocite{watersIntegrationImmigrantsAmerican2015}; the estimates in this paper put magnitudes on the mechanism for Asian Americans and show which families drive it.
+}\DIFaddend 
+
+This research contributes to several bodies of literature. First, it extends the economics of identity framework \autocite{akerlofEconomicsIdentity2000} and stratification economics \autocite{darityEconomicsIdentityOrigin2006,darityPositionPossessionsStratification2022} by examining how racial stereotypes---both positive and negative---influence identity choices among Asian Americans, who face a unique utility landscape where identity can simultaneously signal competence and foreignness \autocite{charnessSocialIdentityGroup2020,atkinHowWeChoose2021,goldsmithDarkLightSkin2007,hamiltonSheddingLightMarriage2009,dietteSkinShadeStratification2015}. Qualitative research documents how individuals strategically adapt racial presentations across contexts \autocite{waters1990ethnic,telles2008generations,zhou1997segmented,cornell2006ethnicity}; this paper quantifies those choices by comparing objective ancestry with subjective identification across varying bias environments.
+
+Second, it extends research on discrimination \autocite{bertrandAreEmilyGreg2004,charlesPrejudiceWagesEmpirical2008,bursztynImmigrantNextDoor2022,bordaloStereotypes2016} by examining how prejudice influences racial self-identification itself. Within immigration research, the paper builds on studies of assimilation \autocite{abramitzkyCulturalAssimilationAge2016,abramitzkyNationImmigrantsAssimilation2014}, but unlike European immigrant groups, Asian Americans face persistent ``perpetual foreigner'' stereotypes that complicate integration regardless of generational status \autocite{foukaImmigrantsAmericansRace2022}, and the model minority myth means Asian racial identity may carry both benefits and costs depending on context \autocite{mengIntermarriageEconomicAssimilation2005}.
+
+This paper most closely relates to recent economic research on racial identity fluidity \autocite{hadah2024hispanicidentity, antmanEthnicAttritionObserved2016,antmanIncentivesIdentifyRacial2015,antmanAmericanIndianCasinos2021}. While previous work focused primarily on Hispanic ethnic attrition, Asian American identity choices operate through different mechanisms due to distinct stereotypes, discrimination patterns, and socioeconomic profiles.
+
+\section{Theoretical Framework}\label{sec:model}
+
+I develop a theoretical framework for understanding racial identity choice that extends \textcite{akerlofEconomicsIdentity2000} to incorporate stereotype-specific costs and benefits. Unlike generic minority identification models, this framework recognizes that Asian Americans face unique utility trade-offs where racial identity can signal both positive attributes (academic achievement, work ethic) and negative characteristics (foreignness, social exclusion).
+
+Formally, individual $i$ belongs to racial group $r_i \in \{A, W\}$, where $A$ represents Asian and $W$ represents White. Agent $i$'s utility depends on their actions and how those actions interact with their chosen racial identity $I_i$:
+
+\begin{equation}
+U_i = U_i(\pmb{a_i}, \pmb{a_{-i}}, I_i)\label{eq:util}
+\end{equation}
+
+Individual identity $I_i$ reflects personal actions, others' behaviors toward them, and societal expectations associated with their racial group:
+
+\begin{equation}
+I_i = I_i(\pmb{a_i}, \pmb{a_{-i}}; \pmb{S}_{r_{i}})\label{eq:identity}
+\end{equation}
+
+where $\pmb{a_i}$ represents individual $i$'s actions, $\pmb{a_{-i}}$ captures others' actions affecting $i$'s identity (including anti-Asian bias), and $\pmb{S}_{r_{i}}$ denotes societal stereotypes and expectations associated with racial group membership.\footnote{This extends \textcite{akerlofEconomicsIdentity2000}'s prescription concept to encompass both negative stereotypes and positive model minority expectations.}
+
+The key insight is that $\pmb{S}_{A}$ includes both positive stereotypes (academic excellence) and negative ones (perpetual foreigner status). Thus creating context-dependent utility from Asian racial identification.
+
+Individual $i$ selects actions $\pmb{a_i}$ to maximize utility given their racial group $r_i$, associated stereotypes $\pmb{S}_{r_{i}}$, and others' actions $\pmb{a_{-i}}$. The first-order condition becomes:
+
+\begin{equation}
+\frac{\partial U_i}{\partial \pmb{a_i}} + \frac{\partial U_i}{\partial I_i} \cdot \frac{d I_i}{d \pmb{a_i}} = 0\label{eq:foc}
+\end{equation}
+
+The solution $a_{i}^{\star}$ yields utility $U_{i}^{\star}$. Now suppose individuals can strategically choose their racial identity at cost $c$. They will switch identities when $\tilde{U_{i}}^{\star} \geq U_{i}^{\star} + c$, where $\tilde{U_{i}}^{\star}$ represents utility under the alternative racial identity.
+
+Identity switching occurs when benefits $\tilde{U_{i}}^{\star} - U_{i}^{\star}$ exceed costs $c$. These net benefits are non-zero only when $\frac{d I_i}{d \pmb{a_i}} \neq 0$ and $\frac{\partial U_i}{\partial I_i} \neq 0$. This framework suggests empirical analysis should focus on: (1) individual characteristics affecting optimal actions under different racial identities, (2) contextual factors (anti-Asian bias) creating differential treatment by racial group, (3) populations with low switching costs $c$, and (4) groups whose utility significantly depends on racial identity.
+
+The model predicts that anti-Asian bias increases the utility differential between White and Asian racial identity, making identity switching more attractive. Mixed-race individuals face lower switching costs due to phenotypic ambiguity, while later-generation Asian Americans may find identity switching more feasible due to cultural assimilation.
+
+\section{Data Sources and Measurement Strategy}\label{sec:data}
+
+In this section, I describe the datasets I use in the analysis. To examine relationships between social attitudes and Asian racial identity reporting, I need both subjective and objective Asian identity measures for identifying appropriate Asian American subgroups. I use the Integrated Public Use Microdata Series (IPUMS) Current Population Survey (CPS) \autocite{floodsarahIntegratedPublicUse2021a} with ancestry information through the places of birth of individuals, their parents, and grandparents to construct objective identity measures. I develop composite anti-Asian bias measures using \textcite{lubotskyInterpretationRegressionsMultiple2006}'s multiple proxy regression method to reduce attenuation bias.
+
+\subsection{Measuring Asian Racial Identity}\label{subsec:cps}
+
+I measure Asian racial identity using CPS data from 2004--2021. Following \textcite{antmanEthnicAttritionObserved2016,antmanEthnicAttritionAssimilation2020}, I utilize birthplace information for individuals, parents, and grandparents to create objective Asian ancestry indicators for minors under age 17 living with parents.\footnote{This approach parallels previous research but focuses on racial rather than ethnic categorization.} The methodology allows for the identification of first-, second-, and third-generation Asian Americans (see Figure \ref{fig:diag} for visual representation). I also use a CPS sample of adults aged 18+ to examine whether their racial identity reporting patterns differ from minors; for the adult sample, I can only identify first- and second-generation.\footnote{Since adults still living with parents might not be representative of the overall adult population and is a rare occurrence, I do not link adults to their parents.}
+
+The objective ancestry measure---distinct from subjective racial identification where respondents select ``Asian'' as their race---depends on birthplaces across three generations.\footnote{For this analysis, Asian countries comprise East Asian and Southeast Asian nations, including China, Hong Kong, Taiwan, Japan, Korea, Mongolia, Cambodia, Indonesia, Laos, Malaysia, Philippines, Singapore, Thailand, and Vietnam, but exclude South Asian and Middle Eastern countries, consistent with standard demographic classifications.} The three identifiable generations include: 1) first-generation immigrants born in Asian countries with both parents also born in Asian countries, 2) second-generation individuals who are US-born citizens with at least one parent born in an Asian country, and 3) third-generation Asian Americans who are US-born citizens with two US-born parents and at least one grandparent born in an Asian country. 
+
+While the ancestry measure provides an objective assessment of Asian heritage, it may not capture all nuances of racial identity. For instance, White individuals with Asian ancestry born to non-Asian parents in Asia, such as on American military bases, may be classified as Asian in the data. To avoid potential misclassification, I remove individuals who report that they were born abroad of American parents. The final sample includes Asian Americans, first-, second-, and third-generation immigrants aged 17 and younger living with parents between 2004 and 2021. I present the summary statistics in Table (\ref{tab:sumstat1}). The adult sample includes first- and second-generation Asian American immigrants aged 18 and older between 2004 and 2021. I show the summary statistics for the adult sample in Table (\ref{tab:sumstat-adults}).
+
+CPS relies on household respondents (parents or caregivers) to report children's racial identity. Asian identity reporting rates are consistent regardless of whether mother (72\%), father (72\%), or child/other caregiver (87\%) serves as respondent (Table \ref{tab:hispbyproxy}), and attrition patterns among adults align with those observed in children (Tables \ref{tab:asianbygen} and \ref{tab:asianbygen-adults}). I address proxy reporting concerns more fully in Section~\ref{sec:robcheck}.
+
+The overall sample comprises 49\% females, with 65\% self-reporting Asian racial identity---answering affirmatively to ``what is your race.'' Average age is 8.4 years. Approximately 52\% of mothers and 52\% of fathers hold college degrees. Additional summary statistics for the overall sample and each generation appear in Table (\ref{tab:sumstat1}).
+
+Using parental and grandparental birthplaces, I objectively identify ethnic ancestry and categorize different family types. For second-generation children, parental birthplaces create three objective categories: Objectively Asian-father-Asian-mother (AA), Objectively Asian-father-White-mother (AW), and Objectively White-father-Asian-mother (WA)
+
+Similarly, grandparental birthplaces create 15 objective categories for third-generation children: (1) objectively Asian paternal grandfather-Asian paternal grandmother-Asian maternal grandfather-Asian maternal grandmother (AAAA); (2) objectively White paternal grandfather-Asian paternal grandmother-Asian maternal grandfather-Asian maternal grandmother (WAAA); (3) objectively Asian paternal grandfather-White paternal grandmother-Asian maternal grandfather-Asian maternal grandmother (AWAA), etc.
+
+My analysis employs a subsample of the US population; Tables \ref{tab:asianbygen} and \ref{tab:sumstat-adults} demonstrate sufficient observations across generations for both adults and children. Consistent with literature on ethnic and racial identity fluidity among Asian and Hispanic Americans, I document significant attrition among third-generation Asian Americans.\footnote{\textcite{duncanIdentifyingLaterGenerationDescendants2018,duncanSocioeconomicIntegrationImmigrant2018, antmanEthnicAttritionObserved2016,antmanEthnicAttritionAssimilation2020} document substantial identity attrition among various groups.}
+
+\subsection{Measuring Anti-Asian Sentiment}\label{sub:lw-bias}
+
+I construct anti-Asian sentiment measures using implicit association tests, American National Election Studies, and hate crimes targeting Asian Americans from 2004--2021. 
+
+The implicit association test measures conceptual associations---for example, linking Asian Americans with negative stereotypes---and evaluative responses. Respondents rapidly categorize words into screen-displayed categories. Figure (\ref{fig:iatexamples}) shows examples from Harvard's Project Implicit skin tone test.
+
+I employ Asian-focused IAT data to construct anti-Asian prejudice proxies \autocite{greenwaldMeasuringIndividualDifferences1998}. The IAT measures bias direction and magnitude while capturing unconscious biases individuals may be unwilling to report, and previous research demonstrates the difficulty of manipulating IAT scores \autocite{egloffPredictiveValidityImplicit2002}. A meta-analysis by \textcite{greenwaldMeasuringIndividualDifferences1998} finds significantly higher predictive validity for IAT compared to self-report measures.\footnote{IAT participation is voluntary, potentially creating selection bias. However, IAT-reflected bias serves as a proxy for prejudiced attitudes \autocite{chettyRaceEconomicOpportunity2020}.} 
+
+However, some research questions IAT predictive validity claims. Implicit Association Tests may not reliably measure or predict implicit prejudice or biased behaviors. Research shows implicit biases experience minor, temporary intervention-induced changes. Additionally, implicit bias fails to predict dictator game contributions or social pressure susceptibility, highlighting distinctions between implicit bias and biased actions \autocite{arkesAttributionsImplicitPrejudice2004,forscherMetaanalysisProceduresChange2019,leeDoesImplicitBias2018}. Therefore, I supplement IAT with explicit bias measures from American National Election Studies (ANES) and hate crimes against Asian individuals to construct a composite bias measure.
+
+I develop a second proxy from the American National Election Studies (ANES), averaging responses across several 2004--2020 questions measuring racial animus \autocite{anes2021}.\footnote{Questions parallel those used by \textcite{charlesPrejudiceWagesEmpirical2008}: (1) ``Conditions Make it Difficult for Blacks to Succeed'', (2) ``Blacks Should Not Have Special Favors to Succeed'', (3) ``Blacks Must Try Harder to Succeed'', (4) ``Blacks Gotten Less than They Deserve Over the Past Few Years'', and (5) ``Feeling Thermometer Toward Asians.''} While the ANES racial animus questions primarily focus on attitudes toward Black Americans, research demonstrates that racial prejudices are highly correlated across different minority groups, with individuals who express bias toward one racial minority typically holding similar attitudes toward others \autocite{almasalkhi2023links, mora2020antiblackness}. These measures therefore capture broader patterns of racial animus that extend beyond anti-Black sentiment specifically. When combined with the Asian-focused IAT measures and hate crimes against Asian Americans in my composite index, this multi-proxy approach weights the bias measure more heavily toward Asian-specific prejudice while still capturing the general racial climate. Finally, I incorporate Uniform Crime Reports (UCR) data quantifying hate crimes against Asian Americans \autocite{ucrbook}.
+
+To reduce attenuation bias and measurement error, I follow \textcite{lubotskyInterpretationRegressionsMultiple2006} in constructing composite bias measures using IAT, ANES racial animus measures, and hate crimes against Asian Americans.\footnote{Additional methodological details appear in the \DIFdelbegin \DIFdel{Data }\DIFdelend Online Appendix\DIFdelbegin \DIFdel{, Section~\ref{sub:lw-bias}}\DIFdelend .} Figure (\ref{fig:skiniat}) graphically represents bias measures over time in the most and least biased locations. Figure (\ref{fig:Asian-twostates}) shows Asian racial identity reporting in the two most and least biased locations. Lower scores indicate less bias; higher scores indicate greater racial animus. \DIFdelbegin \DIFdel{One standard deviation bias increase is equivalent to moving from }\DIFdelend \DIFaddbegin \DIFadd{The composite is scaled in the units of the IAT $D$ score, a standardized difference in response latencies, and throughout the paper I refer to a one-unit change in the index as a one standard deviation change in this sense. Relative to the variation in the data, one unit is a large change. The index is measured in two-year blocks (2004--05, 2008--09, 2012--13, 2016--17, and 2020--21), so each state contributes at most five distinct values, and the panel is unbalanced: 29 states enter in 2004, 11 in 2008, and 11 in 2012. Across the 432 state-year cells with a bias measure, the index has a standard deviation of 0.42, of which the between-state component (the standard deviation of state means) is 0.18 and the within-state component over time is 0.39; within a given year, the standard deviation across states averages 0.26. A one-unit increase, the change used in the tables and figures, is therefore about 2.4 standard deviations of the state-year distribution, or the gap between the least biased places (}\DIFaddend Washington, DC, \DIFdelbegin \DIFdel{or Vermontto North Dakota}\DIFdelend \DIFaddbegin \DIFadd{and Vermont) and the most biased (North Dakota) }\DIFaddend in 2020. \DIFdelbegin \DIFdel{State-level average bias over time appears in Figure (\ref{fig:skiniat-maps} ), with overall }\DIFdelend \DIFaddbegin \DIFadd{Appendix Figures~\ref{fig:skiniat-maps} and~\ref{fig:iat-map-all} map the index by year and averaged over }\DIFaddend 2004--2021\DIFdelbegin \DIFdel{averages in Figure (\ref{fig:iat-map-all} )}\DIFdelend .
+
+\section{From the Data: Asian Racial Identity and Attrition}\label{sec:attrition}
+
+Table\DIFdelbegin \DIFdel{(\ref{tab:asianbygen} ) displays racial attrition patterns across generations.}\DIFdelend \DIFaddbegin \DIFadd{~\ref{tab:asianbygen} reports the distribution of self-reported racial identity among children of Asian ancestry by generation and ancestry, using the three categories that the multinomial logit models below distinguish (``Asian only,'' ``White only,'' and ``Asian and White'') plus a residual category.}\footnote{\DIFadd{Beginning in 2003, the CPS allowed respondents to report multiple racial identities. ``Asian and White'' combines any response that includes both Asian and White, with or without Pacific Islander; ``Other'' collects Asian or Pacific Islander, other single races, and multiracial combinations that do not include both Asian and White. Appendix Figures~\ref{fig:histogram-all}--\ref{fig:histogram-thirdgen} show a finer six-way breakdown.}} \DIFaddend Among first-generation \DIFdelbegin \DIFdel{Asian Americans, 96\% self-report Asian racial identity.This drops to 73\% among second-generation and 31\% among third-generation Asian Americans}\DIFdelend \DIFaddbegin \DIFadd{children, 94\% report ``Asian only.'' The share falls to 72\% in the second generation and 29\% in the third}\DIFaddend . Attrition is \DIFdelbegin \DIFdel{driven primarily by children from }\DIFdelend \DIFaddbegin \DIFadd{concentrated in }\DIFaddend interracial families. Among second-generation children \DIFdelbegin \DIFdel{, those with two Asian parents}\DIFdelend \DIFaddbegin \DIFadd{with two Asian-born parents, 96\% }\DIFaddend report \DIFdelbegin \DIFdel{97\% Asian racial identity, while those with one Asian and one White parent report only 33\% . Similarly, among third-generation children, 94\% of those with four Asian grandparents report }\DIFdelend \DIFaddbegin \DIFadd{``Asian only,'' compared with 31\% of children with one Asian-born parent and one parent born outside Asia (86\% of whom are US-born); the rest of the latter group split between ``White only'' (25\%) and ``}\DIFaddend Asian \DIFdelbegin \DIFdel{racial identity compared to 25\% overall. Adult samples show similar patterns (Table \ref{tab:asianbygen-adults}). Among second-generation adults,those with two Asian parents report 95\% Asian racial identity, while those with one Asian and one White parent report 37\%.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Figures \ref{fig:histogram-all}--\ref{fig:histogram-thirdgen} display racial identity choices among objectively Asian children by generation and family structure.}\footnote{\DIFdel{Beginning in 2003, the CPS allowed respondents to report multiple racial identities. I categorize responses into six classifications: (1) Asian only, (2) White only, (3) Asian and White/Pacific Islander, (4) other non-Asian multiracial combinations, (5) Asian combined with other races, and (6) Asian/Pacific Islander.}} %DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdel{Among all objectively Asian children (Figure \ref{fig:histogram-all}), 64\% report Asian only identity, 16\% White only, and 16\%Asian }\DIFdelend and White\DIFdelbegin \DIFdel{/Pacific Islander. First-generation children overwhelmingly report Asian only identity (94\%, Figure \ref{fig:histogram-firstgen}). Among second-generation interracial families, rates differ by parental composition}\DIFdelend \DIFaddbegin \DIFadd{'' (37\%). The split differs by which parent is Asian}\DIFaddend : 36\% \DIFdelbegin \DIFdel{report Asian only in Asian father--White mother families }\DIFdelend \DIFaddbegin \DIFadd{of children of an Asian father and a White mother report ``Asian only'' }\DIFaddend versus 29\% \DIFdelbegin \DIFdel{in White father--Asian motherfamilies (Figure \ref{fig:histogram-secondgen}}\DIFdelend \DIFaddbegin \DIFadd{of children of a White father and an Asian mother, who more often report ``Asian and White'' (40\% versus 29\%}\DIFaddend ).
+
+\DIFdelbegin \DIFdel{Third-generation patterns reveal increasing identity fluidity (Figure \ref{fig:histogram-thirdgen}). White onlyidentity becomes most common overall (35\%), followed by Asian only (29\%), Asian and White/Pacific Islander (26\%), and other multiracial identities (7}\DIFdelend \DIFaddbegin \DIFadd{Among third-generation children, the number of Asian-born grandparents predicts identity almost completely. Children with four Asian grandparents report ``Asian only'' at 93\%; with three, 74\%; with two, 24\%; and with one, 8\%, at which point ``White only'' is the modal response (54}\DIFaddend \%). \DIFdelbegin \DIFdel{The number of Asian grandparents strongly predicts choices: }\DIFdelend \DIFaddbegin \DIFadd{Adults show the same pattern (Table~\ref{tab:asianbygen-adults}): 93\% of second-generation adults with two Asian-born parents report ``Asian only'' against 33\% of }\DIFaddend those with one \DIFdelbegin \DIFdel{Asian grandparent report 54\% White only, while those with four Asian grandparents report 92\%}\DIFdelend \DIFaddbegin \DIFadd{Asian-born parent, and among the latter ``White only'' (34\%) is as common as ``}\DIFaddend Asian only.\DIFaddbegin \DIFadd{''
+}\DIFaddend 
+
+These patterns \DIFdelbegin \DIFdel{demonstrate }\DIFdelend \DIFaddbegin \DIFadd{show }\DIFaddend that racial identity becomes \DIFdelbegin \DIFdel{increasingly }\DIFdelend \DIFaddbegin \DIFadd{more }\DIFaddend fluid across generations\DIFdelbegin \DIFdel{, with endogamous Asian families maintaining }\DIFdelend \DIFaddbegin \DIFadd{. Endogamous Asian families maintain }\DIFaddend high rates of Asian \DIFdelbegin \DIFdel{racial identity }\DIFdelend \DIFaddbegin \DIFadd{identification, }\DIFaddend while interracial family structures \DIFdelbegin \DIFdel{significantly increase not-Asian-only identitychoices}\DIFdelend \DIFaddbegin \DIFadd{leave most children choosing between a multiracial and a White-only identity, which is the margin on which bias and family background can operate}\DIFaddend .
+
+\section{Empirical Approach}\label{sec:empstrat}
+
+To understand associations between Asian racial self-identification and anti-Asian bias, I estimate a multinomial logit model in which the dependent variable $Y_{ist}^g$ captures categorical racial identity choices: (1) Asian only, (2) White only, (3) Asian and White/Pacific Islander:
+
+\begin{align}
+\log\left(\frac{P(Y_{ist}^g = j)}{P(Y_{ist}^g = \text{Asian only})}\right) &= \beta_{1j}^g AntiAsianBias_{st} + \beta_{2j}^g DadCollegeGrad_{ist}\nonumber \\ 
+& + \beta_{3j}^g MomCollegeGrad_{ist} + \beta_{4j}^g Female_{ist} + X_{ist}^g\pi_j  \nonumber \\ 
+& + \gamma_{rtj} + \varepsilon_{istj}; \quad j \in \{\text{White only}, \text{Asian and White}\} \label{eq:multinomial_logit}
+\end{align}
+
+where $Y_{ist}$ represents the categorical racial identity of person $i$ in state $s$ at interview time $t$, $j$ indexes the identity categories, with ``Asian only'' as the reference category, $P(Y_{ist}^g = j)$ denotes the probability of person $i$ in state $s$ at time $t$ choosing identity $j$, $\mathbf{X}_{ist}^g$ represents the vector of controls that include quartic age, Asian population fraction, parent types, grandparent types, and generation dummies, $\boldsymbol{\beta}_j^g$ denotes the coefficient vector for outcome $j$ and generation $g$, and $J$ indexes the three identity categories. Finally, $\gamma_{rtj}$ represents region-time fixed effects that would control for region $\times$ year specific shocks affecting identity choice $j$, and $\varepsilon_{istj}$ is the error term.
+
+The model specification allows the effects of anti-Asian bias and other covariates to vary across identity choices. For instance, $\beta_{1,\text{White only}}^g$ captures how anti-Asian bias affects the log-odds of choosing ``White only'' versus ``Asian only'' identity, while $\beta_{1,\text{Asian and White}}^g$ measures the bias effect on choosing ``Asian and White'' versus ``Asian only.'' This framework enables analysis of how bias, sex, and parental education differentially influence various identity strategies available to individuals with Asian ancestry.
+
+The coefficients of interest are $\beta_{1j}^g$, $\beta_{2j}^g$, $\beta_{3j}^g$, and $\beta_{4j}^g$, which capture how anti-Asian bias, parental education, and sex influence the likelihood of selecting each identity category relative to ``Asian only.'' I estimate separate models for each generation $g \in \{1,2,3\}$ to assess whether these relationships differ across generational status.
+
+The multinomial specification is appropriate because choosing ``White only'' identity represents a fundamentally different strategy than selecting ``Asian and White'' multiracial identity, a distinction particularly important for mixed-ancestry individuals who may strategically choose between complete ethnic distancing and maintaining partial ethnic connection.
+
+\DIFdelbegin \DIFdel{Since log odds coefficients from multinomial logit models are difficult to interpret directly, I compute the predicted probabilities }\DIFdelend \DIFaddbegin \DIFadd{Because multinomial logit coefficients are log-odds ratios relative to the ``Asian only'' category, I report average marginal effects on the probability }\DIFaddend of each identity\DIFdelbegin \DIFdel{choice at different }\DIFdelend \DIFaddbegin \DIFadd{. For }\DIFaddend anti-Asian bias\DIFdelbegin \DIFdel{levels, holding other covariates constant and summarizing results with the median across }\DIFdelend \DIFaddbegin \DIFadd{, the marginal effect for each child is the derivative of the predicted probability of an outcome with respect to the bias index, evaluated at that child's own covariate values; I average these derivatives, without weights, over the estimation sample, so the reported number is the average change in probability per one-unit (one standard deviation) increase in bias.}\footnote{\DIFadd{The derivative is computed numerically as a central difference with a step of one-tenth of a standard deviation of the index; the perturbation is truncated at the sample range of the index, which pulls the derivatives for children in the most and least biased cells slightly toward zero.}} \DIFadd{For the binary covariates (female, mother college graduate, father college graduate), the marginal effect is the average over the sample of the change in predicted probability from switching the indicator from 0 to 1. For inference, I draw }\DIFaddend 1{,}000 bootstrap \DIFdelbegin \DIFdel{resamples (with percentile-based 95\% confidence intervals ). This approach provides more intuitive insights into how bias influences the likelihood of selecting each identity category. }\DIFdelend \DIFaddbegin \DIFadd{samples of children with replacement, stratified by region $\times$ year cell, re-estimate the model in each, and recompute the average marginal effects. The point estimates I report are the medians of the 1}{\DIFadd{,}}\DIFadd{000 bootstrap estimates, and the confidence intervals are their 2.5th and 97.5th percentiles. Because the bootstrap resamples children rather than states, these intervals reflect sampling variation in the individual data and do not account for dependence among children in the same state-year cell. That dependence matters: in the pooled model of Appendix Table~\ref{tab:pooled-mnl-bias-x-aw}, standard errors on the bias effects clustered at the state level are about three times the conventional standard errors that treat children as independent, so the bootstrap intervals in the figures should be read as understating uncertainty by a similar factor. I therefore report the pooled bias effect and the key AW--WA contrast from that model, with state-clustered standard errors, alongside the bootstrap estimates.
+}\DIFaddend 
+
+\section{Results and Robustness Checks}\label{sec:results}
+
+\DIFdelbegin \DIFdel{I present }\DIFdelend \DIFaddbegin \DIFadd{Figure~\ref{fig:marginal-effects-pooled} presents }\DIFaddend average marginal effects from the multinomial logit \DIFdelbegin \DIFdel{analysis in Figures\ref{fig:marginal-effects-second-pooled}--\ref{fig:marginal-effects-third-grandparental} , focusing on mixed-race Asian Americans where effects are most pronounced}\DIFdelend \DIFaddbegin \DIFadd{models for the pooled mixed-race second-generation sample (panel a) and the pooled third-generation sample (panel b), the groups for which identity is fluid. Appendix Figures~\ref{fig:marginal-effects-second-parental}, \ref{fig:marginal-effects-second-adults-pooled}, and~\ref{fig:marginal-effects-third-grandparental} report the same estimates separately by parental configuration, for adults, and by number of Asian grandparents}\DIFaddend .
+
+\textbf{Second-Generation Subsample.} Among children of mixed-race parents (Figure\DIFaddbegin \DIFadd{~}\DIFaddend \ref{fig:marginal-effects-second-pooled}), a one standard deviation increase in anti-Asian bias increases ``White only'' identity by 12 percentage points (pp) and decreases ``Asian only'' by 10~pp. \DIFaddbegin \DIFadd{A pooled model with a common bias effect and standard errors clustered at the state level (Appendix Table~\ref{tab:pooled-mnl-bias-x-aw}, Panel B) gives a similar magnitude, $+$14.6~pp (standard error 5.7) for ``White only,'' with the offsetting decline falling almost entirely on ``Asian only'' (12.3~pp) rather than ``Asian and White'' (2.4~pp), so the result does not depend on the individual-level bootstrap. }\DIFaddend Maternal college education increases ``Asian only'' ($+$5~pp) and decreases ``White only'' ($-$6~pp). Paternal college education increases ``Asian and White'' ($+$5~pp) and decreases ``White only'' ($-$4~pp). Results among second-generation adults are directionally similar (\DIFdelbegin \DIFdel{Figure }\DIFdelend \DIFaddbegin \DIFadd{Appendix Figure~}\DIFaddend \ref{fig:marginal-effects-second-adults-pooled}).
+
+I also estimate the model separately by parental composition---Asian father--White mother (AW) versus White father--Asian mother (WA) families (\DIFaddbegin \DIFadd{Appendix }\DIFaddend Figure~\ref{fig:marginal-effects-second-parental}\DIFdelbegin \DIFdel{and Table \ref{tab:between-model-second}}\DIFdelend ). Point estimates suggest that bias effects on ``White only'' identity \DIFdelbegin \DIFdel{may be }\DIFdelend \DIFaddbegin \DIFadd{are }\DIFaddend larger in AW families ($+$20~pp) than \DIFaddbegin \DIFadd{in }\DIFaddend WA families ($+$10~pp), and that maternal college education effects \DIFdelbegin \DIFdel{may }\DIFdelend differ in direction and magnitude across the two family types.
+
+\DIFdelbegin \DIFdel{I conduct a }\DIFdelend \DIFaddbegin \DIFadd{Comparing these two sets of estimates requires care, because they come from separately estimated models. A difference in average marginal effects reflects differences in coefficients but also differences in the two groups' covariate distributions, and the coefficients themselves are not comparable across multinomial logits whose error scales are normalized separately. I therefore test the AW--WA difference in two ways. Appendix Table~\ref{tab:between-model-second} and Appendix Figure~\ref{fig:between-model-second} report }\DIFaddend between-model tests of \DIFdelbegin \DIFdel{cross-group }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend differences in average marginal effects\DIFdelbegin \DIFdel{(Figure~\ref{fig:between-model-second} and Table \ref{tab:between-model-second}). I find that the AW--WA differencein bias effects on }\DIFdelend \DIFaddbegin \DIFadd{, with bootstrap standard errors for each difference. Appendix Table~\ref{tab:pooled-mnl-bias-x-aw} instead pools the two groups in a single multinomial logit that constrains every coefficient to be equal across AW and WA families except an interaction between bias and an AW indicator, and computes the average marginal effect of bias for both groups over the same pooled sample, so that the comparison holds the covariate distribution fixed. Both approaches agree on the main difference. In the pooled model, the bias $\times$ AW interaction in the ``White only'' equation is 0.89 (standard error 0.32), and a Wald test with state-clustered standard errors rejects equal bias effects in the two equations ($\chi^2(2) = 10.5$, $p = 0.005$); a one standard deviation increase in bias raises }\DIFaddend ``White only'' \DIFdelbegin \DIFdel{identity is statistically significant. Consequently, the }\DIFdelend \DIFaddbegin \DIFadd{identification by 24.9~pp in AW families and 9.9~pp in WA families, a difference of 15.1~pp (standard error 4.2). The corresponding difference for ``Asian only'' is $-$10.5~pp (standard error 6.4, $p = 0.10$), and for ``Asian and White'' it is not distinguishable from zero.}\footnote{\DIFadd{A linear probability model for the binary Asian indicator with the same pooled specification gives a bias $\times$ AW interaction of $-$0.08 (standard error 0.06).}} \DIFadd{The }\DIFaddend effect of bias is \DIFdelbegin \DIFdel{stronger among AW families (}\DIFdelend \DIFaddbegin \DIFadd{therefore stronger }\DIFaddend when the father is Asian\DIFdelbegin \DIFdel{)}\DIFdelend , pushing children toward \DIFdelbegin \DIFdel{``White-only'' racial identity. Maternal }\DIFdelend \DIFaddbegin \DIFadd{a ``White only'' identity. The between-model tests also find that maternal }\DIFaddend and paternal college education effects \DIFdelbegin \DIFdel{also differ significantly }\DIFdelend \DIFaddbegin \DIFadd{differ }\DIFaddend across family types for ``Asian only'' and ``White only''\DIFdelbegin \DIFdel{outcomes. However, I find that }\DIFdelend \DIFaddbegin \DIFadd{; }\DIFaddend the remaining AW--WA differences are not statistically distinguishable. \DIFaddbegin \DIFadd{The between-model tests rest on the individual-level bootstrap and inherit the caveat from Section~\ref{sec:empstrat}: their standard errors do not account for state-level dependence and are probably about a third of what state clustering would give, so differences that are significant only by that criterion should be read as suggestive. The AW--WA difference in the bias effect is the one that survives state-clustered inference.
+}\DIFaddend 
+
+\textbf{Third-Generation Subsample.} Among pooled third-generation children \DIFaddbegin \DIFadd{(Figure~\ref{fig:marginal-effects-third-pooled})}\DIFaddend , bias effects on identity are not statistically significant; the one exception is paternal college education, which increases ``Asian and White'' identification by 8~pp. Because bias and parental education should matter most for those with the strongest ancestral ties, I split the sample by number of Asian grandparents (\DIFaddbegin \DIFadd{Appendix }\DIFaddend Figure~\ref{fig:marginal-effects-third-grandparental}). Both sets of effects grow with Asian ancestry: the effect of bias on ``White only'' identity is negligible among children with one Asian grandparent but reaches $+$19~pp among those with three, and the effect of maternal college education on ``Asian only'' grows to $+$32~pp over the same gradient. The between-model tests I conduct (\DIFaddbegin \DIFadd{Appendix }\DIFaddend Figure~\ref{fig:between-model-third} and \DIFaddbegin \DIFadd{Appendix }\DIFaddend Table~\ref{tab:between-model-third}) \DIFdelbegin \DIFdel{confirm that these differences are statistically significant }\DIFdelend \DIFaddbegin \DIFadd{find these differences statistically significant by the bootstrap criterion, subject to the same caveat}\DIFaddend : comparing one versus three Asian grandparents, the bias effect on ``White only'' and both parents' college effects on ``Asian only'' and ``White only'' differ significantly. Maternal college effects differ between one and two grandparents, and bias and parental education effects differ between two and three. Gender effects never differ across groups.
+
+The effects of bias and parental education on identity are heterogeneous across ancestry types: even where cross-group differences fall short of statistical significance, point estimates increase steadily with the number of Asian grandparents. Consistent with the theoretical framework, individuals with lower switching costs---those with fewer Asian grandparents and greater racial ambiguity---show smaller marginal effects of bias because they can switch identities even at low levels of bias, while those with more Asian ancestry require stronger incentives to overcome higher switching costs.\footnote{\textcite{hadah2024hispanicidentity} finds similar effects on third-generation Hispanic immigrants.}
+
+\subsection*{The interaction between state-level bias and socioeconomic status}
+
+To assess whether bias and socioeconomic status jointly affect Asian identification, I estimate linear probability models \DIFdelbegin \DIFdel{interacting }\DIFdelend \DIFaddbegin \DIFadd{that interact }\DIFaddend demeaned state-level bias with \DIFaddbegin \DIFadd{sex and with }\DIFaddend parental education (own education \DIFaddbegin \DIFadd{and family income }\DIFaddend for adults)\DIFdelbegin \DIFdel{, family income (own income for adults}\DIFdelend \DIFaddbegin \DIFadd{. Table~\ref{tab:heterogeneity-interactions} reports the interaction coefficients for mixed-race second-generation children (Panel A), mixed-race second-generation adults (Panel B}\DIFaddend ), and \DIFdelbegin \DIFdel{gender.
+ Results appear in Figures~\ref{fig:interaction-coefs-aw-wa-awwa}--\ref{fig:interaction-coefs-thirdgen-grandparent}.
+ }\DIFdelend \DIFaddbegin \DIFadd{third-generation children by number of Asian grandparents (Panel C), separately by family type and pooled.
+ }\DIFaddend 
+
+\DIFdelbegin \DIFdel{I find that education }\DIFdelend \DIFaddbegin \DIFadd{Education }\DIFaddend amplifies the negative effect of bias on Asian identification\DIFaddbegin \DIFadd{, and the pattern is concentrated in families with an Asian father}\DIFaddend . Among second-generation AW children\DIFdelbegin \DIFdel{(Figure \ref{fig:interaction-coefs-aw-wa-awwa})}\DIFdelend , the interaction between bias and \DIFdelbegin \DIFdel{maternal-college is negative and significant (approximately }\DIFdelend \DIFaddbegin \DIFadd{maternal college education is }\DIFaddend $-$\DIFdelbegin \DIFdel{0.20); in high-bias states}\DIFdelend \DIFaddbegin \DIFadd{0.23 (standard error 0.10): for a one standard deviation increase in bias}\DIFaddend , children of college-educated mothers \DIFdelbegin \DIFdel{are substantially less likely to report ``Asian only'' identity}\DIFdelend \DIFaddbegin \DIFadd{lose 23 percentage points more Asian identification than children of mothers without a degree}\DIFaddend . AW adults show the same pattern with \DIFaddbegin \DIFadd{their }\DIFaddend own college education (\DIFdelbegin \DIFdel{approximately }\DIFdelend $-$\DIFdelbegin \DIFdel{0.07; Figure~\ref{fig:interaction-coefs-aw-wa}). Among WA families , no interaction terms are significant }\DIFdelend \DIFaddbegin \DIFadd{0.08, standard error 0.05, significant at the ten percent level). In WA families no interaction is distinguishable from zero }\DIFaddend in either the children or \DIFdelbegin \DIFdel{adult samples. In the pooled second-generation sample}\DIFdelend \DIFaddbegin \DIFadd{the adult sample. Pooling AW and WA families}\DIFaddend , the bias-by-maternal-college interaction is \DIFdelbegin \DIFdel{negative and marginally significant (approximately }\DIFdelend $-$\DIFdelbegin \DIFdel{0.04) }\DIFdelend \DIFaddbegin \DIFadd{0.07 (standard error 0.03) among children and not distinguishable from zero among adults}\DIFaddend . Among third-generation \DIFdelbegin \DIFdel{respondents (Figure~\ref{fig:interaction-coefs-thirdgen-grandparent}), point estimates follow the same direction---negative bias-by-maternal-college interactions that grow larger with more Asian grandparents---but are imprecisely estimated. The }\DIFdelend \DIFaddbegin \DIFadd{children, the point estimates are negative and grow with the number of Asian grandparents ($-$0.02, $-$0.08, and $-$0.30 for one, two, and three grandparents), but the subsamples are small and none is precisely estimated; the }\DIFaddend pooled third-generation \DIFdelbegin \DIFdel{bias-by-maternal-college interaction is significant (approximately }\DIFdelend \DIFaddbegin \DIFadd{interaction is }\DIFaddend $-$\DIFdelbegin \DIFdel{0.05). }\DIFdelend \DIFaddbegin \DIFadd{0.07 (standard error 0.03). Interactions with sex, with paternal education, and with family income are not distinguishable from zero in any panel.
+ }\DIFaddend 
+
+These results imply that higher-educated individuals of Asian ancestry are disproportionately likely to exit Asian identification in high-bias states. The remaining Asian-identified population is therefore negatively selected on education and socioeconomic status, \DIFdelbegin \DIFdel{implying that conventional analyses could overestimate Asian--White gaps }\DIFdelend \DIFaddbegin \DIFadd{so outcomes measured on self-reported race understate the outcomes of people of Asian ancestry }\DIFaddend in states where anti-Asian prejudice is strongest.
+
+\subsection{Robustness Checks}\label{sec:robcheck}
+
+I examine \DIFdelbegin \DIFdel{three }\DIFdelend \DIFaddbegin \DIFadd{four }\DIFaddend potential threats to identification: endogenous interracial marriage, selective migration, \DIFdelbegin \DIFdel{and proxy reporting}\DIFdelend \DIFaddbegin \DIFadd{proxy reporting, and fixed state characteristics}\DIFaddend . If anti-Asian bias influences interracial marriage rates, it could affect the composition of the mixed-race sample. I regress \DIFdelbegin \DIFdel{interracial couple status }\DIFdelend \DIFaddbegin \DIFadd{an indicator for an interracial couple }\DIFaddend on state-level bias with partner-specific controls \DIFaddbegin \DIFadd{among the parents of second-generation children }\DIFaddend (Table~\ref{regtab-logit-02}). \DIFaddbegin \DIFadd{The point estimates are small. }\DIFaddend A one standard deviation increase in bias \DIFdelbegin \DIFdel{raises interracial parent probabilities by }\DIFdelend \DIFaddbegin \DIFadd{is associated with a }\DIFaddend 4~pp \DIFdelbegin \DIFdel{, driven by }\DIFdelend \DIFaddbegin \DIFadd{higher probability that a child's parents are an interracial couple (standard error 3~pp), }\DIFaddend a 3~pp increase \DIFdelbegin \DIFdel{in Asian wife--White husband couples }\DIFdelend \DIFaddbegin \DIFadd{among children of Asian-born mothers, }\DIFaddend and a 1~pp decrease \DIFdelbegin \DIFdel{in Asian husband--White wife couples .
+}\DIFdelend \DIFaddbegin \DIFadd{among children of Asian-born fathers, and none of the three is statistically distinguishable from zero with standard errors clustered at the state level.}\footnote{\DIFadd{The previous version of this table clustered standard errors at the household level, which treats the state-year bias measure as if it varied across households and understated the standard errors by a factor of about three; the point estimates are unchanged.}} \DIFadd{The opposite signs for Asian-born mothers and fathers deserve comment, because in a closed marriage market every Asian woman who marries a White man is matched by an Asian man who does not marry an Asian woman. This sample is not a closed market. It conditions on couples with a co-resident child, it includes only couples in which one partner was born in Asia and the other was not, and Asian-born women are in such couples far more often than Asian-born men (20,247 children of a White father and an Asian mother against 9,055 children of an Asian father and a White mother). A bias-induced change in whether Asian men marry at all, or in whether they form a family with a co-resident child, would appear as a difference between the two columns rather than as an interracial marriage. The estimates are therefore consistent with bias affecting marriage itself for Asian men, not only partner choice, although their imprecision means the data do not settle this.
+}\DIFaddend 
+
+Using 2004--2021 \DIFdelbegin \DIFdel{Census }\DIFdelend \DIFaddbegin \DIFadd{American Community Survey }\DIFaddend data \autocite{floodsarahIntegratedPublicUse2021}, I test whether anti-Asian bias predicts interstate migration among second-generation Asian Americans with two Asian-born parents (Table~\ref{regtab-mig-01}). I find no significant correlation between bias and migration decisions. Among movers, \DIFdelbegin \DIFdel{Asian-identifying individuals }\DIFdelend \DIFaddbegin \DIFadd{self-identified Asians }\DIFaddend live in states with \DIFdelbegin \DIFdel{0.06 standard deviations }\emph{\DIFdel{greater}} %DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{0.02 standard deviations more }\DIFaddend bias than their birth states \DIFdelbegin \DIFdel{, suggesting that if anything my estimates understate the }\DIFdelend \DIFaddbegin \DIFadd{(standard error 0.04), a difference not distinguishable from zero; the positive sign means that selective migration, if anything, works against finding an }\DIFaddend effect of bias on identity switching.
+
+In the CPS, a household respondent reports racial identity for all members, raising the concern that proxy responses may not reflect children's own identities. Two pieces of evidence mitigate this concern. First, \textcite{duncanIntermarriageIntergenerationalTransmission2011} show that reported Hispanic identity does not vary with respondent identity, and Table~\ref{tab:hispbyproxy} shows a similar pattern for Asian identity.\footnote{According to CPS guidelines, household respondents must be at least 15 years old with sufficient household knowledge. When the proxy is ``self,'' respondents range from 15 to 17 years old.} Second, I find similar patterns of ethnic attrition and bias effects among adult Asian Americans who self-report their own identity (Table~\ref{tab:asianbygen-adults}).
+
+\DIFdelbegin \DIFdel{Moreover, the results are also robust to fixed state characteristics}\DIFdelend \DIFaddbegin \DIFadd{Finally, the main specification includes region $\times$ year fixed effects and identifies the effect of bias from differences across states within a region and year and from changes within states over time. It does not include state fixed effects, and this is a limitation}\DIFaddend . Appendix Table~\ref{regtab-all-fe} re-estimates the \DIFaddbegin \DIFadd{pooled }\DIFaddend linear probability model \DIFdelbegin \DIFdel{adding }\DIFdelend \DIFaddbegin \DIFadd{with }\DIFaddend region, state, year, and \DIFdelbegin \DIFdel{year-by-region }\DIFdelend \DIFaddbegin \DIFadd{region $\times$ year }\DIFaddend fixed effects in \DIFdelbegin \DIFdel{all combinations. With state fixed effects---identifying only from }\DIFdelend \DIFaddbegin \DIFadd{every combination. Adding state fixed effects to the baseline specification (column 8) moves the bias coefficient from $-$0.10 (standard error 0.03) to $-$0.04 with a standard error of 0.03, and the specification with state and year fixed effects (column 4) gives $-$0.02 with the same standard error. Neither estimate is statistically distinguishable from zero. The 95 percent confidence interval in column 8, roughly $-$0.10 to 0.02, reaches the baseline estimate, while the interval in column 4, roughly $-$0.08 to 0.04, excludes it; the point estimates are less than half and about a fifth of the baseline. The imprecision does not come from a lack of }\DIFaddend within-state variation \DIFdelbegin \DIFdel{in bias---the coefficient remains negative and statistically significant, and point estimates remain negative and comparable in magnitude to }\DIFdelend \DIFaddbegin \DIFadd{(the residual standard deviation of the index after state and region $\times$ year effects is 0.18, against 0.22 after region $\times$ year effects alone, and each state contributes at most five distinct values of the index); it is the point estimate itself that falls once state effects are included. Two explanations are consistent with that pattern and the data do not distinguish them: a fixed characteristic of states with high anti-Asian bias, rather than the bias itself, could lower Asian identification among children of mixed ancestry; or measurement error in }\DIFaddend the \DIFdelbegin \DIFdel{baseline across all eight specifications. }\DIFdelend \DIFaddbegin \DIFadd{proxy-based index, which is proportionally larger for changes within a state than for differences between states, could attenuate the within-state estimate. A specification with state fixed effects and no time controls (column 3) yields a precise $-$0.02, but it attributes to bias any common time trend in identification and is not the baseline model with state effects added. The within-state estimates are therefore uninformative rather than reassuring, and the results in this paper should be read with the possibility of confounding by fixed state characteristics left open.
+}\DIFaddend 
+
+Larger Asian American populations could themselves affect state-level bias. Figure~\ref{scatter-plot-1} shows no correlation between state Asian American population shares and average anti-Asian bias.
+
+\section{Conclusion}\label{sec:conc}
+
+As American society becomes increasingly multiracial, racial identity choices will \DIFdelbegin \DIFdel{significantly influence }\DIFdelend \DIFaddbegin \DIFadd{shape }\DIFaddend political representation, resource allocation, and social cohesion\DIFaddbegin \DIFadd{, and the statistics that policy relies on will continue to count people by the race they report}\DIFaddend . Understanding the determinants of identity is \DIFdelbegin \DIFdel{particularly important }\DIFdelend \DIFaddbegin \DIFadd{therefore important both }\DIFaddend for researchers studying discrimination's role in racial economic gaps \DIFaddbegin \DIFadd{and for the agencies that enforce civil rights law and monitor disparities with self-reported data}\DIFaddend . This paper \DIFdelbegin \DIFdel{demonstrates }\DIFdelend \DIFaddbegin \DIFadd{shows }\DIFaddend how individual characteristics and anti-Asian sentiment influence racial identity reporting among Asian Americans.
+
+Using multinomial logit analysis, I show that anti-Asian bias \DIFdelbegin \DIFdel{fundamentally }\DIFdelend reshapes racial identity choices, with effects that vary \DIFdelbegin \DIFdel{significantly }\DIFdelend across family structures and generational distance from immigration. Among pooled second-generation children of mixed-race parents, a one standard deviation increase in bias raises ``White only'' reporting by 12 percentage points and reduces ``Asian only'' by 10~pp. The effects differ \DIFdelbegin \DIFdel{markedly }\DIFdelend by parental composition: in AW families, the same increase in bias reduces ``Asian only'' by 13~pp and increases ``White only'' by 20~pp, while in WA families, ``Asian only'' decreases by 12~pp and ``White only'' increases by 10~pp. \DIFdelbegin \DIFdel{Between-model tests }\DIFdelend \DIFaddbegin \DIFadd{Both between-model tests and a pooled model that interacts bias with an AW indicator }\DIFaddend confirm that the bias effect on ``White only'' identity is \DIFdelbegin \DIFdel{significantly }\DIFdelend larger in AW families (\DIFaddbegin \DIFadd{by }\DIFaddend 10.6~pp \DIFaddbegin \DIFadd{in the between-model comparison and 15.1~pp in the pooled model}\DIFaddend ). Among third-generation respondents, bias effects scale with the number of Asian grandparents: those with three Asian grandparents show the largest shifts ($+$19~pp ``White only''), while those with one grandparent show small, imprecise effects.
+
+Parental education shapes identity choices in ways that also differ \DIFdelbegin \DIFdel{significantly }\DIFdelend across family structures. In AW families, maternal college education increases ``Asian only'' by 10~pp and decreases ``White only'' by 12~pp, while in WA families maternal education produces no significant change---a difference \DIFdelbegin \DIFdel{confirmed by formal }\DIFdelend \DIFaddbegin \DIFadd{the }\DIFaddend between-model tests \DIFaddbegin \DIFadd{find significant }\DIFaddend on both outcomes\DIFaddbegin \DIFadd{, although those tests do not account for state-level dependence}\DIFaddend . Among the third generation, parental education effects \DIFdelbegin \DIFdel{increases }\DIFdelend \DIFaddbegin \DIFadd{increase }\DIFaddend with ancestry concentration: maternal college raises ``Asian only'' by 32~pp for those with three Asian grandparents versus 7~pp for those with two, differences that are statistically significant \DIFaddbegin \DIFadd{by the same bootstrap criterion}\DIFaddend . However, the relationship between maternal education and identification varies by environment. For Asian-White (AW) families, the interaction between state-level bias and maternal college education is $-$\DIFdelbegin \DIFdel{0.20}\DIFdelend \DIFaddbegin \DIFadd{0.23 (standard error 0.10)}\DIFaddend , indicating that the negative relationship between bias and Asian identification is more pronounced among individuals with higher maternal education.
+
+These results have \DIFdelbegin \DIFdel{important }\DIFdelend consequences for the measurement of racial disparities \DIFaddbegin \DIFadd{and for the policies that depend on it}\DIFaddend . Because the combination of higher education and higher bias is associated with \DIFdelbegin \DIFdel{less---not more---Asian }\DIFdelend \DIFaddbegin \DIFadd{less, not more, Asian }\DIFaddend identification, the Asian-identified population in high-bias states is negatively selected on education and socioeconomic status. \DIFdelbegin \DIFdel{Conventional analyses relying }\DIFdelend \DIFaddbegin \DIFadd{Outcomes measured }\DIFaddend on self-reported race therefore \DIFdelbegin \DIFdel{overestimate Asian--White gaps }\DIFdelend \DIFaddbegin \DIFadd{understate the outcomes of people of Asian ancestry }\DIFaddend in the most prejudiced areas\DIFdelbegin \DIFdel{. More broadly, identity decisions likely profoundly affect people's choices, investments, and well-being, and the }\DIFdelend \DIFaddbegin \DIFadd{, and comparisons of Asian and White outcomes there are biased in a direction that depends on which group is ahead: where Asian Americans trail, the gap is overstated, and where they lead, the lead is understated. Federal race and ethnicity statistics, hate crime reporting, and the disparity measures used to target and evaluate programs all rest on self-identification \autocite{ombRevisionsStatisticalPolicy2024, covid19HateCrimesAct2021}, so these distortions are not confined to academic estimates. More broadly, the }\DIFaddend strategic nature of \DIFdelbegin \DIFdel{these }\DIFdelend \DIFaddbegin \DIFadd{identity }\DIFaddend decisions means that studies relying on self-reported racial identity may \DIFdelbegin \DIFdel{overstate }\DIFdelend \DIFaddbegin \DIFadd{understate }\DIFaddend Asian American socioeconomic success \DIFdelbegin \DIFdel{and understate assimilation speed}\DIFdelend \DIFaddbegin \DIFadd{in high-bias areas and understate the group's progress across generations}\DIFaddend .
+
+\DIFaddbegin \DIFadd{One limitation qualifies these conclusions. The estimates rely on variation in bias across states within a region and year and on changes within states over time; when state fixed effects are added to the baseline specification, the estimates become too imprecise to be informative. The possibility that fixed characteristics of high-bias states, rather than bias itself, lower Asian identification among children of mixed ancestry therefore cannot be ruled out with these data.
+ }
+
+\DIFaddend This study encourages further research into relationships between bias and self-reported identities for other groups, including other ethnic and racial minorities and sexual minorities. Scholars could examine how recent anti-Asian violence following the COVID-19 pandemic has influenced identity patterns, providing natural experiments in bias effects. Researchers might also explore identity choices in specific institutional contexts like college admissions or workplace advancement, where model minority stereotypes create complex incentive structures, or extend the analysis to subgroups facing distinct stereotypes and discrimination patterns. More granular geographic analysis at the county or zip-code level could provide more precise measures of local bias, though data limitations prevent this in the current analysis. Understanding strategic racial identification among Asian Americans is essential for designing effective anti-discrimination policies and accurately measuring racial equity progress.
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part III. Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begingroup
+\setstretch{1}
+\setlength\bibitemsep{5pt}
+\printbibliography[title=References]
+\endgroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part III.5. Acknowledgments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagebreak
+
+\vspace{2em}
+\noindent\textbf{Acknowledgments:} \ACKNOWLEDGMENTS
+
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part IV. Tables and figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% =========================
+% Sum stat tables
+% =========================
+
+\begin{landscape}
+\begin{table}[H]
+\centering
+\caption{CPS Summary Statistics \label{tab:sumstat1}}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lcccc}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{1}{c}{\textbf{Overall}} & \multicolumn{3}{c}{\textbf{By Generation}} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-5}
+\textbf{Characteristic} & \makecell[c]{\textbf{All Sample} \\N = 318,404} & \makecell[c]{\textbf{First} \\N=40,033} & \makecell[c]{\textbf{Second} \\N=199,294} & \makecell[c]{\textbf{Third} \\N=79,077}\\
+\midrule
+Female & 0.49 & 0.53 & 0.49 & 0.49\\
+Asian & 0.65 & 0.96 & 0.73 & 0.31\\
+Age & 8.4 (5.1) & 10.9 (4.5) & 8.3 (5.1) & 7.7 (5.0)\\
+College Graduate:\ \ 	 Father & 0.52 & 0.59 & 0.52 & 0.50\\
+College Graduate:\ \ 	 Mother & 0.52 & 0.56 & 0.51 & 0.52\\
+Total Family Income\ \ 	 (1999 dollars) & 87,031 (84,797) & 75,815 (74,489) & 88,295 (88,411) & 89,436 (80,051)\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] The samples include children ages 17 and below who live in intact families. First-generation Asian immigrant children that were born in a Asian country. Native-born second-generation Asian immigrant children with at least one parent born in a Asian country. Finally, native-born third generation Asian immigrant children with native-born parents and at least one grand parent born in a Asian country.
+\item[2] Data source is the 2004-2021 Current Population Survey.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\end{landscape}
+
+\newpage
+\pagebreak
+
+\begin{table}
+
+\caption{Current Population Survey (CPS) Summary Statistics \label{tab:sumstat-adults}}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{1}{c}{\textbf{Overall}} & \multicolumn{2}{c}{\textbf{By Generation}} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-4}
+\textbf{Characteristic} & \makecell[c]{\textbf{All Sample} \\N = 48,153} & \makecell[c]{\textbf{First} \\N=35,728} & \makecell[c]{\textbf{Second} \\N=12,425}\\
+\midrule
+Female & 0.56 & 0.58 & 0.50\\
+Asian & 0.90 & 0.96 & 0.73\\
+Age & 46 (17) & 49 (16) & 38 (17)\\
+Years of Education & 14.0 (3.5) & 13.9 (3.8) & 14.5 (2.5)\\
+Total Family Income\ \ 	 (1999 dollars) & 68,121 (71,266) & 66,093 (70,444) & 73,950 (73,269)\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] The samples include people of Asian ancestry ages 18 and above. First-generation Asian immigrants were born in a Asian country. Native-born second-generation Asian immigrants have at least one parent born in a Asian country. 
+\item[2] Data source is the 2004-2021 Current Population Survey.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\newpage
+\pagebreak
+% =========================
+% Identity by proxy
+% =========================
+
+\begin{table}[H]
+\centering\centering
+\caption{Main Effect of Proxy on Second-Generation's Asian Self-identification \label{tab:hispbyproxy}}
+\centering
+\fontsize{12}{14}\selectfont
+\begin{threeparttable}
+\begin{tabular}[c]{>{}lllll}
+\toprule
+Parents Type & All & Asian-Asian & Asian-White & White-Asian\\
+\midrule
+\textbf{Proxy:} &  &  &  & \\
+\hspace{1em}\textbf{Mother} & 0.72 & 0.97 & 0.37 & 0.3\\
+\hspace{1em}\textbf{Father} & 0.72 & 0.97 & 0.39 & 0.29\\
+\hspace{1em}\textbf{Self} & 0.87 & 0.97 & 0.23 & 0.31\\
+\hspace{1em}\textbf{Others} & 0.88 & 0.96 & 0.6 & 0.54\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[1] The samples include children ages 17 and below who live in intact families. A proxy is the person that answered the Current Population Survey questionnaire.
+\item[2] Data source is the 1994-2021 Current Population Survey.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\pagebreak
+\newpage
+
+% =========================
+% Number of observations by generation
+% =========================
+
+\DIFdelbegin %DIFDELCMD < \begin{table}[H]
+%DIFDELCMD < \centering\centering
+%DIFDELCMD < \caption{Asian Self-identification by Generation \label{tab:asianbygen}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{>{}lcccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD <   & \specialcell{Self-identify \\ as Asian} & \specialcell{Self-identify as \\ not-only-Asian} & \specialcell{\% Self-identify \\ as Asian} & \specialcell{\% Self-identify \\ as not-only-Asian}\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < \textbf{1st Gen.} & 14,811 & 688 & 0.96 & 0.04\\
+%DIFDELCMD < \textbf{2nd Gen.} & 58,756 & 21,381 & 0.73 & 0.27\\
+%DIFDELCMD < \hspace{1em}\textbf{Asian on:} &  &  &  \vphantom{1} & \\
+%DIFDELCMD < \hspace{1em}\hspace{1em}\textbf{Both Sides} & 49,118 & 1,717 & 0.97 & 0.03\\
+%DIFDELCMD < \hspace{1em}\hspace{1em}\textbf{One Side} & 9,638 & 19,664 & 0.33 & 0.67\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < \textbf{3rd Gen.} & 10,394 & 23,048 & 0.31 & 0.69\\
+%DIFDELCMD < \hspace{1em}\textbf{Asian on:} &  &  &  & \\
+%DIFDELCMD < \hspace{1em}\hspace{1em}\textbf{Both Sides} & 5,428 & 316 & 0.94 & 0.06\\
+%DIFDELCMD < \hspace{1em}\hspace{1em}\textbf{One Side} & 3,030 & 9,213 & 0.25 & 0.75\\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \item[1] The samples include children ages 17 and below who live in intact families. First-generation Asian immigrant children that were born in a Asian country. Native-born second-generation Asian immigrant children with at least one parent born in a Asian country. Finally, native-born third-generation Asian immigrant children with native-born parents and at least one grandparent born in a Asian country.
+%DIFDELCMD < \item[2] Data source is the 2004-2021 Current Population Survey.
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{table}[H]
+\centering
+\small\setstretch{1.0}
+\caption{Self-Reported Racial Identity of Children of Asian Ancestry by Generation \label{tab:asianbygen}}
+\begin{threeparttable}
+\begin{tabular}{lccccc}
+\toprule
+ & & \multicolumn{4}{c}{Share self-reporting each identity} \\
+\cmidrule(l{3pt}r{3pt}){3-6}
+ & Observations & Asian only & White only & \specialcell{Asian and \\ White} & Other\\
+\midrule
+\textbf{First generation} & 15,499 & 0.94 & 0.03 & 0.01 & 0.02\\
+\textbf{Second generation} & 80,137 & 0.72 & 0.10 & 0.14 & 0.04\\
+\hspace{1em}Both parents Asian-born & 50,835 & 0.96 & 0.02 & 0.01 & 0.02\\
+\hspace{1em}One Asian-born parent & 29,302 & 0.31 & 0.25 & 0.37 & 0.07\\
+\hspace{1em}\hspace{1em}Asian father--White mother & 9,055 & 0.36 & 0.27 & 0.29 & 0.07\\
+\hspace{1em}\hspace{1em}White father--Asian mother & 20,247 & 0.29 & 0.24 & 0.40 & 0.07\\
+\textbf{Third generation} & 33,442 & 0.29 & 0.35 & 0.27 & 0.09\\
+\hspace{1em}Four Asian grandparents & 5,744 & 0.93 & 0.04 & 0.01 & 0.02\\
+\hspace{1em}Three Asian grandparents & 567 & 0.74 & 0.10 & 0.13 & 0.03\\
+\hspace{1em}Two Asian grandparents & 12,678 & 0.24 & 0.28 & 0.39 & 0.09\\
+\hspace{1em}One Asian grandparent & 14,453 & 0.07 & 0.54 & 0.26 & 0.12\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] The samples include children ages 17 and below who live in intact families. First-generation Asian immigrant children were born in an Asian country. Native-born second-generation children have at least one parent born in an Asian country; ``One Asian-born parent'' rows require the other parent to be born outside Asia (the AW and WA labels follow the paper's convention). Native-born third-generation children have native-born parents and at least one grandparent born in an Asian country, grouped by the number of Asian-born grandparents.
+\item[\DIFaddFL{2}] Columns report the share of each row's observations in the racial identity categories used in the multinomial logit: ``Asian only,'' ``White only,'' and ``Asian and White'' (any combination of Asian and White, with or without Pacific Islander). ``Other'' collects Asian or Pacific Islander, other single races, and multiracial combinations without both an Asian and a White component; the multinomial logit excludes this category. Shares sum to one across the four columns.
+\item[\DIFaddFL{3}] Data source is the 2004--2021 Current Population Survey.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\DIFaddend 
+
+
+\newpage
+\pagebreak
+
+\DIFdelbegin %DIFDELCMD < \begin{table}[H]
+%DIFDELCMD < \centering\centering
+%DIFDELCMD < \caption{Asian Self-identification by Generation \label{tab:asianbygen-adults}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{>{}lcccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD <   & \specialcell{Self-identify \\ as Asian} & \specialcell{Self-identify as \\ not-only-Asian} & \specialcell{\% Self-identify \\ as Asian} & \specialcell{\% Self-identify \\ as not-only-Asian}\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < \textbf{1st Gen.} & 275,516 & 11,037 & 0.96 & 0.04\\
+%DIFDELCMD < \textbf{2nd Gen.} & 74,345 & 28,027 & 0.73 & 0.27\\
+%DIFDELCMD < \hspace{1em}\textbf{Asian on:} &  &  &  & \\
+%DIFDELCMD < \hspace{1em}\hspace{1em}\textbf{Both Sides} & 59,880 & 2,935 & 0.95 & 0.05\\
+%DIFDELCMD < \hspace{1em}\hspace{1em}\textbf{One Side} & 14,465 & 25,092 & 0.37 & 0.63\\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \item[1] The samples include people of Asian ancestry ages 18 and above. First-generation Asian immigrants were born in a Asian country. Native-born second-generation Asian immigrants have at least one parent born in a Asian country. 
+%DIFDELCMD < \item[2] Data source is the 2004-2021 Current Population Survey.
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{table}[H]
+\centering
+\small\setstretch{1.0}
+\caption{Self-Reported Racial Identity of Adults of Asian Ancestry by Generation \label{tab:asianbygen-adults}}
+\begin{threeparttable}
+\begin{tabular}{lccccc}
+\toprule
+ & & \multicolumn{4}{c}{Share self-reporting each identity} \\
+\cmidrule(l{3pt}r{3pt}){3-6}
+ & Observations & Asian only & White only & \specialcell{Asian and \\ White} & Other\\
+\midrule
+\textbf{First generation} & 286,553 & 0.95 & 0.03 & 0.00 & 0.02\\
+\textbf{Second generation} & 102,372 & 0.70 & 0.15 & 0.10 & 0.05\\
+\hspace{1em}Both parents Asian-born & 62,815 & 0.93 & 0.03 & 0.01 & 0.03\\
+\hspace{1em}One Asian-born parent & 39,557 & 0.33 & 0.34 & 0.24 & 0.09\\
+\hspace{1em}\hspace{1em}Asian father--White mother & 14,289 & 0.36 & 0.36 & 0.18 & 0.10\\
+\hspace{1em}\hspace{1em}White father--Asian mother & 25,268 & 0.32 & 0.33 & 0.27 & 0.09\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] The samples include people of Asian ancestry ages 18 and above. First-generation Asian immigrants were born in an Asian country. Native-born second-generation Asian Americans have at least one parent born in an Asian country; ``One Asian-born parent'' rows require the other parent to be born outside Asia (the AW and WA labels follow the paper's convention). Grandparents' birthplaces are not observed for adults, so the third generation cannot be identified.
+\item[\DIFaddFL{2}] Columns report the share of each row's observations in the racial identity categories used in the multinomial logit: ``Asian only,'' ``White only,'' and ``Asian and White'' (any combination of Asian and White, with or without Pacific Islander). ``Other'' collects Asian or Pacific Islander, other single races, and multiracial combinations without both an Asian and a White component; the multinomial logit excludes this category. Shares sum to one across the four columns.
+\item[\DIFaddFL{3}] Data source is the 2004--2021 Current Population Survey.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\DIFaddend 
+
+
+\pagebreak
+\newpage
+
+
+% =========================
+% Migration table
+% =========================
+
+\DIFdelbegin %DIFDELCMD < \begin{table}[H]
+%DIFDELCMD < \centering\centering
+%DIFDELCMD < \caption{Relationship Between Bias and Migration \label{regtab-mig-01}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \resizebox{0.7\textwidth}{!}{
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{lccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD <   & \specialcell{(1) \\ Migrated from \\ Birth Place} & \specialcell{(2) \\ Migrated from \\ Birth Place} & \specialcell{(3) \\ $Bias_{ist} - Bias_{ilb}$}\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < $Bias_{st}$ & 0.13* &  & \\
+%DIFDELCMD <  & (0.07) &  & \\
+%DIFDELCMD < $Bias_{lb}$ &  & -0.03 & \\
+%DIFDELCMD <  &  & (0.17) & \\
+%DIFDELCMD < Asian &  &  & 0.02\\
+%DIFDELCMD <  &  &  & (0.04)\\
+%DIFDELCMD < Female & 0.00 & -0.01 & 0.00\\
+%DIFDELCMD <  & (0.00) & (0.00) & (0.02)\\
+%DIFDELCMD < College Graduate: Mother & 0.01*** & 0.00 & -0.01\\
+%DIFDELCMD <  & (0.00) & (0.01) & (0.03)\\
+%DIFDELCMD < College Graduate: Father & -0.03*** & -0.03*** & 0.03\\
+%DIFDELCMD <  & (0.01) & (0.01) & (0.02)\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Observations & 73,563 & 41,641 & 2,075\\
+%DIFDELCMD < Mean & 0.15 & 0.15 & -0.1\\
+%DIFDELCMD < Year $\times$ Region FE & X &  & \\
+%DIFDELCMD < Birthyear $\times$ Birth Region FE &  & X & \\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \small
+%DIFDELCMD < \item[1] \footnotesize{Columns (1) and (2) estimate: $BirthPlaceMigration_{i} = \beta_1 AntiAsianBias + X_{i}\pi + \gamma + \varepsilon_{i}$, where $BirthPlaceMigration$ indicates whether person $i$ lives in a state different from their birth state. Column (1) uses bias in the current state at survey time; column (2) uses bias in the birth state at birth year. Column (3) estimates: $Y_{i} = \beta_0 + \beta_1 Asian_{i} + X_{i}\pi + \varepsilon_{i}$, where $Y_{i} \equiv AntiAsianBias_{ist} - AntiAsianBias_{ilb}$ is the difference between bias in the current state and bias in the birth state, and $Asian_{i}$ is self-reported Asian identity. I include controls for sex, quartic age, parental education, fraction of Asians in a state, and region $\times$ year fixed effects (column 1) or birthyear $\times$ birth region fixed effects (column 2). Standard errors are clustered on the state level.}
+%DIFDELCMD < \item[3] \footnotesize{The samples include children ages 17 and below who live in intact families. 
+%DIFDELCMD <                       Native-born second-generation Asian immigrant children with both
+%DIFDELCMD <                       parents born in a Asian country. The sample in the column (3) regression is further restricted to only those that migrated from their birth state.}
+%DIFDELCMD < \item[4] \footnotesize{Data source is the 2004-2021 Census Data.}
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{table}[H]
+\centering\centering
+\caption{Relationship Between Bias and Migration \label{regtab-mig-01}}
+\centering
+\resizebox{0.7\textwidth}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+  & \specialcell{(1) \\ Migrated from \\ Birth Place} & \specialcell{(2) \\ Migrated from \\ Birth Place} & \specialcell{(3) \\ $Bias_{ist} - Bias_{ilb}$}\\
+\midrule
+$Bias_{st}$ & 0.13* &  & \\
+ & (0.07) &  & \\
+$Bias_{lb}$ &  & -0.03 & \\
+ &  & (0.17) & \\
+Asian &  &  & 0.02\\
+ &  &  & (0.04)\\
+Female & 0.00 & -0.01 & 0.00\\
+ & (0.00) & (0.00) & (0.02)\\
+College Graduate: Mother & 0.01*** & 0.00 & -0.01\\
+ & (0.00) & (0.01) & (0.03)\\
+College Graduate: Father & -0.03*** & -0.03*** & 0.03\\
+ & (0.01) & (0.01) & (0.02)\\
+\midrule
+Observations & 73,563 & 41,641 & 2,075\\
+Mean & 0.15 & 0.15 & -0.1\\
+Year $\times$ Region FE & X &  & \\
+Birthyear $\times$ Birth Region FE &  & X & \\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{Columns (1) and (2) estimate: $BirthPlaceMigration_{i} = \beta_1 AntiAsianBias + X_{i}\pi + \gamma + \varepsilon_{i}$, where $BirthPlaceMigration$ indicates whether person $i$ lives in a state different from their birth state. Column (1) uses bias in the current state at survey time; column (2) uses bias in the birth state at birth year. Column (3) estimates: $Y_{i} = \beta_0 + \beta_1 Asian_{i} + X_{i}\pi + \varepsilon_{i}$, where $Y_{i} \equiv AntiAsianBias_{ist} - AntiAsianBias_{ilb}$ is the difference between bias in the current state and bias in the birth state, and $Asian_{i}$ is self-reported Asian identity. I include controls for sex, quartic age, parental education, fraction of Asians in a state, and region $\times$ year fixed effects (column 1) or birthyear $\times$ birth region fixed effects (column 2). Standard errors are clustered on the state level.}
+\item[\DIFaddFL{2}] \footnotesize{The samples include children ages 17 and below who live in intact families. 
+                      Native-born second-generation Asian immigrant children with both
+                      parents born in an Asian country. The sample in the column (3) regression is further restricted to only those that migrated from their birth state.}
+\item[\DIFaddFL{3}] \footnotesize{Data source is the 2004--2021 American Community Survey (IPUMS USA).}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+\DIFaddend 
+
+
+\pagebreak
+\newpage
+
+% =========================
+% Marriage table
+% =========================
+
+
+\DIFdelbegin %DIFDELCMD < \begin{table}[H]
+%DIFDELCMD < \centering\centering
+%DIFDELCMD < \caption{Relationship Between Bias and Interracial Marriages \label{regtab-logit-02}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{lccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD < \multicolumn{2}{c}{ } & \multicolumn{1}{c}{Asian Men} & \multicolumn{1}{c}{Asian Women} \\
+%DIFDELCMD < \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+%DIFDELCMD <   & \specialcell{(1) \\ Interracial} & \specialcell{(2) \\ Interracial} & \specialcell{(3) \\ Interracial}\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Bias & $0.04$*** & $-0.01$ & $0.03$**\\
+%DIFDELCMD <  & ($0.01$) & ($0.01$) & ($0.01$)\\
+%DIFDELCMD < College Graduate: Wife & $0.04$*** & $0.04$*** & $0.05$***\\
+%DIFDELCMD <  & ($0.00$) & ($0.01$) & \vphantom{1} ($0.00$)\\
+%DIFDELCMD < College Graduate: Husband & $-0.01$* & $-0.01$ & $-0.02$***\\
+%DIFDELCMD <  & ($0.00$) & ($0.01$) & ($0.00$)\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Observations & $69,800$ & $52,103$ & $60,214$\\
+%DIFDELCMD < Year $\times$ Region FE & X & X & X\\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \small
+%DIFDELCMD < \item[1] \footnotesize{Each column estimates the following linear probability model: $interracial_{ist} = \beta_1 AntiAsianBias_{st} + X_{ist}\pi + \gamma_{rt} + \varepsilon_{ist}$, where $interracial_{ist}$ indicates an interracial couple (Asian husband--White wife or White husband--Asian wife), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). Standard errors are clustered on the household level.}
+%DIFDELCMD < \item[3] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{table}[H]
+\centering\centering
+\caption{Relationship Between Bias and Interracial Marriages \label{regtab-logit-02}}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+\multicolumn{2}{c}{ } & \multicolumn{1}{c}{Asian Men} & \multicolumn{1}{c}{Asian Women} \\
+\cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+  & \specialcell{(1) \\ Interracial} & \specialcell{(2) \\ Interracial} & \specialcell{(3) \\ Interracial}\\
+\midrule
+Bias & $0.04$ & $-0.01$ & $0.03$\\
+ & ($0.03$) & ($0.03$) & ($0.03$)\\
+College Graduate: Wife & $0.04$*** & $0.04$*** & $0.05$***\\
+ & ($0.01$) & ($0.01$) & \vphantom{1} ($0.01$)\\
+College Graduate: Husband & $-0.01$ & $-0.01$ & $-0.02$*\\
+ & ($0.01$) & ($0.01$) & ($0.01$)\\
+\midrule
+Observations & $69,800$ & $52,103$ & $60,214$\\
+Year $\times$ Region FE & X & X & X\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{Each column estimates the following linear probability model: $interracial_{ist} = \beta_1 AntiAsianBias_{st} + X_{ist}\pi + \gamma_{rt} + \varepsilon_{ist}$, where $interracial_{ist}$ indicates a couple in which one partner was born in an Asian country and the other was not (labelled Asian husband--White wife or White husband--Asian wife, following the paper's convention), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). The unit of observation is a second-generation child; columns (2) and (3) restrict to children of Asian-born fathers and Asian-born mothers, respectively. Standard errors are clustered on the state level.}
+\item[\DIFaddFL{2}] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\DIFaddend 
+
+
+\pagebreak
+\newpage
+
+% =========================
+%DIF >  Heterogeneity table
+%DIF >  (replaces the interaction
+%DIF >  coefficient figures)
+%DIF >  =========================
+\DIFaddbegin 
+
+\begin{table}[H]
+\centering
+\small\setstretch{1.0}
+\caption{Heterogeneity in the Effect of Anti-Asian Bias on Asian Identification \label{tab:heterogeneity-interactions}}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+\multicolumn{5}{l}{\textit{Panel A: Mixed-race second generation (children)}} \\
+ & Bias $\times$ Female & Bias $\times$ Mother college & Bias $\times$ Father college & Observations \\
+\midrule
+Asian father--White mother & $-0.005$ & $-0.225$** & $0.039$ & $9{,}055$ \\
+ & ($0.052$) & ($0.097$) & ($0.094$) & \\
+White father--Asian mother & $-0.011$ & $0.006$ & $-0.036$ & $20{,}247$ \\
+ & ($0.048$) & ($0.047$) & ($0.035$) & \\
+\textbf{Pooled} & $-0.012$ & $-0.067$* & $-0.024$ & $29{,}302$ \\
+ & ($0.052$) & ($0.034$) & ($0.037$) & \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel B: Mixed-race second generation (adults)}} \\
+ & Bias $\times$ Female & Bias $\times$ College graduate & Bias $\times$ Above-median income & Observations \\
+\midrule
+Asian father--White mother & $-0.026$ & $-0.084$* & $-0.006$ & $1{,}710$ \\
+ & ($0.047$) & ($0.047$) & ($0.048$) & \\
+White father--Asian mother & $0.017$ & $0.003$ & $-0.022$ & $2{,}976$ \\
+ & ($0.042$) & ($0.041$) & ($0.041$) & \\
+\textbf{Pooled} & $-0.012$ & $-0.023$ & $-0.020$ & $4{,}686$ \\
+ & ($0.033$) & ($0.039$) & ($0.040$) & \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel C: Third generation (children)}} \\
+ & Bias $\times$ Female & Bias $\times$ Mother college & Bias $\times$ Father college & Observations \\
+\midrule
+One Asian grandparent & $-0.010$ & $-0.023$ & $-0.034$ & $14{,}453$ \\
+ & ($0.028$) & ($0.025$) & ($0.030$) & \\
+Two Asian grandparents & $0.034$ & $-0.077$ & $0.000$ & $12{,}678$ \\
+ & ($0.028$) & ($0.061$) & ($0.073$) & \\
+Three Asian grandparents & $0.019$ & $-0.297$ & $0.096$ & $567$ \\
+ & ($0.077$) & ($0.211$) & ($0.143$) & \\
+\textbf{Pooled} & $-0.004$ & $-0.067$** & $-0.005$ & $27{,}698$ \\
+ & ($0.017$) & ($0.030$) & ($0.039$) & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{Each row is a separate weighted linear probability model, $A_{ist} = \beta_1 Bias_{st} + \sum_k \delta_k (Bias_{st} \times Z_{ist}^k) + \sum_k \theta_k Z_{ist}^k + \mathbf{X}_{ist}\pi + \gamma_{rt} + \varepsilon_{ist}$, where $A_{ist}$ is self-reported Asian identity, $Bias_{st}$ is the demeaned state-level anti-Asian bias index (standard deviation units), and the table reports the interaction coefficients $\delta_k$. In Panels A and C, $Z$ is female, mother college graduate, and father college graduate; in Panel B, $Z$ is female, own college degree (16 or more years of schooling), and family income above the median of the full adult file. All models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Panel A uses children ages 17 and younger living with both parents, with one parent born in an Asian country and the other born outside Asia (labelled White, following the paper's convention; about 86 percent of these parents are US-born); Panel B uses adults ages 18 and older with the same parental configuration, restricted to March (ASEC) respondents because family income is observed only for them; Panel C uses native-born children with native-born parents and one, two, or three grandparents born in an Asian country. The pooled rows do not include group indicators, matching the specifications previously plotted. Standard errors clustered at the state level in parentheses. $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$. Data source is the 2004--2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+
+\pagebreak
+\newpage
+
+
+%DIF >  =========================
+\DIFaddend % Diagram of how
+% generations are defined
+% =========================
+
+\pagebreak
+\newpage
+
+\begin{center}
+\begin{figure}[H]
+\caption{Diagram of the Three Different Generations of Asian Immigrants.}
+\includegraphics[width=\textwidth, height=9cm]{diag.png} 
+\label{fig:diag}
+\end{figure}
+\hfill%
+\end{center}
+
+% =========================
+% Bias and Self-reported 
+% Asian Identity in the Least 
+% and Most Biased Places
+% =========================
+
+
+\begin{center}
+\begin{figure}[H]
+\caption{Bias and Self-reported Asian Identity in the Least and Most Biased Places} \label{fig:toptwobias}
+
+% first
+\begin{subfigure}{.9\textwidth}
+\caption{Bias Over Time}
+\centering
+\includegraphics[width=.9\linewidth]{Bias_twostates.png} 
+\label{fig:skiniat}
+\end{subfigure}
+% Second
+\begin{subfigure}{.9\textwidth}
+\caption{Self-reported Asian Identity Over Time}
+\centering
+\includegraphics[width=.9\linewidth]{Bias_twostates-asian.png} 
+\label{fig:Asian-twostates}
+\end{subfigure}
+\caption*{\footnotesize{These two panels show the trends in bias (panel a) and self-reported Asian identity among Asian immigrants (panel b) of the least and most biased places in the data. The District of Colombia is the least biased geographical area, and North Dakota is the most biased. The bias units are in standard deviations. Self-reported Asian identity is among first, second, and third-generation Asian immigrants aged 17 and younger still living in intact families.\\
+Bias data is from the 2004--2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. Identity data is from the 2004--2021 Current Population Survey (CPS).}}
+\end{figure}
+\end{center}
+
+
+\pagebreak
+\newpage
+
+% =========================
+%DIF >  Multinomial Logit Marginal
+%DIF >  Effects: Pooled Samples
+%DIF >  =========================
+\DIFaddbegin 
+
+\begin{figure}[H]
+\centering
+\caption{\DIFaddFL{Marginal Effects of Key Covariates on Racial Identity Choice}}
+\DIFaddFL{\label{fig:marginal-effects-pooled}
+}
+
+\begin{subfigure}{.76\textwidth}
+\caption{\DIFaddFL{Mixed-Race Second-Generation Asian Americans}}\DIFaddFL{\label{fig:marginal-effects-second-pooled}
+}\centering
+\includegraphics[width=1\linewidth]{boot_me_second_AW_WA.png}
+\end{subfigure}
+
+\vspace{0.3cm}
+
+\begin{subfigure}{.76\textwidth}
+\caption{\DIFaddFL{Third-Generation Asian Americans}}\DIFaddFL{\label{fig:marginal-effects-third-pooled}
+}\centering
+\includegraphics[width=1\linewidth]{boot_me_third_oneTwoThreeAsian.png}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure displays average marginal effects of key covariates on the probability of each racial identity outcome, estimated from equation (\ref{eq:multinomial_logit}). Panel (a) pools second-generation children with one parent born in an Asian country and one parent born outside Asia; panel (b) pools third-generation children with one, two, or three Asian-born grandparents. For anti-Asian bias, the marginal effect is the derivative of each predicted probability with respect to the bias index, evaluated for every child at that child's own covariate values and averaged over the estimation sample, so it is the average change in probability per one-unit (one standard deviation) increase in bias. For the binary covariates, it is the average change in predicted probability from switching the indicator from 0 to 1 for every child. Models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Each point is the median of the average marginal effect across 1{,}000 bootstrap resamples of children, drawn with replacement within region $\times$ year cells; the bars span the 2.5th and 97.5th percentiles of the same resamples. Because children rather than states are resampled, the intervals do not account for dependence within state-year cells.}}
+\end{figure}
+
+
+\clearpage
+
+%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIF >  PART V. Appendix
+%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\setlength{\footnotemargin}{5.75mm}
+
+%DIF >  Title for Appendix
+%DIF >  special footnote symbols
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begingroup
+  \doublespacing
+  \centering
+  \Large \DIFadd{ONLINE APPENDIX }\\
+  \LARGE \begin{singlespace}\DIFadd{\PAPERTITLE}\end{singlespace}
+  \large \href{\AUTHORHADAHURL}{\DIFadd{\AUTHORHADAH}}\\[1.0em]
+\endgroup
+
+%DIF >  Online appendix
+\newpage
+%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIF >  Appendix A, Solution and Estimation Details
+%DIF > %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%DIF >  Set equation, figure, table indexing
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\setcounter{table}{0}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\setcounter{equation}{0}
+\renewcommand{\thefootnote}{A.\arabic{footnote}}
+\setcounter{footnote}{0}
+\section*{\DIFadd{Data}} %DIF >  (fold)
+\DIFadd{\label{sec:data-ap}
+}
+
+%DIF >  =========================
+%DIF >  Implicit association test examples
+%DIF >  =========================
+
+\begin{figure}[H]
+\centering
+\caption{\DIFaddFL{Examples of an Implicit Association Test}}
+\DIFaddFL{\label{fig:iatexamples}
+}\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample1.png}
+\end{subfigure}
+\centering
+%DIF > Second graph
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample2.png}
+\end{subfigure}
+%DIF > Third
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample3.png}
+\end{subfigure}
+%DIF >  Fourth
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample4.png}
+\end{subfigure}
+%DIF > Fifth
+\begin{subfigure}{.48\textwidth}
+\centering
+\includegraphics[width=.9\linewidth]{iatexample5.png}
+\end{subfigure}
+\caption*{\footnotesize{Here are a few examples of what a respondent would see on an implicit association test.}}
+\end{figure}
+
+\newpage
+\pagebreak
+%DIF >  =========================
+\DIFaddend % Anti-Asian Bias Maps
+% =========================
+
+
+\begin{center}
+\begin{figure}[H]
+\caption{Maps of State-level Association Test Bias Over Time Measure with Census Division Regional Boundaries}
+\label{fig:skiniat-maps}
+% first
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2004}
+\centering
+\includegraphics[width=0.9\linewidth]{2004skinmap.png} 
+\label{fig:skiniat-map-2004}
+\end{subfigure}
+\hfill%
+% Second
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2008}
+\centering
+\includegraphics[width=0.9\linewidth]{2008skinmap.png} 
+\label{fig:skiniat-map-2006}
+\end{subfigure}
+\hfill%
+% third
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2012}
+\centering
+\includegraphics[width=0.9\linewidth]{2012skinmap.png} 
+\label{fig:skiniat-map-2008}
+\end{subfigure}
+\hfill%
+% fourth
+\begin{subfigure}{.45\textwidth}
+\caption{State-level Bias in 2016}
+\centering
+\includegraphics[width=0.9\linewidth]{2016skinmap.png} 
+\label{fig:skiniat-map-2010}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure shows the state-level bias index in different years in the sample. The bias units are in standard deviations and ranges from low to high bias. Bias index is constructed following \textcite{lubotskyInterpretationRegressionsMultiple2006}. The data is from the 2004--2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. Each panel presents state-level bias during a certain year. The boundaries in black represent the different Census divisions in the United States. Notice how there is a variation across states within a region.}}
+\end{figure}
+\end{center}
+
+\newpage
+\pagebreak
+
+\begin{center}
+\begin{figure}[H]
+\caption{Maps of State-level Bias 2004--2021 Measure with Census Division Regional Boundaries}
+\includegraphics[width=\textwidth]{Average_Skinmap.png} 
+\label{fig:iat-map-all}
+\caption*{\footnotesize{This figure shows the state-level bias index in the sample from 2004 to 2021. The bias units are in standard deviations and ranges from low to high bias. Bias index is constructed following \textcite{lubotskyInterpretationRegressionsMultiple2006}. The data is from the 2004--2021 Harvard's Project Implicit Association Test scores, American National Election Studies (ANES), and state-level hate crimes against Asians. The boundaries in black represent the different Census divisions in the United States. Notice how there is a variation across states within a region.}}
+\end{figure}
+\end{center}
+
+\newpage
+\pagebreak
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend % =========================
+% Asian identity histograms
+% for all generations
+% =========================
+
+\begin{center}
+\begin{figure}[H]
+\caption{Asian Racial Identity}
+\includegraphics[width=\textwidth]{histogram_asian_american_race_aggregated.png} 
+\label{fig:histogram-all}
+\caption*{\footnotesize{This figure shows the distribution of Asian racial identity among respondents. 
+The data is aggregated from the 2004--2021 Current Population Survey (CPS). 
+The sample includes first-, second-, and third-generation objectively Asian Americans.
+Following \textcite{antmanEthnicAttritionObserved2016,antmanEthnicAttritionAssimilation2020}, 
+I utilize birthplace information for individuals, parents, and grandparents to create objective Asian ancestry indicators.
+}}
+\end{figure}
+\end{center}
+
+\newpage
+\pagebreak
+
+\begin{center}
+\begin{figure}[H]
+\caption{Asian Racial Identity: First Generation}
+\includegraphics[width=\textwidth]{histogram_asian_american_race_firstgen.png} 
+\label{fig:histogram-firstgen}
+\caption*{\footnotesize{This figure shows the distribution of Asian racial identity among respondents. 
+The data is aggregated from the 2004--2021 Current Population Survey (CPS). 
+The sample includes first-generation objectively Asian Americans.
+Following \textcite{antmanEthnicAttritionObserved2016,antmanEthnicAttritionAssimilation2020}, 
+I utilize birthplace information for individuals, parents, and grandparents to create objective Asian ancestry indicators.
+A first-generation Asian American is defined as an individual born in an Asian country and is not a US citizen born to US citizen parents abroad.
+}}
+\end{figure}
+\end{center}
+
+
+\pagebreak
+\newpage
+
+\begin{landscape}
+\begin{figure}[!htb]
+\centering
+\caption{Asian Racial Identity: Second Generation}
+\label{fig:histogram-secondgen}
+
+% Top row
+\begin{subfigure}{.48\textwidth}
+\caption{All Second Generation}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_secondgen.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{Second Generation: Asian Fathers-Asian Mothers}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_secondgen_AA.png}
+\end{subfigure}
+
+\vspace{1cm}
+
+% Bottom row
+\begin{subfigure}{.48\textwidth}
+\caption{Second Generation: Asian Fathers-White Mothers}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_secondgen_AW.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{Second Generation: White Fathers-Asian Mothers}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_secondgen_WA.png}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure shows the distribution of Asian racial identity among respondents. 
+The data is aggregated from the 2004--2021 Current Population Survey (CPS). 
+The sample includes second-generation objectively Asian Americans.
+Following \textcite{antmanEthnicAttritionObserved2016,antmanEthnicAttritionAssimilation2020}, 
+I utilize birthplace information for individuals, parents, and grandparents to create objective Asian ancestry indicators.
+A second-generation Asian American is defined as a native-born individual with at least one parent born in an Asian country. 
+The first panel is for second-generation Asian Americans. The second panel is for second-generation Asian Americans with both parents born in an Asian country. 
+The third panel is for second-generation Asian Americans with an Asian father and a White mother. 
+The fourth panel is for second-generation Asian Americans with a White father and an Asian mother.
+}}
+\end{figure}
+\end{landscape}
+
+\pagebreak
+\newpage
+
+\pagebreak
+\newpage
+
+\begin{landscape}
+\begin{figure}[!htb]
+\centering
+\caption{Asian Racial Identity: Third Generation}
+\label{fig:histogram-thirdgen}
+
+% Top row - 3 graphs
+\begin{subfigure}{.32\textwidth}
+\caption{All Third Generation}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_thirdgen.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.32\textwidth}
+\caption{Third Generation: One Asian Grandparent}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_thirdgen_oneasiangran.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.32\textwidth}
+\caption{Third Generation: Two Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_thirdgen_twoasiangran.png}
+\end{subfigure}
+
+\vspace{1cm}
+
+% Bottom row - 2 graphs centered with more space
+\hspace*{\fill}
+\begin{subfigure}{.4\textwidth}
+\caption{Third Generation: Three Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_thirdgen_threeasiangran.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.4\textwidth}
+\caption{Third Generation: Four Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{histogram_asian_american_race_thirdgen_fourasiangran.png}
+\end{subfigure}
+\hspace*{\fill}
+
+\caption*{\footnotesize{This figure shows the distribution of Asian racial identity among respondents. 
+The data is aggregated from the 2004--2021 Current Population Survey (CPS). 
+The sample includes second-generation objectively Asian Americans.
+Following \textcite{antmanEthnicAttritionObserved2016,antmanEthnicAttritionAssimilation2020}, 
+I utilize birthplace information for individuals, parents, and grandparents to create objective Asian ancestry indicators.
+A third-generation Asian American is defined as a native-born individual with native-born parents and at least one grandparent born in an Asian country. 
+The first panel is for third-generation Asian Americans. The second panel is for third-generation Asian Americans with one grandparent born in an Asian country. 
+The third panel is for third-generation Asian Americans with two grandparents born in an Asian country. 
+The fourth panel is for third-generation Asian Americans with three grandparents born in an Asian country.
+The fifth panel is for third-generation Asian Americans with four grandparents born in an Asian country.
+}}
+\end{figure}
+\end{landscape}
+
+\pagebreak
+\newpage
+
+\DIFaddbegin \section*{\DIFadd{Tables}} %DIF >  (fold)
+\DIFadd{\label{sec:tabs-ap}
+}
+
+\begin{table}[!h]
+\centering\centering
+\caption{Subjective Asian Identity and Asian Bias \label{regtab-all-fe}}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{threeparttable}
+\begin{tabular}[t]{lcccccccc}
+\toprule
+  & \specialcell{(1) \\ $A_i$} & \specialcell{(2) \\ $A_i$} & \specialcell{(3) \\ $A_i$} & \specialcell{(4) \\ $A_i$} & \specialcell{(5) \\ $A_i$} & \specialcell{(6) \\ $A_i$} & \specialcell{(7) \\ $A_i$} & \specialcell{(8) \\ $A_i$}\\
+\midrule
+Bias & $-0.04$*** & $-0.14$*** & $-0.02$*** & $-0.02$ & $-0.03$*** & $-0.07$** & $-0.10$*** & $-0.04$\\
+ & ($0.01$) & ($0.04$) & ($0.01$) & ($0.03$) & ($0.01$) & ($0.03$) & ($0.03$) & ($0.03$)\\
+Female & $-0.01$** & $-0.01$** & $-0.01$** & $-0.01$* & $-0.01$** & $-0.01$* & $-0.01$* & $-0.01$*\\
+ & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$)\\
+College Graduate: Mother & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$\\
+ & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & \vphantom{2} ($0.01$)\\
+College Graduate: Father & $0.01$** & $0.01$* & $0.01$** & $0.01$** & $0.01$** & $0.01$** & $0.01$** & $0.01$**\\
+ & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & \vphantom{1} ($0.01$)\\
+Both parents Asian & $0.63$*** & $0.63$*** & $0.62$*** & $0.62$*** & $0.63$*** & $0.63$*** & $0.63$*** & $0.62$***\\
+ & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$)\\
+First Gen & $0.01$ & $0.02$ & $0.02$* & $0.02$** & $0.02$* & $0.02$** & $0.02$* & $0.02$**\\
+ & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$)\\
+Second Gen & $0.02$ & $0.02$ & $0.01$ & $0.02$ & $0.02$ & $0.02$ & $0.02$ & $0.02$\\
+ & ($0.01$) & ($0.01$) & ($0.01$) & ($0.02$) & ($0.02$) & ($0.02$) & ($0.02$) & ($0.02$)\\
+\midrule
+N & $129078$ & $129078$ & $129078$ & $129078$ & $129078$ & $129078$ & $129078$ & $129078$\\
+Region FE &  &  &  &  & X & X &  & \\
+Year FE &  & X &  & X &  & X &  & \\
+State FE &  &  & X & X &  &  &  & X\\
+Year-Region FE &  &  &  &  &  &  & X & X\\
+\bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{I include controls for sex, quartic age, and parental education.}
+\item[\DIFaddFL{2}] \footnotesize{Standard errors are clustered on the state level.}
+\end{tablenotes}
+\end{threeparttable}}
+\end{table}
+
+
+\newpage
+\pagebreak
+
+\begin{table}[H]
+\centering\centering
+\caption{Logistic Regression Analysis of Bias and Interracial Marriages \label{regtab-logit-03}}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+\multicolumn{2}{c}{ } & \multicolumn{1}{c}{Asian Men} & \multicolumn{1}{c}{Asian Women} \\
+\cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+  & \specialcell{(1) \\ Interracial} & \specialcell{(2) \\ Interracial} & \specialcell{(3) \\ Interracial}\\
+\midrule
+Bias & $1.47$ & $0.83$ & $1.39$\\
+ & ($0.43$) & ($0.33$) & ($0.44$)\\
+College Graduate: Wife & $1.42$*** & $1.55$*** & $1.75$***\\
+ & ($0.08$) & ($0.19$) & ($0.18$)\\
+College Graduate: Husband & $0.94$ & $0.97$ & $0.86$*\\
+ & ($0.09$) & ($0.08$) & ($0.07$)\\
+\midrule
+Observations & $69,800$ & $52,032$ & $60,171$\\
+Year $\times$ Region FE & X & X & X\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{Each column estimates a logistic regression: $\Pr(interracial_{ist} = 1) = \Lambda(\beta_1 AntiAsianBias_{st} + X_{ist}\pi + \gamma_{rt})$, where $interracial_{ist}$ indicates a couple in which one partner was born in an Asian country and the other was not (labelled Asian husband--White wife or White husband--Asian wife, following the paper's convention), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). The unit of observation is a second-generation child; columns (2) and (3) restrict to children of Asian-born fathers and Asian-born mothers, respectively. Coefficients are exponentiated and should be interpreted as odds ratios. Standard errors are clustered on the state level.}
+\item[\DIFaddFL{2}] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\newpage
+\pagebreak
+
+\DIFaddend % =========================
+%DIF <  Multinomial Logit Marginal
+%DIF <  Effects Figures
+%DIF >  Between-Model Tests of AME
+% =========================
+
+%DIF <  Pooled: Second Generation
+\DIFdelbegin %DIFDELCMD < \begin{center}
+%DIFDELCMD < \begin{figure}[!htb]
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Marginal Effects of Key Covariates on Racial Identity Choice (Pooled Mixed-Race Second-Generation Asian Americans)}}
+%DIFAUXCMD
+\DIFdelFL{\label{fig:marginal-effects-second-pooled}
+}%DIFDELCMD < \includegraphics[width=0.65\linewidth]{boot_me_second_AW_WA.png}
+%DIFDELCMD < \caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for all pooled mixed-race second-generation Asian Americans. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each point corresponds to the median marginal effect across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals. Second-generation Asian Americans are native-born individuals with at least one Asian-born parent.}}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < \end{center}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{table}[H]
+\centering
+\caption{Between-Model Tests of Average Marginal Effects: Second-Generation AW vs.\ WA \label{tab:between-model-second}}
+\centering
+\fontsize{10}{12}\selectfont
+\begin{threeparttable}
+\begin{tabular}[t]{lccc}
+\toprule
+ & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+\midrule
+\multicolumn{4}{l}{\textit{Panel A: AW vs.\ WA}} \\
+\addlinespace
+Anti-Asian Bias & $-0.024$ & $0.106$** & $-0.082$\\
+ & ($0.055$) & ($0.044$) & ($0.062$)\\
+\addlinespace
+Female & $-0.056$* & $-0.044$ & $0.097$***\\
+ & ($0.031$) & ($0.029$) & ($0.028$)\\
+\addlinespace
+College Graduate: Mother & $0.084$** & $-0.106$** & $0.021$\\
+ & ($0.036$) & ($0.050$) & ($0.048$)\\
+\addlinespace
+College Graduate: Father & $-0.061$** & $0.069$** & $-0.002$\\
+ & ($0.027$) & ($0.031$) & ($0.037$)\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{Each cell reports the difference in average marginal effects (AME) between the Asian father--White mother (AW) and White father--Asian mother (WA) models, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit. The difference is computed as $\widehat{\text{AME}}_{\text{AW}} - \widehat{\text{AME}}_{\text{WA}}$.}
+\item[\DIFaddFL{2}] \footnotesize{Standard errors of the difference are computed from the bootstrap distributions of the two models. $z$-statistics test the null hypothesis that the marginal effects are equal across models.}
+\item[\DIFaddFL{3}] \footnotesize{I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+\DIFaddend 
+
+
+\pagebreak
+\newpage
+
+\DIFaddbegin \begingroup
+\fontsize{10}{12}\selectfont
+\begin{ThreePartTable}
+\begin{TableNotes}
+\small
+\item[\DIFadd{1}] \footnotesize{Each cell reports the difference in average marginal effects (AME) between the indicated models, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit. The difference is computed as $\widehat{\text{AME}}_{\text{Model A}} - \widehat{\text{AME}}_{\text{Model B}}$.}
+\item[\DIFadd{2}] \footnotesize{Standard errors of the difference are computed from the bootstrap distributions of the two models. $z$-statistics test the null hypothesis that the marginal effects are equal across models.}
+\item[\DIFadd{3}] \footnotesize{I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals.}
+\item[\DIFadd{4}] \footnotesize{GP = Grandparent(s). Third-generation individuals are native-born with at least one grandparent born in an Asian country.}
+\end{TableNotes}
+\begin{longtable}{lccc}
+\caption{Between-Model Tests of Average Marginal Effects: Third-Generation by Asian Grandparent Count \label{tab:between-model-third}}\\
+\toprule
+ & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable{} -- \textit{continued from previous page}}\\
+\toprule
+ & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+\midrule
+\endhead
+\midrule
+\multicolumn{4}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\insertTableNotes
+\endlastfoot
+\multicolumn{4}{l}{\textit{Panel A: One Asian GP vs.\ Two Asian GP}} \\
+\addlinespace
+Anti-Asian Bias & $0.102$* & $-0.059$ & $-0.047$\\
+ & ($0.059$) & ($0.077$) & ($0.084$)\\
+\addlinespace
+Female & $-0.010$ & $-0.073$ & $0.088$*\\
+ & ($0.031$) & ($0.048$) & ($0.050$)\\
+\addlinespace
+College Graduate: Mother & $-0.048$ & $-0.106$** & $0.160$***\\
+ & ($0.032$) & ($0.048$) & ($0.052$)\\
+\addlinespace
+College Graduate: Father & $-0.021$ & $0.060$ & $-0.041$\\
+ & ($0.031$) & ($0.058$) & ($0.061$)\\
+\midrule
+\multicolumn{4}{l}{\textit{Panel B: One Asian GP vs.\ Three Asian GP}} \\
+\addlinespace
+Anti-Asian Bias & $0.201$ & $-0.203$*** & $-0.028$\\
+ & ($0.152$) & ($0.071$) & ($0.149$)\\
+\addlinespace
+Female & $0.031$ & $-0.118$*** & $0.087$**\\
+ & ($0.031$) & ($0.043$) & ($0.040$)\\
+\addlinespace
+College Graduate: Mother & $-0.318$*** & $0.198$*** & $0.122$**\\
+ & ($0.046$) & ($0.047$) & ($0.051$)\\
+\addlinespace
+College Graduate: Father & $0.293$*** & $-0.345$*** & $0.057$\\
+ & ($0.049$) & ($0.065$) & ($0.062$)\\
+\midrule
+\multicolumn{4}{l}{\textit{Panel C: Two Asian GP vs.\ Three Asian GP}} \\
+\addlinespace
+Anti-Asian Bias & $0.098$ & $-0.145$*** & $0.019$\\
+ & ($0.156$) & ($0.054$) & ($0.142$)\\
+\addlinespace
+Female & $0.042$ & $-0.045$ & $-0.000$\\
+ & ($0.041$) & ($0.047$) & ($0.045$)\\
+\addlinespace
+College Graduate: Mother & $-0.270$*** & $0.304$*** & $-0.039$\\
+ & ($0.054$) & ($0.055$) & ($0.059$)\\
+\addlinespace
+College Graduate: Father & $0.314$*** & $-0.405$*** & $0.098$\\
+ & ($0.056$) & ($0.060$) & ($0.067$)\\
+\end{longtable}
+\end{ThreePartTable}
+\endgroup
+
+
+\pagebreak
+\newpage
+%DIF >  =========================
+%DIF >  Pooled multinomial logit with
+%DIF >  bias x AW interaction
+%DIF >  =========================
+
+\begin{table}[H]
+\centering
+\small\setstretch{1.0}
+\caption{Pooled Multinomial Logit: Bias Interacted with Parental Configuration, Mixed-Race Second-Generation Children \label{tab:pooled-mnl-bias-x-aw}}
+\begin{threeparttable}
+\begin{tabular}{lcc}
+\toprule
+ & White only & Asian and White \\
+ & (1) & (2) \\
+\midrule
+\multicolumn{3}{l}{\textit{Panel A: Coefficients (log odds relative to Asian only)}} \\
+Bias & $0.738$** & $0.282$ \\
+ & ($0.363$) & ($0.331$) \\
+Asian father--White mother (AW) & $-0.615$*** & $-0.675$*** \\
+ & ($0.161$) & ($0.153$) \\
+Bias $\times$ AW & $0.893$*** & $0.051$ \\
+ & ($0.316$) & ($0.360$) \\
+\midrule
+\multicolumn{3}{l}{\textit{Panel B: Average marginal effects of bias (probability scale)}} \\
+Average marginal effect of bias, common-effect model & $0.146$** & $-0.024$ \\
+ & ($0.057$) & ($0.067$) \\
+Average marginal effect of bias, AW families & $0.249$*** & $-0.056$ \\
+ & ($0.068$) & ($0.080$) \\
+Average marginal effect of bias, WA families & $0.099$* & $-0.010$ \\
+ & ($0.058$) & ($0.070$) \\
+Difference, AW minus WA & $0.151$*** & $-0.046$ \\
+ & ($0.042$) & ($0.066$) \\
+\midrule
+\multicolumn{3}{l}{Wald test, Bias $\times$ AW $= 0$ in both equations (clustered): $\chi^2(2) = 10.48$, $p = 0.005$} \\
+\multicolumn{3}{l}{Likelihood-ratio test (independent observations): $\chi^2(2) = 106.78$, $p < 0.001$} \\
+Observations & \multicolumn{2}{c}{$27{,}048$} \\
+State clusters & \multicolumn{2}{c}{$51$} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[\DIFaddFL{1}] \footnotesize{The table reports a single multinomial logit, equation (\ref{eq:multinomial_logit}), estimated on pooled second-generation children with one parent born in an Asian country and one born outside Asia, with ``Asian only'' as the reference category. All coefficients are constrained to be equal across Asian father--White mother (AW) and White father--Asian mother (WA) families except that the bias index is interacted with an AW indicator. Controls are sex, mother and father college graduation, a quartic in age, the state Asian population share, and region $\times$ year fixed effects; estimation is weighted by CPS person weights scaled to mean one. 118 observations in 2 region $\times$ year cells with no ``Asian only'' responses are excluded because the cell dummies are not identified. Standard errors in parentheses are clustered at the state level using a sandwich covariance built from the weighted multinomial logit scores. The Wald test uses that clustered covariance; the likelihood-ratio test compares the model with and without the two interaction terms and assumes independent observations. Average marginal effects of a one standard deviation increase in bias are evaluated on the full pooled sample with the AW indicator set to one for every observation and then to zero, so the two rows share the same covariate distribution; the difference is the AW--WA gap with its delta-method standard error. This is a test of whether the bias effect differs by parental configuration, not of the bias effect itself. The first row of Panel B comes from the restricted model with a common bias effect. Conventional standard errors that treat children as independent, the assumption the individual-level bootstrap in the main figures also makes, are smaller: for the common-effect average marginal effects they are 0.018 (White only) and 0.021 (Asian and White) against the clustered 0.057 and 0.067, and for the bias coefficients in Panel A they are 0.128 and 0.114 against 0.363 and 0.331. $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$. Data source is the 2004--2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+
+\pagebreak
+\newpage
+
+
+\section*{\DIFadd{Figures}}\DIFadd{\label{appendix:figs}
+}\DIFaddend % Breakdown: Second Generation by Parental Type (AW and WA)
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice by Parental Ancestry (Second-Generation Asian Americans)}
+\label{fig:marginal-effects-second-parental}
+
+\begin{subfigure}{.48\textwidth}
+\caption{Asian Father-White Mother (AW)}\label{subfig:meaw}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_second_AW.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{White Father-Asian Mother (WA)}\label{subfig:mewa}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_second_WA.png}
+\end{subfigure}
+
+\DIFdelbeginFL %DIFDELCMD < \caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for second-generation Asian Americans by parental ancestry configuration. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each point corresponds to the median marginal effect across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals. Second-generation Asian Americans are native-born individuals with at least one Asian-born parent.}}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \caption*{\footnotesize{This figure displays average marginal effects of key covariates on the probability of each racial identity outcome, estimated from equation (\ref{eq:multinomial_logit}) separately for second-generation children with an Asian-born father and a mother born outside Asia (panel a) and with a father born outside Asia and an Asian-born mother (panel b). For anti-Asian bias, the marginal effect is the derivative of each predicted probability with respect to the bias index, evaluated for every child at that child's own covariate values and averaged over the estimation sample; for the binary covariates, it is the average change in predicted probability from switching the indicator from 0 to 1 for every child. Models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Each point is the median of the average marginal effect across 1{,}000 bootstrap resamples of children, drawn with replacement within region $\times$ year cells; the bars span the 2.5th and 97.5th percentiles of the same resamples and do not account for dependence within state-year cells. Because the two panels come from separately estimated models, differences between them reflect both differences in coefficients and differences in the two groups' covariate distributions; Appendix Table~\ref{tab:pooled-mnl-bias-x-aw} reports a pooled model that holds the covariate distribution fixed.}}
+\DIFaddendFL \end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend % Pooled: Second Generation Adults
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice (Pooled Mixed-Race Adult Second-Generation Asian Americans)}
+\label{fig:marginal-effects-second-adults-pooled}
+\includegraphics[width=0.65\linewidth]{logit_boot_me_second_AW_WA_adults_multinom.png}
+\DIFdelbeginFL %DIFDELCMD < \caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for all pooled mixed-race adult second-generation Asian Americans. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each point corresponds to the median marginal effect across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals. Second-generation Asian Americans are native-born individuals with at least one Asian-born parent.}}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \caption*{\footnotesize{This figure displays average marginal effects of key covariates on the probability of each racial identity outcome, estimated from equation (\ref{eq:multinomial_logit}) for pooled second-generation adults (ages 18 and older) with one parent born in an Asian country and one parent born outside Asia. For anti-Asian bias, years of education, and log family income, the marginal effect is the derivative of each predicted probability with respect to the covariate, evaluated for every adult at that adult's own covariate values and averaged over the estimation sample; for female, it is the average change in predicted probability from switching the indicator from 0 to 1 for every adult. Models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Each point is the median of the average marginal effect across 1{,}000 bootstrap resamples of adults, drawn with replacement within region $\times$ year cells; the bars span the 2.5th and 97.5th percentiles of the same resamples and do not account for dependence within state-year cells.}}
+\DIFaddendFL \end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+% % Breakdown: Second Generation Adults by Parental Type (AW and WA)
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Marginal Effects of Key Covariates on Racial Identity Choice by Parental Ancestry (Adult Second-Generation Asian Americans)}
+% \label{fig:marginal-effects-second-adults}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{Asian Father-White Mother (AW)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_me_second_AW_adults_multinom.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{White Father-Asian Mother (WA)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_me_second_WA_adults_multinom.png}
+% \end{subfigure}
+
+% \caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for second-generation adults with Asian father/White mother (AW) and White father/Asian mother (WA). Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each point corresponds to the median marginal effect across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals. Second-generation Asian Americans are native-born individuals with at least one Asian-born parent.}}
+% \end{figure}
+% \end{center}
+
+% \pagebreak
+% \newpage
+
+%DIF <  Pooled: Third Generation
+\DIFdelbegin %DIFDELCMD < \begin{center}
+%DIFDELCMD < \begin{figure}[!htb]
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Marginal Effects of Key Covariates on Racial Identity Choice (Pooled Third-Generation Asian Americans)}}
+%DIFAUXCMD
+\DIFdelFL{\label{fig:marginal-effects-third-pooled}
+}%DIFDELCMD < \includegraphics[width=0.65\linewidth]{boot_me_third_oneTwoThreeAsian.png}
+%DIFDELCMD < \caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for all pooled third-generation Asian Americans. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, and 95\% percentile confidence intervals accompany every point.}}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < \end{center}
+%DIFDELCMD < 
+
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < \newpage
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend % Breakdown: Third Generation by Number of Asian Grandparents
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Marginal Effects of Key Covariates on Racial Identity Choice by Number of Asian Grandparents (Third-Generation Asian Americans)}
+\label{fig:marginal-effects-third-grandparental}
+
+\begin{subfigure}{.45\textwidth}
+\caption{One Asian Grandparent}\label{subfig:oneasiangrand}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_third_oneAsian.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.45\textwidth}
+\caption{Two Asian Grandparents}\label{subfig:twoasiangrand}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_third_twoAsian.png}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}{.45\textwidth}
+\caption{Three Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{boot_me_third_threeAsian.png}
+\end{subfigure}
+
+\DIFdelbeginFL %DIFDELCMD < \caption*{\footnotesize{This figure displays the marginal effects of key covariates on the probability of each racial identification outcome, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit models for third-generation Asian Americans by number of Asian grandparents. Marginal effects represent the change in predicted probability for a one-unit increase in the covariate (or discrete change from 0 to 1 for binary variables), holding other variables at their sample means. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, and 95\% percentile confidence intervals accompany every point.}}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \caption*{\footnotesize{This figure displays average marginal effects of key covariates on the probability of each racial identity outcome, estimated from equation (\ref{eq:multinomial_logit}) separately for third-generation children with one, two, and three Asian-born grandparents. For anti-Asian bias, the marginal effect is the derivative of each predicted probability with respect to the bias index, evaluated for every child at that child's own covariate values and averaged over the estimation sample; for the binary covariates, it is the average change in predicted probability from switching the indicator from 0 to 1 for every child. Models include region $\times$ year fixed effects and controls for a quartic in age and the state Asian population share, and are weighted by CPS person weights. Each point is the median of the average marginal effect across 1{,}000 bootstrap resamples of children, drawn with replacement within region $\times$ year cells; the bars span the 2.5th and 97.5th percentiles of the same resamples.}}
+\DIFaddendFL \end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend % =========================
+%DIF <  Interaction Coefficient Plots (AW/WA/AWWA - All Ages)
+%DIF <  =========================
+\DIFdelbegin %DIFDELCMD < \begin{center}
+%DIFDELCMD < \begin{figure}[!htb]
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Mixed Parental Types}}
+%DIFAUXCMD
+\DIFdelFL{\label{fig:interaction-coefs-aw-wa-awwa}
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Asian Fathers-White Mothers}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_AW.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < \hfill
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{White Fathers-Asian Mothers}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_WA.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \vspace{0.5cm}
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Pooled: All Mixed-Race}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_AWWA.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \caption*{\footnotesize{I show interaction coefficients from estimating $A_{ist}^g = \beta_1^g AntiAsianBias_{st} + \mathbf{X}_{ist}^g\pi + \gamma_{rt} + \varepsilon_{ist}$ with interaction terms for gender and parental education. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by mixed parental types. Standard errors are clustered on the state level. The samples include second-generation Asian individuals with mixed-race parentage. Native-born second-generation Asian immigrant individuals with one parent born in an Asian country and one parent born outside of Asia.}}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < \end{center}
+%DIFDELCMD < 
+
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < \newpage
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  =========================
+%DIF <  Interaction Coefficient Plots (AW/WA)
+%DIF <  =========================
+%DIFDELCMD < \begin{center}
+%DIFDELCMD < \begin{figure}[!htb]
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Mixed Parental Types Among Adults}}
+%DIFAUXCMD
+\DIFdelFL{\label{fig:interaction-coefs-aw-wa}
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Asian Fathers-White Mothers}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_AW_adults.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < \hfill
+%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{White Fathers-Asian Mothers}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_WA_adults.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \caption*{\footnotesize{I show interaction coefficients from estimating $A_{ist}^g = \beta_1^g AntiAsianBias_{st} + \mathbf{X}_{ist}^g\pi + \gamma_{rt} + \varepsilon_{ist}$ with interaction terms for gender and parental education. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by mixed parental types. Standard errors are clustered on the state level. The samples include second-generation Asian individuals ages 18 and above with mixed-race parentage. Native-born second-generation Asian immigrant individuals with one parent born in an Asian country and one parent born outside of Asia.}}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < \end{center}
+%DIFDELCMD < 
+
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < \newpage
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  =========================
+%DIF <  Interaction Coefficient Plots (Third Generation by Grandparent Type)
+%DIF <  =========================
+%DIFDELCMD < \begin{center}
+%DIFDELCMD < \begin{figure}[!htb]
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Interaction Effects of Anti-Asian Bias with Gender and Parental Education: By Asian Grandparent Count Among Third Generation}}
+%DIFAUXCMD
+\DIFdelFL{\label{fig:interaction-coefs-thirdgen-grandparent}
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{One Asian Grandparent}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_OneAsian.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < \hfill
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Two Asian Grandparents}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_TwoAsian.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \vspace{0.5cm}
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Three Asian Grandparents}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_ThreeAsian.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < \hfill
+%DIFDELCMD < \begin{subfigure}{.45\textwidth}
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Pooled: All Third Generation}}
+%DIFAUXCMD
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=1\linewidth]{interaction_coefficients_pooled_thirdgen.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \caption*{\footnotesize{I show interaction coefficients from estimating $A_{ist}^g = \beta_1^g AntiAsianBias_{st} + \mathbf{X}_{ist}^g\pi + \gamma_{rt} + \varepsilon_{ist}$ with interaction terms for gender and parental education on third-generation samples. I include region $\times$ year fixed effects with controls for sex, quartic age, years of education, and the inverse hyperbolic sine of income. The dependent variable is self-reported Asian identity and the independent variables include demeaned state-level bias interacted with gender and parental education indicators. Each panel results from separate regressions on different samples divided by the number of Asian grandparents. Standard errors are clustered on the state level. The samples include third-generation Asian individuals with varying degrees of Asian ancestry through grandparents. Native-born third-generation individuals with at least one grandparent born in an Asian country.}}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < \end{center}
+%DIFDELCMD < 
+
+%DIFDELCMD < \clearpage
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF < %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIF <  PART V. Appendix
+%DIF < %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIFDELCMD < \appendix
+%DIFDELCMD < \setlength{\footnotemargin}{5.75mm}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  Title for Appendix
+%DIF <  special footnote symbols
+%DIFDELCMD < \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+%DIFDELCMD < \begingroup
+%DIFDELCMD <   \doublespacing
+%DIFDELCMD <   \centering
+%DIFDELCMD <   \Large %%%
+\DIFdel{ONLINE APPENDIX }%DIFDELCMD < \\
+%DIFDELCMD <   \LARGE \begin{singlespace}%%%
+\DIFdel{\PAPERTITLE}%DIFDELCMD < \end{singlespace}
+%DIFDELCMD <   \large %%%
+\href{\AUTHORHADAHURL}{\DIFdel{\AUTHORHADAH}}%DIFAUXCMD
+%DIFDELCMD < \\[1.0em]
+%DIFDELCMD < \endgroup
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  Online appendix
+%DIFDELCMD < \newpage
+%DIFDELCMD < %%%
+%DIF < %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIF <  Appendix A, Solution and Estimation Details
+%DIF < %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  Set equation, figure, table indexing
+%DIFDELCMD < \renewcommand{\thefigure}{A.\arabic{figure}}
+%DIFDELCMD < \setcounter{figure}{0}
+%DIFDELCMD < \renewcommand{\thetable}{A.\arabic{table}}
+%DIFDELCMD < \setcounter{table}{0}
+%DIFDELCMD < \renewcommand{\theequation}{A.\arabic{equation}}
+%DIFDELCMD < \setcounter{equation}{0}
+%DIFDELCMD < \renewcommand{\thefootnote}{A.\arabic{footnote}}
+%DIFDELCMD < \setcounter{footnote}{0}
+%DIFDELCMD < %%%
+\section*{\DIFdel{Data}} %DIFAUXCMD
+%DIF <  (fold)
+\DIFdel{\label{sec:data-ap}
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  =========================
+%DIF <  Implicit association test examples
+%DIF <  =========================
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{figure}[H]
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIFDELCMD < \caption{%
+{%DIFAUXCMD
+\DIFdelFL{Examples of an Implicit Association Test}}
+%DIFAUXCMD
+\DIFdelFL{\label{fig:iatexamples}
+}%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=.9\linewidth]{iatexample1.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < \centering
+%DIFDELCMD < %%%
+%DIF < Second graph
+%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=.9\linewidth]{iatexample2.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < %%%
+%DIF < Third
+%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=.9\linewidth]{iatexample3.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < %%%
+%DIF <  Fourth
+%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=.9\linewidth]{iatexample4.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < %%%
+%DIF < Fifth
+%DIFDELCMD < \begin{subfigure}{.48\textwidth}
+%DIFDELCMD < \centering
+%DIFDELCMD < \includegraphics[width=.9\linewidth]{iatexample5.png}
+%DIFDELCMD < \end{subfigure}
+%DIFDELCMD < \caption*{\footnotesize{Here are a few examples of what a respondent would see on an implicit association test.}}
+%DIFDELCMD < \end{figure}
+%DIFDELCMD < 
+
+%DIFDELCMD < \newpage
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section*{\DIFdel{Tables}} %DIFAUXCMD
+%DIF <  (fold)
+\DIFdel{\label{sec:tabs-ap}
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{table}[!h]
+%DIFDELCMD < \centering\centering
+%DIFDELCMD < \caption{Subjective Asian Identity and Asian Bias \label{regtab-all-fe}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{lcccccccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD <   & \specialcell{(1) \\ $A_i$} & \specialcell{(2) \\ $A_i$} & \specialcell{(3) \\ $A_i$} & \specialcell{(4) \\ $A_i$} & \specialcell{(5) \\ $A_i$} & \specialcell{(6) \\ $A_i$} & \specialcell{(7) \\ $A_i$} & \specialcell{(8) \\ $A_i$}\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Bias & $-0.04$*** & $-0.14$*** & $-0.02$*** & $-0.02$ & $-0.03$*** & $-0.07$** & $-0.10$*** & $-0.04$\\
+%DIFDELCMD <  & ($0.01$) & ($0.04$) & ($0.01$) & ($0.03$) & ($0.01$) & ($0.03$) & ($0.03$) & ($0.03$)\\
+%DIFDELCMD < Female & $-0.01$** & $-0.01$** & $-0.01$** & $-0.01$* & $-0.01$** & $-0.01$* & $-0.01$* & $-0.01$*\\
+%DIFDELCMD <  & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$) & ($0.00$)\\
+%DIFDELCMD < College Graduate: Mother & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$ & $0.01$\\
+%DIFDELCMD <  & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & \vphantom{2} ($0.01$)\\
+%DIFDELCMD < College Graduate: Father & $0.01$** & $0.01$* & $0.01$** & $0.01$** & $0.01$** & $0.01$** & $0.01$** & $0.01$**\\
+%DIFDELCMD <  & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & \vphantom{1} ($0.01$)\\
+%DIFDELCMD < Both parents Asian & $0.63$*** & $0.63$*** & $0.62$*** & $0.62$*** & $0.63$*** & $0.63$*** & $0.63$*** & $0.62$***\\
+%DIFDELCMD <  & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$) & ($0.03$)\\
+%DIFDELCMD < First Gen & $0.01$ & $0.02$ & $0.02$* & $0.02$** & $0.02$* & $0.02$** & $0.02$* & $0.02$**\\
+%DIFDELCMD <  & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$) & ($0.01$)\\
+%DIFDELCMD < Second Gen & $0.02$ & $0.02$ & $0.01$ & $0.02$ & $0.02$ & $0.02$ & $0.02$ & $0.02$\\
+%DIFDELCMD <  & ($0.01$) & ($0.01$) & ($0.01$) & ($0.02$) & ($0.02$) & ($0.02$) & ($0.02$) & ($0.02$)\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < N & $129078$ & $129078$ & $129078$ & $129078$ & $129078$ & $129078$ & $129078$ & $129078$\\
+%DIFDELCMD < Region FE &  &  &  &  & X & X &  & \\
+%DIFDELCMD < Year FE &  & X &  & X &  & X &  & \\
+%DIFDELCMD < State FE &  &  & X & X &  &  &  & X\\
+%DIFDELCMD < Year-Region FE &  &  &  &  &  &  & X & X\\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \multicolumn{9}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \small
+%DIFDELCMD < \item[1] \footnotesize{I include controls for sex, quartic age, and parental education.}
+%DIFDELCMD < \item[2] \footnotesize{Standard errors are clustered on the state level.}
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < 
+
+%DIFDELCMD < \newpage
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{table}[H]
+%DIFDELCMD < \centering\centering
+%DIFDELCMD < \caption{Logistic Regression Analysis of Bias and Interracial Marriages \label{regtab-logit-03}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{lccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD < \multicolumn{2}{c}{ } & \multicolumn{1}{c}{Asian Men} & \multicolumn{1}{c}{Asian Women} \\
+%DIFDELCMD < \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+%DIFDELCMD <   & \specialcell{(1) \\ Interethnic} & \specialcell{(2) \\ Interethnic} & \specialcell{(3) \\ Interethnic}\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Bias & $0.38$*** & $-0.19$ & $0.33$**\\
+%DIFDELCMD <  & ($0.11$) & ($0.16$) & ($0.14$)\\
+%DIFDELCMD < College Graduate: Wife & $0.35$*** & $0.44$*** & $0.56$***\\
+%DIFDELCMD <  & ($0.04$) & ($0.06$) & \vphantom{1} ($0.05$)\\
+%DIFDELCMD < College Graduate: Husband & $-0.06$ & $-0.03$ & $-0.15$***\\
+%DIFDELCMD <  & ($0.04$) & ($0.06$) & ($0.05$)\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < Observations & $69,800$ & $52,032$ & $60,171$\\
+%DIFDELCMD < Year $\times$ Region FE & X & X & X\\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \small
+%DIFDELCMD < \item[1] \footnotesize{Each column estimates a logistic regression: $\Pr(interracial_{ist} = 1) = \Lambda(\beta_1 AntiAsianBias_{st} + X_{ist}\pi + \gamma_{rt})$, where $interracial_{ist}$ indicates an interracial couple (Asian husband--White wife or White husband--Asian wife), $AntiAsianBias_{st}$ is average anti-Asian bias in state $s$ at time $t$, and $X_{ist}$ includes partner-specific controls (sex, age, education, and years since immigrating to the United States). Coefficients are exponentiated and should be interpreted as odds ratios. Standard errors are clustered on the household level.}
+%DIFDELCMD < \item[3] \footnotesize{Data source is the 2004-2020 Current Population Survey Data.}
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < 
+
+%DIFDELCMD < \newpage
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  =========================
+%DIF <  Between-Model Tests of AME
+%DIF <  =========================
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{table}[H]
+%DIFDELCMD < \centering
+%DIFDELCMD < \caption{Between-Model Tests of Average Marginal Effects: Second-Generation AW vs.\ WA \label{tab:between-model-second}}
+%DIFDELCMD < \centering
+%DIFDELCMD < \fontsize{10}{12}\selectfont
+%DIFDELCMD < \begin{threeparttable}
+%DIFDELCMD < \begin{tabular}[t]{lccc}
+%DIFDELCMD < \toprule
+%DIFDELCMD <  & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+%DIFDELCMD < \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+%DIFDELCMD < \midrule
+%DIFDELCMD < \multicolumn{4}{l}{\textit{Panel A: AW vs.\ WA}} \\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Anti-Asian Bias & $-0.024$ & $0.106$** & $-0.082$\\
+%DIFDELCMD <  & ($0.055$) & ($0.044$) & ($0.062$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Female & $-0.056$* & $-0.044$ & $0.097$***\\
+%DIFDELCMD <  & ($0.031$) & ($0.029$) & ($0.028$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Mother & $0.084$** & $-0.106$** & $0.021$\\
+%DIFDELCMD <  & ($0.036$) & ($0.050$) & ($0.048$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Father & $-0.061$** & $0.069$** & $-0.002$\\
+%DIFDELCMD <  & ($0.027$) & ($0.031$) & ($0.037$)\\
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+%DIFDELCMD < \end{tabular}
+%DIFDELCMD < \begin{tablenotes}
+%DIFDELCMD < \small
+%DIFDELCMD < \item[1] \footnotesize{Each cell reports the difference in average marginal effects (AME) between the Asian father--White mother (AW) and White father--Asian mother (WA) models, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit. The difference is computed as $\widehat{\text{AME}}_{\text{AW}} - \widehat{\text{AME}}_{\text{WA}}$.}
+%DIFDELCMD < \item[2] \footnotesize{Standard errors of the difference are computed from the bootstrap distributions of the two models. $z$-statistics test the null hypothesis that the marginal effects are equal across models.}
+%DIFDELCMD < \item[3] \footnotesize{I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals.}
+%DIFDELCMD < \end{tablenotes}
+%DIFDELCMD < \end{threeparttable}
+%DIFDELCMD < \end{table}
+%DIFDELCMD < 
+
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < \newpage
+%DIFDELCMD < 
+
+%DIFDELCMD < \begingroup
+%DIFDELCMD < \fontsize{10}{12}\selectfont
+%DIFDELCMD < \begin{ThreePartTable}
+%DIFDELCMD < \begin{TableNotes}
+%DIFDELCMD < \small
+%DIFDELCMD < \item[1] \footnotesize{Each cell reports the difference in average marginal effects (AME) between the indicated models, estimated from equation (\ref{eq:multinomial_logit}) using multinomial logit. The difference is computed as $\widehat{\text{AME}}_{\text{Model A}} - \widehat{\text{AME}}_{\text{Model B}}$.}
+%DIFDELCMD < \item[2] \footnotesize{Standard errors of the difference are computed from the bootstrap distributions of the two models. $z$-statistics test the null hypothesis that the marginal effects are equal across models.}
+%DIFDELCMD < \item[3] \footnotesize{I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals.}
+%DIFDELCMD < \item[4] \footnotesize{GP = Grandparent(s). Third-generation individuals are native-born with at least one grandparent born in an Asian country.}
+%DIFDELCMD < \end{TableNotes}
+%DIFDELCMD < \begin{longtable}{lccc}
+%DIFDELCMD < \caption{Between-Model Tests of Average Marginal Effects: Third-Generation by Asian Grandparent Count \label{tab:between-model-third}}\\
+%DIFDELCMD < \toprule
+%DIFDELCMD <  & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+%DIFDELCMD < \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+%DIFDELCMD < \midrule
+%DIFDELCMD < \endfirsthead
+%DIFDELCMD < \multicolumn{4}{c}{\tablename\ \thetable{} -- \textit{continued from previous page}}\\
+%DIFDELCMD < \toprule
+%DIFDELCMD <  & \multicolumn{1}{c}{Asian Only} & \multicolumn{1}{c}{White Only} & \multicolumn{1}{c}{Asian \& White} \\
+%DIFDELCMD < \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-3} \cmidrule(l{3pt}r{3pt}){4-4}
+%DIFDELCMD < \midrule
+%DIFDELCMD < \endhead
+%DIFDELCMD < \midrule
+%DIFDELCMD < \multicolumn{4}{r}{\textit{Continued on next page}}\\
+%DIFDELCMD < \endfoot
+%DIFDELCMD < \bottomrule
+%DIFDELCMD < \multicolumn{4}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+%DIFDELCMD < \insertTableNotes
+%DIFDELCMD < \endlastfoot
+%DIFDELCMD < \multicolumn{4}{l}{\textit{Panel A: One Asian GP vs.\ Two Asian GP}} \\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Anti-Asian Bias & $0.102$* & $-0.059$ & $-0.047$\\
+%DIFDELCMD <  & ($0.059$) & ($0.077$) & ($0.084$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Female & $-0.010$ & $-0.073$ & $0.088$*\\
+%DIFDELCMD <  & ($0.031$) & ($0.048$) & ($0.050$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Mother & $-0.048$ & $-0.106$** & $0.160$***\\
+%DIFDELCMD <  & ($0.032$) & ($0.048$) & ($0.052$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Father & $-0.021$ & $0.060$ & $-0.041$\\
+%DIFDELCMD <  & ($0.031$) & ($0.058$) & ($0.061$)\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < \multicolumn{4}{l}{\textit{Panel B: One Asian GP vs.\ Three Asian GP}} \\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Anti-Asian Bias & $0.201$ & $-0.203$*** & $-0.028$\\
+%DIFDELCMD <  & ($0.152$) & ($0.071$) & ($0.149$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Female & $0.031$ & $-0.118$*** & $0.087$**\\
+%DIFDELCMD <  & ($0.031$) & ($0.043$) & ($0.040$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Mother & $-0.318$*** & $0.198$*** & $0.122$**\\
+%DIFDELCMD <  & ($0.046$) & ($0.047$) & ($0.051$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Father & $0.293$*** & $-0.345$*** & $0.057$\\
+%DIFDELCMD <  & ($0.049$) & ($0.065$) & ($0.062$)\\
+%DIFDELCMD < \midrule
+%DIFDELCMD < \multicolumn{4}{l}{\textit{Panel C: Two Asian GP vs.\ Three Asian GP}} \\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Anti-Asian Bias & $0.098$ & $-0.145$*** & $0.019$\\
+%DIFDELCMD <  & ($0.156$) & ($0.054$) & ($0.142$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < Female & $0.042$ & $-0.045$ & $-0.000$\\
+%DIFDELCMD <  & ($0.041$) & ($0.047$) & ($0.045$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Mother & $-0.270$*** & $0.304$*** & $-0.039$\\
+%DIFDELCMD <  & ($0.054$) & ($0.055$) & ($0.059$)\\
+%DIFDELCMD < \addlinespace
+%DIFDELCMD < College Graduate: Father & $0.314$*** & $-0.405$*** & $0.098$\\
+%DIFDELCMD <  & ($0.056$) & ($0.060$) & ($0.067$)\\
+%DIFDELCMD < \end{longtable}
+%DIFDELCMD < \end{ThreePartTable}
+%DIFDELCMD < \endgroup
+%DIFDELCMD < 
+
+%DIFDELCMD < \pagebreak
+%DIFDELCMD < \newpage
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section*{\DIFdel{Figures}}%DIFAUXCMD
+\DIFdel{\label{appendix:figs}
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+%DIF <  =========================
+\DIFdelend % Between-Model Tests: Second Generation (AW vs. WA)
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Between-Model Differences in Average Marginal Effects: Second-Generation AW vs.\ WA}
+\label{fig:between-model-second}
+
+\includegraphics[width=0.85\linewidth]{between_model_second_AW_WA.png}
+
+\caption*{\footnotesize{This figure plots the difference in average marginal effects (AME) between the Asian father--White mother (AW) and White father--Asian mother (WA) multinomial logit models, estimated from equation (\ref{eq:multinomial_logit}). Each point represents $\widehat{\text{AME}}_{\text{AW}} - \widehat{\text{AME}}_{\text{WA}}$ for a given covariate and racial identity outcome. Filled markers indicate statistical significance at the 5\% level. Error bars show 95\% confidence intervals constructed from the bootstrap standard errors of the difference. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples.}}
+\end{figure}
+\end{center}
+
+\pagebreak
+\newpage
+
+% =========================
+% Between-Model Tests: Third Generation by Grandparent Count
+% =========================
+\begin{center}
+\begin{figure}[!htb]
+\centering
+\caption{Between-Model Differences in Average Marginal Effects: Third-Generation by Asian Grandparent Count}
+\label{fig:between-model-third}
+
+\begin{subfigure}{.48\textwidth}
+\caption{One vs.\ Two Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{between_model_third_1v2GP.png}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.48\textwidth}
+\caption{One vs.\ Three Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{between_model_third_1v3GP.png}
+\end{subfigure}
+
+\vspace{0.5cm}
+
+\begin{subfigure}{.48\textwidth}
+\caption{Two vs.\ Three Asian Grandparents}
+\centering
+\includegraphics[width=1\linewidth]{between_model_third_2v3GP.png}
+\end{subfigure}
+
+\caption*{\footnotesize{This figure plots the difference in average marginal effects (AME) between third-generation multinomial logit models estimated on samples defined by the number of Asian grandparents. Each point represents the difference in AME between the indicated models for a given covariate and racial identity outcome. Filled markers indicate statistical significance at the 5\% level. Error bars show 95\% confidence intervals constructed from the bootstrap standard errors of the difference. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. Each estimate is the median across 1{,}000 bootstrap resamples.}}
+\end{figure}
+\end{center}
+
+% \pagebreak
+% \newpage
+
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Second-Generation Asian Americans with Asian Fathers and White Mothers)}
+% \label{fig:pp-second-aw}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{Anti-Asian Bias}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_AW_value.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Female}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_AW_Female.png}
+% \end{subfigure}
+
+% \vspace{0.5cm}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Mother}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_AW_MomGradCollege.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Father}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_AW_DadGradCollege.png}
+% \end{subfigure}
+
+% \caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of second-generation Asian Americans with Asian fathers and White mothers. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means. Reported curves depict the median predicted probability across 1{,}000 bootstrap resamples, and 95\% confidence intervals follow the corresponding bootstrap percentile limits.}}
+% \end{figure}
+% \end{center}
+
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Second-Generation Asian Americans with White Fathers and Asian Mothers)}
+% \label{fig:pp-second-wa}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{Anti-Asian Bias}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_WA_value.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Female}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_WA_Female.png}
+% \end{subfigure}
+
+% \vspace{0.5cm}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Mother}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_WA_MomGradCollege.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Father}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_second_WA_DadGradCollege.png}
+% \end{subfigure}
+
+% \caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of second-generation Asian Americans with White fathers and Asian mothers. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means. Reported curves depict the median predicted probability across 1{,}000 bootstrap resamples, and 95\% confidence intervals follow the corresponding bootstrap percentile limits.}}
+% \end{figure}
+% \end{center}
+
+
+% % =========================
+% % 41: Multinomial Model - Predicted Probabilities (Adults, AW/WA)
+% % =========================
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Anti-Asian Bias and Gender (Second Generation Adults, AW/WA)}
+% \label{fig:pp-secondgen-adults-aw-wa}
+
+% % Top row: Anti-Asian Bias and Female
+% \begin{subfigure}{.48\textwidth}
+% \caption{Anti-Asian Bias (AW)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_AW_adults_multinom_value.png}\label{subfig:pp-secgen-aw-bias}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Anti-Asian Bias (WA)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_WA_adults_multinom_value.png}\label{subfig:pp-secgen-wa-bias}
+% \end{subfigure}
+
+% \vspace{0.5cm}
+
+% % Second row: Female
+% \begin{subfigure}{.48\textwidth}
+% \caption{Female (AW)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_AW_adults_multinom_Female.png}\label{subfig:pp-secgen-aw-female}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Female (WA)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_WA_adults_multinom_Female.png}\label{subfig:pp-secgen-wa-female}
+% \end{subfigure}
+
+% \caption*{\footnotesize{Predicted probabilities from multinomial logit models for second-generation adults with Asian father/White mother (AW) and White father/Asian mother (WA). Each panel shows the probability of choosing each racial identity as a function of anti-Asian bias or gender, holding other covariates at their means. Curves plot the median predicted probability across 1{,}000 bootstrap resamples, with 95\% confidence intervals given by the bootstrap percentile bounds.}}
+% \end{figure}
+% \end{center}
+
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Years of Education and Income (Second Generation Adults, AW/WA)}
+% \label{fig:pp-secondgen-adults-aw-wa-2}
+
+% % Top row: EducYears
+% \begin{subfigure}{.48\textwidth}
+% \caption{Years of Education (AW)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_AW_adults_multinom_EducYears.png}\label{subfig:pp-secgen-aw-EducYears}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Years of Education (WA)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_WA_adults_multinom_EducYears.png}\label{subfig:pp-secgen-wa-EducYears}
+% \end{subfigure}
+
+% \vspace{0.5cm}
+
+% % Second row: lnftotval
+% \begin{subfigure}{.48\textwidth}
+% \caption{Log Family Income (AW)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_AW_adults_multinom_lnftotval.png}\label{subfig:pp-secgen-aw-lnftotval}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Log Family Income (WA)}
+% \centering
+% \includegraphics[width=1\linewidth]{logit_boot_pp_second_WA_adults_multinom_lnftotval.png}\label{subfig:pp-secgen-wa-lnftotval}
+% \end{subfigure}
+
+% \caption*{\footnotesize{Predicted probabilities from multinomial logit models for second-generation adults with Asian father/White mother (AW) and White father/Asian mother (WA). Each panel shows the probability of choosing each racial identity as a function of total years of education or log family income, holding other covariates at their means. Curves plot the median predicted probability across 1{,}000 bootstrap resamples, with 95\% confidence intervals given by the bootstrap percentile bounds.}}
+% \end{figure}
+% \end{center}
+
+% % =========================
+% % Multinomial Model - Predicted Probabilities Third Gens
+% % =========================
+
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Third-Generation Asian Americans with One Asian Grandparent)}
+% \label{fig:pp-third-one}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{Anti-Asian Bias}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_oneAsian_value.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Female}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_oneAsian_Female.png}
+% \end{subfigure}
+
+% \vspace{0.5cm}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Mother}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_oneAsian_MomGradCollege.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Father}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_oneAsian_DadGradCollege.png}
+% \end{subfigure}
+
+% \caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of third-generation Asian Americans with one Asian grandparent. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means. Reported curves depict the median predicted probability across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals from the same draws.}}
+% \end{figure}
+% \end{center}
+
+% \begin{center}
+% \begin{figure}[!htb]
+% \centering
+% \caption{Multinomial Logit Model: Predicted Probabilities of Racial Identity Choice by Key Covariates (Third-Generation Asian Americans with Two Asian Grandparents)}\label{fig:pp-third-two}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{Anti-Asian Bias}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_twoAsian_value.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{Female}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_twoAsian_Female.png}
+% \end{subfigure}
+
+% \vspace{0.5cm}
+
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Mother}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_twoAsian_MomGradCollege.png}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}{.48\textwidth}
+% \caption{College Graduate: Father}
+% \centering
+% \includegraphics[width=1\linewidth]{boot_pp_third_twoAsian_DadGradCollege.png}
+% \end{subfigure}
+
+% \caption*{\footnotesize{This figure shows predicted probabilities from estimating equation (\ref{eq:multinomial_logit}) using a multinomial logit model for the subsample of third-generation Asian Americans with two Asian grandparents. The model estimates the probability of choosing ``Asian only'', ``White only'', or ``Asian and White'' racial identification as a function of anti-Asian bias, gender, and parental education. I include region $\times$ year fixed effects with controls for quartic age and local Asian population share. All other variables are held at their sample means. Reported curves depict the median predicted probability across 1{,}000 bootstrap resamples, with 95\% percentile confidence intervals from the same draws.}}
+% \end{figure}
+% \end{center}
+
+\pagebreak
+\newpage
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Scatter Plot of Proportion Subjectively Asian on Bias}
+    \label{scatter-plot-1}
+    \begin{subfigure}{.9\textwidth}
+    \caption{Year < 2015}
+    \centering
+    \includegraphics[width=.9\linewidth]{scatter-plot-bias-Asian-less2015.png}
+    \end{subfigure}
+    \centering
+    %Second graph
+    \begin{subfigure}{.9\textwidth}
+    \caption{Year $\geq$ 2015}
+    \centering
+    \includegraphics[width=.9\linewidth]{scatter-plot-bias-Asian-great2015.png}
+    \end{subfigure}
+    \caption*{\footnotesize{Here are two scatter plots showing the relationship between bias and subjective Asian population in a state. Each dot represents a state in a certain year. Percent subjectively Asian = $\frac{\# \text{Asian}}{\text{Population}}$ \\
+    \emph{Source.} 2004--2021 Current Population Survey.}}
+\end{figure}   
+
+\newpage
+\pagebreak
+\FloatBarrier
+
+\subsection*{Using \textcite{lubotskyInterpretationRegressionsMultiple2006} to Construct Bias Index} % (fold)
+\DIFdelbegin \DIFdel{\label{sub:lw-bias}
+}\DIFdelend \DIFaddbegin \DIFadd{\label{sub:lw-bias-appendix}
+}\DIFaddend In \textcite{lubotskyInterpretationRegressionsMultiple2006}, the authors propose a method to reduce measurement error in proxies by constructing a composite index. The Lubotsky-Wittenberg (henceforth LW) consider a model where a covariate is unobserved. Therefore, they use two proxies in its place, which will have measurement error. Thus, the LW method allows researchers to use two proxies that are error-ridden. 
+
+LW consider a setup with the following model:
+
+\begin{align*}
+    y &= \alpha + \beta x^* + \epsilon \\
+    x_1 &= x^* + \mu_1 \\
+    x_2 &= x^* + \mu_2
+\end{align*}
+
+Where \(x_{i}^{*}\) is the unobserved covariate, \(x_{1i}\) and \(x_{2i}\) are the proxies, and the measurement errors \(\mu_1\) and \(\mu_2\) are assumed to be classical and allowed to covary. The covariance matrix of the errors is given by:
+
+\[
+\Sigma = \begin{bmatrix}
+    \sigma_1^2 & \sigma_{12} \\
+    \sigma_{12} & \sigma_2^2
+\end{bmatrix}
+\]
+
+Replacing the unobserved \(x^*\) with \(x_1\) or \(x_2\) yields the following expectations of the OLS estimates:
+
+\[
+\mathbb{E} \left[ \hat{\beta}_1 \right] = \beta \frac{\sigma_{x^*}^2}{\sigma_{x^*}^2 + \sigma_1^2} \quad ; \quad \mathbb{E} \left[ \hat{\beta}_2 \right] = \beta \frac{\sigma_{x^*}^2}{\sigma_{x^*}^2 + \sigma_2^2}
+\]
+
+Both estimates are biased; the one with the smaller variance of the measurement error being less biased.
+
+LW then propose defining a new proxy \(x_3\) as a weighted average of \(x_1\) and \(x_2\):
+
+\[
+x_3 = \lambda x_1 + (1 - \lambda) x_2
+\]
+
+To minimize the attenuation bias in the OLS estimate of \(\beta\), they solve for the optimal value of \(\lambda\):
+
+\[
+\lambda^* = \frac{\sigma_2^2 - \sigma_{12}}{\sigma_1^2 + \sigma_2^2 - 2\sigma_{12}}
+\]
+
+This optimal value of \(\lambda\) is not directly useful because the variances of the measurement errors and their covariance are unobserved. However, if you estimate a bivariate regression using OLS (i.e., regress \(y\) on \(x_1\) and \(x_2\)), then the expectation of the sum of the two coefficient estimates is identical to the expectation of the OLS coefficient estimate on \(x_3\) in a univariate regression using the optimal choice of \(\lambda\):
+
+\[
+\mathbb{E} \left[ \hat{\beta}_1 + \hat{\beta}_2 \right] = \mathbb{E} \left[ \hat{\beta}_{x_3} \right]
+\]
+
+Thus, OLS produces an estimate of \(\beta\) with the least bias by optimally combining the information in \(x_1\) and \(x_2\).
+
+\clearpage
+
+\end{document}

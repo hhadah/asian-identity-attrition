@@ -1,5 +1,9 @@
 # Table of observation number
 # of different generations
+#
+# Superseded (October 2026): tab54-observations-by-gen-adults.tex is now
+# built by 53-make-identity-distribution-tables.R with the identity
+# categories of the multinomial logit. Running this script overwrites it.
 
 
 # date: Aug 26th, 2022

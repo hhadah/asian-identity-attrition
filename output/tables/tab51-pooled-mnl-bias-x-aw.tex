@@ -1,0 +1,40 @@
+\begin{table}[H]
+\centering
+\small\setstretch{1.0}
+\caption{Pooled Multinomial Logit: Bias Interacted with Parental Configuration, Mixed-Race Second-Generation Children \label{tab:pooled-mnl-bias-x-aw}}
+\begin{threeparttable}
+\begin{tabular}{lcc}
+\toprule
+ & White only & Asian and White \\
+ & (1) & (2) \\
+\midrule
+\multicolumn{3}{l}{\textit{Panel A: Coefficients (log odds relative to Asian only)}} \\
+Bias & $0.738$** & $0.282$ \\
+ & ($0.363$) & ($0.331$) \\
+Asian father--White mother (AW) & $-0.615$*** & $-0.675$*** \\
+ & ($0.161$) & ($0.153$) \\
+Bias $\times$ AW & $0.893$*** & $0.051$ \\
+ & ($0.316$) & ($0.360$) \\
+\midrule
+\multicolumn{3}{l}{\textit{Panel B: Average marginal effects of bias (probability scale)}} \\
+Average marginal effect of bias, common-effect model & $0.146$** & $-0.024$ \\
+ & ($0.057$) & ($0.067$) \\
+Average marginal effect of bias, AW families & $0.249$*** & $-0.056$ \\
+ & ($0.068$) & ($0.080$) \\
+Average marginal effect of bias, WA families & $0.099$* & $-0.010$ \\
+ & ($0.058$) & ($0.070$) \\
+Difference, AW minus WA & $0.151$*** & $-0.046$ \\
+ & ($0.042$) & ($0.066$) \\
+\midrule
+\multicolumn{3}{l}{Wald test, Bias $\times$ AW $= 0$ in both equations (clustered): $\chi^2(2) = 10.48$, $p = 0.005$} \\
+\multicolumn{3}{l}{Likelihood-ratio test (independent observations): $\chi^2(2) = 106.78$, $p < 0.001$} \\
+Observations & \multicolumn{2}{c}{$27{,}048$} \\
+State clusters & \multicolumn{2}{c}{$51$} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item[1] \footnotesize{The table reports a single multinomial logit, equation (\ref{eq:multinomial_logit}), estimated on pooled second-generation children with one parent born in an Asian country and one born outside Asia, with ``Asian only'' as the reference category. All coefficients are constrained to be equal across Asian father--White mother (AW) and White father--Asian mother (WA) families except that the bias index is interacted with an AW indicator. Controls are sex, mother and father college graduation, a quartic in age, the state Asian population share, and region $\times$ year fixed effects; estimation is weighted by CPS person weights scaled to mean one. 118 observations in 2 region $\times$ year cells with no ``Asian only'' responses are excluded because the cell dummies are not identified. Standard errors in parentheses are clustered at the state level using a sandwich covariance built from the weighted multinomial logit scores. The Wald test uses that clustered covariance; the likelihood-ratio test compares the model with and without the two interaction terms and assumes independent observations. Average marginal effects of a one standard deviation increase in bias are evaluated on the full pooled sample with the AW indicator set to one for every observation and then to zero, so the two rows share the same covariate distribution; the difference is the AW--WA gap with its delta-method standard error. This is a test of whether the bias effect differs by parental configuration, not of the bias effect itself. The first row of Panel B comes from the restricted model with a common bias effect. Conventional standard errors that treat children as independent, the assumption the individual-level bootstrap in the main figures also makes, are smaller: for the common-effect average marginal effects they are 0.018 (White only) and 0.021 (Asian and White) against the clustered 0.057 and 0.067, and for the bias coefficients in Panel A they are 0.128 and 0.114 against 0.363 and 0.331. $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$. Data source is the 2004--2021 Current Population Survey.}
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
