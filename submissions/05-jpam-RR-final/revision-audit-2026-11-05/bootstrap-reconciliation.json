@@ -1,0 +1,1980 @@
+{
+  "date_utc": "2026-11-06T02:22:00.820199+00:00",
+  "decision": "Reconcile the existing 1,000-replication run; no new fitting or bootstrap execution.",
+  "commit_before_bootstrap_work": "d5ad87b",
+  "canonical_directory": "data/raw/bootstrapping-data",
+  "old_csv_original_path": "data/datasets/boot_me_between_model_tests.csv",
+  "old_csv_archived_path": ".safety_backups/bootstrap-reconciliation-2026-11-05-k_lcrir_/legacy-datasets-comparisons-50.csv",
+  "recovery_archive": ".safety_backups/bootstrap-recovery-2026-11-05-hqdjmf6o",
+  "before_source_snapshot": ".safety_backups/bootstrap-reconciliation-2026-11-05-k_lcrir_",
+  "recovered_50_provenance": {
+    "replications": 50,
+    "comparison_rows": 48,
+    "checkpoints": {
+      "second_AW": {
+        "label": "Second gen: AW",
+        "B_requested": 50,
+        "B_effective": 50,
+        "seed": 2029,
+        "n_cores": 11,
+        "timestamp_utc": "2026-04-29 13:13:08 UTC",
+        "rds": "boot_results_second_AW.rds",
+        "rds_sha256": "fe8b2a6bd94e9bf6a7c97a1f088edfc4ee33c2d07ea2cfc2baf8c8649b105298",
+        "metadata": "boot_results_second_AW.txt",
+        "metadata_sha256": "5058ea86de378ddc8a2b7ce53c526983c914df952a16c9ff4a4256a4c3d2ef60"
+      },
+      "second_WA": {
+        "label": "Second gen: WA",
+        "B_requested": 50,
+        "B_effective": 50,
+        "seed": 2030,
+        "n_cores": 11,
+        "timestamp_utc": "2026-04-29 13:16:38 UTC",
+        "rds": "boot_results_second_WA.rds",
+        "rds_sha256": "a23f2cb90dcedad828688db224095a4abf94b14685803bac5936175f819f8a49",
+        "metadata": "boot_results_second_WA.txt",
+        "metadata_sha256": "a6250e0b3e577f69fb12f04dd14bed8ed470ebef45fc886c3902e891791f564d"
+      },
+      "third_oneAsian": {
+        "label": "Third gen: 1 Asian GP",
+        "B_requested": 50,
+        "B_effective": 50,
+        "seed": 2031,
+        "n_cores": 11,
+        "timestamp_utc": "2026-04-29 13:24:13 UTC",
+        "rds": "boot_results_third_oneAsian.rds",
+        "rds_sha256": "1b06a1b5dd85bddc6d97dfd9ef9639eb3b23c3d8a53fbcc36a10c272eef90632",
+        "metadata": "boot_results_third_oneAsian.txt",
+        "metadata_sha256": "776a32068d19b841a3bf61dba058c89582a1a6acf020fb837847bbcf67ad8bf7"
+      },
+      "third_twoAsian": {
+        "label": "Third gen: 2 Asian GP",
+        "B_requested": 50,
+        "B_effective": 50,
+        "seed": 2032,
+        "n_cores": 11,
+        "timestamp_utc": "2026-04-29 13:26:21 UTC",
+        "rds": "boot_results_third_twoAsian.rds",
+        "rds_sha256": "ca1e39750424752b5a2b344c7900333a85c3df95724ab467c3f6f340f63a096c",
+        "metadata": "boot_results_third_twoAsian.txt",
+        "metadata_sha256": "9bd5061bbe709e71ccd73b0154e31dcfe894c48e098e13893a052c5bb6fbf58b"
+      },
+      "third_threeAsian": {
+        "label": "Third gen: 3 Asian GP",
+        "B_requested": 50,
+        "B_effective": 50,
+        "seed": 2033,
+        "n_cores": 11,
+        "timestamp_utc": "2026-04-29 13:26:28 UTC",
+        "rds": "boot_results_third_threeAsian.rds",
+        "rds_sha256": "fbadc16d854b8f343223cae7dc512c32ec9a6cd0a10f5d3c257b9c093f3c5dc9",
+        "metadata": "boot_results_third_threeAsian.txt",
+        "metadata_sha256": "9ba56fd903628ca61a6bc3670eba4ce679c17c5a7ddef30df50e7afea0bfbf14"
+      }
+    },
+    "csv": "boot_me_between_model_tests.csv",
+    "csv_sha256": "417145bc992150736a1325bd355b0489280a453b8e76b5392a5e1b171b60eb82",
+    "maximum_numeric_reconstruction_error": 4.88498130835069e-15,
+    "estimator": "Difference between model-specific median AMEs",
+    "inference": "Normal approximation: each model SE is its 95% percentile interval width / 3.92; difference SE combines the two model SEs in quadrature, assuming independent samples.",
+    "state_clustered": false,
+    "raw_replication_draws_available": false
+  },
+  "reconciled_1000_provenance": {
+    "replications": 1000,
+    "comparison_rows": 48,
+    "checkpoints": {
+      "second_AW": {
+        "label": "Second gen: AW",
+        "B_requested": 1000,
+        "B_effective": 1000,
+        "seed": 2029,
+        "n_cores": 7,
+        "timestamp_utc": "2026-04-29 18:46:21 UTC",
+        "rds": "boot_results_second_AW.rds",
+        "rds_sha256": "bc816ccce540d24f1af30184562251c6a9d859d6e64a16c009d0cc39eef1e47d",
+        "metadata": "boot_results_second_AW.txt",
+        "metadata_sha256": "965494ef48934d1e343b1c212635722228705d8a1ce32943e0666d67a4eb2197"
+      },
+      "second_WA": {
+        "label": "Second gen: WA",
+        "B_requested": 1000,
+        "B_effective": 1000,
+        "seed": 2030,
+        "n_cores": 7,
+        "timestamp_utc": "2026-04-29 20:20:59 UTC",
+        "rds": "boot_results_second_WA.rds",
+        "rds_sha256": "b4700ecccb9211714049e2c96a4cdccbc1cf779bf1b9ebc107df2678c9aaf9d0",
+        "metadata": "boot_results_second_WA.txt",
+        "metadata_sha256": "448efa10549ba63c87a9a4b526ed062954ec8a3e8c6fdb55d88da79499cdfd2f"
+      },
+      "third_oneAsian": {
+        "label": "Third gen: 1 Asian GP",
+        "B_requested": 1000,
+        "B_effective": 1000,
+        "seed": 2031,
+        "n_cores": 7,
+        "timestamp_utc": "2026-04-29 23:43:29 UTC",
+        "rds": "boot_results_third_oneAsian.rds",
+        "rds_sha256": "8d6c1d9baecb1d7e13f3adffc9108ea965094d9dc010132af236dd3bafc6704f",
+        "metadata": "boot_results_third_oneAsian.txt",
+        "metadata_sha256": "a6329ee3cd2886b6d933c1b70e9f4bc407da79a3f72e8e6ee91b324528ecf18d"
+      },
+      "third_twoAsian": {
+        "label": "Third gen: 2 Asian GP",
+        "B_requested": 1000,
+        "B_effective": 1000,
+        "seed": 2032,
+        "n_cores": 7,
+        "timestamp_utc": "2026-04-30 00:40:10 UTC",
+        "rds": "boot_results_third_twoAsian.rds",
+        "rds_sha256": "40b9b5fa5bfbe6f7113a7dc070c8c3e75b653143b6f80ffa750573bc8be7ee01",
+        "metadata": "boot_results_third_twoAsian.txt",
+        "metadata_sha256": "cc413b4ee2543a4532c1e698669ef3eeb4ef50e59f2bc5359ebb5fd960536df8"
+      },
+      "third_threeAsian": {
+        "label": "Third gen: 3 Asian GP",
+        "B_requested": 1000,
+        "B_effective": 1000,
+        "seed": 2033,
+        "n_cores": 7,
+        "timestamp_utc": "2026-04-30 00:42:11 UTC",
+        "rds": "boot_results_third_threeAsian.rds",
+        "rds_sha256": "8acb26bb1e3db72c155aaffd10573bca9e09e3fc45b0624614a2c26e8d2cef01",
+        "metadata": "boot_results_third_threeAsian.txt",
+        "metadata_sha256": "e5b0f8fdfa1decd1e570808c9e96b6377fc36c4f860a155a55be199780a6e536"
+      }
+    },
+    "csv": "boot_me_between_model_tests.csv",
+    "csv_sha256": "0439a6de2ecb6b82221f185d29df5faa1031f581c27e540db00c066e9cce9980",
+    "maximum_numeric_reconstruction_error": 4.88498130835069e-15,
+    "estimator": "Difference between model-specific median AMEs",
+    "inference": "Normal approximation: each model SE is its 95% percentile interval width / 3.92; difference SE combines the two model SEs in quadrature, assuming independent samples.",
+    "state_clustered": false,
+    "raw_replication_draws_available": false,
+    "run_id": "20261105-211018",
+    "source_directory": "data/raw/bootstrapping-data",
+    "generator": "programs/54-make-bootstrap-comparison-tables.R",
+    "generator_sha256": "c08b5420a9076bca13451d3785ea32b16f765c809c8ef967215cfeec2a921f93",
+    "reader_sha256": "988d01cf5d77aae52b0ad787316702a26c8d3e889c35e7c9f3eda7b75f6e7f98",
+    "R_version": "R version 4.5.2 (2025-10-31)",
+    "prose_fragments": {
+      "bootstrap-aw-wa-bias-white-diff-pp.tex": "10.1",
+      "bootstrap-aw-wa-bias-white-se-pp.tex": "5.8",
+      "bootstrap-aw-wa-bias-white-p.tex": "0.079",
+      "bootstrap-aw-wa-female-mixed-diff-pp.tex": "9.5",
+      "bootstrap-aw-wa-female-mixed-se-pp.tex": "3.0",
+      "bootstrap-aw-wa-female-mixed-p.tex": "0.002",
+      "bootstrap-gp13-female-white-diff-pp.tex": "-11.6",
+      "bootstrap-gp13-female-white-se-pp.tex": "4.6",
+      "bootstrap-gp13-female-white-p.tex": "0.011",
+      "bootstrap-gp13-female-mixed-diff-pp.tex": "8.2",
+      "bootstrap-gp13-female-mixed-se-pp.tex": "4.2",
+      "bootstrap-gp13-female-mixed-p.tex": "0.053"
+    }
+  },
+  "input_payload_hashes": [
+    {
+      "location": "repo datasets",
+      "dataset": "CPS_IAT_asian",
+      "zip_sha256": "872a794deff5a303d1ea46966327257e9d5d23f3c5e39ee7f3645cff79f7553d",
+      "csv_sha256": "d5228dec15a749b511d12c9fde65663a7e17b1e2313cba721d00612efefd763a"
+    },
+    {
+      "location": "repo datasets",
+      "dataset": "CPS_IAT_asian_adults",
+      "zip_sha256": "6bd76a5e53867a587b1d5101abae57c55dde39e24252c23af442dd1e8542c9c9",
+      "csv_sha256": "3f35ebd19c865cceeb58941b9ff49ea1ae83f4e2f00ff1c604b074bb2b5d78e4"
+    },
+    {
+      "location": "repo bootstrap",
+      "dataset": "CPS_IAT_asian",
+      "zip_sha256": "872a794deff5a303d1ea46966327257e9d5d23f3c5e39ee7f3645cff79f7553d",
+      "csv_sha256": "d5228dec15a749b511d12c9fde65663a7e17b1e2313cba721d00612efefd763a"
+    },
+    {
+      "location": "repo bootstrap",
+      "dataset": "CPS_IAT_asian_adults",
+      "zip_sha256": "6bd76a5e53867a587b1d5101abae57c55dde39e24252c23af442dd1e8542c9c9",
+      "csv_sha256": "3f35ebd19c865cceeb58941b9ff49ea1ae83f4e2f00ff1c604b074bb2b5d78e4"
+    },
+    {
+      "location": "Dropbox root",
+      "dataset": "CPS_IAT_asian",
+      "zip_sha256": "872a794deff5a303d1ea46966327257e9d5d23f3c5e39ee7f3645cff79f7553d",
+      "csv_sha256": "d5228dec15a749b511d12c9fde65663a7e17b1e2313cba721d00612efefd763a"
+    },
+    {
+      "location": "Dropbox root",
+      "dataset": "CPS_IAT_asian_adults",
+      "zip_sha256": "6bd76a5e53867a587b1d5101abae57c55dde39e24252c23af442dd1e8542c9c9",
+      "csv_sha256": "3f35ebd19c865cceeb58941b9ff49ea1ae83f4e2f00ff1c604b074bb2b5d78e4"
+    },
+    {
+      "location": "Dropbox nested",
+      "dataset": "CPS_IAT_asian",
+      "zip_sha256": "872a794deff5a303d1ea46966327257e9d5d23f3c5e39ee7f3645cff79f7553d",
+      "csv_sha256": "d5228dec15a749b511d12c9fde65663a7e17b1e2313cba721d00612efefd763a"
+    },
+    {
+      "location": "Dropbox nested",
+      "dataset": "CPS_IAT_asian_adults",
+      "zip_sha256": "6bd76a5e53867a587b1d5101abae57c55dde39e24252c23af442dd1e8542c9c9",
+      "csv_sha256": "3f35ebd19c865cceeb58941b9ff49ea1ae83f4e2f00ff1c604b074bb2b5d78e4"
+    }
+  ],
+  "retained_figure_annotation_checks": [
+    {
+      "file": "boot_me_second_AW.png",
+      "observed_equality_p_labels": [
+        "=0.010",
+        "=0.051"
+      ],
+      "matches_by_run": {
+        "50": [],
+        "1000": [
+          "=0.010",
+          "=0.051"
+        ]
+      }
+    },
+    {
+      "file": "boot_me_second_WA.png",
+      "observed_equality_p_labels": [
+        "=0.005",
+        "=0.076",
+        "=0.113",
+        "=0.499",
+        "=0.533"
+      ],
+      "matches_by_run": {
+        "50": [],
+        "1000": [
+          "=0.005",
+          "=0.076",
+          "=0.113",
+          "=0.499",
+          "=0.533"
+        ]
+      }
+    },
+    {
+      "file": "boot_me_second_AW_WA.png",
+      "observed_equality_p_labels": [
+        "=0.001",
+        "=0.042",
+        "=0.072",
+        "=0.254",
+        "=0.614"
+      ],
+      "matches_by_run": {
+        "50": [
+          "=0.001"
+        ],
+        "1000": [
+          "=0.001",
+          "=0.042",
+          "=0.072",
+          "=0.254",
+          "=0.614"
+        ]
+      }
+    },
+    {
+      "file": "boot_me_third_oneAsian.png",
+      "observed_equality_p_labels": [
+        "=0.001",
+        "=0.005",
+        "=0.014",
+        "=0.036",
+        "=0.102",
+        "=0.872",
+        "=0.951"
+      ],
+      "matches_by_run": {
+        "50": [],
+        "1000": [
+          "=0.001",
+          "=0.005",
+          "=0.014",
+          "=0.036",
+          "=0.102",
+          "=0.872",
+          "=0.951"
+        ]
+      }
+    },
+    {
+      "file": "boot_me_third_twoAsian.png",
+      "observed_equality_p_labels": [
+        "=0.026",
+        "=0.031",
+        "=0.037",
+        "=0.206",
+        "=0.758"
+      ],
+      "matches_by_run": {
+        "50": [
+          "=0.037"
+        ],
+        "1000": [
+          "=0.026",
+          "=0.031",
+          "=0.037",
+          "=0.206",
+          "=0.758"
+        ]
+      }
+    },
+    {
+      "file": "boot_me_third_threeAsian.png",
+      "observed_equality_p_labels": [
+        "=0.013",
+        "=0.052"
+      ],
+      "matches_by_run": {
+        "50": [],
+        "1000": [
+          "=0.013",
+          "=0.052"
+        ]
+      }
+    },
+    {
+      "file": "boot_me_third_oneTwoThreeAsian.png",
+      "observed_equality_p_labels": [
+        "=0.001",
+        "=0.048",
+        "=0.380",
+        "=0.721",
+        "=0.793",
+        "=0.906"
+      ],
+      "matches_by_run": {
+        "50": [
+          "=0.721"
+        ],
+        "1000": [
+          "=0.001",
+          "=0.048",
+          "=0.380",
+          "=0.721",
+          "=0.793",
+          "=0.906"
+        ]
+      }
+    },
+    {
+      "file": "logit_boot_me_second_AW_WA_adults_multinom.png",
+      "observed_equality_p_labels": [
+        "=0.004",
+        "=0.007",
+        "=0.409",
+        "=0.620"
+      ],
+      "matches_by_run": {
+        "1000": [
+          "=0.004",
+          "=0.007",
+          "=0.409",
+          "=0.620"
+        ]
+      }
+    }
+  ],
+  "retained_figure_replication_counts": [
+    {
+      "checkpoint": "boot_results_second_AW",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "boot_results_second_WA",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "boot_results_second_AW_WA",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "boot_results_third_oneAsian",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "boot_results_third_twoAsian",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "boot_results_third_threeAsian",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "boot_results_third_oneTwoThreeAsian",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    },
+    {
+      "checkpoint": "logit_boot_results_second_AW_WA_adults_multinom",
+      "requested": 1000,
+      "effective": 1000,
+      "rds_effective": 1000
+    }
+  ],
+  "comparison_changes": [
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "value",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.138284401134189,
+        "ame_b": -0.114134709688652,
+        "diff_est": -0.0241496914455364,
+        "se_diff": 0.0547534902553518,
+        "z_stat": -0.441062137462111,
+        "p_value": 0.659168013144335,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.133178804274434,
+        "ame_b": -0.119621624923131,
+        "diff_est": -0.0135571793513032,
+        "se_diff": 0.0690201963051265,
+        "z_stat": -0.196423367029691,
+        "p_value": 0.84427880824486,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "value",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": 0.203585476526511,
+        "ame_b": 0.0979505533474094,
+        "diff_est": 0.105634923179102,
+        "se_diff": 0.0439472910134151,
+        "z_stat": 2.40367314442331,
+        "p_value": 0.01623127855465,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": 0.203114934380311,
+        "ame_b": 0.1021060180577,
+        "diff_est": 0.101008916322611,
+        "se_diff": 0.0575072370496034,
+        "z_stat": 1.75645573504923,
+        "p_value": 0.07901062328932,
+        "sig": "*"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "value",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": -0.0641766637147535,
+        "ame_b": 0.0180504716078977,
+        "diff_est": -0.0822271353226512,
+        "se_diff": 0.0616696989690762,
+        "z_stat": -1.33334744124312,
+        "p_value": 0.182417811816585,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0701359125390084,
+        "ame_b": 0.0152717019659874,
+        "diff_est": -0.0854076145049958,
+        "se_diff": 0.0652283255892948,
+        "z_stat": -1.3093638957216,
+        "p_value": 0.190411115215971,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "Female",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0292350333908367,
+        "ame_b": 0.0265526928137209,
+        "diff_est": -0.0557877262045576,
+        "se_diff": 0.0311041295821274,
+        "z_stat": -1.79357940421562,
+        "p_value": 0.072880326302161,
+        "sig": "*"
+      },
+      "after_1000": {
+        "ame_a": -0.027828556602697,
+        "ame_b": 0.024805570662784,
+        "diff_est": -0.052634127265481,
+        "se_diff": 0.0303859768201042,
+        "z_stat": -1.73218480278234,
+        "p_value": 0.0832406639811111,
+        "sig": "*"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "Female",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": 0.00063705448898642,
+        "ame_b": 0.0446921196345469,
+        "diff_est": -0.0440550651455605,
+        "se_diff": 0.0286252350330779,
+        "z_stat": -1.5390289405363,
+        "p_value": 0.123797231130963,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.00179308561952851,
+        "ame_b": 0.045896708845396,
+        "diff_est": -0.0441036232258674,
+        "se_diff": 0.0282395366158077,
+        "z_stat": -1.56176865880935,
+        "p_value": 0.118342497593691,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "Female",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0287317811460096,
+        "ame_b": -0.0682053458413351,
+        "diff_est": 0.0969371269873448,
+        "se_diff": 0.0283707809496612,
+        "z_stat": 3.41679445339704,
+        "p_value": 0.000633631002992854,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": 0.0264165875957061,
+        "ame_b": -0.0685224381609704,
+        "diff_est": 0.0949390257566766,
+        "se_diff": 0.0301427842032385,
+        "z_stat": 3.14964354707739,
+        "p_value": 0.00163469778755022,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": 0.100621746973137,
+        "ame_b": 0.0163943444290429,
+        "diff_est": 0.0842274025440939,
+        "se_diff": 0.035845269453235,
+        "z_stat": 2.34974946007813,
+        "p_value": 0.0187860511319117,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": 0.0954910867858505,
+        "ame_b": 0.0205576264225546,
+        "diff_est": 0.0749334603632959,
+        "se_diff": 0.032749457267033,
+        "z_stat": 2.28808250934672,
+        "p_value": 0.0221327166148884,
+        "sig": "**"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "MomGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.122857950285719,
+        "ame_b": -0.0166539810939244,
+        "diff_est": -0.106203969191795,
+        "se_diff": 0.0501736188673278,
+        "z_stat": -2.11672930096245,
+        "p_value": 0.0342828285759063,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": -0.118890848468882,
+        "ame_b": -0.00352718477106214,
+        "diff_est": -0.11536366369782,
+        "se_diff": 0.0416197293763114,
+        "z_stat": -2.77185040428162,
+        "p_value": 0.00557386455991904,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0178036942003686,
+        "ame_b": -0.00278462347288113,
+        "diff_est": 0.0205883176732497,
+        "se_diff": 0.0476304615483778,
+        "z_stat": 0.432251063793248,
+        "p_value": 0.66555894979128,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0222004339223382,
+        "ame_b": -0.0144554670852492,
+        "diff_est": 0.0366559010075875,
+        "se_diff": 0.0447824254361144,
+        "z_stat": 0.818533177928916,
+        "p_value": 0.413052805201922,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0589984966504645,
+        "ame_b": 0.00182353660007352,
+        "diff_est": -0.060822033250538,
+        "se_diff": 0.0267925072933125,
+        "z_stat": -2.27011352781153,
+        "p_value": 0.0232006957541352,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": -0.0601471438863324,
+        "ame_b": 0.00110891428273859,
+        "diff_est": -0.061256058169071,
+        "se_diff": 0.0294911945021909,
+        "z_stat": -2.07709654366562,
+        "p_value": 0.0377926495321187,
+        "sig": "**"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "DadGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": 0.0130000176900959,
+        "ame_b": -0.0557044868190714,
+        "diff_est": 0.0687045045091673,
+        "se_diff": 0.0314526334871799,
+        "z_stat": 2.18438003091764,
+        "p_value": 0.0289343343419152,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": 0.0146071972009753,
+        "ame_b": -0.0598473493347122,
+        "diff_est": 0.0744545465356874,
+        "se_diff": 0.0339443253351871,
+        "z_stat": 2.19343132616358,
+        "p_value": 0.0282763173846078,
+        "sig": "**"
+      }
+    },
+    {
+      "model_a": "Second gen: AW",
+      "model_b": "Second gen: WA",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0497485253010787,
+        "ame_b": 0.0516178413511686,
+        "diff_est": -0.00186931605008989,
+        "se_diff": 0.0373964769512382,
+        "z_stat": -0.0499864212483791,
+        "p_value": 0.960133209068817,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0455683188926664,
+        "ame_b": 0.0592567932932283,
+        "diff_est": -0.0136884744005619,
+        "se_diff": 0.0358142507930608,
+        "z_stat": -0.382207476003213,
+        "p_value": 0.702307476998634,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "value",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0173750640828357,
+        "ame_b": -0.11954087956448,
+        "diff_est": 0.102165815481644,
+        "se_diff": 0.0592226582226568,
+        "z_stat": 1.72511363974132,
+        "p_value": 0.0845069949198485,
+        "sig": "*"
+      },
+      "after_1000": {
+        "ame_a": -0.0245289335402259,
+        "ame_b": -0.104636539979617,
+        "diff_est": 0.0801076064393916,
+        "se_diff": 0.0739275804172502,
+        "z_stat": 1.08359567548757,
+        "p_value": 0.278544109095645,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "value",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.0086246097091496,
+        "ame_b": 0.0500038335224738,
+        "diff_est": -0.0586284432316235,
+        "se_diff": 0.0765822842037776,
+        "z_stat": -0.765561432923824,
+        "p_value": 0.44393729982334,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0116531738322798,
+        "ame_b": 0.0456904035884485,
+        "diff_est": -0.0573435774207284,
+        "se_diff": 0.076461312273275,
+        "z_stat": -0.749968522849578,
+        "p_value": 0.453273662874012,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "value",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0188950253557089,
+        "ame_b": 0.0655105475512517,
+        "diff_est": -0.0466155221955428,
+        "se_diff": 0.0841481211280994,
+        "z_stat": -0.553969851858957,
+        "p_value": 0.579599478539145,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0342842741584135,
+        "ame_b": 0.0576018921528069,
+        "diff_est": -0.0233176179943934,
+        "se_diff": 0.0840035963774592,
+        "z_stat": -0.277578806145617,
+        "p_value": 0.781335703264347,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "Female",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0173239165996194,
+        "ame_b": -0.00698352722934014,
+        "diff_est": -0.0103403893702792,
+        "se_diff": 0.0305905940698356,
+        "z_stat": -0.338025124542304,
+        "p_value": 0.735344254377442,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0155377196952807,
+        "ame_b": -0.0147048117117801,
+        "diff_est": -0.000832907983500665,
+        "se_diff": 0.0337066968922744,
+        "z_stat": -0.024710459946954,
+        "p_value": 0.980285911797888,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "Female",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.0791159498394196,
+        "ame_b": -0.00624290274146202,
+        "diff_est": -0.0728730470979575,
+        "se_diff": 0.0483894784050246,
+        "z_stat": -1.50596884901306,
+        "p_value": 0.132075170616167,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0762004993385848,
+        "ame_b": 0.000344019563614011,
+        "diff_est": -0.0765445189021988,
+        "se_diff": 0.0512101610106589,
+        "z_stat": -1.494713498094,
+        "p_value": 0.134989229996162,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "Female",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0999788971665381,
+        "ame_b": 0.0120577969739319,
+        "diff_est": 0.0879211001926062,
+        "se_diff": 0.0499592162113644,
+        "z_stat": 1.75985747695951,
+        "p_value": 0.0784319747754905,
+        "sig": "*"
+      },
+      "after_1000": {
+        "ame_a": 0.092275757418137,
+        "ame_b": 0.0134972284026017,
+        "diff_est": 0.0787785290155354,
+        "se_diff": 0.0547731786232114,
+        "z_stat": 1.43826834585333,
+        "p_value": 0.150357929629299,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": 0.012525937449821,
+        "ame_b": 0.0601843316774902,
+        "diff_est": -0.0476583942276692,
+        "se_diff": 0.0322648276106919,
+        "z_stat": -1.47710053816857,
+        "p_value": 0.139648689324045,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0139670909221745,
+        "ame_b": 0.0699736758653735,
+        "diff_est": -0.056006584943199,
+        "se_diff": 0.0350785407652341,
+        "z_stat": -1.59660532397934,
+        "p_value": 0.11035371142169,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.102466006659495,
+        "ame_b": 0.00309402399627742,
+        "diff_est": -0.105560030655773,
+        "se_diff": 0.0480161561585429,
+        "z_stat": -2.19842734406369,
+        "p_value": 0.0279186668840642,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": -0.101964401116786,
+        "ame_b": 0.00111665767332884,
+        "diff_est": -0.103081058790115,
+        "se_diff": 0.0545736290446617,
+        "z_stat": -1.88884376198907,
+        "p_value": 0.0589127669273109,
+        "sig": "*"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0850742574403824,
+        "ame_b": -0.0751791071436305,
+        "diff_est": 0.160253364584013,
+        "se_diff": 0.0524253236376789,
+        "z_stat": 3.05679304321616,
+        "p_value": 0.00223718681235974,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": 0.0872012142408693,
+        "ame_b": -0.0685730606456664,
+        "diff_est": 0.155774274886536,
+        "se_diff": 0.057090710602167,
+        "z_stat": 2.72853977895001,
+        "p_value": 0.00636154170799695,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0278288372132813,
+        "ame_b": -0.00704706086614726,
+        "diff_est": -0.0207817763471341,
+        "se_diff": 0.031286091598258,
+        "z_stat": -0.664249680464758,
+        "p_value": 0.506530521205829,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0336070845057162,
+        "ame_b": -0.00329762530174662,
+        "diff_est": -0.0303094592039696,
+        "se_diff": 0.0335040361751918,
+        "z_stat": -0.904650981317062,
+        "p_value": 0.365650317587727,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.040297647167723,
+        "ame_b": -0.100470059575832,
+        "diff_est": 0.0601724124081086,
+        "se_diff": 0.0577225993363263,
+        "z_stat": 1.04244114263649,
+        "p_value": 0.297207199994474,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0362860919002242,
+        "ame_b": -0.113090855136394,
+        "diff_est": 0.0768047632361699,
+        "se_diff": 0.0597661110610257,
+        "z_stat": 1.28508885508288,
+        "p_value": 0.198761235675531,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 2 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0665015366892456,
+        "ame_b": 0.107220595673143,
+        "diff_est": -0.0407190589838972,
+        "se_diff": 0.0607111850752744,
+        "z_stat": -0.6707011061209,
+        "p_value": 0.502410958065668,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0686669565383361,
+        "ame_b": 0.116660006077353,
+        "diff_est": -0.0479930495390166,
+        "se_diff": 0.0592050457338776,
+        "z_stat": -0.810624313250967,
+        "p_value": 0.417581450056201,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "value",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0173750640828357,
+        "ame_b": -0.218000511245602,
+        "diff_est": 0.200625447162766,
+        "se_diff": 0.151729124455187,
+        "z_stat": 1.32226062651552,
+        "p_value": 0.186081379022096,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0245289335402259,
+        "ame_b": -0.186152456802799,
+        "diff_est": 0.161623523262574,
+        "se_diff": 0.153581857043582,
+        "z_stat": 1.05236078254159,
+        "p_value": 0.292634054419409,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "value",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.0086246097091496,
+        "ame_b": 0.194750095718115,
+        "diff_est": -0.203374705427264,
+        "se_diff": 0.0712170847229966,
+        "z_stat": -2.85570107535717,
+        "p_value": 0.00429419220777914,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.0116531738322798,
+        "ame_b": 0.188903859889811,
+        "diff_est": -0.200557033722091,
+        "se_diff": 0.0743432889134784,
+        "z_stat": -2.69771537758441,
+        "p_value": 0.00698171052801064,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "value",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0188950253557089,
+        "ame_b": 0.0465059677021863,
+        "diff_est": -0.0276109423464774,
+        "se_diff": 0.14930330248047,
+        "z_stat": -0.184931892917031,
+        "p_value": 0.853282455490712,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0342842741584135,
+        "ame_b": 0.00475550637214564,
+        "diff_est": 0.0295287677862679,
+        "se_diff": 0.156131563557386,
+        "z_stat": 0.189127471175389,
+        "p_value": 0.849992911127845,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "Female",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0173239165996194,
+        "ame_b": -0.0486721989823069,
+        "diff_est": 0.0313482823826875,
+        "se_diff": 0.0313839963921574,
+        "z_stat": 0.998862031175902,
+        "p_value": 0.317861531490107,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0155377196952807,
+        "ame_b": -0.0512153476725417,
+        "diff_est": 0.035677627977261,
+        "se_diff": 0.0383252388228396,
+        "z_stat": 0.930917303403707,
+        "p_value": 0.351896343071652,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "Female",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.0791159498394196,
+        "ame_b": 0.0390211992617807,
+        "diff_est": -0.1181371491012,
+        "se_diff": 0.0429185391256644,
+        "z_stat": -2.75259017450006,
+        "p_value": 0.00591258607150145,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.0762004993385848,
+        "ame_b": 0.0400455933704444,
+        "diff_est": -0.116246092709029,
+        "se_diff": 0.0459394841571012,
+        "z_stat": -2.530417893059,
+        "p_value": 0.0113926746013472,
+        "sig": "**"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "Female",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0999788971665381,
+        "ame_b": 0.0124844569922669,
+        "diff_est": 0.0874944401742711,
+        "se_diff": 0.0397795634720082,
+        "z_stat": 2.19948215962296,
+        "p_value": 0.0278436563145756,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": 0.092275757418137,
+        "ame_b": 0.0100662654342272,
+        "diff_est": 0.0822094919839098,
+        "se_diff": 0.0424715062564339,
+        "z_stat": 1.93563871946397,
+        "p_value": 0.0529119646767682,
+        "sig": "*"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": 0.012525937449821,
+        "ame_b": 0.330471676577495,
+        "diff_est": -0.317945739127674,
+        "se_diff": 0.0458881977485182,
+        "z_stat": -6.92870399639831,
+        "p_value": 4.24713404958822e-12,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": 0.0139670909221745,
+        "ame_b": 0.32455493190911,
+        "diff_est": -0.310587840986935,
+        "se_diff": 0.0589444077989132,
+        "z_stat": -5.26916551687982,
+        "p_value": 1.37045349173066e-07,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.102466006659495,
+        "ame_b": -0.300958454942465,
+        "diff_est": 0.19849244828297,
+        "se_diff": 0.0465793553106439,
+        "z_stat": 4.26138247211017,
+        "p_value": 2.03166189005899e-05,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.101964401116786,
+        "ame_b": -0.297531156864358,
+        "diff_est": 0.195566755747572,
+        "se_diff": 0.0588198547598301,
+        "z_stat": 3.32484254757342,
+        "p_value": 0.000884684814826515,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0850742574403824,
+        "ame_b": -0.0365270333530383,
+        "diff_est": 0.121601290793421,
+        "se_diff": 0.050834384318126,
+        "z_stat": 2.39210708311975,
+        "p_value": 0.0167519540315032,
+        "sig": "**"
+      },
+      "after_1000": {
+        "ame_a": 0.0872012142408693,
+        "ame_b": -0.0289167910626859,
+        "diff_est": 0.116118005303555,
+        "se_diff": 0.0613968800611894,
+        "z_stat": 1.89126882649134,
+        "p_value": 0.0585884678131185,
+        "sig": "*"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.0278288372132813,
+        "ame_b": -0.32120701085785,
+        "diff_est": 0.293378173644569,
+        "se_diff": 0.0488619389436663,
+        "z_stat": 6.00422701159709,
+        "p_value": 1.92245568331795e-09,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.0336070845057162,
+        "ame_b": -0.308428404837683,
+        "diff_est": 0.274821320331967,
+        "se_diff": 0.0565107955956951,
+        "z_stat": 4.86316494813077,
+        "p_value": 1.15523497834673e-06,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.040297647167723,
+        "ame_b": 0.304271146111357,
+        "diff_est": -0.34456879327908,
+        "se_diff": 0.0649100697174346,
+        "z_stat": -5.3084027606048,
+        "p_value": 1.10590057790416e-07,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.0362860919002242,
+        "ame_b": 0.294022850404587,
+        "diff_est": -0.330308942304811,
+        "se_diff": 0.0690078700080229,
+        "z_stat": -4.78654017674229,
+        "p_value": 1.69680984339126e-06,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 1 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0665015366892456,
+        "ame_b": 0.0091988346225384,
+        "diff_est": 0.0573027020667072,
+        "se_diff": 0.0618528372492418,
+        "z_stat": 0.92643611215118,
+        "p_value": 0.354219384375767,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0686669565383361,
+        "ame_b": 0.0163204702717681,
+        "diff_est": 0.052346486266568,
+        "se_diff": 0.0611418039390177,
+        "z_stat": 0.856148868600245,
+        "p_value": 0.391915440766795,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "value",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.11954087956448,
+        "ame_b": -0.218000511245602,
+        "diff_est": 0.0984596316811224,
+        "se_diff": 0.15580567717762,
+        "z_stat": 0.631938665295729,
+        "p_value": 0.527426956598258,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.104636539979617,
+        "ame_b": -0.186152456802799,
+        "diff_est": 0.081515916823182,
+        "se_diff": 0.152312520717972,
+        "z_stat": 0.535188548117592,
+        "p_value": 0.592519484366504,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "value",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": 0.0500038335224738,
+        "ame_b": 0.194750095718115,
+        "diff_est": -0.144746262195641,
+        "se_diff": 0.0536897843692488,
+        "z_stat": -2.69597399013853,
+        "p_value": 0.00701831466522548,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": 0.0456904035884485,
+        "ame_b": 0.188903859889811,
+        "diff_est": -0.143213456301363,
+        "se_diff": 0.0660947805664551,
+        "z_stat": -2.16678919385122,
+        "p_value": 0.0302509317943295,
+        "sig": "**"
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "value",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0655105475512517,
+        "ame_b": 0.0465059677021863,
+        "diff_est": 0.0190045798490654,
+        "se_diff": 0.142187483659664,
+        "z_stat": 0.133658598914052,
+        "p_value": 0.893672544610951,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0576018921528069,
+        "ame_b": 0.00475550637214564,
+        "diff_est": 0.0528463857806613,
+        "se_diff": 0.156046203696348,
+        "z_stat": 0.338658580143967,
+        "p_value": 0.7348669468756,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "Female",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.00698352722934014,
+        "ame_b": -0.0486721989823069,
+        "diff_est": 0.0416886717529668,
+        "se_diff": 0.0407537681683194,
+        "z_stat": 1.02294029795689,
+        "p_value": 0.306336074564269,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0147048117117801,
+        "ame_b": -0.0512153476725417,
+        "diff_est": 0.0365105359607616,
+        "se_diff": 0.0479290124831399,
+        "z_stat": 0.761762741796632,
+        "p_value": 0.446201621134343,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "Female",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.00624290274146202,
+        "ame_b": 0.0390211992617807,
+        "diff_est": -0.0452641020032427,
+        "se_diff": 0.0467750308852628,
+        "z_stat": -0.967697960783257,
+        "p_value": 0.3331952368564,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.000344019563614011,
+        "ame_b": 0.0400455933704444,
+        "diff_est": -0.0397015738068304,
+        "se_diff": 0.0478073828682734,
+        "z_stat": -0.830448592348647,
+        "p_value": 0.406285201712555,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "Female",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.0120577969739319,
+        "ame_b": 0.0124844569922669,
+        "diff_est": -0.000426660018335034,
+        "se_diff": 0.0447686567815364,
+        "z_stat": -0.00953032878375296,
+        "p_value": 0.992396012912343,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.0134972284026017,
+        "ame_b": 0.0100662654342272,
+        "diff_est": 0.00343096296837448,
+        "se_diff": 0.0467968107141491,
+        "z_stat": 0.0733161708248021,
+        "p_value": 0.941554523873052,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": 0.0601843316774902,
+        "ame_b": 0.330471676577495,
+        "diff_est": -0.270287344900005,
+        "se_diff": 0.0535660190555988,
+        "z_stat": -5.0458732917871,
+        "p_value": 4.5145453201658e-07,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": 0.0699736758653735,
+        "ame_b": 0.32455493190911,
+        "diff_est": -0.254581256043736,
+        "se_diff": 0.0664992112818013,
+        "z_stat": -3.82833497024358,
+        "p_value": 0.000129013092608174,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": 0.00309402399627742,
+        "ame_b": -0.300958454942465,
+        "diff_est": 0.304052478938742,
+        "se_diff": 0.0548243903957035,
+        "z_stat": 5.54593451462381,
+        "p_value": 2.92388250303128e-08,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": 0.00111665767332884,
+        "ame_b": -0.297531156864358,
+        "diff_est": 0.298647814537687,
+        "se_diff": 0.064983779404045,
+        "z_stat": 4.59572861530269,
+        "p_value": 4.31239677848576e-06,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "MomGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": -0.0751791071436305,
+        "ame_b": -0.0365270333530383,
+        "diff_est": -0.0386520737905923,
+        "se_diff": 0.0591515193262387,
+        "z_stat": -0.653441775137072,
+        "p_value": 0.513471514481531,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": -0.0685730606456664,
+        "ame_b": -0.0289167910626859,
+        "diff_est": -0.0396562695829804,
+        "se_diff": 0.0698368764452635,
+        "z_stat": -0.567841398434566,
+        "p_value": 0.57014266656794,
+        "sig": ""
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_only",
+      "before_50": {
+        "ame_a": -0.00704706086614726,
+        "ame_b": -0.32120701085785,
+        "diff_est": 0.314159949991703,
+        "se_diff": 0.0557507912587481,
+        "z_stat": 5.63507607512937,
+        "p_value": 1.74981075428396e-08,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.00329762530174662,
+        "ame_b": -0.308428404837683,
+        "diff_est": 0.305130779535937,
+        "se_diff": 0.0634526733571815,
+        "z_stat": 4.80879312709687,
+        "p_value": 1.51844245694963e-06,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "White_only",
+      "before_50": {
+        "ame_a": -0.100470059575832,
+        "ame_b": 0.304271146111357,
+        "diff_est": -0.404741205687189,
+        "se_diff": 0.0600212281070332,
+        "z_stat": -6.74330096954084,
+        "p_value": 1.54828020232231e-11,
+        "sig": "***"
+      },
+      "after_1000": {
+        "ame_a": -0.113090855136394,
+        "ame_b": 0.294022850404587,
+        "diff_est": -0.407113705540981,
+        "se_diff": 0.0689645258468052,
+        "z_stat": -5.90323359063362,
+        "p_value": 3.56445018119225e-09,
+        "sig": "***"
+      }
+    },
+    {
+      "model_a": "Third gen: 2 Asian GP",
+      "model_b": "Third gen: 3 Asian GP",
+      "variable": "DadGradCollege",
+      "outcome": "Asian_and_White",
+      "before_50": {
+        "ame_a": 0.107220595673143,
+        "ame_b": 0.0091988346225384,
+        "diff_est": 0.0980217610506044,
+        "se_diff": 0.0668789953630882,
+        "z_stat": 1.46565839571066,
+        "p_value": 0.14274137381361,
+        "sig": ""
+      },
+      "after_1000": {
+        "ame_a": 0.116660006077353,
+        "ame_b": 0.0163204702717681,
+        "diff_est": 0.100339535805585,
+        "se_diff": 0.0637342707174637,
+        "z_stat": 1.57434194627241,
+        "p_value": 0.115408417255139,
+        "sig": ""
+      }
+    }
+  ],
+  "significance_threshold_changes": {
+    "0.01": [
+      {
+        "comparison": [
+          "Second gen: AW",
+          "Second gen: WA",
+          "MomGradCollege",
+          "White_only"
+        ],
+        "old_p": 0.0342828285759063,
+        "new_p": 0.00557386455991904
+      },
+      {
+        "comparison": [
+          "Third gen: 1 Asian GP",
+          "Third gen: 3 Asian GP",
+          "Female",
+          "White_only"
+        ],
+        "old_p": 0.00591258607150145,
+        "new_p": 0.0113926746013472
+      },
+      {
+        "comparison": [
+          "Third gen: 2 Asian GP",
+          "Third gen: 3 Asian GP",
+          "value",
+          "White_only"
+        ],
+        "old_p": 0.00701831466522548,
+        "new_p": 0.0302509317943295
+      }
+    ],
+    "0.05": [
+      {
+        "comparison": [
+          "Second gen: AW",
+          "Second gen: WA",
+          "value",
+          "White_only"
+        ],
+        "old_p": 0.01623127855465,
+        "new_p": 0.07901062328932
+      },
+      {
+        "comparison": [
+          "Third gen: 1 Asian GP",
+          "Third gen: 2 Asian GP",
+          "MomGradCollege",
+          "White_only"
+        ],
+        "old_p": 0.0279186668840642,
+        "new_p": 0.0589127669273109
+      },
+      {
+        "comparison": [
+          "Third gen: 1 Asian GP",
+          "Third gen: 3 Asian GP",
+          "Female",
+          "Asian_and_White"
+        ],
+        "old_p": 0.0278436563145756,
+        "new_p": 0.0529119646767682
+      },
+      {
+        "comparison": [
+          "Third gen: 1 Asian GP",
+          "Third gen: 3 Asian GP",
+          "MomGradCollege",
+          "Asian_and_White"
+        ],
+        "old_p": 0.0167519540315032,
+        "new_p": 0.0585884678131185
+      }
+    ],
+    "0.1": [
+      {
+        "comparison": [
+          "Third gen: 1 Asian GP",
+          "Third gen: 2 Asian GP",
+          "value",
+          "Asian_only"
+        ],
+        "old_p": 0.0845069949198485,
+        "new_p": 0.278544109095645
+      },
+      {
+        "comparison": [
+          "Third gen: 1 Asian GP",
+          "Third gen: 2 Asian GP",
+          "Female",
+          "Asian_and_White"
+        ],
+        "old_p": 0.0784319747754905,
+        "new_p": 0.150357929629299
+      }
+    ]
+  },
+  "plot_numeric_and_marker_checks": [
+    {
+      "file": "between_model_second_AW_WA.png",
+      "rows": 12,
+      "filled": 5,
+      "hollow": 7,
+      "coordinates_and_markers_match": true
+    },
+    {
+      "file": "between_model_third_1v2GP.png",
+      "rows": 12,
+      "filled": 1,
+      "hollow": 11,
+      "coordinates_and_markers_match": true
+    },
+    {
+      "file": "between_model_third_1v3GP.png",
+      "rows": 12,
+      "filled": 6,
+      "hollow": 6,
+      "coordinates_and_markers_match": true
+    },
+    {
+      "file": "between_model_third_2v3GP.png",
+      "rows": 12,
+      "filled": 5,
+      "hollow": 7,
+      "coordinates_and_markers_match": true
+    }
+  ],
+  "checks": {
+    "comparison_cells_estimates_SEs_stars_checked": 48,
+    "response_quotations_matching_manuscript": 5,
+    "default_reader_rejects_recovered_50_run": true,
+    "reader_rejects_1000_checkpoints_with_50_CSV": true,
+    "recovered_archive_hashes_match": true,
+    "recovered_archive_files_read_only": 40,
+    "baseline_R2_source_files_unchanged": 69,
+    "protected_input_checkpoint_result_files_unchanged": 48,
+    "pooled_state_clustered_table_unchanged": true,
+    "only_comparison_PNGs_changed": true
+  },
+  "preserved_R2_source_hashes": {
+    "tab46-iat-migration-tab.tex": "8f63ad3021547563e24bcac0a4873612df74246271abc1374d1666de3bb1a59a",
+    "tab01-SumStat.tex": "13f97e22ffb38b9f04c5bbdc4b495d3ad4c75f784b8441d8cfaf9f5f47e2fa65",
+    "interaction_coefficients_AW.png": "3c4c26d29ce2bcfd05b1f4fcb894bdff0e1837b2c2cd8899216f207a4a7a1a96",
+    "between_model_second_AW_WA.png": "b88ccc724203957c43d327c4d907a2129318626d9e15a005ef71a1ff66cb3655",
+    "submit_journal.tex": "a1daee1aab22ae68c8851522bc16323d9385b29acbf8ac07d575ca6086f43113",
+    "scatter-plot-bias-Asian-great2015.png": "76afcd8d3c1557aeb82b1d29cc9533f5626cb47321439c0f32c4dc1694658f19",
+    "interaction_coefficients_pooled_thirdgen.png": "9cf26ed4635fa346eb524dc999d893b719884153666aa993cf66f15bef5092a7",
+    "histogram_asian_american_race_secondgen_WA.png": "c985af0a09f26a7575d92f634c2c4e32a1bcb33a70c2084e4903e772e51d7520",
+    "scatter-plot-bias-Asian-less2015.png": "dd154b3e86d56ffecf266f1709dfb6b30b50f6c67d32e9418f15140ecf847808",
+    "Average_Skinmap.png": "a970060165ae39106bee393c5664135f323cdddfd0e7b3a168e286653a555b19",
+    "interaction_coefficients_OneAsian.png": "df4d3b0102053017f9eb99e99c6ea7e66da8a3171f63e1168d1ba19bb79ef6f3",
+    "manuscript_tab_fig.tex": "fac6169a8ef7dabd8475689e58362ca688717dc8c515515adbafa63d89f2fc04",
+    "2012skinmap.png": "581097de6221b7a44e793475be0612beb7387c83de7887463d9b2fa7086f6dd8",
+    "boot_me_third_twoAsian.png": "9859d71fe39dfef22b38134387b6fa43faefabef362bae5bec30b6ba97cc74d1",
+    "logit_boot_me_second_AW_adults_multinom.png": "307e2910768d61390e3d59c62eaba449079e50fab5f00768642a5be984d56226",
+    "iatexample4.png": "8060408e869de555b53bfd4d935cf0cb988079ffd85d452137d3d90f2957af35",
+    "iatexample5.png": "6aff1d670c66f7506e6878731367a58301605ddff1131b362354ba4dffae41bf",
+    "diag.png": "5c92bc5e71726a110dc07fda92ede60bc72f8daf1bdb3b807e352840492fb830",
+    "boot_me_third_oneAsian.png": "34c7ee8a5fad8101517dc6c6ae134398f6e506c6bbb6775eb7695db42b3d8b56",
+    "2004skinmap.png": "3358f6085337ba4cd6ff3a0d16de4d9b39834c0a0311ab52c18f531d96c11143",
+    "tab47-marriage.tex": "2b0b2b9233d61bb503efa03379e6195b5fd9ad129fd8fcbed52f82eb745ce721",
+    "interaction_coefficients_TwoAsian.png": "d0e2f46dff69b9217960f6ea6204a93937997f22206d97b7d039189c66b0e118",
+    "tab02-observations-by-gen.tex": "1b025f45b40cb43dd4f1988bf23f43c67631cbe5f10e5ae57ce4f9eb6749dbcb",
+    "interaction_coefficients_AWWA.png": "a3707bf5d0721817d7c3d5d5322e63f1299c8df8ffde4b8bd2def08d43e961a8",
+    "Bias_twostates.png": "649795b2eed6d6ea95a2b1a5b812aead064ff7269ceffc7dddadfb18a7d9a790",
+    "submit_preprint.tex": "d9a419b243a87367152f5ecaefebff21514493f843b217034759f68a70366033",
+    "iatexample2.png": "826d1ab88c432b9cf4d1f135f0cefc0932e4edd750aefb61492e7fcfbea4410d",
+    "iatexample3.png": "2964678e2e242a5ef8b512bdd4fdf5deec6b45d11e2f0ae02d1463522f656923",
+    "boot_me_second_AW_WA.png": "487ebd7cea7ecc76b0e6120f59af30a2e248dd69dd88d294056935401ca290a2",
+    "iatexample1.png": "49c84034f5a45b74075afdbd0cfb59f1195eb651da7ca0be7289e4b8ccebb81a",
+    "logit_boot_me_second_AW_WA_adults_multinom.png": "e75618204d0ab7da73881f682dae16fba41fefcd4968c137c6c44e1a4341f10d",
+    "histogram_asian_american_race_thirdgen_fourasiangran.png": "65da4e3e65fe4e87f55c63f69b9b10c50177f281b49ec4aaed82f441263e89ee",
+    "boot_me_second_AW.png": "b6b5061f93523b1bb4e1ffdd64ebf063f52ec2d43eba494a2dc79e9c947e6e4c",
+    "histogram_asian_american_race_secondgen.png": "4227fa965efae505c830c7a0c6907dd852f03d93417fc33fcf5d63df50a11978",
+    "logit_boot_me_second_WA_adults_multinom.png": "f196ef622c2c9f2d055b07b42c2ebe25bd2ea7b6d9238518b41cf8fce861bdff",
+    "histogram_asian_american_race_thirdgen_twoasiangran.png": "fe493626a8a89858f352315640a0c35c1f64935427d69ce19e5a2a5bac15cbe5",
+    "maineffect-proxy.tex": "867572be4f755f0e952d8c43f35b8042479fb138eacab6ea8f0d558543dfbc8f",
+    "between_model_third_1v3GP.png": "86a3fa84e83127a103473a246ac05dc52fbe11fe8be54bd9277da999b94d5ca5",
+    "boot_me_second_WA.png": "a1e339210a4870d609bb47db236e70d5dd63eaa135e3e42207765848339e366f",
+    "manuscript_main.tex": "9ebf0709b92c105908209a7abfc79da2a663909c7cc4fe3b674b36a031cada4d",
+    "boot_me_third_threeAsian.png": "fef79465276f94b7c1ab10d9705d680ec84407cdf9cbd67dcbb5d4f272355170",
+    "tab-between-model-second-gen.tex": "de95decb373390c8677d02120d058ab69c78754d645a43e117a4291c7713bc47",
+    "2016skinmap.png": "a2a90769228ffe0115f7dce79609ddbb150814431c8959f3c25787e282469f53",
+    "histogram_asian_american_race_thirdgen_oneasiangran.png": "98ede96bf1edac1bad0e6de658b3995d746ce4ada907401231ff08e188f5d597",
+    "histogram_asian_american_race_thirdgen.png": "838c109819975fea4bfe7dcc1b9b1b456d1d826b2e85e48e7eab6afdd1240f36",
+    "histogram_asian_american_race_thirdgen_threeasiangran.png": "9cc7411e7f56bf0fed81f3a6f81f2c4393234ac0d8385df148b1815d1ba987e4",
+    "preamble_citation.tex": "e62ddd107ea933ff8d9cf37a5a89f5def05d29569d76626dda89f87d343e22e5",
+    "interaction_coefficients_ThreeAsian.png": "d0fda23b2b03e3569de14c15aedcb1247392791fc01a8b1193bcbf3d8ba5d101",
+    "manuscript_title_etc.tex": "3dbe5111b0b6770e78bafcc6ed826f225f399aaeb0470c1163424dce0f458d45",
+    "AttitudesPaper.bib": "8e8fa544d76eeabe64793ff93e68b1aa8060ed1e0e6af32e89e597fc1204bf1d",
+    "interaction_coefficients_AW_adults.png": "901f0b44e756a1fcdc44146d7c6975e410cf795357d489e8906de66ba1cc8c23",
+    "between_model_third_1v2GP.png": "006112df749d2aff08eb6b1a9b5dcb42ec36ffcec340676b5e5391d4847e7fd6",
+    "between_model_third_2v3GP.png": "28329eb5ad95197eba4ca48441e70e39cc0654ca0b6f39f948321190eb6a0219",
+    "boot_me_third_oneTwoThreeAsian.png": "64447adedf337884dfe7755a9832cf94299d7f40f1ef9d0ad13b928acb6229c2",
+    "tab53-SumStatOverAll-adults.tex": "a073ec1627ee220499ceaf2f05f8a7b7724132d9b26d6c46d2f69117f2b99ac3",
+    "tab41a-marriage.tex": "b44894e6158177c0ef9bd780b0bf50ec3140439765a98b25ead47d00fdc4e6dd",
+    "interaction_coefficients_WA_adults.png": "45e61ea26e65289b257186f3ae3f471df64d7d9f38f61747c732751e70d1df00",
+    "2008skinmap.png": "8e6cf3ae933e5969253a1a5a19a8617fcade00ab7d984f6b436c8bbc67b036a5",
+    "histogram_asian_american_race_secondgen_AA.png": "80e68dd413977438e67dd2b3bc5183e415c828c311acd3f3e2dccc1ea8ed26b0",
+    "manuscript_online_appendix.tex": "1b80c36dc2bf139e03f0f34842773ba2182793db79c9031f1614f4814e8d9a88",
+    "tab33-asianiat_regression_tab.tex": "3f0264ce3cc52ea3eed191b157f0e1f5d1e808532a67e3279996cd2338630f2f",
+    "preamble_package.tex": "55273898eb7ee4ffca1fc1d3b1e7eec47bbd7566570f1575453e34c1224a7cc0",
+    "histogram_asian_american_race_firstgen.png": "71685e7f730ccb0846296f395cbaf2b983ff94784838a281c5c054ab1284eb5c",
+    "histogram_asian_american_race_secondgen_AW.png": "2ec0427e7f96ad90eb591b17b2258d9aff471c304bc14cde8140126cb32a9e53",
+    "Bias_twostates-asian.png": "1bf34b3d71717328c909713f81280595065285e13d74831a12450894a743862e",
+    "tab54-observations-by-gen-adults.tex": "02bffab67e80f9fab35771a5fcd574fc255b7a507e7f196adfe2f5df1bdbb3e0",
+    "tab-between-model-third-gen.tex": "ed38c301b616cf284f89dd160b31a81f91b5d3023edb7748f19155a76cad8a11",
+    "interaction_coefficients_WA.png": "971e25806b02edf257a70119157610394a4928ac8703a3f201940ba210985d26",
+    "histogram_asian_american_race_aggregated.png": "b380ab272553f03567eefdc4548deab3f83119eb6cdeea53a17622393df1127e"
+  },
+  "preserved_input_checkpoint_result_hashes": {
+    "data/raw/bootstrapping-data/logit_boot_results_second_gen_adults_multinom.rds": "4c68e81a1a6038af3323df30b55f63b41647b788871b448faf0a18fc46b6c180",
+    "data/raw/bootstrapping-data/boot_results_second_AW_WA.txt": "4fd47bb425c76c0d6b0b9b9911304d36785ebd631d3916cc6e3071c64e033664",
+    "data/raw/bootstrapping-data/boot_results_third_oneAsian.txt": "a6329ee3cd2886b6d933c1b70e9f4bc407da79a3f72e8e6ee91b324528ecf18d",
+    "data/raw/bootstrapping-data/logit_boot_results_second_WA_adults_multinom.txt": "cc77edf62fa9988e3393c67e132724a8f53b33a802e1bf3d6c187b5c9b71db7b",
+    "data/raw/bootstrapping-data/boot_results_third_oneTwoAsian.rds": "b26772e824252985349cc1d88cf6190dd8fa5e3e24432bb85ddf487e1109a680",
+    "data/raw/bootstrapping-data/CPS_IAT_asian_adults.csv.zip": "6bd76a5e53867a587b1d5101abae57c55dde39e24252c23af442dd1e8542c9c9",
+    "data/raw/bootstrapping-data/boot_results_third_fourAsian.rds": "9224c0ddd6a5cf28edcb6879b50ff97c467b8b3b8818eccb0436503bb7c21688",
+    "data/raw/bootstrapping-data/boot_results_third_generation.rds": "2ce71ac0dcbba694021d3c87c0e2dea4dfe12f3cfdb07b8d8042113a5e763f8d",
+    "data/raw/bootstrapping-data/boot_results_second_AA.txt": "8626739f345d27530e5133a6452e9a010ff41db86da84a51bef5f1e88df4c80a",
+    "data/raw/bootstrapping-data/boot_results_third_oneTwoThreeAsian.rds": "c73c3d19a453691cab94a1c8131e95c56e6ee164bfd5e588d5e4383993b07604",
+    "data/raw/bootstrapping-data/boot_results_second_AW.txt": "965494ef48934d1e343b1c212635722228705d8a1ce32943e0666d67a4eb2197",
+    "data/raw/bootstrapping-data/boot_results_third_threeAsian.rds": "8acb26bb1e3db72c155aaffd10573bca9e09e3fc45b0624614a2c26e8d2cef01",
+    "data/raw/bootstrapping-data/logit_boot_results_second_AA_adults_multinom.rds": "7c976107ecb655ee9dd8d9e54985c798b240bbd62f84b6e9e2ad807eb6496534",
+    "data/raw/bootstrapping-data/logit_boot_results_second_AW_adults_multinom.rds": "3659d6179c59b27b29ae5f3c65cbe0657946f6447899a4c6a1feefd3ce8a5d53",
+    "data/raw/bootstrapping-data/boot_results_second_WA.rds": "b4700ecccb9211714049e2c96a4cdccbc1cf779bf1b9ebc107df2678c9aaf9d0",
+    "data/raw/bootstrapping-data/boot_results_second_generation.txt": "f900994ef738b4214a11da48f83ccd273beb4b0fd19944f23afda1baf69922ba",
+    "data/raw/bootstrapping-data/logit_boot_results_second_AW_WA_adults_multinom.txt": "b4f8c18f046bc1564a825946a7eae273731924f46c41deea6d5648a785528325",
+    "data/raw/bootstrapping-data/boot_results_third_twoAsian.txt": "cc413b4ee2543a4532c1e698669ef3eeb4ef50e59f2bc5359ebb5fd960536df8",
+    "data/raw/bootstrapping-data/boot_results_all_generations.txt": "b058b0e8482863ecfedca6fa4ff795f130e1bc0a64dbf16b99d64a4b751d75a2",
+    "data/raw/bootstrapping-data/boot_results_third_threeAsian.txt": "e5b0f8fdfa1decd1e570808c9e96b6377fc36c4f860a155a55be199780a6e536",
+    "data/raw/bootstrapping-data/logit_boot_results_second_AA_adults_multinom.txt": "6887cbdae289990b0187573ed0c790a7018d8a7157a6905ea01c55872f38f520",
+    "data/raw/bootstrapping-data/boot_results_third_generation.txt": "244b1ec049352052a218e7470fa9b095df5ef41e9733ca9a6cd6800f8c521730",
+    "data/raw/bootstrapping-data/boot_results_third_fourAsian.txt": "b002f3febff5369b1dfc025a92ff0c93ae45043e090c2864dbb24b65bdde35cf",
+    "data/raw/bootstrapping-data/boot_results_second_AA.rds": "99c26e4381e65c4ed612631e98e71092989c288233ee188ab1e34f6f13e13d53",
+    "data/raw/bootstrapping-data/boot_results_second_AW.rds": "bc816ccce540d24f1af30184562251c6a9d859d6e64a16c009d0cc39eef1e47d",
+    "data/raw/bootstrapping-data/boot_results_third_oneTwoThreeAsian.txt": "0ab325f421a040ecd8e6f34eb0af00d0af68ddfd27d75639ab92017cbcf53f04",
+    "data/raw/bootstrapping-data/boot_results_third_twoAsian.rds": "40b9b5fa5bfbe6f7113a7dc070c8c3e75b653143b6f80ffa750573bc8be7ee01",
+    "data/raw/bootstrapping-data/logit_boot_results_second_AW_WA_adults_multinom.rds": "2001e4681fc5e043fd0cd342afc867ed57e161111a9b656f84f2c77a1238fdf9",
+    "data/raw/bootstrapping-data/boot_results_all_generations.rds": "a10c178df73cf5c02ff522fc59343ae75f96192ef0db45b6472376fffc52fe7b",
+    "data/raw/bootstrapping-data/logit_boot_results_second_AW_adults_multinom.txt": "928923e7c8b799011f0b99e72ec6e98b617594db6aa9660c5a4aa53a39ec71f2",
+    "data/raw/bootstrapping-data/boot_me_between_model_tests.csv": "0439a6de2ecb6b82221f185d29df5faa1031f581c27e540db00c066e9cce9980",
+    "data/raw/bootstrapping-data/boot_results_second_WA.txt": "448efa10549ba63c87a9a4b526ed062954ec8a3e8c6fdb55d88da79499cdfd2f",
+    "data/raw/bootstrapping-data/boot_results_second_generation.rds": "caf59db4058e7cb7612815979d3967124dd383f654a05da4756fb33b82c6f2d4",
+    "data/raw/bootstrapping-data/boot_results_third_oneTwoAsian.txt": "75dcd6521a736b08fa558aa5c9d013543992ff46ab5bd8304005291b45585864",
+    "data/raw/bootstrapping-data/logit_boot_me_between_model_tests.csv": "8a85441f664cf7915d8be2f14da874375724db34802eb851fbf8684ff9e217fb",
+    "data/raw/bootstrapping-data/logit_boot_results_second_gen_adults_multinom.txt": "9561c6b9fb1ac845a131248f7c624b7cd977a1544819179b56ebff31c7b789e6",
+    "data/raw/bootstrapping-data/boot_results_third_oneAsian.rds": "8d6c1d9baecb1d7e13f3adffc9108ea965094d9dc010132af236dd3bafc6704f",
+    "data/raw/bootstrapping-data/boot_results_second_AW_WA.rds": "72900e47d9efcbf2724d515db37aa6e67a19ea3a1a04cf647beb8b490b9f9427",
+    "data/raw/bootstrapping-data/logit_boot_results_second_WA_adults_multinom.rds": "7f85b69252c3ee1f8d781db77a672f8f9e26b8ece7046866f948d20a7308b2b6",
+    "data/raw/bootstrapping-data/CPS_IAT_asian.csv.zip": "872a794deff5a303d1ea46966327257e9d5d23f3c5e39ee7f3645cff79f7553d",
+    "output/tables/bias-index-variance-decomposition.csv": "22b5f8a0a76a264025fb4563656b09cc8fad751ba786bd00bd0eb1ce24650b3f",
+    "output/tables/tab54-observations-by-gen-adults.csv": "326c86d5dfdc9660af8ded28d08c4dc2f1c229d15f2f34fe1d7e48969c2f88a8",
+    "output/tables/tab50-pooled-bias-x-aw-lpm.csv": "4cb5d406ce9cd73b2ca23cfa5a22d93832af49f192e620d97dcd5f378e76f2c4",
+    "output/tables/tab51-pooled-mnl-bias-x-aw-ame.csv": "db73a70e9636b669f2714f1714ad3010c71a1d5d7051cfea009f7e9de9c0ae03",
+    "output/tables/tab51-pooled-mnl-bias-x-aw.csv": "4a943943a9929f9995261b901401bd2b47f44c60b63580ef39623d131f090231",
+    "output/tables/tab02-mixed-parent-us-born-share.csv": "093c8b7fc0212940ab2c11b6e2e200c6734d44ed709c58a826b857e4ed1f2aee",
+    "output/tables/tab50-heterogeneity-interactions.csv": "a5926c3fed03e505457940823790ae5867e1ccbeb9b6cd48600ed996fe3841bc",
+    "output/tables/tab02-observations-by-gen.csv": "c471b8d18248e0eaaa964c189bf0a742f609683037582e7bc29454c63d71c077"
+  },
+  "preserved_estimation_and_ME_plot_script_hashes": {
+    "44-bootstrap-run.R": "20ff188d51776df96c86bff0b9361e84947697c4094d4202e1e1cd045c619965",
+    "45-bootstrap-plot.R": "641548f532b00026b8a46e8bcb6250dbd31bd919738f46e345b4c3e7f826fad2",
+    "46-secadult-bootstrap-run.R": "9a200cec76a923ec9bf729da1b70806b79aaff758e2e1a5b40b14ee1a35899aa",
+    "47-secadult-bootstrap-plot.R": "0ee99a8394bac808a9448d6dc287b0d0504fbb0816e8a922b0b40b0ffb16c8b0"
+  },
+  "unchanged_PNG_hashes": {
+    "scatter-plot-bias-Asian-great2015.png": "76afcd8d3c1557aeb82b1d29cc9533f5626cb47321439c0f32c4dc1694658f19",
+    "histogram_asian_american_race_secondgen_WA.png": "c985af0a09f26a7575d92f634c2c4e32a1bcb33a70c2084e4903e772e51d7520",
+    "scatter-plot-bias-Asian-less2015.png": "dd154b3e86d56ffecf266f1709dfb6b30b50f6c67d32e9418f15140ecf847808",
+    "Average_Skinmap.png": "a970060165ae39106bee393c5664135f323cdddfd0e7b3a168e286653a555b19",
+    "2012skinmap.png": "581097de6221b7a44e793475be0612beb7387c83de7887463d9b2fa7086f6dd8",
+    "boot_me_third_twoAsian.png": "9859d71fe39dfef22b38134387b6fa43faefabef362bae5bec30b6ba97cc74d1",
+    "iatexample4.png": "8060408e869de555b53bfd4d935cf0cb988079ffd85d452137d3d90f2957af35",
+    "iatexample5.png": "6aff1d670c66f7506e6878731367a58301605ddff1131b362354ba4dffae41bf",
+    "diag.png": "5c92bc5e71726a110dc07fda92ede60bc72f8daf1bdb3b807e352840492fb830",
+    "boot_me_third_oneAsian.png": "34c7ee8a5fad8101517dc6c6ae134398f6e506c6bbb6775eb7695db42b3d8b56",
+    "2004skinmap.png": "3358f6085337ba4cd6ff3a0d16de4d9b39834c0a0311ab52c18f531d96c11143",
+    "Bias_twostates.png": "649795b2eed6d6ea95a2b1a5b812aead064ff7269ceffc7dddadfb18a7d9a790",
+    "iatexample2.png": "826d1ab88c432b9cf4d1f135f0cefc0932e4edd750aefb61492e7fcfbea4410d",
+    "iatexample3.png": "2964678e2e242a5ef8b512bdd4fdf5deec6b45d11e2f0ae02d1463522f656923",
+    "boot_me_second_AW_WA.png": "487ebd7cea7ecc76b0e6120f59af30a2e248dd69dd88d294056935401ca290a2",
+    "iatexample1.png": "49c84034f5a45b74075afdbd0cfb59f1195eb651da7ca0be7289e4b8ccebb81a",
+    "logit_boot_me_second_AW_WA_adults_multinom.png": "e75618204d0ab7da73881f682dae16fba41fefcd4968c137c6c44e1a4341f10d",
+    "histogram_asian_american_race_thirdgen_fourasiangran.png": "65da4e3e65fe4e87f55c63f69b9b10c50177f281b49ec4aaed82f441263e89ee",
+    "boot_me_second_AW.png": "b6b5061f93523b1bb4e1ffdd64ebf063f52ec2d43eba494a2dc79e9c947e6e4c",
+    "histogram_asian_american_race_secondgen.png": "4227fa965efae505c830c7a0c6907dd852f03d93417fc33fcf5d63df50a11978",
+    "histogram_asian_american_race_thirdgen_twoasiangran.png": "fe493626a8a89858f352315640a0c35c1f64935427d69ce19e5a2a5bac15cbe5",
+    "boot_me_second_WA.png": "a1e339210a4870d609bb47db236e70d5dd63eaa135e3e42207765848339e366f",
+    "boot_me_third_threeAsian.png": "fef79465276f94b7c1ab10d9705d680ec84407cdf9cbd67dcbb5d4f272355170",
+    "2016skinmap.png": "a2a90769228ffe0115f7dce79609ddbb150814431c8959f3c25787e282469f53",
+    "histogram_asian_american_race_thirdgen_oneasiangran.png": "98ede96bf1edac1bad0e6de658b3995d746ce4ada907401231ff08e188f5d597",
+    "histogram_asian_american_race_thirdgen.png": "838c109819975fea4bfe7dcc1b9b1b456d1d826b2e85e48e7eab6afdd1240f36",
+    "histogram_asian_american_race_thirdgen_threeasiangran.png": "9cc7411e7f56bf0fed81f3a6f81f2c4393234ac0d8385df148b1815d1ba987e4",
+    "boot_me_third_oneTwoThreeAsian.png": "64447adedf337884dfe7755a9832cf94299d7f40f1ef9d0ad13b928acb6229c2",
+    "2008skinmap.png": "8e6cf3ae933e5969253a1a5a19a8617fcade00ab7d984f6b436c8bbc67b036a5",
+    "histogram_asian_american_race_secondgen_AA.png": "80e68dd413977438e67dd2b3bc5183e415c828c311acd3f3e2dccc1ea8ed26b0",
+    "histogram_asian_american_race_firstgen.png": "71685e7f730ccb0846296f395cbaf2b983ff94784838a281c5c054ab1284eb5c",
+    "histogram_asian_american_race_secondgen_AW.png": "2ec0427e7f96ad90eb591b17b2258d9aff471c304bc14cde8140126cb32a9e53",
+    "Bias_twostates-asian.png": "1bf34b3d71717328c909713f81280595065285e13d74831a12450894a743862e",
+    "histogram_asian_american_race_aggregated.png": "b380ab272553f03567eefdc4548deab3f83119eb6cdeea53a17622393df1127e"
+  },
+  "changed_exhibit_hashes": {
+    "tab-between-model-second-gen.tex": {
+      "before": "de95decb373390c8677d02120d058ab69c78754d645a43e117a4291c7713bc47",
+      "after": "11f28533d3579bcee152f11905cea50dd688c84c2699d29331973c31a2e445ec"
+    },
+    "tab-between-model-third-gen.tex": {
+      "before": "ed38c301b616cf284f89dd160b31a81f91b5d3023edb7748f19155a76cad8a11",
+      "after": "7cba91f1380b26b8ac0af892f0c7625eb76042aedbaf1772460841857579d72e"
+    },
+    "between_model_second_AW_WA.png": {
+      "before": "b88ccc724203957c43d327c4d907a2129318626d9e15a005ef71a1ff66cb3655",
+      "after": "8951c82b69d710464b1a239989d34ac163024c622a65af5668f3cfb926e740fb"
+    },
+    "between_model_third_1v2GP.png": {
+      "before": "006112df749d2aff08eb6b1a9b5dcb42ec36ffcec340676b5e5391d4847e7fd6",
+      "after": "adadc43bf005555dbb9186ea5d7a8550ba66c721c1558e39b3b4cbd624eb9fb2"
+    },
+    "between_model_third_1v3GP.png": {
+      "before": "86a3fa84e83127a103473a246ac05dc52fbe11fe8be54bd9277da999b94d5ca5",
+      "after": "7649a589da9c8f38e9876c57c5914327e6a8cd0f3539a7ce62441b13bca8f3cb"
+    },
+    "between_model_third_2v3GP.png": {
+      "before": "28329eb5ad95197eba4ca48441e70e39cc0654ca0b6f39f948321190eb6a0219",
+      "after": "f1532d28dd33b4d22aee9af183634df9e9a7813e1d32c3af9201eb56f47f7f5c"
+    }
+  },
+  "replication_code_hashes": {
+    "49-between-model-coefplot.R": "c9491ae918ad320e8460d1c51f44c6ce2b2acb8b043193362e626b3b98de5df0",
+    "54-make-bootstrap-comparison-tables.R": "c08b5420a9076bca13451d3785ea32b16f765c809c8ef967215cfeec2a921f93",
+    "bootstrap-comparison-data.R": "988d01cf5d77aae52b0ad787316702a26c8d3e889c35e7c9f3eda7b75f6e7f98",
+    "95-make-all.R": "7ea69923ed327d4e2b1fa064b2a8cc96a13bd8d1c4cb47122c4869d5bdfeb58e"
+  },
+  "limits": [
+    "Replication-level draws and per-fit convergence histories were not saved.",
+    "Comparison SEs are normal approximations inferred from percentile-interval widths, not direct draw-level standard deviations.",
+    "The individual-within-region-year bootstrap is not state clustered.",
+    "No independent rerun of the original fitted models was undertaken.",
+    "The archive also retains an unused one-plus-two-grandparent 50-replication checkpoint; no published panel or comparison uses it."
+  ],
+  "preserved_final_table_hashes": {
+    "tab46-iat-migration-tab.tex": "68059980efa72dec2111cc9ae053d4b509eaabfd0a0d28d058e887ef0954fc7b",
+    "tab01-SumStat.tex": "13f97e22ffb38b9f04c5bbdc4b495d3ad4c75f784b8441d8cfaf9f5f47e2fa65",
+    "tab47-marriage.tex": "e43f7e8f1cb0ad268ffc82808ea22ab17f58f804972f6fc1ecfa6283e7c697e0",
+    "tab02-observations-by-gen.tex": "c6278b70c3df83269f63e925ab25d96ea4b08c39634f4e6df2e0417eb8aab29d",
+    "tab50-heterogeneity-interactions.tex": "8105b7ba58eed158bd6e8453c5a994754fee18ce324f5e2897200e226be9404a",
+    "tab51-pooled-mnl-bias-x-aw.tex": "87f7f2907b5431a1df3cf68c3d976ade298dcd19a805fc04d2d359e47ea0a351",
+    "tab53-SumStatOverAll-adults.tex": "a073ec1627ee220499ceaf2f05f8a7b7724132d9b26d6c46d2f69117f2b99ac3",
+    "tab41a-marriage.tex": "dbbe911b7671c4cf527f936b389739d604ca84d16c29570d4d8bc535009cb283",
+    "tab33-asianiat_regression_tab.tex": "3f0264ce3cc52ea3eed191b157f0e1f5d1e808532a67e3279996cd2338630f2f",
+    "tab54-observations-by-gen-adults.tex": "1619ced7c2d2542f407f1e9a8696ab90936109bd6509e6579184820b9a5074ca"
+  },
+  "clean_pdf_builds": {
+    "submit_journal": {
+      "file": "submit_journal.pdf",
+      "pages": 95,
+      "sha256": "a77b7b7abe24c96e697f8875648f67df20e47a370035fbcfdb870ab9ccbcbb18",
+      "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error submit_journal.tex",
+      "completed_and_up_to_date": true,
+      "undefined_rendered_references_or_citations": false
+    },
+    "submit_preprint": {
+      "file": "submit_preprint.pdf",
+      "pages": 60,
+      "sha256": "2c87e870a1e47e16bfe34d7595524fb64c9555d4f73a2a9da3040239adcb93ef",
+      "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error submit_preprint.tex",
+      "completed_and_up_to_date": true,
+      "undefined_rendered_references_or_citations": false
+    }
+  },
+  "clean_pdf_visual_checks": {
+    "journal_physical_pages": [
+      26,
+      35,
+      65,
+      68,
+      72,
+      83,
+      84,
+      85,
+      90,
+      91
+    ],
+    "primary_comparison_and_conclusion": "10.1 pp, SE 5.8, p = 0.079; ten-percent inference distinguished from pooled state-clustered evidence.",
+    "A4_panel_C_and_estimate_SE_pairs": "Panel heading and complete coefficient block remain together; all notes clear of the page footer.",
+    "comparison_figures": "All four inspected; hollow/filled markers and axis labels visible; all 48 plotted estimates and intervals checked numerically.",
+    "remaining_diagnostics": "Pre-existing margin, oversized histogram, and citation/footnote hyperlink-destination warnings; same destination warnings observed in the prior build logs."
+  },
+  "review_package_verification": "Recorded separately by tools/98-run-all.sh in verification.json; no Microsoft Word live-session automation."
+}

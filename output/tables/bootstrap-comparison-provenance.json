@@ -1,0 +1,93 @@
+{
+  "replications": 1000,
+  "comparison_rows": 48,
+  "checkpoints": {
+    "second_AW": {
+      "label": "Second gen: AW",
+      "B_requested": 1000,
+      "B_effective": 1000,
+      "seed": 2029,
+      "n_cores": 7,
+      "timestamp_utc": "2026-04-29 18:46:21 UTC",
+      "rds": "boot_results_second_AW.rds",
+      "rds_sha256": "bc816ccce540d24f1af30184562251c6a9d859d6e64a16c009d0cc39eef1e47d",
+      "metadata": "boot_results_second_AW.txt",
+      "metadata_sha256": "965494ef48934d1e343b1c212635722228705d8a1ce32943e0666d67a4eb2197"
+    },
+    "second_WA": {
+      "label": "Second gen: WA",
+      "B_requested": 1000,
+      "B_effective": 1000,
+      "seed": 2030,
+      "n_cores": 7,
+      "timestamp_utc": "2026-04-29 20:20:59 UTC",
+      "rds": "boot_results_second_WA.rds",
+      "rds_sha256": "b4700ecccb9211714049e2c96a4cdccbc1cf779bf1b9ebc107df2678c9aaf9d0",
+      "metadata": "boot_results_second_WA.txt",
+      "metadata_sha256": "448efa10549ba63c87a9a4b526ed062954ec8a3e8c6fdb55d88da79499cdfd2f"
+    },
+    "third_oneAsian": {
+      "label": "Third gen: 1 Asian GP",
+      "B_requested": 1000,
+      "B_effective": 1000,
+      "seed": 2031,
+      "n_cores": 7,
+      "timestamp_utc": "2026-04-29 23:43:29 UTC",
+      "rds": "boot_results_third_oneAsian.rds",
+      "rds_sha256": "8d6c1d9baecb1d7e13f3adffc9108ea965094d9dc010132af236dd3bafc6704f",
+      "metadata": "boot_results_third_oneAsian.txt",
+      "metadata_sha256": "a6329ee3cd2886b6d933c1b70e9f4bc407da79a3f72e8e6ee91b324528ecf18d"
+    },
+    "third_twoAsian": {
+      "label": "Third gen: 2 Asian GP",
+      "B_requested": 1000,
+      "B_effective": 1000,
+      "seed": 2032,
+      "n_cores": 7,
+      "timestamp_utc": "2026-04-30 00:40:10 UTC",
+      "rds": "boot_results_third_twoAsian.rds",
+      "rds_sha256": "40b9b5fa5bfbe6f7113a7dc070c8c3e75b653143b6f80ffa750573bc8be7ee01",
+      "metadata": "boot_results_third_twoAsian.txt",
+      "metadata_sha256": "cc413b4ee2543a4532c1e698669ef3eeb4ef50e59f2bc5359ebb5fd960536df8"
+    },
+    "third_threeAsian": {
+      "label": "Third gen: 3 Asian GP",
+      "B_requested": 1000,
+      "B_effective": 1000,
+      "seed": 2033,
+      "n_cores": 7,
+      "timestamp_utc": "2026-04-30 00:42:11 UTC",
+      "rds": "boot_results_third_threeAsian.rds",
+      "rds_sha256": "8acb26bb1e3db72c155aaffd10573bca9e09e3fc45b0624614a2c26e8d2cef01",
+      "metadata": "boot_results_third_threeAsian.txt",
+      "metadata_sha256": "e5b0f8fdfa1decd1e570808c9e96b6377fc36c4f860a155a55be199780a6e536"
+    }
+  },
+  "csv": "boot_me_between_model_tests.csv",
+  "csv_sha256": "0439a6de2ecb6b82221f185d29df5faa1031f581c27e540db00c066e9cce9980",
+  "maximum_numeric_reconstruction_error": 4.88498130835069e-15,
+  "estimator": "Difference between model-specific median AMEs",
+  "inference": "Normal approximation: each model SE is its 95% percentile interval width / 3.92; difference SE combines the two model SEs in quadrature, assuming independent samples.",
+  "state_clustered": false,
+  "raw_replication_draws_available": false,
+  "run_id": "20261105-211018",
+  "source_directory": "data/raw/bootstrapping-data",
+  "generator": "programs/54-make-bootstrap-comparison-tables.R",
+  "generator_sha256": "c08b5420a9076bca13451d3785ea32b16f765c809c8ef967215cfeec2a921f93",
+  "reader_sha256": "988d01cf5d77aae52b0ad787316702a26c8d3e889c35e7c9f3eda7b75f6e7f98",
+  "R_version": "R version 4.5.2 (2025-10-31)",
+  "prose_fragments": {
+    "bootstrap-aw-wa-bias-white-diff-pp.tex": "10.1",
+    "bootstrap-aw-wa-bias-white-se-pp.tex": "5.8",
+    "bootstrap-aw-wa-bias-white-p.tex": "0.079",
+    "bootstrap-aw-wa-female-mixed-diff-pp.tex": "9.5",
+    "bootstrap-aw-wa-female-mixed-se-pp.tex": "3.0",
+    "bootstrap-aw-wa-female-mixed-p.tex": "0.002",
+    "bootstrap-gp13-female-white-diff-pp.tex": "-11.6",
+    "bootstrap-gp13-female-white-se-pp.tex": "4.6",
+    "bootstrap-gp13-female-white-p.tex": "0.011",
+    "bootstrap-gp13-female-mixed-diff-pp.tex": "8.2",
+    "bootstrap-gp13-female-mixed-se-pp.tex": "4.2",
+    "bootstrap-gp13-female-mixed-p.tex": "0.053"
+  }
+}

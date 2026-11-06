@@ -70,12 +70,15 @@ The audit also found that Figure 2's panels display different places. Its title,
 | 41 | New: `52-make-bias-index-variance-decomposition.R` (`bias-index-variance-decomposition.csv`: between/within SDs, residual SDs after each fixed-effect set) | `programs/` | R1, E2 |
 | 42 | New: `53-make-identity-distribution-tables.R` (Tables 4–5, CSVs, partition assertions, parent-birthplace shares). Audit pass corrects category notes and adds the generated one-grandparent whole-percent fragment | `programs/`; `output/tables/fragments/` | R2 |
 | 43 | Edited: `17-table-eight-endo-interethnic-reg.R` (`vcov = ~statefip`; notes); `20-acs-skin-iat-migration.R` (notes); `05-…`, `36-…` (superseded headers); `95-make-all.R` (new scripts listed; HPC bootstrap launches commented out) | `programs/` | E4b, R6 |
+| 44 | Added `54-make-bootstrap-comparison-tables.R` and shared `bootstrap-comparison-data.R`; updated script 49. Both generators require matching 1,000-replication checkpoints and reproduce all 48 comparison rows before use. Tables A.3/A.4, four comparison PNGs, and numerical prose now use that run rather than the recovered 50-replication output. Script 49 uses fill-capable markers so hollow/filled symbols implement the stated five-percent rule | `programs/`; Tables A.3–A.4; Figures A.11–A.12; generated `fragments/bootstrap-*.tex` | E4a, R3, R4, U |
 
 The audit correction pass also updates index-unit wording in the Table 8 and A.5 generators. `revision-audit-2026-11-05/tools/refresh-table-notes.R` refreshes their literal note text while retaining stored numeric clauses and asserting identical table bodies; it never runs the estimation expressions. Program 53 was run to rebuild descriptive notes and the percentage fragment, with all counts and shares checked against the prior saved manifests.
 
 The clean-PDF smoke check found that Table A.5's long notes overlapped its page footer. The generator now uses a smaller note font; the final rendered page keeps the complete note above the footer. The table body and every numeric value in the note are unchanged.
 
 The review package now has a retained four-step rebuild under `revision-audit-2026-11-05/tools/98-run-all.sh`. It builds both comparison inputs from LaTeX and verifies native Accept All and Reject All against them before publication. Changed exhibits retain their own captions as complete old/new blocks. A native-application check also caught two notes merging on Reject All; whole-paragraph replacement at the affected insertion boundary preserves the separate notes.
+
+The bootstrap reconciliation is a separate pass after the initial note-only corrections. The source of the mismatch was recovered: the former comparison CSV reproduces a 50-replication run; the marginal-effect figure annotations agree with the preserved 1,000-replication summaries. The author selected reconciliation to the existing 1,000-replication run, not a new bootstrap. The obsolete datasets-folder CSV was archived locally, and active readers now use only the guarded checkpoint directory. `bootstrap-comparison-provenance.json` records source hashes and replication counts; `bootstrap-reconciliation.json` records the numerical changes and preservation checks. Both are in the audit directory.
 
 ## 5. Numbers that changed in the text
 
@@ -93,9 +96,15 @@ The review package now has a retained four-step rebuild under `revision-audit-20
 | One Asian grandparent reporting Asian only | 8% in the pre-audit final draft | 7%, rounded from the unchanged saved share | §4 |
 | Appendix A.2 reporting scale | Log-odds, incorrectly described as exponentiated | Odds ratios, matching the note | Table A.2 |
 | State-FE claim | "remains negative and statistically significant … comparable in magnitude" | "uninformative rather than reassuring"; CIs and residual SDs reported | §6.1, §7 |
+| AW–WA bias contrast, White only | 10.6 pp (SE 4.4), p = 0.016, from 50 replications | 10.1 pp (SE 5.8), p = 0.079, from 1,000 replications; significant only at 10% | Table A.3, Figure A.11, §6, §7, responses R3–R4 |
+| AW–WA female contrast, Asian and White | 9.7 pp (SE 2.8) | 9.5 pp (SE 3.0) | Table A.3, §6 |
+| One-minus-three-grandparent female contrast, White only | −11.8 pp (SE 4.3) | −11.6 pp (SE 4.6), p = 0.011 | Table A.4, §6 |
+| One-minus-three-grandparent female contrast, Asian and White | 8.7 pp (SE 4.0), p = 0.028 | 8.2 pp (SE 4.2), p = 0.053; significant only at 10% | Table A.4, Figure A.12, §6 |
+
+All 48 comparison rows were reconciled, not just the rows quoted in prose. Four comparisons lose five-percent significance, and two other comparisons lose ten-percent significance; the audit's §4 and machine-readable reconciliation record give the details. The pooled state-clustered AW–WA result remains 15.1 pp (SE 4.2), with clustered Wald p = 0.005.
 
 ## 6. Not changed, deliberately
 
-- Regression estimates, estimation samples, and submitted figure PNGs were not changed during the audit correction pass. Script 53 rebuilds descriptive tables and the prose fragment, not regressions.
-- Bootstrap point summaries remain medians. Their complete checkpoint provenance remains unresolved: the manuscript-matching CSV differs from the older preserved run. See `revision-audit-2026-11-05/comment_audit.md`, §4, for evidence and recovery requirements. No bootstrap was rerun.
+- No model was refitted and no bootstrap was rerun during either audit pass. The bootstrap reconciliation changes only the two comparison tables, four comparison PNGs, and their text and notes; all eight marginal-effect panels, other figures, other saved numerical results, and R2 sources are preserved.
+- Bootstrap point summaries remain medians. The 50-versus-1,000-replication mismatch is identified and reconciled, but replication-level draws and per-fit convergence histories were not retained. Comparison inference remains an approximate normal test derived from percentile-interval widths, not state-clustered inference. See `revision-audit-2026-11-05/comment_audit.md`, §4.
 - Old Figures 14–16 are not in the appendix; the table replaces them.

@@ -1,11 +1,32 @@
+#!/usr/bin/env Rscript
 # ================================================================
 # Between-model AME difference coefficient plots
-# Reads boot_me_between_model_tests.csv and produces four PNGs:
+# Validates the preserved 1,000-replication checkpoints and comparison CSV.
+# Never fits models or reruns a bootstrap. Produces four PNGs:
 #   1. Second gen: AW vs. WA
 #   2. Third gen: 1 vs. 2 Asian GP
 #   3. Third gen: 1 vs. 3 Asian GP
 #   4. Third gen: 2 vs. 3 Asian GP
 # ================================================================
+
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(dplyr)
+})
+resolve_root <- function() {
+  env_root <- Sys.getenv("ASIAN_IDENTITY_ROOT")
+  if (nzchar(env_root)) return(normalizePath(env_root, mustWork = TRUE))
+  if (exists("git_mdir", inherits = TRUE)) {
+    return(normalizePath(get("git_mdir", inherits = TRUE), mustWork = TRUE))
+  }
+  args <- commandArgs(trailingOnly = TRUE)
+  normalizePath(if (length(args) >= 1L) args[[1L]] else getwd(), mustWork = TRUE)
+}
+root <- resolve_root()
+source(file.path(root, "programs", "bootstrap-comparison-data.R"), local = TRUE)
+figures_wd <- Sys.getenv("ASIAN_BOOTSTRAP_FIGURES_DIR",
+                         unset = file.path(root, "output", "figures"))
+dir.create(figures_wd, recursive = TRUE, showWarnings = FALSE)
 
 # ---- color-blind-friendly palette ----
 outcome_colors <- c(
@@ -15,14 +36,14 @@ outcome_colors <- c(
 )
 
 outcome_shapes <- c(
-  "Asian Only"    = 16,
-  "White Only"    = 17,
-  "Asian & White" = 15
+  "Asian Only"    = 21,
+  "White Only"    = 24,
+  "Asian & White" = 22
 )
 
 # ---- load data ----
-df <- read.csv(file.path(datasets, "boot_me_between_model_tests.csv"),
-               stringsAsFactors = FALSE)
+df <- read_bootstrap_comparisons(
+  file.path(root, "data", "raw", "bootstrapping-data"))$data
 
 # ---- clean variable and outcome labels ----
 df <- df |>
@@ -78,11 +99,23 @@ plot_between_model <- function(data, subtitle_text) {
       y = "Difference in AME (95% CI)"
     ) +
     coord_flip() +
-    theme_customs() +
+    # Same serif/grid-free style as script 45, explicit for standalone runs.
+    theme_minimal(base_family = "serif") +
     theme(
+      panel.grid.minor = element_blank(),
+      panel.grid.major = element_blank(),
+      plot.background = element_rect(fill = "white", color = NA),
+      axis.title = element_text(face = "bold"),
+      legend.title = element_text(face = "bold", size = rel(1)),
+      axis.text.y = element_text(size = 18),
+      axis.text.x = element_text(size = 24),
+      axis.title.x = element_text(size = 24),
+      axis.title.y = element_text(size = 28),
+      axis.line = element_line(colour = "black"),
+      legend.text = element_text(size = rel(1)),
       plot.subtitle = element_text(size = 11, face = "italic",
                                    margin = margin(b = 8)),
-      plot.margin   = margin(t = 10, r = 10, b = 5, l = 5),
+      plot.margin   = margin(t = 10, r = 35, b = 5, l = 5),
       legend.position = "bottom",
       legend.box = "horizontal"
     ) +

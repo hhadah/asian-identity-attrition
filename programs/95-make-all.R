@@ -102,6 +102,8 @@ source(file.path(programs,"01-packages-wds.R")) # set up package
 source(file.path(programs,"45-bootstrap-plot.R")) # bootstrap plot
 # source(file.path(programs,"46-secadult-bootstrap-run.R")) # second adult bootstrap (HPC; results cached)
 source(file.path(programs,"47-secadult-bootstrap-plot.R")) # second adult bootstrap plot
+# source(file.path(programs,"54-make-bootstrap-comparison-tables.R")) # A.3/A.4 from guarded 1,000-replication summaries; no fits
+# source(file.path(programs,"49-between-model-coefplot.R")) # A.11/A.12 comparison panels from the same guarded summaries
 
 
 ### summary stats

@@ -19,6 +19,28 @@ JPAM_PYTHON=/opt/anaconda3/bin/python3 \
 
 Requirements: pandoc 3.3, latexmk, pdflatex, biber, poppler (`pdftoppm`, `pdfinfo`), LibreOffice 7.5.
 
+## Refreshing the bootstrap comparisons
+
+Scripts 49 and 54 use only `data/raw/bootstrapping-data/`, not the obsolete datasets-folder CSV. The shared reader requires five child checkpoint/metadata pairs with 1,000 requested and effective replications and checks all 48 comparison rows against their median AMEs and percentile bounds. It stops on mixed or stale inputs. Neither script fits models or reruns a bootstrap.
+
+From the repository root:
+
+```bash
+Rscript --vanilla programs/54-make-bootstrap-comparison-tables.R
+Rscript --vanilla programs/49-between-model-coefplot.R
+
+# Inspect the outputs before publishing them to the current submission.
+dest=submissions/05-jpam-RR-final
+cp output/tables/tab-between-model-{second,third}-gen.tex "$dest/"
+cp output/tables/fragments/bootstrap-*.tex "$dest/fragments/"
+cp output/figures/between_model_second_AW_WA.png \
+   output/figures/between_model_third_{1v2,1v3,2v3}GP.png "$dest/"
+cp output/tables/bootstrap-comparison-provenance.json \
+   "$dest/revision-audit-2026-11-05/"
+```
+
+`ASIAN_IDENTITY_ROOT` can specify the repository root. `ASIAN_BOOTSTRAP_OUTPUT_DIR` and `ASIAN_BOOTSTRAP_FIGURES_DIR` can redirect the table and figure outputs for inspection. Update the affected prose and response using the generated fragments, then rebuild clean PDFs and run `98-run-all.sh`. Never publish these outputs into R2. The reconciliation record describes the November 2026 source correction; a different empirical run requires a new numerical review, not just replacing the PNGs.
+
 ## Steps
 
 1. `01-build-clean-docx.py` copies each version's `.tex`, `.bib`, and `.png` files (including `fragments/`) into the work directory, compiles `submit_preprint.tex` with latexmk, and reads exhibit, equation, and section numbers from that version's AUX file. It expands `\input` with TeX comment and line-end rules and converts the title, abstract, main text, tables, figures, and appendix with Pandoc and citeproc (`my_paper/csl/apa.csl`). Tables with their notes and all equations are rendered from LaTeX as images, because LibreOffice 7.5 drops rows of tracked Word tables and OMML. Footnotes become numbered notes at the end. It also converts `comment_audit.md` to DOCX.

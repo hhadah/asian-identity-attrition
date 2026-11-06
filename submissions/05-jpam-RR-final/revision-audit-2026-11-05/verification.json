@@ -1,6 +1,6 @@
 {
   "audit_date": "2026-11-05",
-  "built_utc": "2026-11-06T00:47:24Z",
+  "built_utc": "2026-11-06T02:26:12Z",
   "command": "submissions/05-jpam-RR-final/revision-audit-2026-11-05/tools/98-run-all.sh",
   "tools_sha256": {
     "01-build-clean-docx.py": "eeaddc8a4c3d1f923528a18561edbe5f7822abcc0b45c7e3accf32ef1a516bb4",
@@ -8,7 +8,7 @@
     "03-office-verify.py": "61776f4ad67cb69d26a190785a3ba763dd59d452f6c4db2951ceedbbf295c864",
     "04-verify-and-publish.py": "bacd89175dec0e897a23595c852a52cc098469fa0ee24e4ad52af5bc34176aa9",
     "98-run-all.sh": "c5be0db5fed9d46032b08d0751946a9043e019d8497c781b39cfec7ab6033e1e",
-    "README.md": "a4ba8f9783ac84b6e8e813609b23c137c6ed0362839d718b20365948d750a413",
+    "README.md": "5fa9878e944085225f514b6f7ab548613983be690fce8a7284d2a13c1fd5c8d7",
     "refresh-table-notes.R": "81cd4e4fc7839df1e2e25c274fe136b566858a5c6378df4ca68c0742cd0f835e",
     "review-config.json": "1b7d5006df0e26bb0127eca64bbf985af7fc4a107f533c0069fa5fbdf1e6a67e",
     "review_lib.py": "391ae5a633413d5f56c744434feabee3c28bb066bdad22e5ac6fcec237dc24ff"
@@ -98,10 +98,10 @@
       "Average_Skinmap.png": "a970060165ae39106bee393c5664135f323cdddfd0e7b3a168e286653a555b19",
       "Bias_twostates-asian.png": "1bf34b3d71717328c909713f81280595065285e13d74831a12450894a743862e",
       "Bias_twostates.png": "649795b2eed6d6ea95a2b1a5b812aead064ff7269ceffc7dddadfb18a7d9a790",
-      "between_model_second_AW_WA.png": "b88ccc724203957c43d327c4d907a2129318626d9e15a005ef71a1ff66cb3655",
-      "between_model_third_1v2GP.png": "006112df749d2aff08eb6b1a9b5dcb42ec36ffcec340676b5e5391d4847e7fd6",
-      "between_model_third_1v3GP.png": "86a3fa84e83127a103473a246ac05dc52fbe11fe8be54bd9277da999b94d5ca5",
-      "between_model_third_2v3GP.png": "28329eb5ad95197eba4ca48441e70e39cc0654ca0b6f39f948321190eb6a0219",
+      "between_model_second_AW_WA.png": "8951c82b69d710464b1a239989d34ac163024c622a65af5668f3cfb926e740fb",
+      "between_model_third_1v2GP.png": "adadc43bf005555dbb9186ea5d7a8550ba66c721c1558e39b3b4cbd624eb9fb2",
+      "between_model_third_1v3GP.png": "7649a589da9c8f38e9876c57c5914327e6a8cd0f3539a7ce62441b13bca8f3cb",
+      "between_model_third_2v3GP.png": "f1532d28dd33b4d22aee9af183634df9e9a7813e1d32c3af9201eb56f47f7f5c",
       "boot_me_second_AW.png": "b6b5061f93523b1bb4e1ffdd64ebf063f52ec2d43eba494a2dc79e9c947e6e4c",
       "boot_me_second_AW_WA.png": "487ebd7cea7ecc76b0e6120f59af30a2e248dd69dd88d294056935401ca290a2",
       "boot_me_second_WA.png": "a1e339210a4870d609bb47db236e70d5dd63eaa135e3e42207765848339e366f",
@@ -110,6 +110,18 @@
       "boot_me_third_threeAsian.png": "fef79465276f94b7c1ab10d9705d680ec84407cdf9cbd67dcbb5d4f272355170",
       "boot_me_third_twoAsian.png": "9859d71fe39dfef22b38134387b6fa43faefabef362bae5bec30b6ba97cc74d1",
       "diag.png": "5c92bc5e71726a110dc07fda92ede60bc72f8daf1bdb3b807e352840492fb830",
+      "fragments/bootstrap-aw-wa-bias-white-diff-pp.tex": "98fa52c8debebe3d4b34d4e443e80195ee664586f95a39e755a8663a14f8b3df",
+      "fragments/bootstrap-aw-wa-bias-white-p.tex": "b0924146f5f430e522d42a0f43e935df07d982b8454934b95c29745199c08e5c",
+      "fragments/bootstrap-aw-wa-bias-white-se-pp.tex": "7963e3275a359052913539cb766068dee517c8d8fd55815393ca6f39dc82844a",
+      "fragments/bootstrap-aw-wa-female-mixed-diff-pp.tex": "67a70e253ee864aea5f467dda67d835c01b8f156aff03cb19aa0dfc62a309216",
+      "fragments/bootstrap-aw-wa-female-mixed-p.tex": "33dd7f5e26e656859705d174db286fec0c944347f62ff85abd33628a95c9d077",
+      "fragments/bootstrap-aw-wa-female-mixed-se-pp.tex": "69ed3612b9d0c06fa58d3588a9de7044b1137bd90a612b2aa0cf3f86723cb20b",
+      "fragments/bootstrap-gp13-female-mixed-diff-pp.tex": "d68f0a4e49c441e208db252ed55b7f74bd0999481422af23c28ea4ea7ae92c80",
+      "fragments/bootstrap-gp13-female-mixed-p.tex": "2be77f513658ac29fe18f10766aa976c2c32ef26794eda48529f9f32aa1c8d0d",
+      "fragments/bootstrap-gp13-female-mixed-se-pp.tex": "d11dd4e5014feb16b906bee6a6d3fb348ad0d5150502488b483a943d56802634",
+      "fragments/bootstrap-gp13-female-white-diff-pp.tex": "7170e023f7997b73143f9f38880bb4d606a91170cba0d22b2ec34dd71f609ce1",
+      "fragments/bootstrap-gp13-female-white-p.tex": "f54edacaf2c90ea89d158d07d39dc08d4df9cbfc0678b581ac5e803b08857776",
+      "fragments/bootstrap-gp13-female-white-se-pp.tex": "3ef6f267458aa3ee3cdf4190f0704871d6beb29cc69130c6538872b6721a5268",
       "fragments/one-grandparent-asian-only-percent.tex": "2e7f7d1cbb00333ad1a7765b38b17b45511e8128b4ae9d754578cbe659b5dda5",
       "histogram_asian_american_race_aggregated.png": "b380ab272553f03567eefdc4548deab3f83119eb6cdeea53a17622393df1127e",
       "histogram_asian_american_race_firstgen.png": "71685e7f730ccb0846296f395cbaf2b983ff94784838a281c5c054ab1284eb5c",
@@ -129,18 +141,18 @@
       "iatexample5.png": "6aff1d670c66f7506e6878731367a58301605ddff1131b362354ba4dffae41bf",
       "logit_boot_me_second_AW_WA_adults_multinom.png": "e75618204d0ab7da73881f682dae16fba41fefcd4968c137c6c44e1a4341f10d",
       "maineffect-proxy.tex": "867572be4f755f0e952d8c43f35b8042479fb138eacab6ea8f0d558543dfbc8f",
-      "manuscript_main.tex": "058f696e2e2df528236994e8c8a1308d83f8aaf37302ffb3823833df055da3da",
-      "manuscript_online_appendix.tex": "32bfe80ec2d3eb52119de75afa2e9607188fa1836eccd29ff20d5ab5d98bc995",
+      "manuscript_main.tex": "bc29f77efa1439ae7368ee01829c2578620ff753c846fe392592b91cffbba9dc",
+      "manuscript_online_appendix.tex": "c13f0593494485af548c8e4361dd4734bc9e663ab71cb21d73bf034fd0816958",
       "manuscript_tab_fig.tex": "00ae32879ec3d17cd58ea0a0fe670e2e64ed62a9f1677d7297f138224973a5ae",
       "manuscript_title_etc.tex": "ccfbe237b79dda6f795c98cd0585b5160fb1dbdce595fe42ea6e1e758f1e1bb9",
       "preamble_citation.tex": "e62ddd107ea933ff8d9cf37a5a89f5def05d29569d76626dda89f87d343e22e5",
       "preamble_package.tex": "55273898eb7ee4ffca1fc1d3b1e7eec47bbd7566570f1575453e34c1224a7cc0",
       "scatter-plot-bias-Asian-great2015.png": "76afcd8d3c1557aeb82b1d29cc9533f5626cb47321439c0f32c4dc1694658f19",
       "scatter-plot-bias-Asian-less2015.png": "dd154b3e86d56ffecf266f1709dfb6b30b50f6c67d32e9418f15140ecf847808",
-      "submit_journal.tex": "bee435050de1967ba2a0d183854da40a28a43e6ca9412450b523a202cbdc7415",
+      "submit_journal.tex": "0e28466252eac060e24793fbd3c1283acf9b4c81a2ad9948cf175f89214940c1",
       "submit_preprint.tex": "d9a419b243a87367152f5ecaefebff21514493f843b217034759f68a70366033",
-      "tab-between-model-second-gen.tex": "de95decb373390c8677d02120d058ab69c78754d645a43e117a4291c7713bc47",
-      "tab-between-model-third-gen.tex": "ed38c301b616cf284f89dd160b31a81f91b5d3023edb7748f19155a76cad8a11",
+      "tab-between-model-second-gen.tex": "11f28533d3579bcee152f11905cea50dd688c84c2699d29331973c31a2e445ec",
+      "tab-between-model-third-gen.tex": "7cba91f1380b26b8ac0af892f0c7625eb76042aedbaf1772460841857579d72e",
       "tab01-SumStat.tex": "13f97e22ffb38b9f04c5bbdc4b495d3ad4c75f784b8441d8cfaf9f5f47e2fa65",
       "tab02-observations-by-gen.tex": "c6278b70c3df83269f63e925ab25d96ea4b08c39634f4e6df2e0417eb8aab29d",
       "tab33-asianiat_regression_tab.tex": "3f0264ce3cc52ea3eed191b157f0e1f5d1e808532a67e3279996cd2338630f2f",
@@ -171,6 +183,18 @@
       "tab54-observations-by-gen-adults.tex"
     ],
     "new": [
+      "fragments/bootstrap-aw-wa-bias-white-diff-pp.tex",
+      "fragments/bootstrap-aw-wa-bias-white-p.tex",
+      "fragments/bootstrap-aw-wa-bias-white-se-pp.tex",
+      "fragments/bootstrap-aw-wa-female-mixed-diff-pp.tex",
+      "fragments/bootstrap-aw-wa-female-mixed-p.tex",
+      "fragments/bootstrap-aw-wa-female-mixed-se-pp.tex",
+      "fragments/bootstrap-gp13-female-mixed-diff-pp.tex",
+      "fragments/bootstrap-gp13-female-mixed-p.tex",
+      "fragments/bootstrap-gp13-female-mixed-se-pp.tex",
+      "fragments/bootstrap-gp13-female-white-diff-pp.tex",
+      "fragments/bootstrap-gp13-female-white-p.tex",
+      "fragments/bootstrap-gp13-female-white-se-pp.tex",
       "fragments/one-grandparent-asian-only-percent.tex",
       "maineffect-proxy.tex",
       "manuscript_main.tex",
@@ -224,7 +248,7 @@
       "app_endnotes": true,
       "app_graphics": true,
       "app_graphic_count": true,
-      "image_count": 124
+      "image_count": 129
     },
     "manuscript_reject": {
       "text": true,
@@ -252,7 +276,7 @@
       "app_endnotes": true,
       "app_graphics": true,
       "app_graphic_count": true,
-      "image_count": 81
+      "image_count": 86
     },
     "appendix_reject": {
       "text": true,
@@ -270,13 +294,13 @@
     }
   },
   "native_redlines_loaded": {
-    "manuscript": 789,
-    "appendix": 19
+    "manuscript": 826,
+    "appendix": 9
   },
   "native_xml": {
     "manuscript": {
-      "insertions": 467,
-      "deletions": 570,
+      "insertions": 488,
+      "deletions": 588,
       "paragraph_property_changes": 0,
       "authors": [
         "Hussain Hadah"
@@ -286,8 +310,8 @@
       "valid_xml_relationships_content_types": true
     },
     "appendix": {
-      "insertions": 139,
-      "deletions": 7,
+      "insertions": 161,
+      "deletions": 35,
       "paragraph_property_changes": 0,
       "authors": [
         "Hussain Hadah"
@@ -492,24 +516,44 @@
         "new": null
       },
       {
+        "action": "deleted whole",
+        "old": "Table A.3",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Table A.4",
+        "new": null
+      },
+      {
         "action": "inserted whole",
         "old": null,
         "new": "Table A.2"
       },
       {
-        "action": "unchanged",
-        "old": "Table A.3",
+        "action": "inserted whole",
+        "old": null,
         "new": "Table A.3"
       },
       {
-        "action": "unchanged",
-        "old": "Table A.4",
+        "action": "inserted whole",
+        "old": null,
         "new": "Table A.4"
       },
       {
         "action": "inserted whole",
         "old": null,
         "new": "Table A.5"
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure A.2",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure A.3",
+        "new": null
       },
       {
         "action": "inserted whole",
@@ -527,13 +571,13 @@
         "new": "Figure A.10"
       },
       {
-        "action": "same object, revised in place",
-        "old": "Figure A.2",
+        "action": "inserted whole",
+        "old": null,
         "new": "Figure A.11"
       },
       {
-        "action": "same object, revised in place",
-        "old": "Figure A.3",
+        "action": "inserted whole",
+        "old": null,
         "new": "Figure A.12"
       },
       {
@@ -557,28 +601,28 @@
   },
   "note_counts": {
     "main_R2": 13,
-    "main_final": 16,
+    "main_final": 17,
     "appendix_R2": 0,
     "appendix_final": 0
   },
   "pdf_pages": {
     "manuscript-markup.pdf": 58,
-    "manuscript-clean-new-preview.pdf": 30,
-    "appendix-markup.pdf": 31,
+    "manuscript-clean-new-preview.pdf": 31,
+    "appendix-markup.pdf": 36,
     "appendix-clean-new-preview.pdf": 30,
-    "comment_audit.pdf": 6
+    "comment_audit.pdf": 7
   },
   "artifacts": {
-    "appendix_tracked.docx": "21f442d9df697a360576a16e702049120df51334e5926589993cfe6548905296",
-    "appendix_tracked_preview.pdf": "74dd0265679aa4d8dc05a1f1ec5db7cfd68eda042b88090385c8981f048c8552",
-    "comment_audit.docx": "c05a8a30fc88e3cbd719a87ec72260be88ca3236f149e9de8d0916870f5bc3e4",
-    "comment_audit.pdf": "748448bf96dbeb2d0ff1ecaafb279d2ffb8444d083f33b5b2744de2eacdb310f",
-    "comparison-inputs/appendix_R2_original.docx": "bf0d45ae4778bc713447813316dd13b681f5babe465a750cd76977508f3a92ca",
-    "comparison-inputs/appendix_final_revision.docx": "6a5109e5aab00a6b182a9b8e788a53ec8ef5fa679488b20d5f7c19ad48a64abb",
-    "comparison-inputs/manuscript_R2_original.docx": "f52e346d39ddc94502c3ee241dd2e9d5ff512168610a996347cce0a2c07e18b2",
-    "comparison-inputs/manuscript_final_revision.docx": "141f77d6464d61b4c92b10bec758489931343f448ae37a27bfe49a91c4b21ab0",
-    "manuscript_tracked.docx": "e196eb3f9550ab14277ccd08a78e4fbb7b96427e66c579c0994ac6fe08e89366",
-    "manuscript_tracked_preview.pdf": "00144d917e1925c6821b875787a5b7a0e2318bf873ed48936e527317ba945dd1",
-    "comment_audit.md": "bd173984faefdac94430188cb92b013dde659b19aa606e812765303e128adbe7"
+    "appendix_tracked.docx": "39a5111aa7b0c5bdc77c882b64934ecb47007c55cf0e9a9857aaa3a202a88a5d",
+    "appendix_tracked_preview.pdf": "9f931f524da324ccd5909e4f1659866ebaaa607eaa422786a67d9c2685495763",
+    "comment_audit.docx": "3324f85bc18451e9fbd8dd7d38b20bb0b763fb4ec451cae8f1bfa82b43078e83",
+    "comment_audit.pdf": "81bfea56ed8fcad12654cf6fc82f58ae6a714ae7806eac05873cebd0dbeda0be",
+    "comparison-inputs/appendix_R2_original.docx": "1786380dab26eef34550c1da79623008e6d9a5be44aefd4410ad6e0b2e63afeb",
+    "comparison-inputs/appendix_final_revision.docx": "0160f99d36f62da5d02dd43c3f47097642c0fb57bf3eecbf369a279c04ae74f7",
+    "comparison-inputs/manuscript_R2_original.docx": "f9e3b81408099b876bceb9d709ad0c56e4eb1f342af1cc834caa065c89a06804",
+    "comparison-inputs/manuscript_final_revision.docx": "f1eb8a9263dfbdd7bdcacbdf7296d23fbb3619ffca11b66abf42a23e455b44a6",
+    "manuscript_tracked.docx": "11085429955b810cfb9061d60a89a6da64fd039e5c0fba4e3025feef52a99f4f",
+    "manuscript_tracked_preview.pdf": "b61a6a71de39f3952636d63a64dbaf301450011456f2d6f649198c875b14519f",
+    "comment_audit.md": "e366265a07701526a7a018ba80c10b20303e06f9ae311edc531b4e7dc09accc3"
   }
 }
