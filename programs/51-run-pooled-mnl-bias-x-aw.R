@@ -353,7 +353,7 @@ notes <- paste(
   "multinomial logit scores. The Wald test uses that clustered covariance;",
   "the likelihood-ratio test compares the model with and without the two",
   "interaction terms and assumes independent observations. Average marginal",
-  "effects of a one standard deviation increase in bias are evaluated on",
+  "effects per bias-index unit are evaluated on",
   "the full pooled sample with the AW indicator set to one for every",
   "observation and then to zero, so the two rows share the same covariate",
   "distribution; the difference is the AW--WA gap with its delta-method",
@@ -400,7 +400,7 @@ tex <- c(
   "\\end{tabular}",
   "\\begin{tablenotes}",
   "\\small",
-  sprintf("\\item[1] \\footnotesize{%s}", notes),
+  sprintf("\\item[1] \\scriptsize{%s}", notes),
   "\\end{tablenotes}",
   "\\end{threeparttable}",
   "\\end{table}"

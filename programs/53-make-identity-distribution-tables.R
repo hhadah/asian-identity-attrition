@@ -14,8 +14,9 @@
 # the third.
 #
 # Category definitions match script 44: CPS race code 651 is Asian only, 100
-# is White only, 803/804/809/813 are Asian-White combinations, everything
-# else (including 652, Asian or Pacific Islander) is Other.
+# is White only, and 803/804/809/813 pool White-Asian, White-Hawaiian/Pacific
+# Islander, Asian-Hawaiian/Pacific Islander, and all three components.
+# Everything else (including 652, Asian or Pacific Islander) is Other.
 #
 # Supersedes the table output of scripts 05 and 36, which are left in place.
 # Must not: change samples or weights (counts are unweighted, as before).
@@ -25,6 +26,7 @@
 #         -> output/tables/tab02-observations-by-gen.csv
 #         -> output/tables/tab54-observations-by-gen-adults.tex
 #         -> output/tables/tab54-observations-by-gen-adults.csv
+#         -> output/tables/fragments/one-grandparent-asian-only-percent.tex
 
 suppressPackageStartupMessages({
   library(data.table)
@@ -181,6 +183,16 @@ write.csv(adult_tab,
           file.path(tables_dir, "tab54-observations-by-gen-adults.csv"),
           row.names = FALSE)
 
+# Keep the whole-percent statement in the manuscript tied to Table 4.
+fragment_dir <- file.path(tables_dir, "fragments")
+if (!dir.exists(fragment_dir)) dir.create(fragment_dir, recursive = TRUE)
+one_gp_share <- kid_tab[
+  row_label == "One Asian grandparent", share_asian_only]
+assert_true(length(one_gp_share) == 1L && is.finite(one_gp_share),
+            "Expected one finite Asian-only share for one Asian grandparent.")
+writeLines(paste0(formatC(100 * one_gp_share, format = "f", digits = 0), "%"),
+           file.path(fragment_dir, "one-grandparent-asian-only-percent.tex"))
+
 # ---- LaTeX ----------------------------------------------------------------
 fmt_share <- function(x) formatC(x, format = "f", digits = 2)
 fmt_n <- function(n) formatC(n, format = "d", big.mark = ",")
@@ -204,11 +216,13 @@ header <- c(
 category_note <- paste(
   "Columns report the share of each row's observations in the racial",
   "identity categories used in the multinomial logit: ``Asian only,''",
-  "``White only,'' and ``Asian and White'' (any combination of Asian and",
-  "White, with or without Pacific Islander). ``Other'' collects Asian or",
-  "Pacific Islander, other single races, and multiracial combinations",
-  "without both an Asian and a White component; the multinomial logit",
-  "excludes this category. Shares sum to one across the four columns.")
+  "``White only,'' and ``Asian and White.'' The last category pools",
+  "White--Asian, White--Hawaiian/Pacific Islander,",
+  "Asian--Hawaiian/Pacific Islander, and",
+  "White--Asian--Hawaiian/Pacific Islander responses",
+  "(CPS codes 803, 804, 809, and 813). ``Other'' contains the remaining",
+  "responses and is excluded from the multinomial logit.",
+  "Shares sum to one across the four columns.")
 
 make_table <- function(tab, caption, label, sample_note, source_note, file) {
   tex <- c(

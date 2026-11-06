@@ -279,7 +279,7 @@ notes <- paste(
   "$A_{ist} = \\beta_1 Bias_{st} + \\sum_k \\delta_k (Bias_{st} \\times Z_{ist}^k)",
   "+ \\sum_k \\theta_k Z_{ist}^k + \\mathbf{X}_{ist}\\pi + \\gamma_{rt} + \\varepsilon_{ist}$,",
   "where $A_{ist}$ is self-reported Asian identity, $Bias_{st}$ is the",
-  "demeaned state-level anti-Asian bias index (standard deviation units),",
+  "demeaned state-level anti-Asian bias index in index units,",
   "and the table reports the interaction coefficients $\\delta_k$.",
   "In Panels A and C, $Z$ is female, mother college graduate, and father",
   "college graduate; in Panel B, $Z$ is female, own college degree",

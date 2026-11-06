@@ -1,0 +1,584 @@
+{
+  "audit_date": "2026-11-05",
+  "built_utc": "2026-11-06T00:47:24Z",
+  "command": "submissions/05-jpam-RR-final/revision-audit-2026-11-05/tools/98-run-all.sh",
+  "tools_sha256": {
+    "01-build-clean-docx.py": "eeaddc8a4c3d1f923528a18561edbe5f7822abcc0b45c7e3accf32ef1a516bb4",
+    "02-make-tracked-docx.py": "85fef3713e6cdfb48f21d3f59b69da4a074cb54d8d326af9870b5580bbdc6d13",
+    "03-office-verify.py": "61776f4ad67cb69d26a190785a3ba763dd59d452f6c4db2951ceedbbf295c864",
+    "04-verify-and-publish.py": "bacd89175dec0e897a23595c852a52cc098469fa0ee24e4ad52af5bc34176aa9",
+    "98-run-all.sh": "c5be0db5fed9d46032b08d0751946a9043e019d8497c781b39cfec7ab6033e1e",
+    "README.md": "a4ba8f9783ac84b6e8e813609b23c137c6ed0362839d718b20365948d750a413",
+    "refresh-table-notes.R": "81cd4e4fc7839df1e2e25c274fe136b566858a5c6378df4ca68c0742cd0f835e",
+    "review-config.json": "1b7d5006df0e26bb0127eca64bbf985af7fc4a107f533c0069fa5fbdf1e6a67e",
+    "review_lib.py": "391ae5a633413d5f56c744434feabee3c28bb066bdad22e5ac6fcec237dc24ff"
+  },
+  "baseline": "submissions/04-jpam-RR-v2",
+  "revised": "submissions/05-jpam-RR-final",
+  "submission_sources_modified_by_tools": false,
+  "sources_unchanged_during_build": true,
+  "source_sha256": {
+    "04-jpam-RR-v2": {
+      "2004skinmap.png": "3358f6085337ba4cd6ff3a0d16de4d9b39834c0a0311ab52c18f531d96c11143",
+      "2008skinmap.png": "8e6cf3ae933e5969253a1a5a19a8617fcade00ab7d984f6b436c8bbc67b036a5",
+      "2012skinmap.png": "581097de6221b7a44e793475be0612beb7387c83de7887463d9b2fa7086f6dd8",
+      "2016skinmap.png": "a2a90769228ffe0115f7dce79609ddbb150814431c8959f3c25787e282469f53",
+      "AttitudesPaper.bib": "8e8fa544d76eeabe64793ff93e68b1aa8060ed1e0e6af32e89e597fc1204bf1d",
+      "Average_Skinmap.png": "a970060165ae39106bee393c5664135f323cdddfd0e7b3a168e286653a555b19",
+      "Bias_twostates-asian.png": "1bf34b3d71717328c909713f81280595065285e13d74831a12450894a743862e",
+      "Bias_twostates.png": "649795b2eed6d6ea95a2b1a5b812aead064ff7269ceffc7dddadfb18a7d9a790",
+      "between_model_second_AW_WA.png": "b88ccc724203957c43d327c4d907a2129318626d9e15a005ef71a1ff66cb3655",
+      "between_model_third_1v2GP.png": "006112df749d2aff08eb6b1a9b5dcb42ec36ffcec340676b5e5391d4847e7fd6",
+      "between_model_third_1v3GP.png": "86a3fa84e83127a103473a246ac05dc52fbe11fe8be54bd9277da999b94d5ca5",
+      "between_model_third_2v3GP.png": "28329eb5ad95197eba4ca48441e70e39cc0654ca0b6f39f948321190eb6a0219",
+      "boot_me_second_AW.png": "b6b5061f93523b1bb4e1ffdd64ebf063f52ec2d43eba494a2dc79e9c947e6e4c",
+      "boot_me_second_AW_WA.png": "487ebd7cea7ecc76b0e6120f59af30a2e248dd69dd88d294056935401ca290a2",
+      "boot_me_second_WA.png": "a1e339210a4870d609bb47db236e70d5dd63eaa135e3e42207765848339e366f",
+      "boot_me_third_oneAsian.png": "34c7ee8a5fad8101517dc6c6ae134398f6e506c6bbb6775eb7695db42b3d8b56",
+      "boot_me_third_oneTwoThreeAsian.png": "64447adedf337884dfe7755a9832cf94299d7f40f1ef9d0ad13b928acb6229c2",
+      "boot_me_third_threeAsian.png": "fef79465276f94b7c1ab10d9705d680ec84407cdf9cbd67dcbb5d4f272355170",
+      "boot_me_third_twoAsian.png": "9859d71fe39dfef22b38134387b6fa43faefabef362bae5bec30b6ba97cc74d1",
+      "diag.png": "5c92bc5e71726a110dc07fda92ede60bc72f8daf1bdb3b807e352840492fb830",
+      "histogram_asian_american_race_aggregated.png": "b380ab272553f03567eefdc4548deab3f83119eb6cdeea53a17622393df1127e",
+      "histogram_asian_american_race_firstgen.png": "71685e7f730ccb0846296f395cbaf2b983ff94784838a281c5c054ab1284eb5c",
+      "histogram_asian_american_race_secondgen.png": "4227fa965efae505c830c7a0c6907dd852f03d93417fc33fcf5d63df50a11978",
+      "histogram_asian_american_race_secondgen_AA.png": "80e68dd413977438e67dd2b3bc5183e415c828c311acd3f3e2dccc1ea8ed26b0",
+      "histogram_asian_american_race_secondgen_AW.png": "2ec0427e7f96ad90eb591b17b2258d9aff471c304bc14cde8140126cb32a9e53",
+      "histogram_asian_american_race_secondgen_WA.png": "c985af0a09f26a7575d92f634c2c4e32a1bcb33a70c2084e4903e772e51d7520",
+      "histogram_asian_american_race_thirdgen.png": "838c109819975fea4bfe7dcc1b9b1b456d1d826b2e85e48e7eab6afdd1240f36",
+      "histogram_asian_american_race_thirdgen_fourasiangran.png": "65da4e3e65fe4e87f55c63f69b9b10c50177f281b49ec4aaed82f441263e89ee",
+      "histogram_asian_american_race_thirdgen_oneasiangran.png": "98ede96bf1edac1bad0e6de658b3995d746ce4ada907401231ff08e188f5d597",
+      "histogram_asian_american_race_thirdgen_threeasiangran.png": "9cc7411e7f56bf0fed81f3a6f81f2c4393234ac0d8385df148b1815d1ba987e4",
+      "histogram_asian_american_race_thirdgen_twoasiangran.png": "fe493626a8a89858f352315640a0c35c1f64935427d69ce19e5a2a5bac15cbe5",
+      "iatexample1.png": "49c84034f5a45b74075afdbd0cfb59f1195eb651da7ca0be7289e4b8ccebb81a",
+      "iatexample2.png": "826d1ab88c432b9cf4d1f135f0cefc0932e4edd750aefb61492e7fcfbea4410d",
+      "iatexample3.png": "2964678e2e242a5ef8b512bdd4fdf5deec6b45d11e2f0ae02d1463522f656923",
+      "iatexample4.png": "8060408e869de555b53bfd4d935cf0cb988079ffd85d452137d3d90f2957af35",
+      "iatexample5.png": "6aff1d670c66f7506e6878731367a58301605ddff1131b362354ba4dffae41bf",
+      "interaction_coefficients_AW.png": "3c4c26d29ce2bcfd05b1f4fcb894bdff0e1837b2c2cd8899216f207a4a7a1a96",
+      "interaction_coefficients_AWWA.png": "a3707bf5d0721817d7c3d5d5322e63f1299c8df8ffde4b8bd2def08d43e961a8",
+      "interaction_coefficients_AW_adults.png": "901f0b44e756a1fcdc44146d7c6975e410cf795357d489e8906de66ba1cc8c23",
+      "interaction_coefficients_OneAsian.png": "df4d3b0102053017f9eb99e99c6ea7e66da8a3171f63e1168d1ba19bb79ef6f3",
+      "interaction_coefficients_ThreeAsian.png": "d0fda23b2b03e3569de14c15aedcb1247392791fc01a8b1193bcbf3d8ba5d101",
+      "interaction_coefficients_TwoAsian.png": "d0e2f46dff69b9217960f6ea6204a93937997f22206d97b7d039189c66b0e118",
+      "interaction_coefficients_WA.png": "971e25806b02edf257a70119157610394a4928ac8703a3f201940ba210985d26",
+      "interaction_coefficients_WA_adults.png": "45e61ea26e65289b257186f3ae3f471df64d7d9f38f61747c732751e70d1df00",
+      "interaction_coefficients_pooled_thirdgen.png": "9cf26ed4635fa346eb524dc999d893b719884153666aa993cf66f15bef5092a7",
+      "logit_boot_me_second_AW_WA_adults_multinom.png": "e75618204d0ab7da73881f682dae16fba41fefcd4968c137c6c44e1a4341f10d",
+      "logit_boot_me_second_AW_adults_multinom.png": "307e2910768d61390e3d59c62eaba449079e50fab5f00768642a5be984d56226",
+      "logit_boot_me_second_WA_adults_multinom.png": "f196ef622c2c9f2d055b07b42c2ebe25bd2ea7b6d9238518b41cf8fce861bdff",
+      "maineffect-proxy.tex": "867572be4f755f0e952d8c43f35b8042479fb138eacab6ea8f0d558543dfbc8f",
+      "manuscript_main.tex": "9ebf0709b92c105908209a7abfc79da2a663909c7cc4fe3b674b36a031cada4d",
+      "manuscript_online_appendix.tex": "1b80c36dc2bf139e03f0f34842773ba2182793db79c9031f1614f4814e8d9a88",
+      "manuscript_tab_fig.tex": "fac6169a8ef7dabd8475689e58362ca688717dc8c515515adbafa63d89f2fc04",
+      "manuscript_title_etc.tex": "3dbe5111b0b6770e78bafcc6ed826f225f399aaeb0470c1163424dce0f458d45",
+      "preamble_citation.tex": "e62ddd107ea933ff8d9cf37a5a89f5def05d29569d76626dda89f87d343e22e5",
+      "preamble_package.tex": "55273898eb7ee4ffca1fc1d3b1e7eec47bbd7566570f1575453e34c1224a7cc0",
+      "scatter-plot-bias-Asian-great2015.png": "76afcd8d3c1557aeb82b1d29cc9533f5626cb47321439c0f32c4dc1694658f19",
+      "scatter-plot-bias-Asian-less2015.png": "dd154b3e86d56ffecf266f1709dfb6b30b50f6c67d32e9418f15140ecf847808",
+      "submit_journal.tex": "a1daee1aab22ae68c8851522bc16323d9385b29acbf8ac07d575ca6086f43113",
+      "submit_preprint.tex": "d9a419b243a87367152f5ecaefebff21514493f843b217034759f68a70366033",
+      "tab-between-model-second-gen.tex": "de95decb373390c8677d02120d058ab69c78754d645a43e117a4291c7713bc47",
+      "tab-between-model-third-gen.tex": "ed38c301b616cf284f89dd160b31a81f91b5d3023edb7748f19155a76cad8a11",
+      "tab01-SumStat.tex": "13f97e22ffb38b9f04c5bbdc4b495d3ad4c75f784b8441d8cfaf9f5f47e2fa65",
+      "tab02-observations-by-gen.tex": "1b025f45b40cb43dd4f1988bf23f43c67631cbe5f10e5ae57ce4f9eb6749dbcb",
+      "tab33-asianiat_regression_tab.tex": "3f0264ce3cc52ea3eed191b157f0e1f5d1e808532a67e3279996cd2338630f2f",
+      "tab41a-marriage.tex": "b44894e6158177c0ef9bd780b0bf50ec3140439765a98b25ead47d00fdc4e6dd",
+      "tab46-iat-migration-tab.tex": "8f63ad3021547563e24bcac0a4873612df74246271abc1374d1666de3bb1a59a",
+      "tab47-marriage.tex": "2b0b2b9233d61bb503efa03379e6195b5fd9ad129fd8fcbed52f82eb745ce721",
+      "tab53-SumStatOverAll-adults.tex": "a073ec1627ee220499ceaf2f05f8a7b7724132d9b26d6c46d2f69117f2b99ac3",
+      "tab54-observations-by-gen-adults.tex": "02bffab67e80f9fab35771a5fcd574fc255b7a507e7f196adfe2f5df1bdbb3e0"
+    },
+    "05-jpam-RR-final": {
+      "2004skinmap.png": "3358f6085337ba4cd6ff3a0d16de4d9b39834c0a0311ab52c18f531d96c11143",
+      "2008skinmap.png": "8e6cf3ae933e5969253a1a5a19a8617fcade00ab7d984f6b436c8bbc67b036a5",
+      "2012skinmap.png": "581097de6221b7a44e793475be0612beb7387c83de7887463d9b2fa7086f6dd8",
+      "2016skinmap.png": "a2a90769228ffe0115f7dce79609ddbb150814431c8959f3c25787e282469f53",
+      "AttitudesPaper.bib": "de17021e59eead08a8bdea4de60f24a030dc5d43aa0de27662fb347e673693ca",
+      "Average_Skinmap.png": "a970060165ae39106bee393c5664135f323cdddfd0e7b3a168e286653a555b19",
+      "Bias_twostates-asian.png": "1bf34b3d71717328c909713f81280595065285e13d74831a12450894a743862e",
+      "Bias_twostates.png": "649795b2eed6d6ea95a2b1a5b812aead064ff7269ceffc7dddadfb18a7d9a790",
+      "between_model_second_AW_WA.png": "b88ccc724203957c43d327c4d907a2129318626d9e15a005ef71a1ff66cb3655",
+      "between_model_third_1v2GP.png": "006112df749d2aff08eb6b1a9b5dcb42ec36ffcec340676b5e5391d4847e7fd6",
+      "between_model_third_1v3GP.png": "86a3fa84e83127a103473a246ac05dc52fbe11fe8be54bd9277da999b94d5ca5",
+      "between_model_third_2v3GP.png": "28329eb5ad95197eba4ca48441e70e39cc0654ca0b6f39f948321190eb6a0219",
+      "boot_me_second_AW.png": "b6b5061f93523b1bb4e1ffdd64ebf063f52ec2d43eba494a2dc79e9c947e6e4c",
+      "boot_me_second_AW_WA.png": "487ebd7cea7ecc76b0e6120f59af30a2e248dd69dd88d294056935401ca290a2",
+      "boot_me_second_WA.png": "a1e339210a4870d609bb47db236e70d5dd63eaa135e3e42207765848339e366f",
+      "boot_me_third_oneAsian.png": "34c7ee8a5fad8101517dc6c6ae134398f6e506c6bbb6775eb7695db42b3d8b56",
+      "boot_me_third_oneTwoThreeAsian.png": "64447adedf337884dfe7755a9832cf94299d7f40f1ef9d0ad13b928acb6229c2",
+      "boot_me_third_threeAsian.png": "fef79465276f94b7c1ab10d9705d680ec84407cdf9cbd67dcbb5d4f272355170",
+      "boot_me_third_twoAsian.png": "9859d71fe39dfef22b38134387b6fa43faefabef362bae5bec30b6ba97cc74d1",
+      "diag.png": "5c92bc5e71726a110dc07fda92ede60bc72f8daf1bdb3b807e352840492fb830",
+      "fragments/one-grandparent-asian-only-percent.tex": "2e7f7d1cbb00333ad1a7765b38b17b45511e8128b4ae9d754578cbe659b5dda5",
+      "histogram_asian_american_race_aggregated.png": "b380ab272553f03567eefdc4548deab3f83119eb6cdeea53a17622393df1127e",
+      "histogram_asian_american_race_firstgen.png": "71685e7f730ccb0846296f395cbaf2b983ff94784838a281c5c054ab1284eb5c",
+      "histogram_asian_american_race_secondgen.png": "4227fa965efae505c830c7a0c6907dd852f03d93417fc33fcf5d63df50a11978",
+      "histogram_asian_american_race_secondgen_AA.png": "80e68dd413977438e67dd2b3bc5183e415c828c311acd3f3e2dccc1ea8ed26b0",
+      "histogram_asian_american_race_secondgen_AW.png": "2ec0427e7f96ad90eb591b17b2258d9aff471c304bc14cde8140126cb32a9e53",
+      "histogram_asian_american_race_secondgen_WA.png": "c985af0a09f26a7575d92f634c2c4e32a1bcb33a70c2084e4903e772e51d7520",
+      "histogram_asian_american_race_thirdgen.png": "838c109819975fea4bfe7dcc1b9b1b456d1d826b2e85e48e7eab6afdd1240f36",
+      "histogram_asian_american_race_thirdgen_fourasiangran.png": "65da4e3e65fe4e87f55c63f69b9b10c50177f281b49ec4aaed82f441263e89ee",
+      "histogram_asian_american_race_thirdgen_oneasiangran.png": "98ede96bf1edac1bad0e6de658b3995d746ce4ada907401231ff08e188f5d597",
+      "histogram_asian_american_race_thirdgen_threeasiangran.png": "9cc7411e7f56bf0fed81f3a6f81f2c4393234ac0d8385df148b1815d1ba987e4",
+      "histogram_asian_american_race_thirdgen_twoasiangran.png": "fe493626a8a89858f352315640a0c35c1f64935427d69ce19e5a2a5bac15cbe5",
+      "iatexample1.png": "49c84034f5a45b74075afdbd0cfb59f1195eb651da7ca0be7289e4b8ccebb81a",
+      "iatexample2.png": "826d1ab88c432b9cf4d1f135f0cefc0932e4edd750aefb61492e7fcfbea4410d",
+      "iatexample3.png": "2964678e2e242a5ef8b512bdd4fdf5deec6b45d11e2f0ae02d1463522f656923",
+      "iatexample4.png": "8060408e869de555b53bfd4d935cf0cb988079ffd85d452137d3d90f2957af35",
+      "iatexample5.png": "6aff1d670c66f7506e6878731367a58301605ddff1131b362354ba4dffae41bf",
+      "logit_boot_me_second_AW_WA_adults_multinom.png": "e75618204d0ab7da73881f682dae16fba41fefcd4968c137c6c44e1a4341f10d",
+      "maineffect-proxy.tex": "867572be4f755f0e952d8c43f35b8042479fb138eacab6ea8f0d558543dfbc8f",
+      "manuscript_main.tex": "058f696e2e2df528236994e8c8a1308d83f8aaf37302ffb3823833df055da3da",
+      "manuscript_online_appendix.tex": "32bfe80ec2d3eb52119de75afa2e9607188fa1836eccd29ff20d5ab5d98bc995",
+      "manuscript_tab_fig.tex": "00ae32879ec3d17cd58ea0a0fe670e2e64ed62a9f1677d7297f138224973a5ae",
+      "manuscript_title_etc.tex": "ccfbe237b79dda6f795c98cd0585b5160fb1dbdce595fe42ea6e1e758f1e1bb9",
+      "preamble_citation.tex": "e62ddd107ea933ff8d9cf37a5a89f5def05d29569d76626dda89f87d343e22e5",
+      "preamble_package.tex": "55273898eb7ee4ffca1fc1d3b1e7eec47bbd7566570f1575453e34c1224a7cc0",
+      "scatter-plot-bias-Asian-great2015.png": "76afcd8d3c1557aeb82b1d29cc9533f5626cb47321439c0f32c4dc1694658f19",
+      "scatter-plot-bias-Asian-less2015.png": "dd154b3e86d56ffecf266f1709dfb6b30b50f6c67d32e9418f15140ecf847808",
+      "submit_journal.tex": "bee435050de1967ba2a0d183854da40a28a43e6ca9412450b523a202cbdc7415",
+      "submit_preprint.tex": "d9a419b243a87367152f5ecaefebff21514493f843b217034759f68a70366033",
+      "tab-between-model-second-gen.tex": "de95decb373390c8677d02120d058ab69c78754d645a43e117a4291c7713bc47",
+      "tab-between-model-third-gen.tex": "ed38c301b616cf284f89dd160b31a81f91b5d3023edb7748f19155a76cad8a11",
+      "tab01-SumStat.tex": "13f97e22ffb38b9f04c5bbdc4b495d3ad4c75f784b8441d8cfaf9f5f47e2fa65",
+      "tab02-observations-by-gen.tex": "c6278b70c3df83269f63e925ab25d96ea4b08c39634f4e6df2e0417eb8aab29d",
+      "tab33-asianiat_regression_tab.tex": "3f0264ce3cc52ea3eed191b157f0e1f5d1e808532a67e3279996cd2338630f2f",
+      "tab41a-marriage.tex": "dbbe911b7671c4cf527f936b389739d604ca84d16c29570d4d8bc535009cb283",
+      "tab46-iat-migration-tab.tex": "68059980efa72dec2111cc9ae053d4b509eaabfd0a0d28d058e887ef0954fc7b",
+      "tab47-marriage.tex": "e43f7e8f1cb0ad268ffc82808ea22ab17f58f804972f6fc1ecfa6283e7c697e0",
+      "tab50-heterogeneity-interactions.tex": "8105b7ba58eed158bd6e8453c5a994754fee18ce324f5e2897200e226be9404a",
+      "tab51-pooled-mnl-bias-x-aw.tex": "87f7f2907b5431a1df3cf68c3d976ade298dcd19a805fc04d2d359e47ea0a351",
+      "tab53-SumStatOverAll-adults.tex": "a073ec1627ee220499ceaf2f05f8a7b7724132d9b26d6c46d2f69117f2b99ac3",
+      "tab54-observations-by-gen-adults.tex": "1619ced7c2d2542f407f1e9a8696ab90936109bd6509e6579184820b9a5074ca"
+    }
+  },
+  "included_tex": {
+    "old": [
+      "maineffect-proxy.tex",
+      "manuscript_main.tex",
+      "manuscript_online_appendix.tex",
+      "manuscript_tab_fig.tex",
+      "tab-between-model-second-gen.tex",
+      "tab-between-model-third-gen.tex",
+      "tab01-SumStat.tex",
+      "tab02-observations-by-gen.tex",
+      "tab33-asianiat_regression_tab.tex",
+      "tab41a-marriage.tex",
+      "tab46-iat-migration-tab.tex",
+      "tab47-marriage.tex",
+      "tab53-SumStatOverAll-adults.tex",
+      "tab54-observations-by-gen-adults.tex"
+    ],
+    "new": [
+      "fragments/one-grandparent-asian-only-percent.tex",
+      "maineffect-proxy.tex",
+      "manuscript_main.tex",
+      "manuscript_online_appendix.tex",
+      "manuscript_tab_fig.tex",
+      "tab-between-model-second-gen.tex",
+      "tab-between-model-third-gen.tex",
+      "tab01-SumStat.tex",
+      "tab02-observations-by-gen.tex",
+      "tab33-asianiat_regression_tab.tex",
+      "tab41a-marriage.tex",
+      "tab46-iat-migration-tab.tex",
+      "tab47-marriage.tex",
+      "tab50-heterogeneity-interactions.tex",
+      "tab51-pooled-mnl-bias-x-aw.tex",
+      "tab53-SumStatOverAll-adults.tex",
+      "tab54-observations-by-gen-adults.tex"
+    ]
+  },
+  "duplicate_labels_resolved_as_latex": {
+    "old": [
+      "sub:lw-bias"
+    ],
+    "new": []
+  },
+  "csl": "my_paper/csl/apa.csl",
+  "csl_sha256": "31ee31498729016bff225485cbe8c806683b8f3e0b186316902b98dbfa61b03a",
+  "comparison_method": "Identical LaTeX-source conversion for both versions (AUX-resolved numbers, citeproc references); tables with notes and all equations rendered from LaTeX as images; notes collected at the end; native OOXML word-level insertions and deletions for similar prose, with whole-paragraph replacements where needed to preserve boundaries; an exhibit is revised in place only when its rendered images are identical, otherwise the old exhibit is deleted whole and the new one inserted whole.",
+  "pandoc": "pandoc 3.3",
+  "application": "LibreOffice 7.5.4.2, private headless profile; Microsoft Word not automated",
+  "xml_projection_roundtrips": {
+    "manuscript": {
+      "accept": "exact",
+      "reject": "exact"
+    },
+    "appendix": {
+      "accept": "exact",
+      "reject": "exact"
+    }
+  },
+  "native_application_roundtrips": {
+    "manuscript_accept": {
+      "text": true,
+      "math": true,
+      "notes": true,
+      "images": true,
+      "table_count": true,
+      "drawing_count": true,
+      "app_paragraphs": true,
+      "app_footnotes": true,
+      "app_endnotes": true,
+      "app_graphics": true,
+      "app_graphic_count": true,
+      "image_count": 124
+    },
+    "manuscript_reject": {
+      "text": true,
+      "math": true,
+      "notes": true,
+      "images": true,
+      "table_count": true,
+      "drawing_count": true,
+      "app_paragraphs": true,
+      "app_footnotes": true,
+      "app_endnotes": true,
+      "app_graphics": true,
+      "app_graphic_count": true,
+      "image_count": 129
+    },
+    "appendix_accept": {
+      "text": true,
+      "math": true,
+      "notes": true,
+      "images": true,
+      "table_count": true,
+      "drawing_count": true,
+      "app_paragraphs": true,
+      "app_footnotes": true,
+      "app_endnotes": true,
+      "app_graphics": true,
+      "app_graphic_count": true,
+      "image_count": 81
+    },
+    "appendix_reject": {
+      "text": true,
+      "math": true,
+      "notes": true,
+      "images": true,
+      "table_count": true,
+      "drawing_count": true,
+      "app_paragraphs": true,
+      "app_footnotes": true,
+      "app_endnotes": true,
+      "app_graphics": true,
+      "app_graphic_count": true,
+      "image_count": 50
+    }
+  },
+  "native_redlines_loaded": {
+    "manuscript": 789,
+    "appendix": 19
+  },
+  "native_xml": {
+    "manuscript": {
+      "insertions": 467,
+      "deletions": 570,
+      "paragraph_property_changes": 0,
+      "authors": [
+        "Hussain Hadah"
+      ],
+      "unique_revision_ids": true,
+      "unique_drawing_ids": true,
+      "valid_xml_relationships_content_types": true
+    },
+    "appendix": {
+      "insertions": 139,
+      "deletions": 7,
+      "paragraph_property_changes": 0,
+      "authors": [
+        "Hussain Hadah"
+      ],
+      "unique_revision_ids": true,
+      "unique_drawing_ids": true,
+      "valid_xml_relationships_content_types": true
+    }
+  },
+  "exhibit_pairing": {
+    "manuscript": [
+      {
+        "action": "unchanged",
+        "old": "Table 1",
+        "new": "Table 1"
+      },
+      {
+        "action": "unchanged",
+        "old": "Table 2",
+        "new": "Table 2"
+      },
+      {
+        "action": "unchanged",
+        "old": "Table 3",
+        "new": "Table 3"
+      },
+      {
+        "action": "deleted whole",
+        "old": "Table 4",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Table 5",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Table 6",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Table 7",
+        "new": null
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table 4"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table 5"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table 6"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table 7"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table 8"
+      },
+      {
+        "action": "unchanged",
+        "old": "Figure 1",
+        "new": "Figure 1"
+      },
+      {
+        "action": "same object, revised in place",
+        "old": "Figure 2",
+        "new": "Figure 2"
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 3",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 4",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 5",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 6",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 7",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 8",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 9",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 10",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 11",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 12",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 13",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 14",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 15",
+        "new": null
+      },
+      {
+        "action": "deleted whole",
+        "old": "Figure 16",
+        "new": null
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure 3"
+      }
+    ],
+    "appendix": [
+      {
+        "action": "unchanged",
+        "old": "Figure A.1",
+        "new": "Figure A.1"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.2"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.3"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.4"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.5"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.6"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.7"
+      },
+      {
+        "action": "unchanged",
+        "old": "Table A.1",
+        "new": "Table A.1"
+      },
+      {
+        "action": "deleted whole",
+        "old": "Table A.2",
+        "new": null
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table A.2"
+      },
+      {
+        "action": "unchanged",
+        "old": "Table A.3",
+        "new": "Table A.3"
+      },
+      {
+        "action": "unchanged",
+        "old": "Table A.4",
+        "new": "Table A.4"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Table A.5"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.8"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.9"
+      },
+      {
+        "action": "inserted whole",
+        "old": null,
+        "new": "Figure A.10"
+      },
+      {
+        "action": "same object, revised in place",
+        "old": "Figure A.2",
+        "new": "Figure A.11"
+      },
+      {
+        "action": "same object, revised in place",
+        "old": "Figure A.3",
+        "new": "Figure A.12"
+      },
+      {
+        "action": "same object, revised in place",
+        "old": "Figure A.4",
+        "new": "Figure A.13"
+      }
+    ]
+  },
+  "figure_counts": {
+    "main_R2": 16,
+    "main_final": 3,
+    "appendix_R2": 4,
+    "appendix_final": 13
+  },
+  "logical_table_counts": {
+    "main_R2": 7,
+    "main_final": 8,
+    "appendix_R2": 4,
+    "appendix_final": 5
+  },
+  "note_counts": {
+    "main_R2": 13,
+    "main_final": 16,
+    "appendix_R2": 0,
+    "appendix_final": 0
+  },
+  "pdf_pages": {
+    "manuscript-markup.pdf": 58,
+    "manuscript-clean-new-preview.pdf": 30,
+    "appendix-markup.pdf": 31,
+    "appendix-clean-new-preview.pdf": 30,
+    "comment_audit.pdf": 6
+  },
+  "artifacts": {
+    "appendix_tracked.docx": "21f442d9df697a360576a16e702049120df51334e5926589993cfe6548905296",
+    "appendix_tracked_preview.pdf": "74dd0265679aa4d8dc05a1f1ec5db7cfd68eda042b88090385c8981f048c8552",
+    "comment_audit.docx": "c05a8a30fc88e3cbd719a87ec72260be88ca3236f149e9de8d0916870f5bc3e4",
+    "comment_audit.pdf": "748448bf96dbeb2d0ff1ecaafb279d2ffb8444d083f33b5b2744de2eacdb310f",
+    "comparison-inputs/appendix_R2_original.docx": "bf0d45ae4778bc713447813316dd13b681f5babe465a750cd76977508f3a92ca",
+    "comparison-inputs/appendix_final_revision.docx": "6a5109e5aab00a6b182a9b8e788a53ec8ef5fa679488b20d5f7c19ad48a64abb",
+    "comparison-inputs/manuscript_R2_original.docx": "f52e346d39ddc94502c3ee241dd2e9d5ff512168610a996347cce0a2c07e18b2",
+    "comparison-inputs/manuscript_final_revision.docx": "141f77d6464d61b4c92b10bec758489931343f448ae37a27bfe49a91c4b21ab0",
+    "manuscript_tracked.docx": "e196eb3f9550ab14277ccd08a78e4fbb7b96427e66c579c0994ac6fe08e89366",
+    "manuscript_tracked_preview.pdf": "00144d917e1925c6821b875787a5b7a0e2318bf873ed48936e527317ba945dd1",
+    "comment_audit.md": "bd173984faefdac94430188cb92b013dde659b19aa606e812765303e128adbe7"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "audit_date": "2026-11-05",
+  "comparison": "05-jpam-RR-final immediately before this correction pass versus corrected sources; not R2 versus final",
+  "table_body_method": "Exact equality of complete tabular/longtable environments; revised notes outside those environments are excluded",
+  "tables": {
+    "tab-between-model-second-gen.tex": {
+      "unchanged": true,
+      "body_sha256": "0f9764a09ae41b081e13469fdba436d9c9b5168395bd6e95cc1b82c44f06e387"
+    },
+    "tab-between-model-third-gen.tex": {
+      "unchanged": true,
+      "body_sha256": "b345cf2d14c2e88aaa4a02befa4c3d120720e074e7cb31f8a99f5a9a09bb7f79"
+    },
+    "tab01-SumStat.tex": {
+      "unchanged": true,
+      "body_sha256": "262cb4b6aef0fd3ffab19c341eebe5fd81c4eaef1cbff4714841dc22db7b7e2e"
+    },
+    "tab02-observations-by-gen.tex": {
+      "unchanged": true,
+      "body_sha256": "b686c0530bd2c4bf6632061a6d66c28c1f04ee6cdd8dd84b00410cb15eb3a6dc"
+    },
+    "tab33-asianiat_regression_tab.tex": {
+      "unchanged": true,
+      "body_sha256": "fe0a5f0684f690ce06d79eab5032eaa7515f369373b3c25d68dd08630dbfc6ee"
+    },
+    "tab41a-marriage.tex": {
+      "unchanged": true,
+      "body_sha256": "b1bf7e76c668e06e4e2ef24b623c63a0be912ab2aa86efb722ce26b2a7ed70f5"
+    },
+    "tab46-iat-migration-tab.tex": {
+      "unchanged": true,
+      "body_sha256": "ea0e47584b29be22cd16dc7ed119780a3bec480cee305309cac9517929bcf3db"
+    },
+    "tab47-marriage.tex": {
+      "unchanged": true,
+      "body_sha256": "4c584e8db805eab35329c87345376fa9c96c08df5979ab1e422720e9cf3173b5"
+    },
+    "tab50-heterogeneity-interactions.tex": {
+      "unchanged": true,
+      "body_sha256": "8e900696b4f1717edc3dfa58ef7b829157ebf8e348566b69a5e068625b685229"
+    },
+    "tab51-pooled-mnl-bias-x-aw.tex": {
+      "unchanged": true,
+      "body_sha256": "2c6a076779510b5f1599dc44c8b93f8e2341bae0013918d3cdef91ebd5084f96"
+    },
+    "tab53-SumStatOverAll-adults.tex": {
+      "unchanged": true,
+      "body_sha256": "46c8afc441d6e3fb1f998850fa5084110828f383635074545fdea3b347f9c8aa"
+    },
+    "tab54-observations-by-gen-adults.tex": {
+      "unchanged": true,
+      "body_sha256": "f89f60a9f1b2474ccb442fd8d2e6a7c221a478116dec3ac6696fe6c227051944"
+    }
+  },
+  "figure_pngs": {
+    "2004skinmap.png": {
+      "unchanged": true,
+      "sha256": "3358f6085337ba4cd6ff3a0d16de4d9b39834c0a0311ab52c18f531d96c11143"
+    },
+    "2008skinmap.png": {
+      "unchanged": true,
+      "sha256": "8e6cf3ae933e5969253a1a5a19a8617fcade00ab7d984f6b436c8bbc67b036a5"
+    },
+    "2012skinmap.png": {
+      "unchanged": true,
+      "sha256": "581097de6221b7a44e793475be0612beb7387c83de7887463d9b2fa7086f6dd8"
+    },
+    "2016skinmap.png": {
+      "unchanged": true,
+      "sha256": "a2a90769228ffe0115f7dce79609ddbb150814431c8959f3c25787e282469f53"
+    },
+    "Average_Skinmap.png": {
+      "unchanged": true,
+      "sha256": "a970060165ae39106bee393c5664135f323cdddfd0e7b3a168e286653a555b19"
+    },
+    "Bias_twostates-asian.png": {
+      "unchanged": true,
+      "sha256": "1bf34b3d71717328c909713f81280595065285e13d74831a12450894a743862e"
+    },
+    "Bias_twostates.png": {
+      "unchanged": true,
+      "sha256": "649795b2eed6d6ea95a2b1a5b812aead064ff7269ceffc7dddadfb18a7d9a790"
+    },
+    "between_model_second_AW_WA.png": {
+      "unchanged": true,
+      "sha256": "b88ccc724203957c43d327c4d907a2129318626d9e15a005ef71a1ff66cb3655"
+    },
+    "between_model_third_1v2GP.png": {
+      "unchanged": true,
+      "sha256": "006112df749d2aff08eb6b1a9b5dcb42ec36ffcec340676b5e5391d4847e7fd6"
+    },
+    "between_model_third_1v3GP.png": {
+      "unchanged": true,
+      "sha256": "86a3fa84e83127a103473a246ac05dc52fbe11fe8be54bd9277da999b94d5ca5"
+    },
+    "between_model_third_2v3GP.png": {
+      "unchanged": true,
+      "sha256": "28329eb5ad95197eba4ca48441e70e39cc0654ca0b6f39f948321190eb6a0219"
+    },
+    "boot_me_second_AW.png": {
+      "unchanged": true,
+      "sha256": "b6b5061f93523b1bb4e1ffdd64ebf063f52ec2d43eba494a2dc79e9c947e6e4c"
+    },
+    "boot_me_second_AW_WA.png": {
+      "unchanged": true,
+      "sha256": "487ebd7cea7ecc76b0e6120f59af30a2e248dd69dd88d294056935401ca290a2"
+    },
+    "boot_me_second_WA.png": {
+      "unchanged": true,
+      "sha256": "a1e339210a4870d609bb47db236e70d5dd63eaa135e3e42207765848339e366f"
+    },
+    "boot_me_third_oneAsian.png": {
+      "unchanged": true,
+      "sha256": "34c7ee8a5fad8101517dc6c6ae134398f6e506c6bbb6775eb7695db42b3d8b56"
+    },
+    "boot_me_third_oneTwoThreeAsian.png": {
+      "unchanged": true,
+      "sha256": "64447adedf337884dfe7755a9832cf94299d7f40f1ef9d0ad13b928acb6229c2"
+    },
+    "boot_me_third_threeAsian.png": {
+      "unchanged": true,
+      "sha256": "fef79465276f94b7c1ab10d9705d680ec84407cdf9cbd67dcbb5d4f272355170"
+    },
+    "boot_me_third_twoAsian.png": {
+      "unchanged": true,
+      "sha256": "9859d71fe39dfef22b38134387b6fa43faefabef362bae5bec30b6ba97cc74d1"
+    },
+    "diag.png": {
+      "unchanged": true,
+      "sha256": "5c92bc5e71726a110dc07fda92ede60bc72f8daf1bdb3b807e352840492fb830"
+    },
+    "histogram_asian_american_race_aggregated.png": {
+      "unchanged": true,
+      "sha256": "b380ab272553f03567eefdc4548deab3f83119eb6cdeea53a17622393df1127e"
+    },
+    "histogram_asian_american_race_firstgen.png": {
+      "unchanged": true,
+      "sha256": "71685e7f730ccb0846296f395cbaf2b983ff94784838a281c5c054ab1284eb5c"
+    },
+    "histogram_asian_american_race_secondgen.png": {
+      "unchanged": true,
+      "sha256": "4227fa965efae505c830c7a0c6907dd852f03d93417fc33fcf5d63df50a11978"
+    },
+    "histogram_asian_american_race_secondgen_AA.png": {
+      "unchanged": true,
+      "sha256": "80e68dd413977438e67dd2b3bc5183e415c828c311acd3f3e2dccc1ea8ed26b0"
+    },
+    "histogram_asian_american_race_secondgen_AW.png": {
+      "unchanged": true,
+      "sha256": "2ec0427e7f96ad90eb591b17b2258d9aff471c304bc14cde8140126cb32a9e53"
+    },
+    "histogram_asian_american_race_secondgen_WA.png": {
+      "unchanged": true,
+      "sha256": "c985af0a09f26a7575d92f634c2c4e32a1bcb33a70c2084e4903e772e51d7520"
+    },
+    "histogram_asian_american_race_thirdgen.png": {
+      "unchanged": true,
+      "sha256": "838c109819975fea4bfe7dcc1b9b1b456d1d826b2e85e48e7eab6afdd1240f36"
+    },
+    "histogram_asian_american_race_thirdgen_fourasiangran.png": {
+      "unchanged": true,
+      "sha256": "65da4e3e65fe4e87f55c63f69b9b10c50177f281b49ec4aaed82f441263e89ee"
+    },
+    "histogram_asian_american_race_thirdgen_oneasiangran.png": {
+      "unchanged": true,
+      "sha256": "98ede96bf1edac1bad0e6de658b3995d746ce4ada907401231ff08e188f5d597"
+    },
+    "histogram_asian_american_race_thirdgen_threeasiangran.png": {
+      "unchanged": true,
+      "sha256": "9cc7411e7f56bf0fed81f3a6f81f2c4393234ac0d8385df148b1815d1ba987e4"
+    },
+    "histogram_asian_american_race_thirdgen_twoasiangran.png": {
+      "unchanged": true,
+      "sha256": "fe493626a8a89858f352315640a0c35c1f64935427d69ce19e5a2a5bac15cbe5"
+    },
+    "iatexample1.png": {
+      "unchanged": true,
+      "sha256": "49c84034f5a45b74075afdbd0cfb59f1195eb651da7ca0be7289e4b8ccebb81a"
+    },
+    "iatexample2.png": {
+      "unchanged": true,
+      "sha256": "826d1ab88c432b9cf4d1f135f0cefc0932e4edd750aefb61492e7fcfbea4410d"
+    },
+    "iatexample3.png": {
+      "unchanged": true,
+      "sha256": "2964678e2e242a5ef8b512bdd4fdf5deec6b45d11e2f0ae02d1463522f656923"
+    },
+    "iatexample4.png": {
+      "unchanged": true,
+      "sha256": "8060408e869de555b53bfd4d935cf0cb988079ffd85d452137d3d90f2957af35"
+    },
+    "iatexample5.png": {
+      "unchanged": true,
+      "sha256": "6aff1d670c66f7506e6878731367a58301605ddff1131b362354ba4dffae41bf"
+    },
+    "logit_boot_me_second_AW_WA_adults_multinom.png": {
+      "unchanged": true,
+      "sha256": "e75618204d0ab7da73881f682dae16fba41fefcd4968c137c6c44e1a4341f10d"
+    },
+    "scatter-plot-bias-Asian-great2015.png": {
+      "unchanged": true,
+      "sha256": "76afcd8d3c1557aeb82b1d29cc9533f5626cb47321439c0f32c4dc1694658f19"
+    },
+    "scatter-plot-bias-Asian-less2015.png": {
+      "unchanged": true,
+      "sha256": "dd154b3e86d56ffecf266f1709dfb6b30b50f6c67d32e9418f15140ecf847808"
+    }
+  },
+  "clean_pdfs": {
+    "submit_journal.pdf": {
+      "pages": 94,
+      "sha256": "15ff862d052c07e5b6a038375695e0b7806bb232cc4a70ed8490b1a67ba8d8ca",
+      "matches_smoke_build": true
+    },
+    "submit_preprint.pdf": {
+      "pages": 60,
+      "sha256": "7f24d423e4326731cdce92951fdc9506f19e0ed3b13846e502b3703ef43c837d",
+      "matches_smoke_build": true
+    }
+  },
+  "visual_checks": [
+    "Corrected journal: generated percentage, Tables 4/5/8, Figure 2, R3 response, Table A.5 footer clearance",
+    "Tracked review: Figure 2, combined Figure 3, note 11 insertion boundary, Appendix Table A.5"
+  ],
+  "regressions_or_bootstraps_rerun": false,
+  "bootstrap_provenance": "Unresolved; see comment_audit.md section 4"
+}

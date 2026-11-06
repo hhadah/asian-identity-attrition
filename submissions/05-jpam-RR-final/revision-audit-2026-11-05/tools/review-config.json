@@ -1,0 +1,29 @@
+{
+  "audit_date": "2026-11-05",
+  "revision_author": "Hussain Hadah",
+  "revision_date": "2026-11-05T23:00:00Z",
+  "versions": {
+    "old": {
+      "dir": "submissions/04-jpam-RR-v2",
+      "tag": "R2_original",
+      "short": "R2"
+    },
+    "new": {
+      "dir": "submissions/05-jpam-RR-final",
+      "tag": "final_revision",
+      "short": "final"
+    }
+  },
+  "scopes": {
+    "manuscript": {"short": "main"},
+    "appendix": {"short": "appendix"}
+  },
+  "audit_dir": "submissions/05-jpam-RR-final/revision-audit-2026-11-05",
+  "audit_markdown": "comment_audit.md",
+  "csl": "my_paper/csl/apa.csl",
+  "bibliography": "AttitudesPaper.bib",
+  "latex_main": "submit_preprint.tex",
+  "snapshot_suffixes": [".tex", ".bib", ".png"],
+  "snapshot_exclude_dirs": ["revision-audit-2026-11-05", "word-compare", "ref-reports"],
+  "snapshot_exclude_files": ["submit_tracked_changes.tex"]
+}
